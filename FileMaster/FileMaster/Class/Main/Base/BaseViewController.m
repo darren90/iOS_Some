@@ -7,8 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "UIView+AutoLayout.h"
 
 @interface BaseViewController ()
+@property (nonatomic, weak) UIImageView *noDataView;
 
 @end
 
@@ -30,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.noDataView;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,15 +40,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+
+- (UIImageView *)noDataView
+{
+    if (!_noDataView) {
+        // 添加一个"没有数据"的提醒
+        UIImageView *noDataView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nodata_image"]];
+        [self.view addSubview:noDataView];
+        [noDataView autoCenterInSuperview];
+        self.noDataView = noDataView;
+    }
+    return _noDataView;
 }
-*/
+
+ 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait ;
 }
@@ -61,4 +70,12 @@
 - (UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
 }
+
 @end
+
+
+
+
+
+
+
