@@ -10,7 +10,6 @@
 #import "UIView+AutoLayout.h"
 
 @interface BaseTableViewController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
-@property (nonatomic, weak) UIImageView *noDataView;
 
 @end
 
@@ -37,7 +36,7 @@
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
     
-    self.noDataView;
+//    self.noDataView;
 }
 
 - (void)didReceiveMemoryWarning {
