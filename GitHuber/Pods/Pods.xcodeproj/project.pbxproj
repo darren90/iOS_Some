@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		065250A47E8C546E70AE90DB50A87755 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		10B300F69CD701AB3A98AC09139BD87B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		38F2D9F83622E454A92131D28640E9C0 /* Pods-GitHuberUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4FC0D9991F0A43FB44DE9C66903C2F /* Pods-GitHuberUITests-dummy.m */; };
+		6E579FF358AF2261C8682A7FA383EAA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		A7831564347AF9DDADF2BF463CA47780 /* Pods-GitHuber-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5BFD260230ECB202FF2AA50B97F91 /* Pods-GitHuber-dummy.m */; };
+		B991A49F4C12A4F8462C02B69D83DB11 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A56EEC8DB60C3B14EA50806CEA7EC17B /* Pods-dummy.m */; };
+		D69214E58026418E80479A02E8E222A0 /* Pods-GitHuberTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90545E4B8780745A85B6839FD22CE592 /* Pods-GitHuberTests-dummy.m */; };
+		D768CFBECBFB383FBF9A3E1D20CCB7CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		030B6749AE8FEED801D00105439F818E /* Pods-GitHuber-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GitHuber-acknowledgements.plist"; sourceTree = "<group>"; };
+		06A51ADACDD30A8FE9C8BDA2703A63D7 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		0A9F81E12400FAB8A70472305636DBF7 /* MobClick.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MobClick.h; path = umsdk_IOS_analytics_idfa_v3.6.6/UMAnalytics_Sdk_3.6.6/MobClick.h; sourceTree = "<group>"; };
+		0FF05EF9A8E74BD2A2E778EE6E4DE70B /* Pods-GitHuberUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GitHuberUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1BD39AB9DF62BD8220A8900C405CCDB6 /* Pods-GitHuberTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GitHuberTests-frameworks.sh"; sourceTree = "<group>"; };
+		2CE5BFD260230ECB202FF2AA50B97F91 /* Pods-GitHuber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GitHuber-dummy.m"; sourceTree = "<group>"; };
+		35233EE8A251FDEC4DCD6A7C2DE5F1AB /* Pods-GitHuberUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GitHuberUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		37AA9EABD2CF878B22A0198D5BEADD19 /* Pods-GitHuber-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GitHuber-resources.sh"; sourceTree = "<group>"; };
+		3AC2C0FFE6FDE2A029CBFC443EAA59CE /* Pods-GitHuberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitHuberTests.release.xcconfig"; sourceTree = "<group>"; };
+		3E2A77AA4CABD382C762DA2AF4263BAD /* Pods-GitHuberUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GitHuberUITests-resources.sh"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F0F85E19C94AC241FF9E943256B1ED3 /* libPods-GitHuberTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHuberTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AF0A56125A32FACAD73999B97F5727F /* Pods-GitHuber-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GitHuber-acknowledgements.markdown"; sourceTree = "<group>"; };
+		60855CB04CE99D27FB33578741C664C3 /* Pods-GitHuberTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GitHuberTests-resources.sh"; sourceTree = "<group>"; };
+		652CB98D08AC2749C957E488E7917500 /* libPods-GitHuberUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHuberUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A126BD4CB7B04ADF0AAE44C7E4C4BC7 /* Pods-GitHuberTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GitHuberTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		833D59E734212685925FD697B0018991 /* Pods-GitHuberTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GitHuberTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		90545E4B8780745A85B6839FD22CE592 /* Pods-GitHuberTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GitHuberTests-dummy.m"; sourceTree = "<group>"; };
+		97877EE6D39DCFC20DBC8757B1D11078 /* Pods-GitHuberUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitHuberUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9910374760A823E8B2A176ABF206A0AC /* Pods-GitHuber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitHuber.debug.xcconfig"; sourceTree = "<group>"; };
+		A56EEC8DB60C3B14EA50806CEA7EC17B /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		A7239DFE2BB9982E8DB586DAFEA85896 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		A7A7BA52CB0922190A78B307003509EB /* libPods-GitHuber.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GitHuber.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7EEA4A952A5F4A4D81D8FD22130E7DD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		AF00BB29F99A868C6ECFD8446CDD87CF /* Pods-GitHuber-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GitHuber-frameworks.sh"; sourceTree = "<group>"; };
+		AF4FC0D9991F0A43FB44DE9C66903C2F /* Pods-GitHuberUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GitHuberUITests-dummy.m"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BEFFE27D337D03597D0AE19D640FCD53 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C030E9DDA2604D9C0B02149054C6CBA1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4A845A649956583A3596969DC2157D2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		CE18E0BD92BDEEE56D65B667AEC5C493 /* Pods-GitHuberUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitHuberUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CF20701A4F3FED227F5A86DB8A484058 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		E0555866CD676C0F2E1F5F3DABDC42BD /* Pods-GitHuberUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GitHuberUITests-frameworks.sh"; sourceTree = "<group>"; };
+		E25AD0A33DECE3B20D16EEC6EFECE72A /* Pods-GitHuber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitHuber.release.xcconfig"; sourceTree = "<group>"; };
+		F8BEEE251A075B94B2D35EFE1A0EB4B2 /* Pods-GitHuberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GitHuberTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0C400F02E8A2958B7866E1B49562668F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D768CFBECBFB383FBF9A3E1D20CCB7CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E78C4AC537A1782BCFD134B2B8940E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E579FF358AF2261C8682A7FA383EAA6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7434BCD94E4C0192E9164A5F306476C4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				065250A47E8C546E70AE90DB50A87755 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A38AFCD9E2496D2B9A1C94F926BD0ECD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10B300F69CD701AB3A98AC09139BD87B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0590A285E7EBFF87CED43816C2DD6A88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BEFFE27D337D03597D0AE19D640FCD53 /* Pods-acknowledgements.markdown */,
+				CF20701A4F3FED227F5A86DB8A484058 /* Pods-acknowledgements.plist */,
+				A56EEC8DB60C3B14EA50806CEA7EC17B /* Pods-dummy.m */,
+				A7239DFE2BB9982E8DB586DAFEA85896 /* Pods-frameworks.sh */,
+				06A51ADACDD30A8FE9C8BDA2703A63D7 /* Pods-resources.sh */,
+				A7EEA4A952A5F4A4D81D8FD22130E7DD /* Pods.debug.xcconfig */,
+				C4A845A649956583A3596969DC2157D2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		2BFD62C041254C01D4A12C1F95824EF8 /* UMengAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				0A9F81E12400FAB8A70472305636DBF7 /* MobClick.h */,
+			);
+			path = UMengAnalytics;
+			sourceTree = "<group>";
+		};
+		42EF56E3A3A3C6B02E997BD1D9BD22AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C030E9DDA2604D9C0B02149054C6CBA1 /* libPods.a */,
+				A7A7BA52CB0922190A78B307003509EB /* libPods-GitHuber.a */,
+				3F0F85E19C94AC241FF9E943256B1ED3 /* libPods-GitHuberTests.a */,
+				652CB98D08AC2749C957E488E7917500 /* libPods-GitHuberUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		615BF671226C7BAB29205A71089AE70D /* Pods-GitHuberTests */ = {
+			isa = PBXGroup;
+			children = (
+				833D59E734212685925FD697B0018991 /* Pods-GitHuberTests-acknowledgements.markdown */,
+				7A126BD4CB7B04ADF0AAE44C7E4C4BC7 /* Pods-GitHuberTests-acknowledgements.plist */,
+				90545E4B8780745A85B6839FD22CE592 /* Pods-GitHuberTests-dummy.m */,
+				1BD39AB9DF62BD8220A8900C405CCDB6 /* Pods-GitHuberTests-frameworks.sh */,
+				60855CB04CE99D27FB33578741C664C3 /* Pods-GitHuberTests-resources.sh */,
+				F8BEEE251A075B94B2D35EFE1A0EB4B2 /* Pods-GitHuberTests.debug.xcconfig */,
+				3AC2C0FFE6FDE2A029CBFC443EAA59CE /* Pods-GitHuberTests.release.xcconfig */,
+			);
+			name = "Pods-GitHuberTests";
+			path = "Target Support Files/Pods-GitHuberTests";
+			sourceTree = "<group>";
+		};
+		63EB632D99321156E9B6645DFB4E2058 /* Pods-GitHuber */ = {
+			isa = PBXGroup;
+			children = (
+				5AF0A56125A32FACAD73999B97F5727F /* Pods-GitHuber-acknowledgements.markdown */,
+				030B6749AE8FEED801D00105439F818E /* Pods-GitHuber-acknowledgements.plist */,
+				2CE5BFD260230ECB202FF2AA50B97F91 /* Pods-GitHuber-dummy.m */,
+				AF00BB29F99A868C6ECFD8446CDD87CF /* Pods-GitHuber-frameworks.sh */,
+				37AA9EABD2CF878B22A0198D5BEADD19 /* Pods-GitHuber-resources.sh */,
+				9910374760A823E8B2A176ABF206A0AC /* Pods-GitHuber.debug.xcconfig */,
+				E25AD0A33DECE3B20D16EEC6EFECE72A /* Pods-GitHuber.release.xcconfig */,
+			);
+			name = "Pods-GitHuber";
+			path = "Target Support Files/Pods-GitHuber";
+			sourceTree = "<group>";
+		};
+		6430D1264667C74778080E17313E7E31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2BFD62C041254C01D4A12C1F95824EF8 /* UMengAnalytics */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6430D1264667C74778080E17313E7E31 /* Pods */,
+				42EF56E3A3A3C6B02E997BD1D9BD22AD /* Products */,
+				CC331AEFC8A7259E24DF5E3251D5D873 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CC331AEFC8A7259E24DF5E3251D5D873 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0590A285E7EBFF87CED43816C2DD6A88 /* Pods */,
+				63EB632D99321156E9B6645DFB4E2058 /* Pods-GitHuber */,
+				615BF671226C7BAB29205A71089AE70D /* Pods-GitHuberTests */,
+				E385167084D95A45627E3B8FB38C7C43 /* Pods-GitHuberUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E385167084D95A45627E3B8FB38C7C43 /* Pods-GitHuberUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0FF05EF9A8E74BD2A2E778EE6E4DE70B /* Pods-GitHuberUITests-acknowledgements.markdown */,
+				35233EE8A251FDEC4DCD6A7C2DE5F1AB /* Pods-GitHuberUITests-acknowledgements.plist */,
+				AF4FC0D9991F0A43FB44DE9C66903C2F /* Pods-GitHuberUITests-dummy.m */,
+				E0555866CD676C0F2E1F5F3DABDC42BD /* Pods-GitHuberUITests-frameworks.sh */,
+				3E2A77AA4CABD382C762DA2AF4263BAD /* Pods-GitHuberUITests-resources.sh */,
+				97877EE6D39DCFC20DBC8757B1D11078 /* Pods-GitHuberUITests.debug.xcconfig */,
+				CE18E0BD92BDEEE56D65B667AEC5C493 /* Pods-GitHuberUITests.release.xcconfig */,
+			);
+			name = "Pods-GitHuberUITests";
+			path = "Target Support Files/Pods-GitHuberUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1469924FC52F60B0068FA24EEFCB3EFC /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C358AA8BB91700063133597D41C4E0E /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				60DB2522D6809309FA2F3B04848E7536 /* Sources */,
+				2E78C4AC537A1782BCFD134B2B8940E0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = C030E9DDA2604D9C0B02149054C6CBA1 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		18C5E2ABD76DD1019D7A2996D93C0674 /* Pods-GitHuberUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 97B63D9113130551E069BF723203F088 /* Build configuration list for PBXNativeTarget "Pods-GitHuberUITests" */;
+			buildPhases = (
+				F3095C99589E5E6F2C874D9A24AED62A /* Sources */,
+				0C400F02E8A2958B7866E1B49562668F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GitHuberUITests";
+			productName = "Pods-GitHuberUITests";
+			productReference = 652CB98D08AC2749C957E488E7917500 /* libPods-GitHuberUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C5AF0244DD21889639BD05EF0F16CDA4 /* Pods-GitHuber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 866154F65DB544A7BD6F959938FD09C1 /* Build configuration list for PBXNativeTarget "Pods-GitHuber" */;
+			buildPhases = (
+				2D34637965C2F9D58A38511C18E50FF6 /* Sources */,
+				A38AFCD9E2496D2B9A1C94F926BD0ECD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GitHuber";
+			productName = "Pods-GitHuber";
+			productReference = A7A7BA52CB0922190A78B307003509EB /* libPods-GitHuber.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CFD626D291B795D27FDAE1F6433E2EBA /* Pods-GitHuberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41E3EE828A4C7ED1BBA031EF718EBAEC /* Build configuration list for PBXNativeTarget "Pods-GitHuberTests" */;
+			buildPhases = (
+				B4DA178918FCC61A60833211F400AFD9 /* Sources */,
+				7434BCD94E4C0192E9164A5F306476C4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-GitHuberTests";
+			productName = "Pods-GitHuberTests";
+			productReference = 3F0F85E19C94AC241FF9E943256B1ED3 /* libPods-GitHuberTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 42EF56E3A3A3C6B02E997BD1D9BD22AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1469924FC52F60B0068FA24EEFCB3EFC /* Pods */,
+				C5AF0244DD21889639BD05EF0F16CDA4 /* Pods-GitHuber */,
+				CFD626D291B795D27FDAE1F6433E2EBA /* Pods-GitHuberTests */,
+				18C5E2ABD76DD1019D7A2996D93C0674 /* Pods-GitHuberUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D34637965C2F9D58A38511C18E50FF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7831564347AF9DDADF2BF463CA47780 /* Pods-GitHuber-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60DB2522D6809309FA2F3B04848E7536 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B991A49F4C12A4F8462C02B69D83DB11 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4DA178918FCC61A60833211F400AFD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69214E58026418E80479A02E8E222A0 /* Pods-GitHuberTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3095C99589E5E6F2C874D9A24AED62A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38F2D9F83622E454A92131D28640E9C0 /* Pods-GitHuberUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		2EEF68B3E0CE4CEE8BCA3D3FB593AB70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4A845A649956583A3596969DC2157D2 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3F5D9018D9C883FC14D3D5D1074912AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7EEA4A952A5F4A4D81D8FD22130E7DD /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		792F82992F700FE47F5B800AF49EFDBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E25AD0A33DECE3B20D16EEC6EFECE72A /* Pods-GitHuber.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		92E8461FB054B8BD5A5A7156C660BA56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AC2C0FFE6FDE2A029CBFC443EAA59CE /* Pods-GitHuberTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AA9FEE04128B90DC9B44E2020C38B43A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE18E0BD92BDEEE56D65B667AEC5C493 /* Pods-GitHuberUITests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B38E0B9609C516EF0C845046039223D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8BEEE251A075B94B2D35EFE1A0EB4B2 /* Pods-GitHuberTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B9C8430B5D81B889F4093543E1EFD385 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9910374760A823E8B2A176ABF206A0AC /* Pods-GitHuber.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8C598391BC80535E3762EA1D2F6C8C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97877EE6D39DCFC20DBC8757B1D11078 /* Pods-GitHuberUITests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41E3EE828A4C7ED1BBA031EF718EBAEC /* Build configuration list for PBXNativeTarget "Pods-GitHuberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B38E0B9609C516EF0C845046039223D8 /* Debug */,
+				92E8461FB054B8BD5A5A7156C660BA56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C358AA8BB91700063133597D41C4E0E /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5D9018D9C883FC14D3D5D1074912AD /* Debug */,
+				2EEF68B3E0CE4CEE8BCA3D3FB593AB70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		866154F65DB544A7BD6F959938FD09C1 /* Build configuration list for PBXNativeTarget "Pods-GitHuber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9C8430B5D81B889F4093543E1EFD385 /* Debug */,
+				792F82992F700FE47F5B800AF49EFDBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		97B63D9113130551E069BF723203F088 /* Build configuration list for PBXNativeTarget "Pods-GitHuberUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8C598391BC80535E3762EA1D2F6C8C6 /* Debug */,
+				AA9FEE04128B90DC9B44E2020C38B43A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

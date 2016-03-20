@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4CFB4C3382FE710DFDD0126 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9140441F1B02DE25CBE0D11A /* libPods.a */; };
 		FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93B01C9ED694005C0261 /* AppDelegate.swift */; };
 		FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93B21C9ED694005C0261 /* ViewController.swift */; };
 		FE2C93B61C9ED694005C0261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C93B41C9ED694005C0261 /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		385481D4C6B4CA0A6E418363 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9140441F1B02DE25CBE0D11A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6DB65FA6E221DAADD0147B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2C93AD1C9ED694005C0261 /* GitHuber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHuber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2C93B01C9ED694005C0261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE2C93B21C9ED694005C0261 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CFB4C3382FE710DFDD0126 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0951BE58D65E568378B7BBC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6DB65FA6E221DAADD0147B6 /* Pods.debug.xcconfig */,
+				385481D4C6B4CA0A6E418363 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6A764F3C21FE08B66A275E8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9140441F1B02DE25CBE0D11A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE2C93A41C9ED694005C0261 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +105,8 @@
 				FE2C93C41C9ED694005C0261 /* GitHuberTests */,
 				FE2C93CF1C9ED694005C0261 /* GitHuberUITests */,
 				FE2C93AE1C9ED694005C0261 /* Products */,
+				0951BE58D65E568378B7BBC4 /* Pods */,
+				6A764F3C21FE08B66A275E8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +128,8 @@
 				FE2C93B41C9ED694005C0261 /* Main.storyboard */,
 				FE2C93DE1C9ED6E4005C0261 /* TFCommon.swift */,
 				FE2C93B71C9ED694005C0261 /* Assets.xcassets */,
+				FE2C93E01C9EDE3B005C0261 /* Class */,
+				FE2C93ED1C9EDE3B005C0261 /* Lib */,
 				FE2C93B91C9ED694005C0261 /* LaunchScreen.storyboard */,
 				FE2C93BC1C9ED694005C0261 /* Info.plist */,
 			);
@@ -128,6 +154,132 @@
 			path = GitHuberUITests;
 			sourceTree = "<group>";
 		};
+		FE2C93E01C9EDE3B005C0261 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93E11C9EDE3B005C0261 /* DisCover */,
+				FE2C93E51C9EDE3B005C0261 /* Home */,
+				FE2C93E91C9EDE3B005C0261 /* Setting */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		FE2C93E11C9EDE3B005C0261 /* DisCover */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93E21C9EDE3B005C0261 /* Controller */,
+				FE2C93E31C9EDE3B005C0261 /* Model */,
+				FE2C93E41C9EDE3B005C0261 /* View */,
+			);
+			path = DisCover;
+			sourceTree = "<group>";
+		};
+		FE2C93E21C9EDE3B005C0261 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE2C93E31C9EDE3B005C0261 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE2C93E41C9EDE3B005C0261 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE2C93E51C9EDE3B005C0261 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93E61C9EDE3B005C0261 /* Controller */,
+				FE2C93E71C9EDE3B005C0261 /* Model */,
+				FE2C93E81C9EDE3B005C0261 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE2C93E61C9EDE3B005C0261 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE2C93E71C9EDE3B005C0261 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE2C93E81C9EDE3B005C0261 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE2C93E91C9EDE3B005C0261 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93EA1C9EDE3B005C0261 /* Controller */,
+				FE2C93EB1C9EDE3B005C0261 /* Model */,
+				FE2C93EC1C9EDE3B005C0261 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		FE2C93EA1C9EDE3B005C0261 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE2C93EB1C9EDE3B005C0261 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE2C93EC1C9EDE3B005C0261 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE2C93ED1C9EDE3B005C0261 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93EE1C9EDE3B005C0261 /* Util */,
+				FE2C93EF1C9EDE3B005C0261 /* Vendor */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		FE2C93EE1C9EDE3B005C0261 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		FE2C93EF1C9EDE3B005C0261 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +287,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE2C93D51C9ED694005C0261 /* Build configuration list for PBXNativeTarget "GitHuber" */;
 			buildPhases = (
+				E45C2FE257402433FA699F69 /* Check Pods Manifest.lock */,
 				FE2C93A91C9ED694005C0261 /* Sources */,
 				FE2C93AA1C9ED694005C0261 /* Frameworks */,
 				FE2C93AB1C9ED694005C0261 /* Resources */,
+				65073E8DB462D18970D760BE /* Embed Pods Frameworks */,
+				EBF577BAD95D83216FC0B9DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +408,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65073E8DB462D18970D760BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E45C2FE257402433FA699F69 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBF577BAD95D83216FC0B9DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE2C93A91C9ED694005C0261 /* Sources */ = {
@@ -399,6 +602,7 @@
 		};
 		FE2C93D61C9ED694005C0261 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6DB65FA6E221DAADD0147B6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GitHuber/Info.plist;
@@ -410,6 +614,7 @@
 		};
 		FE2C93D71C9ED694005C0261 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 385481D4C6B4CA0A6E418363 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GitHuber/Info.plist;
@@ -486,6 +691,7 @@
 				FE2C93D71C9ED694005C0261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE2C93D81C9ED694005C0261 /* Build configuration list for PBXNativeTarget "GitHuberTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +700,7 @@
 				FE2C93DA1C9ED694005C0261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE2C93DB1C9ED694005C0261 /* Build configuration list for PBXNativeTarget "GitHuberUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +709,7 @@
 				FE2C93DD1C9ED694005C0261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
