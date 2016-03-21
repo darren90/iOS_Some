@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        APINetTools.get("users/darren90", params: nil, success: { (json) -> Void in
+        print(json)
+            }) { (error) -> Void in
+                print(error)
+        }
     }
 
     override func didReceiveMemoryWarning() {

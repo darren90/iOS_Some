@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class APINetTools: NSObject {
-    static let baseUrl = ""
+    static let baseUrl = "https://api.github.com/"
     
     /**
      GET请求的方式

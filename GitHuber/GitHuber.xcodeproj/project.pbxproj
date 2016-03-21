@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4CFB4C3382FE710DFDD0126 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9140441F1B02DE25CBE0D11A /* libPods.a */; };
+		17071981ED1D505D6C1C4207 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E84EFC62B643C3DFD32318 /* Pods.framework */; };
 		FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93B01C9ED694005C0261 /* AppDelegate.swift */; };
 		FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93B21C9ED694005C0261 /* ViewController.swift */; };
 		FE2C93B61C9ED694005C0261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C93B41C9ED694005C0261 /* Main.storyboard */; };
@@ -39,7 +39,7 @@
 
 /* Begin PBXFileReference section */
 		385481D4C6B4CA0A6E418363 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		9140441F1B02DE25CBE0D11A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E84EFC62B643C3DFD32318 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB65FA6E221DAADD0147B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2C93AD1C9ED694005C0261 /* GitHuber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHuber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2C93B01C9ED694005C0261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4CFB4C3382FE710DFDD0126 /* libPods.a in Frameworks */,
+				17071981ED1D505D6C1C4207 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 		6A764F3C21FE08B66A275E8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9140441F1B02DE25CBE0D11A /* libPods.a */,
+				94E84EFC62B643C3DFD32318 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -622,6 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GitHuber/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.GitHuber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -634,6 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GitHuber/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.GitHuber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
