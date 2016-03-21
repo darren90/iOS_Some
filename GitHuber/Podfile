@@ -6,7 +6,9 @@
 
 pod 'UMengAnalytics', '~> 3.6.6'
 
-
+pod 'Alamofire', '~> 2.0'
+pod 'SwiftyJSON', '~> 2.3.2'
+pod 'SDWebImage', '~>3.7'
 
 target 'GitHuber' do
 

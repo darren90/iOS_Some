@@ -17,6 +17,7 @@
 		FE2C93D11C9ED694005C0261 /* GitHuberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93D01C9ED694005C0261 /* GitHuberUITests.swift */; };
 		FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93DE1C9ED6E4005C0261 /* TFCommon.swift */; };
 		FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F01CA029EB005C0261 /* HomeViewController.swift */; };
+		FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F41CA0389A005C0261 /* APINetTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		FE2C93D21C9ED694005C0261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE2C93DE1C9ED6E4005C0261 /* TFCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFCommon.swift; sourceTree = "<group>"; };
 		FE2C93F01CA029EB005C0261 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FE2C93F41CA0389A005C0261 /* APINetTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +274,7 @@
 		FE2C93EE1C9EDE3B005C0261 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FE2C93F21CA03800005C0261 /* Manager */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -281,6 +284,14 @@
 			children = (
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		FE2C93F21CA03800005C0261 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93F41CA0389A005C0261 /* APINetTools.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
+				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
 				FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
 				FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */,
