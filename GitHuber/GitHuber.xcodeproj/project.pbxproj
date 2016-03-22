@@ -21,6 +21,8 @@
 		FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */; };
 		FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */; };
 		FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */; };
+		FE798B741CA185E1004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B731CA185E1004CADD8 /* MeViewController.swift */; };
+		FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base_TableViewController.swift; sourceTree = "<group>"; };
+		FE798B731CA185E1004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				FE2C93F01CA029EB005C0261 /* HomeViewController.swift */,
+				FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +256,7 @@
 		FE2C93EA1C9EDE3B005C0261 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE798B731CA185E1004CADD8 /* MeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -501,11 +507,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE798B741CA185E1004CADD8 /* MeViewController.swift in Sources */,
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
 				FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */,
 				FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */,
 				FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */,
+				FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
 				FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */,
 				FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */,
