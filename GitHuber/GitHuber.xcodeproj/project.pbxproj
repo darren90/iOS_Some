@@ -18,6 +18,9 @@
 		FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93DE1C9ED6E4005C0261 /* TFCommon.swift */; };
 		FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F01CA029EB005C0261 /* HomeViewController.swift */; };
 		FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F41CA0389A005C0261 /* APINetTools.swift */; };
+		FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */; };
+		FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */; };
+		FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		FE2C93DE1C9ED6E4005C0261 /* TFCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TFCommon.swift; sourceTree = "<group>"; };
 		FE2C93F01CA029EB005C0261 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FE2C93F41CA0389A005C0261 /* APINetTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APINetTools.swift; sourceTree = "<group>"; };
+		FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base_TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +167,9 @@
 		FE2C93E01C9EDE3B005C0261 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				FE2C93E11C9EDE3B005C0261 /* DisCover */,
+				FE2C93F61CA17FCD005C0261 /* Main */,
 				FE2C93E51C9EDE3B005C0261 /* Home */,
+				FE2C93E11C9EDE3B005C0261 /* DisCover */,
 				FE2C93E91C9EDE3B005C0261 /* Setting */,
 			);
 			path = Class;
@@ -292,6 +299,24 @@
 				FE2C93F41CA0389A005C0261 /* APINetTools.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		FE2C93F61CA17FCD005C0261 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93F71CA17FCD005C0261 /* Base */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FE2C93F71CA17FCD005C0261 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */,
+				FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */,
+				FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,9 +503,12 @@
 			files = (
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
+				FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */,
 				FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */,
+				FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
 				FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */,
+				FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +654,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.GitHuber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -639,6 +668,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.GitHuber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
