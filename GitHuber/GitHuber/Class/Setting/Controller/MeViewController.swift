@@ -47,7 +47,5 @@ extension MeViewController:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCellWithIdentifier("")
         return cell!;
     }
-    
-    
 }
 

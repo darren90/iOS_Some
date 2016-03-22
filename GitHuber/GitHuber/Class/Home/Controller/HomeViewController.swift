@@ -10,6 +10,15 @@ import UIKit
 
 class HomeViewController: BaseTableViewController {
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil);
+        let userVc = sb.instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
+        self.navigationController?.pushViewController(userVc, animated: true)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,12 +29,20 @@ class HomeViewController: BaseTableViewController {
                 print(error)
         }
     }
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+//        let sb = UIStoryboard(name: "Main", bundle: nil);
+//        let userVc = sb.instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
+//        self.navigationController?.pushViewController(userVc, animated: true)
+//    }
 
     /*
     // MARK: - Navigation

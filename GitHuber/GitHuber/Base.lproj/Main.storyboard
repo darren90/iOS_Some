@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tog-Rx-R5S">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -56,7 +57,7 @@
         <!--User Detail View Controller-->
         <scene sceneID="R17-y4-PZq">
             <objects>
-                <viewController id="Wa0-7k-Ckz" customClass="UserDetailViewController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserDetail" id="Wa0-7k-Ckz" customClass="UserDetailViewController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tjb-Zd-xAk"/>
                         <viewControllerLayoutGuide type="bottom" id="Rjt-kK-BMO"/>
@@ -69,12 +70,69 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="axi-Zf-gzW">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserList" rowHeight="70" id="axi-Zf-gzW" customClass="UserListCell" customModule="GitHuber" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="axi-Zf-gzW" id="inf-gg-XYS">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_list" translatesAutoresizingMaskIntoConstraints="NO" id="u09-VJ-JHn">
+                                                    <rect key="frame" x="15" y="10" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="3S4-OV-PoS"/>
+                                                        <constraint firstAttribute="height" constant="50" id="ucB-Uv-2v8"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_star" translatesAutoresizingMaskIntoConstraints="NO" id="G8G-T7-7c4">
+                                                    <rect key="frame" x="563" y="25" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="bGn-Pf-UCI"/>
+                                                        <constraint firstAttribute="width" constant="20" id="vo0-1C-Raz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS_Some" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="500-bm-DA5">
+                                                    <rect key="frame" x="73" y="15" width="430" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                    <color key="textColor" red="0.21210118610000001" green="0.4653982472" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iOS开发中常用的Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1l-Qh-O18">
+                                                    <rect key="frame" x="73" y="39" width="430" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objective-C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PpU-mo-bwp">
+                                                    <rect key="frame" x="502" y="3" width="82.5" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1888" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpB-zl-SFm">
+                                                    <rect key="frame" x="525" y="26" width="35" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="G8G-T7-7c4" firstAttribute="top" secondItem="PpU-mo-bwp" secondAttribute="bottom" constant="2" id="8Lb-Qr-AyD"/>
+                                                <constraint firstAttribute="trailing" secondItem="PpU-mo-bwp" secondAttribute="trailing" constant="15" id="Iwt-P3-8aP"/>
+                                                <constraint firstItem="500-bm-DA5" firstAttribute="leading" secondItem="u09-VJ-JHn" secondAttribute="trailing" constant="8" id="Qff-Ho-KWQ"/>
+                                                <constraint firstItem="G8G-T7-7c4" firstAttribute="centerY" secondItem="inf-gg-XYS" secondAttribute="centerY" id="Scx-pa-iVh"/>
+                                                <constraint firstItem="G8G-T7-7c4" firstAttribute="leading" secondItem="500-bm-DA5" secondAttribute="trailing" constant="60" id="Wou-T6-87a"/>
+                                                <constraint firstItem="u09-VJ-JHn" firstAttribute="centerY" secondItem="inf-gg-XYS" secondAttribute="centerY" id="Z5q-0X-jAh"/>
+                                                <constraint firstItem="a1l-Qh-O18" firstAttribute="leading" secondItem="500-bm-DA5" secondAttribute="leading" id="aD3-qw-WOY"/>
+                                                <constraint firstItem="a1l-Qh-O18" firstAttribute="top" secondItem="500-bm-DA5" secondAttribute="bottom" constant="3" id="exc-wE-2sI"/>
+                                                <constraint firstItem="G8G-T7-7c4" firstAttribute="leading" secondItem="a1l-Qh-O18" secondAttribute="trailing" constant="60" id="hbV-lX-341"/>
+                                                <constraint firstItem="500-bm-DA5" firstAttribute="top" secondItem="inf-gg-XYS" secondAttribute="topMargin" constant="7" id="hcG-RF-eWP"/>
+                                                <constraint firstAttribute="trailing" secondItem="G8G-T7-7c4" secondAttribute="trailing" constant="17" id="i5d-hq-f7a"/>
+                                                <constraint firstItem="u09-VJ-JHn" firstAttribute="leading" secondItem="inf-gg-XYS" secondAttribute="leading" constant="15" id="irN-UC-Phx"/>
+                                                <constraint firstItem="G8G-T7-7c4" firstAttribute="leading" secondItem="UpB-zl-SFm" secondAttribute="trailing" constant="3" id="nP0-p2-D26"/>
+                                                <constraint firstItem="PpU-mo-bwp" firstAttribute="top" secondItem="inf-gg-XYS" secondAttribute="top" constant="3" id="noX-g0-mQl"/>
+                                                <constraint firstItem="UpB-zl-SFm" firstAttribute="top" secondItem="PpU-mo-bwp" secondAttribute="bottom" constant="3" id="ujn-cY-mku"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -98,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhJ-VF-Kai" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1761" y="-791"/>
+            <point key="canvasLocation" x="1795" y="-747"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="H5k-zF-eIU">
@@ -265,4 +323,8 @@
             <point key="canvasLocation" x="121" y="-791"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="github_list" width="80" height="80"/>
+        <image name="github_star" width="15" height="15"/>
+    </resources>
 </document>
