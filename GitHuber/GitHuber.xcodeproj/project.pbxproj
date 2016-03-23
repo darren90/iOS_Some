@@ -24,6 +24,8 @@
 		FE798B741CA185E1004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B731CA185E1004CADD8 /* MeViewController.swift */; };
 		FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */; };
 		FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B771CA19ABE004CADD8 /* UserListCell.swift */; };
+		FE798B7A1CA2CD5C004CADD8 /* UserDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */; };
+		FE798B7C1CA2CD6A004CADD8 /* UserDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE798B7B1CA2CD6A004CADD8 /* UserDetailHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		FE798B731CA185E1004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		FE798B771CA19ABE004CADD8 /* UserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailHeader.swift; sourceTree = "<group>"; };
+		FE798B7B1CA2CD6A004CADD8 /* UserDetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				FE798B771CA19ABE004CADD8 /* UserListCell.swift */,
+				FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */,
+				FE798B7B1CA2CD6A004CADD8 /* UserDetailHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE798B7C1CA2CD6A004CADD8 /* UserDetailHeader.xib in Resources */,
 				FE2C93BB1C9ED694005C0261 /* LaunchScreen.storyboard in Resources */,
 				FE2C93B81C9ED694005C0261 /* Assets.xcassets in Resources */,
 				FE2C93B61C9ED694005C0261 /* Main.storyboard in Resources */,
@@ -510,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE798B7A1CA2CD5C004CADD8 /* UserDetailHeader.swift in Sources */,
 				FE798B741CA185E1004CADD8 /* MeViewController.swift in Sources */,
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,

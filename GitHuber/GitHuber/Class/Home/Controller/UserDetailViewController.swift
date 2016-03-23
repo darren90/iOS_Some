@@ -11,6 +11,8 @@ import UIKit
 class UserDetailViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,12 @@ class UserDetailViewController: BaseViewController {
     }
     
  
+    private lazy var headerView:UserDetailHeader = {
+        let header = UserDetailHeader()
+        
+        
+        return header
+    }()
 
 }
 

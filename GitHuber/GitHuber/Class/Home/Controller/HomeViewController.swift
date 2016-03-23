@@ -23,7 +23,7 @@ class HomeViewController: BaseTableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        APINetTools.get("users/darren90", params: nil, success: { (json) -> Void in
+        APINetTools.get("users/daimajia", params: nil, success: { (json) -> Void in
             print(json)
             }) { (error) -> Void in
                 print(error)
