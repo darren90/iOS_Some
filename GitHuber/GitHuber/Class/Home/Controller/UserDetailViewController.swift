@@ -11,11 +11,19 @@ import UIKit
 class UserDetailViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.rowHeight = 70
         // Do any additional setup after loading the view.
+        tableView.addSubview(headerView)
+        tableView.tableHeaderView = headerView
+        headerView.frame = CGRect(x: 0, y: 0, width: 320, height: 200)
+//        headerView.snp_makeConstraints(closure: { (make) -> Void in
+//          make.height.equalTo(200)
+//        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +33,27 @@ class UserDetailViewController: BaseViewController {
     
  
 
+    private lazy var headerView:UserDetailHeader = {
+        let header = NSBundle.mainBundle().loadNibNamed("UserDetailHeader", owner: nil, options: nil).first as! UserDetailHeader
+//        header.backgroundColor = U
+        
+        return header
+    }()
+
 }
+
+
+//lazy var box = UIView()
+//
+//override func viewDidLoad() {
+//    super.viewDidLoad()
+//    
+//    self.view.addSubview(box)
+//    box.snp_makeConstraints { (make) -> Void in
+//        make.width.height.equalTo(50)
+//        make.center.equalTo(self.view)
+//    }
+//}
 
 extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
