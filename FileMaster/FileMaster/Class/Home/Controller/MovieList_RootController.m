@@ -16,6 +16,7 @@
 #import "GetFilesTools.h"
 
 @interface MovieList_RootController ()
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 - (IBAction)editList:(UIBarButtonItem *)sender;
 
 @property (nonatomic,strong)NSMutableArray * dataArray;
@@ -31,6 +32,11 @@
     NSMutableArray *pathArray =  [GetFilesTools scanMoviesAtPath:docsDir];//[self scanFilesAtPath:docsDir];
 
     self.dataArray = pathArray;//[self getMovieList];
+    if (self.dataArray.count == 0) {
+        self.navigationItem.rightBarButtonItem = nil;
+    }else{
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(editList:)];
+    }
     [self.tableView reloadData];
 }
 

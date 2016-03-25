@@ -57,6 +57,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="editButton" destination="6rW-k7-ZxY" id="Iyg-Ze-fSw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UfK-vh-GWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -100,6 +103,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="KWy-l6-RHY" id="NKF-yV-sB2"/>
                         <segue destination="EFA-bn-Z0I" kind="push" id="mOU-OJ-tyR"/>
                     </connections>
                 </tableViewController>
