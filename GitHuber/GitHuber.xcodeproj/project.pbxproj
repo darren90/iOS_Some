@@ -43,6 +43,7 @@
 		FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */; };
 		FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA71CA53F8C004CADD8 /* RankViewController.swift */; };
 		FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA91CA53F96004CADD8 /* MeViewController.swift */; };
+		FEA7B04A1CA56476007B0E94 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B0491CA56476007B0E94 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FE798BA71CA53F8C004CADD8 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		FE798BA91CA53F96004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		FEA7B0491CA56476007B0E94 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,10 +214,10 @@
 		FE2C93E01C9EDE3B005C0261 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FE2C93F61CA17FCD005C0261 /* Main */,
 				FE798B991CA53F65004CADD8 /* Explore */,
 				FE798BA11CA53F65004CADD8 /* Rank */,
 				FE798B9D1CA53F65004CADD8 /* Me */,
-				FE2C93F61CA17FCD005C0261 /* Main */,
 				FE2C93E51C9EDE3B005C0261 /* Home */,
 				FE2C93E11C9EDE3B005C0261 /* DisCover */,
 				FE2C93E91C9EDE3B005C0261 /* Setting */,
@@ -366,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */,
+				FEA7B0491CA56476007B0E94 /* BaseNavigationController.swift */,
 				FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */,
 				FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */,
 			);
@@ -684,6 +687,7 @@
 				FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */,
 				FE798B951CA2DACE004CADD8 /* LayoutConstraint.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
+				FEA7B04A1CA56476007B0E94 /* BaseNavigationController.swift in Sources */,
 				FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */,
 				FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */,
 				FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */,

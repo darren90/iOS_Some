@@ -276,7 +276,7 @@
         <!--Me-->
         <scene sceneID="iP7-he-1Yu">
             <objects>
-                <navigationController id="X7o-mr-fus" sceneMemberID="viewController">
+                <navigationController id="X7o-mr-fus" customClass="BaseNavigationController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Me" id="kFz-V6-gmH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d0E-If-0SZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -293,7 +293,7 @@
         <!--Rank-->
         <scene sceneID="sc7-rz-YKR">
             <objects>
-                <navigationController id="ZtL-OU-dCv" sceneMemberID="viewController">
+                <navigationController id="ZtL-OU-dCv" customClass="BaseNavigationController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Rank" id="wyI-tT-EEg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hF6-iq-fba">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -310,7 +310,7 @@
         <!--Explore-->
         <scene sceneID="fts-D8-x9n">
             <objects>
-                <navigationController id="CE5-G8-1Fu" sceneMemberID="viewController">
+                <navigationController id="CE5-G8-1Fu" customClass="BaseNavigationController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" id="kdK-Vd-3yz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bcF-WU-CRs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -10,6 +10,7 @@ import UIKit
 
 class ChooseLanguageView: UIView {
     @IBOutlet weak var tableView: UITableView!
+    var isChooseLanShowing:Bool = false
 
     let dataArray:[String] = ["JavaScript","Java","PHP","Ruby","Python","CSS","CPP","C","Objective-C","Swift","Shell","R","Perl","Lua","HTML","Scala","Go"];
   
