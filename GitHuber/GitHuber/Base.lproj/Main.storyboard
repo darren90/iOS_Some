@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZtL-OU-dCv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZtL-OU-dCv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -271,7 +271,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vl0-PL-c1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43" y="3906"/>
+            <point key="canvasLocation" x="-7" y="5638"/>
         </scene>
         <!--Me-->
         <scene sceneID="iP7-he-1Yu">
@@ -288,7 +288,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CGv-uc-8Xp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="4866"/>
+            <point key="canvasLocation" x="1093" y="6598"/>
         </scene>
         <!--Rank-->
         <scene sceneID="sc7-rz-YKR">
@@ -305,7 +305,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkC-jv-hFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998" y="4086"/>
+            <point key="canvasLocation" x="1034" y="5818"/>
         </scene>
         <!--Explore-->
         <scene sceneID="fts-D8-x9n">
@@ -322,7 +322,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rp4-mf-J6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="3338"/>
+            <point key="canvasLocation" x="1041" y="5086"/>
         </scene>
         <!--Explore View Controller-->
         <scene sceneID="Uqp-d8-nxt">
@@ -335,13 +335,34 @@
                     <view key="view" contentMode="scaleToFill" id="tAx-3W-8yZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-yC-jsA">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4w4-iF-OcJ" firstAttribute="top" secondItem="ecb-yC-jsA" secondAttribute="bottom" id="3SB-ds-nCu"/>
+                            <constraint firstItem="ecb-yC-jsA" firstAttribute="top" secondItem="qHo-2B-ZBC" secondAttribute="bottom" id="4NY-ZX-hy0"/>
+                            <constraint firstItem="ecb-yC-jsA" firstAttribute="leading" secondItem="tAx-3W-8yZ" secondAttribute="leading" id="PoN-l0-9Vy"/>
+                            <constraint firstAttribute="trailing" secondItem="ecb-yC-jsA" secondAttribute="trailing" id="sAA-XK-26H"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Eul-Jj-XIC"/>
+                    <navigationItem key="navigationItem" id="Eul-Jj-XIC">
+                        <barButtonItem key="leftBarButtonItem" title="Language" id="cqe-bd-zCA">
+                            <connections>
+                                <action selector="chooseLanguage:" destination="ob0-mR-Wr0" id="QIe-0Z-AxC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="ecb-yC-jsA" id="HPK-hz-dwX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CZM-bA-e4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1994" y="3383"/>
+            <point key="canvasLocation" x="2030" y="5115"/>
         </scene>
         <!--Rank View Controller-->
         <scene sceneID="pd2-Uh-VgB">
@@ -360,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJS-5R-eyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1980" y="4127"/>
+            <point key="canvasLocation" x="2016" y="5859"/>
         </scene>
         <!--Me View Controller-->
         <scene sceneID="jfk-fX-u3U">
@@ -379,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdc-70-ZXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="4881"/>
+            <point key="canvasLocation" x="2053" y="6613"/>
         </scene>
         <!--Me-->
         <scene sceneID="ZQT-uf-SsW">

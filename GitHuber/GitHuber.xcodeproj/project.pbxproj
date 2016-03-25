@@ -21,7 +21,8 @@
 		FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */; };
 		FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */; };
 		FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */; };
-		FE798B741CA185E1004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B731CA185E1004CADD8 /* MeViewController.swift */; };
+		FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */; };
+		FE5CD8441CA5509600ACD52A /* ChooseLanguageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */; };
 		FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */; };
 		FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B771CA19ABE004CADD8 /* UserListCell.swift */; };
 		FE798B7A1CA2CD5C004CADD8 /* UserDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */; };
@@ -84,7 +85,8 @@
 		FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base_TableViewController.swift; sourceTree = "<group>"; };
-		FE798B731CA185E1004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageView.swift; sourceTree = "<group>"; };
+		FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLanguageView.xib; sourceTree = "<group>"; };
 		FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		FE798B771CA19ABE004CADD8 /* UserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
 		FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailHeader.swift; sourceTree = "<group>"; };
@@ -301,7 +303,6 @@
 		FE2C93EA1C9EDE3B005C0261 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FE798B731CA185E1004CADD8 /* MeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -420,6 +421,8 @@
 		FE798B9C1CA53F65004CADD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */,
+				FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				FE2C93B81C9ED694005C0261 /* Assets.xcassets in Resources */,
 				FE798B941CA2DACE004CADD8 /* Info.plist in Resources */,
 				FE2C93B61C9ED694005C0261 /* Main.storyboard in Resources */,
+				FE5CD8441CA5509600ACD52A /* ChooseLanguageView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,7 +677,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE798B7A1CA2CD5C004CADD8 /* UserDetailHeader.swift in Sources */,
-				FE798B741CA185E1004CADD8 /* MeViewController.swift in Sources */,
 				FE798B971CA2DACE004CADD8 /* View+SnapKit.swift in Sources */,
 				FE798B931CA2DACE004CADD8 /* EdgeInsets.swift in Sources */,
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
@@ -689,6 +692,7 @@
 				FE798B901CA2DACE004CADD8 /* ConstraintMaker.swift in Sources */,
 				FE798B911CA2DACE004CADD8 /* ConstraintRelation.swift in Sources */,
 				FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */,
+				FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */,
 				FE798B8D1CA2DACE004CADD8 /* ConstraintAttributes.swift in Sources */,
 				FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
