@@ -27,7 +27,9 @@ class ExploreViewController: UIViewController {
 
     
     @IBAction func chooseLanguage(sender: UIBarButtonItem) {
-        
+        let chooseLanView = NSBundle.mainBundle().loadNibNamed("ChooseLanguageView", owner: nil, options: nil).first as! ChooseLanguageView
+        chooseLanView.frame = CGRect(x: 0, y: 20, width: 100, height: self.view.frame.height)
+        view.addSubview(chooseLanView)
     }
     
     
