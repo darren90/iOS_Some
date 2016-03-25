@@ -9,6 +9,12 @@
 import UIKit
 
 //https://api.github.com/search/repositories?q=language:swift&sort=stars&order=desc
+
+//daily  weekly  monthly
+
+//http://trending.codehub-app.com/v2/trending?since=weekly&language=objective-c
+
+//http://trending.codehub-app.com/v2/trending?since=weekly
 class ExploreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let choosetViewW:CGFloat = 160
@@ -19,12 +25,21 @@ class ExploreViewController: UIViewController {
         view.addSubview(chooseView)
         chooseView.frame = CGRect(x: -choosetViewW, y: 64, width: choosetViewW, height: self.view.frame.height-64)
         
-        tableView.backgroundColor = UIColor.blueColor()
-        print(UIScreen.mainScreen().bounds)
-        print(self.view.frame)
-        print(tableView.frame)
+ 
+//        print(UIScreen.mainScreen().bounds)
+//        print(self.view.frame)
+//        print(tableView.frame)
+        getData()
     }
  
+    
+    func getData() {
+        APINetTools.get("http://trending.codehub-app.com/v2/trending?since=weekly", params: nil, success: { (json) -> Void in
+            print(json)
+        }) { (error) -> Void in
+            print(error)
+        }
+    }
     
     @IBAction func chooseLanguage(sender: UIBarButtonItem) {
         let duration = 0.5

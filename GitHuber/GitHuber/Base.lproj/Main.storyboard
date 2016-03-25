@@ -337,7 +337,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ecb-yC-jsA">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -345,9 +345,17 @@
                         <constraints>
                             <constraint firstItem="4w4-iF-OcJ" firstAttribute="top" secondItem="ecb-yC-jsA" secondAttribute="bottom" id="3SB-ds-nCu"/>
                             <constraint firstItem="ecb-yC-jsA" firstAttribute="top" secondItem="qHo-2B-ZBC" secondAttribute="bottom" id="4NY-ZX-hy0"/>
+                            <constraint firstItem="ecb-yC-jsA" firstAttribute="top" secondItem="tAx-3W-8yZ" secondAttribute="top" id="IbS-eZ-3aM"/>
                             <constraint firstItem="ecb-yC-jsA" firstAttribute="leading" secondItem="tAx-3W-8yZ" secondAttribute="leading" id="PoN-l0-9Vy"/>
+                            <constraint firstAttribute="bottom" secondItem="ecb-yC-jsA" secondAttribute="bottom" id="pwG-iN-IK1"/>
                             <constraint firstAttribute="trailing" secondItem="ecb-yC-jsA" secondAttribute="trailing" id="sAA-XK-26H"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4NY-ZX-hy0"/>
+                                <exclude reference="3SB-ds-nCu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Eul-Jj-XIC">
                         <barButtonItem key="leftBarButtonItem" title="Language" id="cqe-bd-zCA">

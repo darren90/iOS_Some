@@ -22,7 +22,10 @@ class APINetTools: NSObject {
      - parameter fail:    失败
      */
     static func get(url:String,params:[String:AnyObject]?,success:(json:AnyObject) -> Void,fail:(error:Any) -> Void){
-        let urlStr = baseUrl + url
+        var urlStr = url
+        if url.hasPrefix("http://") == false {
+            urlStr = baseUrl + url
+        }
         
         if let paramss = params{
             Alamofire.request(.GET,urlStr, parameters: paramss).responseJSON { (_, _, result) -> Void in
@@ -58,7 +61,10 @@ class APINetTools: NSObject {
      - parameter fail:    失败
      */
     static func post(url:String,params:[String:AnyObject]?,success:(json:AnyObject) -> Void,fail:(error:Any) -> Void){
-        let urlStr = baseUrl + url
+        var urlStr = url
+        if url.hasPrefix("http://") == false {
+            urlStr = baseUrl + url
+        }
         
         if let paramss = params{
             Alamofire.request(.POST,urlStr, parameters: paramss).responseJSON { (_, _, result) -> Void in
