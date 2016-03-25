@@ -38,7 +38,7 @@ class MeViewController: UIViewController {
 extension MeViewController:UITableViewDelegate,UITableViewDataSource{
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1;
+        return 0;
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1;

@@ -13,9 +13,9 @@ class HomeViewController: BaseTableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let sb = UIStoryboard(name: "Main", bundle: nil);
-        let userVc = sb.instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
-        self.navigationController?.pushViewController(userVc, animated: true)
+//        let sb = UIStoryboard(name: "Main", bundle: nil);
+//        let userVc = sb.instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
+//        self.navigationController?.pushViewController(userVc, animated: true)
 
     }
     
