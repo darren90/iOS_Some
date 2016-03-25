@@ -39,6 +39,9 @@
 		FE798B961CA2DACE004CADD8 /* SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B891CA2DACE004CADD8 /* SnapKit.swift */; };
 		FE798B971CA2DACE004CADD8 /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B8A1CA2DACE004CADD8 /* View+SnapKit.swift */; };
 		FE798B981CA2DACE004CADD8 /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B8B1CA2DACE004CADD8 /* ViewController+SnapKit.swift */; };
+		FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */; };
+		FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA71CA53F8C004CADD8 /* RankViewController.swift */; };
+		FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA91CA53F96004CADD8 /* MeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,9 @@
 		FE798B891CA2DACE004CADD8 /* SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapKit.swift; sourceTree = "<group>"; };
 		FE798B8A1CA2DACE004CADD8 /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		FE798B8B1CA2DACE004CADD8 /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
+		FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		FE798BA71CA53F8C004CADD8 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		FE798BA91CA53F96004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +210,9 @@
 		FE2C93E01C9EDE3B005C0261 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FE798B991CA53F65004CADD8 /* Explore */,
+				FE798BA11CA53F65004CADD8 /* Rank */,
+				FE798B9D1CA53F65004CADD8 /* Me */,
 				FE2C93F61CA17FCD005C0261 /* Main */,
 				FE2C93E51C9EDE3B005C0261 /* Home */,
 				FE2C93E11C9EDE3B005C0261 /* DisCover */,
@@ -381,6 +390,102 @@
 				FE798B8B1CA2DACE004CADD8 /* ViewController+SnapKit.swift */,
 			);
 			path = SnapKit;
+			sourceTree = "<group>";
+		};
+		FE798B991CA53F65004CADD8 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				FE798B9A1CA53F65004CADD8 /* Controller */,
+				FE798B9B1CA53F65004CADD8 /* Model */,
+				FE798B9C1CA53F65004CADD8 /* View */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		FE798B9A1CA53F65004CADD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE798B9B1CA53F65004CADD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE798B9C1CA53F65004CADD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE798B9D1CA53F65004CADD8 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				FE798B9E1CA53F65004CADD8 /* Controller */,
+				FE798B9F1CA53F65004CADD8 /* Model */,
+				FE798BA01CA53F65004CADD8 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		FE798B9E1CA53F65004CADD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE798BA91CA53F96004CADD8 /* MeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE798B9F1CA53F65004CADD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE798BA01CA53F65004CADD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE798BA11CA53F65004CADD8 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				FE798BA21CA53F65004CADD8 /* Controller */,
+				FE798BA31CA53F65004CADD8 /* Model */,
+				FE798BA41CA53F65004CADD8 /* View */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		FE798BA21CA53F65004CADD8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE798BA71CA53F8C004CADD8 /* RankViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE798BA31CA53F65004CADD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE798BA41CA53F65004CADD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,16 +678,19 @@
 				FE798B931CA2DACE004CADD8 /* EdgeInsets.swift in Sources */,
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
 				FE798B8F1CA2DACE004CADD8 /* ConstraintItem.swift in Sources */,
+				FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */,
 				FE798B951CA2DACE004CADD8 /* LayoutConstraint.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
 				FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */,
 				FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */,
 				FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */,
 				FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */,
+				FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */,
 				FE798B901CA2DACE004CADD8 /* ConstraintMaker.swift in Sources */,
 				FE798B911CA2DACE004CADD8 /* ConstraintRelation.swift in Sources */,
 				FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */,
 				FE798B8D1CA2DACE004CADD8 /* ConstraintAttributes.swift in Sources */,
+				FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
 				FE798B961CA2DACE004CADD8 /* SnapKit.swift in Sources */,
 				FE798B921CA2DACE004CADD8 /* Debugging.swift in Sources */,
