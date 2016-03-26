@@ -23,13 +23,12 @@ public let KUser = "users/"
 
 
 
+//App Store
+public let KAppid = "1095134608"
 
 //友盟
-public let KAppid = "56ee9ee467e58e3b2500035e"
-
+public let KUMAppid = "56ee9ee467e58e3b2500035e"
 
 public let KHeight = UIScreen.mainScreen().bounds.height
 public let KWidth = UIScreen.mainScreen().bounds.width
-
-
 

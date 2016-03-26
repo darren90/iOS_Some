@@ -54,6 +54,8 @@
 		FEA7B0501CA57F37007B0E94 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B04F1CA57F37007B0E94 /* ExploreCell.swift */; };
 		FEA7B0531CA62ADB007B0E94 /* ChooseLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B0511CA62ADB007B0E94 /* ChooseLanguageCell.swift */; };
 		FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA7B0521CA62ADB007B0E94 /* ChooseLanguageCell.xib */; };
+		FEB918E51CA69A21008B5149 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918E41CA69A21008B5149 /* SettingViewController.swift */; };
+		FEB918E71CA6A1E0008B5149 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918E61CA6A1E0008B5149 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		FEA7B04F1CA57F37007B0E94 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 		FEA7B0511CA62ADB007B0E94 /* ChooseLanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageCell.swift; sourceTree = "<group>"; };
 		FEA7B0521CA62ADB007B0E94 /* ChooseLanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLanguageCell.xib; sourceTree = "<group>"; };
+		FEB918E41CA69A21008B5149 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FEB918E61CA6A1E0008B5149 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +484,8 @@
 			isa = PBXGroup;
 			children = (
 				FE798BA91CA53F96004CADD8 /* MeViewController.swift */,
+				FEB918E41CA69A21008B5149 /* SettingViewController.swift */,
+				FEB918E61CA6A1E0008B5149 /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 				FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */,
 				FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */,
 				FE798B8D1CA2DACE004CADD8 /* ConstraintAttributes.swift in Sources */,
+				FEB918E51CA69A21008B5149 /* SettingViewController.swift in Sources */,
 				FEA7B0501CA57F37007B0E94 /* ExploreCell.swift in Sources */,
 				FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
@@ -753,6 +760,7 @@
 				FE798B981CA2DACE004CADD8 /* ViewController+SnapKit.swift in Sources */,
 				FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */,
 				FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */,
+				FEB918E71CA6A1E0008B5149 /* AboutViewController.swift in Sources */,
 				FE798B8C1CA2DACE004CADD8 /* Constraint.swift in Sources */,
 				FE798B8E1CA2DACE004CADD8 /* ConstraintDescription.swift in Sources */,
 			);

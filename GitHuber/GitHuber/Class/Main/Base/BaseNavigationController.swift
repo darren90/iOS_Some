@@ -14,6 +14,8 @@ class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +24,28 @@ class BaseNavigationController: UINavigationController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+    //{
+    //    // fix 'nested pop animation can result in corrupted navigation bar'
+    //    if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+    //        self.interactivePopGestureRecognizer.enabled = NO;
+    //    }
+    //    //    NSLog(@"subVCs:%lu",(unsigned long)self.viewControllers.count);
+    //    if (self.viewControllers.count > 0) {
+    //        viewController.hidesBottomBarWhenPushed = YES;
+    //        self.tabBarController.tabBar.backgroundColor = [UIColor clearColor];
+    //    }
+    //
+    //    [super pushViewController:viewController animated:animated];
+    //}
+    
+    override func pushViewController(viewController: UIViewController, animated: Bool) {
+        if self.viewControllers.count > 0 {
+            viewController.hidesBottomBarWhenPushed = true
+            self.tabBarController?.tabBar.backgroundColor = UIColor.clearColor()
+        }
+        super.pushViewController(viewController, animated: animated)
     }
-    */
+
 
 }
