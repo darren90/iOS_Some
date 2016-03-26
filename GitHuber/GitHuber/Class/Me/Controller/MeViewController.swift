@@ -8,12 +8,13 @@
 
 import UIKit
 
-class MeViewController: UIViewController {
+class MeViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +32,15 @@ class MeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30.0
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print(indexPath.section)
+    }
 
 }
+//
+ 

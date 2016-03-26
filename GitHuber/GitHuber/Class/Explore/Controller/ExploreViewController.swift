@@ -18,6 +18,9 @@ import UIKit
 class ExploreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private let choosetViewW:CGFloat = 160
+    
+    let refreshControl = UIRefreshControl()
+    
     var dataArray:[TrendModel]?{
         didSet{//设置完毕数据，就刷新表格
             tableView.reloadData()
@@ -37,11 +40,15 @@ class ExploreViewController: UIViewController {
 //        print(UIScreen.mainScreen().bounds)
 //        print(self.view.frame)
 //        print(tableView.frame)
+        
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(RankViewController.getData), forControlEvents: .ValueChanged)
+        refreshControl.beginRefreshing()
         getData()
     }
  
     func languageHadChoosed(notice:NSNotification) {
-        let userInfo:String = (notice.userInfo!["chooseStr"] as? String)!
+//        let userInfo:String = (notice.userInfo!["chooseStr"] as? String)!
 //        print(userInfo)
     }
     
@@ -49,7 +56,10 @@ class ExploreViewController: UIViewController {
         
         TrendModel.getTrends("since=monthly") { (arrs, error) in
 //            print(arrs)
-            self.dataArray = arrs
+            if arrs?.count > 0 {
+                self.dataArray = arrs
+            }
+            self.refreshControl.endRefreshing()
         }
         
 //        APINetTools.get("http://trending.codehub-app.com/v2/trending?since=weekly", params: nil, success: { (json) -> Void in
