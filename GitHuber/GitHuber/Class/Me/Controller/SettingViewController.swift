@@ -15,6 +15,7 @@ class SettingViewController: UITableViewController {
 
         // Do any additional setup after loading the view.
         tableView.tableFooterView = UIView()
+        tableView.separatorStyle = .None
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,13 +25,25 @@ class SettingViewController: UITableViewController {
     
 
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30.0
+        return 20.0
     }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10.0
+    }
+    
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = KColor(250, g: 250, b: 250)
+        return view
+    }
+    
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = KColor(250, g: 250, b: 250)
         return view
     }
+
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {//go to App Store

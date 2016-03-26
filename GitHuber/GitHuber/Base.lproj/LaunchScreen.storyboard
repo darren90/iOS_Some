@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,14 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHubers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAD-X4-Gie">
-                                <rect key="frame" x="208.5" y="433" width="183" height="47"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="39"/>
+                                <rect key="frame" x="215.5" y="467" width="169" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                <color key="textColor" red="0.38823529411764707" green="0.56862745098039214" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powerfully GitHub Client" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ0-PS-CPn">
-                                <rect key="frame" x="202" y="529.5" width="196" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <rect key="frame" x="222.5" y="534" width="155" height="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                <color key="textColor" red="0.38823529410000002" green="0.56862745100000001" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -33,7 +34,7 @@
                             <constraint firstItem="SAD-X4-Gie" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UzB-11-zX4"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="EQ0-PS-CPn" secondAttribute="bottom" constant="50" id="aFu-pb-vYn"/>
                             <constraint firstItem="EQ0-PS-CPn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lV7-vB-0Rq"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="SAD-X4-Gie" secondAttribute="bottom" constant="120" id="sH1-Pw-80T"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="SAD-X4-Gie" secondAttribute="bottom" constant="90" id="sH1-Pw-80T"/>
                         </constraints>
                     </view>
                 </viewController>

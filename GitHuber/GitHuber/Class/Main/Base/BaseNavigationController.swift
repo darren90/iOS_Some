@@ -77,6 +77,9 @@ class BaseNavigationController: UINavigationController {
         item .setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.lightGrayColor() , NSFontAttributeName : UIFont.systemFontOfSize(16)], forState: .Highlighted)
         item .setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.grayColor() , NSFontAttributeName : UIFont.systemFontOfSize(16)], forState: .Disabled)
 
+        //无“返回”文字的返回按钮
+        item.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics: .Default)
+        
         UIApplication.sharedApplication().setStatusBarStyle(.LightContent, animated: true)
     }
  
