@@ -24,6 +24,8 @@
 		FE4A2A6F1CA635BA0038CF31 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A6E1CA635BA0038CF31 /* City.plist */; };
 		FE4A2A711CA636860038CF31 /* ChooseCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A2A701CA636860038CF31 /* ChooseCityView.swift */; };
 		FE4A2A731CA636940038CF31 /* ChooseCityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A721CA636940038CF31 /* ChooseCityView.xib */; };
+		FE4A2A751CA648950038CF31 /* RankUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A2A741CA648950038CF31 /* RankUser.swift */; };
+		FE4A2A771CA64E200038CF31 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A2A761CA64E200038CF31 /* RankCell.swift */; };
 		FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */; };
 		FE5CD8441CA5509600ACD52A /* ChooseLanguageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */; };
 		FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */; };
@@ -97,6 +99,8 @@
 		FE4A2A6E1CA635BA0038CF31 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
 		FE4A2A701CA636860038CF31 /* ChooseCityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCityView.swift; sourceTree = "<group>"; };
 		FE4A2A721CA636940038CF31 /* ChooseCityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCityView.xib; sourceTree = "<group>"; };
+		FE4A2A741CA648950038CF31 /* RankUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankUser.swift; sourceTree = "<group>"; };
+		FE4A2A761CA64E200038CF31 /* RankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageView.swift; sourceTree = "<group>"; };
 		FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLanguageView.xib; sourceTree = "<group>"; };
 		FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -515,6 +519,7 @@
 		FE798BA31CA53F65004CADD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE4A2A741CA648950038CF31 /* RankUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,6 +527,7 @@
 		FE798BA41CA53F65004CADD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE4A2A761CA64E200038CF31 /* RankCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -718,8 +724,10 @@
 				FE798B971CA2DACE004CADD8 /* View+SnapKit.swift in Sources */,
 				FE798B931CA2DACE004CADD8 /* EdgeInsets.swift in Sources */,
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
+				FE4A2A751CA648950038CF31 /* RankUser.swift in Sources */,
 				FE798B8F1CA2DACE004CADD8 /* ConstraintItem.swift in Sources */,
 				FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */,
+				FE4A2A771CA64E200038CF31 /* RankCell.swift in Sources */,
 				FE798B951CA2DACE004CADD8 /* LayoutConstraint.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
 				FEA7B04A1CA56476007B0E94 /* BaseNavigationController.swift in Sources */,

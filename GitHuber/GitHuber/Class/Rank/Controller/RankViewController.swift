@@ -16,6 +16,12 @@ class RankViewController: UIViewController {
 //    private let choosetViewW:CGFloat = 160
     private let chooseLanViewH:CGFloat = 300
 
+    var dataArray:[RankUser]? = []
+//    ?{
+//        didSet{//设置完毕数据，就刷新表格
+////            tableView.reloadData()
+//        }
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +36,8 @@ class RankViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(RankViewController.languageHadChoosed(_:)), name: "ChooseLanguageViewDidSelect", object: nil)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(RankViewController.cityHadChoosed(_:)), name: "ChooseCityViewDidSelect", object: nil)
+        
+        getData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,6 +56,34 @@ class RankViewController: UIViewController {
         languageBtn .setTitle(userInfo, forState: .Normal)
         chooseLanguage(self.languageBtn)
     }
+    
+    
+    
+    func getData() {
+//        https://api.github.com/search/users?q=location:London&sort=followers&page=1
+        let url = "search/users?q=location:London&sort=followers&page=1"
+        APINetTools.get(url, params: nil, success: { (json) in
+            let dic = json as! [String:AnyObject]//json["items"] as Array
+            let array = dic["items"] as![[String:AnyObject]]//
+            for arr in array{
+                print(arr)
+                let user = RankUser(dict: arr)
+                self.dataArray?.append(user)
+            }
+            self.tableView.reloadData()
+            
+            }) { (error) in
+                print(error)
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func chooseCity(sender: UIButton) {
         let duration = 0.5
@@ -97,6 +133,23 @@ class RankViewController: UIViewController {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
+}
+
+extension RankViewController:UITableViewDelegate,UITableViewDataSource{
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray?.count ?? 0;
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("RankCell") as! RankCell
+        cell.model = self.dataArray![indexPath.row]
+        cell.rankNum = indexPath.row
+        return cell;
+    }
+    
+    
 }
 
 
