@@ -277,7 +277,7 @@
         <scene sceneID="iP7-he-1Yu">
             <objects>
                 <navigationController id="X7o-mr-fus" customClass="BaseNavigationController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Me" id="kFz-V6-gmH"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="tabar_me" id="kFz-V6-gmH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="d0E-If-0SZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -294,7 +294,7 @@
         <scene sceneID="sc7-rz-YKR">
             <objects>
                 <navigationController id="ZtL-OU-dCv" customClass="BaseNavigationController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rank" id="wyI-tT-EEg"/>
+                    <tabBarItem key="tabBarItem" title="Rank" image="tabar_rank" id="wyI-tT-EEg"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hF6-iq-fba">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -311,7 +311,7 @@
         <scene sceneID="fts-D8-x9n">
             <objects>
                 <navigationController id="CE5-G8-1Fu" customClass="BaseNavigationController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" id="kdK-Vd-3yz"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="tabar_explore" id="kdK-Vd-3yz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bcF-WU-CRs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1083,5 +1083,8 @@
         <image name="github_star" width="15" height="15"/>
         <image name="icon_go" width="27" height="27"/>
         <image name="icon_me_review" width="27" height="27"/>
+        <image name="tabar_explore" width="30" height="30"/>
+        <image name="tabar_me" width="30" height="30"/>
+        <image name="tabar_rank" width="30" height="30"/>
     </resources>
 </document>
