@@ -41,9 +41,9 @@ class ExploreCell: UITableViewCell {
 //            NSURL(String)
 //            NSURL(string: )
 //            print(String(model!.stargazers_count))
-            self.iconView .sd_setImageWithURL(NSURL(string: (model?.owner!.avatar_url)!), completed: nil)
-            self.nameLabel.text = model?.name
-            self.authorLabel.text = "\(model!.language ??  "")\(model!.owner!.login ??  "")"
+            self.iconView .sd_setImageWithURL(NSURL(string: (model?.owner!.avatar_url)!), placeholderImage: UIImage(named: "login_me_user-no"))
+             self.nameLabel.text = model?.name
+            self.authorLabel.text = "\(model!.language ??  "")/\(model!.owner!.login ??  "")"
             self.starCount .setTitle(String(model!.stargazers_count) ?? "0", forState: .Normal)
             self.descLabel.text = model?.descriptionStr
         }

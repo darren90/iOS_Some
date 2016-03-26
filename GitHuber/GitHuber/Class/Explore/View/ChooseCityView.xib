@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChooseCityView" customModule="GitHuber" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kuP-fc-pkC">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="160" id="dHo-OK-ewA"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="c7x-Qf-BFN"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="bOe-EE-WKd"/>
+                    </connections>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="F3d-nX-yeG">
+                    <rect key="frame" x="160" y="0.0" width="440" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="uIw-JR-ZFJ"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="j6e-do-FI5"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="F3d-nX-yeG" secondAttribute="bottom" id="3Vr-iZ-gOr"/>
+                <constraint firstItem="kuP-fc-pkC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="83R-MB-cpl"/>
+                <constraint firstAttribute="trailing" secondItem="F3d-nX-yeG" secondAttribute="trailing" id="9zN-xq-UTg"/>
+                <constraint firstAttribute="bottom" secondItem="kuP-fc-pkC" secondAttribute="bottom" id="VlZ-9S-23l"/>
+                <constraint firstItem="F3d-nX-yeG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="doZ-07-Qtq"/>
+                <constraint firstItem="kuP-fc-pkC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kL1-th-DyZ"/>
+                <constraint firstItem="F3d-nX-yeG" firstAttribute="leading" secondItem="kuP-fc-pkC" secondAttribute="trailing" id="lCL-Fh-W8r"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="tableview1" destination="kuP-fc-pkC" id="PQ3-fN-rSz"/>
+                <outlet property="tableview2" destination="F3d-nX-yeG" id="LN2-yp-3zE"/>
+            </connections>
+        </view>
+    </objects>
+</document>

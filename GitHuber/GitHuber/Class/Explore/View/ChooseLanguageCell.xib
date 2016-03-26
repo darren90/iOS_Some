@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChLanguageCell" id="KGk-i7-Jjw" customClass="ChooseLanguageCell" customModule="GitHuber" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsX-lu-0S4">
+                        <rect key="frame" x="16" y="0.0" width="304" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iL-eh-qn2">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ulP-M0-0zL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="3iL-eh-qn2" secondAttribute="trailing" id="1m5-Fm-pYy"/>
+                    <constraint firstItem="3iL-eh-qn2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3kv-Hz-sIG"/>
+                    <constraint firstAttribute="bottom" secondItem="lsX-lu-0S4" secondAttribute="bottom" id="5pE-DQ-R41"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3iL-eh-qn2" secondAttribute="trailing" id="9CA-td-OKe"/>
+                    <constraint firstAttribute="trailing" secondItem="lsX-lu-0S4" secondAttribute="trailing" id="G4b-5n-R9E"/>
+                    <constraint firstItem="lsX-lu-0S4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Nd6-Ta-13j"/>
+                    <constraint firstAttribute="bottom" secondItem="3iL-eh-qn2" secondAttribute="bottom" id="cb6-w9-khW"/>
+                    <constraint firstItem="3iL-eh-qn2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gEZ-KH-l4f"/>
+                    <constraint firstItem="lsX-lu-0S4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lTd-ut-Ffb"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="3iL-eh-qn2" secondAttribute="bottom" id="mWT-dK-JxQ"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="3kv-Hz-sIG"/>
+                        <exclude reference="9CA-td-OKe"/>
+                        <exclude reference="mWT-dK-JxQ"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="titleLabel" destination="lsX-lu-0S4" id="6CU-Y7-xhp"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

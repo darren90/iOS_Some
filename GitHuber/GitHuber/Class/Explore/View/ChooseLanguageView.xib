@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lUc-TP-Lav">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lUc-TP-Lav">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -18,12 +18,22 @@
                         <outlet property="delegate" destination="iN0-l3-epB" id="pQK-Ks-cqT"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fnp-ED-LCs">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="Jqf-JX-Oqq"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="lUc-TP-Lav" secondAttribute="trailing" id="Nty-ky-rIF"/>
                 <constraint firstItem="lUc-TP-Lav" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RaO-j2-ydF"/>
+                <constraint firstItem="Fnp-ED-LCs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RnB-5Q-3eg"/>
                 <constraint firstAttribute="bottom" secondItem="lUc-TP-Lav" secondAttribute="bottom" id="V51-mv-h9p"/>
+                <constraint firstItem="Fnp-ED-LCs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vag-gM-oiD"/>
+                <constraint firstAttribute="trailing" secondItem="Fnp-ED-LCs" secondAttribute="trailing" id="nL1-1j-NST"/>
                 <constraint firstItem="lUc-TP-Lav" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="u5s-Bb-jnc"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

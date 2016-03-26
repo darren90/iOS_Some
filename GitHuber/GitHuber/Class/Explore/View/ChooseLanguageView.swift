@@ -12,7 +12,7 @@ class ChooseLanguageView: UIView {
     @IBOutlet weak var tableView: UITableView!
     var isChooseLanShowing:Bool = false
 
-    let dataArray:[String] = ["JavaScript","Java","PHP","Ruby","Python","CSS","CPP","C","Objective-C","Swift","Shell","R","Perl","Lua","HTML","Scala","Go"];
+    let dataArray:[String] = ["All Languages","JavaScript","Java","PHP","Ruby","Python","CSS","CPP","C","Objective-C","Swift","Shell","R","Perl","Lua","HTML","Scala","Go"];
   
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,12 +24,21 @@ class ChooseLanguageView: UIView {
         //        fatalError("init(coder:) has not been implemented")
         
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        tableView.separatorStyle = .None
+        tableView.registerNib(UINib(nibName: "ChooseLanguageCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "ChLanguageCell")
+    }
 
     
     
 //    func chooseLanView 
     
-    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
 }
 
@@ -43,16 +52,18 @@ extension ChooseLanguageView:UITableViewDelegate,UITableViewDataSource{
         return dataArray.count;
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("language")
-        if(cell == nil){
-            cell = UITableViewCell(style: .Default, reuseIdentifier: "language")
-        }
-        cell?.textLabel?.text = dataArray[indexPath.row] 
-        return cell!;
+        let cell :ChooseLanguageCell = tableView.dequeueReusableCellWithIdentifier("ChLanguageCell") as! ChooseLanguageCell
+        cell.titleLabel.text = dataArray[indexPath.row]
+        return cell;
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let str = dataArray[indexPath.row]
+        NSNotificationCenter.defaultCenter() .postNotificationName("ChooseLanguageViewDidSelect", object: nil, userInfo: ["chooseStr" : str])
+    }
     
 }
+
 
 
 //    if (_languageEntranceType==RepLanguageEntranceType) {

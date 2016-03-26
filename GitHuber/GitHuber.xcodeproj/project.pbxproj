@@ -21,6 +21,9 @@
 		FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */; };
 		FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */; };
 		FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */; };
+		FE4A2A6F1CA635BA0038CF31 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A6E1CA635BA0038CF31 /* City.plist */; };
+		FE4A2A711CA636860038CF31 /* ChooseCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A2A701CA636860038CF31 /* ChooseCityView.swift */; };
+		FE4A2A731CA636940038CF31 /* ChooseCityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A721CA636940038CF31 /* ChooseCityView.xib */; };
 		FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */; };
 		FE5CD8441CA5509600ACD52A /* ChooseLanguageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */; };
 		FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */; };
@@ -47,6 +50,8 @@
 		FEA7B04C1CA57691007B0E94 /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B04B1CA57691007B0E94 /* TrendModel.swift */; };
 		FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B04D1CA5781D007B0E94 /* Owner.swift */; };
 		FEA7B0501CA57F37007B0E94 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B04F1CA57F37007B0E94 /* ExploreCell.swift */; };
+		FEA7B0531CA62ADB007B0E94 /* ChooseLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B0511CA62ADB007B0E94 /* ChooseLanguageCell.swift */; };
+		FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA7B0521CA62ADB007B0E94 /* ChooseLanguageCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +94,9 @@
 		FE2C93F81CA17FDE005C0261 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FE2C93FA1CA1801D005C0261 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base_TableViewController.swift; sourceTree = "<group>"; };
+		FE4A2A6E1CA635BA0038CF31 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
+		FE4A2A701CA636860038CF31 /* ChooseCityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCityView.swift; sourceTree = "<group>"; };
+		FE4A2A721CA636940038CF31 /* ChooseCityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCityView.xib; sourceTree = "<group>"; };
 		FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageView.swift; sourceTree = "<group>"; };
 		FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLanguageView.xib; sourceTree = "<group>"; };
 		FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +124,8 @@
 		FEA7B04B1CA57691007B0E94 /* TrendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
 		FEA7B04D1CA5781D007B0E94 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		FEA7B04F1CA57F37007B0E94 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
+		FEA7B0511CA62ADB007B0E94 /* ChooseLanguageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageCell.swift; sourceTree = "<group>"; };
+		FEA7B0521CA62ADB007B0E94 /* ChooseLanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLanguageCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,6 +342,7 @@
 		FE2C93ED1C9EDE3B005C0261 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				FE4A2A6D1CA635A60038CF31 /* Resource */,
 				FE2C93EE1C9EDE3B005C0261 /* Util */,
 				FE2C93EF1C9EDE3B005C0261 /* Vendor */,
 			);
@@ -379,6 +390,14 @@
 				FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		FE4A2A6D1CA635A60038CF31 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FE4A2A6E1CA635BA0038CF31 /* City.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		FE798B7D1CA2DACE004CADD8 /* SnapKit */ = {
@@ -435,6 +454,10 @@
 				FEA7B04F1CA57F37007B0E94 /* ExploreCell.swift */,
 				FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */,
 				FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */,
+				FEA7B0511CA62ADB007B0E94 /* ChooseLanguageCell.swift */,
+				FEA7B0521CA62ADB007B0E94 /* ChooseLanguageCell.xib */,
+				FE4A2A701CA636860038CF31 /* ChooseCityView.swift */,
+				FE4A2A721CA636940038CF31 /* ChooseCityView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -612,8 +635,11 @@
 			files = (
 				FE798B7C1CA2CD6A004CADD8 /* UserDetailHeader.xib in Resources */,
 				FE2C93BB1C9ED694005C0261 /* LaunchScreen.storyboard in Resources */,
+				FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */,
 				FE2C93B81C9ED694005C0261 /* Assets.xcassets in Resources */,
+				FE4A2A731CA636940038CF31 /* ChooseCityView.xib in Resources */,
 				FE798B941CA2DACE004CADD8 /* Info.plist in Resources */,
+				FE4A2A6F1CA635BA0038CF31 /* City.plist in Resources */,
 				FE2C93B61C9ED694005C0261 /* Main.storyboard in Resources */,
 				FE5CD8441CA5509600ACD52A /* ChooseLanguageView.xib in Resources */,
 			);
@@ -703,6 +729,7 @@
 				FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */,
 				FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */,
 				FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */,
+				FE4A2A711CA636860038CF31 /* ChooseCityView.swift in Sources */,
 				FE798B901CA2DACE004CADD8 /* ConstraintMaker.swift in Sources */,
 				FE798B911CA2DACE004CADD8 /* ConstraintRelation.swift in Sources */,
 				FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */,
@@ -712,6 +739,7 @@
 				FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
 				FEA7B04C1CA57691007B0E94 /* TrendModel.swift in Sources */,
+				FEA7B0531CA62ADB007B0E94 /* ChooseLanguageCell.swift in Sources */,
 				FE798B961CA2DACE004CADD8 /* SnapKit.swift in Sources */,
 				FE798B921CA2DACE004CADD8 /* Debugging.swift in Sources */,
 				FE798B981CA2DACE004CADD8 /* ViewController+SnapKit.swift in Sources */,

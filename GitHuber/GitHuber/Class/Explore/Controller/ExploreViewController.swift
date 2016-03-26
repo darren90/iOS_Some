@@ -17,7 +17,7 @@ import UIKit
 //http://trending.codehub-app.com/v2/trending?since=weekly
 class ExploreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    let choosetViewW:CGFloat = 160
+    private let choosetViewW:CGFloat = 160
     var dataArray:[TrendModel]?{
         didSet{//设置完毕数据，就刷新表格
             tableView.reloadData()
@@ -27,12 +27,12 @@ class ExploreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+ 
         
         view.addSubview(chooseView)
         chooseView.frame = CGRect(x: -choosetViewW, y: 64, width: choosetViewW, height: self.view.frame.height-64)
         
+//        NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(ExploreViewController.languageHadChoosed(_:)), name: "ChooseLanguageViewDidSelect", object: nil)
  
 //        print(UIScreen.mainScreen().bounds)
 //        print(self.view.frame)
@@ -40,10 +40,14 @@ class ExploreViewController: UIViewController {
         getData()
     }
  
+    func languageHadChoosed(notice:NSNotification) {
+        let userInfo:String = (notice.userInfo!["chooseStr"] as? String)!
+//        print(userInfo)
+    }
     
     func getData() {
         
-        TrendModel.getTrends("since=weekly") { (arrs, error) in
+        TrendModel.getTrends("since=monthly") { (arrs, error) in
 //            print(arrs)
             self.dataArray = arrs
         }
@@ -79,6 +83,11 @@ class ExploreViewController: UIViewController {
 //        chooseLanView.frame = CGRect(x: 0, y: 20, width: 100, height: self.view.frame.height)
         return chooseLanView
     }()
+    
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 }
 //
 extension ExploreViewController:UITableViewDelegate,UITableViewDataSource{
