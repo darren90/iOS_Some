@@ -20,6 +20,7 @@ public let KBasePlayUrl = "https://api.github.com/"
 
 public let KUser = "users/"
 
+public let KPlaceholderImg = UIImage(named: "login_me_user-no")
 
 
 

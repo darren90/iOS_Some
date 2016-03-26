@@ -6,31 +6,43 @@
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
+//box.snp_makeConstraints { (make) -> Void in
+//    make.width.height.equalTo(50)
+//    make.center.equalTo(self.view)
+//}
+
 import UIKit
 
 class UserDetailViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
-
     
+    //外界传递的参数
+    var loginName:String! = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.rowHeight = 70
         // Do any additional setup after loading the view.
-        tableView.addSubview(headerView)
+//        view.addSubview(headerView)
+        headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 140)
         tableView.tableHeaderView = headerView
-        headerView.frame = CGRect(x: 0, y: 0, width: 320, height: 200)
-//        headerView.snp_makeConstraints(closure: { (make) -> Void in
-//          make.height.equalTo(200)
-//        })
+//        tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
+//        headerView.snp_makeConstraints { (make) in
+//            make.width.height.equalTo(100)
+//        }
+        
+        
+        getData()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func getData() {
+        UserDetailModel.getUserData(loginName) { (arrs, error) in
+            if arrs != nil {
+                self.headerView.model = arrs
+            }
+        }
     }
-    
  
 
     private lazy var headerView:UserDetailHeader = {

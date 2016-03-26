@@ -28,10 +28,6 @@
 		FE4A2A771CA64E200038CF31 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A2A761CA64E200038CF31 /* RankCell.swift */; };
 		FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */; };
 		FE5CD8441CA5509600ACD52A /* ChooseLanguageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */; };
-		FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */; };
-		FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B771CA19ABE004CADD8 /* UserListCell.swift */; };
-		FE798B7A1CA2CD5C004CADD8 /* UserDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */; };
-		FE798B7C1CA2CD6A004CADD8 /* UserDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE798B7B1CA2CD6A004CADD8 /* UserDetailHeader.xib */; };
 		FE798B8C1CA2DACE004CADD8 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B7E1CA2DACE004CADD8 /* Constraint.swift */; };
 		FE798B8D1CA2DACE004CADD8 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B7F1CA2DACE004CADD8 /* ConstraintAttributes.swift */; };
 		FE798B8E1CA2DACE004CADD8 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798B801CA2DACE004CADD8 /* ConstraintDescription.swift */; };
@@ -56,6 +52,16 @@
 		FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA7B0521CA62ADB007B0E94 /* ChooseLanguageCell.xib */; };
 		FEB918E51CA69A21008B5149 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918E41CA69A21008B5149 /* SettingViewController.swift */; };
 		FEB918E71CA6A1E0008B5149 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918E61CA6A1E0008B5149 /* AboutViewController.swift */; };
+		FEB918E91CA6B5C5008B5149 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918E81CA6B5C5008B5149 /* UserDetailViewController.swift */; };
+		FEB918ED1CA6B5CD008B5149 /* UserDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918EA1CA6B5CD008B5149 /* UserDetailHeader.swift */; };
+		FEB918EE1CA6B5CD008B5149 /* UserDetailHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB918EB1CA6B5CD008B5149 /* UserDetailHeader.xib */; };
+		FEB918EF1CA6B5CD008B5149 /* UserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918EC1CA6B5CD008B5149 /* UserListCell.swift */; };
+		FEB918F11CA6B784008B5149 /* UserEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918F01CA6B784008B5149 /* UserEventViewController.swift */; };
+		FEB918F31CA6CC9F008B5149 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918F21CA6CC9F008B5149 /* EventModel.swift */; };
+		FEB918F51CA6CE3A008B5149 /* EventActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918F41CA6CE3A008B5149 /* EventActor.swift */; };
+		FEB918F71CA6CE52008B5149 /* EventRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918F61CA6CE52008B5149 /* EventRepo.swift */; };
+		FEB918F91CA6CE65008B5149 /* EventPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918F81CA6CE65008B5149 /* EventPayload.swift */; };
+		FEB918FB1CA6DA30008B5149 /* UserDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB918FA1CA6DA30008B5149 /* UserDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,10 +111,6 @@
 		FE4A2A761CA64E200038CF31 /* RankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankCell.swift; sourceTree = "<group>"; };
 		FE5CD8411CA5508B00ACD52A /* ChooseLanguageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageView.swift; sourceTree = "<group>"; };
 		FE5CD8431CA5509600ACD52A /* ChooseLanguageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLanguageView.xib; sourceTree = "<group>"; };
-		FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
-		FE798B771CA19ABE004CADD8 /* UserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
-		FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailHeader.swift; sourceTree = "<group>"; };
-		FE798B7B1CA2CD6A004CADD8 /* UserDetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailHeader.xib; sourceTree = "<group>"; };
 		FE798B7E1CA2DACE004CADD8 /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		FE798B7F1CA2DACE004CADD8 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
 		FE798B801CA2DACE004CADD8 /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
@@ -134,6 +136,16 @@
 		FEA7B0521CA62ADB007B0E94 /* ChooseLanguageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseLanguageCell.xib; sourceTree = "<group>"; };
 		FEB918E41CA69A21008B5149 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		FEB918E61CA6A1E0008B5149 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		FEB918E81CA6B5C5008B5149 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		FEB918EA1CA6B5CD008B5149 /* UserDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailHeader.swift; sourceTree = "<group>"; };
+		FEB918EB1CA6B5CD008B5149 /* UserDetailHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailHeader.xib; sourceTree = "<group>"; };
+		FEB918EC1CA6B5CD008B5149 /* UserListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListCell.swift; sourceTree = "<group>"; };
+		FEB918F01CA6B784008B5149 /* UserEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserEventViewController.swift; sourceTree = "<group>"; };
+		FEB918F21CA6CC9F008B5149 /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		FEB918F41CA6CE3A008B5149 /* EventActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventActor.swift; sourceTree = "<group>"; };
+		FEB918F61CA6CE52008B5149 /* EventRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRepo.swift; sourceTree = "<group>"; };
+		FEB918F81CA6CE65008B5149 /* EventPayload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventPayload.swift; sourceTree = "<group>"; };
+		FEB918FA1CA6DA30008B5149 /* UserDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,7 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				FE2C93F01CA029EB005C0261 /* HomeViewController.swift */,
-				FE798B751CA18BC4004CADD8 /* UserDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -309,9 +320,6 @@
 		FE2C93E81C9EDE3B005C0261 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FE798B771CA19ABE004CADD8 /* UserListCell.swift */,
-				FE798B791CA2CD5C004CADD8 /* UserDetailHeader.swift */,
-				FE798B7B1CA2CD6A004CADD8 /* UserDetailHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -486,6 +494,8 @@
 				FE798BA91CA53F96004CADD8 /* MeViewController.swift */,
 				FEB918E41CA69A21008B5149 /* SettingViewController.swift */,
 				FEB918E61CA6A1E0008B5149 /* AboutViewController.swift */,
+				FEB918E81CA6B5C5008B5149 /* UserDetailViewController.swift */,
+				FEB918F01CA6B784008B5149 /* UserEventViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -493,6 +503,11 @@
 		FE798B9F1CA53F65004CADD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEB918FA1CA6DA30008B5149 /* UserDetailModel.swift */,
+				FEB918F21CA6CC9F008B5149 /* EventModel.swift */,
+				FEB918F41CA6CE3A008B5149 /* EventActor.swift */,
+				FEB918F61CA6CE52008B5149 /* EventRepo.swift */,
+				FEB918F81CA6CE65008B5149 /* EventPayload.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -500,6 +515,9 @@
 		FE798BA01CA53F65004CADD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FEB918EA1CA6B5CD008B5149 /* UserDetailHeader.swift */,
+				FEB918EB1CA6B5CD008B5149 /* UserDetailHeader.xib */,
+				FEB918EC1CA6B5CD008B5149 /* UserListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -645,7 +663,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE798B7C1CA2CD6A004CADD8 /* UserDetailHeader.xib in Resources */,
 				FE2C93BB1C9ED694005C0261 /* LaunchScreen.storyboard in Resources */,
 				FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */,
 				FE2C93B81C9ED694005C0261 /* Assets.xcassets in Resources */,
@@ -654,6 +671,7 @@
 				FE4A2A6F1CA635BA0038CF31 /* City.plist in Resources */,
 				FE2C93B61C9ED694005C0261 /* Main.storyboard in Resources */,
 				FE5CD8441CA5509600ACD52A /* ChooseLanguageView.xib in Resources */,
+				FEB918EE1CA6B5CD008B5149 /* UserDetailHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,7 +744,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE798B7A1CA2CD5C004CADD8 /* UserDetailHeader.swift in Sources */,
 				FE798B971CA2DACE004CADD8 /* View+SnapKit.swift in Sources */,
 				FE798B931CA2DACE004CADD8 /* EdgeInsets.swift in Sources */,
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
@@ -738,27 +755,34 @@
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
 				FEA7B04A1CA56476007B0E94 /* BaseNavigationController.swift in Sources */,
 				FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */,
+				FEB918F91CA6CE65008B5149 /* EventPayload.swift in Sources */,
+				FEB918EF1CA6B5CD008B5149 /* UserListCell.swift in Sources */,
 				FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */,
 				FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */,
-				FE798B761CA18BC4004CADD8 /* UserDetailViewController.swift in Sources */,
+				FEB918F51CA6CE3A008B5149 /* EventActor.swift in Sources */,
 				FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */,
 				FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */,
+				FEB918F11CA6B784008B5149 /* UserEventViewController.swift in Sources */,
 				FE4A2A711CA636860038CF31 /* ChooseCityView.swift in Sources */,
 				FE798B901CA2DACE004CADD8 /* ConstraintMaker.swift in Sources */,
 				FE798B911CA2DACE004CADD8 /* ConstraintRelation.swift in Sources */,
-				FE798B781CA19ABE004CADD8 /* UserListCell.swift in Sources */,
 				FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */,
 				FE798B8D1CA2DACE004CADD8 /* ConstraintAttributes.swift in Sources */,
 				FEB918E51CA69A21008B5149 /* SettingViewController.swift in Sources */,
+				FEB918E91CA6B5C5008B5149 /* UserDetailViewController.swift in Sources */,
 				FEA7B0501CA57F37007B0E94 /* ExploreCell.swift in Sources */,
 				FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */,
+				FEB918F71CA6CE52008B5149 /* EventRepo.swift in Sources */,
+				FEB918ED1CA6B5CD008B5149 /* UserDetailHeader.swift in Sources */,
 				FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */,
 				FEA7B04C1CA57691007B0E94 /* TrendModel.swift in Sources */,
+				FEB918FB1CA6DA30008B5149 /* UserDetailModel.swift in Sources */,
 				FEA7B0531CA62ADB007B0E94 /* ChooseLanguageCell.swift in Sources */,
 				FE798B961CA2DACE004CADD8 /* SnapKit.swift in Sources */,
 				FE798B921CA2DACE004CADD8 /* Debugging.swift in Sources */,
 				FE798B981CA2DACE004CADD8 /* ViewController+SnapKit.swift in Sources */,
 				FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */,
+				FEB918F31CA6CC9F008B5149 /* EventModel.swift in Sources */,
 				FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */,
 				FEB918E71CA6A1E0008B5149 /* AboutViewController.swift in Sources */,
 				FE798B8C1CA2DACE004CADD8 /* Constraint.swift in Sources */,

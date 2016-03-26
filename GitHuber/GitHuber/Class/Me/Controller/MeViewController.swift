@@ -61,14 +61,19 @@ class MeViewController: UITableViewController {
             let loginName = getLoginName()
             if (loginName as NSString).length == 0 {
                 showAlert()
+            }else{
+                let userVc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
+                userVc.loginName = loginName
+                self.navigationController?.pushViewController(userVc, animated: true)
             }
-            
         }else if indexPath.section == 1{
             let loginName = getLoginName()
             if (loginName as NSString).length == 0 {
                 showAlert()
+            }else{
+                let userVc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserEvent") as! UserEventViewController;
+                self.navigationController?.pushViewController(userVc, animated: true)
             }
-            
         }else if indexPath.section == 2{
             
         }else if indexPath.section == 3{//Setting
@@ -95,8 +100,9 @@ class MeViewController: UITableViewController {
             textField.secureTextEntry = false
         }
         //add ok 
-        let alertOk = UIAlertAction(title: "Sure", style: .Default) { (textField) in
-            let name = textField.title ?? ""
+        let alertOk = UIAlertAction(title: "Sure", style: .Default) { (_) in
+            let textField = alertVc.textFields!.first;
+            let name = textField!.text ?? ""
             self.saveLoginName(name)
         }
         let alertCancle = UIAlertAction(title: "Cancle", style: .Cancel) { (_) in

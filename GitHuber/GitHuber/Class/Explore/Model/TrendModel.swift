@@ -17,6 +17,7 @@ class TrendModel: NSObject {
     var language:String?
     var stargazers_count:Int = 0
     var owner:Owner?
+    var url:String?
     
     
     //为了字典转模型
