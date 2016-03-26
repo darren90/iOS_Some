@@ -18,10 +18,18 @@ import UIKit
 class ExploreViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let choosetViewW:CGFloat = 160
-    
+    var dataArray:[TrendModel]?{
+        didSet{//设置完毕数据，就刷新表格
+            tableView.reloadData()
+        }
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         view.addSubview(chooseView)
         chooseView.frame = CGRect(x: -choosetViewW, y: 64, width: choosetViewW, height: self.view.frame.height-64)
         
@@ -34,11 +42,17 @@ class ExploreViewController: UIViewController {
  
     
     func getData() {
-        APINetTools.get("http://trending.codehub-app.com/v2/trending?since=weekly", params: nil, success: { (json) -> Void in
-            print(json)
-        }) { (error) -> Void in
-            print(error)
+        
+        TrendModel.getTrends("since=weekly") { (arrs, error) in
+//            print(arrs)
+            self.dataArray = arrs
         }
+        
+//        APINetTools.get("http://trending.codehub-app.com/v2/trending?since=weekly", params: nil, success: { (json) -> Void in
+//            print(json)
+//        }) { (error) -> Void in
+//            print(error)
+//        }
     }
     
     @IBAction func chooseLanguage(sender: UIBarButtonItem) {
@@ -66,3 +80,26 @@ class ExploreViewController: UIViewController {
         return chooseLanView
     }()
 }
+//
+extension ExploreViewController:UITableViewDelegate,UITableViewDataSource{
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray?.count ?? 0;
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Explorecellcell") as! ExploreCell
+        cell.model = self.dataArray![indexPath.row]
+        cell.rankNum = indexPath.row
+        return cell;
+    }
+    
+    
+}
+
+
+
+
+
+

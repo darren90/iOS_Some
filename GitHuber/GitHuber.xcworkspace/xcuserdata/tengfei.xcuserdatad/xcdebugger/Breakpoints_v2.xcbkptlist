@@ -38,15 +38,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GitHuber/Class/Explore/Controller/ExploreViewController.swift"
-            timestampString = "480603968.259532"
+            timestampString = "480608927.046722"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "getData()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHuber.ExploreViewController.getData () -&gt; ()"
+                  moduleName = "GitHuber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tengfei/github/iOS_Some/GitHuber/GitHuber/Class/Explore/Controller/ExploreViewController.swift"
+                  timestampString = "480607190.077939"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "69">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GitHuber.ExploreViewController.(getData () -&gt; ()).(closure #1)"
+                  moduleName = "GitHuber"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tengfei/github/iOS_Some/GitHuber/GitHuber/Class/Explore/Controller/ExploreViewController.swift"
+                  timestampString = "480607190.078096"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHuber/Class/Explore/Controller/ExploreViewController.swift"
+            timestampString = "480608942.414317"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "getData()"
             landmarkType = "5">
          </BreakpointContent>
@@ -54,17 +102,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GitHuber/Class/Explore/Controller/ExploreViewController.swift"
-            timestampString = "480603968.259532"
+            timestampString = "480608946.565936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "getData()"
-            landmarkType = "5">
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "ExploreViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GitHuber/Class/Explore/View/ExploreCell.swift"
+            timestampString = "480647300.220195"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "ExploreCell"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
