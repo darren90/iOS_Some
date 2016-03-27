@@ -23,6 +23,8 @@
 		FE2C93FD1CA18046005C0261 /* Base_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */; };
 		FE391D851CA77C6D004C8FA7 /* UserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE391D841CA77C6D004C8FA7 /* UserButton.swift */; };
 		FE391D871CA77C7B004C8FA7 /* UserButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE391D861CA77C7B004C8FA7 /* UserButton.xib */; };
+		FE391D8A1CA7869C004C8FA7 /* UserRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE391D881CA7869C004C8FA7 /* UserRankCell.swift */; };
+		FE391D8B1CA7869C004C8FA7 /* UserRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE391D891CA7869C004C8FA7 /* UserRankCell.xib */; };
 		FE4A2A6F1CA635BA0038CF31 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A6E1CA635BA0038CF31 /* City.plist */; };
 		FE4A2A711CA636860038CF31 /* ChooseCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A2A701CA636860038CF31 /* ChooseCityView.swift */; };
 		FE4A2A731CA636940038CF31 /* ChooseCityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A721CA636940038CF31 /* ChooseCityView.xib */; };
@@ -108,6 +110,8 @@
 		FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base_TableViewController.swift; sourceTree = "<group>"; };
 		FE391D841CA77C6D004C8FA7 /* UserButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserButton.swift; sourceTree = "<group>"; };
 		FE391D861CA77C7B004C8FA7 /* UserButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserButton.xib; sourceTree = "<group>"; };
+		FE391D881CA7869C004C8FA7 /* UserRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRankCell.swift; sourceTree = "<group>"; };
+		FE391D891CA7869C004C8FA7 /* UserRankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserRankCell.xib; sourceTree = "<group>"; };
 		FE4A2A6E1CA635BA0038CF31 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
 		FE4A2A701CA636860038CF31 /* ChooseCityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCityView.swift; sourceTree = "<group>"; };
 		FE4A2A721CA636940038CF31 /* ChooseCityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCityView.xib; sourceTree = "<group>"; };
@@ -503,6 +507,8 @@
 				FEB918EC1CA6B5CD008B5149 /* UserListCell.swift */,
 				FE391D841CA77C6D004C8FA7 /* UserButton.swift */,
 				FE391D861CA77C7B004C8FA7 /* UserButton.xib */,
+				FE391D881CA7869C004C8FA7 /* UserRankCell.swift */,
+				FE391D891CA7869C004C8FA7 /* UserRankCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +679,7 @@
 				FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */,
 				FE391D871CA77C7B004C8FA7 /* UserButton.xib in Resources */,
 				FEB919131CA6F1D5008B5149 /* Info.plist in Resources */,
+				FE391D8B1CA7869C004C8FA7 /* UserRankCell.xib in Resources */,
 				FE2C93B81C9ED694005C0261 /* Assets.xcassets in Resources */,
 				FE4A2A731CA636940038CF31 /* ChooseCityView.xib in Resources */,
 				FE4A2A6F1CA635BA0038CF31 /* City.plist in Resources */,
@@ -794,6 +801,7 @@
 				FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */,
 				FEB918F31CA6CC9F008B5149 /* EventModel.swift in Sources */,
 				FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */,
+				FE391D8A1CA7869C004C8FA7 /* UserRankCell.swift in Sources */,
 				FEB918E71CA6A1E0008B5149 /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

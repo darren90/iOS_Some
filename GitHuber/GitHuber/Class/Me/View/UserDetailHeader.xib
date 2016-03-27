@@ -7,7 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserDetailHeader" customModule="GitHuber" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="186"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vbY-fV-YSy">
@@ -91,13 +91,12 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="emailLabel" destination="xMh-OO-74z" id="5NC-dJ-60v"/>
-                <outlet property="followBtn" destination="jqc-ag-Xxj" id="EZy-j9-sHu"/>
                 <outlet property="iconView" destination="vbY-fV-YSy" id="fsV-UZ-DOf"/>
                 <outlet property="locationLabel" destination="sX7-Ru-bZy" id="GmY-rW-jrA"/>
                 <outlet property="nameLabel" destination="Yre-bU-RwL" id="5Sr-GB-qjL"/>
                 <outlet property="nikeNameLabel" destination="CFK-BV-HnB" id="9jA-gI-CZf"/>
             </connections>
-            <point key="canvasLocation" x="351" y="188.5"/>
+            <point key="canvasLocation" x="351" y="211"/>
         </view>
     </objects>
 </document>

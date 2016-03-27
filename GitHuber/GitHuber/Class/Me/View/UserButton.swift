@@ -12,12 +12,14 @@ class UserButton: UIButton {
     @IBOutlet weak var numBtn: UIButton!
     @IBOutlet weak var textBtn: UIButton!
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
+    
+    override func awakeFromNib() {
+        
     }
-    */
 
+    
+    @IBAction func touchDown(sender: UIButton) {
+        
+    }
+  
 }
