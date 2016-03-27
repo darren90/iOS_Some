@@ -23,15 +23,16 @@ class UserDetailViewController: BaseViewController {
         super.viewDidLoad()
 
         tableView.rowHeight = 70
-        // Do any additional setup after loading the view.
-//        view.addSubview(headerView)
-        headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 140)
-        tableView.tableHeaderView = headerView
-//        tableView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0)
-//        headerView.snp_makeConstraints { (make) in
-//            make.width.height.equalTo(100)
-//        }
         
+        var headerViewH:CGFloat  = 150.0
+        let name = NSUserDefaults.standardUserDefaults().objectForKey("GitHubName") as? String
+        if name != nil {
+            headerViewH = 120
+        }
+        headerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: headerViewH)
+        tableView.tableHeaderView = headerView
+ 
+        tableView.sendSubviewToBack(headerView)
         
         getData()
     }
