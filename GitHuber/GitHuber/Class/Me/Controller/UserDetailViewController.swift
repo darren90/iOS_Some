@@ -69,7 +69,7 @@ class UserDetailViewController: BaseViewController {
                 self.headerView.model = arrs
                 self.headerView1.model = arrs
                 self.headerView2.model = arrs
-                self.headerView3.model = arrs
+                self.headerView3    .model = arrs
 
             }
         }

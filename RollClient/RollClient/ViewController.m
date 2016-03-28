@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+// http://112.74.95.46/item/query  post ，参数 itemTitle  pageNumber
+    
+
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
