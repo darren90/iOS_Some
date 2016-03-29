@@ -18,7 +18,8 @@ class UserDetailViewController: BaseViewController {
     @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var tableView3: UITableView!
     
-
+    var swipeVC:UserDetailSwipeConttoller!
+    var headerViewH:CGFloat  = 150.0
     
     
     //外界传递的参数
@@ -29,7 +30,6 @@ class UserDetailViewController: BaseViewController {
 
         tableView1.rowHeight = 70
         
-        var headerViewH:CGFloat  = 150.0
         let name = NSUserDefaults.standardUserDefaults().objectForKey("GitHubName") as? String
         if name != nil {
             headerViewH = 120
@@ -41,7 +41,7 @@ class UserDetailViewController: BaseViewController {
         headerView3.frame = headerRect
         
         //1
-        tableView1.tableHeaderView = headerView1
+        tableView1.tableHeaderView = headerView
         tableView1.sendSubviewToBack(headerView1)
         
         //2
@@ -80,12 +80,12 @@ class UserDetailViewController: BaseViewController {
  
 
     func initmYSlideView(){
-//        slideView = DLTabedSlideView()
-//        view.addSubview(slideView)
-//        slideView.frame = CGRectMake(0, 20, KWidth, KHeight);
-//        slideView.baseViewController = self;
-//        slideView.delegate = self;
-//        slideView.tabItemNormalColor = UIColor.whiteColor()
+        swipeVC = UserDetailSwipeConttoller()
+        self.view.addSubview(swipeVC.view)
+        self.addChildViewController(swipeVC)
+        
+        swipeVC.view.frame = CGRect(x: 0, y: 0, width: KWidth, height: KHeight )
+        view.bringSubviewToFront(swipeVC.view)
     }
     
     private lazy var headerView:UserDetailHeader = {

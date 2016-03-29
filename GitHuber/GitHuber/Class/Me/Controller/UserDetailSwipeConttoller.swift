@@ -14,6 +14,8 @@ class UserDetailSwipeConttoller: SwipeViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.brownColor()
+        
         let VC1 = UIViewController()
         VC1.view.backgroundColor = UIColor(red: 0.19, green: 0.36, blue: 0.60, alpha: 1.0)
         VC1.title = "Recent"
