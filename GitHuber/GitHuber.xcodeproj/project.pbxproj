@@ -25,6 +25,9 @@
 		FE391D871CA77C7B004C8FA7 /* UserButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE391D861CA77C7B004C8FA7 /* UserButton.xib */; };
 		FE391D8A1CA7869C004C8FA7 /* UserRankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE391D881CA7869C004C8FA7 /* UserRankCell.swift */; };
 		FE391D8B1CA7869C004C8FA7 /* UserRankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE391D891CA7869C004C8FA7 /* UserRankCell.xib */; };
+		FE391EFD1CAAD014004C8FA7 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE391EFB1CAAD014004C8FA7 /* InterfaceController.swift */; };
+		FE391EFE1CAAD014004C8FA7 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE391EFC1CAAD014004C8FA7 /* SwipeViewController.swift */; };
+		FE391F001CAAD0E8004C8FA7 /* UserDetailSwipeConttoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE391EFF1CAAD0E8004C8FA7 /* UserDetailSwipeConttoller.swift */; };
 		FE4A2A6F1CA635BA0038CF31 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A6E1CA635BA0038CF31 /* City.plist */; };
 		FE4A2A711CA636860038CF31 /* ChooseCityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4A2A701CA636860038CF31 /* ChooseCityView.swift */; };
 		FE4A2A731CA636940038CF31 /* ChooseCityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4A2A721CA636940038CF31 /* ChooseCityView.xib */; };
@@ -112,6 +115,10 @@
 		FE391D861CA77C7B004C8FA7 /* UserButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserButton.xib; sourceTree = "<group>"; };
 		FE391D881CA7869C004C8FA7 /* UserRankCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRankCell.swift; sourceTree = "<group>"; };
 		FE391D891CA7869C004C8FA7 /* UserRankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserRankCell.xib; sourceTree = "<group>"; };
+		FE391EC51CAAC56D004C8FA7 /* GitHuber-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GitHuber-Bridging-Header.h"; sourceTree = "<group>"; };
+		FE391EFB1CAAD014004C8FA7 /* InterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		FE391EFC1CAAD014004C8FA7 /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		FE391EFF1CAAD0E8004C8FA7 /* UserDetailSwipeConttoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailSwipeConttoller.swift; sourceTree = "<group>"; };
 		FE4A2A6E1CA635BA0038CF31 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
 		FE4A2A701CA636860038CF31 /* ChooseCityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCityView.swift; sourceTree = "<group>"; };
 		FE4A2A721CA636940038CF31 /* ChooseCityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChooseCityView.xib; sourceTree = "<group>"; };
@@ -228,6 +235,7 @@
 				FE2C93B21C9ED694005C0261 /* ViewController.swift */,
 				FE2C93B41C9ED694005C0261 /* Main.storyboard */,
 				FE2C93DE1C9ED6E4005C0261 /* TFCommon.swift */,
+				FE391EC51CAAC56D004C8FA7 /* GitHuber-Bridging-Header.h */,
 				FE2C93B71C9ED694005C0261 /* Assets.xcassets */,
 				FE2C93E01C9EDE3B005C0261 /* Class */,
 				FE2C93ED1C9EDE3B005C0261 /* Lib */,
@@ -384,6 +392,7 @@
 		FE2C93EF1C9EDE3B005C0261 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FE391EFA1CAAD014004C8FA7 /* SwipeViewController */,
 				FEB918FC1CA6F1D5008B5149 /* SnapKit */,
 			);
 			path = Vendor;
@@ -414,6 +423,15 @@
 				FE2C93FC1CA18046005C0261 /* Base_TableViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		FE391EFA1CAAD014004C8FA7 /* SwipeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FE391EFB1CAAD014004C8FA7 /* InterfaceController.swift */,
+				FE391EFC1CAAD014004C8FA7 /* SwipeViewController.swift */,
+			);
+			path = SwipeViewController;
 			sourceTree = "<group>";
 		};
 		FE4A2A6D1CA635A60038CF31 /* Resource */ = {
@@ -482,6 +500,7 @@
 				FEB918E41CA69A21008B5149 /* SettingViewController.swift */,
 				FEB918E61CA6A1E0008B5149 /* AboutViewController.swift */,
 				FEB918E81CA6B5C5008B5149 /* UserDetailViewController.swift */,
+				FE391EFF1CAAD0E8004C8FA7 /* UserDetailSwipeConttoller.swift */,
 				FEB918F01CA6B784008B5149 /* UserEventViewController.swift */,
 			);
 			path = Controller;
@@ -764,6 +783,7 @@
 				FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */,
 				FE4A2A771CA64E200038CF31 /* RankCell.swift in Sources */,
 				FEB919161CA6F1D5008B5149 /* View+SnapKit.swift in Sources */,
+				FE391EFE1CAAD014004C8FA7 /* SwipeViewController.swift in Sources */,
 				FEB919101CA6F1D5008B5149 /* ConstraintRelation.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
 				FEA7B04A1CA56476007B0E94 /* BaseNavigationController.swift in Sources */,
@@ -777,6 +797,7 @@
 				FEB918F51CA6CE3A008B5149 /* EventActor.swift in Sources */,
 				FEB919111CA6F1D5008B5149 /* Debugging.swift in Sources */,
 				FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */,
+				FE391EFD1CAAD014004C8FA7 /* InterfaceController.swift in Sources */,
 				FEB9190E1CA6F1D5008B5149 /* ConstraintItem.swift in Sources */,
 				FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */,
 				FEB918F11CA6B784008B5149 /* UserEventViewController.swift in Sources */,
@@ -798,6 +819,7 @@
 				FEB9190F1CA6F1D5008B5149 /* ConstraintMaker.swift in Sources */,
 				FEB918FB1CA6DA30008B5149 /* UserDetailModel.swift in Sources */,
 				FEA7B0531CA62ADB007B0E94 /* ChooseLanguageCell.swift in Sources */,
+				FE391F001CAAD0E8004C8FA7 /* UserDetailSwipeConttoller.swift in Sources */,
 				FE2C93F11CA029EB005C0261 /* HomeViewController.swift in Sources */,
 				FEB918F31CA6CC9F008B5149 /* EventModel.swift in Sources */,
 				FE2C93F91CA17FDE005C0261 /* BaseViewController.swift in Sources */,
@@ -948,6 +970,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.GitHuber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GitHuber/GitHuber-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -962,6 +985,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.GitHuber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GitHuber/GitHuber-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

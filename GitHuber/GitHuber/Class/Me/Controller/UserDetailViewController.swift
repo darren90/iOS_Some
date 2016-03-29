@@ -17,6 +17,7 @@ class UserDetailViewController: BaseViewController {
     @IBOutlet weak var tableView1: UITableView!
     @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var tableView3: UITableView!
+    
 
     
     
@@ -60,6 +61,8 @@ class UserDetailViewController: BaseViewController {
         tableView2.hidden = false
  //        headerView.hidden = false
  
+        initmYSlideView()
+        
         getData()
     }
 
@@ -76,6 +79,15 @@ class UserDetailViewController: BaseViewController {
     }
  
 
+    func initmYSlideView(){
+//        slideView = DLTabedSlideView()
+//        view.addSubview(slideView)
+//        slideView.frame = CGRectMake(0, 20, KWidth, KHeight);
+//        slideView.baseViewController = self;
+//        slideView.delegate = self;
+//        slideView.tabItemNormalColor = UIColor.whiteColor()
+    }
+    
     private lazy var headerView:UserDetailHeader = {
         let header = NSBundle.mainBundle().loadNibNamed("UserDetailHeader", owner: nil, options: nil).first as! UserDetailHeader
 //        header.backgroundColor = U
@@ -108,6 +120,7 @@ class UserDetailViewController: BaseViewController {
 }
 
 
+
 //lazy var box = UIView()
 //
 //override func viewDidLoad() {
@@ -122,6 +135,7 @@ class UserDetailViewController: BaseViewController {
 
 extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
+    //MARK - tableview
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
@@ -147,5 +161,8 @@ extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
         
     }
     
+    //MARK - DLTabedSlideViewDelegate
+    
+ 
     
 }
