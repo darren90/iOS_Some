@@ -8,6 +8,7 @@
 
 #import "Home_RootController.h"
 #import "RollModel.h"
+#import "HomeRollCell.h"
 
 @interface Home_RootController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -19,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.rowHeight = 120;
+    [self getData];
 }
 
 
@@ -43,8 +46,8 @@
           NSLog(@"%@",responseObject[@"result"]);
           NSArray *array = [RollModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
           NSLog(@"----------------------");
-          NSLog(@"%@",array);
-          
+          [self.dataArray addObjectsFromArray:array];
+          [self.tableView reloadData];
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"%@",error);
       }];
@@ -65,11 +68,12 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    UITableViewCell
-    return nil;
+    HomeRollCell *cell = [HomeRollCell cellWithTableView:tableView];
+    cell.model = self.dataArray[indexPath.row];
+    return cell;
 }
 
- 
+
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];

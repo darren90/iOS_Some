@@ -25,6 +25,8 @@
 		897BD2421CAB657800FDF5F0 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD2411CAB657800FDF5F0 /* BaseTabBarController.m */; };
 		897BD2451CAB659A00FDF5F0 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD2441CAB659A00FDF5F0 /* BaseNavigationController.m */; };
 		897BD2481CAB65BA00FDF5F0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD2471CAB65BA00FDF5F0 /* BaseViewController.m */; };
+		897BD24C1CAB697800FDF5F0 /* HomeRollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD24A1CAB697800FDF5F0 /* HomeRollCell.m */; };
+		897BD24D1CAB697800FDF5F0 /* HomeRollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */; };
 		FE391D9A1CA9736C004C8FA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D991CA9736C004C8FA7 /* main.m */; };
 		FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D9C1CA9736C004C8FA7 /* AppDelegate.m */; };
 		FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D9F1CA9736C004C8FA7 /* ViewController.m */; };
@@ -89,6 +91,9 @@
 		897BD2441CAB659A00FDF5F0 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		897BD2461CAB65BA00FDF5F0 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		897BD2471CAB65BA00FDF5F0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		897BD2491CAB697800FDF5F0 /* HomeRollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeRollCell.h; sourceTree = "<group>"; };
+		897BD24A1CAB697800FDF5F0 /* HomeRollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRollCell.m; sourceTree = "<group>"; };
+		897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRollCell.xib; sourceTree = "<group>"; };
 		F5E17A35C0F971B3BB8B046E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE391D951CA9736B004C8FA7 /* RollClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE391D991CA9736C004C8FA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -198,6 +203,9 @@
 		897BD2031CAB641100FDF5F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				897BD2491CAB697800FDF5F0 /* HomeRollCell.h */,
+				897BD24A1CAB697800FDF5F0 /* HomeRollCell.m */,
+				897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +530,7 @@
 				FE391DA81CA9736C004C8FA7 /* LaunchScreen.storyboard in Resources */,
 				FE391DA51CA9736C004C8FA7 /* Assets.xcassets in Resources */,
 				FE391DA31CA9736C004C8FA7 /* Main.storyboard in Resources */,
+				897BD24D1CAB697800FDF5F0 /* HomeRollCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +620,7 @@
 				897BD2421CAB657800FDF5F0 /* BaseTabBarController.m in Sources */,
 				897BD2291CAB641100FDF5F0 /* Global.m in Sources */,
 				897BD2261CAB641100FDF5F0 /* UIImage+Category.m in Sources */,
+				897BD24C1CAB697800FDF5F0 /* HomeRollCell.m in Sources */,
 				897BD22D1CAB641100FDF5F0 /* RDVTabBarItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
