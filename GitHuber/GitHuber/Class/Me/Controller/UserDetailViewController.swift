@@ -84,6 +84,7 @@ class UserDetailViewController: BaseViewController {
         self.view.addSubview(swipeVC.view)
         self.addChildViewController(swipeVC)
         
+        swipeVC.view.backgroundColor = UIColor.redColor()
         swipeVC.view.frame = CGRect(x: 0, y: 0, width: KWidth, height: KHeight )
         view.bringSubviewToFront(swipeVC.view)
     }
