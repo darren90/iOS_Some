@@ -62,9 +62,11 @@ class MeViewController: UITableViewController {
             if (loginName as NSString).length == 0 {
                 showAlert()
             }else{
-                let userVc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
-                userVc.loginName = loginName
-                self.navigationController?.pushViewController(userVc, animated: true)
+//                let userVc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
+//                userVc.loginName = loginName
+//                self.navigationController?.pushViewController(userVc, animated: true)
+                let vv = UserDetailSwipeConttoller()
+                self.navigationController?.pushViewController(vv, animated: true)
             }
         }else if indexPath.section == 1{
             let loginName = getLoginName()
