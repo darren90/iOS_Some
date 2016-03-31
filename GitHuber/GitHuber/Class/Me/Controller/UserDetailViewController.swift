@@ -18,7 +18,7 @@ class UserDetailViewController: BaseViewController {
     @IBOutlet weak var tableView2: UITableView!
     @IBOutlet weak var tableView3: UITableView!
     
-    var swipeVC:UserDetailSwipeConttoller!
+    var swipeVC:UserDetailRKSwipeController!
     var headerViewH:CGFloat  = 150.0
     
     
@@ -80,12 +80,12 @@ class UserDetailViewController: BaseViewController {
  
 
     func initmYSlideView(){
-        swipeVC = UserDetailSwipeConttoller()
+        swipeVC = UserDetailRKSwipeController()
         self.view.addSubview(swipeVC.view)
         self.addChildViewController(swipeVC)
         
         swipeVC.view.backgroundColor = UIColor.redColor()
-        swipeVC.view.frame = CGRect(x: 0, y: 0, width: KWidth, height: KHeight )
+        swipeVC.view.frame = CGRect(x: 0, y:300, width: KWidth, height: KHeight-300)
         view.bringSubviewToFront(swipeVC.view)
     }
     

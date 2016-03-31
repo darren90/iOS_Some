@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		17071981ED1D505D6C1C4207 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E84EFC62B643C3DFD32318 /* Pods.framework */; };
+		8941C4BB1CACBB46002BB341 /* RKSwipeBetweenViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8941C4BA1CACBB46002BB341 /* RKSwipeBetweenViewControllers.m */; };
+		8941C4C01CACBC07002BB341 /* UserDetailRKSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8941C4BF1CACBC07002BB341 /* UserDetailRKSwipeController.swift */; };
 		FE2C93B11C9ED694005C0261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93B01C9ED694005C0261 /* AppDelegate.swift */; };
 		FE2C93B31C9ED694005C0261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C93B21C9ED694005C0261 /* ViewController.swift */; };
 		FE2C93B61C9ED694005C0261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C93B41C9ED694005C0261 /* Main.storyboard */; };
@@ -90,6 +92,9 @@
 
 /* Begin PBXFileReference section */
 		385481D4C6B4CA0A6E418363 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8941C4B91CACBB46002BB341 /* RKSwipeBetweenViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKSwipeBetweenViewControllers.h; sourceTree = "<group>"; };
+		8941C4BA1CACBB46002BB341 /* RKSwipeBetweenViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSwipeBetweenViewControllers.m; sourceTree = "<group>"; };
+		8941C4BF1CACBC07002BB341 /* UserDetailRKSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailRKSwipeController.swift; sourceTree = "<group>"; };
 		94E84EFC62B643C3DFD32318 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DB65FA6E221DAADD0147B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2C93AD1C9ED694005C0261 /* GitHuber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHuber.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +209,15 @@
 				94E84EFC62B643C3DFD32318 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8941C4B81CACBB46002BB341 /* RKSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				8941C4B91CACBB46002BB341 /* RKSwipeBetweenViewControllers.h */,
+				8941C4BA1CACBB46002BB341 /* RKSwipeBetweenViewControllers.m */,
+			);
+			path = RKSwipe;
 			sourceTree = "<group>";
 		};
 		FE2C93A41C9ED694005C0261 = {
@@ -392,6 +406,7 @@
 		FE2C93EF1C9EDE3B005C0261 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8941C4B81CACBB46002BB341 /* RKSwipe */,
 				FE391EFA1CAAD014004C8FA7 /* SwipeViewController */,
 				FEB918FC1CA6F1D5008B5149 /* SnapKit */,
 			);
@@ -502,6 +517,7 @@
 				FEB918E81CA6B5C5008B5149 /* UserDetailViewController.swift */,
 				FE391EFF1CAAD0E8004C8FA7 /* UserDetailSwipeConttoller.swift */,
 				FEB918F01CA6B784008B5149 /* UserEventViewController.swift */,
+				8941C4BF1CACBC07002BB341 /* UserDetailRKSwipeController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -783,6 +799,7 @@
 				FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */,
 				FE4A2A771CA64E200038CF31 /* RankCell.swift in Sources */,
 				FEB919161CA6F1D5008B5149 /* View+SnapKit.swift in Sources */,
+				8941C4BB1CACBB46002BB341 /* RKSwipeBetweenViewControllers.m in Sources */,
 				FE391EFE1CAAD014004C8FA7 /* SwipeViewController.swift in Sources */,
 				FEB919101CA6F1D5008B5149 /* ConstraintRelation.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
@@ -799,6 +816,7 @@
 				FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */,
 				FE391EFD1CAAD014004C8FA7 /* InterfaceController.swift in Sources */,
 				FEB9190E1CA6F1D5008B5149 /* ConstraintItem.swift in Sources */,
+				8941C4C01CACBC07002BB341 /* UserDetailRKSwipeController.swift in Sources */,
 				FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */,
 				FEB918F11CA6B784008B5149 /* UserEventViewController.swift in Sources */,
 				FEB9190C1CA6F1D5008B5149 /* ConstraintAttributes.swift in Sources */,
