@@ -20,7 +20,8 @@ class UserDetailRKSwipeController: UIViewController {
         let v2 = UIViewController()
         let v3 = UIViewController()
         
-        swip.buttonText = ["美剧","韩剧","泰剧"]
+        
+        swip.buttonText =  ["美剧","韩剧","泰剧"]
         swip.viewControllerArray = [v1,v2,v3]
         v1.view.backgroundColor = UIColor .brownColor()
         v2.view.backgroundColor = UIColor .grayColor()

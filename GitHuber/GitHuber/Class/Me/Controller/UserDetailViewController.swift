@@ -15,8 +15,8 @@ import UIKit
 
 class UserDetailViewController: BaseViewController {
     @IBOutlet weak var tableView1: UITableView!
-    @IBOutlet weak var tableView2: UITableView!
-    @IBOutlet weak var tableView3: UITableView!
+    //@IBOutlet weak var tableView2: UITableView!
+    //@IBOutlet weak var tableView3: UITableView!
     
     var swipeVC:UserDetailRKSwipeController!
     var headerViewH:CGFloat  = 150.0
@@ -45,20 +45,20 @@ class UserDetailViewController: BaseViewController {
         tableView1.sendSubviewToBack(headerView1)
         
         //2
-        tableView2.backgroundColor = UIColor.clearColor()
-        tableView2.tableHeaderView = headerView2
-        tableView2.sendSubviewToBack(headerView2)
-        tableView2.registerNib(UINib(nibName: "UserRankCell",bundle: nil), forCellReuseIdentifier: "UserRankCell")
-        
-        //3
-        tableView3.tableHeaderView = headerView3
-        tableView3.backgroundColor = UIColor.clearColor()
-        tableView3.sendSubviewToBack(headerView3)
-        tableView3.registerNib(UINib(nibName: "UserRankCell",bundle: nil), forCellReuseIdentifier: "UserRankCell")
-        
-        tableView1.hidden = true
-        tableView3.hidden = true
-        tableView2.hidden = false
+//        tableView2.backgroundColor = UIColor.clearColor()
+//        tableView2.tableHeaderView = headerView2
+//        tableView2.sendSubviewToBack(headerView2)
+//        tableView2.registerNib(UINib(nibName: "UserRankCell",bundle: nil), forCellReuseIdentifier: "UserRankCell")
+//        
+//        //3
+//        tableView3.tableHeaderView = headerView3
+//        tableView3.backgroundColor = UIColor.clearColor()
+//        tableView3.sendSubviewToBack(headerView3)
+//        tableView3.registerNib(UINib(nibName: "UserRankCell",bundle: nil), forCellReuseIdentifier: "UserRankCell")
+//        
+//        tableView1.hidden = true
+//        tableView3.hidden = true
+//        tableView2.hidden = false
  //        headerView.hidden = false
  
 //        initmYSlideView()
@@ -145,21 +145,22 @@ extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        switch tableView {
-        case tableView1:
-            let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
-            return cell;
-        case tableView2:
-            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
-            return cell;
-        case tableView3:
-            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
-            return cell;
-        default:
-            let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
-            return cell;
-        }
-        
+//        switch tableView {
+//        case tableView1:
+//            let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
+//            return cell;
+//        case tableView2:
+//            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
+//            return cell;
+//        case tableView3:
+//            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
+//            return cell;
+//        default:
+//            let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
+//            return cell;
+//        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
+        return cell;
     }
     
     //MARK - DLTabedSlideViewDelegate

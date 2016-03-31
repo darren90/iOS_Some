@@ -247,9 +247,9 @@
 			children = (
 				FE2C93B01C9ED694005C0261 /* AppDelegate.swift */,
 				FE2C93B21C9ED694005C0261 /* ViewController.swift */,
-				FE2C93B41C9ED694005C0261 /* Main.storyboard */,
 				FE2C93DE1C9ED6E4005C0261 /* TFCommon.swift */,
 				FE391EC51CAAC56D004C8FA7 /* GitHuber-Bridging-Header.h */,
+				FE2C93B41C9ED694005C0261 /* Main.storyboard */,
 				FE2C93B71C9ED694005C0261 /* Assets.xcassets */,
 				FE2C93E01C9EDE3B005C0261 /* Class */,
 				FE2C93ED1C9EDE3B005C0261 /* Lib */,
