@@ -13,8 +13,6 @@ class UserDetailRKSwipeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
         let pageController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
         let swip = RKSwipeBetweenViewControllers(rootViewController: pageController)
         

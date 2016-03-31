@@ -61,7 +61,7 @@ class UserDetailViewController: BaseViewController {
         tableView2.hidden = false
  //        headerView.hidden = false
  
-        initmYSlideView()
+//        initmYSlideView()
         
         getData()
     }
