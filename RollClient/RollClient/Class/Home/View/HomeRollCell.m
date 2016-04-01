@@ -50,7 +50,7 @@
 }
 
 -(void)autoArrangeBoxWithConstransits:(NSArray *)constraninArray width:(CGFloat)width{
-    NSInteger step = ([UIScreen mainScreen].bounds.size.width - (width * constraninArray.count))/(constraninArray.count+1);
+    NSInteger step = (self.contentView.frame.size.width - (width * constraninArray.count))/(constraninArray.count+1);
     for (int i = 0 ; i< constraninArray.count ; i++) {
         NSLayoutConstraint *constraint = constraninArray[i];
         constraint.constant = step * (i + 1) + width * i;
