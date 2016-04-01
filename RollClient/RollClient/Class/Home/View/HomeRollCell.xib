@@ -30,13 +30,6 @@
                             <constraint firstAttribute="height" constant="70" id="qvp-dG-CeX"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7KA-9z-dGA">
-                        <rect key="frame" x="115" y="37" width="79" height="70"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="70" id="Yve-v8-W08"/>
-                            <constraint firstAttribute="width" constant="79" id="sEe-13-eGA"/>
-                        </constraints>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-6g-d0d">
                         <rect key="frame" x="209" y="37" width="79" height="70"/>
                         <constraints>
@@ -44,17 +37,25 @@
                             <constraint firstAttribute="width" constant="79" id="HLy-Vm-Uaa"/>
                         </constraints>
                     </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7KA-9z-dGA">
+                        <rect key="frame" x="115" y="37" width="79" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="Yve-v8-W08"/>
+                            <constraint firstAttribute="width" constant="79" id="sEe-13-eGA"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="tnl-6g-d0d" firstAttribute="leading" secondItem="7KA-9z-dGA" secondAttribute="trailing" constant="15" id="2Ow-ty-m58"/>
+                    <constraint firstItem="7KA-9z-dGA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="115" id="1Uh-3a-Ult"/>
+                    <constraint firstItem="tnl-6g-d0d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="209" id="1WQ-Qx-Ava"/>
                     <constraint firstItem="7KA-9z-dGA" firstAttribute="top" secondItem="Nss-ui-VOv" secondAttribute="bottom" constant="8" id="G4B-0V-kCK"/>
                     <constraint firstAttribute="trailing" secondItem="Nss-ui-VOv" secondAttribute="trailing" constant="16" id="Lsh-Ug-XKP"/>
                     <constraint firstItem="Nss-ui-VOv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ma8-Qp-p6b"/>
+                    <constraint firstItem="7AX-iD-Wk5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OuF-5J-AC1"/>
                     <constraint firstItem="Nss-ui-VOv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="QOa-AN-4xD"/>
-                    <constraint firstItem="7AX-iD-Wk5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="R2A-F0-GpF"/>
                     <constraint firstItem="tnl-6g-d0d" firstAttribute="width" secondItem="7AX-iD-Wk5" secondAttribute="width" id="Sf7-kX-wzy"/>
                     <constraint firstItem="7KA-9z-dGA" firstAttribute="height" secondItem="7AX-iD-Wk5" secondAttribute="height" id="Ve5-lw-Niq"/>
-                    <constraint firstItem="7KA-9z-dGA" firstAttribute="leading" secondItem="7AX-iD-Wk5" secondAttribute="trailing" constant="20" id="doz-hy-sJF"/>
+                    <constraint firstItem="7KA-9z-dGA" firstAttribute="leading" secondItem="7AX-iD-Wk5" secondAttribute="trailing" constant="20" id="bW0-bw-MhL"/>
                     <constraint firstItem="tnl-6g-d0d" firstAttribute="top" secondItem="Nss-ui-VOv" secondAttribute="bottom" constant="8" id="iPB-C9-wRY"/>
                     <constraint firstItem="tnl-6g-d0d" firstAttribute="height" secondItem="7AX-iD-Wk5" secondAttribute="height" id="pwo-s4-emE"/>
                     <constraint firstItem="7KA-9z-dGA" firstAttribute="width" secondItem="7AX-iD-Wk5" secondAttribute="width" id="yXW-fK-583"/>
@@ -62,6 +63,10 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="buttonW" destination="jqL-SV-Z7m" id="mrw-Ut-f1U"/>
+                <outlet property="imag1X" destination="OuF-5J-AC1" id="X03-6z-Qdi"/>
+                <outlet property="imag2X" destination="1Uh-3a-Ult" id="Wu1-sI-A2y"/>
+                <outlet property="imag3X" destination="1WQ-Qx-Ava" id="wpR-9X-SSs"/>
                 <outlet property="imageView1" destination="7AX-iD-Wk5" id="Z0P-1Q-adV"/>
                 <outlet property="imageView2" destination="7KA-9z-dGA" id="ZAV-0p-OYj"/>
                 <outlet property="imageView3" destination="tnl-6g-d0d" id="UDn-vi-hSF"/>
