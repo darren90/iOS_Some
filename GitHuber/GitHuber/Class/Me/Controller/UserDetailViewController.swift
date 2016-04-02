@@ -39,6 +39,7 @@ class UserDetailViewController: BaseViewController {
         let name = NSUserDefaults.standardUserDefaults().objectForKey("GitHubName") as? String
         if name != nil {
             headerViewH = 120
+            self.title = name
         }
         let headerRect = CGRect(x: 0, y: 0, width: self.view.frame.width, height: headerViewH)
         headerView.frame = headerRect
