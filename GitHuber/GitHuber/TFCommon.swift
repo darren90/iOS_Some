@@ -23,6 +23,7 @@ public let KUser = "users/"
 public let KPlaceholderImg = UIImage(named: "login_me_user-no")
 
 
+public let KCommonColor = KColor(103, g: 151, b: 216)
 
 //App Store
 public let KAppid = "1095134608"

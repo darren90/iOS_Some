@@ -8,18 +8,25 @@
 
 import UIKit
 
-class UserButton: UIButton {
+class UserButton: UIView {
     @IBOutlet weak var numBtn: UIButton!
     @IBOutlet weak var textBtn: UIButton!
 
     
     override func awakeFromNib() {
+        numBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        textBtn.setTitleColor(UIColor.blackColor(), forState: .Normal)
+ 
+        numBtn.setTitleColor(KCommonColor, forState: .Highlighted)
+        textBtn.setTitleColor(KCommonColor, forState: .Highlighted)
         
+        numBtn.setTitleColor(KCommonColor, forState: .Selected)
+        textBtn.setTitleColor(KCommonColor, forState: .Selected)
     }
 
     
     @IBAction func touchDown(sender: UIButton) {
-        
+//        sender.selected = !sender.selected
     }
   
 }

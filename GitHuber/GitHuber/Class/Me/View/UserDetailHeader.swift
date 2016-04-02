@@ -19,8 +19,20 @@ class UserDetailHeader: UIView {
 //    @IBOutlet weak var joinLabel: UILabel!
     @IBOutlet weak var followBtn: UIButton!
  
+    @IBOutlet weak var reoBtn: UIView!
+    @IBOutlet weak var followingBtn: UIView!
+    @IBOutlet weak var followerBtn: UIView!
     
+
     override func awakeFromNib() {
+        reoBtn.addSubview(reoBtnView)
+        reoBtnView.frame = reoBtn.bounds
+        
+        followingBtn.addSubview(followingBtnView)
+        followingBtnView.frame = followingBtn.bounds
+        
+        followerBtn.addSubview(followerBtnView)
+        followerBtnView.frame = followerBtn.bounds
         
     }
     
@@ -32,9 +44,29 @@ class UserDetailHeader: UIView {
             locationLabel.text = model?.location
             emailLabel.text = model?.email
             
+            
+            reoBtnView.textBtn.setTitle("Repositories", forState: .Normal)
+            followingBtnView.textBtn.setTitle("Following", forState: .Normal)
+            followerBtnView.textBtn.setTitle("Follower", forState: .Normal)
+
+            //三个btn的设置
+            reoBtnView.numBtn.setTitle("\(model!.public_repos)", forState: .Normal)
+            followingBtnView.numBtn.setTitle("\(model!.following)", forState: .Normal)
+            followerBtnView.numBtn.setTitle("\(model!.followers)", forState: .Normal)
         }
     }
     
-    
+    lazy var reoBtnView :UserButton = {
+        let view = NSBundle.mainBundle().loadNibNamed("UserButton", owner: nil, options: nil).first as! UserButton!
+        return view
+    }()
+    var followingBtnView :UserButton = {
+        let view = NSBundle.mainBundle().loadNibNamed("UserButton", owner: nil, options: nil).first as! UserButton!
+        return view
+    }()
+    var followerBtnView :UserButton = {
+        let view = NSBundle.mainBundle().loadNibNamed("UserButton", owner: nil, options: nil).first as! UserButton!
+        return view
+    }()
     
 }
