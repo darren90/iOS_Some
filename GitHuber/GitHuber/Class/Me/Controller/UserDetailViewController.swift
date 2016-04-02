@@ -22,6 +22,9 @@ class UserDetailViewController: BaseViewController {
     var headerViewH:CGFloat  = 150.0
     
     var repoArray:[UserRepos]! = []
+    var followingArray:[UserFollow]! = []
+    var followerArray:[UserFollow]! = []
+
     
     //外界传递的参数
     var loginName:String! = ""
@@ -30,6 +33,8 @@ class UserDetailViewController: BaseViewController {
         super.viewDidLoad()
 
         tableView.rowHeight = 70
+        
+        tableView.registerNib(UINib(nibName: "UserRankCell",bundle:nil), forCellReuseIdentifier: "UserRankCell")
         
         let name = NSUserDefaults.standardUserDefaults().objectForKey("GitHubName") as? String
         if name != nil {
@@ -49,6 +54,8 @@ class UserDetailViewController: BaseViewController {
             if arrs != nil {
                 self.headerView.model = arrs
                 self.getRepos(arrs!.repos_url!)
+                self.getFollowing(arrs!.following_url_!)
+                self.getFollower(arrs!.followers_url!)
             }
         }
     }
@@ -62,9 +69,25 @@ class UserDetailViewController: BaseViewController {
                 
             }
         }
-
+    }
+    
+    func getFollowing(url:String)  {
+        if followingArray == nil || followingArray.count == 0 {
+            UserFollow.getFollowing(url) { (arrs, error) in
+                self.followingArray = arrs
+                self.tableView.reloadData()
+            }
+        }
     }
  
+    func getFollower(url:String)  {
+        if followerArray == nil || followerArray.count == 0 {
+            UserFollow.getFollowers(url) { (arrs, error) in
+                self.followerArray = arrs
+                self.tableView.reloadData()
+            }
+        }
+    }
 
     func initmYSlideView(){
         swipeVC = UserDetailRKSwipeController()
@@ -78,7 +101,6 @@ class UserDetailViewController: BaseViewController {
     
     private lazy var headerView:UserDetailHeader = {
         let header = NSBundle.mainBundle().loadNibNamed("UserDetailHeader", owner: nil, options: nil).first as! UserDetailHeader
-//        header.backgroundColor = U
         header.delegate  = self
         return header
     }()
@@ -92,28 +114,39 @@ extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource,Use
         return 1;
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repoArray.count ?? 0;
+        print(headerView.headerType)
+        switch headerView.headerType {
+        case .Repo:
+            return repoArray.count ?? 0;
+        case .Following:
+            return followingArray.count ?? 0;
+        case .Follower:
+            return followerArray.count ?? 0;
+        }
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-//        switch tableView {
-//        case tableView1:
-//            let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
-//            return cell;
-//        case tableView2:
-//            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
-//            return cell;
-//        case tableView3:
-//            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
-//            return cell;
-//        default:
-//            let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
-//            return cell;
-//        }
-        let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
-        cell.model = self.repoArray[indexPath.row]
-
-        return cell;
+        switch headerView.headerType {
+        case .Repo:
+            let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
+            if repoArray.count != 0 {
+                cell.model = self.repoArray[indexPath.row]
+            }
+            return cell;
+        case .Following:
+            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
+            if followingArray.count != 0 {
+                cell.model = followingArray[indexPath.row]
+                cell.rankNum = indexPath.row
+            }
+            return cell;
+        case .Follower:
+            let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
+            if followerArray.count != 0 {
+                cell.model = followerArray [indexPath.row]
+                cell.rankNum = indexPath.row
+            }
+            return cell;
+        }
     }
     
     //MARK - DLTabedSlideViewDelegate
@@ -131,15 +164,17 @@ extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource,Use
         switch headerType {
         case .Repo:
             
+            tableView.reloadData()
             break
         case .Following:
             
+            tableView.reloadData()
             break
         case .Follower:
             
+            tableView.reloadData()
             break
         default: break
-            
         }
     }
 }

@@ -46,6 +46,11 @@
                     <constraint firstItem="Pc5-Ll-eiG" firstAttribute="leading" secondItem="XSw-zd-0Dz" secondAttribute="trailing" constant="15" id="na7-uu-TUL"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="iconView" destination="Pc5-Ll-eiG" id="ZEW-95-k3W"/>
+                <outlet property="nameLabel" destination="Tc9-73-t3f" id="yXr-DL-u5W"/>
+                <outlet property="rankLabel" destination="XSw-zd-0Dz" id="08y-GA-nGb"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

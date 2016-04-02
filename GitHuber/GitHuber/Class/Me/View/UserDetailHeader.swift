@@ -38,6 +38,8 @@ class UserDetailHeader: UIView {
     ///定义一个属性保存代理对象
     //加上weak。避免虚幻引用
     weak var delegate:UserDetailHeaderDelegate?
+    
+    var headerType:HeaderBtnType = .Repo
 
     override func awakeFromNib() {
         reoBtn.addSubview(reoBtnView)
@@ -106,6 +108,7 @@ class UserDetailHeader: UIView {
             followerBtnView.numBtn.selected = false
             followerBtnView.textBtn.selected = false
             
+            headerType = .Repo
             delegate?.didHeaderClick(.Repo)
         }else if btn.superview == followingBtnView{
             followingBtnView.numBtn.selected = true
@@ -117,6 +120,7 @@ class UserDetailHeader: UIView {
             followerBtnView.numBtn.selected = false
             followerBtnView.textBtn.selected = false
             
+            headerType = .Following
              delegate?.didHeaderClick(.Following)
         }else if btn.superview == followerBtnView{
             followerBtnView.numBtn.selected = true
@@ -128,6 +132,7 @@ class UserDetailHeader: UIView {
             reoBtnView.numBtn.selected = false
             reoBtnView.textBtn.selected = false
             
+            headerType = .Follower
             delegate?.didHeaderClick(.Follower)
         }
     }

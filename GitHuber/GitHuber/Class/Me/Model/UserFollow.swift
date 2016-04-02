@@ -14,7 +14,7 @@ class UserFollow: NSObject {
     var avatar_url:String?
     var url:String?
     var html_url:String?
-    
+     
     init(dict: [String: AnyObject])
     {
         super.init()

@@ -30,6 +30,8 @@ class UserDetailModel: NSObject {
     var following_url:String?//following
     var followers_url:String?//follwers
     
+    var following_url_:String?//following
+    
     var created_at:String?{
         didSet{
             let create = created_at! as NSString
@@ -46,6 +48,20 @@ class UserDetailModel: NSObject {
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
     }
+    
+    override func setValue(value: AnyObject?, forKey key: String) {
+        if "following_url" == key {
+            let vv = value as? String ?? ""
+     
+            let xx = (vv as NSString).stringByReplacingOccurrencesOfString("{/other_user}", withString: "?page=1")
+            following_url_ = xx
+            print(xx)
+            print(following_url_)
+//            following_url = value as?String
+        }
+        super.setValue(value, forKey: key)
+    }
+    
     
     class func getUserData(loginName:String,finished:(arrs:UserDetailModel?,error:Any?)->()){
         var name = loginName
