@@ -164,6 +164,42 @@
             </objects>
             <point key="canvasLocation" x="1227" y="7915"/>
         </scene>
+        <!--User Web Info View Controller-->
+        <scene sceneID="YZL-sK-Rdw">
+            <objects>
+                <viewController storyboardIdentifier="UserWebInfo" id="MbJ-Fc-oe3" customClass="UserWebInfoViewController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="66s-VU-yvs"/>
+                        <viewControllerLayoutGuide type="bottom" id="wHJ-LV-ue7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4n6-Vj-EwU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6be-t7-4gt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MbJ-Fc-oe3" id="DfK-Td-JXd"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wHJ-LV-ue7" firstAttribute="top" secondItem="6be-t7-4gt" secondAttribute="bottom" id="Gde-yZ-g4d"/>
+                            <constraint firstAttribute="trailing" secondItem="6be-t7-4gt" secondAttribute="trailing" id="MhI-jA-7JU"/>
+                            <constraint firstItem="6be-t7-4gt" firstAttribute="leading" secondItem="4n6-Vj-EwU" secondAttribute="leading" id="bEn-t0-INs"/>
+                            <constraint firstItem="6be-t7-4gt" firstAttribute="top" secondItem="4n6-Vj-EwU" secondAttribute="top" id="yED-Lx-bp0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="6be-t7-4gt" id="eAi-fz-ecF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B7Q-U6-oJv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227" y="8588"/>
+        </scene>
         <!--User Event View Controller-->
         <scene sceneID="zV7-4I-ts7">
             <objects>

@@ -121,6 +121,12 @@ extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
     
     //MARK - DLTabedSlideViewDelegate
     
- 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let model = self.dataArray[indexPath.row]
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserWebInfo") as! UserWebInfoViewController
+        vc.title = model.name
+        vc.webUrl = model.html_url
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
     
 }

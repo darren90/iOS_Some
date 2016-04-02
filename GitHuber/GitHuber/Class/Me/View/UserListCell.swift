@@ -30,7 +30,7 @@ class UserListCell: UITableViewCell {
             self.titleLabel.text = model?.name
             self.subTitleLabel.text = model?.descriptionStr
             self.laugLabel.text = model?.language
-            self.starCountLabel.text = String(model?.stargazers_count)
+            self.starCountLabel.text = String(model!.stargazers_count)
         }
     }
 
