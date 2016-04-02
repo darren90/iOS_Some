@@ -40,6 +40,7 @@
 		FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */; };
 		FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA71CA53F8C004CADD8 /* RankViewController.swift */; };
 		FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA91CA53F96004CADD8 /* MeViewController.swift */; };
+		FE8E42BE1CAFC087003D51E5 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */; };
 		FEA7B04A1CA56476007B0E94 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B0491CA56476007B0E94 /* BaseNavigationController.swift */; };
 		FEA7B04C1CA57691007B0E94 /* TrendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B04B1CA57691007B0E94 /* TrendModel.swift */; };
 		FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7B04D1CA5781D007B0E94 /* Owner.swift */; };
@@ -134,6 +135,7 @@
 		FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FE798BA71CA53F8C004CADD8 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		FE798BA91CA53F96004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		FEA7B0491CA56476007B0E94 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		FEA7B04B1CA57691007B0E94 /* TrendModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendModel.swift; sourceTree = "<group>"; };
 		FEA7B04D1CA5781D007B0E94 /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
@@ -530,6 +532,7 @@
 				FEB918F41CA6CE3A008B5149 /* EventActor.swift */,
 				FEB918F61CA6CE52008B5149 /* EventRepo.swift */,
 				FEB918F81CA6CE65008B5149 /* EventPayload.swift */,
+				FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				FEB9190B1CA6F1D5008B5149 /* Constraint.swift in Sources */,
 				FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */,
 				FEB918E51CA69A21008B5149 /* SettingViewController.swift in Sources */,
+				FE8E42BE1CAFC087003D51E5 /* UserRepos.swift in Sources */,
 				FEB918E91CA6B5C5008B5149 /* UserDetailViewController.swift in Sources */,
 				FEA7B0501CA57F37007B0E94 /* ExploreCell.swift in Sources */,
 				FEB919171CA6F1D5008B5149 /* ViewController+SnapKit.swift in Sources */,

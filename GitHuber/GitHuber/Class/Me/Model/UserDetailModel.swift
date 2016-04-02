@@ -14,8 +14,8 @@ class UserDetailModel: NSObject {
     var avatar_url:String?
     var url:String?
     var html_url:String?
-    var followers_url:String?
-    var following_url:String?
+//    var followers_url:String?
+//    var following_url:String?
     var events_url:String?
     var name:String?
     var blog:String?
@@ -25,6 +25,11 @@ class UserDetailModel: NSObject {
     var public_gists:Int = 0
     var followers:Int = 0
     var following:Int = 0
+    
+    var repos_url:String?//repos url
+    var following_url:String?//following
+    var followers_url:String?//follwers
+    
     var created_at:String?{
         didSet{
             let create = created_at! as NSString
@@ -41,7 +46,6 @@ class UserDetailModel: NSObject {
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
     }
-    
     
     class func getUserData(loginName:String,finished:(arrs:UserDetailModel?,error:Any?)->()){
         var name = loginName

@@ -53,6 +53,41 @@ class APINetTools: NSObject {
     }
     
     /**
+     GET请求的方式
+     
+     - parameter url:     url
+     - parameter params:  参数，字典类型
+     - parameter success: 成功的回调
+     - parameter fail:    失败
+     */
+    static func getBase(url:String,params:[String:AnyObject]?,success:(json:AnyObject) -> Void,fail:(error:Any) -> Void){
+        
+        if let paramss = params{
+            Alamofire.request(.GET,url, parameters: paramss).responseJSON { (_, _, result) -> Void in
+                switch result {
+                case let .Success(json):
+                    //print(json)
+                    success(json: json)
+                case let .Failure(_, error):
+                    //print(error)
+                    fail(error: error)
+                }
+            }
+        }else{
+            Alamofire.request(.GET,url).responseJSON { (_, _, result) -> Void in
+                switch result {
+                case let .Success(json):
+                    //                    print(json)
+                    success(json: json)
+                case let .Failure(_, error):
+                    //                    print(error)
+                    fail(error: error)
+                }
+            }
+        }
+    }
+    
+    /**
      POST请求的方式
      
      - parameter url:     url

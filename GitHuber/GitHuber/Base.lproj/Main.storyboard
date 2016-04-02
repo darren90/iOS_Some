@@ -134,6 +134,12 @@
                                                 <constraint firstItem="UpB-zl-SFm" firstAttribute="top" secondItem="PpU-mo-bwp" secondAttribute="bottom" constant="3" id="ujn-cY-mku"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="laugLabel" destination="PpU-mo-bwp" id="vaK-L8-tuM"/>
+                                            <outlet property="starCountLabel" destination="UpB-zl-SFm" id="acv-mv-QAh"/>
+                                            <outlet property="subTitleLabel" destination="a1l-Qh-O18" id="hvy-DU-cwf"/>
+                                            <outlet property="titleLabel" destination="500-bm-DA5" id="0ry-xM-D0o"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -151,7 +157,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView1" destination="7uq-Mi-epm" id="nFc-ft-DIc"/>
+                        <outlet property="tableView" destination="7uq-Mi-epm" id="hCF-99-cGt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WhJ-VF-Kai" userLabel="First Responder" sceneMemberID="firstResponder"/>
