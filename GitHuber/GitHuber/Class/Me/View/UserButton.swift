@@ -24,6 +24,9 @@ class UserButton: UIView {
         textBtn.setTitleColor(KCommonColor, forState: .Selected)
     }
 
+    func userBtnDidClick(userBtn:UserButton) {
+        
+    }
     
     @IBAction func touchDown(sender: UIButton) {
 //        sender.selected = !sender.selected

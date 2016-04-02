@@ -21,7 +21,7 @@ class UserDetailViewController: BaseViewController {
     var swipeVC:UserDetailRKSwipeController!
     var headerViewH:CGFloat  = 150.0
     
-    var dataArray:[UserRepos]! = []
+    var repoArray:[UserRepos]! = []
     
     //外界传递的参数
     var loginName:String! = ""
@@ -56,7 +56,7 @@ class UserDetailViewController: BaseViewController {
     func getRepos(url:String)  {
        UserRepos .getRepos(url) { (arrs, error) in
             if arrs != nil {
-                self.dataArray = arrs
+                self.repoArray = arrs
                 self.tableView.reloadData()
 //                print(arrs);
                 
@@ -79,23 +79,20 @@ class UserDetailViewController: BaseViewController {
     private lazy var headerView:UserDetailHeader = {
         let header = NSBundle.mainBundle().loadNibNamed("UserDetailHeader", owner: nil, options: nil).first as! UserDetailHeader
 //        header.backgroundColor = U
-        
+        header.delegate  = self
         return header
     }()
- 
-    
-   
 }
 
 
-extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
+extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource,UserDetailHeaderDelegate{
     
     //MARK - tableview
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1;
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataArray.count ?? 0;
+        return repoArray.count ?? 0;
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -114,7 +111,7 @@ extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
 //            return cell;
 //        }
         let cell = tableView.dequeueReusableCellWithIdentifier("UserList") as! UserListCell
-        cell.model = self.dataArray[indexPath.row]
+        cell.model = self.repoArray[indexPath.row]
 
         return cell;
     }
@@ -122,11 +119,27 @@ extension UserDetailViewController:UITableViewDelegate,UITableViewDataSource{
     //MARK - DLTabedSlideViewDelegate
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let model = self.dataArray[indexPath.row]
+        let model = self.repoArray[indexPath.row]
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserWebInfo") as! UserWebInfoViewController
         vc.title = model.name
         vc.webUrl = model.html_url
         self.navigationController!.pushViewController(vc, animated: true)
     }
     
+    
+    func didHeaderClick(headerType: HeaderBtnType) {
+        switch headerType {
+        case .Repo:
+            
+            break
+        case .Following:
+            
+            break
+        case .Follower:
+            
+            break
+        default: break
+            
+        }
+    }
 }

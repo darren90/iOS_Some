@@ -17,9 +17,7 @@ class UserRepos: NSObject {
     var descriptionStr:String?
     var language:String?
     var stargazers_count:Int=0
-    
 
-    
     
     init(dict: [String: AnyObject])
     {
