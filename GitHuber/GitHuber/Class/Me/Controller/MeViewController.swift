@@ -62,13 +62,9 @@ class MeViewController: UITableViewController {
             if (loginName as NSString).length == 0 {
                 showAlert()
             }else{
-                let userVc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
-                userVc.loginName = loginName
-                self.navigationController?.pushViewController(userVc, animated: true)
-//                let vv = UserDetailSwipeConttoller()
-//                self.navigationController?.pushViewController(vv, animated: true)
+                enterUserDetail(loginName)
             }
-        }else if indexPath.section == 1{
+        }else if indexPath.section == 1{ //用户的最近的动态
             let loginName = getLoginName()
             if (loginName as NSString).length == 0 {
                 showAlert()
@@ -76,19 +72,26 @@ class MeViewController: UITableViewController {
                 let userVc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserEvent") as! UserEventViewController;
                 self.navigationController?.pushViewController(userVc, animated: true)
             }
-        }else if indexPath.section == 2{
-            
+        }else if indexPath.section == 2{//搜索
+            let searVc = SearchSwipeViewController();
+            self.navigationController?.pushViewController(searVc, animated: true)
         }else if indexPath.section == 3{//Setting
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("settingVc") as! SettingViewController
             self.navigationController!.pushViewController(vc, animated: true)
         }else if indexPath.section == 4{
             
         }
-   
     }
     
     func isLogin() {
         
+    }
+    
+    //进入用户的详情
+    func enterUserDetail(loginName:String){
+        let userVc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserDetail") as! UserDetailViewController;
+        userVc.loginName = loginName
+        self.navigationController?.pushViewController(userVc, animated: true)
     }
 
     
@@ -106,6 +109,7 @@ class MeViewController: UITableViewController {
             let textField = alertVc.textFields!.first;
             let name = textField!.text ?? ""
             self.saveLoginName(name)
+            self.enterUserDetail(name)
         }
         let alertCancle = UIAlertAction(title: "Cancle", style: .Cancel) { (_) in
             
@@ -114,12 +118,7 @@ class MeViewController: UITableViewController {
         alertVc.addAction(alertOk)
         self .presentViewController(alertVc, animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
+ 
     
     func getLoginName() -> String{
         let name = NSUserDefaults.standardUserDefaults().objectForKey("GitHubName") as? String

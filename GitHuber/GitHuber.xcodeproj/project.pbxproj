@@ -40,6 +40,7 @@
 		FE798BA61CA53F7F004CADD8 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */; };
 		FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA71CA53F8C004CADD8 /* RankViewController.swift */; };
 		FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA91CA53F96004CADD8 /* MeViewController.swift */; };
+		FE877A491CB0B8C000D271EF /* SearchSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */; };
 		FE8E42BE1CAFC087003D51E5 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */; };
 		FE8E42C01CAFC609003D51E5 /* UserWebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */; };
 		FE8E42C21CAFD2A7003D51E5 /* UserFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */; };
@@ -137,6 +138,7 @@
 		FE798BA51CA53F7F004CADD8 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
 		FE798BA71CA53F8C004CADD8 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		FE798BA91CA53F96004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSwipeViewController.swift; sourceTree = "<group>"; };
 		FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWebInfoViewController.swift; sourceTree = "<group>"; };
 		FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFollow.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				FE391EFF1CAAD0E8004C8FA7 /* UserDetailSwipeConttoller.swift */,
 				FEB918F01CA6B784008B5149 /* UserEventViewController.swift */,
 				8941C4BF1CACBC07002BB341 /* UserDetailRKSwipeController.swift */,
+				FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -833,6 +836,7 @@
 				FEB918F11CA6B784008B5149 /* UserEventViewController.swift in Sources */,
 				FEB9190C1CA6F1D5008B5149 /* ConstraintAttributes.swift in Sources */,
 				FEB919141CA6F1D5008B5149 /* LayoutConstraint.swift in Sources */,
+				FE877A491CB0B8C000D271EF /* SearchSwipeViewController.swift in Sources */,
 				FE4A2A711CA636860038CF31 /* ChooseCityView.swift in Sources */,
 				FEB9190B1CA6F1D5008B5149 /* Constraint.swift in Sources */,
 				FE5CD8421CA5508B00ACD52A /* ChooseLanguageView.swift in Sources */,
