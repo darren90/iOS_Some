@@ -114,6 +114,14 @@ extension ExploreViewController:UITableViewDelegate,UITableViewDataSource{
         return cell;
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let model = self.dataArray![indexPath.row]
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UserWebInfo") as! UserWebInfoViewController
+        vc.title = model.owner!.login
+        vc.webUrl = model.html_url
+        self.navigationController!.pushViewController(vc, animated: true)
+    }
+
     
 }
 

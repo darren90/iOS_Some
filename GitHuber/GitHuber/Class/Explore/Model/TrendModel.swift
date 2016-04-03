@@ -73,14 +73,20 @@ class TrendModel: NSObject {
     }
     
     
-//    // 字典转模型
-//    init(dict: [String: AnyObject])
-//    {
-//        super.init()
-//        setValuesForKeysWithDictionary(dict)
-//    }
-//    
-//    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-//        
-//    }
+ 
+    // Searh Repos
+    
+    class func getSearch(keyWord:String,finished:(arrs:[TrendModel]?,totalCount:Int,error:Any?)->()){
+        APINetTools.get(keyWord, params: nil, success: { (json) -> Void in
+            let count = json["total_count"] as? Int ?? 0
+            let arr = dict2Model(json["items"] as! [[String:AnyObject]])
+            //            print(arr)
+            finished(arrs: arr,totalCount:count,error:nil)
+        }) { (error) -> Void in
+            //            print(error)
+            finished(arrs: nil,totalCount:0,error:error)
+        }
+    }
+    
+    
 }

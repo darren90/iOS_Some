@@ -46,6 +46,8 @@
 		FE877A501CB0EF7A00D271EF /* SearchUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A4E1CB0EF7A00D271EF /* SearchUserCell.swift */; };
 		FE877A511CB0EF7A00D271EF /* SearchUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE877A4F1CB0EF7A00D271EF /* SearchUserCell.xib */; };
 		FE877A531CB0F25D00D271EF /* SearchUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A521CB0F25D00D271EF /* SearchUserModel.swift */; };
+		FE877A561CB14E8B00D271EF /* SearchRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A541CB14E8B00D271EF /* SearchRepoCell.swift */; };
+		FE877A571CB14E8B00D271EF /* SearchRepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE877A551CB14E8B00D271EF /* SearchRepoCell.xib */; };
 		FE8E42BE1CAFC087003D51E5 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */; };
 		FE8E42C01CAFC609003D51E5 /* UserWebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */; };
 		FE8E42C21CAFD2A7003D51E5 /* UserFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */; };
@@ -149,6 +151,8 @@
 		FE877A4E1CB0EF7A00D271EF /* SearchUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserCell.swift; sourceTree = "<group>"; };
 		FE877A4F1CB0EF7A00D271EF /* SearchUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchUserCell.xib; sourceTree = "<group>"; };
 		FE877A521CB0F25D00D271EF /* SearchUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserModel.swift; sourceTree = "<group>"; };
+		FE877A541CB14E8B00D271EF /* SearchRepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRepoCell.swift; sourceTree = "<group>"; };
+		FE877A551CB14E8B00D271EF /* SearchRepoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchRepoCell.xib; sourceTree = "<group>"; };
 		FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWebInfoViewController.swift; sourceTree = "<group>"; };
 		FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFollow.swift; sourceTree = "<group>"; };
@@ -571,6 +575,8 @@
 				FE391D891CA7869C004C8FA7 /* UserRankCell.xib */,
 				FE877A4E1CB0EF7A00D271EF /* SearchUserCell.swift */,
 				FE877A4F1CB0EF7A00D271EF /* SearchUserCell.xib */,
+				FE877A541CB14E8B00D271EF /* SearchRepoCell.swift */,
+				FE877A551CB14E8B00D271EF /* SearchRepoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 				FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */,
 				FE391D871CA77C7B004C8FA7 /* UserButton.xib in Resources */,
 				FEB919131CA6F1D5008B5149 /* Info.plist in Resources */,
+				FE877A571CB14E8B00D271EF /* SearchRepoCell.xib in Resources */,
 				FE391D8B1CA7869C004C8FA7 /* UserRankCell.xib in Resources */,
 				FE2C93B81C9ED694005C0261 /* Assets.xcassets in Resources */,
 				FE4A2A731CA636940038CF31 /* ChooseCityView.xib in Resources */,
@@ -845,6 +852,7 @@
 				FE2C93FB1CA1801D005C0261 /* BaseTableViewController.swift in Sources */,
 				FEB918F51CA6CE3A008B5149 /* EventActor.swift in Sources */,
 				FEB919111CA6F1D5008B5149 /* Debugging.swift in Sources */,
+				FE877A561CB14E8B00D271EF /* SearchRepoCell.swift in Sources */,
 				FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */,
 				FE877A531CB0F25D00D271EF /* SearchUserModel.swift in Sources */,
 				FE391EFD1CAAD014004C8FA7 /* InterfaceController.swift in Sources */,
