@@ -898,6 +898,80 @@
             </objects>
             <point key="canvasLocation" x="2060" y="8967"/>
         </scene>
+        <!--Search User View Controller-->
+        <scene sceneID="SuU-10-cV6">
+            <objects>
+                <viewController storyboardIdentifier="SearchUserViewController" id="iLV-Jf-FRw" customClass="SearchUserViewController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MaW-pF-G1g"/>
+                        <viewControllerLayoutGuide type="bottom" id="q71-T4-nX6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GLa-EJ-gnU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o2v-Si-DH5">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iLV-Jf-FRw" id="5fZ-R3-hSf"/>
+                                    <outlet property="delegate" destination="iLV-Jf-FRw" id="KuJ-cu-rnO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o2v-Si-DH5" firstAttribute="leading" secondItem="GLa-EJ-gnU" secondAttribute="leading" id="0BU-u8-ucg"/>
+                            <constraint firstItem="q71-T4-nX6" firstAttribute="top" secondItem="o2v-Si-DH5" secondAttribute="bottom" id="5wx-2P-njc"/>
+                            <constraint firstAttribute="trailing" secondItem="o2v-Si-DH5" secondAttribute="trailing" id="9Dd-Ok-B2H"/>
+                            <constraint firstItem="o2v-Si-DH5" firstAttribute="top" secondItem="MaW-pF-G1g" secondAttribute="bottom" id="lnB-IY-6CG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="o2v-Si-DH5" id="AeM-tt-eeb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v4U-sL-5aw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1760" y="9699"/>
+        </scene>
+        <!--Search Repos View Controller-->
+        <scene sceneID="nwC-58-ODC">
+            <objects>
+                <viewController storyboardIdentifier="SearchReposViewController" id="QcV-8W-xhQ" customClass="SearchReposViewController" customModule="GitHuber" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cIp-Hl-Nyt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eyf-vH-DfZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Chw-7q-Wab">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vhL-OC-7cq">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="QcV-8W-xhQ" id="8pO-dd-xHu"/>
+                                    <outlet property="delegate" destination="QcV-8W-xhQ" id="iug-nz-bR0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vhL-OC-7cq" firstAttribute="top" secondItem="cIp-Hl-Nyt" secondAttribute="bottom" id="5x2-hS-8iF"/>
+                            <constraint firstAttribute="trailing" secondItem="vhL-OC-7cq" secondAttribute="trailing" id="5x7-WF-R6e"/>
+                            <constraint firstItem="vhL-OC-7cq" firstAttribute="leading" secondItem="Chw-7q-Wab" secondAttribute="leading" id="FDM-vZ-nco"/>
+                            <constraint firstItem="Eyf-vH-DfZ" firstAttribute="top" secondItem="vhL-OC-7cq" secondAttribute="bottom" id="bub-Jv-rjl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="vhL-OC-7cq" id="mCJ-o9-lf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RK9-xn-WNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444" y="9699"/>
+        </scene>
         <!--Setting-->
         <scene sceneID="e0H-pf-oHx">
             <objects>

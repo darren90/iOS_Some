@@ -70,7 +70,7 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
 //%%% sets up the tabs using a loop.  You can take apart the loop to customize individual buttons, but remember to tag the buttons.  (button.tag=0 and the second button.tag=1, etc)
 -(void)setupSegmentButtons {
     navigationView = [[UIView alloc]initWithFrame:CGRectMake(0,0,self.view.frame.size.width,self.navigationBar.frame.size.height)];
-    
+    navigationView.backgroundColor = [UIColor clearColor];//KColor(103, g: 151, b: 216);
     NSInteger numControllers = [viewControllerArray count];
     
     if (!buttonText) {
@@ -82,7 +82,7 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
         [navigationView addSubview:button];
         
         button.tag = i; //%%% IMPORTANT: if you make your own custom buttons, you have to tag them appropriately
-        button.backgroundColor = [UIColor colorWithRed:0.03 green:0.07 blue:0.08 alpha:1];//%%% buttoncolors
+        button.backgroundColor = [UIColor clearColor];//[UIColor colorWithRed:0.03 green:0.07 blue:0.08 alpha:1];//%%% buttoncolors
         
         [button addTarget:self action:@selector(tapSegmentButtonAction:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -126,7 +126,8 @@ CGFloat X_OFFSET = 8.0; //%%% for some reason there's a little bit of a glitchy 
 //%%% sets up the selection bar under the buttons on the navigation bar
 -(void)setupSelector {
     selectionBar = [[UIView alloc]initWithFrame:CGRectMake(X_BUFFER-X_OFFSET, SELECTOR_Y_BUFFER,(self.view.frame.size.width-2*X_BUFFER)/[viewControllerArray count], SELECTOR_HEIGHT)];
-    selectionBar.backgroundColor = [UIColor greenColor]; //%%% sbcolor
+//    KColor(103, g: 151, b: 216) [UIColor colorWithRed:103/255.0 green:151/255.0 blue:216/255.0 alpha:1.0]
+    selectionBar.backgroundColor = [UIColor whiteColor]; //%%% sbcolor
     selectionBar.alpha = 0.8; //%%% sbalpha
     [navigationView addSubview:selectionBar];
 }

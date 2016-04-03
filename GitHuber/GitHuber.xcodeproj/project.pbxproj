@@ -41,6 +41,8 @@
 		FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA71CA53F8C004CADD8 /* RankViewController.swift */; };
 		FE798BAA1CA53F96004CADD8 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE798BA91CA53F96004CADD8 /* MeViewController.swift */; };
 		FE877A491CB0B8C000D271EF /* SearchSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */; };
+		FE877A4B1CB0CBD500D271EF /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A4A1CB0CBD500D271EF /* SearchUserViewController.swift */; };
+		FE877A4D1CB0CBE500D271EF /* SearchReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A4C1CB0CBE500D271EF /* SearchReposViewController.swift */; };
 		FE8E42BE1CAFC087003D51E5 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */; };
 		FE8E42C01CAFC609003D51E5 /* UserWebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */; };
 		FE8E42C21CAFD2A7003D51E5 /* UserFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */; };
@@ -139,6 +141,8 @@
 		FE798BA71CA53F8C004CADD8 /* RankViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
 		FE798BA91CA53F96004CADD8 /* MeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
 		FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSwipeViewController.swift; sourceTree = "<group>"; };
+		FE877A4A1CB0CBD500D271EF /* SearchUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
+		FE877A4C1CB0CBE500D271EF /* SearchReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchReposViewController.swift; sourceTree = "<group>"; };
 		FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWebInfoViewController.swift; sourceTree = "<group>"; };
 		FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFollow.swift; sourceTree = "<group>"; };
@@ -528,6 +532,8 @@
 				FEB918F01CA6B784008B5149 /* UserEventViewController.swift */,
 				8941C4BF1CACBC07002BB341 /* UserDetailRKSwipeController.swift */,
 				FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */,
+				FE877A4A1CB0CBD500D271EF /* SearchUserViewController.swift */,
+				FE877A4C1CB0CBE500D271EF /* SearchReposViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -814,6 +820,7 @@
 				FE4A2A771CA64E200038CF31 /* RankCell.swift in Sources */,
 				FEB919161CA6F1D5008B5149 /* View+SnapKit.swift in Sources */,
 				8941C4BB1CACBB46002BB341 /* RKSwipeBetweenViewControllers.m in Sources */,
+				FE877A4D1CB0CBE500D271EF /* SearchReposViewController.swift in Sources */,
 				FE391EFE1CAAD014004C8FA7 /* SwipeViewController.swift in Sources */,
 				FEB919101CA6F1D5008B5149 /* ConstraintRelation.swift in Sources */,
 				FE2C93F51CA0389A005C0261 /* APINetTools.swift in Sources */,
@@ -843,6 +850,7 @@
 				FEB918E51CA69A21008B5149 /* SettingViewController.swift in Sources */,
 				FE8E42BE1CAFC087003D51E5 /* UserRepos.swift in Sources */,
 				FEB918E91CA6B5C5008B5149 /* UserDetailViewController.swift in Sources */,
+				FE877A4B1CB0CBD500D271EF /* SearchUserViewController.swift in Sources */,
 				FEA7B0501CA57F37007B0E94 /* ExploreCell.swift in Sources */,
 				FEB919171CA6F1D5008B5149 /* ViewController+SnapKit.swift in Sources */,
 				FEB919121CA6F1D5008B5149 /* EdgeInsets.swift in Sources */,
