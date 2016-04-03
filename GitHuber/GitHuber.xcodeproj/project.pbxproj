@@ -43,6 +43,9 @@
 		FE877A491CB0B8C000D271EF /* SearchSwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */; };
 		FE877A4B1CB0CBD500D271EF /* SearchUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A4A1CB0CBD500D271EF /* SearchUserViewController.swift */; };
 		FE877A4D1CB0CBE500D271EF /* SearchReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A4C1CB0CBE500D271EF /* SearchReposViewController.swift */; };
+		FE877A501CB0EF7A00D271EF /* SearchUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A4E1CB0EF7A00D271EF /* SearchUserCell.swift */; };
+		FE877A511CB0EF7A00D271EF /* SearchUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE877A4F1CB0EF7A00D271EF /* SearchUserCell.xib */; };
+		FE877A531CB0F25D00D271EF /* SearchUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE877A521CB0F25D00D271EF /* SearchUserModel.swift */; };
 		FE8E42BE1CAFC087003D51E5 /* UserRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */; };
 		FE8E42C01CAFC609003D51E5 /* UserWebInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */; };
 		FE8E42C21CAFD2A7003D51E5 /* UserFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */; };
@@ -143,6 +146,9 @@
 		FE877A481CB0B8C000D271EF /* SearchSwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSwipeViewController.swift; sourceTree = "<group>"; };
 		FE877A4A1CB0CBD500D271EF /* SearchUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserViewController.swift; sourceTree = "<group>"; };
 		FE877A4C1CB0CBE500D271EF /* SearchReposViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchReposViewController.swift; sourceTree = "<group>"; };
+		FE877A4E1CB0EF7A00D271EF /* SearchUserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserCell.swift; sourceTree = "<group>"; };
+		FE877A4F1CB0EF7A00D271EF /* SearchUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchUserCell.xib; sourceTree = "<group>"; };
+		FE877A521CB0F25D00D271EF /* SearchUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchUserModel.swift; sourceTree = "<group>"; };
 		FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepos.swift; sourceTree = "<group>"; };
 		FE8E42BF1CAFC609003D51E5 /* UserWebInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserWebInfoViewController.swift; sourceTree = "<group>"; };
 		FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserFollow.swift; sourceTree = "<group>"; };
@@ -548,6 +554,7 @@
 				FEB918F81CA6CE65008B5149 /* EventPayload.swift */,
 				FE8E42BD1CAFC087003D51E5 /* UserRepos.swift */,
 				FE8E42C11CAFD2A7003D51E5 /* UserFollow.swift */,
+				FE877A521CB0F25D00D271EF /* SearchUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -562,6 +569,8 @@
 				FE391D861CA77C7B004C8FA7 /* UserButton.xib */,
 				FE391D881CA7869C004C8FA7 /* UserRankCell.swift */,
 				FE391D891CA7869C004C8FA7 /* UserRankCell.xib */,
+				FE877A4E1CB0EF7A00D271EF /* SearchUserCell.swift */,
+				FE877A4F1CB0EF7A00D271EF /* SearchUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -729,6 +738,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE877A511CB0EF7A00D271EF /* SearchUserCell.xib in Resources */,
 				FE2C93BB1C9ED694005C0261 /* LaunchScreen.storyboard in Resources */,
 				FEA7B0541CA62ADB007B0E94 /* ChooseLanguageCell.xib in Resources */,
 				FE391D871CA77C7B004C8FA7 /* UserButton.xib in Resources */,
@@ -814,6 +824,7 @@
 			files = (
 				FE2C93DF1C9ED6E4005C0261 /* TFCommon.swift in Sources */,
 				FEB9190D1CA6F1D5008B5149 /* ConstraintDescription.swift in Sources */,
+				FE877A501CB0EF7A00D271EF /* SearchUserCell.swift in Sources */,
 				FE8E42C21CAFD2A7003D51E5 /* UserFollow.swift in Sources */,
 				FE4A2A751CA648950038CF31 /* RankUser.swift in Sources */,
 				FE798BA81CA53F8C004CADD8 /* RankViewController.swift in Sources */,
@@ -835,6 +846,7 @@
 				FEB918F51CA6CE3A008B5149 /* EventActor.swift in Sources */,
 				FEB919111CA6F1D5008B5149 /* Debugging.swift in Sources */,
 				FEA7B04E1CA5781D007B0E94 /* Owner.swift in Sources */,
+				FE877A531CB0F25D00D271EF /* SearchUserModel.swift in Sources */,
 				FE391EFD1CAAD014004C8FA7 /* InterfaceController.swift in Sources */,
 				FE8E42C01CAFC609003D51E5 /* UserWebInfoViewController.swift in Sources */,
 				FEB9190E1CA6F1D5008B5149 /* ConstraintItem.swift in Sources */,

@@ -178,7 +178,7 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6be-t7-4gt">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="MbJ-Fc-oe3" id="DfK-Td-JXd"/>
                                 </connections>
@@ -215,6 +215,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dxg-kD-E7L">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uJY-Dr-8re" id="ftS-zV-qM7"/>
+                                    <outlet property="delegate" destination="uJY-Dr-8re" id="m6H-HI-Vlm"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -225,6 +229,9 @@
                             <constraint firstAttribute="trailing" secondItem="dxg-kD-E7L" secondAttribute="trailing" id="wQb-QB-c2w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="dxg-kD-E7L" id="vS2-jj-YkX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aiw-bv-cQh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

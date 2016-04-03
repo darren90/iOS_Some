@@ -31,7 +31,6 @@ class SearchSwipeViewController: UIViewController {
         let v1 = sb.instantiateViewControllerWithIdentifier("SearchUserViewController") as! SearchUserViewController
         let v2 = sb.instantiateViewControllerWithIdentifier("SearchReposViewController") as! SearchReposViewController
         
-        
         swip.buttonText =  ["Users","Repositories"]
         swip.viewControllerArray = [v1,v2]
         pageController.view.backgroundColor = UIColor.clearColor()
@@ -41,16 +40,19 @@ class SearchSwipeViewController: UIViewController {
         
         self.addChildViewController(swip)
         self.view .addSubview(swip.view)
-        swip.view.frame = CGRect(x: 0, y: 64, width: self.view.frame.width, height: self.view.frame.height)
+        swip.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
 //        swip.navigationView!.backgroundColor = UIColor.redColor()
     }
     
     
     func close() {
-        self.navigationController?.popViewControllerAnimated(true)
+//        self.navigationController?.popViewControllerAnimated(true)
+        self .dismissViewControllerAnimated(true, completion: nil)
     }
 
-    
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 }
 
 
@@ -58,7 +60,9 @@ class SearchSwipeViewController: UIViewController {
 
 extension SearchSwipeViewController:UISearchBarDelegate{
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        
+        let keyword = searchBar.text ?? ""
+//        print(keyword)
+        NSNotificationCenter.defaultCenter().postNotificationName("SearchBegainSearch", object: nil, userInfo: ["SearchKeyWord" : keyword])
     }
     
 }

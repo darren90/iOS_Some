@@ -10,11 +10,14 @@ import UIKit
 
 class UserEventViewController: UIViewController {
    
+    @IBOutlet weak var tableView: UITableView!
     //    https://api.github.com/users/darren90/received_events?&page=1
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Trends"
+        tableView.registerNib(UINib(nibName: "UserRankCell",bundle:nil), forCellReuseIdentifier: "UserRankCell")
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,14 +26,31 @@ class UserEventViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
+
+
+
+extension UserEventViewController:UITableViewDelegate,UITableViewDataSource{
+    
+    //MARK - tableview
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1;
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("UserRankCell") as! UserRankCell
+        return cell;
+    }
+    
+    //MARK - DLTabedSlideViewDelegate
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
+    
+}
+

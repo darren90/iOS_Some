@@ -74,7 +74,9 @@ class MeViewController: UITableViewController {
             }
         }else if indexPath.section == 2{//搜索
             let searVc = SearchSwipeViewController();
-            self.navigationController?.pushViewController(searVc, animated: true)
+            let nav = BaseNavigationController(rootViewController: searVc)
+//            self.navigationController?.pushViewController(searVc, animated: true)
+            self .presentViewController(nav, animated: true, completion: nil)
         }else if indexPath.section == 3{//Setting
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("settingVc") as! SettingViewController
             self.navigationController!.pushViewController(vc, animated: true)

@@ -30,6 +30,9 @@ class UserDetailRKSwipeController: UIViewController {
         self.addChildViewController(swip)
         self.view .addSubview(swip.view)
         swip.view.frame = view.bounds
+        
+//        let tap = 
+//        view.addGestureRecognizer(<#T##gestureRecognizer: UIGestureRecognizer##UIGestureRecognizer#>)
     }
 
     override func didReceiveMemoryWarning() {
