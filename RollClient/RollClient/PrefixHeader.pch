@@ -51,6 +51,45 @@
 #define KWidth [UIScreen mainScreen].bounds.size.width
 #define KHeight [UIScreen mainScreen].bounds.size.height
 
+#define KSettingPush            @"推送消息"     //设置 是否可以推送消息
+#define KSettingUse3G           @"网络提示"     //设置中 是否使用3G的
+#define KAppName                @"人人追剧"
+#define KMsgNotice @"最近观看"
+#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+
+//程序主色-橘黄色
+#define KCommonColor MJColor(255, 131, 40)
+
+
+
+//是否是iOS8
+#define IsIOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
+// 是否IOS7
+#define isIOS7                  ([[[UIDevice currentDevice]systemVersion]floatValue] >= 7.0)
+// 是否IOS6
+#define isIOS6                  ([[[UIDevice currentDevice]systemVersion]floatValue] < 7.0)
+
+// 是否iPad
+#define isApplePad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+
+
+
+
+
+//友盟的key 163 feng90 /RollClient
+#define KUmegnAppKey @"5701bc1de0f55a48be0018b2"
+
+
+
+
+
+
+
+
+
+
+
 
 
 
