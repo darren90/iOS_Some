@@ -79,9 +79,10 @@
 
 //友盟的key 163 feng90 /RollClient
 #define KUmegnAppKey @"5701bc1de0f55a48be0018b2"
+//KUMAppKey
 
-
-
+//友盟-推送，相关
+#define UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 
 

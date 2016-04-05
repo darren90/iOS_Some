@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		33AE93144353E9297D0FC3CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDDCA836E224696C0B8F3A9 /* libPods.a */; };
+		890BBF851CB3496900C03D32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF841CB3496900C03D32 /* SystemConfiguration.framework */; };
+		890BBF871CB3499100C03D32 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF861CB3499100C03D32 /* Security.framework */; };
+		890BBF891CB3499C00C03D32 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF881CB3499C00C03D32 /* libiconv.tbd */; };
+		890BBF8B1CB349A400C03D32 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF8A1CB349A400C03D32 /* CoreGraphics.framework */; };
+		890BBF8D1CB349AB00C03D32 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF8C1CB349AB00C03D32 /* libsqlite3.tbd */; };
+		890BBF8F1CB349B100C03D32 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF8E1CB349B100C03D32 /* CoreTelephony.framework */; };
+		890BBF911CB349B800C03D32 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF901CB349B800C03D32 /* libstdc++.tbd */; };
 		897BD2261CAB641100FDF5F0 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD20B1CAB641100FDF5F0 /* UIImage+Category.m */; };
 		897BD2271CAB641100FDF5F0 /* UIImage+Tint.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD20D1CAB641100FDF5F0 /* UIImage+Tint.m */; };
 		897BD2291CAB641100FDF5F0 /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD2141CAB641100FDF5F0 /* Global.m */; };
@@ -89,6 +96,13 @@
 /* Begin PBXFileReference section */
 		370586C793DE47850E4D5B3A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5DDDCA836E224696C0B8F3A9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		890BBF841CB3496900C03D32 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		890BBF861CB3499100C03D32 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		890BBF881CB3499C00C03D32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		890BBF8A1CB349A400C03D32 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		890BBF8C1CB349AB00C03D32 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		890BBF8E1CB349B100C03D32 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		890BBF901CB349B800C03D32 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		897BD20A1CAB641100FDF5F0 /* UIImage+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Category.h"; sourceTree = "<group>"; };
 		897BD20B1CAB641100FDF5F0 /* UIImage+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Category.m"; sourceTree = "<group>"; };
 		897BD20C1CAB641100FDF5F0 /* UIImage+Tint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tint.h"; sourceTree = "<group>"; };
@@ -212,6 +226,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				897BD23D1CAB650300FDF5F0 /* libz.tbd in Frameworks */,
+				890BBF911CB349B800C03D32 /* libstdc++.tbd in Frameworks */,
+				890BBF8F1CB349B100C03D32 /* CoreTelephony.framework in Frameworks */,
+				890BBF8D1CB349AB00C03D32 /* libsqlite3.tbd in Frameworks */,
+				890BBF8B1CB349A400C03D32 /* CoreGraphics.framework in Frameworks */,
+				890BBF891CB3499C00C03D32 /* libiconv.tbd in Frameworks */,
+				890BBF871CB3499100C03D32 /* Security.framework in Frameworks */,
+				890BBF851CB3496900C03D32 /* SystemConfiguration.framework in Frameworks */,
 				FE877AB91CB1F59700D271EF /* TencentOpenAPI.framework in Frameworks */,
 				FE877AC01CB1F59700D271EF /* libWeChatSDK.a in Frameworks */,
 				FE877AAB1CB1F59700D271EF /* libUMessage_Sdk_1.1.0.a in Frameworks */,
@@ -255,6 +276,13 @@
 		7D00A20BA8D6E3F54B9E10A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				890BBF901CB349B800C03D32 /* libstdc++.tbd */,
+				890BBF8E1CB349B100C03D32 /* CoreTelephony.framework */,
+				890BBF8C1CB349AB00C03D32 /* libsqlite3.tbd */,
+				890BBF8A1CB349A400C03D32 /* CoreGraphics.framework */,
+				890BBF881CB3499C00C03D32 /* libiconv.tbd */,
+				890BBF861CB3499100C03D32 /* Security.framework */,
+				890BBF841CB3496900C03D32 /* SystemConfiguration.framework */,
 				897BD23C1CAB650300FDF5F0 /* libz.tbd */,
 				5DDDCA836E224696C0B8F3A9 /* libPods.a */,
 			);
