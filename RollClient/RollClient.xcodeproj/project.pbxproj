@@ -34,6 +34,7 @@
 		897BD2481CAB65BA00FDF5F0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD2471CAB65BA00FDF5F0 /* BaseViewController.m */; };
 		897BD24C1CAB697800FDF5F0 /* HomeRollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD24A1CAB697800FDF5F0 /* HomeRollCell.m */; };
 		897BD24D1CAB697800FDF5F0 /* HomeRollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */; };
+		89B1586A1CB37C88004AB188 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B158691CB37C88004AB188 /* HomeDetailViewController.m */; };
 		FE391D9A1CA9736C004C8FA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D991CA9736C004C8FA7 /* main.m */; };
 		FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D9C1CA9736C004C8FA7 /* AppDelegate.m */; };
 		FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D9F1CA9736C004C8FA7 /* ViewController.m */; };
@@ -140,6 +141,8 @@
 		897BD2491CAB697800FDF5F0 /* HomeRollCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeRollCell.h; sourceTree = "<group>"; };
 		897BD24A1CAB697800FDF5F0 /* HomeRollCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeRollCell.m; sourceTree = "<group>"; };
 		897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRollCell.xib; sourceTree = "<group>"; };
+		89B158681CB37C88004AB188 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		89B158691CB37C88004AB188 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
 		F5E17A35C0F971B3BB8B046E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE391D951CA9736B004C8FA7 /* RollClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE391D991CA9736C004C8FA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -314,6 +317,8 @@
 			children = (
 				897BD2301CAB643000FDF5F0 /* Home_RootController.h */,
 				897BD2311CAB643000FDF5F0 /* Home_RootController.m */,
+				89B158681CB37C88004AB188 /* HomeDetailViewController.h */,
+				89B158691CB37C88004AB188 /* HomeDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -899,6 +904,7 @@
 				897BD22A1CAB641100FDF5F0 /* WdCleanCaches.m in Sources */,
 				FE877A721CB1F50A00D271EF /* SettingCell.m in Sources */,
 				897BD2351CAB644D00FDF5F0 /* Setting_RootController.m in Sources */,
+				89B1586A1CB37C88004AB188 /* HomeDetailViewController.m in Sources */,
 				FE877A741CB1F50A00D271EF /* SettingSwitchCell.m in Sources */,
 				FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */,
 				FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */,

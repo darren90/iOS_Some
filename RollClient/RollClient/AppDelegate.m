@@ -25,12 +25,15 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
     self.window.rootViewController = tabBarVc;
     
     [self.window makeKeyAndVisible];
     [self umengTrack];//友盟的方法本身是异步执行，所以不需要再异步调用
-
+   
+    [self umengPushNotice]; //友盟推送
+ 
     
     return YES;
 }
@@ -68,16 +71,13 @@
     //   channelId 为NSString * 类型，channelId 为nil或@""时,默认会被被当作@"App Store"渠道
 }
 
-/** 友盟推送 */
--(void)umengPush:(NSDictionary *)launchOptions
-{
-    //set AppKey and LaunchOptions
-    [UMessage startWithAppkey:KUmegnAppKey launchOptions:launchOptions];
-    [UMessage setLogEnabled:YES];
+
+#pragma 友盟推送
+- (void)umengPushNotice{
 #if __IPHONE_OS_VERSION_MAX_ALLOWED >= _IPHONE80_
     if(UMSYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0"))
     {
-        //register remoteNotification types
+        //register remoteNotification types （iOS 8.0及其以上版本）
         UIMutableUserNotificationAction *action1 = [[UIMutableUserNotificationAction alloc] init];
         action1.identifier = @"action1_identifier";
         action1.title=@"Accept";
@@ -97,24 +97,24 @@
         UIUserNotificationSettings *userSettings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge|UIUserNotificationTypeSound|UIUserNotificationTypeAlert
                                                                                      categories:[NSSet setWithObject:categorys]];
         [UMessage registerRemoteNotificationAndUserNotificationSettings:userSettings];
+        
     } else{
-        //register remoteNotification types
+        //register remoteNotification types (iOS 8.0以下)
         [UMessage registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge
          |UIRemoteNotificationTypeSound
          |UIRemoteNotificationTypeAlert];
     }
 #else
     
-    //register remoteNotification types
+    //register remoteNotification types (iOS 8.0以下)
     [UMessage registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge
      |UIRemoteNotificationTypeSound
      |UIRemoteNotificationTypeAlert];
     
 #endif
     
-    //for log
-    [UMessage setLogEnabled:YES];
 }
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSLog(@"---deviceToken:%@",[[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]

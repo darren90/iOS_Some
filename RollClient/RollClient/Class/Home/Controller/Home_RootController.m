@@ -73,6 +73,11 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+     RollModel * model = self.dataArray[indexPath.row];
+
+}
+
 
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {

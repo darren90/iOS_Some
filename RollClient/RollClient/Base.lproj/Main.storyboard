@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -31,7 +32,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="8HU-If-vTd" kind="relationship" relationship="rootViewController" id="jmO-fD-5Vj"/>
+                        <segue destination="Nxe-3c-wOC" kind="relationship" relationship="rootViewController" id="bCE-mN-E0g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m92-Gd-RmD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -39,42 +40,42 @@
             <point key="canvasLocation" x="1913" y="298"/>
         </scene>
         <!--设置-->
-        <scene sceneID="g6r-1U-JBQ">
+        <scene sceneID="CQ7-VO-6dh">
             <objects>
-                <viewController storyboardIdentifier="SettingVC" id="8HU-If-vTd" customClass="Setting_RootController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingVC" id="Nxe-3c-wOC" customClass="Setting_RootController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oa9-gA-kht"/>
-                        <viewControllerLayoutGuide type="bottom" id="iHu-zU-l3D"/>
+                        <viewControllerLayoutGuide type="top" id="Gdo-fa-jZW"/>
+                        <viewControllerLayoutGuide type="bottom" id="7oX-Eq-HaH"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="psQ-8Z-QT4">
+                    <view key="view" contentMode="scaleToFill" id="bHL-uL-Fdh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IlI-de-F3e">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="vIH-ta-sg5">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="8HU-If-vTd" id="6ih-7m-WKL"/>
-                                    <outlet property="delegate" destination="8HU-If-vTd" id="HUd-Os-91l"/>
+                                    <outlet property="dataSource" destination="Nxe-3c-wOC" id="vAO-ho-xGT"/>
+                                    <outlet property="delegate" destination="Nxe-3c-wOC" id="lLa-a3-WS3"/>
                                 </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="IlI-de-F3e" firstAttribute="top" secondItem="oa9-gA-kht" secondAttribute="bottom" id="87Y-NH-lRD"/>
-                            <constraint firstAttribute="trailing" secondItem="IlI-de-F3e" secondAttribute="trailing" id="EUF-B2-k9O"/>
-                            <constraint firstItem="iHu-zU-l3D" firstAttribute="top" secondItem="IlI-de-F3e" secondAttribute="bottom" id="HNL-5u-TMN"/>
-                            <constraint firstItem="IlI-de-F3e" firstAttribute="leading" secondItem="psQ-8Z-QT4" secondAttribute="leading" id="pdE-wN-bN9"/>
+                            <constraint firstAttribute="trailing" secondItem="vIH-ta-sg5" secondAttribute="trailing" id="MaS-hn-Hab"/>
+                            <constraint firstItem="vIH-ta-sg5" firstAttribute="top" secondItem="Gdo-fa-jZW" secondAttribute="bottom" id="YT2-pQ-JtU"/>
+                            <constraint firstItem="vIH-ta-sg5" firstAttribute="leading" secondItem="bHL-uL-Fdh" secondAttribute="leading" id="e5b-hx-BWb"/>
+                            <constraint firstItem="7oX-Eq-HaH" firstAttribute="top" secondItem="vIH-ta-sg5" secondAttribute="bottom" id="gks-w3-otX"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="设置" id="025-h4-YsS"/>
+                    <navigationItem key="navigationItem" title="设置" id="bct-Tb-dj9"/>
                     <connections>
-                        <outlet property="tableView" destination="IlI-de-F3e" id="JjH-up-jg5"/>
+                        <outlet property="tableView" destination="vIH-ta-sg5" id="Lht-pL-kRQ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W4C-7n-oCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fBG-dZ-Laz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2633" y="370"/>
+            <point key="canvasLocation" x="2646" y="298"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="9WE-1m-T3f">
@@ -105,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vos-Lw-dyc">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="tCj-nu-PuE" id="06G-EY-XeA"/>
@@ -116,10 +117,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vos-Lw-dyc" firstAttribute="top" secondItem="2Yh-2M-JTW" secondAttribute="bottom" id="CVe-Wb-lVQ"/>
+                            <constraint firstItem="Vos-Lw-dyc" firstAttribute="top" secondItem="Mm8-VZ-rQk" secondAttribute="topMargin" id="Ui0-8L-a7s"/>
                             <constraint firstItem="Vos-Lw-dyc" firstAttribute="leading" secondItem="Mm8-VZ-rQk" secondAttribute="leading" id="YWA-qA-W1m"/>
                             <constraint firstItem="LCe-jN-faj" firstAttribute="top" secondItem="Vos-Lw-dyc" secondAttribute="bottom" id="dbf-mz-gDI"/>
                             <constraint firstAttribute="trailing" secondItem="Vos-Lw-dyc" secondAttribute="trailing" id="vUS-Eb-vLa"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="CVe-Wb-lVQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="首页" id="Odr-6z-WyI"/>
                     <connections>

@@ -30,6 +30,7 @@
 
 @property (nonatomic,copy)NSString * itemTitle;
 
+@property (nonatomic,copy)NSString * itemType;
 
 
 
