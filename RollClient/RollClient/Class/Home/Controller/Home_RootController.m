@@ -9,10 +9,18 @@
 #import "Home_RootController.h"
 #import "RollModel.h"
 #import "HomeRollCell.h"
+#import "RollVideoCell.h"
+#import "RollImgsCell.h"
+#import "HomeDetailViewController.h"
 
 @interface Home_RootController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray * dataArray;
+
+@property (nonatomic,assign)BOOL isRefreshing;
+
+@property (nonatomic,assign)int currentPage;
+
 @end
 
 @implementation Home_RootController
@@ -21,6 +29,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.tableView.rowHeight = 120;
+   
+    __weak __typeof (self) weakSelf = self;
+    self.tableView.mj_header =  [MJRefreshHeader headerWithRefreshingBlock:^{
+        weakSelf.currentPage = 1;
+        weakSelf.isRefreshing = YES;
+        [weakSelf getData];
+    }];
+
+    self.tableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
+        weakSelf.currentPage ++;
+        weakSelf.isRefreshing = NO;
+        [weakSelf getData];
+    }];
     [self getData];
 }
 
@@ -68,14 +89,30 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    HomeRollCell *cell = [HomeRollCell cellWithTableView:tableView];
-    cell.model = self.dataArray[indexPath.row];
-    return cell;
+    RollModel *model = self.dataArray[indexPath.row];
+    if ([model.itemType isEqualToString:@"1"]) {
+        RollImgsCell *cell = [RollImgsCell cellWithTableView:tableView];
+        cell.model = model;
+        return cell;
+    }else if ([model.itemType isEqualToString:@"2"]){
+        RollVideoCell *cell = [RollVideoCell cellWithTableView:tableView];
+        cell.model = model;
+        return cell;
+    }else{
+        return nil;
+    }
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
      RollModel * model = self.dataArray[indexPath.row];
-
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    HomeDetailViewController *detail = [sb instantiateViewControllerWithIdentifier:@"HomeDetail"];
+    detail.title = model.itemTitle;
+    detail.itemId = model.itemId;
+    detail.itemType = model.itemType;
+    [self.navigationController pushViewController:detail animated:YES];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
 
 

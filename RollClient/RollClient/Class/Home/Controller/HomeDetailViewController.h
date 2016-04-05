@@ -11,7 +11,10 @@
 @interface HomeDetailViewController : UIViewController
 
 
+ 
 @property (nonatomic,copy)NSString * itemId;
+
+@property (nonatomic,copy)NSString * itemType;
 
 
 

@@ -8,7 +8,8 @@
 
 #import "HomeDetailViewController.h"
 
-@interface HomeDetailViewController ()
+@interface HomeDetailViewController ()<UIWebViewDelegate>
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self getData];
 }
 
 
@@ -24,43 +27,54 @@
     AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
     //封装请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"itemId"] = self.itemId;
+    NSString *itemId = self.itemId == nil ? @"" : self.itemId;
+    params[@"itemId"] = itemId;
     
     mgr.requestSerializer = [AFJSONRequestSerializer serializer];
     [mgr.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     
     mgr.responseSerializer  = [AFJSONResponseSerializer serializer];
-    
+    NSString *url = @"http://112.74.95.46/item/n/detail";
+    if ([self.itemType isEqualToString:@"2"]) {
+        url = @"http://112.74.95.46/item/n/video";
+    }
     //发送请求 http://112.74.95.46/item/n/video
-    [mgr POST:@"http://112.74.95.46/item/n/detail" parameters:params
+    [mgr POST:url parameters:params
       success:^(AFHTTPRequestOperation *operation, id responseObject) {//responseObject 字典
-          NSLog(@"%@",responseObject[@"result"]);
-//          NSArray *array = [RollModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
-//          NSLog(@"----------------------");
-//          [self.dataArray addObjectsFromArray:array];
-//          [self.tableView reloadData];
+          NSLog(@"%@",responseObject);
+ 
+//          var html = "<html> <head>"
+//          html += "<link rel=\"stylesheet\" href="
+//          html += cssStr
+//          html += "</head>"
+//          html += bodyStr
+//          html += "</body> </html>"
+          
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"%@",error);
       }];
 }
-
-
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - 
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)webViewDidStartLoad:(UIWebView *)webView
+{
+
 }
-*/
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+
+}
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+
+}
+
 
 @end

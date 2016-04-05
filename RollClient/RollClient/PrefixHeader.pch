@@ -20,7 +20,7 @@
 //#import "UIImage+Tint.h"
 //#import "NSString+TF.h"
 //#import "IanAlert.h"
-//#import "RegexKitLite.h"
+#import "RegexKitLite.h"
 //#import "DatabaseTool.h"
 #import <MJExtension.h>
 //#import "JsonModel.h"
@@ -35,6 +35,10 @@
 #import "UIImage+Category.h"
 #import "MobClick.h" //友盟 统计
 #import "WdCleanCaches.h"
+
+
+//category
+#import "NSString+TF.h"
 
 //#import "MovieAPIManager.h"
 //#import "MBProgressHUD+MJ.h"
@@ -54,7 +58,7 @@
 #define KSettingPush            @"推送消息"     //设置 是否可以推送消息
 #define KSettingUse3G           @"网络提示"     //设置中 是否使用3G的
 #define KAppName                @"人人追剧"
-#define KMsgNotice @"最近观看"
+#define KMsgNotice              @"最近观看"
 #define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
 
 //程序主色-橘黄色

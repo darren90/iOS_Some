@@ -75,6 +75,13 @@
 		FE877ABE1CB1F59700D271EF /* libUMSocial_Sdk_Shake_1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE877AA31CB1F59700D271EF /* libUMSocial_Sdk_Shake_1.0.a */; };
 		FE877ABF1CB1F59700D271EF /* libSocialWechat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE877AA61CB1F59700D271EF /* libSocialWechat.a */; };
 		FE877AC01CB1F59700D271EF /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE877AA71CB1F59700D271EF /* libWeChatSDK.a */; };
+		FEA8607E1CB4040B00F4E78D /* NSString+TF.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA8607D1CB4040B00F4E78D /* NSString+TF.m */; };
+		FEA860821CB40D1000F4E78D /* RollVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA860801CB40D1000F4E78D /* RollVideoCell.m */; };
+		FEA860831CB40D1000F4E78D /* RollVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA860811CB40D1000F4E78D /* RollVideoCell.xib */; };
+		FECCFC8C1CB3FFED00F21514 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = FECCFC8B1CB3FFED00F21514 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FECCFC8E1CB4007D00F21514 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FECCFC8D1CB4007D00F21514 /* libicucore.tbd */; };
+		FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3421CB4128400F93A79 /* RollImgsCell.m */; };
+		FEF7C3451CB4128400F93A79 /* RollImgsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +228,17 @@
 		FE877AA81CB1F59700D271EF /* UMSocialWechatHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialWechatHandler.h; sourceTree = "<group>"; };
 		FE877AA91CB1F59700D271EF /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		FE877AAA1CB1F59700D271EF /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		FEA8607C1CB4040B00F4E78D /* NSString+TF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TF.h"; sourceTree = "<group>"; };
+		FEA8607D1CB4040B00F4E78D /* NSString+TF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TF.m"; sourceTree = "<group>"; };
+		FEA8607F1CB40D1000F4E78D /* RollVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollVideoCell.h; sourceTree = "<group>"; };
+		FEA860801CB40D1000F4E78D /* RollVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollVideoCell.m; sourceTree = "<group>"; };
+		FEA860811CB40D1000F4E78D /* RollVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollVideoCell.xib; sourceTree = "<group>"; };
+		FECCFC8A1CB3FFED00F21514 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
+		FECCFC8B1CB3FFED00F21514 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
+		FECCFC8D1CB4007D00F21514 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		FEF7C3411CB4128400F93A79 /* RollImgsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollImgsCell.h; sourceTree = "<group>"; };
+		FEF7C3421CB4128400F93A79 /* RollImgsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollImgsCell.m; sourceTree = "<group>"; };
+		FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollImgsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECCFC8E1CB4007D00F21514 /* libicucore.tbd in Frameworks */,
 				897BD23D1CAB650300FDF5F0 /* libz.tbd in Frameworks */,
 				890BBF911CB349B800C03D32 /* libstdc++.tbd in Frameworks */,
 				890BBF8F1CB349B100C03D32 /* CoreTelephony.framework in Frameworks */,
@@ -279,6 +298,7 @@
 		7D00A20BA8D6E3F54B9E10A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FECCFC8D1CB4007D00F21514 /* libicucore.tbd */,
 				890BBF901CB349B800C03D32 /* libstdc++.tbd */,
 				890BBF8E1CB349B100C03D32 /* CoreTelephony.framework */,
 				890BBF8C1CB349AB00C03D32 /* libsqlite3.tbd */,
@@ -340,6 +360,12 @@
 				897BD2491CAB697800FDF5F0 /* HomeRollCell.h */,
 				897BD24A1CAB697800FDF5F0 /* HomeRollCell.m */,
 				897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */,
+				FEA8607F1CB40D1000F4E78D /* RollVideoCell.h */,
+				FEA860801CB40D1000F4E78D /* RollVideoCell.m */,
+				FEA860811CB40D1000F4E78D /* RollVideoCell.xib */,
+				FEF7C3411CB4128400F93A79 /* RollImgsCell.h */,
+				FEF7C3421CB4128400F93A79 /* RollImgsCell.m */,
+				FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -380,6 +406,8 @@
 				897BD20B1CAB641100FDF5F0 /* UIImage+Category.m */,
 				897BD20C1CAB641100FDF5F0 /* UIImage+Tint.h */,
 				897BD20D1CAB641100FDF5F0 /* UIImage+Tint.m */,
+				FEA8607C1CB4040B00F4E78D /* NSString+TF.h */,
+				FEA8607D1CB4040B00F4E78D /* NSString+TF.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -394,6 +422,7 @@
 		897BD2111CAB641100FDF5F0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FECCFC891CB3FFED00F21514 /* regex */,
 				897BD2121CAB641100FDF5F0 /* ClearCache */,
 				897BD2171CAB641100FDF5F0 /* RDVTabBarController */,
 				897BD21E1CAB641100FDF5F0 /* ThirdPart */,
@@ -694,6 +723,15 @@
 			path = Wechat;
 			sourceTree = "<group>";
 		};
+		FECCFC891CB3FFED00F21514 /* regex */ = {
+			isa = PBXGroup;
+			children = (
+				FECCFC8A1CB3FFED00F21514 /* RegexKitLite.h */,
+				FECCFC8B1CB3FFED00F21514 /* RegexKitLite.m */,
+			);
+			path = regex;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -803,6 +841,7 @@
 			files = (
 				FE877ABA1CB1F59700D271EF /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				FE391DA81CA9736C004C8FA7 /* LaunchScreen.storyboard in Resources */,
+				FEF7C3451CB4128400F93A79 /* RollImgsCell.xib in Resources */,
 				FE877A731CB1F50A00D271EF /* SettingCell.xib in Resources */,
 				FE877AB21CB1F59700D271EF /* UMShareEditViewControlleriPad.xib in Resources */,
 				FE391DA51CA9736C004C8FA7 /* Assets.xcassets in Resources */,
@@ -815,6 +854,7 @@
 				FE877AAF1CB1F59700D271EF /* UMSCommentInputController.xib in Resources */,
 				FE877ABD1CB1F59700D271EF /* ios-social-sdk-shake.html in Resources */,
 				FE877AB61CB1F59700D271EF /* UMSocialSDKResourcesNew.bundle in Resources */,
+				FEA860831CB40D1000F4E78D /* RollVideoCell.xib in Resources */,
 				FE877AAE1CB1F59700D271EF /* UMSCommentDetailController.xib in Resources */,
 				FE877AB11CB1F59700D271EF /* UMShareEditViewController.xib in Resources */,
 				FE877AB01CB1F59700D271EF /* UMSCommentInputControlleriPad.xib in Resources */,
@@ -893,6 +933,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				897BD2321CAB643000FDF5F0 /* Home_RootController.m in Sources */,
+				FEA8607E1CB4040B00F4E78D /* NSString+TF.m in Sources */,
+				FECCFC8C1CB3FFED00F21514 /* RegexKitLite.m in Sources */,
 				FE877A6D1CB1F50A00D271EF /* HistoryCellModel.m in Sources */,
 				897BD2481CAB65BA00FDF5F0 /* BaseViewController.m in Sources */,
 				FE877A711CB1F50A00D271EF /* MeHeaderView.m in Sources */,
@@ -908,6 +950,8 @@
 				FE877A741CB1F50A00D271EF /* SettingSwitchCell.m in Sources */,
 				FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */,
 				FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */,
+				FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */,
+				FEA860821CB40D1000F4E78D /* RollVideoCell.m in Sources */,
 				FE391D9A1CA9736C004C8FA7 /* main.m in Sources */,
 				897BD23A1CAB64A300FDF5F0 /* ItemImags.m in Sources */,
 				897BD2451CAB659A00FDF5F0 /* BaseNavigationController.m in Sources */,

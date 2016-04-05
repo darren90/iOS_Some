@@ -17,4 +17,12 @@
 }
 
 
+-(void)setItemTitle:(NSString *)itemTitle
+{
+//    _itemTitle = itemTitle;
+    
+    _itemTitle = [NSString replaceHtmlTag:itemTitle];
+//    NSLog(@"after:%@",_itemTitle);
+}
+
 @end

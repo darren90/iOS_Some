@@ -61,7 +61,7 @@
     SettingCell *cell = [SettingCell cellWithTableView:tableView];
     NSArray *array = self.dataArray[indexPath.section];
     cell.item = array[indexPath.row];
-    cell.backgroundColor = KRandomColor;
+//    cell.backgroundColor = KRandomColor;
     return cell;
 }
 
@@ -111,7 +111,7 @@
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
         
-        SettingItem *m10 = [SettingItem itemWithIcon:@"icon_me_review" title:@"我的收藏"];
+        SettingItem *m10 = [SettingItem itemWithIcon:@"icon_score_star_blank" title:@"我的收藏"];
         
         SettingItem *m20 = [SettingItem itemWithIcon:@"abouts" title:@"清除缓存"];
          
