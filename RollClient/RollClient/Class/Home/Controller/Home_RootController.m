@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.tableView.rowHeight = 120;
+//    self.tableView.rowHeight = 120;
    
     __weak __typeof (self) weakSelf = self;
     self.tableView.mj_header =  [MJRefreshHeader headerWithRefreshingBlock:^{
@@ -113,6 +113,19 @@
     [self.navigationController pushViewController:detail animated:YES];
     
     [tableView deselectRowAtIndexPath:indexPath animated:true];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    RollModel *model = self.dataArray[indexPath.row];
+
+    if ([model.itemType isEqualToString:@"1"]) {
+        return 120;
+    }else if ([model.itemType isEqualToString:@"2"]){
+        return 100;
+    }else{
+        return 0.000000001;
+    }
 }
 
 

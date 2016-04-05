@@ -7,6 +7,7 @@
 //
 
 #import "HomeDetailViewController.h"
+#import "RollImgDetail.h"
 
 @interface HomeDetailViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -42,18 +43,31 @@
     [mgr POST:url parameters:params
       success:^(AFHTTPRequestOperation *operation, id responseObject) {//responseObject 字典
           NSLog(@"%@",responseObject);
- 
-//          var html = "<html> <head>"
-//          html += "<link rel=\"stylesheet\" href="
-//          html += cssStr
-//          html += "</head>"
-//          html += bodyStr
-//          html += "</body> </html>"
-          
+       
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"%@",error);
       }];
 }
+
+-(void)success:(NSDictionary *)json{
+    if ([self.itemType isEqualToString:@"1"]) {//图片
+        
+        RollImgDetail *model = [RollImgDetail mj_objectWithKeyValues:json[@"detail"]];
+        
+        NSString *bodyStr = model.itemDetailArticle;
+        NSString *cssStr = @"";
+        NSString *html = @"<html> <head>";
+        html = [html stringByAppendingString:cssStr];
+        html = [html stringByAppendingString:@"</head>"];
+        html = [html stringByAppendingString:bodyStr];
+        html = [html stringByAppendingString:@"</body> </html>"];
+        
+        [self.webView loadHTMLString:html baseURL:nil];
+    }else if ([self.itemType isEqualToString:@"2"]){//视频
+        
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

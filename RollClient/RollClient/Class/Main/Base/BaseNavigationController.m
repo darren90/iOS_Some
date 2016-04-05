@@ -28,6 +28,9 @@
 //系统第一次使用这个类的时候会调用
 +(void)initialize
 {
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                         forBarMetrics:UIBarMetricsDefault];
+    
     //导航栏的主题
     UINavigationBar *navBar = [UINavigationBar appearance];
     [navBar setBackgroundImage:[UIImage imageNamed:@"NarBar"] forBarMetrics:UIBarMetricsDefault];

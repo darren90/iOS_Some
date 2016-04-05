@@ -82,6 +82,7 @@
 		FECCFC8E1CB4007D00F21514 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FECCFC8D1CB4007D00F21514 /* libicucore.tbd */; };
 		FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3421CB4128400F93A79 /* RollImgsCell.m */; };
 		FEF7C3451CB4128400F93A79 /* RollImgsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */; };
+		FEF7C3481CB4180A00F93A79 /* RollImgDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3471CB4180A00F93A79 /* RollImgDetail.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -239,6 +240,8 @@
 		FEF7C3411CB4128400F93A79 /* RollImgsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollImgsCell.h; sourceTree = "<group>"; };
 		FEF7C3421CB4128400F93A79 /* RollImgsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollImgsCell.m; sourceTree = "<group>"; };
 		FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollImgsCell.xib; sourceTree = "<group>"; };
+		FEF7C3461CB4180A00F93A79 /* RollImgDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollImgDetail.h; sourceTree = "<group>"; };
+		FEF7C3471CB4180A00F93A79 /* RollImgDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollImgDetail.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,6 +353,8 @@
 				897BD2371CAB64A300FDF5F0 /* ItemImags.m */,
 				897BD2381CAB64A300FDF5F0 /* RollModel.h */,
 				897BD2391CAB64A300FDF5F0 /* RollModel.m */,
+				FEF7C3461CB4180A00F93A79 /* RollImgDetail.h */,
+				FEF7C3471CB4180A00F93A79 /* RollImgDetail.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -946,6 +951,7 @@
 				897BD22A1CAB641100FDF5F0 /* WdCleanCaches.m in Sources */,
 				FE877A721CB1F50A00D271EF /* SettingCell.m in Sources */,
 				897BD2351CAB644D00FDF5F0 /* Setting_RootController.m in Sources */,
+				FEF7C3481CB4180A00F93A79 /* RollImgDetail.m in Sources */,
 				89B1586A1CB37C88004AB188 /* HomeDetailViewController.m in Sources */,
 				FE877A741CB1F50A00D271EF /* SettingSwitchCell.m in Sources */,
 				FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */,
