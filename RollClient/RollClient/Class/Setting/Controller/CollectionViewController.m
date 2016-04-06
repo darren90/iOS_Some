@@ -1,101 +1,36 @@
 //
-//  Home_RootController.m
+//  CollectionViewController.m
 //  RollClient
 //
-//  Created by Fengtf on 16/3/30.
+//  Created by Tengfei on 16/4/7.
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "Home_RootController.h"
-#import "RollModel.h"
+#import "CollectionViewController.h"
 #import "HomeRollCell.h"
 #import "RollVideoCell.h"
 #import "RollImgsCell.h"
 #import "HomeDetailViewController.h"
+#import "RollModel.h"
 
-@interface Home_RootController ()<UITableViewDelegate,UITableViewDataSource>
+@interface CollectionViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray * dataArray;
 
-@property (nonatomic,assign)BOOL isRefreshing;
-
-@property (nonatomic,assign)int currentPage;
-
 @end
 
-@implementation Home_RootController
-
-//查看详情后，再次进入主界面，刷新，显示为灰色字体
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [self.tableView reloadData];
-}
+@implementation CollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    self.tableView.rowHeight = 120;
-
-    self.currentPage = 1;
-    __weak __typeof (self) weakSelf = self;
-//    __unsafe_unretained __typeof(self) weakSelf = self;
-
-    self.tableView.mj_header =  [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        weakSelf.currentPage = 1;
-        weakSelf.isRefreshing = YES;
-        [weakSelf getData];
-    }];
-    
-    // 马上进入刷新状态
-    [self.tableView.mj_header beginRefreshing];
-    
-    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
-        weakSelf.currentPage ++;
-        weakSelf.isRefreshing = NO;
-        [weakSelf getData];
-    }];
-//    [self getData];
 }
 
-
-
--(void)getData{
-    AFHTTPRequestOperationManager *mgr = [AFHTTPRequestOperationManager manager];
-    //封装请求参数
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"itemTitle"] = @"";
-    params[@"pageNumber"] = [NSString stringWithFormat:@"%d",self.currentPage];
-    
-    //    mgr.responseSerializer.acceptableContentTypes  = [NSSet setWithObject:@"application/json"];
-    
-    mgr.requestSerializer = [AFJSONRequestSerializer serializer];
-    [mgr.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    
-    mgr.responseSerializer  = [AFJSONResponseSerializer serializer];
-    
-    //发送请求
-     __unsafe_unretained __typeof(self) weakSelf = self;
-    [mgr POST:@"http://112.74.95.46/item/query" parameters:params
-      success:^(AFHTTPRequestOperation *operation, id responseObject) {//responseObject 字典
-          [weakSelf stopRefresh];
-//          NSLog(@"%@",responseObject[@"result"]);
-          NSArray *array = [RollModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
-          NSLog(@"----------------------");
-          [self.dataArray addObjectsFromArray:array];
-          [self.tableView reloadData];
-      } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-          NSLog(@"%@",error);
-          weakSelf.currentPage --;
-          [weakSelf stopRefresh];
-      }];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
--(void)stopRefresh{
-    [self.tableView.mj_header endRefreshing];
-    [self.tableView.mj_footer endRefreshing];
-}
 
 
 #pragma mark - Table view data source
@@ -126,7 +61,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-     RollModel * model = self.dataArray[indexPath.row];
+    RollModel * model = self.dataArray[indexPath.row];
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     HomeDetailViewController *detail = [sb instantiateViewControllerWithIdentifier:@"HomeDetail"];
     detail.title = model.itemTitle;
@@ -153,7 +88,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     RollModel *model = self.dataArray[indexPath.row];
-
+    
     if ([model.itemType isEqualToString:@"1"]) {
         if (isApplePad){
             return 200;
@@ -192,7 +127,5 @@
     }
     return _dataArray;
 }
-
-
 
 @end

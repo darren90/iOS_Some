@@ -100,6 +100,7 @@
 		FEF7C35F1CB540B500F93A79 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C35A1CB540B500F93A79 /* FMResultSet.m */; };
 		FEF7C3681CB5597400F93A79 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3671CB5597400F93A79 /* LoadingView.m */; };
 		FEF7C36B1CB55E0F00F93A79 /* LoadingPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C36A1CB55E0F00F93A79 /* LoadingPreView.m */; };
+		FEF7C36E1CB56F8A00F93A79 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C36D1CB56F8A00F93A79 /* CollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -294,6 +295,8 @@
 		FEF7C3671CB5597400F93A79 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
 		FEF7C3691CB55E0F00F93A79 /* LoadingPreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingPreView.h; sourceTree = "<group>"; };
 		FEF7C36A1CB55E0F00F93A79 /* LoadingPreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingPreView.m; sourceTree = "<group>"; };
+		FEF7C36C1CB56F8A00F93A79 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		FEF7C36D1CB56F8A00F93A79 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,6 +451,8 @@
 			children = (
 				897BD2331CAB644D00FDF5F0 /* Setting_RootController.h */,
 				897BD2341CAB644D00FDF5F0 /* Setting_RootController.m */,
+				FEF7C36C1CB56F8A00F93A79 /* CollectionViewController.h */,
+				FEF7C36D1CB56F8A00F93A79 /* CollectionViewController.m */,
 				89D60F621CB4F727008F4143 /* AboutViewController.h */,
 				89D60F631CB4F727008F4143 /* AboutViewController.m */,
 			);
@@ -1099,6 +1104,7 @@
 				897BD22F1CAB641100FDF5F0 /* UIView+AutoLayout.m in Sources */,
 				FEF7C34E1CB540AF00F93A79 /* DatabaseTool.m in Sources */,
 				897BD22A1CAB641100FDF5F0 /* WdCleanCaches.m in Sources */,
+				FEF7C36E1CB56F8A00F93A79 /* CollectionViewController.m in Sources */,
 				FE877A721CB1F50A00D271EF /* SettingCell.m in Sources */,
 				897BD2351CAB644D00FDF5F0 /* Setting_RootController.m in Sources */,
 				89D60F461CB4CA4F008F4143 /* RollVideoDetail.m in Sources */,
@@ -1280,6 +1286,7 @@
 			baseConfigurationReference = F5E17A35C0F971B3BB8B046E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RollClient/Lib/Vendor/ThirdPart/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1300,6 +1307,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.RollClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1308,6 +1316,7 @@
 			baseConfigurationReference = 370586C793DE47850E4D5B3A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RollClient/Lib/Vendor/ThirdPart/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -1328,6 +1337,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.RollClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

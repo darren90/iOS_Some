@@ -72,6 +72,7 @@
                     <connections>
                         <outlet property="tableView" destination="vIH-ta-sg5" id="Lht-pL-kRQ"/>
                         <segue destination="I3v-HC-4k1" kind="push" id="whk-OO-IOh"/>
+                        <segue destination="zQS-rQ-PpX" kind="push" id="Nm3-Yn-Id3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fBG-dZ-Laz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,6 +174,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hm5-n2-5hN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3408" y="270"/>
+        </scene>
+        <!--我的收藏-->
+        <scene sceneID="ITl-fV-vRk">
+            <objects>
+                <viewController storyboardIdentifier="CollectionVC" id="zQS-rQ-PpX" customClass="CollectionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MmB-4U-n9M"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZIp-LS-2dh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jyO-xk-CUn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rOn-cE-MCP">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rOn-cE-MCP" firstAttribute="leading" secondItem="jyO-xk-CUn" secondAttribute="leading" id="OeF-QZ-W0e"/>
+                            <constraint firstItem="ZIp-LS-2dh" firstAttribute="top" secondItem="rOn-cE-MCP" secondAttribute="bottom" id="fXc-Pc-e2P"/>
+                            <constraint firstItem="rOn-cE-MCP" firstAttribute="top" secondItem="MmB-4U-n9M" secondAttribute="bottom" id="j8s-7j-PEG"/>
+                            <constraint firstAttribute="trailing" secondItem="rOn-cE-MCP" secondAttribute="trailing" id="r6a-lg-hBo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的收藏" id="Z8t-68-HdS"/>
+                    <connections>
+                        <outlet property="tableView" destination="rOn-cE-MCP" id="rZZ-J2-8LM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHJ-sg-wrB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3377" y="1035"/>
         </scene>
         <!--Base Navigation Controller-->
         <scene sceneID="9WE-1m-T3f">

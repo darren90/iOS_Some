@@ -75,7 +75,7 @@
 #define isIOS6                  ([[[UIDevice currentDevice]systemVersion]floatValue] < 7.0)
 
 // 是否iPad
-#define isApplePad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define isApplePad                (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 
 #define kScreenBounds [UIScreen mainScreen].bounds
@@ -96,7 +96,7 @@
 
 #define KHadReades @"KHadReadesFFFFFFFFFFFFFF"
 
-
+#define KPlaceHolderImg  [UIImage imageNamed:@"nopic_190x210"]
 
 
 

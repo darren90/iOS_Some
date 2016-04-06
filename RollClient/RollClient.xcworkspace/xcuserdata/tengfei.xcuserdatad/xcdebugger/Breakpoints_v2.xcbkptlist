@@ -52,11 +52,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RollClient/Class/Home/View/RollVideoCell.m"
-            timestampString = "481644414.359307"
+            timestampString = "481652108.563655"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "-setModel:"
             landmarkType = "5">
          </BreakpointContent>

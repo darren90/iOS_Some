@@ -11,6 +11,7 @@
 #import "ItemImags.h"
 
 @interface RollVideoCell ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconViewW;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @end
@@ -29,6 +30,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    if (isApplePad) {
+        self.iconViewW.constant = 120;
+    }
 }
 
 
@@ -47,7 +51,7 @@
     self.titleLabel.text = model.itemTitle;
     if (model.itemImageList.count == 0) return;
     ItemImags *im = model.itemImageList[0];
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:im.itemImageUrl] placeholderImage:nil];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:im.itemImageUrl] placeholderImage:KPlaceHolderImg];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

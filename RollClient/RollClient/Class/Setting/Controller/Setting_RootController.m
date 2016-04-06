@@ -11,6 +11,7 @@
 #import "AboutViewController.h"
 #import "SettingItem.h"
 #import "Global.h"
+#import "CollectionViewController.h"
 
 @interface Setting_RootController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -104,10 +105,10 @@
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         AboutViewController *aboutVc = [sb instantiateViewControllerWithIdentifier:@"AboutView"];
         [self.navigationController pushViewController:aboutVc animated:YES];
-        
     }else if  ([model.title isEqualToString:@"我的收藏"]){
-       
-        
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        CollectionViewController *colVC = [sb instantiateViewControllerWithIdentifier:@"CollectionVC"];
+        [self.navigationController pushViewController:colVC animated:YES];
     }else if  ([model.title isEqualToString:@"清除缓存"]){
         NSString * path = [WdCleanCaches CachesDirectory];
         double cacheSize = [WdCleanCaches sizeWithFilePaht:path];

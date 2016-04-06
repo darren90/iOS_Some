@@ -52,16 +52,16 @@
     if (arry && arry.count) {
         if (arry.count == 1) {
             ItemImags *im = model.itemImageList[0];
-            [self.imageView1 sd_setImageWithURL:[NSURL URLWithString:im.itemImageUrl] placeholderImage:nil];
+            [self.imageView1 sd_setImageWithURL:[NSURL URLWithString:im.itemImageUrl] placeholderImage:KPlaceHolderImg];
         }else if (arry.count == 2){
             ItemImags *im0 = model.itemImageList[0]; ItemImags *im1 = model.itemImageList[1];
-            [self.imageView1 sd_setImageWithURL:[NSURL URLWithString:im0.itemImageUrl] placeholderImage:nil];
-            [self.imageView2 sd_setImageWithURL:[NSURL URLWithString:im1.itemImageUrl] placeholderImage:nil];
+            [self.imageView1 sd_setImageWithURL:[NSURL URLWithString:im0.itemImageUrl] placeholderImage:KPlaceHolderImg];
+            [self.imageView2 sd_setImageWithURL:[NSURL URLWithString:im1.itemImageUrl] placeholderImage:KPlaceHolderImg];
         }else if (arry.count == 3){
             ItemImags *im0 = model.itemImageList[0]; ItemImags *im1 = model.itemImageList[1]; ItemImags *im2 = model.itemImageList[2];
-            [self.imageView1 sd_setImageWithURL:[NSURL URLWithString:im0.itemImageUrl] placeholderImage:nil];
-            [self.imageView2 sd_setImageWithURL:[NSURL URLWithString:im1.itemImageUrl] placeholderImage:nil];
-            [self.imageView3 sd_setImageWithURL:[NSURL URLWithString:im2.itemImageUrl] placeholderImage:nil];
+            [self.imageView1 sd_setImageWithURL:[NSURL URLWithString:im0.itemImageUrl] placeholderImage:KPlaceHolderImg];
+            [self.imageView2 sd_setImageWithURL:[NSURL URLWithString:im1.itemImageUrl] placeholderImage:KPlaceHolderImg];
+            [self.imageView3 sd_setImageWithURL:[NSURL URLWithString:im2.itemImageUrl] placeholderImage:KPlaceHolderImg];
         }
     }
     
