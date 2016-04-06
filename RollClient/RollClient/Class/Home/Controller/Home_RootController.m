@@ -31,18 +31,23 @@
 //    self.tableView.rowHeight = 120;
    
     __weak __typeof (self) weakSelf = self;
-    self.tableView.mj_header =  [MJRefreshHeader headerWithRefreshingBlock:^{
+//    __unsafe_unretained __typeof(self) weakSelf = self;
+
+    self.tableView.mj_header =  [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         weakSelf.currentPage = 1;
         weakSelf.isRefreshing = YES;
         [weakSelf getData];
     }];
-
-    self.tableView.mj_footer = [MJRefreshFooter footerWithRefreshingBlock:^{
+    
+    // 马上进入刷新状态
+    [self.tableView.mj_header beginRefreshing];
+    
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         weakSelf.currentPage ++;
         weakSelf.isRefreshing = NO;
         [weakSelf getData];
     }];
-    [self getData];
+//    [self getData];
 }
 
 
@@ -62,8 +67,10 @@
     mgr.responseSerializer  = [AFJSONResponseSerializer serializer];
     
     //发送请求
+     __unsafe_unretained __typeof(self) weakSelf = self;
     [mgr POST:@"http://112.74.95.46/item/query" parameters:params
       success:^(AFHTTPRequestOperation *operation, id responseObject) {//responseObject 字典
+          [weakSelf stopRefresh];
           NSLog(@"%@",responseObject[@"result"]);
           NSArray *array = [RollModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
           NSLog(@"----------------------");
@@ -71,9 +78,15 @@
           [self.tableView reloadData];
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"%@",error);
+          weakSelf.currentPage --;
+          [weakSelf stopRefresh];
       }];
 }
 
+-(void)stopRefresh{
+    [self.tableView.mj_header endRefreshing];
+    [self.tableView.mj_footer endRefreshing];
+}
 
 
 #pragma mark - Table view data source
@@ -126,6 +139,22 @@
     }else{
         return 0.000000001;
     }
+}
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return nil;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return nil;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.000000000001;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return 0.000000000001;
 }
 
 

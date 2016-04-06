@@ -35,6 +35,7 @@
 #import "UIImage+Category.h"
 #import "MobClick.h" //友盟 统计
 #import "WdCleanCaches.h"
+#import "SVProgressHUD.h"
 
 
 //category

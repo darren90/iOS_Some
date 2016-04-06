@@ -8,8 +8,9 @@
 
 #import "Setting_RootController.h"
 #import "SettingCell.h"
-//#import "AboutViewController.h"
+#import "AboutViewController.h"
 #import "SettingItem.h"
+#import "Global.h"
 
 @interface Setting_RootController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -92,16 +93,38 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    SettingItem *model = self.dataArray[indexPath.row];
+    NSArray *array = self.dataArray[indexPath.section];
+    
+    SettingItem *model = array[indexPath.row];
     if ([model.title isEqualToString:@"应用评分"]) {
         NSString *str = [NSString stringWithFormat:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=%@&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8",KAppid];
         
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];
     }else if  ([model.title isEqualToString:@"关于"]){
-//        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//        AboutViewController *aboutVc = [sb instantiateViewControllerWithIdentifier:@"aboutVc"];
-//        [self.navigationController pushViewController:aboutVc animated:YES];
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        AboutViewController *aboutVc = [sb instantiateViewControllerWithIdentifier:@"AboutView"];
+        [self.navigationController pushViewController:aboutVc animated:YES];
         
+    }else if  ([model.title isEqualToString:@"我的收藏"]){
+       
+        
+    }else if  ([model.title isEqualToString:@"清除缓存"]){
+        NSString * path = [WdCleanCaches CachesDirectory];
+        double cacheSize = [WdCleanCaches sizeWithFilePaht:path];
+        //hud
+        [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+        SVProgressHUD.minimumDismissTimeInterval = 0.6;
+
+        if (cacheSize == 0) {
+            [SVProgressHUD showInfoWithStatus:@"无缓存，不需要清理"];
+            return;
+        }
+        [SVProgressHUD showSuccessWithStatus:[NSString stringWithFormat:@"清理了%.1fMB的缓存",cacheSize]];
+
+        [WdCleanCaches clearCachesWithFilePath:path];
+        [Global clearCache];
+        model.subtitle = [NSString stringWithFormat:@"%.1fMB",0.0];
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
     
 }
@@ -111,9 +134,12 @@
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
         
-        SettingItem *m10 = [SettingItem itemWithIcon:@"icon_score_star_blank" title:@"我的收藏"];
+        SettingItem *m10 = [SettingItem itemWithIcon:@"icon_me_collect" title:@"我的收藏"];
         
-        SettingItem *m20 = [SettingItem itemWithIcon:@"abouts" title:@"清除缓存"];
+        NSString * path = [WdCleanCaches CachesDirectory];
+        double cacheSize = [WdCleanCaches sizeWithFilePaht:path];
+        NSString *cacheStr = [NSString stringWithFormat:@"%.1fMB",cacheSize];
+        SettingItem *m20 = [SettingItem itemWithIcon:@"icon_me_delete" title:@"清除缓存" subtitle:cacheStr];
          
         SettingItem *m30 = [SettingItem itemWithIcon:@"icon_me_review" title:@"应用评分"];
         SettingItem *m31 = [SettingItem itemWithIcon:@"abouts" title:@"关于"];

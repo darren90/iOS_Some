@@ -35,6 +35,15 @@
 		897BD24C1CAB697800FDF5F0 /* HomeRollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 897BD24A1CAB697800FDF5F0 /* HomeRollCell.m */; };
 		897BD24D1CAB697800FDF5F0 /* HomeRollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */; };
 		89B1586A1CB37C88004AB188 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89B158691CB37C88004AB188 /* HomeDetailViewController.m */; };
+		89D60F421CB49FEC008F4143 /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F3F1CB49FEC008F4143 /* ObjcRuntime.m */; };
+		89D60F431CB49FEC008F4143 /* UIViewController+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F411CB49FEC008F4143 /* UIViewController+Swizzle.m */; };
+		89D60F461CB4CA4F008F4143 /* RollVideoDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F451CB4CA4F008F4143 /* RollVideoDetail.m */; };
+		89D60F5D1CB4F4FB008F4143 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F541CB4F4FB008F4143 /* SVIndefiniteAnimatedView.m */; };
+		89D60F5E1CB4F4FB008F4143 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F561CB4F4FB008F4143 /* SVProgressAnimatedView.m */; };
+		89D60F5F1CB4F4FB008F4143 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 89D60F581CB4F4FB008F4143 /* SVProgressHUD.bundle */; };
+		89D60F601CB4F4FB008F4143 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F5A1CB4F4FB008F4143 /* SVProgressHUD.m */; };
+		89D60F611CB4F4FB008F4143 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F5C1CB4F4FB008F4143 /* SVRadialGradientLayer.m */; };
+		89D60F641CB4F727008F4143 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D60F631CB4F727008F4143 /* AboutViewController.m */; };
 		FE391D9A1CA9736C004C8FA7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D991CA9736C004C8FA7 /* main.m */; };
 		FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D9C1CA9736C004C8FA7 /* AppDelegate.m */; };
 		FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391D9F1CA9736C004C8FA7 /* ViewController.m */; };
@@ -151,6 +160,24 @@
 		897BD24B1CAB697800FDF5F0 /* HomeRollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeRollCell.xib; sourceTree = "<group>"; };
 		89B158681CB37C88004AB188 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
 		89B158691CB37C88004AB188 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
+		89D60F3E1CB49FEC008F4143 /* ObjcRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcRuntime.h; sourceTree = "<group>"; };
+		89D60F3F1CB49FEC008F4143 /* ObjcRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcRuntime.m; sourceTree = "<group>"; };
+		89D60F401CB49FEC008F4143 /* UIViewController+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzle.h"; sourceTree = "<group>"; };
+		89D60F411CB49FEC008F4143 /* UIViewController+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzle.m"; sourceTree = "<group>"; };
+		89D60F441CB4CA4F008F4143 /* RollVideoDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollVideoDetail.h; sourceTree = "<group>"; };
+		89D60F451CB4CA4F008F4143 /* RollVideoDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollVideoDetail.m; sourceTree = "<group>"; };
+		89D60F531CB4F4FB008F4143 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		89D60F541CB4F4FB008F4143 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		89D60F551CB4F4FB008F4143 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		89D60F561CB4F4FB008F4143 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		89D60F571CB4F4FB008F4143 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		89D60F581CB4F4FB008F4143 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		89D60F591CB4F4FB008F4143 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		89D60F5A1CB4F4FB008F4143 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		89D60F5B1CB4F4FB008F4143 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		89D60F5C1CB4F4FB008F4143 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		89D60F621CB4F727008F4143 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		89D60F631CB4F727008F4143 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		F5E17A35C0F971B3BB8B046E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE391D951CA9736B004C8FA7 /* RollClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RollClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE391D991CA9736C004C8FA7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -355,6 +382,8 @@
 				897BD2391CAB64A300FDF5F0 /* RollModel.m */,
 				FEF7C3461CB4180A00F93A79 /* RollImgDetail.h */,
 				FEF7C3471CB4180A00F93A79 /* RollImgDetail.m */,
+				89D60F441CB4CA4F008F4143 /* RollVideoDetail.h */,
+				89D60F451CB4CA4F008F4143 /* RollVideoDetail.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -390,6 +419,8 @@
 			children = (
 				897BD2331CAB644D00FDF5F0 /* Setting_RootController.h */,
 				897BD2341CAB644D00FDF5F0 /* Setting_RootController.m */,
+				89D60F621CB4F727008F4143 /* AboutViewController.h */,
+				89D60F631CB4F727008F4143 /* AboutViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -427,6 +458,8 @@
 		897BD2111CAB641100FDF5F0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				89D60F521CB4F4FB008F4143 /* SVProgressHUD */,
+				89D60F3C1CB49FEC008F4143 /* RDVSwipe */,
 				FECCFC891CB3FFED00F21514 /* regex */,
 				897BD2121CAB641100FDF5F0 /* ClearCache */,
 				897BD2171CAB641100FDF5F0 /* RDVTabBarController */,
@@ -509,6 +542,42 @@
 				897BD2471CAB65BA00FDF5F0 /* BaseViewController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		89D60F3C1CB49FEC008F4143 /* RDVSwipe */ = {
+			isa = PBXGroup;
+			children = (
+				89D60F3D1CB49FEC008F4143 /* ObjcRuntime */,
+				89D60F401CB49FEC008F4143 /* UIViewController+Swizzle.h */,
+				89D60F411CB49FEC008F4143 /* UIViewController+Swizzle.m */,
+			);
+			path = RDVSwipe;
+			sourceTree = "<group>";
+		};
+		89D60F3D1CB49FEC008F4143 /* ObjcRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				89D60F3E1CB49FEC008F4143 /* ObjcRuntime.h */,
+				89D60F3F1CB49FEC008F4143 /* ObjcRuntime.m */,
+			);
+			path = ObjcRuntime;
+			sourceTree = "<group>";
+		};
+		89D60F521CB4F4FB008F4143 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				89D60F531CB4F4FB008F4143 /* SVIndefiniteAnimatedView.h */,
+				89D60F541CB4F4FB008F4143 /* SVIndefiniteAnimatedView.m */,
+				89D60F551CB4F4FB008F4143 /* SVProgressAnimatedView.h */,
+				89D60F561CB4F4FB008F4143 /* SVProgressAnimatedView.m */,
+				89D60F571CB4F4FB008F4143 /* SVProgressHUD-Prefix.pch */,
+				89D60F581CB4F4FB008F4143 /* SVProgressHUD.bundle */,
+				89D60F591CB4F4FB008F4143 /* SVProgressHUD.h */,
+				89D60F5A1CB4F4FB008F4143 /* SVProgressHUD.m */,
+				89D60F5B1CB4F4FB008F4143 /* SVRadialGradientLayer.h */,
+				89D60F5C1CB4F4FB008F4143 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		FE391D8C1CA9736B004C8FA7 = {
@@ -865,6 +934,7 @@
 				FE877AB01CB1F59700D271EF /* UMSCommentInputControlleriPad.xib in Resources */,
 				FE877AAC1CB1F59700D271EF /* UMSocialLocalizable.strings in Resources */,
 				FE877AB41CB1F59700D271EF /* UMSnsAccountViewController.xib in Resources */,
+				89D60F5F1CB4F4FB008F4143 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,6 +1011,7 @@
 				FEA8607E1CB4040B00F4E78D /* NSString+TF.m in Sources */,
 				FECCFC8C1CB3FFED00F21514 /* RegexKitLite.m in Sources */,
 				FE877A6D1CB1F50A00D271EF /* HistoryCellModel.m in Sources */,
+				89D60F421CB49FEC008F4143 /* ObjcRuntime.m in Sources */,
 				897BD2481CAB65BA00FDF5F0 /* BaseViewController.m in Sources */,
 				FE877A711CB1F50A00D271EF /* MeHeaderView.m in Sources */,
 				FE877A6E1CB1F50A00D271EF /* SettingArrowItem.m in Sources */,
@@ -951,25 +1022,32 @@
 				897BD22A1CAB641100FDF5F0 /* WdCleanCaches.m in Sources */,
 				FE877A721CB1F50A00D271EF /* SettingCell.m in Sources */,
 				897BD2351CAB644D00FDF5F0 /* Setting_RootController.m in Sources */,
+				89D60F461CB4CA4F008F4143 /* RollVideoDetail.m in Sources */,
 				FEF7C3481CB4180A00F93A79 /* RollImgDetail.m in Sources */,
 				89B1586A1CB37C88004AB188 /* HomeDetailViewController.m in Sources */,
 				FE877A741CB1F50A00D271EF /* SettingSwitchCell.m in Sources */,
+				89D60F611CB4F4FB008F4143 /* SVRadialGradientLayer.m in Sources */,
 				FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */,
 				FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */,
+				89D60F431CB49FEC008F4143 /* UIViewController+Swizzle.m in Sources */,
 				FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */,
 				FEA860821CB40D1000F4E78D /* RollVideoCell.m in Sources */,
 				FE391D9A1CA9736C004C8FA7 /* main.m in Sources */,
 				897BD23A1CAB64A300FDF5F0 /* ItemImags.m in Sources */,
 				897BD2451CAB659A00FDF5F0 /* BaseNavigationController.m in Sources */,
 				897BD23B1CAB64A300FDF5F0 /* RollModel.m in Sources */,
+				89D60F641CB4F727008F4143 /* AboutViewController.m in Sources */,
 				897BD2421CAB657800FDF5F0 /* BaseTabBarController.m in Sources */,
+				89D60F5E1CB4F4FB008F4143 /* SVProgressAnimatedView.m in Sources */,
 				897BD2291CAB641100FDF5F0 /* Global.m in Sources */,
 				FE877A6C1CB1F50A00D271EF /* CollectModel.m in Sources */,
 				897BD2261CAB641100FDF5F0 /* UIImage+Category.m in Sources */,
 				FE877A6F1CB1F50A00D271EF /* SettingItem.m in Sources */,
 				FE877A701CB1F50A00D271EF /* SettingSwitchItem.m in Sources */,
+				89D60F601CB4F4FB008F4143 /* SVProgressHUD.m in Sources */,
 				897BD24C1CAB697800FDF5F0 /* HomeRollCell.m in Sources */,
 				897BD22D1CAB641100FDF5F0 /* RDVTabBarItem.m in Sources */,
+				89D60F5D1CB4F4FB008F4143 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
