@@ -21,7 +21,7 @@
 //#import "NSString+TF.h"
 //#import "IanAlert.h"
 #import "RegexKitLite.h"
-//#import "DatabaseTool.h"
+#import "DatabaseTool.h"
 #import <MJExtension.h>
 //#import "JsonModel.h"
 #import <UIImageView+WebCache.h>
@@ -78,7 +78,7 @@
 #define isApplePad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
 
-
+#define kScreenBounds [UIScreen mainScreen].bounds
 
 #define KAppid @"123"
 

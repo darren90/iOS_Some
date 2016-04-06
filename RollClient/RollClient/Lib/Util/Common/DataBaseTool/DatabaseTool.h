@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
  
 @interface DatabaseTool : NSObject
+
 /*******************************收藏****************************************/
 +(BOOL)isHadCollected:(NSString *)itemId;
 
 /*******************************收藏****************************************/
+
 @end
 
 

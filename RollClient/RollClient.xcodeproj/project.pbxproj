@@ -98,6 +98,8 @@
 		FEF7C35D1CB540B500F93A79 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3551CB540B500F93A79 /* FMDatabasePool.m */; };
 		FEF7C35E1CB540B500F93A79 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3571CB540B500F93A79 /* FMDatabaseQueue.m */; };
 		FEF7C35F1CB540B500F93A79 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C35A1CB540B500F93A79 /* FMResultSet.m */; };
+		FEF7C3681CB5597400F93A79 /* LoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3671CB5597400F93A79 /* LoadingView.m */; };
+		FEF7C36B1CB55E0F00F93A79 /* LoadingPreView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C36A1CB55E0F00F93A79 /* LoadingPreView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,6 +290,10 @@
 		FEF7C3581CB540B500F93A79 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		FEF7C3591CB540B500F93A79 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		FEF7C35A1CB540B500F93A79 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		FEF7C3661CB5597400F93A79 /* LoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingView.h; sourceTree = "<group>"; };
+		FEF7C3671CB5597400F93A79 /* LoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingView.m; sourceTree = "<group>"; };
+		FEF7C3691CB55E0F00F93A79 /* LoadingPreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingPreView.h; sourceTree = "<group>"; };
+		FEF7C36A1CB55E0F00F93A79 /* LoadingPreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingPreView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +425,10 @@
 				FEF7C3411CB4128400F93A79 /* RollImgsCell.h */,
 				FEF7C3421CB4128400F93A79 /* RollImgsCell.m */,
 				FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */,
+				FEF7C3661CB5597400F93A79 /* LoadingView.h */,
+				FEF7C3671CB5597400F93A79 /* LoadingView.m */,
+				FEF7C3691CB55E0F00F93A79 /* LoadingPreView.h */,
+				FEF7C36A1CB55E0F00F93A79 /* LoadingPreView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1072,6 +1082,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				897BD2321CAB643000FDF5F0 /* Home_RootController.m in Sources */,
+				FEF7C3681CB5597400F93A79 /* LoadingView.m in Sources */,
 				FEA8607E1CB4040B00F4E78D /* NSString+TF.m in Sources */,
 				FECCFC8C1CB3FFED00F21514 /* RegexKitLite.m in Sources */,
 				FE877A6D1CB1F50A00D271EF /* HistoryCellModel.m in Sources */,
@@ -1094,6 +1105,7 @@
 				FEF7C3481CB4180A00F93A79 /* RollImgDetail.m in Sources */,
 				89B1586A1CB37C88004AB188 /* HomeDetailViewController.m in Sources */,
 				FE877A741CB1F50A00D271EF /* SettingSwitchCell.m in Sources */,
+				FEF7C36B1CB55E0F00F93A79 /* LoadingPreView.m in Sources */,
 				FEF7C35D1CB540B500F93A79 /* FMDatabasePool.m in Sources */,
 				89D60F611CB4F4FB008F4143 /* SVRadialGradientLayer.m in Sources */,
 				FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */,

@@ -26,7 +26,7 @@ class HomeDetailViewController: UIViewController,UIGestureRecognizerDelegate {
     var titleLabel: myUILabel!
     var sourceLabel: UILabel!
     
-    let loadingView: LoadingView = LoadingView(frame: CGRectMake(0, 0, CGFloat(KWidth), 3))
+    let loadingView: LoadingView = LoadingView(frame: CGRectMake(0, 0, CGFloat(KWidth), 30))
     
     
     var isHadImg = true

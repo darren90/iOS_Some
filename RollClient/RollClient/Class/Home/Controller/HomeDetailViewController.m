@@ -9,9 +9,11 @@
 #import "HomeDetailViewController.h"
 #import "RollImgDetail.h"
 #import "RollVideoDetail.h"
+#import "LoadingPreView.h"
 
 @interface HomeDetailViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property(strong,nonatomic)LoadingPreView *preView;
 
 @end
 
@@ -21,11 +23,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClick)];
+    UIBarButtonItem *rightItem = nil;
+    if ([DatabaseTool isHadCollected:@""]) {
+        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClick:)];
+    }else{
+        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClick:)];
+    }
+    self.navigationItem.rightBarButtonItem = rightItem;
+    
+    _preView = [[LoadingPreView alloc] initWithFrame:kScreenBounds];
+    [self.view addSubview:_preView];
+    
     [self getData];
 }
 
--(void)righBarBtnClick{
+-(void)righBarBtnClick:(UIBarButtonItem *)item{
     
 }
 
@@ -147,13 +159,22 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSString * requestDurationString = @"document.documentElement.getElementsByTagName(\"video\")[0].play()";
-    [self.webView stringByEvaluatingJavaScriptFromString:requestDurationString];
-    [self initNotice];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_preView removeFromSuperview];
+        
+        //延时自动播放
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSString * requestDurationString = @"document.documentElement.getElementsByTagName(\"video\")[0].play()";
+            [self.webView stringByEvaluatingJavaScriptFromString:requestDurationString];
+            [self initNotice];
+        });
+    });
 }
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
-
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_preView removeFromSuperview];
+    });
 }
 
 - (void)dealloc{
