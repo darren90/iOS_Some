@@ -21,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_n_g"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClick)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClick)];
     [self getData];
 }
 

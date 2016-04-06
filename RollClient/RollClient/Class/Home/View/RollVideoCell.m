@@ -36,6 +36,14 @@
 -(void)setModel:(RollModel *)model{
     _model = model;
     
+    NSArray *readArray = [[NSUserDefaults standardUserDefaults] objectForKey:KHadReades];
+    BOOL result = [readArray containsObject:model.itemId];
+    if (result) {
+        self.titleLabel.textColor = [UIColor lightGrayColor];
+    }else{
+        self.titleLabel.textColor = [UIColor blackColor];
+    }
+    
     self.titleLabel.text = model.itemTitle;
     if (model.itemImageList.count == 0) return;
     ItemImags *im = model.itemImageList[0];

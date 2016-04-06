@@ -33,6 +33,4 @@
 @property (nonatomic,copy)NSString * itemType;
 
 
-
-
 @end

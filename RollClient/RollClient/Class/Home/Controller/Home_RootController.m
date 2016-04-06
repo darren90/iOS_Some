@@ -25,11 +25,20 @@
 
 @implementation Home_RootController
 
+//查看详情后，再次进入主界面，刷新，显示为灰色字体
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.tableView.rowHeight = 120;
-   
+
+    self.currentPage = 1;
     __weak __typeof (self) weakSelf = self;
 //    __unsafe_unretained __typeof(self) weakSelf = self;
 
@@ -57,7 +66,7 @@
     //封装请求参数
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"itemTitle"] = @"";
-    params[@"pageNumber"] = @"1";
+    params[@"pageNumber"] = [NSString stringWithFormat:@"%d",self.currentPage];
     
     //    mgr.responseSerializer.acceptableContentTypes  = [NSSet setWithObject:@"application/json"];
     
@@ -71,7 +80,7 @@
     [mgr POST:@"http://112.74.95.46/item/query" parameters:params
       success:^(AFHTTPRequestOperation *operation, id responseObject) {//responseObject 字典
           [weakSelf stopRefresh];
-          NSLog(@"%@",responseObject[@"result"]);
+//          NSLog(@"%@",responseObject[@"result"]);
           NSArray *array = [RollModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
           NSLog(@"----------------------");
           [self.dataArray addObjectsFromArray:array];
@@ -124,6 +133,19 @@
     detail.itemId = model.itemId;
     detail.itemType = model.itemType;
     [self.navigationController pushViewController:detail animated:YES];
+    
+    //添加到已阅
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *reads = [defaults objectForKey:KHadReades];
+    if (reads){
+        NSMutableArray *arrs = [NSMutableArray arrayWithArray:reads];
+        [arrs addObject:model.itemId];
+        [defaults setObject:arrs forKey:KHadReades];
+    }else{//没有的时候创建新的数组
+        NSMutableArray *arr = [NSMutableArray array];
+        [defaults setObject:arr forKey:KHadReades];
+    }
+    [defaults synchronize];
     
     [tableView deselectRowAtIndexPath:indexPath animated:true];
 }
