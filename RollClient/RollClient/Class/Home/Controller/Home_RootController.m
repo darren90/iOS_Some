@@ -81,12 +81,20 @@
       success:^(AFHTTPRequestOperation *operation, id responseObject) {//responseObject 字典
           [weakSelf stopRefresh];
 //          NSLog(@"%@",responseObject[@"result"]);
+          
           NSArray *array = [RollModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
-          NSLog(@"----------------------");
+ 
+          //缓存数据
+          for (RollModel *m in array) {
+              [DatabaseTool saveRollListW:m withId:m.itemId];
+          }
+          
           [self.dataArray addObjectsFromArray:array];
           [self.tableView reloadData];
       } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"%@",error);
+          [self.dataArray addObjectsFromArray:[DatabaseTool getRollList]];
+          [self.tableView reloadData];
           weakSelf.currentPage --;
           [weakSelf stopRefresh];
       }];
@@ -132,6 +140,7 @@
     detail.title = model.itemTitle;
     detail.itemId = model.itemId;
     detail.itemType = model.itemType;
+    detail.collectModel = model;
     [self.navigationController pushViewController:detail animated:YES];
     
     //添加到已阅

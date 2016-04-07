@@ -9,6 +9,8 @@
 #import "RollModel.h"
 
 @implementation RollModel
+// NSCoding实现
+MJCodingImplementation
 
 +(NSDictionary *)objectClassInArray{
     return @{

@@ -10,6 +10,7 @@
 #import "RollImgDetail.h"
 #import "RollVideoDetail.h"
 #import "LoadingPreView.h"
+#import "RollModel.h"
 
 @interface HomeDetailViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -24,10 +25,10 @@
     // Do any additional setup after loading the view.
     
     UIBarButtonItem *rightItem = nil;
-    if ([DatabaseTool isHadCollected:@""]) {
-        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClick:)];
+    if ([DatabaseTool isHadCollected:self.collectModel.itemId]) {
+        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickDel:)];
     }else{
-        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClick:)];
+        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickAdd:)];
     }
     self.navigationItem.rightBarButtonItem = rightItem;
     
@@ -37,8 +38,23 @@
     [self getData];
 }
 
--(void)righBarBtnClick:(UIBarButtonItem *)item{
+-(void)righBarBtnClickAdd:(UIBarButtonItem *)item{
+    [DatabaseTool saveRollCollect:self.collectModel withId:self.collectModel.itemId];
+//    [item setImage:[UIImage imageNamed:@"icon_me_collect"]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickAdd:)];
     
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    SVProgressHUD.minimumDismissTimeInterval = 0.6;
+    [SVProgressHUD showSuccessWithStatus:@"添加收藏成功"];
+}
+-(void)righBarBtnClickDel:(UIBarButtonItem *)item{
+    [DatabaseTool deleteRollCollect:self.collectModel.itemId];
+//    [item setImage:[UIImage imageNamed:@"icon_news_collect_h"]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickDel:)];
+    
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
+    SVProgressHUD.minimumDismissTimeInterval = 0.6;
+    [SVProgressHUD showSuccessWithStatus:@"删除收藏成功"];
 }
 
 

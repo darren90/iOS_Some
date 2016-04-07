@@ -10,6 +10,7 @@
 #import "SettingCell.h"
 #import "AboutViewController.h"
 #import "SettingItem.h"
+#import "SettingSwitchItem.h"
 #import "Global.h"
 #import "CollectionViewController.h"
 
@@ -141,11 +142,13 @@
         double cacheSize = [WdCleanCaches sizeWithFilePaht:path];
         NSString *cacheStr = [NSString stringWithFormat:@"%.1fMB",cacheSize];
         SettingItem *m20 = [SettingItem itemWithIcon:@"icon_me_delete" title:@"清除缓存" subtitle:cacheStr];
-         
+        SettingItem *m21 = [SettingSwitchItem itemWithIcon:@"icon_tab_video_n" title:@"视频自动播放"];
+
+        
         SettingItem *m30 = [SettingItem itemWithIcon:@"icon_me_review" title:@"应用评分"];
         SettingItem *m31 = [SettingItem itemWithIcon:@"abouts" title:@"关于"];
         
-        [_dataArray addObjectsFromArray:@[@[m10],@[m20],@[m30,m31]]];
+        [_dataArray addObjectsFromArray:@[@[m10],@[m20,m21],@[m30,m31]]];
     }
     return _dataArray;
 }

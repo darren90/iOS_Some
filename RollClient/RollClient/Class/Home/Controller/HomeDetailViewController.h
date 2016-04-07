@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class RollModel;
 @interface HomeDetailViewController : UIViewController
 
 
@@ -16,6 +16,7 @@
 
 @property (nonatomic,copy)NSString * itemType;
 
-
+//收藏 要用到的model
+@property (nonatomic,strong)RollModel *collectModel;
 
 @end

@@ -9,5 +9,6 @@
 #import "ItemImags.h"
 
 @implementation ItemImags
-
+// NSCoding实现
+MJCodingImplementation
 @end

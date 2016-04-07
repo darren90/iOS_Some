@@ -9,7 +9,8 @@
 #import "DatabaseTool.h"
 #import "FMDatabase.h"
 #import "FMDatabaseAdditions.h"
-
+#import "RollModel.h"
+#import "ItemImags.h"
 //下载
 
 
@@ -23,7 +24,7 @@ static FMDatabase *_db;
     NSString* sqlPath = [NSString stringWithFormat:@"%@/rrmj.sqlite",cachesPath];
     NSLog(@"--sqlPath:%@",sqlPath);
     _db = [[FMDatabase alloc] initWithPath:sqlPath];
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
 
     if (![_db open]) {
         [_db close];
@@ -32,26 +33,158 @@ static FMDatabase *_db;
     
     [_db setShouldCacheStatements:YES];
 
-    
-    //5：新下载  uniquenName 主键
+//    [_db executeUpdate:@"CREATE TABLE if not exists mainData (id integer primary key autoincrement,idstr TEXT, dict blob)"];
+
+    //1：收藏
     if (![_db tableExists:@"rollList"]) {
-        [_db executeUpdate:@"CREATE TABLE if not exists rollList (id integer primary key autoincrement,uniquenName TEXT,movieId TEXT,episode integer,fileName TEXT,title TEXT,fileURL TEXT,iconUrl TEXT,targetPath TEXT,tempPath TEXT,filesize TEXT,filerecievesize TEXT,basepath TEXT,time TEXT,isHadDown integer,urlType integer,webPlayUrl TEXT,quality TEXT,episodeSid TEXT,progress double,segmentHadDown integer)"];
+        [_db executeUpdate:@"CREATE TABLE if not exists rollList (id integer primary key autoincrement,idstr TEXT, dict blob)"];
     }
-    //5：新下载  uniquenName 主键
-    if (![_db tableExists:@"fileModel"]) {
-        [_db executeUpdate:@"CREATE TABLE if not exists fileModel (id integer primary key autoincrement,uniquenName TEXT,movieId TEXT,episode integer,fileName TEXT,title TEXT,fileURL TEXT,iconUrl TEXT,targetPath TEXT,tempPath TEXT,filesize TEXT,filerecievesize TEXT,basepath TEXT,time TEXT,isHadDown integer,urlType integer,webPlayUrl TEXT,quality TEXT,episodeSid TEXT,progress double,segmentHadDown integer)"];
+     //2：缓存
+    if (![_db tableExists:@"rollCollect"]) {
+        [_db executeUpdate:@"CREATE TABLE if not exists rollCollect (id integer primary key autoincrement,idstr TEXT, dict blob)"];
     }
-    
- 
-    
+
     [_db close];
 }
 
 
+
 /*******************************收藏****************************************/
-+(BOOL)isHadCollected:(NSString *)itemId{
-    return YES;
+////收藏////////////////////
++(BOOL)isHadCollected:(NSString *)idStr{
+    if (![_db open]) {
+        [_db close];
+        NSLog(@"数据库打开失败");
+        return nil;
+    }
+    
+    [_db setShouldCacheStatements:YES];
+    int count = [_db intForQuery:@"SELECT count(*) FROM rollCollect where idstr = ?",idStr];
+    
+    [_db close];
+    if (count >= 1) {
+        return YES;
+    }else{
+        return NO;
+    }
 }
+
++ (void)saveRollCollect:(RollModel *)model withId:(NSString *)idStr
+{
+    if (![_db open])
+    {
+        [_db close];
+        NSAssert(NO, @"数据库打开失败");
+        return;
+    }
+    [_db setShouldCacheStatements:YES];
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
+    BOOL result = [_db executeUpdate:@"insert into rollCollect (dict,idstr) values (?,?)",data,idStr];
+    NSLog(@"%d",result);
+    [_db close];
+}
+
++ (void)deleteRollCollect:(NSString*)idStr
+{
+    if (![_db open]) {
+        [_db close];
+        NSLog(@"数据库打开失败！");
+        return;
+    }
+    [_db setShouldCacheStatements:YES];
+    [_db executeUpdate:@"DELETE FROM rollCollect where idstr = ?",idStr];
+    [_db close];
+}
+
++ (NSMutableArray *)getRollCollects
+{
+    if (![_db open]) {
+        [_db close];
+        NSLog(@"数据库打开失败");
+        return nil;
+    }
+    
+    [_db setShouldCacheStatements:YES];
+    FMResultSet *rs = [_db executeQuery:@"SELECT * FROM rollCollect"];
+    NSMutableArray * array = [NSMutableArray array];
+    
+    while (rs.next) {
+        NSData *data = [rs dataForColumn:@"dict"];
+        RollModel *dict = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        [array addObject:dict];
+    }
+    [rs close];
+    [_db close];
+    return array;
+}
+
+
+////收藏////////////////////
++ (void)saveRollList:(NSDictionary *)dictionary withId:(NSString *)idStr
+{
+    if (![_db open])
+    {
+        [_db close];
+        NSAssert(NO, @"数据库打开失败");
+        return;
+    }
+    [_db setShouldCacheStatements:YES];
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:dictionary];
+    [_db executeUpdate:@"insert into rollList (dict,idstr) values (?,?)",data,idStr];
+    [_db close];
+}
+
++ (void)saveRollListW:(RollModel *)model withId:(NSString *)idStr
+{
+    if (![_db open])
+    {
+        [_db close];
+        NSAssert(NO, @"数据库打开失败");
+        return;
+    }
+    [_db setShouldCacheStatements:YES];
+    
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:model];
+    [_db executeUpdate:@"insert into rollList (dict,idstr) values (?,?)",data,idStr];
+    [_db close];
+}
+
++ (void)deleteRollListWith:(NSString*)idStr
+{
+    if (![_db open]) {
+        [_db close];
+        NSLog(@"数据库打开失败！");
+        return;
+    }
+    [_db setShouldCacheStatements:YES];
+    [_db executeUpdate:@"DELETE FROM rollList where idstr = ?",idStr];
+    [_db close];
+}
+
++ (NSMutableArray *)getRollList
+{
+    if (![_db open]) {
+        [_db close];
+        NSLog(@"数据库打开失败");
+        return nil;
+    }
+    
+    [_db setShouldCacheStatements:YES];
+    FMResultSet *rs = [_db executeQuery:@"SELECT * FROM rollList"];
+    NSMutableArray * array = [NSMutableArray array];
+    
+    while (rs.next) {
+        NSData *data = [rs dataForColumn:@"dict"];
+        RollModel *dict = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        [array addObject:dict];
+    }
+    [rs close];
+    [_db close];
+    return array;
+}
+
 
 /*******************************收藏****************************************/
 

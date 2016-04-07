@@ -13,9 +13,11 @@
 #import "HomeDetailViewController.h"
 #import "RollModel.h"
 
-@interface CollectionViewController ()
+@interface CollectionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray * dataArray;
+- (IBAction)edit:(UIBarButtonItem *)sender;
+@property (nonatomic, weak) UIImageView *noDataView;
 
 @end
 
@@ -24,6 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSArray *array = [DatabaseTool getRollCollects];
+    [self.dataArray addObjectsFromArray:array];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +43,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // 控制"没有数据"的提醒
-    //    self.noDataView.hidden = (self.deals.count != 0);
+    self.noDataView.hidden = (self.dataArray.count != 0);
     return 1;
 }
 
@@ -121,11 +127,43 @@
 }
 
 
+#pragma - mark  删除操作
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {//删除操作
+         RollModel *model = self.dataArray[indexPath.row];
+        
+        [DatabaseTool deleteRollCollect:model.itemId];
+        [self.dataArray removeObjectAtIndex:indexPath.row];
+        [self.tableView reloadData];
+    }
+}
+
 -(NSMutableArray *)dataArray{
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
     }
     return _dataArray;
 }
+
+- (IBAction)edit:(UIBarButtonItem *)sender {
+//    NSString * title = self.tableView.isEditing ? @"编辑" : @"完成";
+//    [self.rightBtn setTitle:title forState:UIControlStateNormal];
+
+    [self.tableView setEditing:!self.tableView.isEditing animated:YES];
+}
+
+- (UIImageView *)noDataView
+{
+    if (!_noDataView) {
+        // 添加一个"没有数据"的提醒
+        UIImageView *noDataView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nodata_image"]];
+        [self.view addSubview:noDataView];
+        [noDataView autoCenterInSuperview];
+        self.noDataView = noDataView;
+    }
+    return _noDataView;
+}
+
 
 @end
