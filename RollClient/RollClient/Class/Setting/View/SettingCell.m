@@ -8,6 +8,7 @@
 
 #import "SettingCell.h"
 #import "SettingItem.h"
+#import "SettingSwitchItem.h"
 
 @interface SettingCell()
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @property (weak, nonatomic) IBOutlet UIImageView *indicaView;
+
 
 /**
  *  默认是隐藏的，要显示，需要把indicaView.hidden = YES;

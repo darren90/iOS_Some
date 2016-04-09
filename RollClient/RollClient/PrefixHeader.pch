@@ -62,6 +62,9 @@
 #define KMsgNotice              @"最近观看"
 #define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
 
+//是否自动播放视频
+#define KAutoPlayView @"KAutoPlayView"
+
 //程序主色-橘黄色
 #define KCommonColor MJColor(255, 131, 40)
 

@@ -26,9 +26,9 @@
     
     UIBarButtonItem *rightItem = nil;
     if ([DatabaseTool isHadCollected:self.collectModel.itemId]) {
-        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickDel:)];
+        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h_gx"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickDel:)];
     }else{
-        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickAdd:)];
+        rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_n_gx"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickAdd:)];
     }
     self.navigationItem.rightBarButtonItem = rightItem;
     
@@ -41,7 +41,7 @@
 -(void)righBarBtnClickAdd:(UIBarButtonItem *)item{
     [DatabaseTool saveRollCollect:self.collectModel withId:self.collectModel.itemId];
 //    [item setImage:[UIImage imageNamed:@"icon_me_collect"]];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_me_collect"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickAdd:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h_gx"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickDel:)];
     
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     SVProgressHUD.minimumDismissTimeInterval = 0.6;
@@ -50,7 +50,7 @@
 -(void)righBarBtnClickDel:(UIBarButtonItem *)item{
     [DatabaseTool deleteRollCollect:self.collectModel.itemId];
 //    [item setImage:[UIImage imageNamed:@"icon_news_collect_h"]];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_h"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickDel:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_news_collect_n_gx"] style:UIBarButtonItemStyleDone target:self action:@selector(righBarBtnClickAdd:)];
     
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     SVProgressHUD.minimumDismissTimeInterval = 0.6;
@@ -178,12 +178,18 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [_preView removeFromSuperview];
         
-        //延时自动播放
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            NSString * requestDurationString = @"document.documentElement.getElementsByTagName(\"video\")[0].play()";
-            [self.webView stringByEvaluatingJavaScriptFromString:requestDurationString];
-            [self initNotice];
-        });
+        [self initNotice];
+
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        BOOL isON = [defaults boolForKey:KAutoPlayView];
+   
+        if(isON){//自动播放时执行
+            //延时自动播放
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                NSString * requestDurationString = @"document.documentElement.getElementsByTagName(\"video\")[0].play()";
+                [self.webView stringByEvaluatingJavaScriptFromString:requestDurationString];
+            });
+        }
     });
 }
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

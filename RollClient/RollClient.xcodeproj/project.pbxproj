@@ -52,6 +52,8 @@
 		FE391DA81CA9736C004C8FA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE391DA61CA9736C004C8FA7 /* LaunchScreen.storyboard */; };
 		FE391DB31CA9736C004C8FA7 /* RollClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391DB21CA9736C004C8FA7 /* RollClientTests.m */; };
 		FE391DBE1CA9736C004C8FA7 /* RollClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE391DBD1CA9736C004C8FA7 /* RollClientUITests.m */; };
+		FE80E5FD1CB6944A00BCF4CF /* SettingSwitchCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = FE80E5FB1CB6944A00BCF4CF /* SettingSwitchCell2.m */; };
+		FE80E5FE1CB6944A00BCF4CF /* SettingSwitchCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE80E5FC1CB6944A00BCF4CF /* SettingSwitchCell2.xib */; };
 		FE877A6C1CB1F50A00D271EF /* CollectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE877A5A1CB1F50A00D271EF /* CollectModel.m */; };
 		FE877A6D1CB1F50A00D271EF /* HistoryCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE877A5C1CB1F50A00D271EF /* HistoryCellModel.m */; };
 		FE877A6E1CB1F50A00D271EF /* SettingArrowItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FE877A5E1CB1F50A00D271EF /* SettingArrowItem.m */; };
@@ -205,6 +207,9 @@
 		FE391DBD1CA9736C004C8FA7 /* RollClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RollClientUITests.m; sourceTree = "<group>"; };
 		FE391DBF1CA9736C004C8FA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE391E121CA97E35004C8FA7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FE80E5FA1CB6944A00BCF4CF /* SettingSwitchCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingSwitchCell2.h; sourceTree = "<group>"; };
+		FE80E5FB1CB6944A00BCF4CF /* SettingSwitchCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingSwitchCell2.m; sourceTree = "<group>"; };
+		FE80E5FC1CB6944A00BCF4CF /* SettingSwitchCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingSwitchCell2.xib; sourceTree = "<group>"; };
 		FE877A591CB1F50A00D271EF /* CollectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectModel.h; sourceTree = "<group>"; };
 		FE877A5A1CB1F50A00D271EF /* CollectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectModel.m; sourceTree = "<group>"; };
 		FE877A5B1CB1F50A00D271EF /* HistoryCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryCellModel.h; sourceTree = "<group>"; };
@@ -708,6 +713,9 @@
 				FE877A661CB1F50A00D271EF /* SettingCell.h */,
 				FE877A671CB1F50A00D271EF /* SettingCell.m */,
 				FE877A681CB1F50A00D271EF /* SettingCell.xib */,
+				FE80E5FA1CB6944A00BCF4CF /* SettingSwitchCell2.h */,
+				FE80E5FB1CB6944A00BCF4CF /* SettingSwitchCell2.m */,
+				FE80E5FC1CB6944A00BCF4CF /* SettingSwitchCell2.xib */,
 				FE877A691CB1F50A00D271EF /* SettingSwitchCell.h */,
 				FE877A6A1CB1F50A00D271EF /* SettingSwitchCell.m */,
 				FE877A6B1CB1F50A00D271EF /* SettingSwitchCell.xib */,
@@ -999,6 +1007,7 @@
 				FE877AB21CB1F59700D271EF /* UMShareEditViewControlleriPad.xib in Resources */,
 				FE391DA51CA9736C004C8FA7 /* Assets.xcassets in Resources */,
 				FE391DA31CA9736C004C8FA7 /* Main.storyboard in Resources */,
+				FE80E5FE1CB6944A00BCF4CF /* SettingSwitchCell2.xib in Resources */,
 				FE877AB51CB1F59700D271EF /* UMSShareListController.xib in Resources */,
 				FE877AB31CB1F59700D271EF /* UMSLoginViewController.xib in Resources */,
 				FE877A751CB1F50A00D271EF /* SettingSwitchCell.xib in Resources */,
@@ -1102,6 +1111,7 @@
 				897BD22B1CAB641100FDF5F0 /* RDVTabBar.m in Sources */,
 				897BD22C1CAB641100FDF5F0 /* RDVTabBarController.m in Sources */,
 				897BD22F1CAB641100FDF5F0 /* UIView+AutoLayout.m in Sources */,
+				FE80E5FD1CB6944A00BCF4CF /* SettingSwitchCell2.m in Sources */,
 				FEF7C34E1CB540AF00F93A79 /* DatabaseTool.m in Sources */,
 				897BD22A1CAB641100FDF5F0 /* WdCleanCaches.m in Sources */,
 				FEF7C36E1CB56F8A00F93A79 /* CollectionViewController.m in Sources */,
@@ -1293,6 +1303,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RollClient/PrefixHeader.pch";
 				INFOPLIST_FILE = RollClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1323,6 +1334,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/RollClient/PrefixHeader.pch";
 				INFOPLIST_FILE = RollClient/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

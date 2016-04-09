@@ -135,6 +135,7 @@
         
         [DatabaseTool deleteRollCollect:model.itemId];
         [self.dataArray removeObjectAtIndex:indexPath.row];
+        
         [self.tableView reloadData];
     }
 }
@@ -149,6 +150,11 @@
 - (IBAction)edit:(UIBarButtonItem *)sender {
 //    NSString * title = self.tableView.isEditing ? @"编辑" : @"完成";
 //    [self.rightBtn setTitle:title forState:UIControlStateNormal];
+    if (self.tableView.isEditing) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(edit:)];
+    }else{
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(edit:)];
+    }
 
     [self.tableView setEditing:!self.tableView.isEditing animated:YES];
 }

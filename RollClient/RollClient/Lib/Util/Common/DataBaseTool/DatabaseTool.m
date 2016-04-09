@@ -24,7 +24,6 @@ static FMDatabase *_db;
     NSString* sqlPath = [NSString stringWithFormat:@"%@/rrmj.sqlite",cachesPath];
     NSLog(@"--sqlPath:%@",sqlPath);
     _db = [[FMDatabase alloc] initWithPath:sqlPath];
-//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
 
     if (![_db open]) {
         [_db close];
@@ -32,8 +31,6 @@ static FMDatabase *_db;
     }
     
     [_db setShouldCacheStatements:YES];
-
-//    [_db executeUpdate:@"CREATE TABLE if not exists mainData (id integer primary key autoincrement,idstr TEXT, dict blob)"];
 
     //1：收藏
     if (![_db tableExists:@"rollList"]) {

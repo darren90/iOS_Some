@@ -13,6 +13,7 @@
 #import "SettingSwitchItem.h"
 #import "Global.h"
 #import "CollectionViewController.h"
+#import "SettingSwitchCell2.h"
 
 @interface Setting_RootController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -61,11 +62,19 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    SettingCell *cell = [SettingCell cellWithTableView:tableView];
     NSArray *array = self.dataArray[indexPath.section];
-    cell.item = array[indexPath.row];
-//    cell.backgroundColor = KRandomColor;
-    return cell;
+    SettingItem *item = array[indexPath.row];
+    
+    if ([item isKindOfClass:[SettingSwitchItem class]]) {
+        SettingSwitchCell2 *cell = [SettingSwitchCell2 cellWithTableView:tableView];
+        cell.item = (SettingSwitchItem *)item;
+        return cell;
+    }else{
+        SettingCell *cell = [SettingCell cellWithTableView:tableView];
+        //    cell.backgroundColor = KRandomColor;
+        cell.item = item;
+        return cell;
+    }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

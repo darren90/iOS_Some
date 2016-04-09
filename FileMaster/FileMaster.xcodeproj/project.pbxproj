@@ -145,7 +145,7 @@
 		FE28D8371C886AE3000AFC70 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
 		FE28D8381C886AE3000AFC70 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		FE28D83A1C886B13000AFC70 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
-		FE28D83B1C886B13000AFC70 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		FE28D83B1C886B13000AFC70 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTabBarController.m; path = Class/Main/Base/BaseTabBarController.m; sourceTree = "<group>"; };
 		FE28D83F1C886C61000AFC70 /* libMobClickLibrary.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobClickLibrary.a; sourceTree = "<group>"; };
 		FE28D8401C886C61000AFC70 /* MobClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClick.h; sourceTree = "<group>"; };
 		FE28D8411C886C61000AFC70 /* MobClickSocialAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobClickSocialAnalytics.h; sourceTree = "<group>"; };
@@ -349,7 +349,6 @@
 			isa = PBXGroup;
 			children = (
 				FE28D83A1C886B13000AFC70 /* BaseTabBarController.h */,
-				FE28D83B1C886B13000AFC70 /* BaseTabBarController.m */,
 				FE28D8191C8868DE000AFC70 /* BaseNavigationController.h */,
 				FE28D81A1C8868DE000AFC70 /* BaseNavigationController.m */,
 				FE28D8221C886A8E000AFC70 /* BaseTableViewController.h */,
@@ -482,6 +481,7 @@
 			children = (
 				FEA58DED1C83275F00FE4E8A /* AppDelegate.h */,
 				FEA58DEE1C83275F00FE4E8A /* AppDelegate.m */,
+				FE28D83B1C886B13000AFC70 /* BaseTabBarController.m */,
 				FEA58DF01C83275F00FE4E8A /* ViewController.h */,
 				FEA58DF11C83275F00FE4E8A /* ViewController.m */,
 				FEA58DF31C83275F00FE4E8A /* Main.storyboard */,

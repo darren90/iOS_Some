@@ -69,6 +69,6 @@
     </objects>
     <resources>
         <image name="icon_go" width="27" height="27"/>
-        <image name="icon_me_time" width="27" height="27"/>
+        <image name="icon_me_time" width="152" height="152"/>
     </resources>
 </document>
