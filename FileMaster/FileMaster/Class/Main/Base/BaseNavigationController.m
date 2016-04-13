@@ -28,7 +28,6 @@
 //系统第一次使用这个类的时候会调用
 +(void)initialize
 {
-    
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                          forBarMetrics:UIBarMetricsDefault];
     
