@@ -12,8 +12,8 @@
 #import "VKVideoPlayerCaptionSRT.h"
 #import "AppDelegate.h"
 #import <MediaPlayer/MediaPlayer.h>
- #import "ForwardBackView.h"
-
+#import "ForwardBackView.h"
+#import "Masonry.h"
 #import "SeekDuration.h"
 
 typedef NS_ENUM(NSInteger,SwipeStyle) {
@@ -150,6 +150,8 @@ static float scale = 2208.0/900;
     //    [self.view addSubview:self.listMenu];
     
     //    [self showQualityMenu];//1.0版本不调节清晰度，所以这里不进行注释
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 
@@ -574,4 +576,43 @@ static float scale = 2208.0/900;
         [invocation invoke];
     }
 }
+
+
+#pragma mark - 重力感应
+#pragma mark - 方向
+
+//依靠重力感应
+- (void)deviceDidRotate:(NSNotification *)notification{
+    
+    UIDeviceOrientation orientation             = [UIDevice currentDevice].orientation;
+    UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)orientation;
+    NSString * imageName = @"ic_fullscreen";
+    switch (interfaceOrientation) {
+        case UIInterfaceOrientationPortraitUpsideDown:{
+            NSLog(@"第3个旋转方向---电池栏在下");
+ 
+        }
+            break;
+        case UIInterfaceOrientationPortrait:{
+            NSLog(@"第0个旋转方向---电池栏在上");
+ 
+         }
+            break;
+        case UIInterfaceOrientationLandscapeLeft:{
+            NSLog(@"第2个旋转方向---电池栏在右");
+ 
+        }
+            break;
+        case UIInterfaceOrientationLandscapeRight:{
+            NSLog(@"第1个旋转方向---电池栏在左");
+ 
+        }
+            break;
+        default:
+            break;
+    }
+}
+
+
+
 @end
