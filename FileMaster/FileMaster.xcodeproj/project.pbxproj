@@ -895,6 +895,7 @@
 				TargetAttributes = {
 					FEA58DE61C83275F00FE4E8A = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 68539G8D3N;
 					};
 					FEA58DFF1C83275F00FE4E8A = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1214,6 +1215,7 @@
 			baseConfigurationReference = 9CE42351BCADF39EDF82BF7A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FileMaster/PrefixHeader.pch";
 				INFOPLIST_FILE = FileMaster/Info.plist;
@@ -1235,7 +1237,7 @@
 			baseConfigurationReference = 2C0DB9C2757F2FFA7DE76AE0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: tengfei feng (68539G8D3N)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FileMaster/PrefixHeader.pch";
 				INFOPLIST_FILE = FileMaster/Info.plist;

@@ -151,6 +151,19 @@ static float scale = 2208.0/900;
     
     //    [self showQualityMenu];//1.0版本不调节清晰度，所以这里不进行注释
     
+    /**
+     *  开始生成 设备旋转 通知
+     */
+    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+    
+    /**
+     *  添加 设备旋转 通知
+     *
+     *  当监听到 UIDeviceOrientationDidChangeNotification 通知时，调用handleDeviceOrientationDidChange:方法
+     *  @param handleDeviceOrientationDidChange: handleDeviceOrientationDidChange: description
+     *
+     *  @return return value description
+     */
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceDidRotate:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
@@ -396,6 +409,10 @@ static float scale = 2208.0/900;
 //        if (_listMenu.isShowing == YES) {
 //            [_listMenu hiddenForAnimation];
 //        }
+//        [self.player.view mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.height.mas_equalTo(@300);
+//            make.width.mas_equalTo(@300);
+//        }];
         return;
     }
     //全屏操作
@@ -557,6 +574,25 @@ static float scale = 2208.0/900;
     _player.delegate = nil;
     _player.track = nil;
     _player = nil;
+    
+    
+    /**
+     *  销毁 设备旋转 通知
+     *
+     *  @return return value description
+     */
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIDeviceOrientationDidChangeNotification
+                                                  object:nil
+     ];
+    
+    
+    /**
+     *  结束 设备旋转通知
+     *
+     *  @return return value description
+     */
+    [[UIDevice currentDevice]endGeneratingDeviceOrientationNotifications];
 }
 #pragma - mark  进入全屏
 -(void)begainFullScreen
@@ -586,16 +622,16 @@ static float scale = 2208.0/900;
     
     UIDeviceOrientation orientation             = [UIDevice currentDevice].orientation;
     UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)orientation;
-    NSString * imageName = @"ic_fullscreen";
+    
     switch (interfaceOrientation) {
         case UIInterfaceOrientationPortraitUpsideDown:{
             NSLog(@"第3个旋转方向---电池栏在下");
- 
+            
         }
             break;
         case UIInterfaceOrientationPortrait:{
             NSLog(@"第0个旋转方向---电池栏在上");
- 
+            
          }
             break;
         case UIInterfaceOrientationLandscapeLeft:{
