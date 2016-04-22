@@ -15,6 +15,7 @@
 #import "UMSocialQQHandler.h"
 #import "UMSocialSinaHandler.h"
 #import "UMessage.h"
+#import "RNCachingURLProtocol.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [NSURLProtocol registerClass:[RNCachingURLProtocol class]];//注册UiWebView的Cache
+
     // Override point for customization after application launch.
     
     BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
@@ -33,7 +36,6 @@
     [self umengTrack];//友盟的方法本身是异步执行，所以不需要再异步调用
    
     [self umengPushNotice]; //友盟推送
- 
     
     return YES;
 }

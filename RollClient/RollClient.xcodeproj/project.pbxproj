@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		33AE93144353E9297D0FC3CF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDDCA836E224696C0B8F3A9 /* libPods.a */; };
+		8904A00B1CC7745600233327 /* NSString+Sha1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8904A0081CC7745600233327 /* NSString+Sha1.m */; };
+		8904A00C1CC7745600233327 /* RNCachingURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 8904A00A1CC7745600233327 /* RNCachingURLProtocol.m */; };
+		8904A00F1CC774B800233327 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8904A00E1CC774B800233327 /* Reachability.m */; };
 		890BBF851CB3496900C03D32 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF841CB3496900C03D32 /* SystemConfiguration.framework */; };
 		890BBF871CB3499100C03D32 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF861CB3499100C03D32 /* Security.framework */; };
 		890BBF891CB3499C00C03D32 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BBF881CB3499C00C03D32 /* libiconv.tbd */; };
@@ -125,6 +128,12 @@
 /* Begin PBXFileReference section */
 		370586C793DE47850E4D5B3A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5DDDCA836E224696C0B8F3A9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8904A0071CC7745600233327 /* NSString+Sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Sha1.h"; sourceTree = "<group>"; };
+		8904A0081CC7745600233327 /* NSString+Sha1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Sha1.m"; sourceTree = "<group>"; };
+		8904A0091CC7745600233327 /* RNCachingURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNCachingURLProtocol.h; sourceTree = "<group>"; };
+		8904A00A1CC7745600233327 /* RNCachingURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNCachingURLProtocol.m; sourceTree = "<group>"; };
+		8904A00D1CC774B800233327 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		8904A00E1CC774B800233327 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		890BBF841CB3496900C03D32 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		890BBF861CB3499100C03D32 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		890BBF881CB3499C00C03D32 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
@@ -375,6 +384,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8904A0061CC7745600233327 /* WebViewCache */ = {
+			isa = PBXGroup;
+			children = (
+				8904A00D1CC774B800233327 /* Reachability.h */,
+				8904A00E1CC774B800233327 /* Reachability.m */,
+				8904A0071CC7745600233327 /* NSString+Sha1.h */,
+				8904A0081CC7745600233327 /* NSString+Sha1.m */,
+				8904A0091CC7745600233327 /* RNCachingURLProtocol.h */,
+				8904A00A1CC7745600233327 /* RNCachingURLProtocol.m */,
+			);
+			path = WebViewCache;
+			sourceTree = "<group>";
+		};
 		897BD1FF1CAB641100FDF5F0 /* Class */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,6 +520,7 @@
 		897BD2111CAB641100FDF5F0 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8904A0061CC7745600233327 /* WebViewCache */,
 				FEF7C34F1CB540B500F93A79 /* FMDB */,
 				89D60F521CB4F4FB008F4143 /* SVProgressHUD */,
 				89D60F3C1CB49FEC008F4143 /* RDVSwipe */,
@@ -1119,12 +1142,14 @@
 				897BD2351CAB644D00FDF5F0 /* Setting_RootController.m in Sources */,
 				89D60F461CB4CA4F008F4143 /* RollVideoDetail.m in Sources */,
 				FEF7C3481CB4180A00F93A79 /* RollImgDetail.m in Sources */,
+				8904A00C1CC7745600233327 /* RNCachingURLProtocol.m in Sources */,
 				89B1586A1CB37C88004AB188 /* HomeDetailViewController.m in Sources */,
 				FE877A741CB1F50A00D271EF /* SettingSwitchCell.m in Sources */,
 				FEF7C36B1CB55E0F00F93A79 /* LoadingPreView.m in Sources */,
 				FEF7C35D1CB540B500F93A79 /* FMDatabasePool.m in Sources */,
 				89D60F611CB4F4FB008F4143 /* SVRadialGradientLayer.m in Sources */,
 				FE391DA01CA9736C004C8FA7 /* ViewController.m in Sources */,
+				8904A00B1CC7745600233327 /* NSString+Sha1.m in Sources */,
 				FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */,
 				89D60F431CB49FEC008F4143 /* UIViewController+Swizzle.m in Sources */,
 				FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */,
@@ -1145,6 +1170,7 @@
 				89D60F601CB4F4FB008F4143 /* SVProgressHUD.m in Sources */,
 				897BD24C1CAB697800FDF5F0 /* HomeRollCell.m in Sources */,
 				897BD22D1CAB641100FDF5F0 /* RDVTabBarItem.m in Sources */,
+				8904A00F1CC774B800233327 /* Reachability.m in Sources */,
 				89D60F5D1CB4F4FB008F4143 /* SVIndefiniteAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
