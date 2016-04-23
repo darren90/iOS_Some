@@ -23,7 +23,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [NSURLProtocol registerClass:[RNCachingURLProtocol class]];//注册UiWebView的Cache
 
