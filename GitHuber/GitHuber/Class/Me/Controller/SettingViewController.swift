@@ -43,7 +43,6 @@ class SettingViewController: UITableViewController {
         view.backgroundColor = KColor(250, g: 250, b: 250)
         return view
     }
-
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 {//go to App Store
