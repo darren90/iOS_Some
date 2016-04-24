@@ -87,6 +87,10 @@
         AboutViewController *aboutVc = [sb instantiateViewControllerWithIdentifier:@"aboutVc"];
         [self.navigationController pushViewController:aboutVc animated:YES];
     
+    }else if ([model.title isEqualToString:@"建议"]){
+        NSString *stringURL = @"mailto:fengtenfei90@163.com";
+        NSURL *url = [NSURL URLWithString:stringURL];
+        [[UIApplication sharedApplication] openURL:url];
     }
     
 }
@@ -96,10 +100,12 @@
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
         
+        SettingModel *m0 = [SettingModel settingIconName:@"feedBack" title:@"建议"];
         SettingModel *m1 = [SettingModel settingIconName:@"icon_me_review" title:@"应用评分"];
         SettingModel *m2 = [SettingModel settingIconName:@"abouts" title:@"关于"];
         
         [_dataArray addObject:m1];
+        [_dataArray addObject:m0];
         [_dataArray addObject:m2];
     }
     return _dataArray;
