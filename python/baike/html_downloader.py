@@ -5,7 +5,6 @@ import urllib2
 
 class HtmlDownloader(object):
  
- 
 	def downloader(self,url):
 		if url is None:
 			return None
