@@ -1001,6 +1001,7 @@
 				TargetAttributes = {
 					FE391D941CA9736B004C8FA7 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 68539G8D3N;
 					};
 					FE391DAD1CA9736C004C8FA7 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1340,6 +1341,7 @@
 			baseConfigurationReference = F5E17A35C0F971B3BB8B046E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1371,6 +1373,7 @@
 			baseConfigurationReference = 370586C793DE47850E4D5B3A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
