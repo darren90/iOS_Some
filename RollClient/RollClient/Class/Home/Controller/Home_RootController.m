@@ -12,14 +12,23 @@
 #import "RollVideoCell.h"
 #import "RollImgsCell.h"
 #import "HomeDetailViewController.h"
+#import "UISearchBar+Common.h"
+#import "RDVTabBarController.h"
+#import "HomeSearchViewController.h"
 
-@interface Home_RootController ()<UITableViewDelegate,UITableViewDataSource>
+@interface Home_RootController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @property (nonatomic,strong)NSMutableArray * dataArray;
-
 @property (nonatomic,assign)BOOL isRefreshing;
-
 @property (nonatomic,assign)int currentPage;
+
+
+//搜索
+- (IBAction)searchClick:(UIBarButtonItem *)sender;
+@property (strong, nonatomic) UISearchBar *mySearchBar;
+@property (strong, nonatomic) UISearchDisplayController *mySearchDisplayController;
+@property (nonatomic,strong) HomeSearchViewController* searchResultVc;
 
 @end
 
@@ -202,6 +211,91 @@
     return _dataArray;
 }
 
+
+#pragma mark - 搜索按钮被点击
+- (IBAction)searchClick:(UIBarButtonItem *)sender {
+    //1:隐藏navBar
+    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+    
+    if (!_mySearchBar) {
+        _mySearchBar = ({
+            UISearchBar *searchBar = [[UISearchBar alloc] init];
+            searchBar.delegate = self;
+            [searchBar sizeToFit];
+            [searchBar setPlaceholder:@"你想要的，这都有"];
+            [searchBar setTintColor:[UIColor whiteColor]];
+            [searchBar insertBGColor:KColor(91, 138, 213)];
+            searchBar;
+        });
+        [self.navigationController.view addSubview:_mySearchBar];
+        [_mySearchBar setY:20];
+    }
+    if (!_mySearchDisplayController) {
+        _mySearchDisplayController = ({
+            UISearchDisplayController *searchVC = [[UISearchDisplayController alloc] initWithSearchBar:_mySearchBar contentsController:self];
+//            searchVC.searchResultsTableView.contentInset = UIEdgeInsetsMake(CGRectGetHeight(self.mySearchBar.frame), 0, CGRectGetHeight(self.rdv_tabBarController.tabBar.frame), 0);
+//            searchVC.searchResultsTableView.tableFooterView = [[UIView alloc] init];
+//            [searchVC.searchResultsTableView registerClass:[ProjectListCell class] forCellReuseIdentifier:kCellIdentifier_ProjectList];
+            searchVC.searchResultsDataSource = self;
+            searchVC.searchResultsDelegate = self;
+            if (kHigher_iOS_6_1) {
+                searchVC.displaysSearchBarInNavigationBar = NO;
+            }
+            searchVC;
+        });
+    }
+ 
+    [_mySearchBar becomeFirstResponder];
+
+    
+}
+
+
+
+#pragma mark UISearchBarDelegate
+
+
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+//    [self searchProjectWithStr:searchText];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+    [self searchProjectWithStr:searchBar.text];
+    
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    [self.rdv_tabBarController setTabBarHidden:NO animated:YES];
+
+    [self.searchResultVc.view removeFromSuperview];
+    self.searchResultVc = nil;
+}
+
+
+- (void)searchProjectWithStr:(NSString *)string{
+    NSLog(@"--searchString--:%@",string);
+    
+    self.searchResultVc.searchText = string;
+ 
+}
+
+-(HomeSearchViewController *)searchResultVc
+{
+    if (!_searchResultVc) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        _searchResultVc = [sb instantiateViewControllerWithIdentifier:@"HomeSearchVC"];
+        _searchResultVc.view.backgroundColor = [UIColor redColor];
+        _searchResultVc.fatherVC = (UIViewController *)self;
+//        searchVc.searchText = string;
+        _searchResultVc.view.frame = CGRectMake(0,64, self.view.frame.size.width, self.view.frame.size.height-64);
+        [self.view addSubview:_searchResultVc.view];
+        [self.view bringSubviewToFront:_searchResultVc.view];
+        return _searchResultVc;
+    }
+    return _searchResultVc;
+}
 
 
 @end

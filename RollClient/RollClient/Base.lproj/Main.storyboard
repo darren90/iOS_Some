@@ -277,7 +277,7 @@
                     <navigationItem key="navigationItem" title="首页" id="Odr-6z-WyI">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="iqK-3N-gWQ">
                             <connections>
-                                <segue destination="sMh-Vm-lLr" kind="modal" id="UsA-9S-j0I"/>
+                                <action selector="searchClick:" destination="tCj-nu-PuE" id="ZuZ-dL-8s4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -293,7 +293,7 @@
         <!--搜索-->
         <scene sceneID="yzL-lg-RhA">
             <objects>
-                <viewController id="4w2-Qj-mas" customClass="HomeSearchViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeSearchVC" id="4w2-Qj-mas" customClass="HomeSearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gay-tj-0iw"/>
                         <viewControllerLayoutGuide type="bottom" id="lvp-ox-r5P"/>
@@ -305,6 +305,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C1B-fG-0pO">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4w2-Qj-mas" id="eJv-Za-TSS"/>
+                                    <outlet property="delegate" destination="4w2-Qj-mas" id="0Rk-EM-9yJ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -315,7 +319,7 @@
                             <constraint firstItem="lvp-ox-r5P" firstAttribute="top" secondItem="C1B-fG-0pO" secondAttribute="bottom" id="sa7-1B-PJY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="搜索" id="1Mr-CW-Pk7">
+                    <navigationItem key="navigationItem" title="搜索" prompt="" id="1Mr-CW-Pk7">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="dvZ-JL-Gm0">
                             <connections>
                                 <action selector="DownClick:" destination="4w2-Qj-mas" id="3vY-E7-AVB"/>

@@ -95,6 +95,8 @@
 		FECCFC8C1CB3FFED00F21514 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = FECCFC8B1CB3FFED00F21514 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FECCFC8E1CB4007D00F21514 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FECCFC8D1CB4007D00F21514 /* libicucore.tbd */; };
 		FEE8C5851CDF4F6000B43079 /* HomeSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8C5841CDF4F6000B43079 /* HomeSearchViewController.m */; };
+		FEE8C5881CDF528D00B43079 /* UISearchBar+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8C5871CDF528D00B43079 /* UISearchBar+Common.m */; };
+		FEE8C58B1CDF530200B43079 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8C58A1CDF530200B43079 /* UIView+Frame.m */; };
 		FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3421CB4128400F93A79 /* RollImgsCell.m */; };
 		FEF7C3451CB4128400F93A79 /* RollImgsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */; };
 		FEF7C3481CB4180A00F93A79 /* RollImgDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3471CB4180A00F93A79 /* RollImgDetail.m */; };
@@ -290,6 +292,10 @@
 		FECCFC8D1CB4007D00F21514 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		FEE8C5831CDF4F6000B43079 /* HomeSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSearchViewController.h; sourceTree = "<group>"; };
 		FEE8C5841CDF4F6000B43079 /* HomeSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSearchViewController.m; sourceTree = "<group>"; };
+		FEE8C5861CDF528D00B43079 /* UISearchBar+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+Common.h"; sourceTree = "<group>"; };
+		FEE8C5871CDF528D00B43079 /* UISearchBar+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+Common.m"; sourceTree = "<group>"; };
+		FEE8C5891CDF530200B43079 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		FEE8C58A1CDF530200B43079 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		FEF7C3411CB4128400F93A79 /* RollImgsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollImgsCell.h; sourceTree = "<group>"; };
 		FEF7C3421CB4128400F93A79 /* RollImgsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollImgsCell.m; sourceTree = "<group>"; };
 		FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollImgsCell.xib; sourceTree = "<group>"; };
@@ -505,6 +511,10 @@
 		897BD2091CAB641100FDF5F0 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				FEE8C5891CDF530200B43079 /* UIView+Frame.h */,
+				FEE8C58A1CDF530200B43079 /* UIView+Frame.m */,
+				FEE8C5861CDF528D00B43079 /* UISearchBar+Common.h */,
+				FEE8C5871CDF528D00B43079 /* UISearchBar+Common.m */,
 				897BD20A1CAB641100FDF5F0 /* UIImage+Category.h */,
 				897BD20B1CAB641100FDF5F0 /* UIImage+Category.m */,
 				897BD20C1CAB641100FDF5F0 /* UIImage+Tint.h */,
@@ -1127,6 +1137,7 @@
 				FEF7C3681CB5597400F93A79 /* LoadingView.m in Sources */,
 				FEA8607E1CB4040B00F4E78D /* NSString+TF.m in Sources */,
 				FECCFC8C1CB3FFED00F21514 /* RegexKitLite.m in Sources */,
+				FEE8C5881CDF528D00B43079 /* UISearchBar+Common.m in Sources */,
 				FE877A6D1CB1F50A00D271EF /* HistoryCellModel.m in Sources */,
 				89D60F421CB49FEC008F4143 /* ObjcRuntime.m in Sources */,
 				897BD2481CAB65BA00FDF5F0 /* BaseViewController.m in Sources */,
@@ -1170,6 +1181,7 @@
 				89D60F5E1CB4F4FB008F4143 /* SVProgressAnimatedView.m in Sources */,
 				897BD2291CAB641100FDF5F0 /* Global.m in Sources */,
 				FE877A6C1CB1F50A00D271EF /* CollectModel.m in Sources */,
+				FEE8C58B1CDF530200B43079 /* UIView+Frame.m in Sources */,
 				897BD2261CAB641100FDF5F0 /* UIImage+Category.m in Sources */,
 				FE877A6F1CB1F50A00D271EF /* SettingItem.m in Sources */,
 				FE877A701CB1F50A00D271EF /* SettingSwitchItem.m in Sources */,

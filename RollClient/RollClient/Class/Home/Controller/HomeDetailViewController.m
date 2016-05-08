@@ -47,6 +47,7 @@
     SVProgressHUD.minimumDismissTimeInterval = 0.6;
     [SVProgressHUD showSuccessWithStatus:@"添加收藏成功"];
 }
+
 -(void)righBarBtnClickDel:(UIBarButtonItem *)item{
     [DatabaseTool deleteRollCollect:self.collectModel.itemId];
 //    [item setImage:[UIImage imageNamed:@"icon_news_collect_h"]];

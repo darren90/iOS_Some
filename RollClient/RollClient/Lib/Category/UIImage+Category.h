@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface UIImage (Category)
+
++(UIImage *)imageWithColor:(UIColor *)aColor;
++(UIImage *)imageWithColor:(UIColor *)aColor withFrame:(CGRect)aFrame;
+
 + (UIImage*) thumbnailImageForVideo:(NSURL *)videoURL atTime:(NSTimeInterval)time;
 @end

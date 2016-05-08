@@ -10,4 +10,13 @@
 
 @interface HomeSearchViewController : UIViewController
 
+//其 父控制器
+@property (nonatomic,weak)UIViewController * fatherVC;
+
+/**
+ *  搜索的关键字
+ */
+@property (nonatomic,copy)NSString * searchText;
+
+
 @end

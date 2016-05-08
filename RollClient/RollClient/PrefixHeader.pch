@@ -36,7 +36,7 @@
 #import "MobClick.h" //友盟 统计
 #import "WdCleanCaches.h"
 #import "SVProgressHUD.h"
-
+#import "UIView+Frame.h"
 
 //category
 #import "NSString+TF.h"
@@ -79,6 +79,7 @@
 
 // 是否iPad
 #define isApplePad                (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define kHigher_iOS_6_1 (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1)
 
 
 #define kScreenBounds [UIScreen mainScreen].bounds
