@@ -94,6 +94,7 @@
 		FEA860831CB40D1000F4E78D /* RollVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA860811CB40D1000F4E78D /* RollVideoCell.xib */; };
 		FECCFC8C1CB3FFED00F21514 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = FECCFC8B1CB3FFED00F21514 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		FECCFC8E1CB4007D00F21514 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FECCFC8D1CB4007D00F21514 /* libicucore.tbd */; };
+		FEE8C5851CDF4F6000B43079 /* HomeSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE8C5841CDF4F6000B43079 /* HomeSearchViewController.m */; };
 		FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3421CB4128400F93A79 /* RollImgsCell.m */; };
 		FEF7C3451CB4128400F93A79 /* RollImgsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */; };
 		FEF7C3481CB4180A00F93A79 /* RollImgDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF7C3471CB4180A00F93A79 /* RollImgDetail.m */; };
@@ -287,6 +288,8 @@
 		FECCFC8A1CB3FFED00F21514 /* RegexKitLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegexKitLite.h; sourceTree = "<group>"; };
 		FECCFC8B1CB3FFED00F21514 /* RegexKitLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegexKitLite.m; sourceTree = "<group>"; };
 		FECCFC8D1CB4007D00F21514 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		FEE8C5831CDF4F6000B43079 /* HomeSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSearchViewController.h; sourceTree = "<group>"; };
+		FEE8C5841CDF4F6000B43079 /* HomeSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSearchViewController.m; sourceTree = "<group>"; };
 		FEF7C3411CB4128400F93A79 /* RollImgsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollImgsCell.h; sourceTree = "<group>"; };
 		FEF7C3421CB4128400F93A79 /* RollImgsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollImgsCell.m; sourceTree = "<group>"; };
 		FEF7C3431CB4128400F93A79 /* RollImgsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RollImgsCell.xib; sourceTree = "<group>"; };
@@ -424,6 +427,8 @@
 				897BD2311CAB643000FDF5F0 /* Home_RootController.m */,
 				89B158681CB37C88004AB188 /* HomeDetailViewController.h */,
 				89B158691CB37C88004AB188 /* HomeDetailViewController.m */,
+				FEE8C5831CDF4F6000B43079 /* HomeSearchViewController.h */,
+				FEE8C5841CDF4F6000B43079 /* HomeSearchViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1152,6 +1157,7 @@
 				8904A00B1CC7745600233327 /* NSString+Sha1.m in Sources */,
 				FE391D9D1CA9736C004C8FA7 /* AppDelegate.m in Sources */,
 				89D60F431CB49FEC008F4143 /* UIViewController+Swizzle.m in Sources */,
+				FEE8C5851CDF4F6000B43079 /* HomeSearchViewController.m in Sources */,
 				FEF7C3441CB4128400F93A79 /* RollImgsCell.m in Sources */,
 				FEA860821CB40D1000F4E78D /* RollVideoCell.m in Sources */,
 				FE391D9A1CA9736C004C8FA7 /* main.m in Sources */,
