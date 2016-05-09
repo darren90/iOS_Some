@@ -14,23 +14,25 @@ class SpiderMain(object):
 
 	def craw(self,root_url):
 		count = 1
+		total = 100 # 总计要抓取的数量
 		self.urls.add_new_url(root_url)
 		while  self.urls.has_new_url:
 		 	try:
 			 	new_url = self.urls.get_new_url()
 			 	print 'craw %d : %s' % (count,new_url)
 			 	html_count = self.downloader.downloader(new_url)
+			 	print '-----:%d' % html_count
 			 	new_urls,new_data = self.parser.parser(new_url,html_count)
 
 			 	self.urls.add_new_urls(new_urls)
 			 	self.outputer.collect_data(new_data)
 
-			 	if count == 1000:
+			 	if count == total:
 			 		break
 
 			 	count = count +1
 			except:
-				if count == 1000:
+				if count == total:
 			 		break
 				count = count +1
 			 	print 'Craw fail %d' % count
@@ -39,7 +41,7 @@ class SpiderMain(object):
 
 
 if __name__=="__main__":
-	root_url = "http://baike.baidu.com/view/21087.htm"
+	root_url = "http://baike.baidu.com/view/21087.htm"#"http://car.autohome.com.cn/video/series-135.html"
 	obj_spider = SpiderMain()
 	obj_spider.craw(root_url)
 
