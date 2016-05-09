@@ -21,7 +21,7 @@ class SpiderMain(object):
 			 	new_url = self.urls.get_new_url()
 			 	print 'craw %d : %s' % (count,new_url)
 			 	html_count = self.downloader.downloader(new_url)
-			 	print '-----:%d' % html_count
+			 	print '----:%d' % html_count
 			 	new_urls,new_data = self.parser.parser(new_url,html_count)
 
 			 	self.urls.add_new_urls(new_urls)
@@ -41,7 +41,7 @@ class SpiderMain(object):
 
 
 if __name__=="__main__":
-	root_url = "http://baike.baidu.com/view/21087.htm"#"http://car.autohome.com.cn/video/series-135.html"
+	root_url = "http://car.autohome.com.cn/video/series-135.html#pvareaid=101424"#"http://baike.baidu.com/view/21087.htm"
 	obj_spider = SpiderMain()
 	obj_spider.craw(root_url)
 
