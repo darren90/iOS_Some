@@ -542,6 +542,7 @@ static float scale = 2208.0/900;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    
     if (self.player.view.isLockBtnEnable) {
         if (self.interfaceOrientation == UIInterfaceOrientationLandscapeRight) {
             return  UIInterfaceOrientationMaskLandscapeRight;
