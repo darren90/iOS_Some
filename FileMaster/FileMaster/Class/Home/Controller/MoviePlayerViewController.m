@@ -554,6 +554,11 @@ static float scale = 2208.0/900;
         return UIInterfaceOrientationMaskLandscape;
     }
 }
+
+
+#pragma mark - 自动转屏的逻辑
+
+
 #pragma mark - 保存看剧时间
 - (void)addSeekTVDataWithepisodeID:(NSString *)episodeID{
     if (self.player.currentTime == 0.0)return;
@@ -595,6 +600,7 @@ static float scale = 2208.0/900;
      */
     [[UIDevice currentDevice]endGeneratingDeviceOrientationNotifications];
 }
+
 #pragma - mark  进入全屏
 -(void)begainFullScreen
 {
@@ -649,6 +655,9 @@ static float scale = 2208.0/900;
             break;
     }
 }
+
+
+
 
 
 
