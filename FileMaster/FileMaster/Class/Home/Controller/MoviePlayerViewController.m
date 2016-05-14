@@ -538,7 +538,7 @@ static float scale = 2208.0/900;
 
 #pragma mark - 自动转屏的逻辑
 - (BOOL)shouldAutorotate{
-    return NO;
+    return YES;
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
