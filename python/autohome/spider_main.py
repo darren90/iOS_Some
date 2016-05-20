@@ -1,10 +1,10 @@
 
-#-*- coding: UTF-8 -*-   
+#-*- coding: UTF-8 -*-
 
 #from baike import url_manager,html_downloader,html_parser,html_outputer
 import url_manager,html_downloader,html_parser,html_outputer
 
- 
+
 class SpiderMain(object):
 	def __init__(self):
 		self.urls = url_manager.UrlManager()
@@ -44,6 +44,3 @@ if __name__=="__main__":
 	root_url = "http://car.autohome.com.cn/video/series-135.html#pvareaid=101424"#"http://baike.baidu.com/view/21087.htm"
 	obj_spider = SpiderMain()
 	obj_spider.craw(root_url)
-
-
-
