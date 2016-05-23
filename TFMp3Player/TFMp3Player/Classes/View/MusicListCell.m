@@ -9,7 +9,7 @@
 #import "MusicListCell.h"
 #import "MusicModel.h"
 //#import "ZYImageTool.h"
-//#import "Colours.h"
+#import "Colours.h"
 #import "UIImage+Tool.h"
 static NSString *_identifier = @"ZYMusicCell";
 @implementation MusicListCell
