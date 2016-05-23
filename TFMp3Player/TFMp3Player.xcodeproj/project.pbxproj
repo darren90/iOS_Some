@@ -15,6 +15,8 @@
 		FED6287D1CF349A800B89258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED6287B1CF349A800B89258 /* LaunchScreen.storyboard */; };
 		FED628881CF349A800B89258 /* TFMp3PlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628871CF349A800B89258 /* TFMp3PlayerTests.m */; };
 		FED628931CF349A800B89258 /* TFMp3PlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628921CF349A800B89258 /* TFMp3PlayerUITests.m */; };
+		FED628A81CF34AD400B89258 /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628A71CF34AD400B89258 /* MusicModel.m */; };
+		FED628AB1CF34BA700B89258 /* Lyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628AA1CF34BA700B89258 /* Lyrics.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		FED6288E1CF349A800B89258 /* TFMp3PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFMp3PlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED628921CF349A800B89258 /* TFMp3PlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFMp3PlayerUITests.m; sourceTree = "<group>"; };
 		FED628941CF349A800B89258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED628A61CF34AD400B89258 /* MusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModel.h; sourceTree = "<group>"; };
+		FED628A71CF34AD400B89258 /* MusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
+		FED628A91CF34BA700B89258 /* Lyrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lyrics.h; sourceTree = "<group>"; };
+		FED628AA1CF34BA700B89258 /* Lyrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lyrics.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 				FED628711CF349A800B89258 /* AppDelegate.m */,
 				FED628731CF349A800B89258 /* ViewController.h */,
 				FED628741CF349A800B89258 /* ViewController.m */,
+				FED628A01CF34AA900B89258 /* Classes */,
 				FED628761CF349A800B89258 /* Main.storyboard */,
 				FED628791CF349A800B89258 /* Assets.xcassets */,
 				FED6287B1CF349A800B89258 /* LaunchScreen.storyboard */,
@@ -138,6 +145,57 @@
 				FED628941CF349A800B89258 /* Info.plist */,
 			);
 			path = TFMp3PlayerUITests;
+			sourceTree = "<group>";
+		};
+		FED628A01CF34AA900B89258 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FED628A31CF34AA900B89258 /* Other */,
+				FED628A41CF34AA900B89258 /* Tools */,
+				FED628A21CF34AA900B89258 /* Model */,
+				FED628A11CF34AA900B89258 /* Controller */,
+				FED628A51CF34AA900B89258 /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		FED628A11CF34AA900B89258 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FED628A21CF34AA900B89258 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FED628A61CF34AD400B89258 /* MusicModel.h */,
+				FED628A71CF34AD400B89258 /* MusicModel.m */,
+				FED628A91CF34BA700B89258 /* Lyrics.h */,
+				FED628AA1CF34BA700B89258 /* Lyrics.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FED628A31CF34AA900B89258 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		FED628A41CF34AA900B89258 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		FED628A51CF34AA900B89258 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED628AB1CF34BA700B89258 /* Lyrics.m in Sources */,
 				FED628751CF349A800B89258 /* ViewController.m in Sources */,
+				FED628A81CF34AD400B89258 /* MusicModel.m in Sources */,
 				FED628721CF349A800B89258 /* AppDelegate.m in Sources */,
 				FED6286F1CF349A800B89258 /* main.m in Sources */,
 			);
