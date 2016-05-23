@@ -17,6 +17,8 @@
 		FED628931CF349A800B89258 /* TFMp3PlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628921CF349A800B89258 /* TFMp3PlayerUITests.m */; };
 		FED628A81CF34AD400B89258 /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628A71CF34AD400B89258 /* MusicModel.m */; };
 		FED628AB1CF34BA700B89258 /* Lyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628AA1CF34BA700B89258 /* Lyrics.m */; };
+		FED628AF1CF350F600B89258 /* Mp3PlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628AD1CF350F600B89258 /* Mp3PlayingViewController.m */; };
+		FED628B01CF350F600B89258 /* Mp3PlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED628AE1CF350F600B89258 /* Mp3PlayingViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		FED628A71CF34AD400B89258 /* MusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
 		FED628A91CF34BA700B89258 /* Lyrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lyrics.h; sourceTree = "<group>"; };
 		FED628AA1CF34BA700B89258 /* Lyrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lyrics.m; sourceTree = "<group>"; };
+		FED628AC1CF350F600B89258 /* Mp3PlayingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3PlayingViewController.h; sourceTree = "<group>"; };
+		FED628AD1CF350F600B89258 /* Mp3PlayingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3PlayingViewController.m; sourceTree = "<group>"; };
+		FED628AE1CF350F600B89258 /* Mp3PlayingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mp3PlayingViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +167,9 @@
 		FED628A11CF34AA900B89258 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FED628AC1CF350F600B89258 /* Mp3PlayingViewController.h */,
+				FED628AD1CF350F600B89258 /* Mp3PlayingViewController.m */,
+				FED628AE1CF350F600B89258 /* Mp3PlayingViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED628B01CF350F600B89258 /* Mp3PlayingViewController.xib in Resources */,
 				FED6287D1CF349A800B89258 /* LaunchScreen.storyboard in Resources */,
 				FED6287A1CF349A800B89258 /* Assets.xcassets in Resources */,
 				FED628781CF349A800B89258 /* Main.storyboard in Resources */,
@@ -328,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED628AF1CF350F600B89258 /* Mp3PlayingViewController.m in Sources */,
 				FED628AB1CF34BA700B89258 /* Lyrics.m in Sources */,
 				FED628751CF349A800B89258 /* ViewController.m in Sources */,
 				FED628A81CF34AD400B89258 /* MusicModel.m in Sources */,

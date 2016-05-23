@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Mp3PlayingViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4b-o2-pYw" userLabel="top">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="505"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play_cover_pic_bg" translatesAutoresizingMaskIntoConstraints="NO" id="JND-Ug-TEb">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="505"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="JND-Ug-TEb" secondAttribute="trailing" id="0yd-Ty-oJs"/>
+                        <constraint firstItem="JND-Ug-TEb" firstAttribute="leading" secondItem="D4b-o2-pYw" secondAttribute="leading" id="Emo-mn-6HU"/>
+                        <constraint firstAttribute="bottom" secondItem="JND-Ug-TEb" secondAttribute="bottom" id="kyu-ti-EOY"/>
+                        <constraint firstItem="JND-Ug-TEb" firstAttribute="top" secondItem="D4b-o2-pYw" secondAttribute="top" id="vWr-Mn-hLl"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swP-VJ-tEp" userLabel="bottom">
+                    <rect key="frame" x="0.0" y="505" width="600" height="95"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="95" id="aYZ-8d-ae3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="swP-VJ-tEp" firstAttribute="top" secondItem="D4b-o2-pYw" secondAttribute="bottom" id="3pj-iS-bDj"/>
+                <constraint firstAttribute="bottom" secondItem="swP-VJ-tEp" secondAttribute="bottom" id="AuU-jx-iLf"/>
+                <constraint firstItem="swP-VJ-tEp" firstAttribute="top" secondItem="D4b-o2-pYw" secondAttribute="bottom" id="CWk-lp-p7V"/>
+                <constraint firstAttribute="trailing" secondItem="D4b-o2-pYw" secondAttribute="trailing" id="MwE-Vz-VOR"/>
+                <constraint firstItem="D4b-o2-pYw" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Yoa-Ov-FDS"/>
+                <constraint firstItem="D4b-o2-pYw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ibl-TP-QqN"/>
+                <constraint firstItem="swP-VJ-tEp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jxA-08-4qj"/>
+                <constraint firstAttribute="trailing" secondItem="swP-VJ-tEp" secondAttribute="trailing" id="tlh-hr-Naa"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="play_cover_pic_bg" width="320" height="320"/>
+    </resources>
+</document>
