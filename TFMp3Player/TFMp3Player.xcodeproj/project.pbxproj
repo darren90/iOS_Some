@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FED6286F1CF349A800B89258 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FED6286E1CF349A800B89258 /* main.m */; };
+		FED628721CF349A800B89258 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628711CF349A800B89258 /* AppDelegate.m */; };
+		FED628751CF349A800B89258 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628741CF349A800B89258 /* ViewController.m */; };
+		FED628781CF349A800B89258 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED628761CF349A800B89258 /* Main.storyboard */; };
+		FED6287A1CF349A800B89258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FED628791CF349A800B89258 /* Assets.xcassets */; };
+		FED6287D1CF349A800B89258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FED6287B1CF349A800B89258 /* LaunchScreen.storyboard */; };
+		FED628881CF349A800B89258 /* TFMp3PlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628871CF349A800B89258 /* TFMp3PlayerTests.m */; };
+		FED628931CF349A800B89258 /* TFMp3PlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628921CF349A800B89258 /* TFMp3PlayerUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FED628841CF349A800B89258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FED628621CF349A700B89258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FED628691CF349A700B89258;
+			remoteInfo = TFMp3Player;
+		};
+		FED6288F1CF349A800B89258 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FED628621CF349A700B89258 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FED628691CF349A700B89258;
+			remoteInfo = TFMp3Player;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FED6286A1CF349A700B89258 /* TFMp3Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TFMp3Player.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED6286E1CF349A800B89258 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FED628701CF349A800B89258 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FED628711CF349A800B89258 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FED628731CF349A800B89258 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FED628741CF349A800B89258 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FED628771CF349A800B89258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FED628791CF349A800B89258 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FED6287C1CF349A800B89258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FED6287E1CF349A800B89258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED628831CF349A800B89258 /* TFMp3PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFMp3PlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED628871CF349A800B89258 /* TFMp3PlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFMp3PlayerTests.m; sourceTree = "<group>"; };
+		FED628891CF349A800B89258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED6288E1CF349A800B89258 /* TFMp3PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TFMp3PlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED628921CF349A800B89258 /* TFMp3PlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TFMp3PlayerUITests.m; sourceTree = "<group>"; };
+		FED628941CF349A800B89258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FED628671CF349A700B89258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED628801CF349A800B89258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED6288B1CF349A800B89258 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FED628611CF349A700B89258 = {
+			isa = PBXGroup;
+			children = (
+				FED6286C1CF349A700B89258 /* TFMp3Player */,
+				FED628861CF349A800B89258 /* TFMp3PlayerTests */,
+				FED628911CF349A800B89258 /* TFMp3PlayerUITests */,
+				FED6286B1CF349A700B89258 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FED6286B1CF349A700B89258 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FED6286A1CF349A700B89258 /* TFMp3Player.app */,
+				FED628831CF349A800B89258 /* TFMp3PlayerTests.xctest */,
+				FED6288E1CF349A800B89258 /* TFMp3PlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FED6286C1CF349A700B89258 /* TFMp3Player */ = {
+			isa = PBXGroup;
+			children = (
+				FED628701CF349A800B89258 /* AppDelegate.h */,
+				FED628711CF349A800B89258 /* AppDelegate.m */,
+				FED628731CF349A800B89258 /* ViewController.h */,
+				FED628741CF349A800B89258 /* ViewController.m */,
+				FED628761CF349A800B89258 /* Main.storyboard */,
+				FED628791CF349A800B89258 /* Assets.xcassets */,
+				FED6287B1CF349A800B89258 /* LaunchScreen.storyboard */,
+				FED6287E1CF349A800B89258 /* Info.plist */,
+				FED6286D1CF349A700B89258 /* Supporting Files */,
+			);
+			path = TFMp3Player;
+			sourceTree = "<group>";
+		};
+		FED6286D1CF349A700B89258 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FED6286E1CF349A800B89258 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FED628861CF349A800B89258 /* TFMp3PlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FED628871CF349A800B89258 /* TFMp3PlayerTests.m */,
+				FED628891CF349A800B89258 /* Info.plist */,
+			);
+			path = TFMp3PlayerTests;
+			sourceTree = "<group>";
+		};
+		FED628911CF349A800B89258 /* TFMp3PlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FED628921CF349A800B89258 /* TFMp3PlayerUITests.m */,
+				FED628941CF349A800B89258 /* Info.plist */,
+			);
+			path = TFMp3PlayerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FED628691CF349A700B89258 /* TFMp3Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FED628971CF349A800B89258 /* Build configuration list for PBXNativeTarget "TFMp3Player" */;
+			buildPhases = (
+				FED628661CF349A700B89258 /* Sources */,
+				FED628671CF349A700B89258 /* Frameworks */,
+				FED628681CF349A700B89258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TFMp3Player;
+			productName = TFMp3Player;
+			productReference = FED6286A1CF349A700B89258 /* TFMp3Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FED628821CF349A800B89258 /* TFMp3PlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FED6289A1CF349A800B89258 /* Build configuration list for PBXNativeTarget "TFMp3PlayerTests" */;
+			buildPhases = (
+				FED6287F1CF349A800B89258 /* Sources */,
+				FED628801CF349A800B89258 /* Frameworks */,
+				FED628811CF349A800B89258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FED628851CF349A800B89258 /* PBXTargetDependency */,
+			);
+			name = TFMp3PlayerTests;
+			productName = TFMp3PlayerTests;
+			productReference = FED628831CF349A800B89258 /* TFMp3PlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FED6288D1CF349A800B89258 /* TFMp3PlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FED6289D1CF349A800B89258 /* Build configuration list for PBXNativeTarget "TFMp3PlayerUITests" */;
+			buildPhases = (
+				FED6288A1CF349A800B89258 /* Sources */,
+				FED6288B1CF349A800B89258 /* Frameworks */,
+				FED6288C1CF349A800B89258 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FED628901CF349A800B89258 /* PBXTargetDependency */,
+			);
+			name = TFMp3PlayerUITests;
+			productName = TFMp3PlayerUITests;
+			productReference = FED6288E1CF349A800B89258 /* TFMp3PlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FED628621CF349A700B89258 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = tengfei;
+				TargetAttributes = {
+					FED628691CF349A700B89258 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					FED628821CF349A800B89258 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FED628691CF349A700B89258;
+					};
+					FED6288D1CF349A800B89258 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = FED628691CF349A700B89258;
+					};
+				};
+			};
+			buildConfigurationList = FED628651CF349A700B89258 /* Build configuration list for PBXProject "TFMp3Player" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FED628611CF349A700B89258;
+			productRefGroup = FED6286B1CF349A700B89258 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FED628691CF349A700B89258 /* TFMp3Player */,
+				FED628821CF349A800B89258 /* TFMp3PlayerTests */,
+				FED6288D1CF349A800B89258 /* TFMp3PlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FED628681CF349A700B89258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED6287D1CF349A800B89258 /* LaunchScreen.storyboard in Resources */,
+				FED6287A1CF349A800B89258 /* Assets.xcassets in Resources */,
+				FED628781CF349A800B89258 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED628811CF349A800B89258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED6288C1CF349A800B89258 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FED628661CF349A700B89258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED628751CF349A800B89258 /* ViewController.m in Sources */,
+				FED628721CF349A800B89258 /* AppDelegate.m in Sources */,
+				FED6286F1CF349A800B89258 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED6287F1CF349A800B89258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED628881CF349A800B89258 /* TFMp3PlayerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED6288A1CF349A800B89258 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FED628931CF349A800B89258 /* TFMp3PlayerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FED628851CF349A800B89258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FED628691CF349A700B89258 /* TFMp3Player */;
+			targetProxy = FED628841CF349A800B89258 /* PBXContainerItemProxy */;
+		};
+		FED628901CF349A800B89258 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FED628691CF349A700B89258 /* TFMp3Player */;
+			targetProxy = FED6288F1CF349A800B89258 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FED628761CF349A800B89258 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FED628771CF349A800B89258 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FED6287B1CF349A800B89258 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FED6287C1CF349A800B89258 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FED628951CF349A800B89258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FED628961CF349A800B89258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FED628981CF349A800B89258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TFMp3Player/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.TFMp3Player;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FED628991CF349A800B89258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TFMp3Player/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.TFMp3Player;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FED6289B1CF349A800B89258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TFMp3PlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.TFMp3PlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFMp3Player.app/TFMp3Player";
+			};
+			name = Debug;
+		};
+		FED6289C1CF349A800B89258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TFMp3PlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.TFMp3PlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TFMp3Player.app/TFMp3Player";
+			};
+			name = Release;
+		};
+		FED6289E1CF349A800B89258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TFMp3PlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.TFMp3PlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TFMp3Player;
+			};
+			name = Debug;
+		};
+		FED6289F1CF349A800B89258 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TFMp3PlayerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.TFMp3PlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TFMp3Player;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FED628651CF349A700B89258 /* Build configuration list for PBXProject "TFMp3Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED628951CF349A800B89258 /* Debug */,
+				FED628961CF349A800B89258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FED628971CF349A800B89258 /* Build configuration list for PBXNativeTarget "TFMp3Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED628981CF349A800B89258 /* Debug */,
+				FED628991CF349A800B89258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FED6289A1CF349A800B89258 /* Build configuration list for PBXNativeTarget "TFMp3PlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED6289B1CF349A800B89258 /* Debug */,
+				FED6289C1CF349A800B89258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FED6289D1CF349A800B89258 /* Build configuration list for PBXNativeTarget "TFMp3PlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FED6289E1CF349A800B89258 /* Debug */,
+				FED6289F1CF349A800B89258 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FED628621CF349A700B89258 /* Project object */;
+}
