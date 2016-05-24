@@ -20,8 +20,9 @@
 		FED628AF1CF350F600B89258 /* Mp3PlayingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628AD1CF350F600B89258 /* Mp3PlayingViewController.m */; };
 		FED628B01CF350F600B89258 /* Mp3PlayingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FED628AE1CF350F600B89258 /* Mp3PlayingViewController.xib */; };
 		FED628B31CF3532200B89258 /* MusicListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628B21CF3532200B89258 /* MusicListCell.m */; };
-		FED628B61CF353C300B89258 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628B51CF353C300B89258 /* UIImage+Tool.m */; };
-		FED628BA1CF3544200B89258 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628B91CF3544200B89258 /* Colours.m */; };
+		FED628C01CF49B9E00B89258 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628BD1CF49B9E00B89258 /* Colours.m */; };
+		FED628C11CF49B9E00B89258 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628BF1CF49B9E00B89258 /* UIImage+Tool.m */; };
+		FED628C41CF49BB600B89258 /* Mp3Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = FED628C31CF49BB600B89258 /* Mp3Tool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +68,12 @@
 		FED628AE1CF350F600B89258 /* Mp3PlayingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Mp3PlayingViewController.xib; sourceTree = "<group>"; };
 		FED628B11CF3532200B89258 /* MusicListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicListCell.h; sourceTree = "<group>"; };
 		FED628B21CF3532200B89258 /* MusicListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicListCell.m; sourceTree = "<group>"; };
-		FED628B41CF353C300B89258 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
-		FED628B51CF353C300B89258 /* UIImage+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
-		FED628B81CF3544200B89258 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
-		FED628B91CF3544200B89258 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		FED628BC1CF49B9E00B89258 /* Colours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colours.h; sourceTree = "<group>"; };
+		FED628BD1CF49B9E00B89258 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
+		FED628BE1CF49B9E00B89258 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
+		FED628BF1CF49B9E00B89258 /* UIImage+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
+		FED628C21CF49BB600B89258 /* Mp3Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3Tool.h; sourceTree = "<group>"; };
+		FED628C31CF49BB600B89258 /* Mp3Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3Tool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +200,9 @@
 		FED628A31CF34AA900B89258 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				FED628BB1CF49B9E00B89258 /* Colours */,
+				FED628BE1CF49B9E00B89258 /* UIImage+Tool.h */,
+				FED628BF1CF49B9E00B89258 /* UIImage+Tool.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -204,9 +210,8 @@
 		FED628A41CF34AA900B89258 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				FED628B71CF3544200B89258 /* Colours */,
-				FED628B41CF353C300B89258 /* UIImage+Tool.h */,
-				FED628B51CF353C300B89258 /* UIImage+Tool.m */,
+				FED628C21CF49BB600B89258 /* Mp3Tool.h */,
+				FED628C31CF49BB600B89258 /* Mp3Tool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -220,11 +225,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		FED628B71CF3544200B89258 /* Colours */ = {
+		FED628BB1CF49B9E00B89258 /* Colours */ = {
 			isa = PBXGroup;
 			children = (
-				FED628B81CF3544200B89258 /* Colours.h */,
-				FED628B91CF3544200B89258 /* Colours.m */,
+				FED628BC1CF49B9E00B89258 /* Colours.h */,
+				FED628BD1CF49B9E00B89258 /* Colours.m */,
 			);
 			path = Colours;
 			sourceTree = "<group>";
@@ -363,11 +368,12 @@
 				FED628AF1CF350F600B89258 /* Mp3PlayingViewController.m in Sources */,
 				FED628AB1CF34BA700B89258 /* Lyrics.m in Sources */,
 				FED628751CF349A800B89258 /* ViewController.m in Sources */,
-				FED628B61CF353C300B89258 /* UIImage+Tool.m in Sources */,
+				FED628C01CF49B9E00B89258 /* Colours.m in Sources */,
+				FED628C41CF49BB600B89258 /* Mp3Tool.m in Sources */,
 				FED628A81CF34AD400B89258 /* MusicModel.m in Sources */,
 				FED628721CF349A800B89258 /* AppDelegate.m in Sources */,
+				FED628C11CF49B9E00B89258 /* UIImage+Tool.m in Sources */,
 				FED628B31CF3532200B89258 /* MusicListCell.m in Sources */,
-				FED628BA1CF3544200B89258 /* Colours.m in Sources */,
 				FED6286F1CF349A800B89258 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
