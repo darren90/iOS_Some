@@ -10,6 +10,7 @@
 #import "Mp3Tool.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -19,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.title = @"音乐播放器";
     NSArray *arr = [Mp3Tool scanMusics];
     
     

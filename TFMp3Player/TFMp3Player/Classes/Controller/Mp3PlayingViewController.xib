@@ -32,10 +32,48 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swP-VJ-tEp" userLabel="bottom">
                     <rect key="frame" x="0.0" y="505" width="600" height="95"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hpe-63-R7J">
+                            <rect key="frame" x="0.0" y="15" width="600" height="80"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs4-yh-KhR" userLabel="play">
+                                    <rect key="frame" x="264" y="17" width="72" height="46"/>
+                                    <state key="normal" image="play"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="goi-L1-0Wt" userLabel="next">
+                                    <rect key="frame" x="344" y="17" width="41" height="46"/>
+                                    <state key="normal" image="next"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yH-qv-7QZ" userLabel="previous">
+                                    <rect key="frame" x="223" y="17" width="41" height="46"/>
+                                    <state key="normal" image="previous"/>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="xs4-yh-KhR" firstAttribute="centerX" secondItem="Hpe-63-R7J" secondAttribute="centerX" id="1fp-PS-tws"/>
+                                <constraint firstItem="xs4-yh-KhR" firstAttribute="leading" secondItem="1yH-qv-7QZ" secondAttribute="trailing" id="EMq-D8-bsx"/>
+                                <constraint firstItem="goi-L1-0Wt" firstAttribute="leading" secondItem="xs4-yh-KhR" secondAttribute="trailing" constant="8" id="Eup-gw-64L"/>
+                                <constraint firstItem="1yH-qv-7QZ" firstAttribute="centerY" secondItem="Hpe-63-R7J" secondAttribute="centerY" id="MM9-B9-vvw"/>
+                                <constraint firstItem="goi-L1-0Wt" firstAttribute="centerY" secondItem="Hpe-63-R7J" secondAttribute="centerY" id="VR3-V6-orz"/>
+                                <constraint firstAttribute="height" constant="80" id="XZu-nC-v5g"/>
+                                <constraint firstItem="xs4-yh-KhR" firstAttribute="centerY" secondItem="Hpe-63-R7J" secondAttribute="centerY" id="seU-bG-wpa"/>
+                            </constraints>
+                        </view>
+                    </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Hpe-63-R7J" secondAttribute="bottom" id="70V-Pw-4Nw"/>
+                        <constraint firstAttribute="trailing" secondItem="Hpe-63-R7J" secondAttribute="trailing" id="JTu-QI-5FZ"/>
+                        <constraint firstItem="Hpe-63-R7J" firstAttribute="top" secondItem="swP-VJ-tEp" secondAttribute="top" id="S0M-Iv-f0z"/>
+                        <constraint firstItem="Hpe-63-R7J" firstAttribute="leading" secondItem="swP-VJ-tEp" secondAttribute="leading" id="Y1R-aM-c6i"/>
                         <constraint firstAttribute="height" constant="95" id="aYZ-8d-ae3"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="S0M-Iv-f0z"/>
+                        </mask>
+                    </variation>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -52,6 +90,9 @@
         </view>
     </objects>
     <resources>
+        <image name="next" width="41" height="46"/>
+        <image name="play" width="72" height="46"/>
         <image name="play_cover_pic_bg" width="320" height="320"/>
+        <image name="previous" width="41" height="46"/>
     </resources>
 </document>
