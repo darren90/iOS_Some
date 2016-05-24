@@ -61,4 +61,64 @@ static MusicModel *_playingMusic;
     }
     return [self musics][previousIndex];
 }
+
++(NSMutableArray *)scanMusics
+{
+    NSString *docsDir = [NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"];
+    return [self scanMusics2:docsDir];
+}
+
++ (NSMutableArray *)scanMusics2:(NSString *)path {
+    NSMutableArray *pathArray = [NSMutableArray array];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *tempArray = [fileManager contentsOfDirectoryAtPath:path error:nil];
+    for (NSString *fileName in tempArray) {
+        
+        NSLog(@"--:%@",fileName);
+//        MovieFile *movieFile = [[MovieFile alloc]init];
+//        UIImage *imgData ;
+//        FileType fileType;
+//        MovieList *model;
+//        
+//        BOOL flag = YES;
+//        NSString *fullPath = [direString stringByAppendingPathComponent:fileName];
+//        if ([fileManager fileExistsAtPath:fullPath isDirectory:&flag]) {
+//            if (!flag) {
+//                // ignore .DS_Store
+//                if (![[fileName substringToIndex:1] isEqualToString:@"."]) {
+//                    
+//                    if ([fileName hasSuffix:@".mp4"]) {
+//                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:200.0];
+//                        fileType = FileMovieCanPlay;
+//                        [pathArray addObject:movieFile];
+//                        
+//                    }else if([fileName hasSuffix:@".png"] || [fileName hasSuffix:@".jpg"]){
+//                        imgData = [UIImage imageWithContentsOfFile:fullPath];
+//                        fileType = FileImage;
+//                    }else if([fileName hasSuffix:@".zip"] || [fileName hasSuffix:@".rar"]){//压缩文件
+//                        imgData = [UIImage imageNamed:@"file_zip"];
+//                        fileType = FileZIP;
+//                    }else {
+//                        imgData = [UIImage imageNamed:@"file_new"];
+//                        fileType = FileOther;
+//                    }
+//                    model = [MovieList movieList:fileName fileType:fileType path:fullPath imgData:imgData];
+//                    
+//                    movieFile.isFolder = NO;
+//                    movieFile.file = model;
+//                }
+//            }
+//            else {
+//                //                movieFile.isFolder = YES;
+//                //                movieFile.subFiles = [self scanFilesAtPath:fullPath];
+//                //                movieFile.folderName = fileName;
+//                //                [pathArray addObject:movieFile];
+//                [self scanFilesAtPath:fullPath];
+//            }
+//        }
+    }
+    return pathArray;
+}
+
 @end

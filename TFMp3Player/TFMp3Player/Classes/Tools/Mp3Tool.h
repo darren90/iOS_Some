@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 @class MusicModel;
 @interface Mp3Tool : NSObject
+
++(NSMutableArray *)scanMusics;
+
 /**
  *  正在播放的歌曲
  *
@@ -38,4 +41,7 @@
  *
  */
 + (MusicModel *)previousMusic;
+
+
+
 @end
