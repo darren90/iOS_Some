@@ -14,7 +14,7 @@ class SpiderMain(object):
 
 	def craw(self,root_url):
 		count = 1
-		totalCount = 10
+		totalCount = 3
 		self.urls.add_new_url(root_url)
 		while  self.urls.has_new_url:
 		 	try:
