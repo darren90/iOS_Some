@@ -63,6 +63,7 @@ class HtmlParser(object):
 		 		res_sub_dic = {}
 		 		# print type(downurl) 
 		 		# print downurl
+		 		res_sub_dic["type"] = down_type.get_text()
 		 		res_sub_dic['title'] = downurl.get_text()
 		 		res_sub_dic['url'] = downurl.find('a')['href']
 		 		res_dic["arr"] = res_arr

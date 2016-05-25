@@ -27,12 +27,17 @@ class HtmlOutputer(object):
 		 	print data['caption']
 		 	fout.write("<tr>")
 		 	fout.write("<td>%s</td>" % data['caption'])
+		 	fout.write("</tr>")
+
 		 	for sub_data in data["arr"]:
 		 		fout.write("<tr>")
+		 		fout.write("<td style='color:blue;'>%s</td>" % sub_data['type'].encode('utf-8'))
 			 	fout.write("<td>%s</td>" % sub_data['title'].encode('utf-8'))
 			 	fout.write("<td>%s</td>" % sub_data['url'].encode('utf-8'))
 			 	fout.write("</tr>")
- 			fout.write("</tr>")
+		 	fout.write("<tr>")
+		 	fout.write("<td style='color:red;'>------------------------</td>")
+		 	fout.write("</tr>")
 
 		 fout.write("</table>")
 		 fout.write("</body>")
