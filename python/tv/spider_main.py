@@ -14,6 +14,7 @@ class SpiderMain(object):
 
 	def craw(self,root_url):
 		count = 1
+		totalCount = 10
 		self.urls.add_new_url(root_url)
 		while  self.urls.has_new_url:
 		 	try:
@@ -25,12 +26,12 @@ class SpiderMain(object):
 			 	self.urls.add_new_urls(new_urls)
 			 	self.outputer.collect_data(new_data)
 
-			 	if count == 1000:
+			 	if count == totalCount:
 			 		break
 
 			 	count = count +1
 			except:
-				if count == 1000:
+				if count == totalCount:
 			 		break
 				count = count +1
 			 	print 'Craw fail %d' % count
@@ -39,6 +40,6 @@ class SpiderMain(object):
 
 
 if __name__=="__main__":
-	root_url = "http://www.hltm.tv/"
+	root_url = "http://www.hltm.tv/view/12436.html"
 	obj_spider = SpiderMain()
 	obj_spider.craw(root_url)

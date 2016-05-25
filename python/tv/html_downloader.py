@@ -9,7 +9,6 @@ class HtmlDownloader(object):
 		if url is None:
 			return None
 		response1 = urllib2.urlopen(url)
-        print response1.read()
 	 	if response1.getcode() != 200:
 	 		return None
 	 	#print response1.read()

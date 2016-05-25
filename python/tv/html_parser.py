@@ -14,6 +14,7 @@ class HtmlParser(object):
 		soup = BeautifulSoup(html_count, "html.parser") 
 		new_urls = self._get_new_urls(page_url,soup)
 		new_data = self._get_new_data(page_url,soup)
+		print 'new new'
 		return new_urls,new_data
 
 	def _get_new_urls(self,page_url,soup):
@@ -29,7 +30,10 @@ class HtmlParser(object):
 		 res_data = {}
 		 res_data["url"] = page_url
 		 #<dd class="lemmaWgt-lemmaTitle-title"> <h1>Python</h1>
-		 title_node = soup.find('dd', class_="lemmaWgt-lemmaTitle-title").find("h1")
+		 title_node = soup.find('div', class_="infotitle").find("h1")
+		 print 'title node'
+		 print title_node.get_text()
+		 print 'title node2'
 		 res_data['title'] = title_node.get_text()
 
 		 #<div class="lemma-summary" label-module="lemmaSummary"> <div class="para" label-module="para">
