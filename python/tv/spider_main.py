@@ -15,28 +15,35 @@ class SpiderMain(object):
 	def craw(self,root_url):
 		count = 1
 		totalCount = 10
+		fialCount = 1
 		self.urls.add_new_url(root_url)
+		fout = open('output.sql','w')
 		while  self.urls.has_new_url:
 		 	try:
 			 	new_url = self.urls.get_new_url()
-			 	print 'craw %d : %s' % (count,new_url)
+			 	print '-- craw %d : %s' % (count,new_url)
 			 	html_count = self.downloader.downloader(new_url)
 			 	new_urls,new_data = self.parser.parser(new_url,html_count)
+				fout.write(new_data["sql"].encode('utf-8') + '\n')
 
 			 	self.urls.add_new_urls(new_urls)
 			 	self.outputer.collect_data(new_data)
 
-			 	if count == totalCount:
-			 		break
-
+			 	# if count == totalCount:
+			 	# 	break
 			 	count = count +1
 			except:
-				if count == totalCount:
-			 		break
-				count = count +1
-			 	print 'Craw fail %d' % count
-
-		self.outputer.output_html()
+				# if count == totalCount:
+			 # 		break
+			 	 if fialCount == 10200:
+			 	 	fout.close()
+			 	 	break
+			 	 fialCount = fialCount + 1
+				 count = count +1
+				 fout.write("-- Craw fail %d " % count + '\n')
+			 	 print '-- Craw fail %d' % count
+		fout.close()
+		# self.outputer.output_html()
 
 
 if __name__=="__main__":
