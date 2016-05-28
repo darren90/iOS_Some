@@ -78,39 +78,14 @@ class spider(object):
             print downurl.find('a')['href']
             t_title = downurl.get_text().strip('\n')
             u_url = downurl.find('a')['href'].strip('\n')
-            sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values (\"%s\",'%s','%s','%s','%s');" % (title.get_text(),icon_url,down_type_str, t_title, u_url)
+            sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values (\"%s\",'%s','%s','%s','%s');" % (title.get_text().encode('utf-8'),icon_url,down_type_str, t_title, u_url)
             # sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values ('%s','%s','%s','%s','%s') " % title.get_text() 
             res_data["sql"] = sql
             print sql
         count = count +1
         print '-- end---------'
      return res_data
-
-# #geteveryclass用来抓取每个课程块的信息
-#     def geteveryclass(self,source):
-#         everyclass = re.findall('(<li deg="".*?</li>)',source,re.S)
-#         return everyclass
-# #getinfo用来从每个课程块中提取出我们需要的信息
-#     def getinfo(self,eachclass):
-#         info = {}
-#         info['title'] = re.search('target="_blank">(.*?)</a>',eachclass,re.S).group(1)
-#         info['content'] = re.search('</h2><p>(.*?)</p>',eachclass,re.S).group(1)
-#         timeandlevel = re.findall('<em>(.*?)</em>',eachclass,re.S)
-#         info['classtime'] = timeandlevel[0]
-#         info['classlevel'] = timeandlevel[1]
-#         info['learnnum'] = re.search('"learn-number">(.*?)</em>',eachclass,re.S).group(1)
-#         return info
-# #saveinfo用来保存结果到info.txt文件中
-#     def saveinfo(self,classinfo):
-#         f = open('info.txt','a')
-#         for each in classinfo:
-#             f.writelines('title:' + each['title'] + '\n')
-#             f.writelines('content:' + each['content'] + '\n')
-#             f.writelines('classtime:' + each['classtime'] + '\n')
-#             f.writelines('classlevel:' + each['classlevel'] + '\n')
-#             f.writelines('learnnum:' + each['learnnum'] +'\n\n')
-#         f.close()
-
+ 
 if __name__ == '__main__':
     fout = open('output.sql','w')
     fialCount = 1
@@ -136,14 +111,6 @@ if __name__ == '__main__':
             fout.write("-- Craw fail %d " % count + '\n')
             print '-- Craw fail %d ,excepton:%s' % (count,e)
     fout.close()
-    # for link in all_links:
-    #     print u'正在处理页面：' + link
-    #     html = mySpider.getsource(link)
-    #     everyclass = mySpider.geteveryclass(html)
-    #     for each in everyclass:
-    #         info = mySpider.getinfo(each)
-    #         classinfo.append(info)
-    # mySpider.saveinfo(classinfo)
 
 
 # 已完结 第一页和第二页
