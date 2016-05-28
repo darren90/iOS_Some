@@ -18,9 +18,6 @@ class spider(object):
         response.encoding = 'utf-8'
         return response.text
 
-# http://www.hltm.tv/list/7.html
-# http://www.hltm.tv/list/7_2.html
-
 #changepage用来生产不同页数的链接
     def changepage(self,url,keyStr,total_page):
         pages_arary = []
@@ -64,13 +61,72 @@ class spider(object):
      res_array = []
      res_data = {}
      soup = BeautifulSoup(html_countent, "html.parser",from_encoding='utf-8') 
+
+     # 标题
      title = soup.find('div',class_="infotitle").find('h1')
-     icon_url = soup.find('div',class_="bpic l").find('img')['src']
+
+     # 标题对应的图片地址
+     icon_url = soup.find('div',class_="bpic l").find('img')['src']   
+
+     # 简介- 带有HTML标签
+     t_info_d = soup.find('div',class_="box01 mb20 l")
+
+     t_info = t_info_d #.replace("\"","\\").replace("\'","\\'")  
+     # 简介 - 去除HTML标签
+     t_cleaninfo = t_info_d.get_text().replace(" ","").replace("\"","\'").replace("\t","").replace('\n','').replace(' ','').replace("<ｓｃｒｉｐｔtype=\"text/javaｓｃｒｉｐｔ\"><ｓｃｒｉｐｔ>","").strip().lstrip().rstrip(',')    
+     if len(t_cleaninfo) > 2001:
+        t_cleaninfo = t_cleaninfo[0:2000] 
+     other_infos = soup.find('div',class_="info l").find_all('li')  #soup.find(id="info l").find_all('li')  
+
+     #从数组中取出其他的值
+
+     # 更新状态
+     t_state = ""
+
+     # 点击量
+     t_viewcount = ""
+
+     # 动漫类型
+     t_type = ""
+
+     # 动漫地区
+     t_showarea = ""
+
+     # 配音语言
+     t_dub = ""
+
+     # 上映时间
+     t_showtime = ""
+
+     # 最后更新的时间
+     t_updatetime = ""
+
+     for other_info in other_infos:
+         t_msg = other_info.find('p').get_text().strip()
+         t_span = other_info.find('span').get_text().strip()
+         if t_span is not None:
+            if t_span == "状态":
+                t_state = t_msg
+            elif t_span == "点击量":
+                t_viewcount = t_msg
+            elif t_span == "动漫类型":
+                t_type = t_msg
+            elif t_span == "动漫地区":
+                t_showarea = t_msg
+            elif t_span == "配音语言":
+                t_dub = t_msg
+            elif t_span == "上映年份":
+                t_showtime = t_msg
+            elif t_span == "最后更新":
+                t_updatetime = t_msg
+            else:
+                print ''
      # print title.get_text()
      print '-- %s' % title.get_text()
      down_types = soup.find('ul',class_="yuanItem").find_all('li')
      # print down_types
      count = 1
+     # down_type 下载类型
      for down_type in down_types:
         down_type_str = down_type.get_text().strip('\n')
         print '-- start :-%s -' % (down_type_str)
@@ -78,9 +134,13 @@ class spider(object):
         down_urls = soup.find(id=keydoword).find_all('li')# down_urls = soup.find(id="tabxinfan_1_tab_2").find_all('li')
         for downurl in down_urls:
             # print title.get_text()
+            # 每一集的标题
             t_title = downurl.get_text().strip('\n')
+            # 每一集的下载地址
             u_url = downurl.find('a')['href'].strip('\n')
-            sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values (\"%s\",'%s','%s','%s','%s');" % (title.get_text().encode('utf-8'),icon_url,down_type_str, t_title, u_url)
+
+            sql = "insert into DBURL (tv_name,tv_iconUrl,tv_state,tv_viewcount,tv_type,tv_dub,tv_showtime,tv_updatetime,tv_info,tv_downType,tv_downSeries,tv_downSeries_url) \
+             values (\"%s\",'%s',\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",'%s','%s','%s');" % (title.get_text().encode('utf-8'),icon_url,t_state,t_viewcount,t_type,t_dub,t_showtime,t_updatetime,t_cleaninfo,down_type_str, t_title, u_url)
             # sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values ('%s','%s','%s','%s','%s') " % title.get_text() 
             res_data["sql"] = sql
             res_array.append(res_data)
@@ -90,13 +150,13 @@ class spider(object):
      return res_array
  
 if __name__ == '__main__':
-    fout = open('output2.sql','w')
+    fout = open('output_1.sql','w')
     fialCount = 1
     count = 1
     classinfo = []
-    url = 'http://www.hltm.tv/list/18.html'#'http://www.hltm.tv/list/7.html'#'http://www.hltm.tv/list/18.html'
+    url = 'http://www.hltm.tv/list/7.html' #'http://www.hltm.tv/list/7.html' # 'http://www.hltm.tv/list/18.html'
     mySpider = spider()
-    all_pages = mySpider.changepage(url,"18",300) #所有的页面 
+    all_pages = mySpider.changepage(url,"7",10) # mySpider.changepage(url,"18",300) #所有的页面 
     all_links = mySpider.getAllLines(all_pages)
     for link in all_links:
         # print link
