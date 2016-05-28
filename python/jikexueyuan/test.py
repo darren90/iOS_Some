@@ -4,5 +4,5 @@ import sys
 reload(sys)
 sys.setdefaultencoding("utf-8")
 
-html = requests.get('http://www.hltm.tv/view/12436.html')
+html = requests.get('http://www.dy2018.com/')
 print html.text

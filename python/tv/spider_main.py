@@ -25,6 +25,7 @@ class SpiderMain(object):
 			 	html_count = self.downloader.downloader(new_url)
 			 	new_urls,new_data = self.parser.parser(new_url,html_count)
 				fout.write(new_data["sql"].encode('utf-8') + '\n')
+				fout.write(new_data["page_url"].encode('utf-8') + '\n')
 
 			 	self.urls.add_new_urls(new_urls)
 			 	self.outputer.collect_data(new_data)
@@ -32,7 +33,7 @@ class SpiderMain(object):
 			 	# if count == totalCount:
 			 	# 	break
 			 	count = count +1
-			except:
+			except Exception as e:
 				# if count == totalCount:
 			 # 		break
 			 	 if fialCount == 10200:
@@ -42,6 +43,7 @@ class SpiderMain(object):
 				 count = count +1
 				 fout.write("-- Craw fail %d " % count + '\n')
 			 	 print '-- Craw fail %d' % count
+			 	 print 'fail excepton:%s' % e 
 		fout.close()
 		# self.outputer.output_html()
 

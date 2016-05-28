@@ -64,19 +64,21 @@ class HtmlParser(object):
 		 	for downurl in down_urls:
 		 		res_sub_dic = {}
 		 		# print type(downurl) 
+		 		print page_url
+		 		print downurl.get_text()
 		 		# print downurl
+		 		print downurl.find('a')['href']
 		 		res_sub_dic["type"] = down_type.get_text()
 		 		res_sub_dic['title'] = downurl.get_text()
 		 		res_sub_dic['url'] = downurl.find('a')['href']
 		 		res_dic["arr"] = res_arr
-		 		# print downurl.get_text()
-		 		# print downurl.find('a')['href']
 		 		t_title = downurl.get_text().strip('\n')
 		 		u_url = downurl.find('a')['href'].strip('\n')
 		 		sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values ('%s','%s','%s','%s','%s');" % (title.get_text(),icon_url,down_type_str, t_title, u_url)
 		 		# sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values ('%s','%s','%s','%s','%s') " % title.get_text() 
 		 		res_data["sql"] = sql
-		 		print sql
+		 		res_data["page_url"] = "-- page_url:%s " % page_url
+		 		# print sql
 
 		 		res_arr.append(res_sub_dic)
 		 	count = count +1
