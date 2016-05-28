@@ -11,3 +11,20 @@ CREATE TABLE `fei`.`new_table8` (
 
 
 
+
+
+
+
+SELECT count(*) FROM fei.DBURL where  tv_downSeries_url is not null or tv_downSeries_url<>'';
+
+SELECT * FROM fei.DBURL where  tv_downSeries_url = ''
+
+SELECT * FROM fei.DBURL where  tv_downSeries_url = ''
+
+SELECT count(*) FROM fei.DBURL where tv_downSeries_url != '';
+SELECT  count(1)  FROM fei.DBURL   ;
+SELECT  *  FROM fei.DBURL   ;
+
+
+
+
