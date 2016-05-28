@@ -14,8 +14,9 @@ class spider(object):
 
 #getsource用来获取网页源代码
     def getsource(self,url):
-        html = requests.get(url)
-        return html.text
+        response = requests.get(url)
+        response.encoding = 'utf-8'
+        return response.text
 
 # http://www.hltm.tv/list/7.html
 # http://www.hltm.tv/list/7_2.html
@@ -42,7 +43,9 @@ class spider(object):
        for page_url in all_pages:
            if page_url is None:
              break
-           html = requests.get(page_url).text
+           response = requests.get(page_url)
+           response.encoding = 'utf-8'
+           html = response.text.encode('utf-8')
            if html is None:
              break
            # print 'start-- : %s ' % html 
@@ -58,6 +61,7 @@ class spider(object):
 
 #解析具体的数据
     def parse_html_data(self,html_countent):
+     res_array = []
      res_data = {}
      soup = BeautifulSoup(html_countent, "html.parser",from_encoding='utf-8') 
      title = soup.find('div',class_="infotitle").find('h1')
@@ -73,34 +77,34 @@ class spider(object):
         keydoword = 'tabxinfan_1_tab_%d' % count        
         down_urls = soup.find(id=keydoword).find_all('li')# down_urls = soup.find(id="tabxinfan_1_tab_2").find_all('li')
         for downurl in down_urls:
-            # print type(downurl) 
-            # print downurl
-            print downurl.find('a')['href']
+            # print title.get_text()
             t_title = downurl.get_text().strip('\n')
             u_url = downurl.find('a')['href'].strip('\n')
             sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values (\"%s\",'%s','%s','%s','%s');" % (title.get_text().encode('utf-8'),icon_url,down_type_str, t_title, u_url)
             # sql = "insert into DBURL (tv_name,tv_iconUrl,tv_downType,tv_downSeries,tv_downSeries_url) values ('%s','%s','%s','%s','%s') " % title.get_text() 
             res_data["sql"] = sql
+            res_array.append(res_data)
             print sql
         count = count +1
         print '-- end---------'
-     return res_data
+     return res_array
  
 if __name__ == '__main__':
-    fout = open('output.sql','w')
+    fout = open('output2.sql','w')
     fialCount = 1
     count = 1
     classinfo = []
-    url = 'http://www.hltm.tv/list/7.html'#'http://www.hltm.tv/list/18.html'
+    url = 'http://www.hltm.tv/list/18.html'#'http://www.hltm.tv/list/7.html'#'http://www.hltm.tv/list/18.html'
     mySpider = spider()
-    all_pages = mySpider.changepage(url,"7",10) #所有的页面 
+    all_pages = mySpider.changepage(url,"18",300) #所有的页面 
     all_links = mySpider.getAllLines(all_pages)
     for link in all_links:
         # print link
         try:
             html = mySpider.getsource(link)
-            res_data = mySpider.parse_html_data(html)
-            fout.write(res_data["sql"].encode('utf-8') + '\n')
+            res_array = mySpider.parse_html_data(html)
+            for res_data in res_array:
+                fout.write(res_data["sql"].encode('utf-8') + '\n')
             count = count +1
         except Exception as e:
             if fialCount == 10200:
