@@ -14,14 +14,32 @@ class spider(object):
         html = requests.get(url)
         return html.text
 
+# http://www.hltm.tv/list/7.html
+# http://www.hltm.tv/list/7_2.html
+
 #changepage用来生产不同页数的链接
     def changepage(self,url,total_page):
-        now_page = int(re.search('pageNum=(\d+)',url,re.S).group(1))
-        page_group = []
-        for i in range(now_page,total_page+1):
-            link = re.sub('pageNum=\d+','pageNum=%s'%i,url,re.S)
-            page_group.append(link)
-        return page_group
+        pages_arary = []
+        pages_arary.append(link)
+        count = 2
+        for i in total_page:
+            link = re.sub('/\S+_.html','%s_.html'%i,url)
+             
+
+
+        # for i in range(now_page,total_page+1):
+        #     link = re.sub('/sd+_.html','%s_.html'%i,url,re.S)
+        #     print link
+        #     pages_arary.append(link)
+        return pages_arary
+    # def changepage(self,url,total_page):
+    #     now_page = int(re.search('(7_\d+).html',url,re.S).group(1))
+    #     pages_arary = []
+    #     for i in range(now_page,total_page+1):
+    #         link = re.sub('\d+_.html','%s_.html'%i,url,re.S)
+    #         print link
+    #         pages_arary.append(link)
+    #     return pages_arary
 #geteveryclass用来抓取每个课程块的信息
     def geteveryclass(self,source):
         everyclass = re.findall('(<li deg="".*?</li>)',source,re.S)
@@ -50,16 +68,30 @@ class spider(object):
 if __name__ == '__main__':
 
     classinfo = []
-    url = 'http://www.jikexueyuan.com/course/?pageNum=1'
-    jikespider = spider()
-    all_links = jikespider.changepage(url,20)
-    for link in all_links:
-        print u'正在处理页面：' + link
-        html = jikespider.getsource(link)
-        everyclass = jikespider.geteveryclass(html)
-        for each in everyclass:
-            info = jikespider.getinfo(each)
-            classinfo.append(info)
-    jikespider.saveinfo(classinfo)
+    url = 'http://www.hltm.tv/list/7.html'
+    mySpider = spider()
+    all_links = mySpider.changepage(url,20)
+    # for link in all_links:
+    #     print u'正在处理页面：' + link
+    #     html = mySpider.getsource(link)
+    #     everyclass = mySpider.geteveryclass(html)
+    #     for each in everyclass:
+    #         info = mySpider.getinfo(each)
+    #         classinfo.append(info)
+    # mySpider.saveinfo(classinfo)
+
+
+# 已完结 第一页和第二页
+# http://www.hltm.tv/list/18.html
+# http://www.hltm.tv/list/18_2.html
+
+
+# 连载中 第一页和第二页
+# http://www.hltm.tv/list/7.html
+# http://www.hltm.tv/list/7_2.html
+
+
+
+
 
 
