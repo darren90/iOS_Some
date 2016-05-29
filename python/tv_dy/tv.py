@@ -15,11 +15,51 @@ class spider(object):
 #getsource用来获取网页源代码
     def getsource(self,url):
         response = requests.get(url)
-        response.encoding = 'utf-8'
+        response.encoding = 'gb2312'
         return response.text
 
 # http://www.hltm.tv/list/7.html
 # http://www.hltm.tv/list/7_2.html
+
+    def get_all_categorys(self,url):
+        all_categorys = []
+        all_categorys.append(url)
+        html = mySpider.getsource(url)
+        soup = BeautifulSoup(html, "html.parser",from_encoding='utf-8') 
+        links = soup.find('div',class_="co_content2").find_all('table')
+        for link in links:
+            # new_urls = link.find_all("td")
+            # for new_url in new_urls:
+                # print type(new_url)
+            if link.get_text() is not None:
+                print 'sdf'
+                # print type(link)
+                # print len(link.contents)
+                for sub_link in link.contents:
+                    if sub_link is None:
+                        break
+                    # print sub_link
+                    for sub_sub_link in sub_link.find_all("td"):
+                        print sub_sub_link
+
+                    # print len(sub_link.find_all("td"))
+                # print link.find('td').find('a')['href']
+                # print link.get_text()
+                print '--------'
+            # print link['href']  
+                # print new_url
+            # print type(url)
+
+        # pages_arary = []
+        # pages_arary.append(url)
+        # count = 2
+        # for i in range(1,total_page):
+        #     new_url = keyStr + '_%d' % count + ".html"
+        #     new_full_url = urlparse.urljoin(url,new_url)
+        #     # print new_full_url
+        #     pages_arary.append(new_full_url)
+        #     count = count + 1
+        return all_categorys
 
 #changepage用来生产不同页数的链接
     def changepage(self,url,keyStr,total_page):
@@ -90,42 +130,33 @@ class spider(object):
      return res_array
  
 if __name__ == '__main__':
-    fout = open('output2.sql','w')
+    fout = open('output_dy.sql','w')
     fialCount = 1
     count = 1
     classinfo = []
-    url = 'http://www.hltm.tv/list/18.html'#'http://www.hltm.tv/list/7.html'#'http://www.hltm.tv/list/18.html'
+    url = 'http://www.dy2018.com/html/dongman/hy/index.html' 
     mySpider = spider()
-    all_pages = mySpider.changepage(url,"18",300) #所有的页面 
-    all_links = mySpider.getAllLines(all_pages)
-    for link in all_links:
-        # print link
-        try:
-            html = mySpider.getsource(link)
-            res_array = mySpider.parse_html_data(html)
-            for res_data in res_array:
-                fout.write(res_data["sql"].encode('utf-8') + '\n')
-            count = count +1
-        except Exception as e:
-            if fialCount == 10200:
-                fout.close()
-                break
-            fialCount = fialCount + 1
-            count = count +1
-            fout.write("-- Craw fail %d " % count + '\n')
-            print '-- Craw fail %d ,excepton:%s' % (count,e)
+    mySpider.get_all_categorys(url)
+    # all_pages = mySpider.changepage(url,"18",300) #所有的页面 
+    # all_links = mySpider.getAllLines(all_pages)
+    # for link in all_links:
+    #     # print link
+    #     try:
+    #         html = mySpider.getsource(link)
+    #         res_array = mySpider.parse_html_data(html)
+    #         for res_data in res_array:
+    #             fout.write(res_data["sql"].encode('utf-8') + '\n')
+    #         count = count +1
+    #     except Exception as e:
+    #         if fialCount == 10200:
+    #             fout.close()
+    #             break
+    #         fialCount = fialCount + 1
+    #         count = count +1
+    #         fout.write("-- Craw fail %d " % count + '\n')
+    #         print '-- Craw fail %d ,excepton:%s' % (count,e)
     fout.close()
-
-
-# 已完结 第一页和第二页
-# http://www.hltm.tv/list/18.html
-# http://www.hltm.tv/list/18_2.html
-
-
-# 连载中 第一页和第二页
-# http://www.hltm.tv/list/7.html
-# http://www.hltm.tv/list/7_2.html
-
+ 
 
 
 

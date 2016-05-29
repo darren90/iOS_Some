@@ -8,6 +8,7 @@
 
 #import "Mp3Tool.h"
 #import "MusicModel.h"
+#import "MJExtension.h"
 
 static NSArray *_musics;
 static MusicModel *_playingMusic;
