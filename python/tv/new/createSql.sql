@@ -45,6 +45,13 @@ select count(1) from fei.DBURL;
 select count(distinct tv_name) from fei.dburl
 -- 2591
 
+SELECT count(*) FROM fei.DBURL where tv_downSeries_url != '';
+-- 有用(有下载地址)的数据共计
+-- 18332
+-- 有用的数据中其中共计 2486集不同的内容
+
+-- 无效的数据共计
+-- 107
 
 
 

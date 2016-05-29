@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup
 import requests
 import re
+import types
 import urlparse
 import sys
 reload(sys)
@@ -17,52 +18,43 @@ class spider(object):
         response = requests.get(url)
         response.encoding = 'gb2312'
         return response.text
-
-# http://www.hltm.tv/list/7.html
-# http://www.hltm.tv/list/7_2.html
-
+# 得到所有的分类数据：标题 + 链接
     def get_all_categorys(self,url):
         all_categorys = []
-        all_categorys.append(url)
+        dic_f = {}
+        dic_f["url"] = url
+        dic_f["category"] = "火影忍者"
+        # 第一个分类，由于没有地址，无法加入到总数组中
+        all_categorys.append(dic_f)
         html = mySpider.getsource(url)
         soup = BeautifulSoup(html, "html.parser",from_encoding='utf-8') 
         links = soup.find('div',class_="co_content2").find_all('table')
         for link in links:
-            # new_urls = link.find_all("td")
-            # for new_url in new_urls:
-                # print type(new_url)
             if link.get_text() is not None:
-                print 'sdf'
                 # print type(link)
                 # print len(link.contents)
-                for sub_link in link.contents:
-                    if sub_link is None:
-                        break
-                    # print sub_link
-                    for sub_sub_link in sub_link.find_all("td"):
-                        print sub_sub_link
-
-                    # print len(sub_link.find_all("td"))
-                # print link.find('td').find('a')['href']
-                # print link.get_text()
-                print '--------'
-            # print link['href']  
-                # print new_url
-            # print type(url)
-
-        # pages_arary = []
-        # pages_arary.append(url)
-        # count = 2
-        # for i in range(1,total_page):
-        #     new_url = keyStr + '_%d' % count + ".html"
-        #     new_full_url = urlparse.urljoin(url,new_url)
-        #     # print new_full_url
-        #     pages_arary.append(new_full_url)
-        #     count = count + 1
+                for sub_link in link.find_all('td'):
+                    if sub_link is None or sub_link == '':
+                        continue
+                    # print type(sub_link)
+                    tag_a = sub_link.find('a')
+                    if tag_a is None:
+                      continue
+                    # 类别的名称
+                    title = sub_link.get_text().strip('\n')
+                    # 类别对应的链接地址
+                    new_url = tag_a['href']
+                    full_url = urlparse.urljoin(url,new_url)
+                    full_url = full_url + 'index.html'
+                    # print '%s - %s ' % (title , full_url)
+                    all_dic = {}
+                    all_dic["url"]= full_url
+                    all_dic["category"] = title
+                    all_categorys.append(all_dic)
         return all_categorys
 
-#changepage用来生产不同页数的链接
-    def changepage(self,url,keyStr,total_page):
+#得到所有的待爬取的链接
+    def get_all_url(self,categorys):
         pages_arary = []
         pages_arary.append(url)
         # regex = re.compile(r"/\d+\.html")
@@ -136,7 +128,10 @@ if __name__ == '__main__':
     classinfo = []
     url = 'http://www.dy2018.com/html/dongman/hy/index.html' 
     mySpider = spider()
-    mySpider.get_all_categorys(url)
+    categorys =  mySpider.get_all_categorys(url)
+    for res_data in categorys:
+      # print res_data['url'].encode('utf-8')
+    # print len(categorys)
     # all_pages = mySpider.changepage(url,"18",300) #所有的页面 
     # all_links = mySpider.getAllLines(all_pages)
     # for link in all_links:
