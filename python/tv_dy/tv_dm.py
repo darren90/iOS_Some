@@ -18,37 +18,6 @@ class spider(object):
         response = requests.get(url)
         response.encoding = 'gb2312'
         return response.text
-# 得到所有的分类数据：标题 + 链接
-    # def get_all_categorys(self,url):
-    #     all_categorys = []
-    #     # 第一个分类，由于没有地址，无法加入到总数组中
-    #     all_categorys.append(dic_f)
-    #     html = mySpider.getsource(url)
-    #     soup = BeautifulSoup(html, "html.parser",from_encoding='utf-8') 
-    #     links = soup.find('div',class_="co_content2").find_all('table')
-    #     for link in links:
-    #         if link.get_text() is not None:
-    #             # print type(link)
-    #             # print len(link.contents)
-    #             for sub_link in link.find_all('td'):
-    #                 if sub_link is None or sub_link == '':
-    #                     continue
-    #                 # print type(sub_link)
-    #                 tag_a = sub_link.find('a')
-    #                 if tag_a is None:
-    #                   continue
-    #                 # 类别的名称
-    #                 title = sub_link.get_text().strip('\n')
-    #                 # 类别对应的链接地址
-    #                 new_url = tag_a['href']
-    #                 full_url = urlparse.urljoin(url,new_url)
-    #                 full_url = full_url + 'index.html'
-    #                 # print '%s - %s ' % (title , full_url)
-    #                 all_dic = {}
-    #                 all_dic["url"]= full_url
-    #                 all_dic["category"] = title
-    #                 all_categorys.append(all_dic)
-    #     return all_categorys
 
 #得到所有的待爬取的链接
     def get_all_pages(self,url,total_page):
@@ -62,6 +31,7 @@ class spider(object):
             pages_arary.append(new_full_url)
             count = count + 1
         return pages_arary
+        
 # 获取每个页面待爬取的item具体内容的链接
     def get_all_urls(self,all_pages):
        links_arary = [] #set()
@@ -145,7 +115,7 @@ class spider(object):
         url = link.get_text().replace(" ","").replace("\"","\'").replace("\t","").replace('\n','').replace(' ','').strip().lstrip().rstrip(',')   
         # print 'url:%s' % url 
         # ftp://bbs.forlu.com_free:forlu_2ra6r@ftp.forlu.com/new/03.12/" target="_blank
-        url = url.replace("\" target=\"_blank","").replace("\<a%20href=\\","")
+        url = url.replace("\" target=\"_blank","").replace("<a%20href=\\","").replace("\\","\\\\")
         sql = "insert into DYURL (tv_name,tv_iconUrl,tv_state,tv_viewcount,tv_type,tv_dub,tv_showtime,tv_updatetime,tv_info,tv_downType,tv_downSeries,tv_downSeries_url) \
              values (\"%s\",'%s',\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");" % (t_title,"","",t_time,"","","",t_time,t_info,"", "", url)
         res_data["sql"] = sql
