@@ -10,22 +10,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TFMp3Player/Classes/Tools/Mp3Tool.m"
-            timestampString = "485793372.719462"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "+scanMusics2:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TFMp3Player/Classes/Tools/Mp3Tool.m"
             timestampString = "485793360.933835"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

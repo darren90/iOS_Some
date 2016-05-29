@@ -75,7 +75,6 @@ static MusicModel *_playingMusic;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray *tempArray = [fileManager contentsOfDirectoryAtPath:path error:nil];
     for (NSString *fileName in tempArray) {
-        
         NSLog(@"--:%@",fileName);
 //        MovieFile *movieFile = [[MovieFile alloc]init];
 //        UIImage *imgData ;
