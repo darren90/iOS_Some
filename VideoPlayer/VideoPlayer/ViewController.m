@@ -57,9 +57,12 @@
     //    NSURL *url = [[NSBundle mainBundle] URLForResource:@"minion_06.mkv" withExtension:nil];
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
     NSString *urlStr = [path stringByAppendingPathComponent:@"minion_06.mkv"];
-    urlStr = [path stringByAppendingPathComponent:@"passenger_nginx.mov"];
+    urlStr = [path stringByAppendingPathComponent:@"33.mov"];
     urlStr = [path stringByAppendingPathComponent:@"11.rmvb"];
-        urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+    urlStr = [path stringByAppendingPathComponent:@"66.mkv"];
+    urlStr = [path stringByAppendingPathComponent:@"666.mkv"];
+
+//        urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
     
     NSURL *url = [NSURL fileURLWithPath:urlStr];
     return url;

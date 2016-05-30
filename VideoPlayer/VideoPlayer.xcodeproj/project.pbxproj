@@ -161,19 +161,8 @@
 		FEA3E7ED1CFC6CA100513066 = {
 			isa = PBXGroup;
 			children = (
-				FEA3E8571CFC71FB00513066 /* libiconv.tbd */,
-				FEA3E8551CFC71F100513066 /* libstdc++.tbd */,
-				FEA3E8531CFC71E800513066 /* libbz2.tbd */,
-				FEA3E8511CFC71DB00513066 /* libz.tbd */,
-				FEA3E84F1CFC71D000513066 /* QuartzCore.framework */,
-				FEA3E84D1CFC71C900513066 /* OpenGLES.framework */,
-				FEA3E84B1CFC71A600513066 /* Foundation.framework */,
-				FEA3E8491CFC71A000513066 /* CoreVideo.framework */,
-				FEA3E8471CFC719700513066 /* CoreMedia.framework */,
-				FEA3E8451CFC719200513066 /* CoreGraphics.framework */,
-				FEA3E8431CFC717600513066 /* AudioToolbox.framework */,
-				FEA3E8411CFC716E00513066 /* AVFoundation.framework */,
 				FEA3E7F81CFC6CA100513066 /* VideoPlayer */,
+				FEA3E8B71CFC7DA300513066 /* Frameworks */,
 				FEA3E8121CFC6CA200513066 /* VideoPlayerTests */,
 				FEA3E81D1CFC6CA200513066 /* VideoPlayerUITests */,
 				FEA3E7F71CFC6CA100513066 /* Products */,
@@ -289,6 +278,25 @@
 				FEA3E85F1CFC732400513066 /* VSegmentSlider.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FEA3E8B71CFC7DA300513066 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEA3E8571CFC71FB00513066 /* libiconv.tbd */,
+				FEA3E8551CFC71F100513066 /* libstdc++.tbd */,
+				FEA3E8531CFC71E800513066 /* libbz2.tbd */,
+				FEA3E8511CFC71DB00513066 /* libz.tbd */,
+				FEA3E84F1CFC71D000513066 /* QuartzCore.framework */,
+				FEA3E84D1CFC71C900513066 /* OpenGLES.framework */,
+				FEA3E84B1CFC71A600513066 /* Foundation.framework */,
+				FEA3E8491CFC71A000513066 /* CoreVideo.framework */,
+				FEA3E8471CFC719700513066 /* CoreMedia.framework */,
+				FEA3E8451CFC719200513066 /* CoreGraphics.framework */,
+				FEA3E8431CFC717600513066 /* AudioToolbox.framework */,
+				FEA3E8411CFC716E00513066 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
