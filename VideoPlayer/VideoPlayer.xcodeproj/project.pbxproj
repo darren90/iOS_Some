@@ -10,8 +10,8 @@
 		894480E61CFD8692006AD7CE /* TFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E11CFD8692006AD7CE /* TFUtilities.m */; };
 		894480E71CFD8692006AD7CE /* TFVAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E31CFD8692006AD7CE /* TFVAppInfo.m */; };
 		894480E81CFD8692006AD7CE /* TFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E51CFD8692006AD7CE /* TFVSegmentSlider.m */; };
-		894480EC1CFD8B5E006AD7CE /* TFPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480EA1CFD8B5E006AD7CE /* TFPlayerController.m */; };
-		894480ED1CFD8B5E006AD7CE /* TFPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894480EB1CFD8B5E006AD7CE /* TFPlayerController.xib */; };
+		894480EC1CFD8B5E006AD7CE /* TFPlayerController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480EA1CFD8B5E006AD7CE /* TFPlayerController2.m */; };
+		894480ED1CFD8B5E006AD7CE /* TFPlayerController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 894480EB1CFD8B5E006AD7CE /* TFPlayerController2.xib */; };
 		FEA3E7FB1CFC6CA100513066 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3E7FA1CFC6CA100513066 /* main.m */; };
 		FEA3E7FE1CFC6CA100513066 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3E7FD1CFC6CA100513066 /* AppDelegate.m */; };
 		FEA3E8011CFC6CA100513066 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3E8001CFC6CA100513066 /* ViewController.m */; };
@@ -46,6 +46,8 @@
 		FEA3E86D1CFC736500513066 /* pb-seek-bar-btn@2x.bak.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA3E8691CFC736500513066 /* pb-seek-bar-btn@2x.bak.png */; };
 		FEA3E86E1CFC736500513066 /* pb-seek-bar-btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA3E86A1CFC736500513066 /* pb-seek-bar-btn@2x.png */; };
 		FEA3E86F1CFC736500513066 /* pb-seek-bar-fr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEA3E86B1CFC736500513066 /* pb-seek-bar-fr@2x.png */; };
+		FEA3E8BB1CFDC5EB00513066 /* TFPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3E8B91CFDC5EB00513066 /* TFPlayerController.m */; };
+		FEA3E8BC1CFDC5EB00513066 /* TFPlayerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEA3E8BA1CFDC5EB00513066 /* TFPlayerController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,9 +74,9 @@
 		894480E31CFD8692006AD7CE /* TFVAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVAppInfo.m; sourceTree = "<group>"; };
 		894480E41CFD8692006AD7CE /* TFVSegmentSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVSegmentSlider.h; sourceTree = "<group>"; };
 		894480E51CFD8692006AD7CE /* TFVSegmentSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVSegmentSlider.m; sourceTree = "<group>"; };
-		894480E91CFD8B5E006AD7CE /* TFPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayerController.h; sourceTree = "<group>"; };
-		894480EA1CFD8B5E006AD7CE /* TFPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPlayerController.m; sourceTree = "<group>"; };
-		894480EB1CFD8B5E006AD7CE /* TFPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFPlayerController.xib; sourceTree = "<group>"; };
+		894480E91CFD8B5E006AD7CE /* TFPlayerController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayerController2.h; sourceTree = "<group>"; };
+		894480EA1CFD8B5E006AD7CE /* TFPlayerController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPlayerController2.m; sourceTree = "<group>"; };
+		894480EB1CFD8B5E006AD7CE /* TFPlayerController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFPlayerController2.xib; sourceTree = "<group>"; };
 		FEA3E7F61CFC6CA100513066 /* VideoPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA3E7FA1CFC6CA100513066 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEA3E7FC1CFC6CA100513066 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +132,9 @@
 		FEA3E86A1CFC736500513066 /* pb-seek-bar-btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pb-seek-bar-btn@2x.png"; sourceTree = "<group>"; };
 		FEA3E86B1CFC736500513066 /* pb-seek-bar-fr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pb-seek-bar-fr@2x.png"; sourceTree = "<group>"; };
 		FEA3E8701CFC73F400513066 /* PlayerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerControllerDelegate.h; sourceTree = "<group>"; };
+		FEA3E8B81CFDC5EB00513066 /* TFPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayerController.h; sourceTree = "<group>"; };
+		FEA3E8B91CFDC5EB00513066 /* TFPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPlayerController.m; sourceTree = "<group>"; };
+		FEA3E8BA1CFDC5EB00513066 /* TFPlayerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFPlayerController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,9 +180,12 @@
 		894480DF1CFD865C006AD7CE /* TFUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				894480E91CFD8B5E006AD7CE /* TFPlayerController.h */,
-				894480EA1CFD8B5E006AD7CE /* TFPlayerController.m */,
-				894480EB1CFD8B5E006AD7CE /* TFPlayerController.xib */,
+				FEA3E8B81CFDC5EB00513066 /* TFPlayerController.h */,
+				FEA3E8B91CFDC5EB00513066 /* TFPlayerController.m */,
+				FEA3E8BA1CFDC5EB00513066 /* TFPlayerController.xib */,
+				894480E91CFD8B5E006AD7CE /* TFPlayerController2.h */,
+				894480EA1CFD8B5E006AD7CE /* TFPlayerController2.m */,
+				894480EB1CFD8B5E006AD7CE /* TFPlayerController2.xib */,
 				894480E01CFD8692006AD7CE /* TFUtilities.h */,
 				894480E11CFD8692006AD7CE /* TFUtilities.m */,
 				894480E21CFD8692006AD7CE /* TFVAppInfo.h */,
@@ -435,8 +443,9 @@
 			files = (
 				FEA3E86F1CFC736500513066 /* pb-seek-bar-fr@2x.png in Resources */,
 				FEA3E8091CFC6CA100513066 /* LaunchScreen.storyboard in Resources */,
-				894480ED1CFD8B5E006AD7CE /* TFPlayerController.xib in Resources */,
+				894480ED1CFD8B5E006AD7CE /* TFPlayerController2.xib in Resources */,
 				FEA3E8061CFC6CA100513066 /* Assets.xcassets in Resources */,
+				FEA3E8BC1CFDC5EB00513066 /* TFPlayerController.xib in Resources */,
 				FEA3E86D1CFC736500513066 /* pb-seek-bar-btn@2x.bak.png in Resources */,
 				FEA3E8401CFC715A00513066 /* LICENSE in Resources */,
 				FEA3E8671CFC732D00513066 /* PlayerController.xib in Resources */,
@@ -467,13 +476,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA3E8BB1CFDC5EB00513066 /* TFPlayerController.m in Sources */,
 				FEA3E8621CFC732400513066 /* VSegmentSlider.m in Sources */,
 				FEA3E8611CFC732400513066 /* VAppInfo.m in Sources */,
 				FEA3E8011CFC6CA100513066 /* ViewController.m in Sources */,
 				FEA3E7FE1CFC6CA100513066 /* AppDelegate.m in Sources */,
 				894480E61CFD8692006AD7CE /* TFUtilities.m in Sources */,
 				894480E81CFD8692006AD7CE /* TFVSegmentSlider.m in Sources */,
-				894480EC1CFD8B5E006AD7CE /* TFPlayerController.m in Sources */,
+				894480EC1CFD8B5E006AD7CE /* TFPlayerController2.m in Sources */,
 				FEA3E7FB1CFC6CA100513066 /* main.m in Sources */,
 				FEA3E83C1CFC715A00513066 /* CHANGELOG.md in Sources */,
 				FEA3E8661CFC732D00513066 /* PlayerController.m in Sources */,
