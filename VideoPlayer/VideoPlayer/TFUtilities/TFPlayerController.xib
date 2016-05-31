@@ -10,11 +10,14 @@
             <connections>
                 <outlet property="activityCarrier" destination="stN-Ja-PhZ" id="3jO-u8-GNA"/>
                 <outlet property="backView" destination="m5a-57-qlu" id="3eZ-N6-qr3"/>
+                <outlet property="bottomControl" destination="3xv-y5-0vF" id="P3S-ps-iEy"/>
                 <outlet property="carrier" destination="LS2-Zc-nGo" id="4KR-SW-dBe"/>
                 <outlet property="curPosLbl" destination="njM-WT-4wx" id="pV3-Hb-2wf"/>
                 <outlet property="durationLbl" destination="c5E-WI-1Ku" id="oYZ-Fl-g7S"/>
                 <outlet property="progressSld" destination="OjI-p0-JJF" id="obF-3w-8Fr"/>
+                <outlet property="singleGesture" destination="0hX-e1-ic7" id="BtE-vv-dPS"/>
                 <outlet property="startPause" destination="GoE-qU-NOD" id="NzJ-OJ-eWS"/>
+                <outlet property="topControl" destination="zx0-Tw-teY" id="yOm-M5-bj2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="elx-Rv-iB5"/>
             </connections>
         </placeholder>
@@ -27,16 +30,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="437" height="224"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LS2-Zc-nGo">
-                            <rect key="frame" x="10" y="10" width="417" height="204"/>
+                            <rect key="frame" x="0.0" y="0.0" width="437" height="224"/>
                             <color key="backgroundColor" red="0.38823529410000002" green="0.56862745100000001" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.98894279230000004" green="0.72709803429999997" blue="0.35676033270000002" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstItem="LS2-Zc-nGo" firstAttribute="top" secondItem="m5a-57-qlu" secondAttribute="top" constant="10" id="Hid-li-vfd"/>
-                        <constraint firstAttribute="bottom" secondItem="LS2-Zc-nGo" secondAttribute="bottom" constant="10" id="LMl-Vy-BJT"/>
-                        <constraint firstItem="LS2-Zc-nGo" firstAttribute="leading" secondItem="m5a-57-qlu" secondAttribute="leading" constant="10" id="bnl-Lf-QJc"/>
-                        <constraint firstAttribute="trailing" secondItem="LS2-Zc-nGo" secondAttribute="trailing" constant="10" id="lXN-0g-iEs"/>
+                        <constraint firstItem="LS2-Zc-nGo" firstAttribute="top" secondItem="m5a-57-qlu" secondAttribute="top" id="Hid-li-vfd"/>
+                        <constraint firstAttribute="bottom" secondItem="LS2-Zc-nGo" secondAttribute="bottom" id="LMl-Vy-BJT"/>
+                        <constraint firstItem="LS2-Zc-nGo" firstAttribute="leading" secondItem="m5a-57-qlu" secondAttribute="leading" id="bnl-Lf-QJc"/>
+                        <constraint firstAttribute="trailing" secondItem="LS2-Zc-nGo" secondAttribute="trailing" id="lXN-0g-iEs"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zx0-Tw-teY" userLabel="TopContainer">
@@ -72,13 +75,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3xv-y5-0vF" userLabel="BottomContainer">
                     <rect key="frame" x="0.0" y="180" width="437" height="44"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoE-qU-NOD">
-                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="44" id="jdI-q1-nMN"/>
-                            </constraints>
-                            <state key="normal" image="VKVideoPlayer_pause.png"/>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njM-WT-4wx">
                             <rect key="frame" x="44" y="12" width="45" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -103,6 +99,13 @@
                                 <action selector="progressSliderUpAction:" destination="-1" eventType="touchCancel" id="ktJ-Zg-PdE"/>
                             </connections>
                         </slider>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoE-qU-NOD">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="jdI-q1-nMN"/>
+                            </constraints>
+                            <state key="normal" image="VKVideoPlayer_pause.png"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -121,11 +124,12 @@
                         <constraint firstItem="OjI-p0-JJF" firstAttribute="leading" secondItem="njM-WT-4wx" secondAttribute="trailing" id="wFo-Ps-fMU"/>
                     </constraints>
                 </view>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="stN-Ja-PhZ">
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="stN-Ja-PhZ">
                     <rect key="frame" x="208" y="102" width="20" height="20"/>
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="m5a-57-qlu" secondAttribute="trailing" id="1VO-PW-pT7"/>
                 <constraint firstAttribute="trailing" secondItem="zx0-Tw-teY" secondAttribute="trailing" id="6yZ-fe-juA"/>
@@ -148,8 +152,17 @@
                     <exclude reference="ZP4-fv-e7S"/>
                 </mask>
             </variation>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="0hX-e1-ic7" appends="YES" id="L69-cV-3eK"/>
+            </connections>
             <point key="canvasLocation" x="317.5" y="201"/>
         </view>
+        <tapGestureRecognizer id="0hX-e1-ic7">
+            <connections>
+                <action selector="handleSingleTap:" destination="-1" id="rtu-6q-RD4"/>
+                <outlet property="delegate" destination="-1" id="qbT-Sw-M3W"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="VKVideoPlayer_pause.png" width="17" height="17"/>

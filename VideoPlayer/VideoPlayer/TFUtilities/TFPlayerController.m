@@ -17,7 +17,11 @@
     long               mDuration;
     long               mCurPostion;
     NSTimer            *mSyncSeekTimer;
+    
+//    IBOutlet UITapGestureRecognizer *singleGesture;//单击手势
+//    IBOutlet UITapGestureRecognizer *doubleGesture;//双击手势
 }
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *singleGesture;
 
 @property (nonatomic, assign) IBOutlet UIButton *startPause;
 @property (nonatomic, assign) IBOutlet UIButton *prevBtn;
@@ -37,6 +41,8 @@
 @property (nonatomic, retain) UIActivityIndicatorView *activityView;
 @property (nonatomic, assign) BOOL progressDragging;
 
+@property (weak, nonatomic) IBOutlet UIView *topControl;
+@property (weak, nonatomic) IBOutlet UIView *bottomControl;
 
 -(IBAction)goBackButtonAction:(id)sender;
 
@@ -56,7 +62,8 @@
 -(IBAction)progressSliderUpAction:(id)sender;
 -(IBAction)dragProgressSliderAction:(id)sender;
 
-
+#pragma mark - 单击手势
+- (IBAction)handleSingleTap:(id)sender;
 @end
 
 
@@ -663,6 +670,24 @@
 														error:NULL];
     }
 	return cache;
+}
+
+#pragma mark - 处理手势 - 单击 : 隐藏子控件
+- (IBAction)handleSingleTap:(id)sender {
+    //    if (self.isSmallPlayShow) {//小屏幕播放器，直接返回不再隐藏
+    //        self.screenLockButton.hidden = YES;
+    //        return;
+    //    }
+//    if (self.isLockBtnEnable) {
+//        return;
+//    }
+//    [self setControlsHidden:!self.isControlsHidden];
+//    if (!self.isControlsHidden) {
+//        self.controlHideCountdown = [self.playerControlsAutoHideTime integerValue];
+//    }
+//    [self.delegate playerViewSingleTapped];
+    self.topControl.hidden = !self.topControl.hidden;
+    self.bottomControl.hidden = !self.bottomControl.hidden;
 }
 
 @end
