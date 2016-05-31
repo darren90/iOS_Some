@@ -59,12 +59,23 @@ class spider(object):
             # 标题
             t_title = link.get_text().replace(" ","").replace("\"","\'").replace("\t","").replace('\n','').replace(' ','').strip().lstrip().rstrip(',')  
 
-            # 图标链接
-            t_iconurl = link.find('a').find('img')['data-src'] 
-
             # 下一个页面的链接
             t_url = link.find('a')['href']
             t_full_url = urlparse.urljoin(page_url,t_url)
+
+            # 图标链接
+            t_iconurl = ""
+            t_iconurl_u = link.find('a').find('img')
+            if t_iconurl_u is not None:
+                print '=====--star----'
+                print t_title
+                print t_url
+                print link.find('a').find('img')
+                print t_iconurl
+                print '-----uuuuu----rrrr'
+                t_iconurl = t_iconurl_u['src'] 
+
+
             # print t_url
             # print t_full_url
             # print '------end ======'
@@ -80,7 +91,8 @@ class spider(object):
      t_iconurl = link_dic["iconurl"]
      t_title = link_dic["title"]
      t_playurl = link_dic["playurl"] # 带爬去下载地址的文件
-     print t_playurl
+
+     print '--- 爬去页面：%s-%s' % (t_title,t_playurl)
      html = mySpider.getsource(t_playurl)
      if html is None:
         return
@@ -96,14 +108,15 @@ class spider(object):
      t_info = content.find('p').get_text().replace(" ","").replace("\"","\'").replace("\t","").replace('\n','').replace(' ','').strip().lstrip().rstrip(',')  
      # print t_info
      # print '---ddddd---'
-     sql = "insert into BDURL (tv_name,tv_iconUrl,tv_info,tv_playurl) \
-             values (\"%s\",\"%s\",\"%s\",\"%s\");" % (t_title,t_iconurl,t_info,t_playurl)
+     sql = "insert into BDURL (tv_name,tv_iconUrl,tv_type,tv_info,tv_playurl) \
+             values (\"%s\",\"%s\",\"%s\",\"%s\",\"%s\");" % (t_title,t_iconurl,"MAD·AMV",t_info,t_playurl)
      res_data["sql"] = sql
+     print sql
      # res_array.append(res_data)
 
-     links = content.find_all('li')
-     for link in links:
-        print link.get_text()
+     # links = content.find_all('li')
+     # for link in links:
+     #    print link.get_text()
 #         res_data = {}
 #         url = link.get_text().replace(" ","").replace("\"","\'").replace("\t","").replace('\n','').replace(' ','').strip().lstrip().rstrip(',')   
 #         # print 'url:%s' % url 

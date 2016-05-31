@@ -11,6 +11,9 @@
 
 #import "PlayerController.h"
 #import "PlayerControllerDelegate.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AVFoundation/AVAsset.h>
+#import "TFPlayerController.h"
 
 @interface ViewController () <PlayerControllerDelegate>
 @property (nonatomic, assign)          int          isPlay2;
@@ -37,7 +40,7 @@
 
 -(void)pplayer
 {
-    PlayerController *playerCtrl = [[PlayerController alloc] initWithNibName:nil bundle:nil];
+    TFPlayerController *playerCtrl = [[TFPlayerController alloc] initWithNibName:nil bundle:nil];
     playerCtrl.delegate = self;
 //    [self presentModalViewController:playerCtrl animated:YES];
     [self presentViewController:playerCtrl animated:YES completion:nil];
@@ -50,27 +53,64 @@
 {
     NSString *uurl = @"http://ws.acgvideo.com/6/0e/3856792-1hd.mp4?wsTime=1464629496&wsSecret2=5ca5abea9949762d303179bbcfde8cd9&oi=2043096855&player=1&or=3078717850";
 //    uurl = @"http://www.renren66.com/play/getty.php?id=8Ct8fA1H2lBZlfUdduMH5ly@h95wYSc";
-    uurl = @"http://ws.acgvideo.com/6/0e/3856792-1.mp4?wsTime=1464629487&wsSecret2=bbed938bbefd221da54cd39d9ea1595d&oi=2043096855&player=1&or=3078717850";
-    if (self.isPlay2) {
-        return [NSURL URLWithString:uurl];
-    }
-    //    NSURL *url = [[NSBundle mainBundle] URLForResource:@"minion_06.mkv" withExtension:nil];
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
-    NSString *urlStr = [path stringByAppendingPathComponent:@"minion_06.mkv"];
-    urlStr = [path stringByAppendingPathComponent:@"33.mov"];
-    urlStr = [path stringByAppendingPathComponent:@"11.rmvb"];
-    urlStr = [path stringByAppendingPathComponent:@"66.mkv"];
-    urlStr = [path stringByAppendingPathComponent:@"666.mkv"];
-
-//        urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+    uurl = @"http://cn-hbjz1-dx.acgvideo.com/vg19/5/9f/4189690hd.mp4?expires=1464693600&ssig=Wm1twBvhB3nDvgNIREJM9A&oi=2095617680&player=1&or=3662449045&rate=0";
     
-    NSURL *url = [NSURL fileURLWithPath:urlStr];
+    NSURL *url ;
+    
+    if (self.isPlay2) {
+        url = [NSURL URLWithString:uurl];
+    }else{
+        //    NSURL *url = [[NSBundle mainBundle] URLForResource:@"minion_06.mkv" withExtension:nil];
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
+        NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+//        urlStr = [path stringByAppendingPathComponent:@"33.mov"];
+//        urlStr = [path stringByAppendingPathComponent:@"11.rmvb"];
+//        urlStr = [path stringByAppendingPathComponent:@"66.mkv"];
+        //        urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+        
+        url = [NSURL fileURLWithPath:urlStr];
+    }
+    
+#pragma mark - 获取视频文件的长度
+    //    AVURLAsset *avUrl = [AVURLAsset assetWithURL:url];
+    //    CMTime time = [avUrl duration];
+    //    double seconds = ceil(time.value/time.timescale);
+    //    NSLog(@"duration:%f,%lld,%d",seconds,time.value,time.timescale);
+    
+//    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:url];
+//    CMTime duration = playerItem.duration;
+//    float seconds = CMTimeGetSeconds(duration);
+//    NSLog(@"duration: %.2f", seconds);
+    
+    //    AVURLAsset* audioAsset = [AVURLAsset URLAssetWithURL:audioFileURL options:nil];
+    //    CMTime audioDuration = audioAsset.duration;
+    //    float audioDurationSeconds = CMTimeGetSeconds(audioDuration);
+    
+    
+//    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:url
+//                                                options:[NSDictionary dictionaryWithObjectsAndKeys:
+//                                                         [NSNumber numberWithBool:YES],
+//                                                         AVURLAssetPreferPreciseDurationAndTimingKey,
+//                                                         nil]];
+//    NSTimeInterval durationInSeconds = 0.0;
+//    if (asset)
+//        durationInSeconds = CMTimeGetSeconds(asset.duration) ;
+//    NSLog(@"videoDuration: %.2f", durationInSeconds);
+    
+//    AVPlayer *avPlayer = [[AVPlayer alloc]initWithURL:url];
+//    [avPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, 1) queue:NULL usingBlock:^(CMTime time){
+//        double seconds = ceil(time.value/time.timescale);
+//        NSLog(@"duration:%f,%lld,%d",seconds,time.value,time.timescale);
+//    }];
+
+    
+    AVAsset *movie = [AVAsset assetWithURL:url];
+    CMTime time = movie.duration;
+    double seconds = ceil(time.value/time.timescale);
+    NSLog(@"duration:%f,%lld,%d",seconds,time.value,time.timescale);
+    
     return url;
     
-    //	int num = sizeof(sMediaURLs) / sizeof(sMediaURLs[0]);
-    //	sCurrPlayIdx = (sCurrPlayIdx + num) % num;
-    //	NSString *v = sMediaURLs[sCurrPlayIdx];
-    //	return [NSURL URLWithString:[v stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 }
 
 - (NSURL *)playCtrlGetNextMediaTitle:(NSString **)title lastPlayPos:(long *)lastPlayPos
