@@ -37,6 +37,26 @@
 @property (nonatomic, retain) UIActivityIndicatorView *activityView;
 @property (nonatomic, assign) BOOL progressDragging;
 
+
+-(IBAction)goBackButtonAction:(id)sender;
+
+-(IBAction)startPauseButtonAction:(id)sender;
+
+-(IBAction)prevButtonAction:(id)sender;
+
+-(IBAction)nextButtonAction:(id)sender;
+
+#pragma mark - 切换Model
+-(IBAction)switchVideoViewModeButtonAction:(id)sender;
+#pragma mark - reset
+-(IBAction)resetButtonAction:(id)sender;
+
+#pragma mark - 进度条相关
+-(IBAction)progressSliderDownAction:(id)sender;
+-(IBAction)progressSliderUpAction:(id)sender;
+-(IBAction)dragProgressSliderAction:(id)sender;
+
+
 @end
 
 
@@ -486,6 +506,7 @@
 	}
 }
 
+#pragma mark - 切换Model
 -(IBAction)switchVideoViewModeButtonAction:(id)sender
 {
 	static emVMVideoFillMode modes[] = {
@@ -500,6 +521,7 @@
 	[mMPayer setVideoFillMode:modes[curModeIdx]];
 }
 
+#pragma mark - reset
 -(IBAction)resetButtonAction:(id)sender
 {
 	static int bigView = 0;

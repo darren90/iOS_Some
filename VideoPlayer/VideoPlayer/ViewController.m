@@ -13,7 +13,7 @@
 #import "PlayerControllerDelegate.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AVFoundation/AVAsset.h>
-#import "TFPlayerController2.h"
+#import "TFPlayerController.h"
 
 @interface ViewController () <PlayerControllerDelegate>
 @property (nonatomic, assign)          int          isPlay2;
@@ -40,7 +40,7 @@
 
 -(void)pplayer
 {
-    TFPlayerController2 *playerCtrl = [[TFPlayerController2 alloc] initWithNibName:nil bundle:nil];
+    TFPlayerController *playerCtrl = [[TFPlayerController alloc] init];
     playerCtrl.delegate = self;
 //    [self presentModalViewController:playerCtrl animated:YES];
     [self presentViewController:playerCtrl animated:YES completion:nil];
