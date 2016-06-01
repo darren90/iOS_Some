@@ -82,13 +82,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5E-WI-1Ku">
-                            <rect key="frame" x="196" y="12" width="45" height="21"/>
+                            <rect key="frame" x="312" y="12" width="45" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OjI-p0-JJF" customClass="VSegmentSlider">
-                            <rect key="frame" x="87" y="7" width="111" height="31"/>
+                            <rect key="frame" x="95" y="7" width="211" height="31"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="TME-6n-UnM"/>
                             </constraints>
@@ -105,24 +105,34 @@
                                 <constraint firstAttribute="width" constant="44" id="jdI-q1-nMN"/>
                             </constraints>
                             <state key="normal" image="VKVideoPlayer_pause.png"/>
+                            <connections>
+                                <action selector="startPauseButtonAction:" destination="-1" eventType="touchUpInside" id="kcH-1z-cNR"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="c5E-WI-1Ku" firstAttribute="leading" secondItem="OjI-p0-JJF" secondAttribute="trailing" id="0nw-6b-c2s"/>
+                        <constraint firstItem="c5E-WI-1Ku" firstAttribute="leading" secondItem="OjI-p0-JJF" secondAttribute="trailing" constant="8" id="0nw-6b-c2s"/>
                         <constraint firstItem="njM-WT-4wx" firstAttribute="centerY" secondItem="3xv-y5-0vF" secondAttribute="centerY" id="65c-7X-E66"/>
                         <constraint firstAttribute="bottom" secondItem="GoE-qU-NOD" secondAttribute="bottom" id="Eoq-1H-17E"/>
                         <constraint firstItem="c5E-WI-1Ku" firstAttribute="firstBaseline" secondItem="njM-WT-4wx" secondAttribute="firstBaseline" id="WFw-qK-44W"/>
                         <constraint firstItem="c5E-WI-1Ku" firstAttribute="baseline" secondItem="njM-WT-4wx" secondAttribute="baseline" id="XIb-A6-g3Z"/>
                         <constraint firstItem="c5E-WI-1Ku" firstAttribute="top" secondItem="3xv-y5-0vF" secondAttribute="top" constant="12" id="Xm8-iy-ztE"/>
                         <constraint firstItem="njM-WT-4wx" firstAttribute="leading" secondItem="GoE-qU-NOD" secondAttribute="trailing" id="YMa-RH-hyD"/>
+                        <constraint firstAttribute="trailing" secondItem="c5E-WI-1Ku" secondAttribute="trailing" constant="80" id="aOj-wV-FN9"/>
                         <constraint firstItem="GoE-qU-NOD" firstAttribute="top" secondItem="3xv-y5-0vF" secondAttribute="top" id="f8C-qM-A8W"/>
                         <constraint firstAttribute="height" constant="44" id="frD-9T-A1K"/>
+                        <constraint firstItem="c5E-WI-1Ku" firstAttribute="centerY" secondItem="3xv-y5-0vF" secondAttribute="centerY" id="gxy-GU-g5d"/>
                         <constraint firstItem="OjI-p0-JJF" firstAttribute="centerY" secondItem="3xv-y5-0vF" secondAttribute="centerY" id="iJ3-Tp-v17"/>
                         <constraint firstItem="GoE-qU-NOD" firstAttribute="leading" secondItem="3xv-y5-0vF" secondAttribute="leading" id="pgV-Qh-tq0"/>
                         <constraint firstItem="c5E-WI-1Ku" firstAttribute="centerX" secondItem="3xv-y5-0vF" secondAttribute="centerX" id="w19-ad-hlA"/>
-                        <constraint firstItem="OjI-p0-JJF" firstAttribute="leading" secondItem="njM-WT-4wx" secondAttribute="trailing" id="wFo-Ps-fMU"/>
+                        <constraint firstItem="OjI-p0-JJF" firstAttribute="leading" secondItem="njM-WT-4wx" secondAttribute="trailing" constant="8" id="wFo-Ps-fMU"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="w19-ad-hlA"/>
+                        </mask>
+                    </variation>
                 </view>
                 <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="stN-Ja-PhZ">
                     <rect key="frame" x="208" y="102" width="20" height="20"/>

@@ -16,6 +16,6 @@
 
 @interface TFPlayerController : UIViewController <VMediaPlayerDelegate>
 
-@property (nonatomic, assign) id<PlayerControllerDelegate> delegate;
+@property (nonatomic, weak) id<PlayerControllerDelegate> delegate;
 
 @end

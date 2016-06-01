@@ -64,7 +64,7 @@
         NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
         NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
 //        urlStr = [path stringByAppendingPathComponent:@"33.mov"];
-//        urlStr = [path stringByAppendingPathComponent:@"11.rmvb"];
+        urlStr = [path stringByAppendingPathComponent:@"11.rmvb"];
 //        urlStr = [path stringByAppendingPathComponent:@"66.mkv"];
         //        urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
         

@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 yixia. All rights reserved.
 //
 
-#import "Utilities.h"
 #import "TFPlayerController.h"
+#import "Utilities.h"
 #import "VSegmentSlider.h"
 
 
@@ -46,6 +46,7 @@
 
 -(IBAction)goBackButtonAction:(id)sender;
 
+#pragma mark - 开始 暂停
 -(IBAction)startPauseButtonAction:(id)sender;
 
 -(IBAction)prevButtonAction:(id)sender;
@@ -61,6 +62,8 @@
 -(IBAction)progressSliderDownAction:(id)sender;
 -(IBAction)progressSliderUpAction:(id)sender;
 -(IBAction)dragProgressSliderAction:(id)sender;
+
+-(IBAction)startPauseButtonAction:(id)sender;
 
 #pragma mark - 单击手势
 - (IBAction)handleSingleTap:(id)sender;
