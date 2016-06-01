@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VideoPlayer/ViewController.m"
-            timestampString = "486378447.821569"
+            timestampString = "486466090.841623"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-playCtrlGetCurrMediaTitle:lastPlayPos:"
             landmarkType = "5">
          </BreakpointContent>
