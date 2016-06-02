@@ -7,9 +7,13 @@
 //
 
 #import "TFPlayerController.h"
-#import "Utilities.h"
-#import "VSegmentSlider.h"
+//#import "Utilities.h"
+//#import "VSegmentSlider.h"
+#import "TFUtilities.h"
+#import "TFVSegmentSlider.h"
 
+#define KTFPlayer_Btn_Play [UIImage imageNamed:@"VKVideoPlayer_play.png"]
+#define KTFPlayer_Btn_pause [UIImage imageNamed:@"VKVideoPlayer_pause.png"]
 
 @interface TFPlayerController ()
 {
@@ -22,23 +26,23 @@
 //    IBOutlet UITapGestureRecognizer *doubleGesture;//双击手势
 }
 @property (strong, nonatomic) IBOutlet UITapGestureRecognizer *singleGesture;
-
-@property (nonatomic, assign) IBOutlet UIButton *startPause;
-@property (nonatomic, assign) IBOutlet UIButton *prevBtn;
-@property (nonatomic, assign) IBOutlet UIButton *nextBtn;
-@property (nonatomic, assign) IBOutlet UIButton *modeBtn;
-@property (nonatomic, assign) IBOutlet UIButton *reset;
-@property (nonatomic, assign) IBOutlet VSegmentSlider *progressSld;
-@property (nonatomic, assign) IBOutlet UILabel  *curPosLbl;
-@property (nonatomic, assign) IBOutlet UILabel  *durationLbl;
-@property (nonatomic, assign) IBOutlet UILabel  *bubbleMsgLbl;
-@property (nonatomic, assign) IBOutlet UILabel  *downloadRate;
-@property (nonatomic, assign) IBOutlet UIView  	*activityCarrier;
-@property (nonatomic, assign) IBOutlet UIView  	*backView;
-@property (nonatomic, assign) IBOutlet UIView  	*carrier;
+/** 播放暂定按钮 */
+@property (nonatomic, weak) IBOutlet UIButton *startPause;
+@property (nonatomic, weak) IBOutlet UIButton *prevBtn;
+@property (nonatomic, weak) IBOutlet UIButton *nextBtn;
+@property (nonatomic, weak) IBOutlet UIButton *modeBtn;
+@property (nonatomic, weak) IBOutlet UIButton *reset;
+@property (nonatomic, weak) IBOutlet TFVSegmentSlider *progressSld;
+@property (nonatomic, weak) IBOutlet UILabel  *curPosLbl;
+@property (nonatomic, weak) IBOutlet UILabel  *durationLbl;
+@property (nonatomic, weak) IBOutlet UILabel  *bubbleMsgLbl;
+@property (nonatomic, weak) IBOutlet UILabel  *downloadRate;
+@property (nonatomic, weak) IBOutlet UIView  	*activityCarrier;
+@property (nonatomic, weak) IBOutlet UIView  	*backView;
+@property (nonatomic, weak) IBOutlet UIView  	*carrier;
 
 @property (nonatomic, copy)   NSURL *videoURL;
-@property (nonatomic, retain) UIActivityIndicatorView *activityView;
+@property (nonatomic, strong) UIActivityIndicatorView *activityView;
 @property (nonatomic, assign) BOOL progressDragging;
 
 @property (weak, nonatomic) IBOutlet UIView *topControl;
@@ -63,12 +67,9 @@
 -(IBAction)progressSliderUpAction:(id)sender;
 -(IBAction)dragProgressSliderAction:(id)sender;
 
--(IBAction)startPauseButtonAction:(id)sender;
-
 #pragma mark - 单击手势
 - (IBAction)handleSingleTap:(id)sender;
 @end
-
 
 
 @implementation TFPlayerController
@@ -103,7 +104,8 @@
 - (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-	[[UIApplication sharedApplication] setStatusBarHidden:YES];
+    
+//	[[UIApplication sharedApplication] setStatusBarHidden:YES];
 	[[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
 	[self becomeFirstResponder];
 
@@ -113,9 +115,14 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
-	[[UIApplication sharedApplication] setStatusBarHidden:NO];
+    
+//	[[UIApplication sharedApplication] setStatusBarHidden:NO];
 	[[UIApplication sharedApplication] endReceivingRemoteControlEvents];
     [self resignFirstResponder];
+}
+-(BOOL)prefersStatusBarHidden
+{
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -134,9 +141,13 @@
     return YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+//- (NSUInteger)supportedInterfaceOrientations
+//{
+//	return UIInterfaceOrientationMaskAll;
+//}
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
-	return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskAll;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -199,7 +210,8 @@
 	[mMPayer setVideoShown:YES];
     if (![mMPayer isPlaying]) {
 		[mMPayer start];
-		[self.startPause setTitle:@"Pause" forState:UIControlStateNormal];
+//		[self.startPause setTitle:@"Pause" forState:UIControlStateNormal];
+        [self.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
 	}
 }
 
@@ -219,8 +231,10 @@
 - (void)mediaPlayer:(VMediaPlayer *)player didPrepared:(id)arg
 {
 //	[player setVideoFillMode:VMVideoFillMode100];
+    [player setVideoFillMode:VMVideoFillModeCrop];
 
 	mDuration = [player getDuration];
+    NSLog(@"------- mDuration：%ld",mDuration);
     [player start];
 
 	[self setBtnEnableStatus:YES];
@@ -280,9 +294,10 @@
 {
 	self.progressDragging = YES;
 	NSLog(@"NAL 2HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
-	if (![Utilities isLocalMedia:self.videoURL]) {
+	if (![TFUtilities isLocalMedia:self.videoURL]) {
 		[player pause];
-		[self.startPause setTitle:@"Start" forState:UIControlStateNormal];
+//		[self.startPause setTitle:@"Start" forState:UIControlStateNormal];
+        [self.startPause setImage:KTFPlayer_Btn_Play forState:UIControlStateNormal];
 		[self startActivityWithMsg:@"Buffering... 0%"];
 	}
 }
@@ -297,9 +312,10 @@
 
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingEnd:(id)arg
 {
-	if (![Utilities isLocalMedia:self.videoURL]) {
+	if (![TFUtilities isLocalMedia:self.videoURL]) {
 		[player start];
-		[self.startPause setTitle:@"Pause" forState:UIControlStateNormal];
+//		[self.startPause setTitle:@"Pause" forState:UIControlStateNormal];
+        [self.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
 		[self stopActivity];
 	}
 	self.progressDragging = NO;
@@ -308,7 +324,7 @@
 
 - (void)mediaPlayer:(VMediaPlayer *)player downloadRate:(id)arg
 {
-	if (![Utilities isLocalMedia:self.videoURL]) {
+	if (![TFUtilities isLocalMedia:self.videoURL]) {
 		self.downloadRate.text = [NSString stringWithFormat:@"%dKB/s", [arg intValue]];
 	} else {
 		self.downloadRate.text = nil;
@@ -456,7 +472,8 @@
 -(IBAction)goBackButtonAction:(id)sender
 {
 	[self quicklyStopMovie];
-	[self dismissModalViewControllerAnimated:YES];
+//	[self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(IBAction)startPauseButtonAction:(id)sender
@@ -464,10 +481,12 @@
 	BOOL isPlaying = [mMPayer isPlaying];
 	if (isPlaying) {
 		[mMPayer pause];
-		[self.startPause setTitle:@"Start" forState:UIControlStateNormal];
+//		[self.startPause setTitle:@"Start" forState:UIControlStateNormal];
+        [self.startPause setImage:KTFPlayer_Btn_Play forState:UIControlStateNormal];
 	} else {
 		[mMPayer start];
-		[self.startPause setTitle:@"Pause" forState:UIControlStateNormal];
+//		[self.startPause setTitle:@"Pause" forState:UIControlStateNormal];
+        [self.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
 	}
 }
 
@@ -516,7 +535,7 @@
 	}
 }
 
-#pragma mark - 切换Model
+#pragma mark - 切换播放Model
 -(IBAction)switchVideoViewModeButtonAction:(id)sender
 {
 	static emVMVideoFillMode modes[] = {
@@ -551,17 +570,20 @@
 //	[self quicklyStopMovie];
 }
 
+#pragma mark - 进度条相关
+
 -(IBAction)progressSliderDownAction:(id)sender
 {
 	self.progressDragging = YES;
-	NSLog(@"NAL 4HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
-	NSLog(@"NAL 1DOW &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Touch Down");
+//	NSLog(@"NAL 4HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
+//	NSLog(@"NAL 1DOW &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Touch Down");
 }
 
 -(IBAction)progressSliderUpAction:(id)sender
 {
 	UISlider *sld = (UISlider *)sender;
-	NSLog(@"NAL 1BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", (long)(sld.value * mDuration));
+//	NSLog(@"NAL 1BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", (long)(sld.value * mDuration));
+    NSLog(@"-progressSliderUpAction--slide-value:%f,seek = %ld,t:%@",sld.value,(long)(sld.value * mDuration),[TFUtilities timeToHumanString:(long)(sld.value * mDuration)]);
 	[self startActivityWithMsg:@"Buffering"];
 	[mMPayer seekTo:(long)(sld.value * mDuration)];
 }
@@ -569,7 +591,8 @@
 -(IBAction)dragProgressSliderAction:(id)sender
 {
 	UISlider *sld = (UISlider *)sender;
-	self.curPosLbl.text = [Utilities timeToHumanString:(long)(sld.value * mDuration)];
+    NSLog(@"-dragProgressSliderAction--slide-value:%f",sld.value);
+	self.curPosLbl.text = [TFUtilities timeToHumanString:(long)(sld.value * mDuration)];
 }
 
 -(void)progressSliderTapped:(UIGestureRecognizer *)g
@@ -583,7 +606,7 @@
     CGFloat value = s.minimumValue + delta;
     [s setValue:value animated:YES];
     long seek = percentage * mDuration;
-	self.curPosLbl.text = [Utilities timeToHumanString:seek];
+	self.curPosLbl.text = [TFUtilities timeToHumanString:seek];
 	NSLog(@"NAL 2BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", seek);
 	[self startActivityWithMsg:@"Buffering"];
     [mMPayer seekTo:seek];
@@ -597,8 +620,8 @@
 	if (!self.progressDragging) {
 		mCurPostion  = [mMPayer getCurrentPosition];
 		[self.progressSld setValue:(float)mCurPostion/mDuration];
-		self.curPosLbl.text = [Utilities timeToHumanString:mCurPostion];
-		self.durationLbl.text = [Utilities timeToHumanString:mDuration];
+		self.curPosLbl.text = [TFUtilities timeToHumanString:mCurPostion];
+		self.durationLbl.text = [TFUtilities timeToHumanString:mDuration];
 	}
 }
 
@@ -655,8 +678,7 @@
 							   sReason, NSLocalizedFailureReasonErrorKey,
 							   nil];
 	NSError *error = [NSError errorWithDomain:@"Vitamio" code:0 userInfo:errorDict];
-	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription]
-														message:[error localizedFailureReason]
+	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[error localizedDescription] message:[error localizedFailureReason]
 													   delegate:nil
 											  cancelButtonTitle:@"OK"
 											  otherButtonTitles:nil];

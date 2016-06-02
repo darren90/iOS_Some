@@ -68,6 +68,9 @@
 		[mMPayer setupPlayerWithCarrierView:self.carrier withDelegate:self];
 		[self setupObservers];
 	}
+    
+    //add
+    self.backView.frame = self.view.bounds;
 }
 
 - (void)viewDidAppear:(BOOL)animated

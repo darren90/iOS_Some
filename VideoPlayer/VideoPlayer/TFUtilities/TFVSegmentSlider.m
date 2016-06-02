@@ -24,6 +24,7 @@
 	@synchronized(self) {
 //		[_segments release];
 //		_segments = [segs retain];
+        _segments = segs;
 		[self setNeedsDisplay];
 	}
 }
