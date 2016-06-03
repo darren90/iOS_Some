@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VideoPlayer/TFUtilities/TFPlayerController.m"
-            timestampString = "486556343.759103"
+            timestampString = "486615955.188848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
             landmarkName = "-mediaPlayer:didPrepared:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VideoPlayer/TFUtilities/TFPlayerController.m"
-            timestampString = "486556343.759103"
+            timestampString = "486615955.188848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "574"
-            endingLineNumber = "574"
+            startingLineNumber = "593"
+            endingLineNumber = "593"
             landmarkName = "-progressSliderUpAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "VideoPlayer/TFUtilities/TFPlayerController.m"
-            timestampString = "486556343.759103"
+            timestampString = "486615955.188848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "582"
-            endingLineNumber = "582"
+            startingLineNumber = "601"
+            endingLineNumber = "601"
             landmarkName = "-dragProgressSliderAction:"
             landmarkType = "5">
          </BreakpointContent>

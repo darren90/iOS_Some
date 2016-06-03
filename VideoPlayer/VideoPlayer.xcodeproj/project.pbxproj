@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		893B7F401CFFDF250059A31F /* TFPlayerController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 893B7F3F1CFFDF250059A31F /* TFPlayerController3.xib */; };
+		893B7F7B1D0174960059A31F /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 893B7F6C1D0174960059A31F /* CHANGELOG.md */; };
+		893B7F7C1D0174960059A31F /* libffmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 893B7F771D0174960059A31F /* libffmpeg.a */; };
+		893B7F7D1D0174960059A31F /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 893B7F781D0174960059A31F /* libopenssl.a */; };
+		893B7F7E1D0174960059A31F /* libVitamio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 893B7F791D0174960059A31F /* libVitamio.a */; };
+		893B7F7F1D0174960059A31F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 893B7F7A1D0174960059A31F /* LICENSE */; };
 		894480E61CFD8692006AD7CE /* TFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E11CFD8692006AD7CE /* TFUtilities.m */; };
 		894480E71CFD8692006AD7CE /* TFVAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E31CFD8692006AD7CE /* TFVAppInfo.m */; };
 		894480E81CFD8692006AD7CE /* TFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E51CFD8692006AD7CE /* TFVSegmentSlider.m */; };
@@ -21,11 +26,6 @@
 		FEA3E8091CFC6CA100513066 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA3E8071CFC6CA100513066 /* LaunchScreen.storyboard */; };
 		FEA3E8141CFC6CA200513066 /* VideoPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3E8131CFC6CA200513066 /* VideoPlayerTests.m */; };
 		FEA3E81F1CFC6CA200513066 /* VideoPlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA3E81E1CFC6CA200513066 /* VideoPlayerUITests.m */; };
-		FEA3E83C1CFC715A00513066 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = FEA3E82D1CFC715A00513066 /* CHANGELOG.md */; };
-		FEA3E83D1CFC715A00513066 /* libffmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA3E8381CFC715A00513066 /* libffmpeg.a */; };
-		FEA3E83E1CFC715A00513066 /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA3E8391CFC715A00513066 /* libopenssl.a */; };
-		FEA3E83F1CFC715A00513066 /* libVitamio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA3E83A1CFC715A00513066 /* libVitamio.a */; };
-		FEA3E8401CFC715A00513066 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FEA3E83B1CFC715A00513066 /* LICENSE */; };
 		FEA3E8421CFC716E00513066 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA3E8411CFC716E00513066 /* AVFoundation.framework */; };
 		FEA3E8441CFC717600513066 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA3E8431CFC717600513066 /* AudioToolbox.framework */; };
 		FEA3E8461CFC719200513066 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA3E8451CFC719200513066 /* CoreGraphics.framework */; };
@@ -93,6 +93,19 @@
 
 /* Begin PBXFileReference section */
 		893B7F3F1CFFDF250059A31F /* TFPlayerController3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFPlayerController3.xib; sourceTree = "<group>"; };
+		893B7F6C1D0174960059A31F /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		893B7F6F1D0174960059A31F /* VDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDefines.h; sourceTree = "<group>"; };
+		893B7F701D0174960059A31F /* Vitamio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vitamio.h; sourceTree = "<group>"; };
+		893B7F711D0174960059A31F /* VMediaExtracter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracter.h; sourceTree = "<group>"; };
+		893B7F721D0174960059A31F /* VMediaExtracterDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracterDef.h; sourceTree = "<group>"; };
+		893B7F731D0174960059A31F /* VMediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayer.h; sourceTree = "<group>"; };
+		893B7F741D0174960059A31F /* VMediaPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayerDelegate.h; sourceTree = "<group>"; };
+		893B7F751D0174960059A31F /* VPlayerManageDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPlayerManageDef.h; sourceTree = "<group>"; };
+		893B7F761D0174960059A31F /* VSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSingleton.h; sourceTree = "<group>"; };
+		893B7F771D0174960059A31F /* libffmpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffmpeg.a; sourceTree = "<group>"; };
+		893B7F781D0174960059A31F /* libopenssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopenssl.a; sourceTree = "<group>"; };
+		893B7F791D0174960059A31F /* libVitamio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVitamio.a; sourceTree = "<group>"; };
+		893B7F7A1D0174960059A31F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		894480E01CFD8692006AD7CE /* TFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUtilities.h; sourceTree = "<group>"; };
 		894480E11CFD8692006AD7CE /* TFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUtilities.m; sourceTree = "<group>"; };
 		894480E21CFD8692006AD7CE /* TFVAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVAppInfo.h; sourceTree = "<group>"; };
@@ -118,19 +131,6 @@
 		FEA3E81A1CFC6CA200513066 /* VideoPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA3E81E1CFC6CA200513066 /* VideoPlayerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerUITests.m; sourceTree = "<group>"; };
 		FEA3E8201CFC6CA200513066 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEA3E82D1CFC715A00513066 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		FEA3E8301CFC715A00513066 /* VDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDefines.h; sourceTree = "<group>"; };
-		FEA3E8311CFC715A00513066 /* Vitamio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vitamio.h; sourceTree = "<group>"; };
-		FEA3E8321CFC715A00513066 /* VMediaExtracter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracter.h; sourceTree = "<group>"; };
-		FEA3E8331CFC715A00513066 /* VMediaExtracterDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracterDef.h; sourceTree = "<group>"; };
-		FEA3E8341CFC715A00513066 /* VMediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayer.h; sourceTree = "<group>"; };
-		FEA3E8351CFC715A00513066 /* VMediaPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayerDelegate.h; sourceTree = "<group>"; };
-		FEA3E8361CFC715A00513066 /* VPlayerManageDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPlayerManageDef.h; sourceTree = "<group>"; };
-		FEA3E8371CFC715A00513066 /* VSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSingleton.h; sourceTree = "<group>"; };
-		FEA3E8381CFC715A00513066 /* libffmpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffmpeg.a; sourceTree = "<group>"; };
-		FEA3E8391CFC715A00513066 /* libopenssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopenssl.a; sourceTree = "<group>"; };
-		FEA3E83A1CFC715A00513066 /* libVitamio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVitamio.a; sourceTree = "<group>"; };
-		FEA3E83B1CFC715A00513066 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FEA3E8411CFC716E00513066 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FEA3E8431CFC717600513066 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FEA3E8451CFC719200513066 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -194,17 +194,17 @@
 				FEA3E8561CFC71F100513066 /* libstdc++.tbd in Frameworks */,
 				FEA3E8541CFC71E800513066 /* libbz2.tbd in Frameworks */,
 				FEA3E8521CFC71DB00513066 /* libz.tbd in Frameworks */,
+				893B7F7D1D0174960059A31F /* libopenssl.a in Frameworks */,
 				FEA3E8501CFC71D000513066 /* QuartzCore.framework in Frameworks */,
 				FEA3E84E1CFC71C900513066 /* OpenGLES.framework in Frameworks */,
 				FEA3E8481CFC719700513066 /* CoreMedia.framework in Frameworks */,
 				FEA3E84C1CFC71A600513066 /* Foundation.framework in Frameworks */,
 				FEA3E84A1CFC71A000513066 /* CoreVideo.framework in Frameworks */,
 				FEA3E8461CFC719200513066 /* CoreGraphics.framework in Frameworks */,
+				893B7F7E1D0174960059A31F /* libVitamio.a in Frameworks */,
 				FEA3E8441CFC717600513066 /* AudioToolbox.framework in Frameworks */,
+				893B7F7C1D0174960059A31F /* libffmpeg.a in Frameworks */,
 				FEA3E8421CFC716E00513066 /* AVFoundation.framework in Frameworks */,
-				FEA3E83E1CFC715A00513066 /* libopenssl.a in Frameworks */,
-				FEA3E83D1CFC715A00513066 /* libffmpeg.a in Frameworks */,
-				FEA3E83F1CFC715A00513066 /* libVitamio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +225,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		893B7F6B1D0174960059A31F /* Vitamio-online */ = {
+			isa = PBXGroup;
+			children = (
+				893B7F6C1D0174960059A31F /* CHANGELOG.md */,
+				893B7F6D1D0174960059A31F /* include */,
+				893B7F771D0174960059A31F /* libffmpeg.a */,
+				893B7F781D0174960059A31F /* libopenssl.a */,
+				893B7F791D0174960059A31F /* libVitamio.a */,
+				893B7F7A1D0174960059A31F /* LICENSE */,
+			);
+			path = "Vitamio-online";
+			sourceTree = "<group>";
+		};
+		893B7F6D1D0174960059A31F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				893B7F6E1D0174960059A31F /* Vitamio */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		893B7F6E1D0174960059A31F /* Vitamio */ = {
+			isa = PBXGroup;
+			children = (
+				893B7F6F1D0174960059A31F /* VDefines.h */,
+				893B7F701D0174960059A31F /* Vitamio.h */,
+				893B7F711D0174960059A31F /* VMediaExtracter.h */,
+				893B7F721D0174960059A31F /* VMediaExtracterDef.h */,
+				893B7F731D0174960059A31F /* VMediaPlayer.h */,
+				893B7F741D0174960059A31F /* VMediaPlayerDelegate.h */,
+				893B7F751D0174960059A31F /* VPlayerManageDef.h */,
+				893B7F761D0174960059A31F /* VSingleton.h */,
+			);
+			path = Vitamio;
+			sourceTree = "<group>";
+		};
 		894480DF1CFD865C006AD7CE /* TFUtilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,7 +310,7 @@
 				FEA3E8691CFC736500513066 /* pb-seek-bar-btn@2x.bak.png */,
 				FEA3E86A1CFC736500513066 /* pb-seek-bar-btn@2x.png */,
 				FEA3E86B1CFC736500513066 /* pb-seek-bar-fr@2x.png */,
-				FEA3E82C1CFC715A00513066 /* Vitamio */,
+				893B7F6B1D0174960059A31F /* Vitamio-online */,
 				FEA3E8591CFC732400513066 /* Utilities */,
 				FEA3E7FC1CFC6CA100513066 /* AppDelegate.h */,
 				FEA3E7FD1CFC6CA100513066 /* AppDelegate.m */,
@@ -318,42 +354,6 @@
 				FEA3E8201CFC6CA200513066 /* Info.plist */,
 			);
 			path = VideoPlayerUITests;
-			sourceTree = "<group>";
-		};
-		FEA3E82C1CFC715A00513066 /* Vitamio */ = {
-			isa = PBXGroup;
-			children = (
-				FEA3E82D1CFC715A00513066 /* CHANGELOG.md */,
-				FEA3E82E1CFC715A00513066 /* include */,
-				FEA3E8381CFC715A00513066 /* libffmpeg.a */,
-				FEA3E8391CFC715A00513066 /* libopenssl.a */,
-				FEA3E83A1CFC715A00513066 /* libVitamio.a */,
-				FEA3E83B1CFC715A00513066 /* LICENSE */,
-			);
-			path = Vitamio;
-			sourceTree = "<group>";
-		};
-		FEA3E82E1CFC715A00513066 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				FEA3E82F1CFC715A00513066 /* Vitamio */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		FEA3E82F1CFC715A00513066 /* Vitamio */ = {
-			isa = PBXGroup;
-			children = (
-				FEA3E8301CFC715A00513066 /* VDefines.h */,
-				FEA3E8311CFC715A00513066 /* Vitamio.h */,
-				FEA3E8321CFC715A00513066 /* VMediaExtracter.h */,
-				FEA3E8331CFC715A00513066 /* VMediaExtracterDef.h */,
-				FEA3E8341CFC715A00513066 /* VMediaPlayer.h */,
-				FEA3E8351CFC715A00513066 /* VMediaPlayerDelegate.h */,
-				FEA3E8361CFC715A00513066 /* VPlayerManageDef.h */,
-				FEA3E8371CFC715A00513066 /* VSingleton.h */,
-			);
-			path = Vitamio;
 			sourceTree = "<group>";
 		};
 		FEA3E8591CFC732400513066 /* Utilities */ = {
@@ -538,7 +538,6 @@
 				FEA3E8C51CFDCBE700513066 /* TFPlayerController.xib in Resources */,
 				FEA3E8E51CFDCDDF00513066 /* VKVideoPlayer_play_big@2x.png in Resources */,
 				FEA3E8DF1CFDCDDF00513066 /* VKVideoPlayer_next@2x.png in Resources */,
-				FEA3E8401CFC715A00513066 /* LICENSE in Resources */,
 				FEA3E8C31CFDC69900513066 /* nav_btn_back_n@3x.png in Resources */,
 				FEA3E8671CFC732D00513066 /* PlayerController.xib in Resources */,
 				FEA3E8E81CFDCDDF00513066 /* VKVideoPlayer_rewind.png in Resources */,
@@ -546,6 +545,7 @@
 				FEA3E8DD1CFDCDDF00513066 /* VKVideoPlayer_cross@2x.png in Resources */,
 				FEA3E8DB1CFDCDDF00513066 /* VKVideoPlayer_close@2x.png in Resources */,
 				FEA3E8DC1CFDCDDF00513066 /* VKVideoPlayer_cross.png in Resources */,
+				893B7F7F1D0174960059A31F /* LICENSE in Resources */,
 				FEA3E8E91CFDCDDF00513066 /* VKVideoPlayer_rewind@2x.png in Resources */,
 				FEA3E8E21CFDCDDF00513066 /* VKVideoPlayer_pause.png in Resources */,
 				FEA3E8ED1CFDCDDF00513066 /* VKVideoPlayer_zoom_out@2x.png in Resources */,
@@ -589,7 +589,7 @@
 				894480E81CFD8692006AD7CE /* TFVSegmentSlider.m in Sources */,
 				894480EC1CFD8B5E006AD7CE /* TFPlayerController2.m in Sources */,
 				FEA3E7FB1CFC6CA100513066 /* main.m in Sources */,
-				FEA3E83C1CFC715A00513066 /* CHANGELOG.md in Sources */,
+				893B7F7B1D0174960059A31F /* CHANGELOG.md in Sources */,
 				FEA3E8661CFC732D00513066 /* PlayerController.m in Sources */,
 				894480E71CFD8692006AD7CE /* TFVAppInfo.m in Sources */,
 				FEA3E8601CFC732400513066 /* Utilities.m in Sources */,
@@ -740,6 +740,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VideoPlayer/Vitamio",
+					"$(PROJECT_DIR)/VideoPlayer/Vitamio-online",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -755,6 +756,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VideoPlayer/Vitamio",
+					"$(PROJECT_DIR)/VideoPlayer/Vitamio-online",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";

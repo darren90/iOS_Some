@@ -80,6 +80,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 
 	self.view.bounds = [[UIScreen mainScreen] bounds];
 	self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
@@ -93,12 +94,22 @@
     [self.progressSld setThumbImage:[UIImage imageNamed:@"pb-seek-bar-btn"] forState:UIControlStateNormal];
     [self.progressSld setMinimumTrackImage:[UIImage imageNamed:@"pb-seek-bar-fr"] forState:UIControlStateNormal];
     [self.progressSld setMaximumTrackImage:[UIImage imageNamed:@"pb-seek-bar-bg"] forState:UIControlStateNormal];
+    
+    [self initialize];
+
 
 	if (!mMPayer) {
 		mMPayer = [VMediaPlayer sharedInstance];
 		[mMPayer setupPlayerWithCarrierView:self.carrier withDelegate:self];
 		[self setupObservers];
 	}
+}
+
+
+-(void)initialize
+{
+    [self.progressSld addObserver:self forKeyPath:@"maximumValue" options:0 context:nil];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -130,11 +141,6 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)dealloc
-{
-	[self unSetupObservers];
-	[mMPayer unSetupPlayer];
-}
 
 - (BOOL)shouldAutorotate
 {
@@ -478,6 +484,8 @@
 
 -(IBAction)startPauseButtonAction:(id)sender
 {
+    NSLog(@"--pasuse-start-startPauseButtonAction--slide-value:%f,seek = %ld,t:%@",self.progressSld.value,(long)(self.progressSld.value * mDuration),[TFUtilities timeToHumanString:(long)(self.progressSld.value * mDuration)]);
+
 	BOOL isPlaying = [mMPayer isPlaying];
 	if (isPlaying) {
 		[mMPayer pause];
@@ -621,6 +629,7 @@
 		mCurPostion  = [mMPayer getCurrentPosition];
 		[self.progressSld setValue:(float)mCurPostion/mDuration];
 		self.curPosLbl.text = [TFUtilities timeToHumanString:mCurPostion];
+        NSLog(@"---syncUIStatus---:%@",[TFUtilities timeToHumanString:mCurPostion]);
 		self.durationLbl.text = [TFUtilities timeToHumanString:mDuration];
 	}
 }
@@ -715,4 +724,40 @@
     self.bottomControl.hidden = !self.bottomControl.hidden;
 }
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    NSLog(@"---kvo1:%@",@"syncUIStatus");
+
+    if (object == self.progressSld) {
+        if ([keyPath isEqualToString:@"maximumValue"]) {
+//            DDLogVerbose(@"scrubber Value change: %f", self.scrubber.value);
+//            RUN_ON_UI_THREAD(^{
+            NSLog(@"---kvo:%@",@"syncUIStatus");
+                [self syncUIStatus];
+//            });
+        }
+    }
+    
+//    if ([object isKindOfClass:[UIButton class]]) {
+//        UIButton* button = object;
+//        if ([button isDescendantOfView:self.topControlOverlay]) {
+//            [self layoutTopControls];
+//        }
+//    }
+}
+
+- (void)dealloc {
+    [self unSetupObservers];
+    [mMPayer unSetupPlayer];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.progressSld removeObserver:self forKeyPath:@"maximumValue"];
+//    [self.rewindButton removeObserver:self forKeyPath:@"hidden"];
+//    [self.nextButton removeObserver:self forKeyPath:@"hidden"];
+}
+
 @end
+
+
+
+
+

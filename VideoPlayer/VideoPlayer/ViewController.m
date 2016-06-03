@@ -56,7 +56,7 @@
 {
     NSString *uurl = @"http://ws.acgvideo.com/6/0e/3856792-1hd.mp4?wsTime=1464629496&wsSecret2=5ca5abea9949762d303179bbcfde8cd9&oi=2043096855&player=1&or=3078717850";
 //    uurl = @"http://www.renren66.com/play/getty.php?id=8Ct8fA1H2lBZlfUdduMH5ly@h95wYSc";
-    uurl = @"http://cn-zjjh10-dx.acgvideo.com/vg0/0/da/4066742.mp4?expires=1464865200&ssig=-uTJtIQgXAq-qRScoF5BYg&oi=2095617680&player=1&or=3662449045&rate=0";
+    uurl = @"http://cn-zjjh10-dx.acgvideo.com/vg0/0/da/4066742.mp4?expires=1464949500&ssig=FsBoI2SoRGKDJv5UHiYZ-A&oi=2095617680&player=1&or=3662449045&rate=0";
     
     NSURL *url ;
     
