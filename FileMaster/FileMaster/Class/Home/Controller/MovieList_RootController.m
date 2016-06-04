@@ -45,7 +45,7 @@
     // 设置tableView在编辑模式下可以多选，并且只需设置一次
 //    self.tableView.allowsMultipleSelectionDuringEditing = YES;
     
-    self.tableView.rowHeight = 80;
+    self.tableView.rowHeight = 60;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 

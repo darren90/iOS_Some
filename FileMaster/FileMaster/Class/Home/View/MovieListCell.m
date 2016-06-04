@@ -41,7 +41,7 @@
         self.iconGo.hidden = NO;
     }else{
         MovieList *list = model.file;
-        self.iconView.image = list.imgData;
+//        self.iconView.image = list.imgData;
         self.nameLabel.text = list.name;
         self.iconGo.hidden = YES;
     }

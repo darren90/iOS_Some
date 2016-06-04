@@ -50,7 +50,7 @@
     //滑动隐藏navBar
 //    self.navigationController.hidesBarsOnSwipe = YES;
     
-    self.tableView.rowHeight = 80;
+    self.tableView.rowHeight = 60;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
