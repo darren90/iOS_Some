@@ -56,7 +56,7 @@
 {
     NSString *uurl = @"http://ws.acgvideo.com/6/0e/3856792-1hd.mp4?wsTime=1464629496&wsSecret2=5ca5abea9949762d303179bbcfde8cd9&oi=2043096855&player=1&or=3078717850";
 //    uurl = @"http://www.renren66.com/play/getty.php?id=8Ct8fA1H2lBZlfUdduMH5ly@h95wYSc";
-    uurl = @"http://cn-zjjh10-dx.acgvideo.com/vg0/0/da/4066742.mp4?expires=1464949500&ssig=FsBoI2SoRGKDJv5UHiYZ-A&oi=2095617680&player=1&or=3662449045&rate=0";
+    uurl = @"http://ws.acgvideo.com/2/6e/4128842-1.mp4?wsTime=1465031180&wsSecret2=7c01920b28074dfabd49aacaab0c8883&oi=2043096855&player=1&or=2061576138";
     
     NSURL *url ;
     
@@ -68,8 +68,10 @@
         NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
 //        urlStr = [path stringByAppendingPathComponent:@"33.mov"];
         urlStr = [path stringByAppendingPathComponent:@"11.rmvb"];
-        urlStr = [path stringByAppendingPathComponent:@"666.mkv"];
-        urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+//        urlStr = [path stringByAppendingPathComponent:@"666.mkv"];
+//        urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+         urlStr = [path stringByAppendingPathComponent:@"2018.mkv"];
+
         
         url = [NSURL fileURLWithPath:urlStr];
     }

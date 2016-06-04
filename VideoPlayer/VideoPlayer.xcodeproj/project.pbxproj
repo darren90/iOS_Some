@@ -292,6 +292,7 @@
 				FEA3E7F71CFC6CA100513066 /* Products */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		FEA3E7F71CFC6CA100513066 /* Products */ = {
 			isa = PBXGroup;
@@ -485,6 +486,7 @@
 				TargetAttributes = {
 					FEA3E7F51CFC6CA100513066 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 68539G8D3N;
 					};
 					FEA3E80E1CFC6CA200513066 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -735,6 +737,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -744,6 +748,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -751,6 +756,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = VideoPlayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -760,6 +767,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.VideoPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

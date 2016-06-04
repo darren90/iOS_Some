@@ -237,7 +237,7 @@
 - (void)mediaPlayer:(VMediaPlayer *)player didPrepared:(id)arg
 {
 //	[player setVideoFillMode:VMVideoFillMode100];
-    [player setVideoFillMode:VMVideoFillModeCrop];
+    [player setVideoFillMode:VMVideoFillModeFit];//可以撑满屏幕 VMVideoFillModeCrop
 
 	mDuration = [player getDuration];
     NSLog(@"------- mDuration：%ld",mDuration);
