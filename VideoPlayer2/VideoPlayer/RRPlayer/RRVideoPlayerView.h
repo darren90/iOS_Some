@@ -15,7 +15,7 @@
 
 
 
-@protocol VKVideoPlayerViewDelegate <NSObject>
+@protocol RRVideoPlayerViewDelegate <NSObject>
 //@property (nonatomic, readonly) VKVideoPlayerTrack* videoTrack;
 @property (nonatomic, readonly) UIInterfaceOrientation visibleInterfaceOrientation;
 - (void)fullScreenButtonTapped;
@@ -49,6 +49,15 @@
 - (void)selectMenuButtonTapped;//点击选择集数
 
 - (void)isAllowDanmu;//是否允许开启弹幕
+
+//进度条相关
+
+-(void)progressSliderUp:(float)value;
+
+-(long)getDuration;
+
+-(void)progressSliderTapped:(CGFloat)percentage;
+
 @end
 
 @interface RRVideoPlayerView : UIView
@@ -62,6 +71,8 @@
 
 /** 播放暂定按钮 */
 @property (nonatomic, weak) IBOutlet UIButton *startPause;
+@property (nonatomic, strong) IBOutlet UIButton* bigPlayButton;
+
 @property (nonatomic, weak) IBOutlet UIButton *prevBtn;
 @property (nonatomic, weak) IBOutlet UIButton *nextBtn;
 @property (nonatomic, weak) IBOutlet UIButton *modeBtn;
@@ -89,7 +100,7 @@
 - (IBAction)changeTrack:(UIButton *)sender;
 
 #pragma mark - 开始 暂停
--(IBAction)startPauseButtonAction:(id)sender;
+-(IBAction)startPauseButtonAction:(UIButton *)sender;
 
 -(IBAction)prevButtonAction:(id)sender;
 
@@ -131,5 +142,33 @@
 
 
 @property (nonatomic,strong)NSURL *PrevMediaUrl;
+@property (nonatomic, assign) BOOL isLockBtnEnable;//屏幕锁
+
+
+
+
+// ******//
+
+@property (nonatomic, weak) id<RRVideoPlayerViewDelegate> delegate;
+
+
+
+
+
+
+-(void)startActivityWithMsg:(NSString *)msg;
+
+-(void)stopActivity;
+
+
+
+
+
 
 @end
+
+
+
+
+
+

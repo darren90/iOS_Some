@@ -15,11 +15,11 @@
 #import <AVFoundation/AVAsset.h>
 #import "TFPlayerController.h"
 
-#import "RRVideoPlayerView.h"
+#import "RRPlayer.h"
 
 @interface ViewController () <PlayerControllerDelegate>
 @property (nonatomic, assign)          int          isPlay2;
-
+@property (nonatomic, strong) RRVideoPlayer* player;
 @end
 
 @implementation ViewController
@@ -29,11 +29,23 @@
     // Do any additional setup after loading the view, typically from a nib.
 //    NSLog(@"NAL 1UIO &&&&&&& Vitamio version: %@", [Vitamio version]);
     
-    RRVideoPlayerView *v = [RRVideoPlayerView videoPlayerView];
-    v.frame = CGRectMake(0, 260, KWidth, 300);
-//    v.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:v];
+//    RRVideoPlayerView *v = [RRVideoPlayerView videoPlayerView];
+//    v.frame = CGRectMake(0, 260, KWidth, 300);
+////    v.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:v];
+    
+    
+    self.player = [RRVideoPlayer sharedPlayer];
+    self.player.view.frame = CGRectMake(0, 260, KWidth, 300);
+    self.player.view.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:self.player.view];
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
+    NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+//    self.player.videoURL = [NSURL fileURLWithPath:urlStr];
+    [self.player playStreamUrl:[NSURL fileURLWithPath:urlStr]];
 }
+
+
 - (IBAction)play:(UIButton *)sender {
     self.isPlay2 = NO;
     [self pplayer];

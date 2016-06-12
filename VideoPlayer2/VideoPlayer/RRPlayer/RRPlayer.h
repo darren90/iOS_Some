@@ -10,4 +10,11 @@
 #define RRPlayer_h
 
 
+
+#import "RRVideoPlayerView.h"
+#import "RRVideoPlayer.h"
+
+
+
+
 #endif /* RRPlayer_h */
