@@ -116,10 +116,11 @@
 -(IBAction)progressSliderUpAction:(id)sender;
 -(IBAction)dragProgressSliderAction:(id)sender;
 
-#pragma mark - 单击手势
+#pragma mark - 手势
 - (IBAction)handleSingleTap:(id)sender;
-
 - (IBAction)handleTwoTap:(id)sender;
+
+#pragma mark - 锁屏按钮
 - (IBAction)lockButtonClick:(UIButton *)sender;
 
 /**NSTimer对象 */

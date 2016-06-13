@@ -42,9 +42,27 @@
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
     NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
 //    self.player.videoURL = [NSURL fileURLWithPath:urlStr];
-    [self.player playStreamUrl:[NSURL fileURLWithPath:urlStr]];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self.player playStreamUrl:[NSURL fileURLWithPath:urlStr]];
+    });
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+ 
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
+//    NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+//    //    self.player.videoURL = [NSURL fileURLWithPath:urlStr];
+//    [self.player playStreamUrl:[NSURL fileURLWithPath:urlStr]];
+}
 
 - (IBAction)play:(UIButton *)sender {
     self.isPlay2 = NO;

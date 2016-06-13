@@ -200,10 +200,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     [self.mMPayer pause];
 }
 
-
-
-
-
+ 
 
 #pragma mark - VMediaPlayerDelegate Implement
 

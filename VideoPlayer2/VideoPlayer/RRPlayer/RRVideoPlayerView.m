@@ -60,7 +60,7 @@
 
     
     
-    
+    [self addHiddeControlTimer];
 }
 
 
@@ -178,16 +178,81 @@
 #pragma mark - 单击手势
 - (IBAction)handleSingleTap:(id)sender
 {
+    //销毁计时器
+    [self destroyHiddeControlTimer];
+    //代理做
+    if (self.isLockBtnEnable) {
+        self.lockButton.hidden = !self.lockButton.hidden;
+    }else{
+        self.topControl.hidden = !self.topControl.hidden;
+        self.bottomControl.hidden = !self.bottomControl.hidden;
+        self.bigPlayButton.hidden = !self.bigPlayButton.hidden;
+    }
     
+    //添加计时器
+    [self addHiddeControlTimer];
 }
 
 - (IBAction)handleTwoTap:(id)sender
 {
     
+    if (self.isLockBtnEnable) {
+        return;
+    }
+    
+    [self startPauseButtonAction:self.startPause];
 }
+
+#pragma mark - 顶部和底部控制按钮的 增加定时器
+-(void)addHiddeControlTimer
+{
+    //     NSLog(@"---addTimer");
+    if (!self.timer) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:8 target:self selector:@selector(hiddenTopBottom) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        //消息循环，添加到主线程
+        //extern NSString* const NSDefaultRunLoopMode;  //默认没有优先级
+        //extern NSString* const NSRunLoopCommonModes;  //提高优先级
+    }
+}
+
+#pragma mark - 顶部和底部控制按钮的 销毁定时器
+-(void)destroyHiddeControlTimer
+{
+    //    NSLog(@"---destroyTimer");
+    [self.timer invalidate];
+    self.timer = nil;
+    NSLog(@"");
+}
+
+-(void)hiddenTopBottom
+{
+    if (!self.topControl.hidden) {
+        self.topControl.hidden = YES;
+        self.bottomControl.hidden = YES;
+    }
+    if (self.isLockBtnEnable) {
+        self.lockButton.hidden = !self.lockButton.hidden;
+    }
+}
+
 - (IBAction)lockButtonClick:(UIButton *)sender
 {
-    
+    self.isLockBtnEnable = !self.isLockBtnEnable;
+    if (!self.isLockBtnEnable) {
+        //开
+        [sender setImage:[UIImage imageNamed:@"icon_kai_n"] forState:UIControlStateNormal];
+        self.topControl.hidden = NO;
+        self.bottomControl.hidden = NO;
+        self.bigPlayButton.hidden = NO;
+    }else{
+        //锁
+        [sender setImage:[UIImage imageNamed:@"icon_suo_h"] forState:UIControlStateNormal];
+        self.topControl.hidden = YES;
+        self.bottomControl.hidden = YES;
+        self.lockButton.hidden = YES;
+        self.bigPlayButton.hidden = YES;
+    }
 }
 
 - (void)setPlayButtonsSelected:(BOOL)selected {
