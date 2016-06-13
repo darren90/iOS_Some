@@ -174,10 +174,21 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     [self.mMPayer seekTo:(long)(value * mDuration)];
 }
 
--(long)getDuration
+-(long)getCurrentDuration
 {
-//    mDuration = [self.mMPayer getDuration];
-    return mDuration;
+//    mDuration = [self.mMPayer getCurrentPosition];
+    return mCurPostion;
+}
+
+//得到总的视频时长
+-(long)getTotalDuration
+{
+    return [self.mMPayer getDuration];
+}
+
+-(void)progressSliderDownAction
+{
+    self.progressDragging = YES;
 }
 
 -(void)progressSliderTapped:(CGFloat)percentage
@@ -187,6 +198,12 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     NSLog(@"NAL 2BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", seek);
     [self.view startActivityWithMsg:@"Buffering"];
     [self.mMPayer seekTo:seek];
+}
+
+-(void)endFastWithTime:(long)time
+{
+    [self.view startActivityWithMsg:@"Buffering"];
+    [self.mMPayer seekTo:time];
 }
 
 - (void)playContent {
@@ -287,30 +304,31 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 {
     self.progressDragging = YES;
     NSLog(@"NAL 2HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
-//    if (![TFUtilities isLocalMedia:self.videoURL]) {
-//        [player pause];
-//        //		[self.startPause setTitle:@"Start" forState:UIControlStateNormal];
-//        [self.startPause setImage:KTFPlayer_Btn_Play forState:UIControlStateNormal];
-//        [self startActivityWithMsg:@"Buffering... 0%"];
-//    }
+    if (![TFUtilities isLocalMedia:self.videoURL]) {
+        [player pause];
+//        [self.view.startPause setImage:KTFPlayer_Btn_Play forState:UIControlStateNormal];
+        self.view.startPause.selected = YES;
+        self.view.bigPlayButton.selected = YES;
+        [self.view startActivityWithMsg:@"Buffering... 0%"];
+    }
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingUpdate:(id)arg
 {
-//    if (!self.bubbleMsgLbl.hidden) {
-//        self.bubbleMsgLbl.text = [NSString stringWithFormat:@"Buffering... %d%%",
-//                                  [((NSNumber *)arg) intValue]];
-//    }
+    if (!self.view.bubbleMsgLbl.hidden) {
+        self.view.bubbleMsgLbl.text = [NSString stringWithFormat:@"Buffering... %d%%",
+                                  [((NSNumber *)arg) intValue]];
+    }
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingEnd:(id)arg
 {
     if (![TFUtilities isLocalMedia:self.videoURL]) {
         [player start];
-        //		[self.startPause setTitle:@"Pause" forState:UIControlStateNormal];
 //        [self.view.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
-        [self pauseContent];
-//        [self stopActivity];
+        self.view.startPause.selected = NO;
+        self.view.bigPlayButton.selected = NO;
+        [self.view stopActivity];
     }
     self.progressDragging = NO;
     NSLog(@"NAL 3HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");

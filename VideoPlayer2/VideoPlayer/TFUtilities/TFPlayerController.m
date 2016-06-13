@@ -919,6 +919,8 @@ typedef NS_ENUM(NSInteger,SwipeStyle) {
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch * touch = [touches anyObject];
     self.curTickleStart = [touch locationInView:self.view];
+    
+//    mMPayer seekTo:<#(long)#>
 }
 
 //手势控制音量和亮度

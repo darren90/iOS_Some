@@ -54,10 +54,17 @@
 
 -(void)progressSliderUp:(float)value;
 
--(long)getDuration;
+//得到当前的播放时间
+-(long)getCurrentDuration;
+
+//得到总的的播放时间
+-(long)getTotalDuration;
 
 -(void)progressSliderTapped:(CGFloat)percentage;
+-(void)progressSliderDownAction;
 
+//快进快推
+-(void)endFastWithTime:(long)time;
 @end
 
 @interface RRVideoPlayerView : UIView
@@ -88,7 +95,6 @@
 
 @property (nonatomic, copy)   NSURL *videoURL;
 @property (nonatomic, strong) UIActivityIndicatorView *activityView;
-@property (nonatomic, assign) BOOL progressDragging;
 
 @property (weak, nonatomic) IBOutlet UIView *topControl;
 @property (weak, nonatomic) IBOutlet UIView *bottomControl;
