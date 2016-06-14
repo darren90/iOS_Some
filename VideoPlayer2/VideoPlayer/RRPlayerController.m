@@ -39,15 +39,15 @@
     self.player.delegate = self;
     [self.view addSubview:self.player.view];
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
-    NSString *urlStr = [path stringByAppendingPathComponent:@"11.rmvb"];
-    [self.player playStreamUrl:[NSURL fileURLWithPath:urlStr]];
+    NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+//    [self.player playStreamUrl:[NSURL fileURLWithPath:urlStr]];
 
     NSURL *urlS = [NSURL fileURLWithPath:urlStr];
     NSURL *url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465799400&ssig=RXsX85JEvJkUVrLIx1nQ_g&oi=2095617680&player=1&or=3662449045&rate=0"];
     //        url = [NSURL URLWithString:@"http://cn-hbjz1-dx.acgvideo.com/vg10/a/65/3905663.mp4?expires=1465818000&ssig=3vivDNjBQFXq6w5HfSnExw&oi=2095617680&player=1&or=3662449045&rate=0"];
-    url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465884900&ssig=Q1BN9KMEuP4Ro1uxrdqoow&oi=2095617680&player=1&or=3662449045&rate=0"];
-
-//    [self.player playStreamUrl:url];
+    url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465902300&ssig=nSgCUyHS-wbGcOQZq6tZAA&oi=2095617680&player=1&or=3662449045&rate=0"];
+    url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465913400&ssig=fknRFkmMwm-a0pMKKVvCrw&oi=2095617680&player=1&or=3662449045&rate=0"];
+    [self.player playStreamUrl:url];
 }
 
 - (void)videoPlayer:(RRVideoPlayer*)videoPlayer didControlByEvent:(VKVideoPlayerControlEvent)event
@@ -82,7 +82,7 @@
 -(void)unInstallPlayer
 {
     [_player pauseContent];
-//    [_player unInstallPlayer];
+    [_player unInstallPlayer];
     _player.delegate = nil;
     [_player.view removeFromSuperview];
     _player.view = nil;

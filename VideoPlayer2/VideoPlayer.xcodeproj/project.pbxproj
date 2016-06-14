@@ -12,6 +12,8 @@
 		893B7F7D1D0174960059A31F /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 893B7F781D0174960059A31F /* libopenssl.a */; };
 		893B7F7E1D0174960059A31F /* libVitamio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 893B7F791D0174960059A31F /* libVitamio.a */; };
 		893B7F7F1D0174960059A31F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 893B7F7A1D0174960059A31F /* LICENSE */; };
+		893E57691D0FEE5200A39DC9 /* UIView+RRFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 893E57681D0FEE5200A39DC9 /* UIView+RRFoundation.m */; };
+		893E576C1D0FF05700A39DC9 /* RRVideoPlayerView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 893E576B1D0FF05700A39DC9 /* RRVideoPlayerView+Extension.m */; };
 		894480E61CFD8692006AD7CE /* TFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E11CFD8692006AD7CE /* TFUtilities.m */; };
 		894480E71CFD8692006AD7CE /* TFVAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E31CFD8692006AD7CE /* TFVAppInfo.m */; };
 		894480E81CFD8692006AD7CE /* TFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 894480E51CFD8692006AD7CE /* TFVSegmentSlider.m */; };
@@ -133,6 +135,10 @@
 		893B7F781D0174960059A31F /* libopenssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopenssl.a; sourceTree = "<group>"; };
 		893B7F791D0174960059A31F /* libVitamio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVitamio.a; sourceTree = "<group>"; };
 		893B7F7A1D0174960059A31F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		893E57671D0FEE5200A39DC9 /* UIView+RRFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RRFoundation.h"; sourceTree = "<group>"; };
+		893E57681D0FEE5200A39DC9 /* UIView+RRFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RRFoundation.m"; sourceTree = "<group>"; };
+		893E576A1D0FF05700A39DC9 /* RRVideoPlayerView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RRVideoPlayerView+Extension.h"; sourceTree = "<group>"; };
+		893E576B1D0FF05700A39DC9 /* RRVideoPlayerView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RRVideoPlayerView+Extension.m"; sourceTree = "<group>"; };
 		894480E01CFD8692006AD7CE /* TFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUtilities.h; sourceTree = "<group>"; };
 		894480E11CFD8692006AD7CE /* TFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUtilities.m; sourceTree = "<group>"; };
 		894480E21CFD8692006AD7CE /* TFVAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVAppInfo.h; sourceTree = "<group>"; };
@@ -342,9 +348,9 @@
 				FEA3E8BD1CFDC68B00513066 /* img */,
 				FEA3E8B81CFDC5EB00513066 /* TFPlayerController.h */,
 				FEA3E8B91CFDC5EB00513066 /* TFPlayerController.m */,
+				FEA3E8C41CFDCBE700513066 /* TFPlayerController.xib */,
 				FE491B791D03B5C100D08038 /* TFMoviePlayerViewController.h */,
 				FE491B7A1D03B5C100D08038 /* TFMoviePlayerViewController.m */,
-				FEA3E8C41CFDCBE700513066 /* TFPlayerController.xib */,
 				FE447CBC1D02FFA500FCAC08 /* UIAlertView+Blocks.h */,
 				FE447CBD1D02FFA500FCAC08 /* UIAlertView+Blocks.m */,
 				FE011D331D02F394009DE22B /* ForwardBackView.h */,
@@ -368,6 +374,10 @@
 				89F16E2E1D0D4548002076C7 /* RRVideoPlayerView.h */,
 				89F16E2F1D0D4548002076C7 /* RRVideoPlayerView.m */,
 				89F16E311D0D4551002076C7 /* RRVideoPlayerView.xib */,
+				893E576A1D0FF05700A39DC9 /* RRVideoPlayerView+Extension.h */,
+				893E576B1D0FF05700A39DC9 /* RRVideoPlayerView+Extension.m */,
+				893E57671D0FEE5200A39DC9 /* UIView+RRFoundation.h */,
+				893E57681D0FEE5200A39DC9 /* UIView+RRFoundation.m */,
 			);
 			path = RRPlayer;
 			sourceTree = "<group>";
@@ -738,7 +748,9 @@
 				89F16E551D0E8779002076C7 /* MASConstraintMaker.m in Sources */,
 				FEA3E7FE1CFC6CA100513066 /* AppDelegate.m in Sources */,
 				89B38F421D07C55C001487E2 /* SmallPlayController.m in Sources */,
+				893E576C1D0FF05700A39DC9 /* RRVideoPlayerView+Extension.m in Sources */,
 				89F16E5C1D0E8779002076C7 /* ViewController+MASAdditions.m in Sources */,
+				893E57691D0FEE5200A39DC9 /* UIView+RRFoundation.m in Sources */,
 				894480E61CFD8692006AD7CE /* TFUtilities.m in Sources */,
 				894480E81CFD8692006AD7CE /* TFVSegmentSlider.m in Sources */,
 				89B38F3F1D07C53A001487E2 /* Demo2ViewController.m in Sources */,

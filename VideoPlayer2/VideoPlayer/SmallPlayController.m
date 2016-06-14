@@ -73,6 +73,8 @@
 {
     [_playVC removeFromParentViewController];
     [_playVC unInstallPlayer];
+    [_playVC.view removeFromSuperview];
+    _playVC.view = nil;
     _playVC = nil;
     NSLog(@"----dealloc----");
 }

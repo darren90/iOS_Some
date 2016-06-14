@@ -13,9 +13,12 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "ForwardBackView.h"
 #import "UIAlertView+Blocks.h"
+#import "UIView+RRFoundation.h"
+
 
 #define KTFPlayer_Btn_Play [UIImage imageNamed:@"VKVideoPlayer_play.png"]
 #define KTFPlayer_Btn_pause [UIImage imageNamed:@"VKVideoPlayer_pause.png"]
+#define degreesToRadians(x) (M_PI * x / 180.0f)
 
 #define WS(weakSelf)    __weak __typeof(&*self)weakSelf = self;
 
@@ -113,20 +116,14 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)setupObservers
 {
     NSNotificationCenter *def = [NSNotificationCenter defaultCenter];
-    [def addObserver:self
-            selector:@selector(applicationDidEnterForeground:)
-                name:UIApplicationDidBecomeActiveNotification
-              object:[UIApplication sharedApplication]];
-    [def addObserver:self
-            selector:@selector(applicationDidEnterBackground:)
-                name:UIApplicationWillResignActiveNotification
-              object:[UIApplication sharedApplication]];
+    [def addObserver:self selector:@selector(applicationDidEnterForeground:) name:UIApplicationDidBecomeActiveNotification object:[UIApplication sharedApplication]];
+    [def addObserver:self selector:@selector(applicationDidEnterBackground:) name:UIApplicationWillResignActiveNotification object:[UIApplication sharedApplication]];
 }
 
 - (void)applicationDidEnterForeground:(NSNotification *)notification
 {
-    [self.mMPayer setVideoShown:YES];
     if (![self.mMPayer isPlaying]) {
+        [self.mMPayer setVideoShown:YES];
         [self.mMPayer start];
 
         WS(weakSelf);
@@ -234,6 +231,142 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     }
 }
 
+#pragma mark - 分享
+-(void)shareButtonTapped
+{
+#warning TODO - 
+}
+
+#pragma mark - 选集
+-(void)selectMenuButtonTapped
+{
+#warning TODO -
+}
+
+
+#pragma mark - 弹幕按钮
+-(void)isAllowDanmu
+{
+#warning TODO -
+}
+#pragma mark - 全屏
+-(void)fullScreenButtonTapped
+{
+    self.isFullScreen = self.view.fullscreenButton.selected;
+
+    if (self.isFullScreen) {
+        [self performOrientationChange:UIInterfaceOrientationLandscapeRight];
+    } else {
+        [self performOrientationChange:UIInterfaceOrientationPortrait];
+    }
+
+    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
+        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapFullScreen];
+    }
+}
+//#pragma mark - 选集
+//-(void)selectMenuButtonTapped
+//{
+//#warning TODO -
+//}
+//#pragma mark - 选集
+//-(void)selectMenuButtonTapped
+//{
+//#warning TODO -
+//}
+//#pragma mark - 选集
+//-(void)selectMenuButtonTapped
+//{
+//#warning TODO -
+//}
+
+
+- (void)performOrientationChange:(UIInterfaceOrientation)deviceOrientation {
+    if (!self.forceRotate) {
+        return;
+    }
+    if ([self.delegate respondsToSelector:@selector(videoPlayer:willChangeOrientationTo:)]) {
+        [self.delegate videoPlayer:self willChangeOrientationTo:deviceOrientation];
+    }
+
+    CGFloat degrees = [self degreesForOrientation:deviceOrientation];
+    __weak __typeof__(self) weakSelf = self;
+    UIInterfaceOrientation lastOrientation = self.visibleInterfaceOrientation;
+    self.visibleInterfaceOrientation = deviceOrientation;
+    [UIView animateWithDuration:0.3f animations:^{
+        CGRect bounds = [[UIScreen mainScreen] bounds];
+        CGRect parentBounds;
+        CGRect viewBoutnds;
+        if (UIInterfaceOrientationIsLandscape(deviceOrientation)) {
+            viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.landscapeFrame), CGRectGetHeight(self.landscapeFrame));
+            parentBounds = CGRectMake(0, 0, CGRectGetHeight(bounds), CGRectGetWidth(bounds));
+        } else {
+            viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.portraitFrame), CGRectGetHeight(self.portraitFrame));
+            parentBounds = CGRectMake(0, 0, CGRectGetWidth(bounds), CGRectGetHeight(bounds));
+        }
+
+        weakSelf.view.superview.transform = CGAffineTransformMakeRotation(degreesToRadians(degrees));
+        weakSelf.view.superview.bounds = parentBounds;
+        [weakSelf.view.superview setFrameOriginX:0.0f];
+        [weakSelf.view.superview setFrameOriginY:0.0f];
+
+        CGRect wvFrame = weakSelf.view.superview.superview.frame;
+        if (wvFrame.origin.y > 0) {
+            wvFrame.size.height = CGRectGetHeight(bounds) ;
+            wvFrame.origin.y = 0;
+            weakSelf.view.superview.superview.frame = wvFrame;
+        }
+
+        weakSelf.view.bounds = viewBoutnds;
+        [weakSelf.view setFrameOriginX:0.0f];
+        [weakSelf.view setFrameOriginY:0.0f];
+        [weakSelf.view layoutForOrientation:deviceOrientation];
+
+    } completion:^(BOOL finished) {
+        if ([self.delegate respondsToSelector:@selector(videoPlayer:didChangeOrientationFrom:)]) {
+            [self.delegate videoPlayer:self didChangeOrientationFrom:lastOrientation];
+        }
+    }];
+
+    [[UIApplication sharedApplication] setStatusBarOrientation:self.visibleInterfaceOrientation animated:YES];
+//    [self updateCaptionView:self.view.captionBottomView caption:self.captionBottom playerView:self.view];
+//    [self updateCaptionView:self.view.captionTopView caption:self.captionTop playerView:self.view];
+    self.view.fullscreenButton.selected = self.isFullScreen = UIInterfaceOrientationIsLandscape(deviceOrientation);
+}
+
+- (CGFloat)degreesForOrientation:(UIInterfaceOrientation)deviceOrientation {
+    switch (deviceOrientation) {
+        case UIInterfaceOrientationPortrait:
+            return 0;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            return 90;
+            break;
+        case UIInterfaceOrientationLandscapeLeft:
+            return -90;
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            return 180;
+            break;
+    }
+    return 0;
+}
+
+#pragma mark - 切换model
+-(void)switchVideoViewModeButtonAction
+{
+    static emVMVideoFillMode modes[] = {
+        VMVideoFillModeFit,
+        VMVideoFillMode100,
+        VMVideoFillModeCrop,
+        VMVideoFillModeStretch,
+    };
+    static int curModeIdx = 0;
+
+    curModeIdx = (curModeIdx + 1) % (int)(sizeof(modes)/sizeof(modes[0]));
+    [self.mMPayer setVideoFillMode:modes[curModeIdx]];
+}
+
 #pragma mark - VMediaPlayerDelegate Implement
 
 #pragma mark VMediaPlayerDelegate Implement / Required
@@ -331,7 +464,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingUpdate:(id)arg
 {
     if (!self.view.bubbleMsgLbl.hidden) {
-        self.view.bubbleMsgLbl.text = [NSString stringWithFormat:@"Buffering... %d%%",
+        self.view.bubbleMsgLbl.text = [NSString stringWithFormat:@"缓冲中... %d%%",
                                   [((NSNumber *)arg) intValue]];
     }
 }
@@ -352,7 +485,9 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player downloadRate:(id)arg
 {
     if (![TFUtilities isLocalMedia:self.videoURL]) {
-        self.view.downloadRate.text = [NSString stringWithFormat:@"%dKB/s", [arg intValue]];
+        if(!self.mMPayer.isPlaying){
+            self.view.downloadRate.text = [NSString stringWithFormat:@"%dKB/s", [arg intValue]];
+        }
     } else {
         self.view.downloadRate.text = nil;
     }
@@ -476,7 +611,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
         [self.view.progressSld setValue:(float)mCurPostion/mDuration];
         self.view.curPosLbl.text = [TFUtilities timeToHumanString:mCurPostion];
         //        NSLog(@"---syncUIStatus---:%@",[TFUtilities timeToHumanString:mCurPostion]);
-        self.view.durationLbl.text = [TFUtilities timeToHumanString:mDuration];
+        self.view.durationLbl.text = [NSString stringWithFormat:@"/%@",[TFUtilities timeToHumanString:mDuration]];
     }
 }
 

@@ -9,6 +9,10 @@
 #import "RRVideoPlayerView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
+#import "UIView+RRFoundation.h"
+#import "RRVideoPlayerView+Extension.h"
+
+#define PADDING 8
 
 //手指移动的方向
 typedef NS_ENUM(NSInteger,PanDirection) {
@@ -63,23 +67,47 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
+
     self.clipsToBounds = YES;
+    self.activityView.frame = self.activityCarrier.bounds;
 }
+
+
+#define isIPad   ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+//#define THEMEFONT(key, fontSize) [VKSharedThemeManager font:key size:fontSize]
+#define DEVICEVALUE(ipadValue, iphoneValue) (isIPad ? (ipadValue) : (iphoneValue))
+#define RRTHMEFONT(FONTVALUE) ([UIFont systemFontOfSize:FONTVALUE])
+
 
 -(void)initialize
 {
-    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc]
-                                  initWithTarget:self
-                                  action:@selector(progressSliderTapped:)];
-    [self.progressSld addGestureRecognizer:gr];
-    
+
+//1: sunViews
+    self.activityView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:
+                          UIActivityIndicatorViewStyleWhiteLarge];
+    [self.activityCarrier addSubview:self.activityView];
+
+    self.titleLabel.font = RRTHMEFONT(DEVICEVALUE(22.0f, 14.0f));
+    self.titleLabel.textColor = [UIColor whiteColor];
+    self.titleLabel.text = @"";
+
+    self.inputDanmuBtn.layer.cornerRadius = 11;
+    self.curPosLbl.font = RRTHMEFONT(DEVICEVALUE(16.0f, 12.0f));
+    self.curPosLbl.textColor = [UIColor whiteColor];
+    self.durationLbl.font =RRTHMEFONT(DEVICEVALUE(16.0f, 12.0f));
+    self.durationLbl.textColor = [UIColor whiteColor];
+
     //当前点点的位置
     [self.progressSld setThumbImage:[UIImage imageNamed:@"pb-seek-bar-btn@2x.png"] forState:UIControlStateNormal];
     //已播放的条的颜色
     [self.progressSld setMinimumTrackImage:[UIImage imageNamed:@"pb-seek-bar-fr@2x.png"] forState:UIControlStateNormal];
     //未播放的条的颜色
     [self.progressSld setMaximumTrackImage:[UIImage imageNamed:@"pb-seek-bar-bg@2x.png"] forState:UIControlStateNormal];
+
+//2: Conrol
+
+    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(progressSliderTapped:)];
+    [self.progressSld addGestureRecognizer:gr];
     
     //这句话的意思时，只有当doubleTapGesture识别失败的时候(即识别出这不是双击操作)，singleTapGesture才能开始识别，同我们一开始讲的是同一个问题。
     [self.singleGesture requireGestureRecognizerToFail:self.doubleGesture];
@@ -147,7 +175,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 切换Model
 -(IBAction)switchVideoViewModeButtonAction:(id)sender
 {
-    
+    [self.delegate switchVideoViewModeButtonAction];
 }
 #pragma mark - reset
 -(IBAction)resetButtonAction:(id)sender
@@ -176,6 +204,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 -(IBAction)dragProgressSliderAction:(id)sender
 {
+
     UISlider *sld = (UISlider *)sender;
     NSLog(@"-dragProgressSliderAction--slide-value:%f",sld.value);
     long duration = [self.delegate getCurrentDuration];
@@ -205,6 +234,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 -(void)startActivityWithMsg:(NSString *)msg
 {
+    msg = @"正在缓冲...";
     self.bubbleMsgLbl.hidden = NO;
     self.bubbleMsgLbl.text = msg;
     [self.activityView startAnimating];
@@ -274,9 +304,51 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         self.bottomControl.hidden = YES;
         self.bigPlayButton.hidden = YES;
     }
-    if (self.isLockBtnEnable) {
-        self.lockButton.hidden = !self.lockButton.hidden;
+    if (!self.isLockBtnEnable) {
+        self.lockButton.hidden = YES;
     }
+}
+
+
+
+#pragma mark - 分享
+- (IBAction)shareButtonTapped:(UIButton *)sender
+{
+    //隐藏
+    [self hiddenTopBottom];
+    //代理
+    [self.delegate shareButtonTapped];
+}
+
+#pragma mark - 上报
+- (IBAction)suggestButtonTapped:(UIButton *)sender
+{
+
+}
+
+#pragma mark - 选集
+- (IBAction)selectMenuButtonTapped:(UIButton *)sender
+{
+    [self.delegate selectMenuButtonTapped];
+}
+
+
+#pragma mark - 弹幕按钮
+- (IBAction)handDanmuAction:(UIButton *)sender
+{
+    [self.delegate isAllowDanmu];
+}
+
+#pragma mark - 输入弹幕
+- (IBAction)inputDanmuAction:(UIButton *)sender
+{
+
+}
+
+#pragma mark - 右下角的全屏按钮
+- (IBAction)fullscreenButtonTapped:(UIButton *)sender
+{
+    [self.delegate fullScreenButtonTapped];
 }
 
 - (IBAction)lockButtonClick:(UIButton *)sender
@@ -284,18 +356,18 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.isLockBtnEnable = !self.isLockBtnEnable;
     if (!self.isLockBtnEnable) {
         //开
-        [sender setImage:[UIImage imageNamed:@"icon_kai_n"] forState:UIControlStateNormal];
+        [self.lockButton setImage:[UIImage imageNamed:@"icon_suo_h"] forState:UIControlStateNormal];
         self.topControl.hidden = NO;
         self.bottomControl.hidden = NO;
         self.bigPlayButton.hidden = NO;
     }else{
         //锁
-        [sender setImage:[UIImage imageNamed:@"icon_suo_h"] forState:UIControlStateNormal];
+//        [self.lockButton setImage:[UIImage imageNamed:@"icon_kai_n"] forState:UIControlStateNormal];
         self.topControl.hidden = YES;
         self.bottomControl.hidden = YES;
-        self.lockButton.hidden = YES;
         self.bigPlayButton.hidden = YES;
     }
+    self.lockButton.hidden = YES;
 }
 
 - (void)setPlayButtonsSelected:(BOOL)selected {
@@ -485,5 +557,83 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 }
 
 
+- (void)layoutForOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+        self.topControl.hidden = YES;
+//        self.topPortraitControlOverlay.hidden = NO;
+
+//        [self.buttonPlaceHolderView setFrameOriginY:PADDING/2];
+//        self.buttonPlaceHolderView.hidden = YES;
+
+        self.clarityButton.hidden = YES;
+//        self.videoQualityButton.hidden = YES;
+
+        [self.bigPlayButton setFrameOriginY:CGRectGetMinY(self.bottomControl.frame)/2 - CGRectGetHeight(self.bigPlayButton.frame)/2];
+
+#warning TODO --
+//        for (UIView *control in self.portraitControls) {
+//            control.hidden = self.isControlsHidden;
+//        }
+//        for (UIView *control in self.landscapeControls) {
+//            control.hidden = YES;
+//        }
+
+    } else {
+        [self.topControl setFrameOriginY:0.0f];
+        self.topControl.hidden = NO;
+//        self.topPortraitControlOverlay.hidden = YES;
+
+//        [self.buttonPlaceHolderView setFrameOriginY:PADDING/2 + CGRectGetMaxY(self.topControlOverlay.frame)];
+//        self.buttonPlaceHolderView.hidden = NO;
+
+        self.clarityButton.hidden = NO;
+//        self.videoQualityButton.hidden = NO;
+
+        [self.bigPlayButton setFrameOriginY:(CGRectGetMinY(self.bottomControl.frame) - CGRectGetMaxY(self.topControl.frame))/2 + CGRectGetMaxY(self.topControl.frame) - CGRectGetHeight(self.bigPlayButton.frame)/2];
+#warning TODO --
+//        for (UIView *control in self.portraitControls) {
+//            control.hidden = YES;
+//        }
+//        for (UIView *control in self.landscapeControls) {
+//            control.hidden = self.isControlsHidden;
+//        }
+    }
+
+    [self layoutTopControls];
+    [self layoutSliderForOrientation:interfaceOrientation];
+}
+
+-(void)layoutTopControls {
+    CGFloat rightMargin = CGRectGetMaxX(self.topControl.frame);
+    for (UIView* button in self.topControl.subviews) {
+        if ([button isKindOfClass:[UIButton class]] && button != self.doneButton && !button.hidden) {
+            rightMargin = MIN(CGRectGetMinX(button.frame), rightMargin);
+        }
+    }
+
+    //    [self.titleLabel setFrameOriginX:MaxX(_doneButton)];
+    //    [self.titleLabel setFrameWidth:X(self.shareBtn) - X(self.titleLabel) - 20];
+}
+
+- (void)layoutSliderForOrientation:(UIInterfaceOrientation)interfaceOrientation{
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+        [self.durationLbl setFrameOriginX:CGRectGetMinX(self.fullscreenButton.frame) - self.durationLbl.frame.size.width];
+    } else {
+        [self.durationLbl setFrameOriginX:CGRectGetMinX(self.clarityButton.frame) - self.durationLbl.frame.size.width - PADDING];
+    }
+
+    [self.progressSld setFrameOriginX:self.curPosLbl.frame.origin.x + self.durationLbl.frame.size.width + 4];
+    [self.progressSld setFrameWidth:self.durationLbl.frame.origin.x - self.progressSld.frame.origin.x - 4];
+    [self.progressSld setFrameOriginY:CGRectGetHeight(self.bottomControl.frame)/2 - CGRectGetHeight(self.progressSld.frame)/2];
+
+}
 
 @end
+
+
+
+
+
+
+
+

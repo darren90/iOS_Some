@@ -129,4 +129,27 @@ typedef enum {
 -(void)playerDidDisAppear;
 
 
+
+//后加的参数
+@property (nonatomic, assign) BOOL isFullScreen;
+@property (nonatomic, assign) BOOL forceRotate;
+@property (nonatomic, assign) UIInterfaceOrientation visibleInterfaceOrientation;
+@property (nonatomic, assign) CGRect landscapeFrame;
+@property (nonatomic, assign) CGRect portraitFrame;
+
+
+
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
