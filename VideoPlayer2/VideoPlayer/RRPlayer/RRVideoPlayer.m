@@ -81,24 +81,13 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     return self;
 }
 
-
-
--(void)playStreamUrl:(NSURL*)url
-{
-    __weak __typeof(self)weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        long lastPos = 0;
-        [weakSelf quicklyPlayMovie:url title:@"stest水电费水电费是电风扇的" seekToPos:lastPos];
-    });
-}
-
 #pragma mark - initialize
 - (void)initialize {
 //    [self initializeProperties];
 //    [self initializePlayerView];
 //    [self addObservers];
     self.view.delegate = self;
-    
+
     if (!self.mMPayer) {
         self.mMPayer = [VMediaPlayer sharedInstance];
         [self.mMPayer setupPlayerWithCarrierView:self.view.carrier withDelegate:self];
@@ -106,6 +95,17 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     }
 }
 
+
+
+-(void)playStreamUrl:(NSURL*)url
+{
+    NSLog(@"---playStreamUrl---");
+    __weak __typeof(self)weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        long lastPos = 0;
+        [weakSelf quicklyPlayMovie:url title:@"stest水电费水电费是电风扇的" seekToPos:lastPos];
+    });
+}
 
 
 //-(void)
@@ -221,6 +221,14 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 
 -(void)doneButtonTapped
 {
+
+    [self quicklyStopMovie];
+
+    [self unSetupObservers];
+    //    [mMPayer unSetupPlayer];
+    BOOL b = [_mMPayer unSetupPlayer];
+    NSLog(@"%d",b);
+
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapDone];
     }
@@ -250,7 +258,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 
 - (void)mediaPlayer:(VMediaPlayer *)player playbackComplete:(id)arg
 {
-//    [self goBackButtonAction:nil];
+//    [self doneButtonTapped];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapDone];
     }
@@ -394,20 +402,9 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     self.view.progressSld.segments = @[@(0.0), @(1.0)];
 }
 
-
-//-(void)setVideoURL:(NSURL *)videoURL
-//{
-//    _videoURL = [videoURL copy];
-//    long lastPos = 0;
-//
-//    [self quicklyPlayMovie:_videoURL title:@"stest水电费水电费是电风扇的" seekToPos:lastPos];
-//}
-
+ 
 #pragma mark - Convention Methods
 
-#define TEST_Common					1
-#define TEST_setOptionsWithKeys		0
-#define TEST_setDataSegmentsSource	0
 
 -(void)quicklyPlayMovie:(NSURL*)fileURL title:(NSString*)title seekToPos:(long)pos
 {
@@ -417,8 +414,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     NSString *docDir = [NSString stringWithFormat:@"%@/Documents", NSHomeDirectory()];
     NSLog(@"NAL &&& Doc: %@", docDir);
 
-#if TEST_Common // Test Common
-    NSString *abs = [fileURL absoluteString];
+     NSString *abs = [fileURL absoluteString];
     if ([abs rangeOfString:@"://"].length == 0) {
         NSString *docDir = [NSString stringWithFormat:@"%@/Documents", NSHomeDirectory()];
         NSString *videoUrl = [NSString stringWithFormat:@"%@/%@", docDir, abs];
@@ -428,38 +424,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     }
     //    [mMPayer setDataSource:self.videoURL header:nil];
     [self.mMPayer setDataSource:self.videoURL];
-#elif TEST_setOptionsWithKeys // Test setOptionsWithKeys:withValues:
-    self.videoURL = [NSURL URLWithString:@"rtmp://videodownls.9xiu.com/9xiu/552"]; // This is a live stream.
-    NSMutableArray *keys = [NSMutableArray arrayWithCapacity:0];
-    NSMutableArray *vals = [NSMutableArray arrayWithCapacity:0];
-    keys[0] = @"-rtmp_live";
-    vals[0] = @"-1";
-    [mMPayer setDataSource:self.videoURL header:nil];
-    [mMPayer setOptionsWithKeys:keys withValues:vals];
-#elif TEST_setDataSegmentsSource // Test setDataSegmentsSource:fileList:
-    NSMutableArray *list = [NSMutableArray arrayWithCapacity:0];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.1.mp4?vkey=E3D97333E93EDF36E56CB85CE0B02018E1001BA5C023DFFD298C0204CD81610CFCE546C79DE6C3E2"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.2.mp4?vkey=5E82F44940C19CCF26610E7E4088438E868AB2CAB5255E5FDE6763484B9B7E967EF9A97D7E54A324"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.3.mp4?vkey=0A1EA30BCB057BAE8746C2D7B07FE4ABF3BD839FF011224F31F7544BFFB647F06A6D5245C57277BC"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.4.mp4?vkey=DF36DC29AD2C2F0BA5A688223AFCD0008BDD681D8B060C9F4739E1A365495CD165E28DFD80E8E41C"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.5.mp4?vkey=76172D18B89A91CDB803889B4C5127741EF4BBD9B90CC54269B89CEEF558B9B286DDE6083ADB8195"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.6.mp4?vkey=27718B68A396DCFBC483321827604179D35F31C41EC57908C0F78D9416690F6986B0766872C2AF60"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.7.mp4?vkey=B56628DD31A60E975CC9EE321DCE2FC9554AF2CE5BC2BFCEFCEEA633F27CDF16CADA9915338AB2E5"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.8.mp4?vkey=40F45871CE7827699FACE57A95CA1FDA58B16A8A2523C738C422ADCBF015F50254C356614EFAFDE0"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.9.mp4?vkey=553157FD5A7607CC1E255D0E26B503FAD842DC509F15D766C31446E8607E60A621F7B9FABC5B8C7D"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.10.mp4?vkey=2968D15E93D1C1A295FC810DA561789487330F8BEA5B408533BF396648400A89924611724FD5BE67"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.11.mp4?vkey=495CDFCAD30945947CE1E43CBD88DE32E505B4D02BD4AAB2F4B17F98EFF702485C270558951A3109"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.12.mp4?vkey=01B5580A0A6F3597D66440C060885AFC7AA03CD7272D36472FBC9C261D72D2E964D254775C574CA3"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.13.mp4?vkey=2256FFE5FABC971F6A0D6889A1EA1CE8E837D17929708C6ACC6F903939076BB926442DBF6F3AD309"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.14.mp4?vkey=77BB2C40B9383BF048206EC357FE5F061A0A16B9242CAD207CBEA3C3C53E50B24056D93E578A400F"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.15.mp4?vkey=1366F026BB6B987C82C58CF707269C091EA086BB1A09430611A6E124A419E04774FE793E11EB64C1"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.16.mp4?vkey=E0F358E64365C5B12614EA74B25C4F87C7E8CD4003DCB2C792850180CF3CD7645BB22E5E57B40CC5"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.17.mp4?vkey=E95EC62FAE0D92BE8A2FE85842B875F2E9B9B07616B8892D1EF18A0C645994E885D65BDAC24EF0FD"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.18.mp4?vkey=48B021C886CFC23E22FA56C71C7C204E300E7D58CBB97867F23CC8F30EB4D1B53ABE41627F7D6610"];
-    [list addObject:@"http://112.65.235.140/vlive.qqvideo.tc.qq.com/95V8NuxWX2J.p202.19.mp4?vkey=0D51F428BB12C2C5C015E41997371FC80338924F804D9D688C7B9560C7336A48870873F34189C58D"];
-    [mMPayer setDataSegmentsSource:nil fileList:list];
-#endif
-    
+
     [self.mMPayer prepareAsync];
     [self.view startActivityWithMsg:@"Loading..."];
 }
@@ -515,6 +480,11 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     }
 }
 
+- (void)unSetupObservers
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 - (void)dealloc {
     [self unInstallPlayer];
@@ -541,14 +511,32 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 
 -(void)unInstallPlayer
 {
-    [self pauseContent];
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    
+    [self quicklyStopMovie];
+
+    [self unSetupObservers];
+    [_mMPayer unSetupPlayer];
+
     BOOL b = [_mMPayer unSetupPlayer];
     NSLog(@"%d",b);
     _mMPayer = nil;
-    
+//    rrVideoPlayer = nil;
+    NSLog(@"------:");
 //    [self.view.progressSld removeObserver:self forKeyPath:@"maximumValue"];
+}
+
+
+-(void)playerWillAppear
+{
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self.view becomeFirstResponder];
+
+//    [self currButtonAction:nil];
+}
+
+-(void)playerDidDisAppear
+{
+    [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
+    [self.view resignFirstResponder];
 }
 
 

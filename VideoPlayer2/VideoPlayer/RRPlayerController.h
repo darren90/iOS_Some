@@ -13,7 +13,6 @@
 @property (nonatomic, strong) RRVideoPlayer* player;
 
 
-
 #pragma mark - 卸载播放器
 -(void)unInstallPlayer;
 @end

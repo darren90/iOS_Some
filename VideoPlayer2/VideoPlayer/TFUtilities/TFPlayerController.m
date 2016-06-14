@@ -558,8 +558,11 @@ typedef NS_ENUM(NSInteger,SwipeStyle) {
 	[self quicklyStopMovie];
     
     [self unSetupObservers];
-    [mMPayer unSetupPlayer];
-    
+//    [mMPayer unSetupPlayer];
+    BOOL b = [mMPayer unSetupPlayer];
+    NSLog(@"%d",b);
+
+
 //	[self dismissModalViewControllerAnimated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -1090,8 +1093,10 @@ typedef NS_ENUM(NSInteger,SwipeStyle) {
 
 - (void)dealloc {
     [self unSetupObservers];
-    [mMPayer unSetupPlayer];
-    
+//    [mMPayer unSetupPlayer];
+    BOOL b = [mMPayer unSetupPlayer];
+    NSLog(@"%d",b);
+
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self.progressSld removeObserver:self forKeyPath:@"maximumValue"];
 //    [self.rewindButton removeObserver:self forKeyPath:@"hidden"];
