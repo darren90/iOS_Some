@@ -99,7 +99,7 @@ typedef enum {
 
 @property (nonatomic, strong) RRVideoPlayerView *view;
 
-@property (nonatomic, strong) VMediaPlayer       *mMPayer;
+@property (nonatomic, weak) VMediaPlayer       *mMPayer;
 
 @property (nonatomic, weak) id<RRVideoPlayerDelegate> delegate;
 
@@ -118,4 +118,10 @@ typedef enum {
 
 -(void)playStreamUrl:(NSURL*)url;
 
+/** 播放 */
+- (void)playContent;
+/** 暂停 */
+- (void)pauseContent;
+#pragma mark - 卸载播放器
+-(void)unInstallPlayer;
 @end

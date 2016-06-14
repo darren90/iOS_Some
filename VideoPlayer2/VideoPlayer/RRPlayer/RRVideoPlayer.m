@@ -17,6 +17,7 @@
 #define KTFPlayer_Btn_Play [UIImage imageNamed:@"VKVideoPlayer_play.png"]
 #define KTFPlayer_Btn_pause [UIImage imageNamed:@"VKVideoPlayer_pause.png"]
 
+#define WS(weakSelf)    __weak __typeof(&*self)weakSelf = self;
 
 
 @interface RRVideoPlayer ()<RRVideoPlayerViewDelegate>
@@ -84,8 +85,11 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 
 -(void)playStreamUrl:(NSURL*)url
 {
-    long lastPos = 0;
-    [self quicklyPlayMovie:url title:@"stest水电费水电费是电风扇的" seekToPos:lastPos];
+    __weak __typeof(self)weakSelf = self;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        long lastPos = 0;
+        [weakSelf quicklyPlayMovie:url title:@"stest水电费水电费是电风扇的" seekToPos:lastPos];
+    });
 }
 
 #pragma mark - initialize
@@ -125,8 +129,9 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     if (![self.mMPayer isPlaying]) {
         [self.mMPayer start];
 
+        WS(weakSelf);
         RUN_ON_UI_THREAD(^{
-            [self.view.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
+            [weakSelf.view.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
         });
     }
 }
@@ -146,7 +151,6 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 #pragma mark - RRVideoPlayerViewDelegate
 - (void)captionButtonTapped {
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        NSLog(@"%s",__func__);
         [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapCaption];
     }
 }
@@ -154,8 +158,6 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)playButtonPressed {
     [self playContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        NSLog(@"%s",__func__);
-
         [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventPlay];
     }
 }
@@ -163,7 +165,6 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)pauseButtonPressed {
     [self pauseContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-         NSLog(@"%s",__func__);
         [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventPause];
     }
 }
@@ -207,8 +208,9 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 }
 
 - (void)playContent {
+    WS(weakSelf);
     RUN_ON_UI_THREAD(^{
-        [self.mMPayer start];
+        [weakSelf.mMPayer start];
     });
 }
 
@@ -217,7 +219,12 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     [self.mMPayer pause];
 }
 
- 
+-(void)doneButtonTapped
+{
+    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
+        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapDone];
+    }
+}
 
 #pragma mark - VMediaPlayerDelegate Implement
 
@@ -361,6 +368,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     NSLog(@"NAL 1GFC .... media caches index : %@", arg);
 }
 
+#pragma mark - mark 更新进度条的缓冲
 - (void)mediaPlayer:(VMediaPlayer *)player cacheUpdate:(id)arg
 {
     NSArray *segs = (NSArray *)arg;
@@ -508,20 +516,8 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 }
 
 
-- (void)unSetupObservers
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-
 - (void)dealloc {
-    [self pauseContent];
-    
-    [self unSetupObservers];
-    [self.mMPayer unSetupPlayer];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self.view.progressSld removeObserver:self forKeyPath:@"maximumValue"];
+    [self unInstallPlayer];
     
     
     //    [self.rewindButton removeObserver:self forKeyPath:@"hidden"];
@@ -541,6 +537,18 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     //    self.playerItem = nil;
     //
     //    [self pauseContent];
+}
+
+-(void)unInstallPlayer
+{
+    [self pauseContent];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+    BOOL b = [_mMPayer unSetupPlayer];
+    NSLog(@"%d",b);
+    _mMPayer = nil;
+    
+//    [self.view.progressSld removeObserver:self forKeyPath:@"maximumValue"];
 }
 
 

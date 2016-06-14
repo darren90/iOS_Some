@@ -35,9 +35,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Fuv-5O-IDD">
-                        <barButtonItem key="rightBarButtonItem" title="jump" id="k84-Ev-W4U">
+                        <barButtonItem key="leftBarButtonItem" title="Small" id="BFU-aK-L2u">
                             <connections>
-                                <segue destination="j4a-n0-Ind" kind="modal" id="2BY-vR-NMS"/>
+                                <segue destination="j4a-n0-Ind" kind="push" id="FgY-NV-f2E"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Big" id="k84-Ev-W4U">
+                            <connections>
+                                <segue destination="SAL-JF-edU" kind="modal" id="VIu-p7-1Tc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -64,6 +69,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJg-mP-l0i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1717" y="358"/>
+        </scene>
+        <!--Player Controller-->
+        <scene sceneID="uad-5Y-UYd">
+            <objects>
+                <viewController id="SAL-JF-edU" customClass="RRPlayerController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1dO-el-EhU"/>
+                        <viewControllerLayoutGuide type="bottom" id="mPV-qV-3H0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FFd-3k-hwn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYm-ak-FoN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727" y="1013"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l5X-eD-msA">

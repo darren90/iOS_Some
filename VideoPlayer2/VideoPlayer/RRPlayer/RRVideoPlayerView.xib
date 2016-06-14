@@ -31,6 +31,9 @@
                             <rect key="frame" x="0.0" y="27" width="36" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="player_btn_back"/>
+                            <connections>
+                                <action selector="goBackButtonAction:" destination="Nc7-em-zWl" eventType="touchUpInside" id="dWx-wT-m51"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wtS-ze-EOW">
                             <rect key="frame" x="394" y="30" width="35" height="22"/>
@@ -64,30 +67,6 @@
                     <rect key="frame" x="0.0" y="180" width="437" height="50"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gfc-7n-DmK">
-                            <rect key="frame" x="78" y="12" width="53" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4jW-Vq-NmU">
-                            <rect key="frame" x="354" y="12" width="54" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="gQC-4m-Hgz" customClass="TFVSegmentSlider">
-                            <rect key="frame" x="137" y="7" width="211" height="31"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="dragProgressSliderAction:" destination="Nc7-em-zWl" eventType="valueChanged" id="ObB-G7-REo"/>
-                                <action selector="progressSliderDownAction:" destination="Nc7-em-zWl" eventType="touchDown" id="piT-OY-U5R"/>
-                                <action selector="progressSliderUpAction:" destination="Nc7-em-zWl" eventType="touchCancel" id="MZW-KC-5AJ"/>
-                                <action selector="progressSliderUpAction:" destination="Nc7-em-zWl" eventType="touchUpInside" id="imC-Gc-Rn1"/>
-                            </connections>
-                        </slider>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KxZ-rG-gUH">
                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -97,11 +76,30 @@
                                 <action selector="startPauseButtonAction:" destination="Nc7-em-zWl" eventType="touchUpInside" id="JfU-15-kpM"/>
                             </connections>
                         </button>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uXk-7q-7VK">
-                            <rect key="frame" x="45" y="14" width="18" height="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gfc-7n-DmK">
+                            <rect key="frame" x="41" y="12" width="53" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="VKVideoPlayer_next.png"/>
-                        </button>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4jW-Vq-NmU">
+                            <rect key="frame" x="317" y="12" width="54" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="gQC-4m-Hgz" customClass="TFVSegmentSlider">
+                            <rect key="frame" x="100" y="7" width="211" height="31"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="dragProgressSliderAction:" destination="Nc7-em-zWl" eventType="valueChanged" id="ObB-G7-REo"/>
+                                <action selector="progressSliderDownAction:" destination="Nc7-em-zWl" eventType="touchDown" id="piT-OY-U5R"/>
+                                <action selector="progressSliderUpAction:" destination="Nc7-em-zWl" eventType="touchCancel" id="MZW-KC-5AJ"/>
+                                <action selector="progressSliderUpAction:" destination="Nc7-em-zWl" eventType="touchUpInside" id="imC-Gc-Rn1"/>
+                            </connections>
+                        </slider>
                     </subviews>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.12941176469999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
@@ -164,7 +162,6 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="VKVideoPlayer_next.png" width="21" height="21"/>
         <image name="VKVideoPlayer_pause.png" width="17" height="17"/>
         <image name="VKVideoPlayer_pause_big.png" width="74" height="74"/>
         <image name="VKVideoPlayer_play.png" width="17" height="17"/>

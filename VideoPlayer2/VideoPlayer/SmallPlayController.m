@@ -7,10 +7,11 @@
 //
 
 #import "SmallPlayController.h"
-#import "TFPlayerController.h"
+//#import "TFPlayerController.h"
+#import "RRPlayerController.h"
 
-@interface SmallPlayController ()<PlayerControllerDelegate>
-@property (nonatomic,strong)TFPlayerController *playVC;
+@interface SmallPlayController ()
+@property (nonatomic,weak)RRPlayerController *playVC;
 @end
 
 @implementation SmallPlayController
@@ -19,11 +20,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.playVC = [[TFPlayerController alloc]init];
+    RRPlayerController *playVC = [[RRPlayerController alloc]init];
+    self.playVC = playVC;
     [self addChildViewController:self.playVC];
     [self.view addSubview:self.playVC.view];
     self.playVC.view.frame = CGRectMake(0, 0, self.view.frame.size.width, 300);
-    self.playVC.delegate = self;
 //    self.navigationController.navigationItem.
     self.playVC.view.clipsToBounds = YES;
 }
@@ -66,6 +67,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)dealloc
+{
+    [_playVC removeFromParentViewController];
+    [_playVC unInstallPlayer];
+    _playVC = nil;
+    NSLog(@"----dealloc----");
 }
 
 

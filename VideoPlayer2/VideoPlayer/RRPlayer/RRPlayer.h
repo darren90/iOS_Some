@@ -10,10 +10,10 @@
 #define RRPlayer_h
 
 
+//引入RRPlayer的头文件
 
 #import "RRVideoPlayerView.h"
 #import "RRVideoPlayer.h"
-
 
 
 

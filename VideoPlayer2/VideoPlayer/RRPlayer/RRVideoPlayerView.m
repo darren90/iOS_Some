@@ -63,6 +63,8 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+    self.clipsToBounds = YES;
 }
 
 -(void)initialize
@@ -97,26 +99,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [self configureSpeedView];
 }
 
-#pragma mark 获取系统音量
-- (void)configureVolume{
-    MPVolumeView *volumeView = [[MPVolumeView alloc] init];
-    self.volumeViewSlider = nil;
-    for (UIView *view in [volumeView subviews]){
-        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
-            self.volumeViewSlider = (UISlider *)view;
-            break;
-        }
-    }
-    
-    // 使用这个category的应用不会随着手机静音键打开而静音，可在手机静音下播放声音
-    NSError *setCategoryError = nil;
-    BOOL success = [[AVAudioSession sharedInstance]
-                    setCategory: AVAudioSessionCategoryPlayback
-                    error: &setCategoryError];
-    
-    if (!success) { /* handle the error in setCategoryError */ }
-}
-
 
 - (void)delPlayerPanGesture{
     [self removeGestureRecognizer:self.panGesture];
@@ -126,6 +108,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 -(IBAction)goBackButtonAction:(id)sender
 {
     NSLog(@"%s",__func__);
+    [self.delegate doneButtonTapped];
 }
 
 #pragma mark - 切换音轨
@@ -289,6 +272,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     if (!self.topControl.hidden) {
         self.topControl.hidden = YES;
         self.bottomControl.hidden = YES;
+        self.bigPlayButton.hidden = YES;
     }
     if (self.isLockBtnEnable) {
         self.lockButton.hidden = !self.lockButton.hidden;
@@ -466,7 +450,8 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 快进
 - (void)configureSpeedView{
     if (self.forwardView == nil) {
-        ForwardBackView * forwardView = [[ForwardBackView alloc]initWithFrame:CGRectMake(0, 0, 170, 84)];
+        ForwardBackView *forwardView = [[ForwardBackView alloc]initWithFrame:CGRectMake(0, 0, 170, 84)];
+        forwardView.alpha = 0.8;
         forwardView.hidden = YES;
         [self addSubview:forwardView];
         self.forwardView = forwardView;
@@ -478,6 +463,27 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         }];
     }
 }
+
+#pragma mark 获取系统音量
+- (void)configureVolume{
+    MPVolumeView *volumeView = [[MPVolumeView alloc] init];
+    self.volumeViewSlider = nil;
+    for (UIView *view in [volumeView subviews]){
+        if ([view.class.description isEqualToString:@"MPVolumeSlider"]){
+            self.volumeViewSlider = (UISlider *)view;
+            break;
+        }
+    }
+    
+    // 使用这个category的应用不会随着手机静音键打开而静音，可在手机静音下播放声音
+    NSError *setCategoryError = nil;
+    BOOL success = [[AVAudioSession sharedInstance]
+                    setCategory: AVAudioSessionCategoryPlayback
+                    error: &setCategoryError];
+    
+    if (!success) { /* handle the error in setCategoryError */ }
+}
+
 
 
 @end

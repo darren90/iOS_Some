@@ -914,7 +914,7 @@ typedef NS_ENUM(NSInteger,SwipeStyle) {
 
 
 #pragma mark - 手势快进，快退
-# if 1
+# if 0
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     UITouch * touch = [touches anyObject];

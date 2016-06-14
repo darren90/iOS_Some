@@ -35,20 +35,19 @@
 //    [self.view addSubview:v];
     
     
-    self.player = [RRVideoPlayer sharedPlayer];
-    self.player.view.frame = CGRectMake(0, 260, KWidth, 300);
-    self.player.view.backgroundColor = [UIColor grayColor];
-    [self.view addSubview:self.player.view];
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
-    NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
-//    self.player.videoURL = [NSURL fileURLWithPath:urlStr];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSURL *urlS = [NSURL fileURLWithPath:urlStr];
-        NSURL *url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465799400&ssig=RXsX85JEvJkUVrLIx1nQ_g&oi=2095617680&player=1&or=3662449045&rate=0"];
-        [self.player playStreamUrl:url];
-    });
-}
+//    self.player = [RRVideoPlayer sharedPlayer];
+//    self.player.view.frame = CGRectMake(0, 260, KWidth, 300);
+//    self.player.view.backgroundColor = [UIColor grayColor];
+//    [self.view addSubview:self.player.view];
+//    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
+//    NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+////    self.player.videoURL = [NSURL fileURLWithPath:urlStr];
+//    
+//    NSURL *urlS = [NSURL fileURLWithPath:urlStr];
+//    NSURL *url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465799400&ssig=RXsX85JEvJkUVrLIx1nQ_g&oi=2095617680&player=1&or=3662449045&rate=0"];
+////        url = [NSURL URLWithString:@"http://cn-hbjz1-dx.acgvideo.com/vg10/a/65/3905663.mp4?expires=1465818000&ssig=3vivDNjBQFXq6w5HfSnExw&oi=2095617680&player=1&or=3662449045&rate=0"];
+//    [self.player playStreamUrl:url];
+ }
 
 -(void)viewDidAppear:(BOOL)animated
 {
