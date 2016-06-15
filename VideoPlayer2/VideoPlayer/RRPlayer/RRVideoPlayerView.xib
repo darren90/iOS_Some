@@ -20,7 +20,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" id="Xg1-j2-DL0">
-                                    <rect key="frame" x="124" y="145" width="140" height="32"/>
+                                    <rect key="frame" x="124" y="145" width="160" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" id="ElY-4q-b3p">
@@ -28,8 +28,8 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b4c-Rr-qig">
-                                            <rect key="frame" x="48" y="0.0" width="84" height="32"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b4c-Rr-qig">
+                                            <rect key="frame" x="43" y="-1" width="112" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -221,7 +221,6 @@
                 <outlet property="danMuBtn" destination="9hm-pC-ttP" id="P3D-ji-OVx"/>
                 <outlet property="doneButton" destination="f7h-wo-2kt" id="qIb-1B-lb0"/>
                 <outlet property="doubleGesture" destination="oqD-vw-5RO" id="fpu-Su-Saw"/>
-                <outlet property="downloadRate" destination="bJo-C9-NIh" id="Itf-YK-Bxi"/>
                 <outlet property="durationLbl" destination="4jW-Vq-NmU" id="EZP-XA-oIM"/>
                 <outlet property="fullscreenButton" destination="fmB-mF-AMg" id="Ndh-Di-rLq"/>
                 <outlet property="inputDanmuBtn" destination="6yr-vb-ees" id="pLA-kg-aNF"/>

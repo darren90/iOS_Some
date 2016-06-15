@@ -116,7 +116,11 @@ typedef enum {
 
 - (id)initWithVideoPlayerView:(RRVideoPlayerView*)videoPlayerView;
 
--(void)playStreamUrl:(NSURL*)url;
+//正常播放视频的时候调用这个
+-(void)playStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos;
+//正在播放的过程中切换了播放地址，进行播放的时候用这个
+-(void)playChangeStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos;
+
 
 /** 播放 */
 - (void)playContent;

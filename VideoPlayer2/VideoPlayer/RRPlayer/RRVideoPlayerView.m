@@ -171,7 +171,13 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 {
     
 }
-
+-(void)setBtnEnableStatus:(BOOL)enable
+{
+    self.startPause.enabled = enable;
+    self.prevBtn.enabled = enable;
+    self.nextBtn.enabled = enable;
+    self.modeBtn.enabled = enable;
+}
 #pragma mark - 切换Model
 -(IBAction)switchVideoViewModeButtonAction:(id)sender
 {
@@ -188,7 +194,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 {
     //	NSLog(@"NAL 4HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
     //	NSLog(@"NAL 1DOW &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Touch Down");
-    [self.delegate progressSliderDownAction];
+//    [self.delegate progressSliderDownAction];
 }
 
 -(IBAction)progressSliderUpAction:(id)sender

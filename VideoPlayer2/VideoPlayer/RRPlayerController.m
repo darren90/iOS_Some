@@ -45,10 +45,32 @@
     NSURL *urlS = [NSURL fileURLWithPath:urlStr];
     NSURL *url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465799400&ssig=RXsX85JEvJkUVrLIx1nQ_g&oi=2095617680&player=1&or=3662449045&rate=0"];
     //        url = [NSURL URLWithString:@"http://cn-hbjz1-dx.acgvideo.com/vg10/a/65/3905663.mp4?expires=1465818000&ssig=3vivDNjBQFXq6w5HfSnExw&oi=2095617680&player=1&or=3662449045&rate=0"];
-    url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465902300&ssig=nSgCUyHS-wbGcOQZq6tZAA&oi=2095617680&player=1&or=3662449045&rate=0"];
-    url = [NSURL URLWithString:@"http://cn-hbyc9-dx.acgvideo.com/vg2/9/92/4189690-1.mp4?expires=1465913400&ssig=fknRFkmMwm-a0pMKKVvCrw&oi=2095617680&player=1&or=3662449045&rate=0"];
-    [self.player playStreamUrl:url];
+    url = [NSURL URLWithString:@"http://cn-hbjm1-dx.acgvideo.com/vg0/8/88/4014147.mp4?expires=1465970100&ssig=15qXIYUnX-IFV-vozgN9ZA&oi=2095617680&player=1&or=3662449045&rate=0"];
+    url = [NSURL URLWithString:@"http://cn-hbjm1-dx.acgvideo.com/vg0/8/88/4014147.mp4?expires=1465970100&ssig=15qXIYUnX-IFV-vozgN9ZA&oi=2095617680&player=1&or=3662449045&rate=0"];
+    if (self.playUrl) {
+//        self.playUrl = url;
+        [self playStream:self.playUrl];
+    }else{
+        [self playStream:url];
+    }
+//    [self.player playStreamUrl:self.playUrl];
 }
+
+/**
+ *  小屏播放器要用到
+ *
+ *  @param url 播放地址
+ */
+- (void)playStream:(NSURL*)url
+{
+    [self.player playStreamUrl:url title:@"水电费水电费水电费" seekToPos:1538688];
+}
+
+-(void)playChangeStreamUrl:(NSURL *)url
+{
+    [self.player playChangeStreamUrl:url title:@"sdfsdfself.playUrlsd" seekToPos:138688];
+}
+
 
 - (void)videoPlayer:(RRVideoPlayer*)videoPlayer didControlByEvent:(VKVideoPlayerControlEvent)event
 {

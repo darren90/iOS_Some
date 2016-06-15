@@ -202,7 +202,7 @@
 -(void)startActivityWithMsg:(NSString *)msg;
 
 -(void)stopActivity;
-
+-(void)setBtnEnableStatus:(BOOL)enable;
 
 
 

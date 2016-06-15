@@ -35,6 +35,9 @@
 
 @property (nonatomic, assign) BOOL progressDragging;
 
+
+/** 上一次的观看时间 */
+@property (nonatomic,assign)long lastWatchPos;
 @end
 
 @implementation RRVideoPlayer
@@ -99,15 +102,21 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 }
 
 
-
--(void)playStreamUrl:(NSURL*)url
+#pragma mark - 第一次播放视频
+-(void)playStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos
 {
     NSLog(@"---playStreamUrl---");
     __weak __typeof(self)weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        long lastPos = 0;
-        [weakSelf quicklyPlayMovie:url title:@"stest水电费水电费是电风扇的" seekToPos:lastPos];
+//        long lastPos = 0;
+        [weakSelf quicklyPlayMovie:url title:title seekToPos:pos];
     });
+}
+
+#pragma mark - 播放中途，切换视频URL重新进行播放（切换清晰度，切换剧集）
+-(void)playChangeStreamUrl:(NSURL *)url title:(NSString*)title seekToPos:(long)pos
+{
+    [self quicklyReplayMovie:url title:title seekToPos:pos];
 }
 
 
@@ -379,9 +388,12 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     mDuration = [player getDuration];
     NSLog(@"------- mDuration：%ld",mDuration);
     [player start];
-    
-//    [self setBtnEnableStatus:YES];
-//    [self stopActivity];
+
+    [player seekTo:self.lastWatchPos];
+    self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
+
+    [self.view setBtnEnableStatus:YES];
+    [self.view stopActivity];
     mSyncSeekTimer = [NSTimer scheduledTimerWithTimeInterval:1.0/3
                                                       target:self
                                                     selector:@selector(syncUIStatus)
@@ -400,10 +412,10 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player error:(id)arg
 {
     NSLog(@"NAL 1RRE &&&& VMediaPlayer Error: %@", arg);
-//    [self stopActivity];
+    [self.view stopActivity];
 //    //	[self showVideoLoadingError];
-//    [self setBtnEnableStatus:YES];
- 
+    [self.view setBtnEnableStatus:YES];
+
     NSLog(@"error:%@",arg);
 }
 
@@ -440,6 +452,11 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 }
 - (void)mediaPlayer:(VMediaPlayer *)player seekComplete:(id)arg
 {
+    //视频快进的时间定位
+//    [player seekTo:self.lastWatchPos];
+//    self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
+
+    NSLog(@"--seekComplete-");
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player notSeekable:(id)arg
@@ -464,7 +481,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingUpdate:(id)arg
 {
     if (!self.view.bubbleMsgLbl.hidden) {
-        self.view.bubbleMsgLbl.text = [NSString stringWithFormat:@"缓冲中... %d%%",
+        self.view.bubbleMsgLbl.text = [NSString stringWithFormat:@"缓冲... %d%%",
                                   [((NSNumber *)arg) intValue]];
     }
 }
@@ -485,9 +502,9 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player downloadRate:(id)arg
 {
     if (![TFUtilities isLocalMedia:self.videoURL]) {
-        if(!self.mMPayer.isPlaying){
+//        if(!self.mMPayer.isPlaying){
             self.view.downloadRate.text = [NSString stringWithFormat:@"%dKB/s", [arg intValue]];
-        }
+//        }
     } else {
         self.view.downloadRate.text = nil;
     }
@@ -560,6 +577,8 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     //    [mMPayer setDataSource:self.videoURL header:nil];
     [self.mMPayer setDataSource:self.videoURL];
 
+    self.view.titleLabel.text = title;
+    self.lastWatchPos = pos;
     [self.mMPayer prepareAsync];
     [self.view startActivityWithMsg:@"Loading..."];
 }
@@ -583,24 +602,10 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     mDuration = 0;
     mCurPostion = 0;
     [self.view stopActivity];
-//    [self setBtnEnableStatus:YES];
+    [self.view setBtnEnableStatus:YES];
     [UIApplication sharedApplication].idleTimerDisabled = NO;
+    self.lastWatchPos = 0;
 }
-
-//-(void)startActivityWithMsg:(NSString *)msg
-//{
-//    self.view.bubbleMsgLbl.hidden = NO;
-//    self.view.bubbleMsgLbl.text = msg;
-//    [self.view.activityView startAnimating];
-//}
-//
-//-(void)stopActivity
-//{
-//    self.view.bubbleMsgLbl.hidden = YES;
-//    self.view.bubbleMsgLbl.text = nil;
-//    [self.view.activityView stopAnimating];
-//}
-
 
 #pragma mark - Sync UI Status
 

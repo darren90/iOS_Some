@@ -24,11 +24,24 @@
     self.playVC = playVC;
     [self addChildViewController:self.playVC];
     [self.view addSubview:self.playVC.view];
-    self.playVC.view.frame = CGRectMake(0, 0, self.view.frame.size.width, 300);
+    self.playVC.view.frame = CGRectMake(0, 80, self.view.frame.size.width, 300);
 //    self.navigationController.navigationItem.
     self.playVC.view.clipsToBounds = YES;
+
+
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
+    NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+//    self.playVC.playUrl = [NSURL fileURLWithPath:urlStr];
+    [self.playVC playStream:[NSURL fileURLWithPath:urlStr]];
 }
 
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask , YES) firstObject];
+    NSString *urlStr = [path stringByAppendingPathComponent:@"22.mp4"];
+    //    self.playVC.playUrl = [NSURL fileURLWithPath:urlStr];
+    [self.playVC playChangeStreamUrl:[NSURL fileURLWithPath:urlStr]];
+}
 
 
 - (NSURL *)playCtrlGetCurrMediaTitle:(NSString **)title lastPlayPos:(long *)lastPlayPos

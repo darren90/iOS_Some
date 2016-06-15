@@ -366,6 +366,11 @@ typedef NS_ENUM(NSInteger,SwipeStyle) {
 
 - (void)mediaPlayer:(VMediaPlayer *)player seekComplete:(id)arg
 {
+    //视频快进的时间定位
+//    self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
+//    [player seekTo:self.lastWatchPos];
+
+    NSLog(@"seekComplete");
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player notSeekable:(id)arg
