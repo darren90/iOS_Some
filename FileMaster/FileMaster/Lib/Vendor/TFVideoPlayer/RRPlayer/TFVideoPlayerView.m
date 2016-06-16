@@ -524,7 +524,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     }
     
     // 每次滑动需要叠加时间
-    self.sumTime += value/1;    // 需要限定sumTime的范围
+    self.sumTime += value/1;    // 需要限定sumTime的范围 除以1 代表调节倍率
 //    CMTime totalTime = self.player.playerItem.duration;
 //    CGFloat totalMovieDuration = (CGFloat)totalTime.value/totalTime.timescale;
     long totalMovieDuration = [self.delegate getTotalDuration];

@@ -31,6 +31,15 @@
 	</dict>
 	<key>UIFileSharingEnabled</key>
 	<true/>
+	<key>UILaunchImages</key>
+	<array>
+		<dict>
+			<key>UILaunchImageName</key>
+			<string>Default-568</string>
+			<key>UILaunchImageSize</key>
+			<string>{320,568}</string>
+		</dict>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
