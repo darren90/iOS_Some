@@ -39,57 +39,57 @@ typedef enum {
     // There was an unknown error.
     kVideoPlayerErrorUnknown,
     
-} VKVideoPlayerErrorCode;
+} RRVideoPlayerErrorCode;
 
 
 typedef enum {
-    VKVideoPlayerStateUnknown,
-    VKVideoPlayerStateContentLoading,
-    VKVideoPlayerStateContentPlaying,
-    VKVideoPlayerStateContentPaused,
-    VKVideoPlayerStateSuspend,
-    VKVideoPlayerStateDismissed,
-    VKVideoPlayerStateError
-} VKVideoPlayerState;
+    RRVideoPlayerStateUnknown,
+    RRVideoPlayerStateContentLoading,
+    RRVideoPlayerStateContentPlaying,
+    RRVideoPlayerStateContentPaused,
+    RRVideoPlayerStateSuspend,
+    RRVideoPlayerStateDismissed,
+    RRVideoPlayerStateError
+} RRVideoPlayerState;
 
 typedef enum {
-    VKVideoPlayerControlEventTapPlayerView,
-    VKVideoPlayerControlEventTapNext,
-    VKVideoPlayerControlEventTapPrevious,
-    VKVideoPlayerControlEventTapDone,
-    VKVideoPlayerControlEventTapFullScreen,
-    VKVideoPlayerControlEventTapCaption,
-    VKVideoPlayerControlEventTapVideoQuality,
-    VKVideoPlayerControlEventSwipeNext,
-    VKVideoPlayerControlEventSwipePrevious,
-    VKVideoPlayerControlEventShare,//分享
-    VKVideoPlayerControlEventSuggest,//反馈
-    VKVideoPlayerControlEventSelectMenu,//选集
-    VKVideoPlayerControlEventPause,//暂停
-    VKVideoPlayerControlEventPlay,//播放
-    vkvideoplayercontroleventDanMu,//弹幕
-    
-} VKVideoPlayerControlEvent;
+    RRVideoPlayerControlEventTapPlayerView,
+    RRVideoPlayerControlEventTapNext,
+    RRVideoPlayerControlEventTapPrevious,
+    RRVideoPlayerControlEventTapDone,
+    RRVideoPlayerControlEventTapFullScreen,
+    RRVideoPlayerControlEventTapCaption,
+    RRVideoPlayerControlEventTapVideoQuality,
+    RRVideoPlayerControlEventSwipeNext,
+    RRVideoPlayerControlEventSwipePrevious,
+    RRVideoPlayerControlEventShare,//分享
+    RRVideoPlayerControlEventSuggest,//反馈
+    RRVideoPlayerControlEventSelectMenu,//选集
+    RRVideoPlayerControlEventPause,//暂停
+    RRVideoPlayerControlEventPlay,//播放
+    RRVideoplayercontroleventDanMu,//弹幕
+    RRVideoplayercontroleventClarity,//清晰度
+} RRVideoPlayerControlEvent;
 
 
 @class RRVideoPlayer;
 @protocol RRVideoPlayerDelegate <NSObject>
 @optional
-- (BOOL)shouldVideoPlayer:(RRVideoPlayer*)videoPlayer changeStateTo:(VKVideoPlayerState)toState;
-- (void)videoPlayer:(RRVideoPlayer*)videoPlayer willChangeStateTo:(VKVideoPlayerState)toState;
-- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didChangeStateFrom:(VKVideoPlayerState)fromState;
-//- (BOOL)shouldVideoPlayer:(RRVideoPlayer*)videoPlayer startVideo:(id<VKVideoPlayerTrackProtocol>)track;
-//- (void)videoPlayer:(RRVideoPlayer*)videoPlayer willStartVideo:(id<VKVideoPlayerTrackProtocol>)track;
-//- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didStartVideo:(id<VKVideoPlayerTrackProtocol>)track;
+- (BOOL)shouldVideoPlayer:(RRVideoPlayer*)videoPlayer changeStateTo:(RRVideoPlayerState)toState;
+- (void)videoPlayer:(RRVideoPlayer*)videoPlayer willChangeStateTo:(RRVideoPlayerState)toState;
+- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didChangeStateFrom:(RRVideoPlayerState)fromState;
+//- (BOOL)shouldVideoPlayer:(RRVideoPlayer*)videoPlayer startVideo:(id<RRVideoPlayerTrackProtocol>)track;
+//- (void)videoPlayer:(RRVideoPlayer*)videoPlayer willStartVideo:(id<RRVideoPlayerTrackProtocol>)track;
+//- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didStartVideo:(id<RRVideoPlayerTrackProtocol>)track;
 //
-//- (void)videoPlayer:(VKVideoPlayer*)videoPlayer didPlayFrame:(id<VKVideoPlayerTrackProtocol>)track time:(NSTimeInterval)time lastTime:(NSTimeInterval)lastTime;
-//- (void)videoPlayer:(VKVideoPlayer*)videoPlayer didPlayToEnd:(id<VKVideoPlayerTrackProtocol>)track;
-- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didControlByEvent:(VKVideoPlayerControlEvent)event;
+//- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didPlayFrame:(id<RRVideoPlayerTrackProtocol>)track time:(NSTimeInterval)time lastTime:(NSTimeInterval)lastTime;
+//- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didPlayToEnd:(id<RRVideoPlayerTrackProtocol>)track;
+- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didControlByEvent:(RRVideoPlayerControlEvent)event;
 - (void)videoPlayer:(RRVideoPlayer*)videoPlayer didChangeSubtitleFrom:(NSString*)fronLang to:(NSString*)toLang;
 - (void)videoPlayer:(RRVideoPlayer*)videoPlayer willChangeOrientationTo:(UIInterfaceOrientation)orientation;
 - (void)videoPlayer:(RRVideoPlayer*)videoPlayer didChangeOrientationFrom:(UIInterfaceOrientation)orientation;
 
-//- (void)handleErrorCode:(VKVideoPlayerErrorCode)errorCode track:(id<VKVideoPlayerTrackProtocol>)track customMessage:(NSString*)customMessage;
+//- (void)handleErrorCode:(RRVideoPlayerErrorCode)errorCode track:(id<RRVideoPlayerTrackProtocol>)track customMessage:(NSString*)customMessage;
 
 
 @end
@@ -116,9 +116,9 @@ typedef enum {
 
 - (id)initWithVideoPlayerView:(RRVideoPlayerView*)videoPlayerView;
 
-//正常播放视频的时候调用这个
+//正常播放视频的时候调用这个  时间：秒
 -(void)playStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos;
-//正在播放的过程中切换了播放地址，进行播放的时候用这个
+//正在播放的过程中切换了播放地址，进行播放的时候用这个  时间：秒
 -(void)playChangeStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos;
 
 

@@ -36,7 +36,7 @@
 @property (nonatomic, assign) BOOL progressDragging;
 
 
-/** 上一次的观看时间 */
+/** 上一次的观看时间 单位：秒 */
 @property (nonatomic,assign)long lastWatchPos;
 @end
 
@@ -157,21 +157,21 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 #pragma mark - RRVideoPlayerViewDelegate
 - (void)captionButtonTapped {
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapCaption];
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapCaption];
     }
 }
 
 - (void)playButtonPressed {
     [self playContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventPlay];
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventPlay];
     }
 }
 
 - (void)pauseButtonPressed {
     [self pauseContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventPause];
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventPause];
     }
 }
 
@@ -179,6 +179,9 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 {
     [self.view startActivityWithMsg:@"Buffering"];
     [self.mMPayer seekTo:(long)(value * mDuration)];
+    if (!self.mMPayer.isPlaying) {//没有播放的时候，拖动进度条后，进行播放
+        [self.mMPayer start];
+    }
 }
 
 -(long)getCurrentDuration
@@ -203,14 +206,24 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     long seek = percentage * mDuration;
 //    self.curPosLbl.text = [TFUtilities timeToHumanString:seek];
     NSLog(@"NAL 2BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", seek);
-    [self.view startActivityWithMsg:@"Buffering"];
-    [self.mMPayer seekTo:seek];
+//    [self.view startActivityWithMsg:@"Buffering"];
+//    [self.mMPayer seekTo:seek];
+    [self moveProgressWithTime:time];
 }
 
 -(void)endFastWithTime:(long)time
 {
+    [self moveProgressWithTime:time];
+}
+
+-(void)moveProgressWithTime:(long)time
+{
     [self.view startActivityWithMsg:@"Buffering"];
     [self.mMPayer seekTo:time];
+
+    if (!self.mMPayer.isPlaying) {//没有播放的时候，拖动进度条后，进行播放
+        [self.mMPayer start];
+    }
 }
 
 - (void)playContent {
@@ -236,20 +249,27 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     NSLog(@"%d",b);
 
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapDone];
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapDone];
     }
 }
 
+#pragma mark --------分割线-----------------
 #pragma mark - 分享
 -(void)shareButtonTapped
 {
 #warning TODO - 
+    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventShare];
+    }
 }
 
 #pragma mark - 选集
 -(void)selectMenuButtonTapped
 {
 #warning TODO -
+    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventSelectMenu];
+    }
 }
 
 
@@ -257,7 +277,18 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 -(void)isAllowDanmu
 {
 #warning TODO -
+    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoplayercontroleventDanMu];
+    }
 }
+
+-(void)clarityButtonTapped
+{
+    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoplayercontroleventClarity];
+    }
+}
+
 #pragma mark - 全屏
 -(void)fullScreenButtonTapped
 {
@@ -270,7 +301,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     }
 
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapFullScreen];
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapFullScreen];
     }
 }
 //#pragma mark - 选集
@@ -387,10 +418,17 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     
     mDuration = [player getDuration];
     NSLog(@"------- mDuration：%ld",mDuration);
-    [player start];
 
-    [player seekTo:self.lastWatchPos];
-    self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
+#pragma mark - 定位到指定的时间播放
+    if (self.lastWatchPos > 0) {
+        [player seekTo:self.lastWatchPos];
+        self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            [player start];
+//        });
+    }
+
+    [player start];
 
     [self.view setBtnEnableStatus:YES];
     [self.view stopActivity];
@@ -405,7 +443,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 {
 //    [self doneButtonTapped];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:VKVideoPlayerControlEventTapDone];
+        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapDone];
     }
 }
 
@@ -416,7 +454,6 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 //    //	[self showVideoLoadingError];
     [self.view setBtnEnableStatus:YES];
 
-    NSLog(@"error:%@",arg);
 }
 
 #pragma mark VMediaPlayerDelegate Implement / Optional
@@ -424,7 +461,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player setupManagerPreference:(id)arg
 {
     player.decodingSchemeHint = VMDecodingSchemeSoftware;
-    player.autoSwitchDecodingScheme = NO;
+    player.autoSwitchDecodingScheme = YES;
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player setupPlayerPreference:(id)arg
@@ -432,8 +469,8 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     // Set buffer size, default is 1024KB(1*1024*1024).
     //	[player setBufferSize:256*1024];
     [player setBufferSize:512*1024];
-    //	[player setAdaptiveStream:YES];
-    
+    [player setAdaptiveStream:YES];
+
     [player setVideoQuality:VMVideoQualityHigh];
     
     player.useCache = YES;
@@ -452,11 +489,10 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 }
 - (void)mediaPlayer:(VMediaPlayer *)player seekComplete:(id)arg
 {
-    //视频快进的时间定位
-//    [player seekTo:self.lastWatchPos];
-//    self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
+    BOOL result = player.isPlaying;
+    NSLog(@"--seekComplete-:%d",player.isPlaying);
+    [self.view stopActivity];
 
-    NSLog(@"--seekComplete-");
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player notSeekable:(id)arg
@@ -513,6 +549,11 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player videoTrackLagging:(id)arg
 {
     //	NSLog(@"NAL 1BGR video lagging....");
+}
+
+- (void)mediaPlayer:(VMediaPlayer *)player info:(id)arg
+{
+    NSLog(@"info:%@",arg);
 }
 
 #pragma mark VMediaPlayerDelegate Implement / Cache
@@ -575,10 +616,12 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
         self.videoURL = fileURL;
     }
     //    [mMPayer setDataSource:self.videoURL header:nil];
-    [self.mMPayer setDataSource:self.videoURL];
+    [self.mMPayer setDataSource:self.videoURL header:nil];
 
     self.view.titleLabel.text = title;
-    self.lastWatchPos = pos;
+
+    if (pos > 5)  pos -= 5;//时间自动向前5秒，提升用户体验
+    self.lastWatchPos = pos*1000;//lastWatchPos：秒，pos：毫秒   -- 1秒=1000毫秒
     [self.mMPayer prepareAsync];
     [self.view startActivityWithMsg:@"Loading..."];
 }
@@ -678,6 +721,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
     [self.view resignFirstResponder];
 }
+
 
 
 @end

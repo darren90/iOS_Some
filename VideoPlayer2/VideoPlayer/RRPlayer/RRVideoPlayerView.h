@@ -53,6 +53,7 @@
 
 - (void)isAllowDanmu;//是否允许开启弹幕
 
+-(void)clarityButtonTapped;//选择清晰度
 
 //进度条相关
 

@@ -338,6 +338,10 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [self.delegate selectMenuButtonTapped];
 }
 
+- (IBAction)clarityButtonTapped:(UIButton *)sender
+{
+    [self.delegate clarityButtonTapped];
+}
 
 #pragma mark - 弹幕按钮
 - (IBAction)handDanmuAction:(UIButton *)sender
@@ -497,7 +501,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 }
 #pragma makr 快进后退
 - (void)horizontalMoved:(CGFloat)value{
-    NSLog(@"快进快推-:%f",value);
+//    NSLog(@"快进快推-:%f",value);
     // 快进快退的方法
     NSString *style = @"";
     if (value < 0) {

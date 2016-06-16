@@ -27,4 +27,5 @@
 
 #pragma mark - 卸载播放器
 -(void)unInstallPlayer;
+
 @end
