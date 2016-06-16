@@ -60,7 +60,7 @@
         
         self.backImage = ({
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 79, 76)];
-            imgView.image        = [UIImage imageNamed:ZFPlayerSrcName(@"ZFPlayer_brightness")];
+            imgView.image        = [UIImage imageNamed:@"Player_brightness@2x.png"];
             [self addSubview:imgView];
             imgView;
         });

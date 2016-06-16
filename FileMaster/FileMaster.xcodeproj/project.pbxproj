@@ -98,6 +98,7 @@
 		FE79FD731D12E555001D052D /* nav_btn_back_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD701D12E555001D052D /* nav_btn_back_n@2x.png */; };
 		FE79FD741D12E555001D052D /* nav_btn_back_n@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD711D12E555001D052D /* nav_btn_back_n@3x.png */; };
 		FE79FD771D12FAE8001D052D /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD761D12FAE8001D052D /* BrightnessView.m */; };
+		FE79FD791D12FD7E001D052D /* Player_brightness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */; };
 		FEA58DEC1C83275F00FE4E8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEB1C83275F00FE4E8A /* main.m */; };
 		FEA58DEF1C83275F00FE4E8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEE1C83275F00FE4E8A /* AppDelegate.m */; };
 		FEA58DF21C83275F00FE4E8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DF11C83275F00FE4E8A /* ViewController.m */; };
@@ -320,6 +321,7 @@
 		FE79FD711D12E555001D052D /* nav_btn_back_n@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_back_n@3x.png"; sourceTree = "<group>"; };
 		FE79FD751D12FAE8001D052D /* BrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessView.h; sourceTree = "<group>"; };
 		FE79FD761D12FAE8001D052D /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
+		FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_brightness@2x.png"; sourceTree = "<group>"; };
 		FEA58DE71C83275F00FE4E8A /* FileMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA58DEB1C83275F00FE4E8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEA58DED1C83275F00FE4E8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -675,6 +677,7 @@
 		FE79FCC21D12DAB9001D052D /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */,
 				FE79FD6F1D12E555001D052D /* nav_btn_back_n.png */,
 				FE79FD701D12E555001D052D /* nav_btn_back_n@2x.png */,
 				FE79FD711D12E555001D052D /* nav_btn_back_n@3x.png */,
@@ -1213,6 +1216,7 @@
 				FE79FD291D12DAB9001D052D /* pb-seek-bar-fr@2x.png in Resources */,
 				FEA58E671C83406700FE4E8A /* VKVideoPlayerView.xib in Resources */,
 				FEA58E7C1C83406700FE4E8A /* VKVideoPlayer_zoom_in@2x.png in Resources */,
+				FE79FD791D12FD7E001D052D /* Player_brightness@2x.png in Resources */,
 				FEA58E7E1C83406700FE4E8A /* VKVideoPlayer_zoom_out@2x.png in Resources */,
 				FE28D84F1C887822000AFC70 /* SettingCell.xib in Resources */,
 				FE79FD171D12DAB9001D052D /* audioTrackIcon@2x.png in Resources */,

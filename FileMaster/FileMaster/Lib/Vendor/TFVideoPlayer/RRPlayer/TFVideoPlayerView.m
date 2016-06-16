@@ -12,6 +12,7 @@
 #import "Masonry.h"
 #import "UIView+RRFoundation.h"
 #import "TFVideoPlayerView+Extension.h"
+#import "BrightnessView.h"
 
 #define PADDING 8
 
@@ -126,6 +127,14 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [self configureVolume];
     //快进快推
     [self configureSpeedView];
+    
+    // 亮度view加到window最上层
+    BrightnessView *brightnessView = [BrightnessView sharedBrightnessView];
+    [[UIApplication sharedApplication].keyWindow insertSubview:self belowSubview:brightnessView];
+//    [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+//        make.edges.insets(UIEdgeInsetsMake(0, 0, 0, 0));
+//    }];
+
 }
 
 
