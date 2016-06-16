@@ -38,6 +38,12 @@
 
 /** 上一次的观看时间 单位：秒 */
 @property (nonatomic,assign)long lastWatchPos;
+
+
+//音轨的数组
+@property (nonatomic,strong)NSMutableArray * trackArray;
+
+
 @end
 
 @implementation TFVideoPlayer
@@ -289,6 +295,23 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     }
 }
 
+-(void)changeTrackTapped
+{
+    UIAlertView *alertView = [UIAlertView
+                              showWithTitle:@"Audio Trackers Picker"
+                              message:nil
+                              cancelButtonTitle:@"Cancel"
+                              otherButtonTitles:self.trackArray
+                              tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+                                  NSInteger firstOBIndex = [alertView firstOtherButtonIndex];
+                                  NSInteger lastOBIndex = firstOBIndex + [self.trackArray count];
+                                  if (buttonIndex >= firstOBIndex && buttonIndex < lastOBIndex) {
+                                      [self.mMPayer setAudioTrackWithArrayIndex:(int)(buttonIndex - firstOBIndex)];
+                                  }
+                              }];
+    [alertView show];
+}
+
 #pragma mark - 全屏
 -(void)fullScreenButtonTapped
 {
@@ -437,6 +460,27 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
                                                     selector:@selector(syncUIStatus)
                                                     userInfo:nil
                                                      repeats:YES];
+    
+    //设置音轨
+    NSArray * arr = [self.mMPayer getAudioTracksArray];
+    self.view.trackBtn.hidden = YES;
+    if (arr.count <= 1) return;
+    
+    self.view.trackBtn.hidden = NO;
+    self.trackArray = [NSMutableArray array];
+    //    {
+    //        VMMediaTrackId = 1;
+    //        VMMediaTrackLocationType = 0;
+    //        VMMediaTrackTitle = "1. und. SoundHandler";
+    //    }
+    for (NSDictionary *dic in arr) {
+        [self.trackArray addObject:dic[@"VMMediaTrackTitle"]];
+    }
+    //    [mMPayer setAudioTrackWithArrayIndex:1];
+    //    int index  = [mMPayer getAudioTrackCurrentArrayIndex];
+    //    NSLog(@"index:%d-:%lu-%@",index,(unsigned long)arr.count,arr);
+    //    NSLog(@"VMMediaTrackTitle:%@,",arr[1][@"VMMediaTrackTitle"]);
+
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player playbackComplete:(id)arg

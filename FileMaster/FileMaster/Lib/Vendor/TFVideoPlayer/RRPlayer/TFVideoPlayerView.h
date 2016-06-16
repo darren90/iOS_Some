@@ -70,6 +70,10 @@
 
 //快进快推
 -(void)endFastWithTime:(long)time;
+
+//切换音轨
+-(void)changeTrackTapped;
+
 @end
 
 #pragma mark - TFVideoPlayerView
@@ -179,10 +183,6 @@
 
 //*快进view*/
 @property (nonatomic,weak)ForwardBackView * forwardView;
-
-//音轨的数组
-@property (nonatomic,strong)NSMutableArray * trackArray;
-
 
 @property (nonatomic,strong)NSURL *PrevMediaUrl;
 @property (nonatomic, assign) BOOL isLockBtnEnable;//屏幕锁

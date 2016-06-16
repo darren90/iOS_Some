@@ -45,6 +45,15 @@
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mL3-AO-Q1b">
+                                    <rect key="frame" x="187" y="70" width="97" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                    <state key="normal" image="VKVideoPlayer_pause_big.png"/>
+                                    <state key="selected" image="VKVideoPlayer_play_big.png"/>
+                                    <connections>
+                                        <action selector="startPauseButtonAction:" destination="Nc7-em-zWl" eventType="touchUpInside" id="qvw-kc-Fl6"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -70,16 +79,16 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SzI-ZA-Roy">
-                            <rect key="frame" x="327" y="22" width="29" height="29"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SzI-ZA-Roy">
+                            <rect key="frame" x="381" y="28" width="29" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="ic_share_n"/>
                             <connections>
                                 <action selector="shareButtonTapped:" destination="Nc7-em-zWl" eventType="touchUpInside" id="LsB-px-kY5"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LXO-Eg-up4">
-                            <rect key="frame" x="264" y="21" width="49" height="30"/>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LXO-Eg-up4">
+                            <rect key="frame" x="271" y="29" width="49" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                             <state key="normal" title="model">
@@ -89,11 +98,21 @@
                                 <action selector="switchVideoViewModeButtonAction:" destination="Nc7-em-zWl" eventType="touchUpInside" id="a2b-n3-MRi"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="JPy-1l-Mlk">
+                            <rect key="frame" x="328" y="33" width="35" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="audioTrackIcon.png">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="changeTrack:" destination="Nc7-em-zWl" eventType="touchUpInside" id="2kA-c6-MRp"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.12549019610000001" green="0.12941176469999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view alpha="0.80000001192092896" contentMode="scaleToFill" id="ase-fd-jZy" userLabel="BottomContainer">
-                    <rect key="frame" x="0.0" y="180" width="437" height="50"/>
+                    <rect key="frame" x="0.0" y="175" width="437" height="55"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KxZ-rG-gUH">
@@ -106,14 +125,14 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4jW-Vq-NmU">
-                            <rect key="frame" x="247" y="14" width="80" height="21"/>
+                            <rect key="frame" x="247" y="19" width="80" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.0" maxValue="1" id="gQC-4m-Hgz" customClass="TFVSegmentSlider">
-                            <rect key="frame" x="100" y="7" width="141" height="31"/>
+                            <rect key="frame" x="100" y="9" width="141" height="31"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <connections>
                                 <action selector="dragProgressSliderAction:" destination="Nc7-em-zWl" eventType="valueChanged" id="ObB-G7-REo"/>
@@ -141,15 +160,6 @@
                         <action selector="lockButtonClick:" destination="Nc7-em-zWl" eventType="touchUpInside" id="zVB-po-J1B"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mL3-AO-Q1b">
-                    <rect key="frame" x="300" y="75" width="97" height="74"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                    <state key="normal" image="VKVideoPlayer_pause_big.png"/>
-                    <state key="selected" image="VKVideoPlayer_play_big.png"/>
-                    <connections>
-                        <action selector="startPauseButtonAction:" destination="Nc7-em-zWl" eventType="touchUpInside" id="qvw-kc-Fl6"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -174,6 +184,7 @@
                 <outlet property="startPause" destination="KxZ-rG-gUH" id="K4p-uu-QVM"/>
                 <outlet property="titleLabel" destination="tnT-fg-FAT" id="zq4-c9-4ik"/>
                 <outlet property="topControl" destination="PIa-2H-rmt" id="uvT-Fi-JbZ"/>
+                <outlet property="trackBtn" destination="JPy-1l-Mlk" id="O7g-rb-1We"/>
                 <outletCollection property="gestureRecognizers" destination="dP2-Uv-PNg" appends="YES" id="Xaf-QG-3Vl"/>
                 <outletCollection property="gestureRecognizers" destination="oqD-vw-5RO" appends="YES" id="IoQ-lq-PIY"/>
             </connections>
@@ -197,6 +208,7 @@
         <image name="VKVideoPlayer_pause_big.png" width="74" height="74"/>
         <image name="VKVideoPlayer_play.png" width="17" height="17"/>
         <image name="VKVideoPlayer_play_big.png" width="74" height="74"/>
+        <image name="audioTrackIcon.png" width="19" height="19"/>
         <image name="ic_share_n" width="14" height="11"/>
         <image name="icon_suo_h" width="53" height="53"/>
         <image name="nav_btn_back_n.png" width="9" height="17"/>

@@ -89,17 +89,19 @@ static CGFloat LABELHIGHT = 20.0;
 
     }else{
         //大屏下的布局
-        self.startPause.hidden = YES;
+        self.startPause.hidden = NO;
         self.inputDanmuBtn.hidden = NO;
+        self.startPause.frame = CGRectMake(10, 10, WIDTH(self.startPause), HEIGHT(self.startPause));
         self.fullscreenButton.frame = CGRectMake(WIDTH(self) - BTNWIDTH, HEIGHT(self.bottomControl) - BTNHIGHT, BTNWIDTH, BTNHIGHT);
         self.smallLockBtn.frame = CGRectMake(X(self.fullscreenButton) - BTNWIDTH - SPACE, Y(self.fullscreenButton), BTNWIDTH, BTNHIGHT);
         self.danMuBtn.frame = CGRectMake(X(self.smallLockBtn) - BTNWIDTH - SPACE, Y(self.fullscreenButton), BTNWIDTH, BTNHIGHT);
-        self.curPosLbl.frame = CGRectMake(SPACE, Y(self.fullscreenButton) + 12, WIDTH(self.curPosLbl), LABELHIGHT);
+        self.curPosLbl.frame = CGRectMake(MaxX(self.startPause), Y(self.fullscreenButton) + 12+10, WIDTH(self.curPosLbl), LABELHIGHT);
         self.durationLbl.frame = CGRectMake(MaxX(self.curPosLbl), Y(self.curPosLbl), WIDTH(self.durationLbl), LABELHIGHT);
-        self.progressSld.frame = CGRectMake(-5, -13, WIDTH(self.bottomControl) + 10, HEIGHT(self.progressSld));
+        self.progressSld.frame = CGRectMake(0, -13, WIDTH(self.bottomControl) + 10, HEIGHT(self.progressSld));
         self.inputDanmuBtn.frame = CGRectMake(MaxX(self.durationLbl) + 10, Y(self.durationLbl) - 3, X(self.danMuBtn) - MaxX(self.durationLbl) - 2*SPACE, 22);
         self.titleLabel.frame = CGRectMake(MaxX(self.doneButton), Y(self.doneButton) + (HEIGHT(self.doneButton) - HEIGHT(self.titleLabel))/2, MaxX(self.shareBtn) - 50, HEIGHT(self.titleLabel));
         self.loadbgView.frame = CGRectMake((WIDTH(self.bottomControl) - WIDTH(self.loadbgView))/2, MinY(self.bottomControl)-HEIGHT(self.loadbgView)-20, WIDTH(self.loadbgView), HEIGHT(self.loadbgView));
+        
         NSLog(@"大大大大大大大大大大大大大大大大大大大");
     }
 }

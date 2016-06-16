@@ -143,7 +143,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 切换音轨
 - (IBAction)changeTrack:(UIButton *)sender
 {
-    
+    [self.delegate changeTrackTapped];
 }
 
 #pragma mark - 开始 暂停

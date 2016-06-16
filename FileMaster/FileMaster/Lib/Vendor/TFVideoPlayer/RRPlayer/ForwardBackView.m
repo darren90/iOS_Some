@@ -21,7 +21,7 @@
     if (self) {
         
         self.layer.cornerRadius = 2;
-        self.backgroundColor = [UIColor blackColor];
+        self.backgroundColor = [UIColor colorWithHue:20/255.0 saturation:20/255.0 brightness:20/255.0 alpha:1.0];
         
         forwardImage = [[UIImageView alloc]initWithFrame:CGRectMake((frame.size.width - 52)/2, 20, 52, 30)];
         [self addSubview:forwardImage];
