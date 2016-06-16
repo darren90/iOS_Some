@@ -97,6 +97,7 @@
 		FE79FD721D12E555001D052D /* nav_btn_back_n.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD6F1D12E555001D052D /* nav_btn_back_n.png */; };
 		FE79FD731D12E555001D052D /* nav_btn_back_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD701D12E555001D052D /* nav_btn_back_n@2x.png */; };
 		FE79FD741D12E555001D052D /* nav_btn_back_n@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD711D12E555001D052D /* nav_btn_back_n@3x.png */; };
+		FE79FD771D12FAE8001D052D /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD761D12FAE8001D052D /* BrightnessView.m */; };
 		FEA58DEC1C83275F00FE4E8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEB1C83275F00FE4E8A /* main.m */; };
 		FEA58DEF1C83275F00FE4E8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEE1C83275F00FE4E8A /* AppDelegate.m */; };
 		FEA58DF21C83275F00FE4E8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DF11C83275F00FE4E8A /* ViewController.m */; };
@@ -317,6 +318,8 @@
 		FE79FD6F1D12E555001D052D /* nav_btn_back_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_btn_back_n.png; sourceTree = "<group>"; };
 		FE79FD701D12E555001D052D /* nav_btn_back_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_back_n@2x.png"; sourceTree = "<group>"; };
 		FE79FD711D12E555001D052D /* nav_btn_back_n@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_back_n@3x.png"; sourceTree = "<group>"; };
+		FE79FD751D12FAE8001D052D /* BrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessView.h; sourceTree = "<group>"; };
+		FE79FD761D12FAE8001D052D /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
 		FEA58DE71C83275F00FE4E8A /* FileMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA58DEB1C83275F00FE4E8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEA58DED1C83275F00FE4E8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -716,6 +719,8 @@
 				FE79FCFD1D12DAB9001D052D /* TFVAppInfo.m */,
 				FE79FCEF1D12DAB9001D052D /* ForwardBackView.h */,
 				FE79FCF01D12DAB9001D052D /* ForwardBackView.m */,
+				FE79FD751D12FAE8001D052D /* BrightnessView.h */,
+				FE79FD761D12FAE8001D052D /* BrightnessView.m */,
 				FE79FCFE1D12DAB9001D052D /* TFVSegmentSlider.h */,
 				FE79FCFF1D12DAB9001D052D /* TFVSegmentSlider.m */,
 				FE79FD001D12DAB9001D052D /* UIAlertView+Blocks.h */,
@@ -1286,6 +1291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DF50BE1C8960DB00B3E22A /* SeekDuration.m in Sources */,
+				FE79FD771D12FAE8001D052D /* BrightnessView.m in Sources */,
 				FEA58E8D1C8348F400FE4E8A /* MovieListCell.m in Sources */,
 				FE28D8271C886AA5000AFC70 /* BaseViewController.m in Sources */,
 				FE79FD4A1D12DAB9001D052D /* UIView+RRFoundation.m in Sources */,
