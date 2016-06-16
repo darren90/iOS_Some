@@ -1,12 +1,12 @@
 //
-//  RRVideoPlayer.m
-//  VideoPlayer
+//  TFVideoPlayer.m
+//  FileMaster
 //
-//  Created by Fengtf on 16/6/12.
+//  Created by Tengfei on 16/6/16.
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "RRVideoPlayer.h"
+#import "TFVideoPlayer.h"
 
 #import "TFUtilities.h"
 #import "TFVSegmentSlider.h"
@@ -23,7 +23,7 @@
 #define WS(weakSelf)    __weak __typeof(&*self)weakSelf = self;
 
 
-@interface RRVideoPlayer ()<RRVideoPlayerViewDelegate>
+@interface TFVideoPlayer ()<TFVideoPlayerViewDelegate>
 {
     long               mDuration;
     long               mCurPostion;
@@ -40,7 +40,7 @@
 @property (nonatomic,assign)long lastWatchPos;
 @end
 
-@implementation RRVideoPlayer
+@implementation TFVideoPlayer
 
 //异步线程更改
 void TFRUN_ON_UI_THREAD(dispatch_block_t block) {
@@ -51,22 +51,22 @@ void TFRUN_ON_UI_THREAD(dispatch_block_t block) {
     }
 }
 
-static   RRVideoPlayer *rrVideoPlayer = nil;
+static   TFVideoPlayer *tfVideoPlayer = nil;
 
-+(RRVideoPlayer *) sharedPlayer
++(TFVideoPlayer *) sharedPlayer
 {
     @synchronized(self){
-        if (rrVideoPlayer == nil) {
-            rrVideoPlayer = [[self alloc] init];
+        if (tfVideoPlayer == nil) {
+            tfVideoPlayer = [[self alloc] init];
         }
     }
-    return  rrVideoPlayer;
+    return  tfVideoPlayer;
 }
 
 - (id)init {
     self = [super init];
     if (self) {
-        self.view = [RRVideoPlayerView videoPlayerView];
+        self.view = [TFVideoPlayerView videoPlayerView];
         [self initialize];
     }
     return self;
@@ -78,7 +78,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 //    self.view.isPlayLocalFile = isPlayLocalFile;
 //}
 
-- (id)initWithVideoPlayerView:(RRVideoPlayerView*)videoPlayerView {
+- (id)initWithVideoPlayerView:(TFVideoPlayerView*)videoPlayerView {
     self = [super init];
     if (self) {
         self.view = videoPlayerView;
@@ -154,24 +154,24 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 
 ///
 
-#pragma mark - RRVideoPlayerViewDelegate
+#pragma mark - TFVideoPlayerViewDelegate
 - (void)captionButtonTapped {
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapCaption];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventTapCaption];
     }
 }
 
 - (void)playButtonPressed {
     [self playContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventPlay];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventPlay];
     }
 }
 
 - (void)pauseButtonPressed {
     [self pauseContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventPause];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventPause];
     }
 }
 
@@ -249,7 +249,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     NSLog(@"%d",b);
 
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapDone];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventTapDone];
     }
 }
 
@@ -259,7 +259,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 {
 #warning TODO - 
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventShare];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventShare];
     }
 }
 
@@ -268,7 +268,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 {
 #warning TODO -
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventSelectMenu];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventSelectMenu];
     }
 }
 
@@ -278,14 +278,14 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 {
 #warning TODO -
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoplayercontroleventDanMu];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoplayercontroleventDanMu];
     }
 }
 
 -(void)clarityButtonTapped
 {
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoplayercontroleventClarity];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoplayercontroleventClarity];
     }
 }
 
@@ -301,7 +301,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     }
 
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapFullScreen];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventTapFullScreen];
     }
 }
 //#pragma mark - 选集
@@ -443,7 +443,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
 {
 //    [self doneButtonTapped];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:RRVideoPlayerControlEventTapDone];
+        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventTapDone];
     }
 }
 
@@ -702,7 +702,7 @@ static   RRVideoPlayer *rrVideoPlayer = nil;
     BOOL b = [_mMPayer unSetupPlayer];
     NSLog(@"%d",b);
     _mMPayer = nil;
-//    rrVideoPlayer = nil;
+//    TFVideoPlayer = nil;
     NSLog(@"------:");
 //    [self.view.progressSld removeObserver:self forKeyPath:@"maximumValue"];
 }

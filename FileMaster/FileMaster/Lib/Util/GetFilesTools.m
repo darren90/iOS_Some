@@ -34,10 +34,10 @@
                 if (![[fileName substringToIndex:1] isEqualToString:@"."]) {
                     
                     if ([fileName hasSuffix:@".mp4"]) {
-                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:200.0];
-                        fileType = FileMovieCanPlay;
-                        [pathArray addObject:movieFile];
-
+                        //                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:200.0];
+                        //                        fileType = FileMovieCanPlay;
+                        //                        [pathArray addObject:movieFile];
+                        
                     }else if([fileName hasSuffix:@".png"] || [fileName hasSuffix:@".jpg"]){
                         imgData = [UIImage imageWithContentsOfFile:fullPath];
                         fileType = FileImage;
@@ -48,6 +48,15 @@
                         imgData = [UIImage imageNamed:@"file_new"];
                         fileType = FileOther;
                     }
+                    
+                    NSString *extname = [[fileName pathExtension] lowercaseString];
+                    if ([@[@"mp4",@"mov",@"m4v",@"wav",@"flac",@"ape",@"wma",@"mp3",
+                           @"avi",@"wmv",@"rmvb",@"flv",@"f4v",@"swf",@"mkv",@"dat",@"vob",@"mts",@"ogg",@"mpg"] indexOfObject:extname] != NSNotFound) {
+                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:10.0];
+                        fileType = FileMovieCanPlay;
+                        [pathArray addObject:movieFile];
+                    }
+                    
                     model = [MovieList movieList:fileName fileType:fileType path:fullPath imgData:imgData];
                     
                     movieFile.isFolder = NO;
@@ -55,10 +64,10 @@
                 }
             }
             else {
-//                movieFile.isFolder = YES;
-//                movieFile.subFiles = [self scanFilesAtPath:fullPath];
-//                movieFile.folderName = fileName;
-//                [pathArray addObject:movieFile];
+                //                movieFile.isFolder = YES;
+                //                movieFile.subFiles = [self scanFilesAtPath:fullPath];
+                //                movieFile.folderName = fileName;
+                //                [pathArray addObject:movieFile];
                 [self scanFilesAtPath:fullPath];
             }
         }
@@ -98,6 +107,14 @@
                         imgData = [UIImage imageNamed:@"file_new"];
                         fileType = FileOther;
                     }
+                    
+                    NSString *extname = [[fileName pathExtension] lowercaseString];
+                    if ([@[@"mp4",@"mov",@"m4v",@"wav",@"flac",@"ape",@"wma",@"mp3",
+                           @"avi",@"wmv",@"rmvb",@"flv",@"f4v",@"swf",@"mkv",@"dat",@"vob",@"mts",@"ogg",@"mpg"] indexOfObject:extname] != NSNotFound) {
+                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:10.0];
+                        fileType = FileMovieCanPlay;
+                    }
+                    
                     model = [MovieList movieList:fileName fileType:fileType path:fullPath imgData:imgData];
                     
                     movieFile.isFolder = NO;
@@ -157,14 +174,21 @@
         }
         
         if ([fileName hasSuffix:@".mp4"]) {
-            imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:path] atTime:10.0];
-            fileType = FileMovieCanPlay;
+            //            imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:path] atTime:10.0];
+            //            fileType = FileMovieCanPlay;
         }else if([fileName hasSuffix:@".png"]){
             imgData = [UIImage imageWithContentsOfFile:path];
             fileType = FileImage;
         }else {
             imgData = [UIImage imageNamed:@"Finder_files"];
             fileType = FileOther;
+        }
+        
+        NSString *extname = [[fileName pathExtension] lowercaseString];
+        if ([@[@"mp4",@"mov",@"m4v",@"wav",@"flac",@"ape",@"wma",@"mp3",
+               @"avi",@"wmv",@"rmvb",@"flv",@"f4v",@"swf",@"mkv",@"dat",@"vob",@"mts",@"ogg",@"mpg"] indexOfObject:extname] != NSNotFound) {
+            imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:path] atTime:10.0];
+            fileType = FileMovieCanPlay;
         }
         
         MovieList *model = [MovieList movieList:fileName fileType:fileType path:path imgData:imgData];

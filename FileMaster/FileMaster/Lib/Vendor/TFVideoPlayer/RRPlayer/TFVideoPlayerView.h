@@ -1,8 +1,8 @@
 //
-//  RRVideoPlayerView.h
-//  VideoPlayer
+//  TFVideoPlayerView.h
+//  FileMaster
 //
-//  Created by Fengtf on 16/6/12.
+//  Created by Tengfei on 16/6/16.
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
@@ -15,7 +15,7 @@
 
 
 
-@protocol RRVideoPlayerViewDelegate <NSObject>
+@protocol TFVideoPlayerViewDelegate <NSObject>
 //@property (nonatomic, readonly) VKVideoPlayerTrack* videoTrack;
 @property (nonatomic, readonly) UIInterfaceOrientation visibleInterfaceOrientation;
 - (void)fullScreenButtonTapped;
@@ -72,7 +72,9 @@
 -(void)endFastWithTime:(long)time;
 @end
 
-@interface RRVideoPlayerView : UIView
+#pragma mark - TFVideoPlayerView
+
+@interface TFVideoPlayerView : UIView
 /** 初始化播放控件 */
 +(instancetype)videoPlayerView;
 
@@ -193,7 +195,7 @@
 
 // ******//
 
-@property (nonatomic, weak) id<RRVideoPlayerViewDelegate> delegate;
+@property (nonatomic, weak) id<TFVideoPlayerViewDelegate> delegate;
 
 
 

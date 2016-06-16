@@ -14,6 +14,7 @@
 #import "UIImage+Category.h"
 #import "MovieFile.h"
 #import "GetFilesTools.h"
+#import "TFMoviePlayerViewController.h"
 
 @interface MovieList_RootController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
@@ -87,7 +88,7 @@
     }else{
         MovieList *list = model.file;
         if (list.fileType == FileMovieCanPlay) {
-            MoviePlayerViewController *playerVc = [[MoviePlayerViewController alloc] init];
+            TFMoviePlayerViewController *playerVc = [[TFMoviePlayerViewController alloc] init];
             playerVc.topTitle = list.name;
             playerVc.playLocalUrl = list.name;
             [self.navigationController presentViewController:playerVc animated:YES completion:nil];

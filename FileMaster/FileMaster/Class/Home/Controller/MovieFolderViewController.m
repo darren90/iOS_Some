@@ -11,6 +11,7 @@
 #import "MovieFile.h"
 #import "MovieListCell.h"
 #import "MoviePlayerViewController.h"
+#import "TFMoviePlayerViewController.h"
 
 @interface MovieFolderViewController ()
 @property (nonatomic,strong)NSMutableArray * dataArray;
@@ -71,9 +72,9 @@
     }else{
         MovieList *list = model.file;
         if (list.fileType == FileMovieCanPlay) {
-            MoviePlayerViewController *playerVc = [[MoviePlayerViewController alloc] init];
-            playerVc.topTitle = list.name;
-            playerVc.playLocalUrl = list.relaPath;
+            TFMoviePlayerViewController *playerVc = [[TFMoviePlayerViewController alloc] init];
+//            playerVc.topTitle = list.name;
+//            playerVc.playLocalUrl = list.relaPath;
             [self.navigationController presentViewController:playerVc animated:YES completion:nil];
         }else if (list.fileType == FileImage){
             

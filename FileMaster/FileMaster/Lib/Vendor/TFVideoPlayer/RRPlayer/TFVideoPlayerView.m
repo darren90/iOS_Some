@@ -1,16 +1,17 @@
 //
-//  RRVideoPlayerView.m
-//  VideoPlayer
+//  TFVideoPlayerView.m
+//  FileMaster
 //
-//  Created by Fengtf on 16/6/12.
+//  Created by Tengfei on 16/6/16.
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "RRVideoPlayerView.h"
+
+#import "TFVideoPlayerView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
 #import "UIView+RRFoundation.h"
-#import "RRVideoPlayerView+Extension.h"
+#import "TFVideoPlayerView+Extension.h"
 
 #define PADDING 8
 
@@ -21,7 +22,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 } ;
 
 
-@interface RRVideoPlayerView ()
+@interface TFVideoPlayerView ()
 
 /** 调节声音，亮度；快进快推的手势 */
 @property (nonatomic,strong)UIPanGestureRecognizer * panGesture;
@@ -36,17 +37,17 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 @end
 
-@implementation RRVideoPlayerView
+@implementation TFVideoPlayerView
 
 +(instancetype)videoPlayerView
 {
-    return [[NSBundle mainBundle] loadNibNamed:@"RRVideoPlayerView" owner:nil options:nil].firstObject;
+    return [[NSBundle mainBundle] loadNibNamed:@"TFVideoPlayerView" owner:nil options:nil].firstObject;
 }
 
 -(instancetype)init
 {
     if (self = [super init]) {
-        self = [RRVideoPlayerView videoPlayerView];
+        self = [TFVideoPlayerView videoPlayerView];
     }
     return self;
 }

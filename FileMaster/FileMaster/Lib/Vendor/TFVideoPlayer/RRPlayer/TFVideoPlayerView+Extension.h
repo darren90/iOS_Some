@@ -6,9 +6,9 @@
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "RRVideoPlayerView.h"
+#import "TFVideoPlayerView.h"
 
-@interface RRVideoPlayerView (Extension)
+@interface TFVideoPlayerView (Extension)
 //隐藏所有的控件
 - (void)allHidden;
 //隐藏某些控件

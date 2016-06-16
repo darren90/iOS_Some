@@ -1,8 +1,8 @@
 //
 //  RRPlayer.h
-//  VideoPlayer
+//  FileMaster
 //
-//  Created by Fengtf on 16/6/12.
+//  Created by Tengfei on 16/6/16.
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
@@ -12,8 +12,8 @@
 
 //引入RRPlayer的头文件
 
-#import "RRVideoPlayerView.h"
-#import "RRVideoPlayer.h"
+#import "TFVideoPlayerView.h"
+#import "TFVideoPlayer.h"
 
 
 

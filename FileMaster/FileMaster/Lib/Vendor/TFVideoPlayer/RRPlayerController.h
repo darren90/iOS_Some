@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "RRPlayer.h"
+#import "TFPlayer.h"
 
 @interface RRPlayerController : UIViewController
-@property (nonatomic, strong) RRVideoPlayer* player;
+@property (nonatomic, strong) TFVideoPlayer* player;
 
 
 

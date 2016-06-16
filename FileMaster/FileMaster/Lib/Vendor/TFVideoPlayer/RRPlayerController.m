@@ -7,9 +7,9 @@
 //
 
 #import "RRPlayerController.h"
-#import "RRPlayer.h"
+#import "TFPlayer.h"
 
-@interface RRPlayerController()<RRVideoPlayerDelegate >
+@interface RRPlayerController()<TFVideoPlayerDelegate >
 @end
 
 
@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     
-    self.player = [[RRVideoPlayer alloc]init];
+    self.player = [[TFVideoPlayer alloc]init];
     self.player.view.frame = self.view.bounds;
     self.player.delegate = self;
     [self.view addSubview:self.player.view];
@@ -73,14 +73,14 @@
 }
 
 
-- (void)videoPlayer:(RRVideoPlayer*)videoPlayer didControlByEvent:(RRVideoPlayerControlEvent)event
+- (void)videoPlayer:(TFVideoPlayer*)videoPlayer didControlByEvent:(TFVideoPlayerControlEvent)event
 {
     if (self.player.view.isLockBtnEnable) {
         return;
     }
     
     switch (event) {
-        case RRVideoPlayerControlEventTapDone:
+        case TFVideoPlayerControlEventTapDone:
         {
             [self dismissViewControllerAnimated:YES completion:^{
                 [self unInstallPlayer];

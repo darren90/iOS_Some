@@ -6,7 +6,7 @@
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "RRVideoPlayerView+Extension.h"
+#import "TFVideoPlayerView+Extension.h"
 
 static CGFloat BTNWIDTH = 40.0;
 static CGFloat BTNHIGHT = 40.0;
@@ -28,7 +28,7 @@ static CGFloat LABELHIGHT = 20.0;
 #define MaxY(v)                 CGRectGetMaxY((v).frame)
 
 
-@implementation RRVideoPlayerView (Extension)
+@implementation TFVideoPlayerView (Extension)
 
 - (void)allHidden{
 
