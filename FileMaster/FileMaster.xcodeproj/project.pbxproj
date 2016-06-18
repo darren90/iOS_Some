@@ -100,6 +100,10 @@
 		FE79FD771D12FAE8001D052D /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD761D12FAE8001D052D /* BrightnessView.m */; };
 		FE79FD791D12FD7E001D052D /* Player_brightness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */; };
 		FE79FD7B1D1301D7001D052D /* Default-568.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD7A1D1301D7001D052D /* Default-568.png */; };
+		FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD7D1D153E8C001D052D /* AdvertView.m */; };
+		FE79FD8A1D153F26001D052D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD801D153F26001D052D /* GoogleMobileAds.framework */; };
+		FE79FD8B1D153F26001D052D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD881D153F26001D052D /* README.txt */; };
+		FE79FD8C1D153F26001D052D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD891D153F26001D052D /* README.txt */; };
 		FEA58DEC1C83275F00FE4E8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEB1C83275F00FE4E8A /* main.m */; };
 		FEA58DEF1C83275F00FE4E8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEE1C83275F00FE4E8A /* AppDelegate.m */; };
 		FEA58DF21C83275F00FE4E8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DF11C83275F00FE4E8A /* ViewController.m */; };
@@ -324,6 +328,17 @@
 		FE79FD761D12FAE8001D052D /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
 		FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_brightness@2x.png"; sourceTree = "<group>"; };
 		FE79FD7A1D1301D7001D052D /* Default-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568.png"; sourceTree = "<group>"; };
+		FE79FD7C1D153E8C001D052D /* AdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertView.h; sourceTree = "<group>"; };
+		FE79FD7D1D153E8C001D052D /* AdvertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertView.m; sourceTree = "<group>"; };
+		FE79FD801D153F26001D052D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		FE79FD821D153F26001D052D /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
+		FE79FD831D153F26001D052D /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
+		FE79FD841D153F26001D052D /* GADMediationAdRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMediationAdRequest.h; sourceTree = "<group>"; };
+		FE79FD851D153F26001D052D /* GADMEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMEnums.h; sourceTree = "<group>"; };
+		FE79FD861D153F26001D052D /* GADMRewardBasedVideoAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMRewardBasedVideoAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
+		FE79FD871D153F26001D052D /* GADMRewardBasedVideoAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMRewardBasedVideoAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
+		FE79FD881D153F26001D052D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		FE79FD891D153F26001D052D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		FEA58DE71C83275F00FE4E8A /* FileMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA58DEB1C83275F00FE4E8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEA58DED1C83275F00FE4E8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -406,6 +421,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE79FD8A1D153F26001D052D /* GoogleMobileAds.framework in Frameworks */,
 				89E759E21C86F4BF002A10BA /* AVFoundation.framework in Frameworks */,
 				FE79FD621D12DB38001D052D /* AudioToolbox.framework in Frameworks */,
 				FE79FD601D12DB2C001D052D /* CoreGraphics.framework in Frameworks */,
@@ -772,6 +788,30 @@
 			path = Vitamio;
 			sourceTree = "<group>";
 		};
+		FE79FD7F1D153F26001D052D /* AdSupport */ = {
+			isa = PBXGroup;
+			children = (
+				FE79FD801D153F26001D052D /* GoogleMobileAds.framework */,
+				FE79FD811D153F26001D052D /* Mediation Adapters */,
+				FE79FD891D153F26001D052D /* README.txt */,
+			);
+			path = AdSupport;
+			sourceTree = "<group>";
+		};
+		FE79FD811D153F26001D052D /* Mediation Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				FE79FD821D153F26001D052D /* GADMAdNetworkAdapterProtocol.h */,
+				FE79FD831D153F26001D052D /* GADMAdNetworkConnectorProtocol.h */,
+				FE79FD841D153F26001D052D /* GADMediationAdRequest.h */,
+				FE79FD851D153F26001D052D /* GADMEnums.h */,
+				FE79FD861D153F26001D052D /* GADMRewardBasedVideoAdNetworkAdapterProtocol.h */,
+				FE79FD871D153F26001D052D /* GADMRewardBasedVideoAdNetworkConnectorProtocol.h */,
+				FE79FD881D153F26001D052D /* README.txt */,
+			);
+			path = "Mediation Adapters";
+			sourceTree = "<group>";
+		};
 		FEA58DDE1C83275F00FE4E8A = {
 			isa = PBXGroup;
 			children = (
@@ -897,6 +937,8 @@
 				FEA58E8B1C8348F400FE4E8A /* MovieListCell.h */,
 				FEA58E8C1C8348F400FE4E8A /* MovieListCell.m */,
 				FE28D8151C873CCF000AFC70 /* MovieListCell.xib */,
+				FE79FD7C1D153E8C001D052D /* AdvertView.h */,
+				FE79FD7D1D153E8C001D052D /* AdvertView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -989,6 +1031,7 @@
 		FEA58E2B1C83406700FE4E8A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FE79FD7F1D153F26001D052D /* AdSupport */,
 				FE79FCC11D12DAB9001D052D /* TFVideoPlayer */,
 				FE08C9191CC51CB5008F3290 /* Masonry */,
 				FE59C11F1C8A681D009666BE /* ClearCache */,
@@ -1197,10 +1240,12 @@
 				FE79FD731D12E555001D052D /* nav_btn_back_n@2x.png in Resources */,
 				FEA58E6C1C83406700FE4E8A /* VKVideoPlayer_close@2x.png in Resources */,
 				FEA58E711C83406700FE4E8A /* VKVideoPlayer_pause.png in Resources */,
+				FE79FD8C1D153F26001D052D /* README.txt in Resources */,
 				FEA58DF71C83275F00FE4E8A /* Assets.xcassets in Resources */,
 				FEA58E731C83406700FE4E8A /* VKVideoPlayer_pause_big.png in Resources */,
 				FEA58E771C83406700FE4E8A /* VKVideoPlayer_play_big.png in Resources */,
 				FE79FD281D12DAB9001D052D /* pb-seek-bar-btn@2x.png in Resources */,
+				FE79FD8B1D153F26001D052D /* README.txt in Resources */,
 				FE79FD161D12DAB9001D052D /* audioTrackIcon.png in Resources */,
 				FEA58E721C83406700FE4E8A /* VKVideoPlayer_pause@2x.png in Resources */,
 				FE79FD231D12DAB9001D052D /* left@3x.png in Resources */,
@@ -1360,6 +1405,7 @@
 				FE28D82F1C886ABF000AFC70 /* RDVTabBar.m in Sources */,
 				FE28D8311C886ABF000AFC70 /* RDVTabBarItem.m in Sources */,
 				FE08C93E1CC51CB5008F3290 /* ViewController+MASAdditions.m in Sources */,
+				FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */,
 				FE79FD4C1D12DAB9001D052D /* CHANGELOG.md in Sources */,
 				FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */,
 				FEA58E5E1C83406700FE4E8A /* VKVideoPlayer.m in Sources */,
@@ -1509,6 +1555,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/AdSupport",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FileMaster/PrefixHeader.pch";
 				INFOPLIST_FILE = FileMaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -1532,6 +1582,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/AdSupport",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/FileMaster/PrefixHeader.pch";
 				INFOPLIST_FILE = FileMaster/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
