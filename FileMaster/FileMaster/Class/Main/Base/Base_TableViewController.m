@@ -47,9 +47,8 @@
     self.tableView = tableView;
     tableView.delegate = self;
     tableView.dataSource = self;
+    tableView.frame = self.view.bounds;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

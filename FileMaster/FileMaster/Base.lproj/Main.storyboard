@@ -25,46 +25,6 @@
             </objects>
             <point key="canvasLocation" x="-2851" y="954"/>
         </scene>
-        <!--全部文件-->
-        <scene sceneID="TX7-wI-poZ">
-            <objects>
-                <tableViewController storyboardIdentifier="AllFiles" id="vIO-GK-kOj" customClass="AllFiles_RootController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="is7-P0-EsT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="giP-4k-Ly2">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="giP-4k-Ly2" id="AvV-7q-ikd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vIO-GK-kOj" id="lMl-gK-Jb9"/>
-                            <outlet property="delegate" destination="vIO-GK-kOj" id="Zan-dl-f9b"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="全部文件" id="byI-gB-Moe">
-                        <barButtonItem key="rightBarButtonItem" title="编辑" id="6rW-k7-ZxY">
-                            <connections>
-                                <action selector="editList:" destination="vIO-GK-kOj" id="OtO-lQ-7xQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="editButton" destination="6rW-k7-ZxY" id="Iyg-Ze-fSw"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UfK-vh-GWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1168" y="-746"/>
-        </scene>
         <!--Item-->
         <scene sceneID="sHT-Us-bqf">
             <objects>
@@ -75,12 +35,40 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vIO-GK-kOj" kind="relationship" relationship="rootViewController" id="icN-Kh-FHL"/>
+                        <segue destination="1VL-SZ-6M1" kind="relationship" relationship="rootViewController" id="SGH-8u-ASx"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2c7-P0-LCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1984" y="-746"/>
+        </scene>
+        <!--全部文件-->
+        <scene sceneID="OtF-RL-hxr">
+            <objects>
+                <viewController storyboardIdentifier="AllFiles" id="1VL-SZ-6M1" customClass="AllFiles_RootController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lvf-s0-3U3"/>
+                        <viewControllerLayoutGuide type="bottom" id="gz4-gf-hdb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="85Y-FG-Bez">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="全部文件" id="iQy-X8-ny4">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="rhM-l8-vAt">
+                            <connections>
+                                <action selector="editList:" destination="1VL-SZ-6M1" id="Tfc-2t-CbG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editButton" destination="rhM-l8-vAt" id="GuB-5q-asY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vuc-hE-Kgm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1325" y="-753"/>
         </scene>
         <!--本地视频-->
         <scene sceneID="tti-gi-N5K">

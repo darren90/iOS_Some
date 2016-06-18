@@ -17,7 +17,7 @@
 #import "TFMoviePlayerViewController.h"
 #import "AdvertView.h"
 
-@interface AllFiles_RootController ()<UITableViewDelegate,UITableViewDataSource>
+@interface AllFiles_RootController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 
@@ -57,7 +57,7 @@
     
     self.tableView.rowHeight = 60;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49+64+50, 0);
 //    self.tableView.backgroundColor = [UIColor blueColor];
     
     [self initAdView];
