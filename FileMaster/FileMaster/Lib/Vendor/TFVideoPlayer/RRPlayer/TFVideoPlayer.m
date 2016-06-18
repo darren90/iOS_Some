@@ -99,7 +99,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 //    [self initializePlayerView];
 //    [self addObservers];
     self.view.delegate = self;
-
+//    self.view.isPlayLocalFile = self.isPlayLocalFile;
     if (!self.mMPayer) {
         self.mMPayer = [VMediaPlayer sharedInstance];
         [self.mMPayer setupPlayerWithCarrierView:self.view.carrier withDelegate:self];
@@ -107,16 +107,21 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     }
 }
 
+-(void)setIsPlayLocalFile:(BOOL)isPlayLocalFile
+{
+    _isPlayLocalFile = isPlayLocalFile;
+    self.view.isPlayLocalFile = _isPlayLocalFile;
+}
 
 #pragma mark - 第一次播放视频
 -(void)playStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos
 {
     NSLog(@"---playStreamUrl---");
     __weak __typeof(self)weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        long lastPos = 0;
         [weakSelf quicklyPlayMovie:url title:title seekToPos:pos];
-    });
+//    });
 }
 
 #pragma mark - 播放中途，切换视频URL重新进行播放（切换清晰度，切换剧集）
@@ -138,13 +143,13 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 - (void)applicationDidEnterForeground:(NSNotification *)notification
 {
     if (![self.mMPayer isPlaying]) {
-        [self.mMPayer setVideoShown:YES];
-        [self.mMPayer start];
+//        [self.mMPayer setVideoShown:YES];
+//        [self.mMPayer start];
 
-        WS(weakSelf);
-        TFRUN_ON_UI_THREAD(^{
-            [weakSelf.view.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
-        });
+//        WS(weakSelf);
+//        TFRUN_ON_UI_THREAD(^{
+//            [weakSelf.view.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
+//        });
     }
 }
 
@@ -152,7 +157,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 {
     if ([self.mMPayer isPlaying]) {
         [self.mMPayer pause];
-        [self.mMPayer setVideoShown:NO];
+//        [self.mMPayer setVideoShown:NO];
     }
 }
 

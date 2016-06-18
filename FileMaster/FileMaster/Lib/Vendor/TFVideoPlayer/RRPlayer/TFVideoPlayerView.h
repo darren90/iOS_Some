@@ -207,6 +207,13 @@
 -(void)stopActivity;
 -(void)setBtnEnableStatus:(BOOL)enable;
 
+/**
+ *  是否播放的是本地资源
+ */
+@property (nonatomic,assign)BOOL isPlayLocalFile;//我增加的字段，以便播放本地视频的时候视频不受打扰
+
+
+
 
 
 

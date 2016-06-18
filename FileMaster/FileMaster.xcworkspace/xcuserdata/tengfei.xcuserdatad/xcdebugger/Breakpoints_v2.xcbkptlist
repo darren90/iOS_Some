@@ -102,7 +102,7 @@
                   moduleName = "FileMaster"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tengfei/github/iOS_Some/FileMaster/FileMaster/Class/AllFiles/Controller/AllFiles_RootController.m"
-                  timestampString = "487779859.355004"
+                  timestampString = "487907044.066391"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"
@@ -117,7 +117,7 @@
                   moduleName = "FileMaster"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tengfei/github/iOS_Some/FileMaster/FileMaster/Class/AllFiles/Controller/AllFiles_RootController.m"
-                  timestampString = "487779859.35514"
+                  timestampString = "487907044.066499"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "101"
@@ -165,12 +165,28 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FileMaster/Class/Home/Controller/TFMoviePlayerViewController.m"
-            timestampString = "487779803.265711"
+            filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/RRPlayer/TFVideoPlayerView.m"
+            timestampString = "487906895.220755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
+            landmarkName = "-startActivityWithMsg:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FileMaster/Class/Home/Controller/TFMoviePlayerViewController.m"
+            timestampString = "487906955.103942"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "-playVideo"
             landmarkType = "5">
          </BreakpointContent>

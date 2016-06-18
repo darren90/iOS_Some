@@ -204,7 +204,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 {
     //	NSLog(@"NAL 4HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
     //	NSLog(@"NAL 1DOW &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Touch Down");
-//    [self.delegate progressSliderDownAction];
+    [self.delegate progressSliderDownAction];
 }
 
 -(IBAction)progressSliderUpAction:(id)sender
@@ -250,6 +250,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 -(void)startActivityWithMsg:(NSString *)msg
 {
+    if (self.isPlayLocalFile) return;
     msg = @"正在缓冲...";
     self.bubbleMsgLbl.hidden = NO;
     self.bubbleMsgLbl.text = msg;
@@ -524,7 +525,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     }
     
     // 每次滑动需要叠加时间
-    self.sumTime += value/1;    // 需要限定sumTime的范围 除以1 代表调节倍率
+    self.sumTime += value*3.0;    // 需要限定sumTime的范围 除以1 代表调节倍率
 //    CMTime totalTime = self.player.playerItem.duration;
 //    CGFloat totalMovieDuration = (CGFloat)totalTime.value/totalTime.timescale;
     long totalMovieDuration = [self.delegate getTotalDuration];
