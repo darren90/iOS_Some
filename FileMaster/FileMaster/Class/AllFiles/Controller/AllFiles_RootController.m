@@ -17,7 +17,8 @@
 #import "TFMoviePlayerViewController.h"
 #import "AdvertView.h"
 
-@interface AllFiles_RootController ()
+@interface AllFiles_RootController ()<UITableViewDelegate,UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 
 - (IBAction)editList:(UIBarButtonItem *)sender;
@@ -46,7 +47,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+//    [self initTableview];
+
     // 设置tableView在编辑模式下可以多选，并且只需设置一次
 //    self.tableView.allowsMultipleSelectionDuringEditing = YES;
    
@@ -66,7 +68,7 @@
     [self.view addSubview:adView];
     adView.frame = CGRectMake(0, KHeight-49-64-50, KWidth, 50);
     adView.bannerView.rootViewController = self;
-    [self.view bringSubviewToFront:adView];
+//    [self.view bringSubviewToFront:adView];
 //    adView.backgroundColor = [UIColor blueColor];
 }
 

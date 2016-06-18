@@ -104,6 +104,7 @@
 		FE79FD8A1D153F26001D052D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD801D153F26001D052D /* GoogleMobileAds.framework */; };
 		FE79FD8B1D153F26001D052D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD881D153F26001D052D /* README.txt */; };
 		FE79FD8C1D153F26001D052D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD891D153F26001D052D /* README.txt */; };
+		FE79FD8F1D156381001D052D /* Base_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD8E1D156381001D052D /* Base_TableViewController.m */; };
 		FEA58DEC1C83275F00FE4E8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEB1C83275F00FE4E8A /* main.m */; };
 		FEA58DEF1C83275F00FE4E8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEE1C83275F00FE4E8A /* AppDelegate.m */; };
 		FEA58DF21C83275F00FE4E8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DF11C83275F00FE4E8A /* ViewController.m */; };
@@ -339,6 +340,8 @@
 		FE79FD871D153F26001D052D /* GADMRewardBasedVideoAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMRewardBasedVideoAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
 		FE79FD881D153F26001D052D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		FE79FD891D153F26001D052D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		FE79FD8D1D156381001D052D /* Base_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base_TableViewController.h; sourceTree = "<group>"; };
+		FE79FD8E1D156381001D052D /* Base_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base_TableViewController.m; sourceTree = "<group>"; };
 		FEA58DE71C83275F00FE4E8A /* FileMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA58DEB1C83275F00FE4E8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEA58DED1C83275F00FE4E8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -581,6 +584,8 @@
 				FE28D8231C886A8E000AFC70 /* BaseTableViewController.m */,
 				FE28D8251C886AA5000AFC70 /* BaseViewController.h */,
 				FE28D8261C886AA5000AFC70 /* BaseViewController.m */,
+				FE79FD8D1D156381001D052D /* Base_TableViewController.h */,
+				FE79FD8E1D156381001D052D /* Base_TableViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1405,6 +1410,7 @@
 				FE28D82F1C886ABF000AFC70 /* RDVTabBar.m in Sources */,
 				FE28D8311C886ABF000AFC70 /* RDVTabBarItem.m in Sources */,
 				FE08C93E1CC51CB5008F3290 /* ViewController+MASAdditions.m in Sources */,
+				FE79FD8F1D156381001D052D /* Base_TableViewController.m in Sources */,
 				FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */,
 				FE79FD4C1D12DAB9001D052D /* CHANGELOG.md in Sources */,
 				FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */,
