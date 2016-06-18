@@ -102,6 +102,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 //    self.view.isPlayLocalFile = self.isPlayLocalFile;
     if (!self.mMPayer) {
         self.mMPayer = [VMediaPlayer sharedInstance];
+//        self.mMPayer.decodingSchemeUsing = VMDecodingSchemeSoftware;
         [self.mMPayer setupPlayerWithCarrierView:self.view.carrier withDelegate:self];
         [self setupObservers];
     }
