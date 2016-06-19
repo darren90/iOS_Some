@@ -1,0 +1,176 @@
+//
+//  LaunchViewController.m
+//  FileMaster
+//
+//  Created by Tengfei on 16/6/19.
+//  Copyright © 2016年 tengfei. All rights reserved.
+//
+
+#import "LaunchViewController.h"
+#import "BaseTabBarController.h"
+@import GoogleMobileAds;
+
+@interface LaunchViewController ()<GADInterstitialDelegate>
+@property(nonatomic, strong) GADInterstitial *interstitial;
+
+
+/**
+ *  跳过按钮
+ */
+@property (nonatomic,weak)UIButton * jumpBtn;
+/**NSTimer对象 */
+@property (nonatomic,strong)NSTimer * timer;
+
+//定时器的计数
+@property (nonatomic,assign)NSInteger count;
+@end
+
+@implementation LaunchViewController
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [MobClick beginLogPageView:@"page_开屏广告"];
+    NSLog(@"状态栏改变:1");
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+}
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"page_开屏广告"];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    self.count = 15;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.userInteractionEnabled = YES;
+
+    [self startNewGame];
+}
+
+- (void)startNewGame {
+    [self createAndLoadInterstitial];
+    
+    // Set up a new game.
+}
+
+- (void)createAndLoadInterstitial {
+    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-8145075793156354/7414388623"];
+    self.interstitial.delegate = self;
+    
+    GADRequest *request = [GADRequest request];
+    // Request test ads on devices you specify. Your test device ID is printed to the console when
+    // an ad request is made.
+//    request.testDevices = @[ kGADSimulatorID, @"2077ef9a63d2b398840261c8221a0c9b" ];
+    [self.interstitial loadRequest:request];
+}
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad
+{
+    NSLog(@"--- load interstitial success");
+    [self loadJumpView];
+}
+
+/// Called when an interstitial ad request completed without an interstitial to
+/// show. This is common since interstitials are shown sparingly to users.
+- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error
+{
+    NSLog(@"--load interstitial---error--:%@",error);
+    [self loadJumpView];
+}
+
+
+
+-(void)loadJumpView
+{
+    [self initiaz];
+    [self addTimer];
+}
+
+-(void)initiaz
+{
+    UIButton *jumpBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    self.jumpBtn = jumpBtn;
+    [jumpBtn setTitle:[NSString stringWithFormat:@"%lds 跳过",(long)self.count] forState:UIControlStateNormal];
+    jumpBtn.frame = CGRectMake(KWidth - 110, 28, 100, 30);
+//    ViewRadius(self.button, 15);
+    jumpBtn.layer.cornerRadius = 15;
+    jumpBtn.clipsToBounds = YES;
+    jumpBtn.titleLabel.font = [UIFont systemFontOfSize:20];
+    jumpBtn.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
+    [jumpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [jumpBtn addTarget:self action:@selector(jump) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:jumpBtn];
+}
+
+//撤销这个界面.
+- (void)jump
+{
+    [self destroyTimer];
+    NSLog(@"广告界面消失!");
+    //加载Main.Storeboard作为主页面
+//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+//    self.view.window.rootViewController = [storyBoard instantiateInitialViewController];
+    BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
+    self.view.window.rootViewController = tabBarVc;
+}
+
+
+#pragma mark - 增加定时器
+-(void)addTimer
+{
+    if (!self.timer) {
+        self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(changeCount) userInfo:nil repeats:YES];
+        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        //消息循环，添加到主线程
+        //extern NSString* const NSDefaultRunLoopMode;  //默认没有优先级
+        //extern NSString* const NSRunLoopCommonModes;  //提高优先级
+    }
+}
+
+-(void)changeCount
+{
+//    NSString *ss =
+    self.count--;
+    if (self.count <= 0) {
+        [self jump];
+    }else{
+        [self.jumpBtn setTitle:[NSString stringWithFormat:@"%lds 跳过",(long)self.count] forState:UIControlStateNormal];
+    }
+}
+
+#pragma mark - 销毁定时器
+-(void)destroyTimer
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
+
+- (void)dealloc
+{
+    if (_timer.isValid) {
+        //让定时器失效
+        [_timer invalidate];
+        _timer = nil;
+    }
+}
+
+
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end

@@ -10,6 +10,7 @@
 #import <HTTPServer.h>
 #import "HTTPStreamingServer.h"
 #import "BaseTabBarController.h"
+#import "LaunchViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,8 @@
     //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //    self.window.backgroundColor = [UIColor whiteColor];
     BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
-    self.window.rootViewController = tabBarVc;
+    LaunchViewController *launchVc = [[LaunchViewController alloc ]init];
+    self.window.rootViewController = launchVc;
     
     [self.window makeKeyAndVisible];
     

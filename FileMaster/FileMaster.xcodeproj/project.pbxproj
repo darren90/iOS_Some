@@ -154,6 +154,7 @@
 		FEA58E8D1C8348F400FE4E8A /* MovieListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E8C1C8348F400FE4E8A /* MovieListCell.m */; };
 		FEA58E901C834A2000FE4E8A /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E8F1C834A2000FE4E8A /* MovieList.m */; };
 		FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */; };
+		FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE57971D168F190056FB9F /* LaunchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -417,6 +418,8 @@
 		FEA58E8F1C834A2000FE4E8A /* MovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieList.m; sourceTree = "<group>"; };
 		FEA58E911C834E0F00FE4E8A /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
+		FEFE57961D168F190056FB9F /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		FEFE57971D168F190056FB9F /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -570,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				FE28D8181C8868B2000AFC70 /* Base */,
+				FEFE57951D168F080056FB9F /* Launch */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1127,6 +1131,15 @@
 			path = imgs;
 			sourceTree = "<group>";
 		};
+		FEFE57951D168F080056FB9F /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE57961D168F190056FB9F /* LaunchViewController.h */,
+				FEFE57971D168F190056FB9F /* LaunchViewController.m */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1374,6 +1387,7 @@
 				FEA58E8A1C8347CE00FE4E8A /* Setting_RootController.m in Sources */,
 				FEA58E661C83406700FE4E8A /* VKVideoPlayerView.m in Sources */,
 				FEA58E5F1C83406700FE4E8A /* VKVideoPlayerAirPlay.m in Sources */,
+				FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */,
 				FE28D8211C886A03000AFC70 /* UIImage+Tint.m in Sources */,
 				FEA58DF21C83275F00FE4E8A /* ViewController.m in Sources */,
 				FEA58E611C83406700FE4E8A /* VKVideoPlayerCaptionSRT.m in Sources */,
