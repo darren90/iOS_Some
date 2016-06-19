@@ -8,6 +8,7 @@
 
 #import "LaunchViewController.h"
 #import "BaseTabBarController.h"
+#import "AppDelegate.h"
 @import GoogleMobileAds;
 
 @interface LaunchViewController ()<GADInterstitialDelegate>
@@ -66,6 +67,7 @@
     self.interstitial.delegate = self;
     
     GADRequest *request = [GADRequest request];
+    
     // Request test ads on devices you specify. Your test device ID is printed to the console when
     // an ad request is made.
 //    request.testDevices = @[ kGADSimulatorID, @"2077ef9a63d2b398840261c8221a0c9b" ];
@@ -98,6 +100,38 @@
 
 
 
+- (void)interstitialWillPresentScreen:(GADInterstitial *)ad
+{
+    NSLog(@"interstitialWillPresentScreen");
+}
+
+/// Called when |ad| fails to present.
+- (void)interstitialDidFailToPresentScreen:(GADInterstitial *)ad
+{
+NSLog(@"interstitialDidFailToPresentScreen");
+}
+
+/// Called before the interstitial is to be animated off the screen.
+- (void)interstitialWillDismissScreen:(GADInterstitial *)ad
+{
+NSLog(@"interstitialWillDismissScreen");
+//    [self destroyTimer];
+    [self jump];
+}
+
+/// Called just after dismissing an interstitial and it has animated off the screen.
+- (void)interstitialDidDismissScreen:(GADInterstitial *)ad
+{
+NSLog(@"interstitialDidDismissScreen");
+}
+
+/// Called just before the application will background or terminate because the user clicked on an
+- (void)interstitialWillLeaveApplication:(GADInterstitial *)ad;
+{
+    NSLog(@"interstitialWillLeaveApplication");
+}
+
+
 -(void)loadJumpView
 {
     [self initiaz];
@@ -117,8 +151,8 @@
     jumpBtn.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
     [jumpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [jumpBtn addTarget:self action:@selector(jump) forControlEvents:UIControlEventTouchUpInside];
-    [self.view.window addSubview:jumpBtn];
-    [self.view.window bringSubviewToFront:jumpBtn];
+//    [self.view.window addSubview:jumpBtn];
+//    [self.view.window bringSubviewToFront:jumpBtn];
 }
 
 //撤销这个界面.
@@ -132,7 +166,15 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 //    self.view.window.rootViewController = [storyBoard instantiateInitialViewController];
     BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
-    self.view.window.rootViewController = tabBarVc;
+//    self.view.window.rootViewController = tabBarVc;
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController *keyVc = app.window.rootViewController;
+    if ([keyVc isKindOfClass:[BaseTabBarController class]]) {
+        [self destroyTimer];
+    }else{
+        app.window.rootViewController = tabBarVc;
+        [app.window makeKeyAndVisible];
+    }
 }
 
 
