@@ -117,7 +117,8 @@
     jumpBtn.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
     [jumpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [jumpBtn addTarget:self action:@selector(jump) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:jumpBtn];
+    [self.view.window addSubview:jumpBtn];
+    [self.view.window bringSubviewToFront:jumpBtn];
 }
 
 //撤销这个界面.
