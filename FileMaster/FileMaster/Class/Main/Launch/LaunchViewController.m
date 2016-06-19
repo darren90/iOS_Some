@@ -48,7 +48,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.count = 8;
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.userInteractionEnabled = YES;
@@ -79,7 +78,8 @@
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad
 {
     NSLog(@"--- load interstitial success");
-    
+    self.count = 6;
+
     if (self.interstitial.isReady) {
         [self.interstitial presentFromRootViewController:self];
     }
