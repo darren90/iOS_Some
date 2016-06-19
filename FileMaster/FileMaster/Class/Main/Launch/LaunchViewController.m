@@ -48,7 +48,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.count = 15;
+    self.count = 8;
     
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.userInteractionEnabled = YES;
@@ -71,11 +71,19 @@
     // an ad request is made.
 //    request.testDevices = @[ kGADSimulatorID, @"2077ef9a63d2b398840261c8221a0c9b" ];
     [self.interstitial loadRequest:request];
+    if (self.interstitial.isReady) {
+        [self.interstitial presentFromRootViewController:self];
+    }
 }
 
 - (void)interstitialDidReceiveAd:(GADInterstitial *)ad
 {
     NSLog(@"--- load interstitial success");
+    
+    if (self.interstitial.isReady) {
+        [self.interstitial presentFromRootViewController:self];
+    }
+    
     [self loadJumpView];
 }
 
@@ -84,6 +92,7 @@
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error
 {
     NSLog(@"--load interstitial---error--:%@",error);
+    self.count = 3;
     [self loadJumpView];
 }
 

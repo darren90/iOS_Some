@@ -87,7 +87,6 @@
     return self.dataArray.count;
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MovieListCell  *cell = [MovieListCell cellWithTableView:tableView];//[tableView dequeueReusableCellWithIdentifier:@"movielistCell"];
     
