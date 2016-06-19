@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -206,6 +207,7 @@
                     <navigationItem key="navigationItem" title="设置" id="PGj-sX-9FZ"/>
                     <connections>
                         <segue destination="ibH-Mo-0P4" kind="push" id="YYE-Jg-ATu"/>
+                        <segue destination="6vi-FJ-LCf" kind="push" id="voc-CZ-X8g"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIP-da-6Jw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,7 +263,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ord-Cd-xnt">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ord-Cd-xnt">
                                 <rect key="frame" x="242" y="473" width="116" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="Cmu-3b-ews"/>
@@ -324,6 +326,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yQD-Hj-YCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-207" y="1719"/>
+        </scene>
+        <!--iTunes传输文件-->
+        <scene sceneID="4aY-Ie-6yW">
+            <objects>
+                <viewController storyboardIdentifier="usevc" id="6vi-FJ-LCf" customClass="UseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Uq-me-DvW"/>
+                        <viewControllerLayoutGuide type="bottom" id="NSz-1Q-LJa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uwr-FL-jHs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wp1-Bo-aBM">
+                                <rect key="frame" x="80" y="121" width="440" height="243.5"/>
+                                <string key="text">通过iTunes添加文件到手机：
+
+ -1. 把iPhone/iPad连接到电脑(Mac/Windows)
+
+ -2. 把iTunes里，选择刚才连接的iPhone/iPad，然后点击右侧的“应用”选项
+ 
+ -3. 将鼠标向下滚动到“文件共享”，在“文件共享”下的“应用”中，选取“文件大师”，然后点击“添加“，在弹出的窗口中选择需要传输的文件，然后点击”添加“
+
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.039215686274509803" green="0.039215686274509803" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Wp1-Bo-aBM" firstAttribute="centerX" secondItem="uwr-FL-jHs" secondAttribute="centerX" id="DOY-8g-AHb"/>
+                            <constraint firstItem="Wp1-Bo-aBM" firstAttribute="top" secondItem="1Uq-me-DvW" secondAttribute="bottom" constant="57" id="No5-C8-nkp"/>
+                            <constraint firstItem="Wp1-Bo-aBM" firstAttribute="leading" secondItem="uwr-FL-jHs" secondAttribute="leadingMargin" constant="60" id="duC-LZ-Arf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iTunes传输文件" id="zkg-zQ-2v6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDX-YK-6qC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-433" y="2479"/>
         </scene>
         <!--设置-->
         <scene sceneID="qTL-1o-C6u">

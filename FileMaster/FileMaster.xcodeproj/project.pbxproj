@@ -105,6 +105,8 @@
 		FE79FD8B1D153F26001D052D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD881D153F26001D052D /* README.txt */; };
 		FE79FD8C1D153F26001D052D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD891D153F26001D052D /* README.txt */; };
 		FE79FD8F1D156381001D052D /* Base_TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD8E1D156381001D052D /* Base_TableViewController.m */; };
+		FE9883411D16EE63001BD0D3 /* SettingGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9883401D16EE63001BD0D3 /* SettingGroup.m */; };
+		FE9883441D16F5E0001BD0D3 /* UseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9883431D16F5E0001BD0D3 /* UseViewController.m */; };
 		FEA58DEC1C83275F00FE4E8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEB1C83275F00FE4E8A /* main.m */; };
 		FEA58DEF1C83275F00FE4E8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DEE1C83275F00FE4E8A /* AppDelegate.m */; };
 		FEA58DF21C83275F00FE4E8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58DF11C83275F00FE4E8A /* ViewController.m */; };
@@ -343,6 +345,10 @@
 		FE79FD891D153F26001D052D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		FE79FD8D1D156381001D052D /* Base_TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base_TableViewController.h; sourceTree = "<group>"; };
 		FE79FD8E1D156381001D052D /* Base_TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base_TableViewController.m; sourceTree = "<group>"; };
+		FE98833F1D16EE63001BD0D3 /* SettingGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingGroup.h; sourceTree = "<group>"; };
+		FE9883401D16EE63001BD0D3 /* SettingGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingGroup.m; sourceTree = "<group>"; };
+		FE9883421D16F5E0001BD0D3 /* UseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UseViewController.h; sourceTree = "<group>"; };
+		FE9883431D16F5E0001BD0D3 /* UseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UseViewController.m; sourceTree = "<group>"; };
 		FEA58DE71C83275F00FE4E8A /* FileMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA58DEB1C83275F00FE4E8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEA58DED1C83275F00FE4E8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1002,6 +1008,8 @@
 				FEA58E891C8347CE00FE4E8A /* Setting_RootController.m */,
 				FE28D8501C887BE5000AFC70 /* AboutViewController.h */,
 				FE28D8511C887BE5000AFC70 /* AboutViewController.m */,
+				FE9883421D16F5E0001BD0D3 /* UseViewController.h */,
+				FE9883431D16F5E0001BD0D3 /* UseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1009,6 +1017,8 @@
 		FEA58E281C83406700FE4E8A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE98833F1D16EE63001BD0D3 /* SettingGroup.h */,
+				FE9883401D16EE63001BD0D3 /* SettingGroup.m */,
 				FE28D8531C88A181000AFC70 /* SettingModel.h */,
 				FE28D8541C88A181000AFC70 /* SettingModel.m */,
 			);
@@ -1382,9 +1392,11 @@
 				FE28D8391C886AE3000AFC70 /* UIView+AutoLayout.m in Sources */,
 				FE28D84A1C886E45000AFC70 /* UIViewController+Swizzle.m in Sources */,
 				FE08C93A1CC51CB5008F3290 /* MASViewConstraint.m in Sources */,
+				FE9883441D16F5E0001BD0D3 /* UseViewController.m in Sources */,
 				FEA58E621C83406700FE4E8A /* VKVideoPlayerExternalMonitor.m in Sources */,
 				895ABFAF1C87D65D00ABF2FD /* GetFilesTools.m in Sources */,
 				FEA58E8A1C8347CE00FE4E8A /* Setting_RootController.m in Sources */,
+				FE9883411D16EE63001BD0D3 /* SettingGroup.m in Sources */,
 				FEA58E661C83406700FE4E8A /* VKVideoPlayerView.m in Sources */,
 				FEA58E5F1C83406700FE4E8A /* VKVideoPlayerAirPlay.m in Sources */,
 				FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */,
