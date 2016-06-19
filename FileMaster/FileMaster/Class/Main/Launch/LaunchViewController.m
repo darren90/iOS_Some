@@ -45,7 +45,6 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 }
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -54,6 +53,9 @@
     self.view.userInteractionEnabled = YES;
 
     [self startNewGame];
+    
+    self.count = 6;//最先6S的等待时间，时间到，广告加载不出开，则不再进行加载
+    [self addTimer];
 }
 
 - (void)startNewGame {
@@ -134,6 +136,7 @@ NSLog(@"interstitialDidDismissScreen");
 
 -(void)loadJumpView
 {
+    [self destroyTimer];
     [self initiaz];
     [self addTimer];
 }
@@ -159,7 +162,6 @@ NSLog(@"interstitialDidDismissScreen");
 - (void)jump
 {
     [self destroyTimer];
-    NSLog(@"广告界面消失!");
     //加载Main.Storeboard作为主页面
 //    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];

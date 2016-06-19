@@ -32,7 +32,7 @@
 
 -(void)initliza
 {
-    self.backgroundColor = [UIColor whiteColor];
+    self.backgroundColor = MJColor(239, 239, 244);
     
     GADBannerView *bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
     self.bannerView = bannerView;
