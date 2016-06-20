@@ -92,7 +92,6 @@
 }
 
 /// Called when an interstitial ad request completed without an interstitial to
-/// show. This is common since interstitials are shown sparingly to users.
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error
 {
     NSLog(@"--load interstitial---error--:%@",error);

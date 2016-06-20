@@ -28,6 +28,8 @@
 
 //程序主色·
 #define KMainColor KColor(91, 138, 213)
+//tableview的背景色
+#define KCommonBgColor  MJColor(239, 239, 244)
 
 #define  KHeight    [UIScreen mainScreen].bounds.size.height
 #define  KWidth     [UIScreen mainScreen].bounds.size.width
