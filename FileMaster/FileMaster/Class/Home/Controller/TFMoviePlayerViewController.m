@@ -7,6 +7,7 @@
 //
 
 #import "TFMoviePlayerViewController.h"
+//#import "DatabaseTool.h"
 
 @interface TFMoviePlayerViewController ()<TFVideoPlayerDelegate>
 
@@ -61,6 +62,12 @@
     }
 
     [self playStream:uurl];
+}
+
+#pragma mark - 保存看剧时间
+- (void)addSeekTVDataWithepisodeID:(NSString *)episodeID{
+//    if (self.player.currentTime == 0.0)return;
+//    [DatabaseTool addSeekTVDuration:self.movieId episode:self.currentNum duration:self.player.currentTime title:self.topTitle urltpye:UrlHttp quality:self.quality episodeID:episodeID coverUrl:self.coverUrl];
 }
 
 /**

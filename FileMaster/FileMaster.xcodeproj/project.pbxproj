@@ -46,6 +46,12 @@
 		FE28D8521C887BE5000AFC70 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8511C887BE5000AFC70 /* AboutViewController.m */; };
 		FE28D8551C88A181000AFC70 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8541C88A181000AFC70 /* SettingModel.m */; };
 		FE28D85C1C8A6390000AFC70 /* AllFiles_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D85B1C8A6390000AFC70 /* AllFiles_RootController.m */; };
+		FE5428D31D198ED2009BF3B4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428C91D198ED2009BF3B4 /* FMDatabase.m */; };
+		FE5428D41D198ED2009BF3B4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CB1D198ED2009BF3B4 /* FMDatabaseAdditions.m */; };
+		FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CD1D198ED2009BF3B4 /* FMDatabasePool.m */; };
+		FE5428D61D198ED2009BF3B4 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CF1D198ED2009BF3B4 /* FMDatabaseQueue.m */; };
+		FE5428D71D198ED2009BF3B4 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428D21D198ED2009BF3B4 /* FMResultSet.m */; };
+		FE5428D91D198EE4009BF3B4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */; };
 		FE59C1241C8A681D009666BE /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1211C8A681D009666BE /* Global.m */; };
 		FE59C1251C8A681D009666BE /* WdCleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1231C8A681D009666BE /* WdCleanCaches.m */; };
 		FE79FD161D12DAB9001D052D /* audioTrackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCC31D12DAB9001D052D /* audioTrackIcon.png */; };
@@ -255,6 +261,18 @@
 		FE28D8541C88A181000AFC70 /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
 		FE28D85A1C8A6390000AFC70 /* AllFiles_RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllFiles_RootController.h; sourceTree = "<group>"; };
 		FE28D85B1C8A6390000AFC70 /* AllFiles_RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllFiles_RootController.m; sourceTree = "<group>"; };
+		FE5428C81D198ED2009BF3B4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		FE5428C91D198ED2009BF3B4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		FE5428CA1D198ED2009BF3B4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		FE5428CB1D198ED2009BF3B4 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		FE5428CC1D198ED2009BF3B4 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		FE5428CD1D198ED2009BF3B4 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		FE5428CE1D198ED2009BF3B4 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		FE5428CF1D198ED2009BF3B4 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		FE5428D01D198ED2009BF3B4 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		FE5428D11D198ED2009BF3B4 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		FE5428D21D198ED2009BF3B4 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FE59C1201C8A681D009666BE /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		FE59C1211C8A681D009666BE /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		FE59C1221C8A681D009666BE /* WdCleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WdCleanCaches.h; sourceTree = "<group>"; };
@@ -433,6 +451,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE5428D91D198EE4009BF3B4 /* libsqlite3.tbd in Frameworks */,
 				FE79FD8A1D153F26001D052D /* GoogleMobileAds.framework in Frameworks */,
 				89E759E21C86F4BF002A10BA /* AVFoundation.framework in Frameworks */,
 				FE79FD621D12DB38001D052D /* AudioToolbox.framework in Frameworks */,
@@ -526,6 +545,7 @@
 		D4B7F2072E06A46572EED219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */,
 				FE79FD611D12DB38001D052D /* AudioToolbox.framework */,
 				FE79FD5F1D12DB2C001D052D /* CoreGraphics.framework */,
 				FE79FD5D1D12DB16001D052D /* CoreVideo.framework */,
@@ -683,6 +703,24 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FE5428C71D198ED2009BF3B4 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				FE5428C81D198ED2009BF3B4 /* FMDatabase.h */,
+				FE5428C91D198ED2009BF3B4 /* FMDatabase.m */,
+				FE5428CA1D198ED2009BF3B4 /* FMDatabaseAdditions.h */,
+				FE5428CB1D198ED2009BF3B4 /* FMDatabaseAdditions.m */,
+				FE5428CC1D198ED2009BF3B4 /* FMDatabasePool.h */,
+				FE5428CD1D198ED2009BF3B4 /* FMDatabasePool.m */,
+				FE5428CE1D198ED2009BF3B4 /* FMDatabaseQueue.h */,
+				FE5428CF1D198ED2009BF3B4 /* FMDatabaseQueue.m */,
+				FE5428D01D198ED2009BF3B4 /* FMDB.h */,
+				FE5428D11D198ED2009BF3B4 /* FMResultSet.h */,
+				FE5428D21D198ED2009BF3B4 /* FMResultSet.m */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 		FE59C11F1C8A681D009666BE /* ClearCache */ = {
@@ -1050,6 +1088,7 @@
 		FEA58E2B1C83406700FE4E8A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FE5428C71D198ED2009BF3B4 /* fmdb */,
 				FE79FD7F1D153F26001D052D /* AdSupport */,
 				FE79FCC11D12DAB9001D052D /* TFVideoPlayer */,
 				FE08C9191CC51CB5008F3290 /* Masonry */,
@@ -1406,10 +1445,13 @@
 				FE28D8301C886ABF000AFC70 /* RDVTabBarController.m in Sources */,
 				FEA58E651C83406700FE4E8A /* VKVideoPlayerTrack.m in Sources */,
 				FEA58DEF1C83275F00FE4E8A /* AppDelegate.m in Sources */,
+				FE5428D61D198ED2009BF3B4 /* FMDatabaseQueue.m in Sources */,
 				FE79FD411D12DAB9001D052D /* ForwardBackView.m in Sources */,
 				FEA58E631C83406700FE4E8A /* VKVideoPlayerLayerView.m in Sources */,
+				FE5428D41D198ED2009BF3B4 /* FMDatabaseAdditions.m in Sources */,
 				FE08C93D1CC51CB5008F3290 /* View+MASAdditions.m in Sources */,
 				FE79FD491D12DAB9001D052D /* UIAlertView+Blocks.m in Sources */,
+				FE5428D31D198ED2009BF3B4 /* FMDatabase.m in Sources */,
 				FE08C93B1CC51CB5008F3290 /* NSArray+MASAdditions.m in Sources */,
 				FE79FD4B1D12DAB9001D052D /* RRPlayerController.m in Sources */,
 				FEA58E681C83406700FE4E8A /* VKVideoPlayerViewController.m in Sources */,
@@ -1430,6 +1472,7 @@
 				FE79FD471D12DAB9001D052D /* TFVAppInfo.m in Sources */,
 				FEA58E641C83406700FE4E8A /* VKVideoPlayerSettingsManager.m in Sources */,
 				FEA58E841C8347A500FE4E8A /* MovieList_RootController.m in Sources */,
+				FE5428D71D198ED2009BF3B4 /* FMResultSet.m in Sources */,
 				FE28D85C1C8A6390000AFC70 /* AllFiles_RootController.m in Sources */,
 				FE59C1241C8A681D009666BE /* Global.m in Sources */,
 				FE28D81B1C8868DE000AFC70 /* BaseNavigationController.m in Sources */,
@@ -1442,6 +1485,7 @@
 				FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */,
 				FEA58E5E1C83406700FE4E8A /* VKVideoPlayer.m in Sources */,
 				89E759EB1C86F8DB002A10BA /* UIImage+Category.m in Sources */,
+				FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
