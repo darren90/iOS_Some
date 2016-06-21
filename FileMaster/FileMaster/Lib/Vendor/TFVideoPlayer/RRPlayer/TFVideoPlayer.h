@@ -113,6 +113,8 @@ typedef enum {
 @property (nonatomic,copy)NSString * playUrl;
 
 
+//当前播放到第几秒
+@property (nonatomic,assign)double currentDuraion;
 
 - (id)initWithVideoPlayerView:(TFVideoPlayerView*)videoPlayerView;
 
@@ -131,6 +133,7 @@ typedef enum {
 
 -(void)playerWillAppear;
 -(void)playerDidDisAppear;
+
 
 
 

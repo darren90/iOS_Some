@@ -7,7 +7,7 @@
 //
 
 #import "TFMoviePlayerViewController.h"
-//#import "DatabaseTool.h"
+#import "DBTools.h"
 
 @interface TFMoviePlayerViewController ()<TFVideoPlayerDelegate>
 
@@ -65,9 +65,8 @@
 }
 
 #pragma mark - 保存看剧时间
-- (void)addSeekTVDataWithepisodeID:(NSString *)episodeID{
-//    if (self.player.currentTime == 0.0)return;
-//    [DatabaseTool addSeekTVDuration:self.movieId episode:self.currentNum duration:self.player.currentTime title:self.topTitle urltpye:UrlHttp quality:self.quality episodeID:episodeID coverUrl:self.coverUrl];
+- (void)saveSeekDuration{
+    [DBTools saveSeekDuration:self.topTitle duration:self.player.currentDuraion];
 }
 
 /**
@@ -77,14 +76,13 @@
  */
 - (void)playStream:(NSURL*)url
 {
-    [self.player playStreamUrl:url title:self.topTitle seekToPos:0];
+    [self.player playStreamUrl:url title:self.topTitle seekToPos:[DBTools getSeekDuration:self.topTitle]];
 }
 
 -(void)playChangeStreamUrl:(NSURL *)url
 {
-    [self.player playChangeStreamUrl:url title:self.topTitle seekToPos:0];
+    [self.player playChangeStreamUrl:url title:self.topTitle seekToPos:[DBTools getSeekDuration:self.topTitle]];
 }
-
 
 - (void)videoPlayer:(TFVideoPlayer*)videoPlayer didControlByEvent:(TFVideoPlayerControlEvent)event
 {
@@ -95,6 +93,7 @@
     switch (event) {
         case TFVideoPlayerControlEventTapDone:
         {
+            [self saveSeekDuration];
             [self dismissViewControllerAnimated:YES completion:^{
                 [self unInstallPlayer];
             }];

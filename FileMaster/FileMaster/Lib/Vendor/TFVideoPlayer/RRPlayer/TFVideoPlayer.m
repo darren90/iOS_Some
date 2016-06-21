@@ -700,6 +700,12 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     self.lastWatchPos = 0;
 }
 
+
+-(double)currentDuraion
+{
+    return [self.mMPayer getCurrentPosition] / 1000.000;
+}
+
 #pragma mark - Sync UI Status
 
 -(void)syncUIStatus

@@ -52,6 +52,7 @@
 		FE5428D61D198ED2009BF3B4 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CF1D198ED2009BF3B4 /* FMDatabaseQueue.m */; };
 		FE5428D71D198ED2009BF3B4 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428D21D198ED2009BF3B4 /* FMResultSet.m */; };
 		FE5428D91D198EE4009BF3B4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */; };
+		FE5428DC1D199046009BF3B4 /* DBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428DB1D199046009BF3B4 /* DBTools.m */; };
 		FE59C1241C8A681D009666BE /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1211C8A681D009666BE /* Global.m */; };
 		FE59C1251C8A681D009666BE /* WdCleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1231C8A681D009666BE /* WdCleanCaches.m */; };
 		FE79FD161D12DAB9001D052D /* audioTrackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCC31D12DAB9001D052D /* audioTrackIcon.png */; };
@@ -273,6 +274,8 @@
 		FE5428D11D198ED2009BF3B4 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		FE5428D21D198ED2009BF3B4 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		FE5428DA1D199046009BF3B4 /* DBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTools.h; sourceTree = "<group>"; };
+		FE5428DB1D199046009BF3B4 /* DBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTools.m; sourceTree = "<group>"; };
 		FE59C1201C8A681D009666BE /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		FE59C1211C8A681D009666BE /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		FE59C1221C8A681D009666BE /* WdCleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WdCleanCaches.h; sourceTree = "<group>"; };
@@ -527,6 +530,8 @@
 			children = (
 				895ABFAD1C87D65D00ABF2FD /* GetFilesTools.h */,
 				895ABFAE1C87D65D00ABF2FD /* GetFilesTools.m */,
+				FE5428DA1D199046009BF3B4 /* DBTools.h */,
+				FE5428DB1D199046009BF3B4 /* DBTools.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1485,6 +1490,7 @@
 				FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */,
 				FEA58E5E1C83406700FE4E8A /* VKVideoPlayer.m in Sources */,
 				89E759EB1C86F8DB002A10BA /* UIImage+Category.m in Sources */,
+				FE5428DC1D199046009BF3B4 /* DBTools.m in Sources */,
 				FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
