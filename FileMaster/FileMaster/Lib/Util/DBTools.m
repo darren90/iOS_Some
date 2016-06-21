@@ -20,7 +20,7 @@ static FMDatabaseQueue *_queue;
 +(void)initialize
 {
     // 0.获得沙盒中的数据库文件名
-    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"statuses.sqlite"];
+    NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"fileMaster.sqlite"];
     
     NSLog(@"%@",path);
     
@@ -55,7 +55,7 @@ static FMDatabaseQueue *_queue;
 //    __block NSMutableArray *dictArray = nil;
     if (!title || duration <= 0.0) return;
     [_queue inDatabase:^(FMDatabase *db) {
-        [db executeUpdate:@"insert into SeekDuration (title,duration) values (?,?)",title,duration];
+        [db executeUpdate:@"insert into SeekDuration (title,duration) values (?,?)",title,@(duration)];
     }];
 }
 

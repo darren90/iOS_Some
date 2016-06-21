@@ -102,7 +102,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 //    self.view.isPlayLocalFile = self.isPlayLocalFile;
     if (!self.mMPayer) {
         self.mMPayer = [VMediaPlayer sharedInstance];
-//        self.mMPayer.decodingSchemeUsing = VMDecodingSchemeSoftware;
         [self.mMPayer setupPlayerWithCarrierView:self.view.carrier withDelegate:self];
         [self setupObservers];
     }
@@ -252,13 +251,12 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 -(void)doneButtonTapped
 {
-
-    [self quicklyStopMovie];
-
-    [self unSetupObservers];
-    //    [mMPayer unSetupPlayer];
-    BOOL b = [_mMPayer unSetupPlayer];
-    NSLog(@"%d",b);
+//    [self quicklyStopMovie];
+//
+//    [self unSetupObservers];
+//    //    [mMPayer unSetupPlayer];
+//    BOOL b = [_mMPayer unSetupPlayer];
+//    NSLog(@"%d",b);
 
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventTapDone];

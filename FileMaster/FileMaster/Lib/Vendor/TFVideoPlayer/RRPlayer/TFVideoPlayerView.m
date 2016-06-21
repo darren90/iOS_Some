@@ -108,8 +108,9 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 //2: Conrol
 
-    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(progressSliderTapped:)];
-    [self.progressSld addGestureRecognizer:gr];
+    //进度条的点击代理
+//    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(progressSliderTapped:)];
+//    [self.progressSld addGestureRecognizer:gr];
     
     //这句话的意思时，只有当doubleTapGesture识别失败的时候(即识别出这不是双击操作)，singleTapGesture才能开始识别，同我们一开始讲的是同一个问题。
     [self.singleGesture requireGestureRecognizerToFail:self.doubleGesture];
