@@ -39,8 +39,10 @@
     self.clipsToBounds = YES;
     bannerView.frame = self.bounds;
     [self addSubview:self.bannerView];
+ 
     NSLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
     self.bannerView.adUnitID = @"ca-app-pub-8145075793156354/9913856620";
+//    req
 //    self.bannerView.rootViewController = self.rootVc;
     self.bannerView.delegate = self;
     //        self.hidden = YES;
@@ -71,6 +73,8 @@
     
     self.bannerView.frame = self.bounds;//CGRectMake((self.bounds.size.width - 320)/2, 0, 320, self.bounds.size.height);
     //    self.bannerView.adSize = kGADAdSizeBanner;
-    [self.bannerView loadRequest:[GADRequest request]];
+    GADRequest *request = [GADRequest request];
+    request.testDevices = @[@"2077ef9a63d2b398840261c8221a0c9b"];
+    [self.bannerView loadRequest:request];
 }
 @end
