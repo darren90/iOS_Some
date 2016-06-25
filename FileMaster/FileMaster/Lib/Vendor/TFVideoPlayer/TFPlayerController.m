@@ -6,14 +6,14 @@
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
-#import "RRPlayerController.h"
+#import "TFPlayerController.h"
 #import "TFPlayer.h"
 
-@interface RRPlayerController()<TFVideoPlayerDelegate >
+@interface TFPlayerController()<TFVideoPlayerDelegate >
 @end
 
 
-@implementation RRPlayerController
+@implementation TFPlayerController
 
 - (void)viewDidAppear:(BOOL)animated
 {

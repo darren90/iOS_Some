@@ -46,6 +46,17 @@
 		FE28D8521C887BE5000AFC70 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8511C887BE5000AFC70 /* AboutViewController.m */; };
 		FE28D8551C88A181000AFC70 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8541C88A181000AFC70 /* SettingModel.m */; };
 		FE28D85C1C8A6390000AFC70 /* AllFiles_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D85B1C8A6390000AFC70 /* AllFiles_RootController.m */; };
+		FE2C6FCB1D1E077800AAB51E /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FB61D1E077800AAB51E /* BrightnessView.m */; };
+		FE2C6FCC1D1E077800AAB51E /* ForwardBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FB81D1E077800AAB51E /* ForwardBackView.m */; };
+		FE2C6FCD1D1E077800AAB51E /* TFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FBB1D1E077800AAB51E /* TFUtilities.m */; };
+		FE2C6FCE1D1E077800AAB51E /* TFVAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FBD1D1E077800AAB51E /* TFVAppInfo.m */; };
+		FE2C6FCF1D1E077800AAB51E /* TFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FBF1D1E077800AAB51E /* TFVideoPlayer.m */; };
+		FE2C6FD01D1E077800AAB51E /* TFVideoPlayerView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC11D1E077800AAB51E /* TFVideoPlayerView+Extension.m */; };
+		FE2C6FD11D1E077800AAB51E /* TFVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC31D1E077800AAB51E /* TFVideoPlayerView.m */; };
+		FE2C6FD21D1E077800AAB51E /* TFVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2C6FC41D1E077800AAB51E /* TFVideoPlayerView.xib */; };
+		FE2C6FD31D1E077800AAB51E /* TFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC61D1E077800AAB51E /* TFVSegmentSlider.m */; };
+		FE2C6FD41D1E077800AAB51E /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC81D1E077800AAB51E /* UIAlertView+Blocks.m */; };
+		FE2C6FD51D1E077800AAB51E /* UIView+RRFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FCA1D1E077800AAB51E /* UIView+RRFoundation.m */; };
 		FE5428D31D198ED2009BF3B4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428C91D198ED2009BF3B4 /* FMDatabase.m */; };
 		FE5428D41D198ED2009BF3B4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CB1D198ED2009BF3B4 /* FMDatabaseAdditions.m */; };
 		FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CD1D198ED2009BF3B4 /* FMDatabasePool.m */; };
@@ -75,17 +86,7 @@
 		FE79FD2A1D12DAB9001D052D /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCD71D12DAB9001D052D /* right.png */; };
 		FE79FD2B1D12DAB9001D052D /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCD81D12DAB9001D052D /* right@2x.png */; };
 		FE79FD2C1D12DAB9001D052D /* right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCD91D12DAB9001D052D /* right@3x.png */; };
-		FE79FD411D12DAB9001D052D /* ForwardBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FCF01D12DAB9001D052D /* ForwardBackView.m */; };
-		FE79FD421D12DAB9001D052D /* TFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FCF41D12DAB9001D052D /* TFVideoPlayer.m */; };
-		FE79FD431D12DAB9001D052D /* TFVideoPlayerView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FCF61D12DAB9001D052D /* TFVideoPlayerView+Extension.m */; };
-		FE79FD441D12DAB9001D052D /* TFVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FCF81D12DAB9001D052D /* TFVideoPlayerView.m */; };
-		FE79FD451D12DAB9001D052D /* TFVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCF91D12DAB9001D052D /* TFVideoPlayerView.xib */; };
-		FE79FD461D12DAB9001D052D /* TFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FCFB1D12DAB9001D052D /* TFUtilities.m */; };
-		FE79FD471D12DAB9001D052D /* TFVAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FCFD1D12DAB9001D052D /* TFVAppInfo.m */; };
-		FE79FD481D12DAB9001D052D /* TFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FCFF1D12DAB9001D052D /* TFVSegmentSlider.m */; };
-		FE79FD491D12DAB9001D052D /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD011D12DAB9001D052D /* UIAlertView+Blocks.m */; };
-		FE79FD4A1D12DAB9001D052D /* UIView+RRFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD031D12DAB9001D052D /* UIView+RRFoundation.m */; };
-		FE79FD4B1D12DAB9001D052D /* RRPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD051D12DAB9001D052D /* RRPlayerController.m */; };
+		FE79FD4B1D12DAB9001D052D /* TFPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD051D12DAB9001D052D /* TFPlayerController.m */; };
 		FE79FD4C1D12DAB9001D052D /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD071D12DAB9001D052D /* CHANGELOG.md */; };
 		FE79FD4D1D12DAB9001D052D /* libffmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD121D12DAB9001D052D /* libffmpeg.a */; };
 		FE79FD4E1D12DAB9001D052D /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD131D12DAB9001D052D /* libopenssl.a */; };
@@ -104,7 +105,6 @@
 		FE79FD721D12E555001D052D /* nav_btn_back_n.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD6F1D12E555001D052D /* nav_btn_back_n.png */; };
 		FE79FD731D12E555001D052D /* nav_btn_back_n@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD701D12E555001D052D /* nav_btn_back_n@2x.png */; };
 		FE79FD741D12E555001D052D /* nav_btn_back_n@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD711D12E555001D052D /* nav_btn_back_n@3x.png */; };
-		FE79FD771D12FAE8001D052D /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD761D12FAE8001D052D /* BrightnessView.m */; };
 		FE79FD791D12FD7E001D052D /* Player_brightness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */; };
 		FE79FD7B1D1301D7001D052D /* Default-568.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD7A1D1301D7001D052D /* Default-568.png */; };
 		FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD7D1D153E8C001D052D /* AdvertView.m */; };
@@ -262,6 +262,28 @@
 		FE28D8541C88A181000AFC70 /* SettingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
 		FE28D85A1C8A6390000AFC70 /* AllFiles_RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllFiles_RootController.h; sourceTree = "<group>"; };
 		FE28D85B1C8A6390000AFC70 /* AllFiles_RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllFiles_RootController.m; sourceTree = "<group>"; };
+		FE2C6FB51D1E077800AAB51E /* BrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessView.h; sourceTree = "<group>"; };
+		FE2C6FB61D1E077800AAB51E /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
+		FE2C6FB71D1E077800AAB51E /* ForwardBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardBackView.h; sourceTree = "<group>"; };
+		FE2C6FB81D1E077800AAB51E /* ForwardBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardBackView.m; sourceTree = "<group>"; };
+		FE2C6FB91D1E077800AAB51E /* TFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayer.h; sourceTree = "<group>"; };
+		FE2C6FBA1D1E077800AAB51E /* TFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUtilities.h; sourceTree = "<group>"; };
+		FE2C6FBB1D1E077800AAB51E /* TFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUtilities.m; sourceTree = "<group>"; };
+		FE2C6FBC1D1E077800AAB51E /* TFVAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVAppInfo.h; sourceTree = "<group>"; };
+		FE2C6FBD1D1E077800AAB51E /* TFVAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVAppInfo.m; sourceTree = "<group>"; };
+		FE2C6FBE1D1E077800AAB51E /* TFVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVideoPlayer.h; sourceTree = "<group>"; };
+		FE2C6FBF1D1E077800AAB51E /* TFVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVideoPlayer.m; sourceTree = "<group>"; };
+		FE2C6FC01D1E077800AAB51E /* TFVideoPlayerView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TFVideoPlayerView+Extension.h"; sourceTree = "<group>"; };
+		FE2C6FC11D1E077800AAB51E /* TFVideoPlayerView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TFVideoPlayerView+Extension.m"; sourceTree = "<group>"; };
+		FE2C6FC21D1E077800AAB51E /* TFVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVideoPlayerView.h; sourceTree = "<group>"; };
+		FE2C6FC31D1E077800AAB51E /* TFVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVideoPlayerView.m; sourceTree = "<group>"; };
+		FE2C6FC41D1E077800AAB51E /* TFVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFVideoPlayerView.xib; sourceTree = "<group>"; };
+		FE2C6FC51D1E077800AAB51E /* TFVSegmentSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVSegmentSlider.h; sourceTree = "<group>"; };
+		FE2C6FC61D1E077800AAB51E /* TFVSegmentSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVSegmentSlider.m; sourceTree = "<group>"; };
+		FE2C6FC71D1E077800AAB51E /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		FE2C6FC81D1E077800AAB51E /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		FE2C6FC91D1E077800AAB51E /* UIView+RRFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RRFoundation.h"; sourceTree = "<group>"; };
+		FE2C6FCA1D1E077800AAB51E /* UIView+RRFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RRFoundation.m"; sourceTree = "<group>"; };
 		FE5428C81D198ED2009BF3B4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		FE5428C91D198ED2009BF3B4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		FE5428CA1D198ED2009BF3B4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -300,28 +322,8 @@
 		FE79FCD71D12DAB9001D052D /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
 		FE79FCD81D12DAB9001D052D /* right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@2x.png"; sourceTree = "<group>"; };
 		FE79FCD91D12DAB9001D052D /* right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@3x.png"; sourceTree = "<group>"; };
-		FE79FCEF1D12DAB9001D052D /* ForwardBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardBackView.h; sourceTree = "<group>"; };
-		FE79FCF01D12DAB9001D052D /* ForwardBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardBackView.m; sourceTree = "<group>"; };
-		FE79FCF21D12DAB9001D052D /* TFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayer.h; sourceTree = "<group>"; };
-		FE79FCF31D12DAB9001D052D /* TFVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVideoPlayer.h; sourceTree = "<group>"; };
-		FE79FCF41D12DAB9001D052D /* TFVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVideoPlayer.m; sourceTree = "<group>"; };
-		FE79FCF51D12DAB9001D052D /* TFVideoPlayerView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TFVideoPlayerView+Extension.h"; sourceTree = "<group>"; };
-		FE79FCF61D12DAB9001D052D /* TFVideoPlayerView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TFVideoPlayerView+Extension.m"; sourceTree = "<group>"; };
-		FE79FCF71D12DAB9001D052D /* TFVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVideoPlayerView.h; sourceTree = "<group>"; };
-		FE79FCF81D12DAB9001D052D /* TFVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVideoPlayerView.m; sourceTree = "<group>"; };
-		FE79FCF91D12DAB9001D052D /* TFVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFVideoPlayerView.xib; sourceTree = "<group>"; };
-		FE79FCFA1D12DAB9001D052D /* TFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUtilities.h; sourceTree = "<group>"; };
-		FE79FCFB1D12DAB9001D052D /* TFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUtilities.m; sourceTree = "<group>"; };
-		FE79FCFC1D12DAB9001D052D /* TFVAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVAppInfo.h; sourceTree = "<group>"; };
-		FE79FCFD1D12DAB9001D052D /* TFVAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVAppInfo.m; sourceTree = "<group>"; };
-		FE79FCFE1D12DAB9001D052D /* TFVSegmentSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVSegmentSlider.h; sourceTree = "<group>"; };
-		FE79FCFF1D12DAB9001D052D /* TFVSegmentSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVSegmentSlider.m; sourceTree = "<group>"; };
-		FE79FD001D12DAB9001D052D /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
-		FE79FD011D12DAB9001D052D /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
-		FE79FD021D12DAB9001D052D /* UIView+RRFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RRFoundation.h"; sourceTree = "<group>"; };
-		FE79FD031D12DAB9001D052D /* UIView+RRFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RRFoundation.m"; sourceTree = "<group>"; };
-		FE79FD041D12DAB9001D052D /* RRPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RRPlayerController.h; sourceTree = "<group>"; };
-		FE79FD051D12DAB9001D052D /* RRPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRPlayerController.m; sourceTree = "<group>"; };
+		FE79FD041D12DAB9001D052D /* TFPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayerController.h; sourceTree = "<group>"; };
+		FE79FD051D12DAB9001D052D /* TFPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPlayerController.m; sourceTree = "<group>"; };
 		FE79FD071D12DAB9001D052D /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		FE79FD0A1D12DAB9001D052D /* VDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDefines.h; sourceTree = "<group>"; };
 		FE79FD0B1D12DAB9001D052D /* Vitamio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vitamio.h; sourceTree = "<group>"; };
@@ -349,8 +351,6 @@
 		FE79FD6F1D12E555001D052D /* nav_btn_back_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav_btn_back_n.png; sourceTree = "<group>"; };
 		FE79FD701D12E555001D052D /* nav_btn_back_n@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_back_n@2x.png"; sourceTree = "<group>"; };
 		FE79FD711D12E555001D052D /* nav_btn_back_n@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_btn_back_n@3x.png"; sourceTree = "<group>"; };
-		FE79FD751D12FAE8001D052D /* BrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrightnessView.h; sourceTree = "<group>"; };
-		FE79FD761D12FAE8001D052D /* BrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrightnessView.m; sourceTree = "<group>"; };
 		FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_brightness@2x.png"; sourceTree = "<group>"; };
 		FE79FD7A1D1301D7001D052D /* Default-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568.png"; sourceTree = "<group>"; };
 		FE79FD7C1D153E8C001D052D /* AdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertView.h; sourceTree = "<group>"; };
@@ -710,6 +710,35 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FE2C6FB41D1E077800AAB51E /* TFPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				FE2C6FB51D1E077800AAB51E /* BrightnessView.h */,
+				FE2C6FB61D1E077800AAB51E /* BrightnessView.m */,
+				FE2C6FB71D1E077800AAB51E /* ForwardBackView.h */,
+				FE2C6FB81D1E077800AAB51E /* ForwardBackView.m */,
+				FE2C6FB91D1E077800AAB51E /* TFPlayer.h */,
+				FE2C6FBA1D1E077800AAB51E /* TFUtilities.h */,
+				FE2C6FBB1D1E077800AAB51E /* TFUtilities.m */,
+				FE2C6FBC1D1E077800AAB51E /* TFVAppInfo.h */,
+				FE2C6FBD1D1E077800AAB51E /* TFVAppInfo.m */,
+				FE2C6FBE1D1E077800AAB51E /* TFVideoPlayer.h */,
+				FE2C6FBF1D1E077800AAB51E /* TFVideoPlayer.m */,
+				FE2C6FC01D1E077800AAB51E /* TFVideoPlayerView+Extension.h */,
+				FE2C6FC11D1E077800AAB51E /* TFVideoPlayerView+Extension.m */,
+				FE2C6FC21D1E077800AAB51E /* TFVideoPlayerView.h */,
+				FE2C6FC31D1E077800AAB51E /* TFVideoPlayerView.m */,
+				FE2C6FC41D1E077800AAB51E /* TFVideoPlayerView.xib */,
+				FE2C6FC51D1E077800AAB51E /* TFVSegmentSlider.h */,
+				FE2C6FC61D1E077800AAB51E /* TFVSegmentSlider.m */,
+				FE2C6FC71D1E077800AAB51E /* UIAlertView+Blocks.h */,
+				FE2C6FC81D1E077800AAB51E /* UIAlertView+Blocks.m */,
+				FE2C6FC91D1E077800AAB51E /* UIView+RRFoundation.h */,
+				FE2C6FCA1D1E077800AAB51E /* UIView+RRFoundation.m */,
+			);
+			path = TFPlayer;
+			sourceTree = "<group>";
+		};
 		FE5428C71D198ED2009BF3B4 /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,9 +771,9 @@
 		FE79FCC11D12DAB9001D052D /* TFVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				FE79FD041D12DAB9001D052D /* RRPlayerController.h */,
-				FE79FD051D12DAB9001D052D /* RRPlayerController.m */,
-				FE79FCEE1D12DAB9001D052D /* RRPlayer */,
+				FE79FD041D12DAB9001D052D /* TFPlayerController.h */,
+				FE79FD051D12DAB9001D052D /* TFPlayerController.m */,
+				FE2C6FB41D1E077800AAB51E /* TFPlayer */,
 				FE79FCC21D12DAB9001D052D /* imgs */,
 				FE79FD061D12DAB9001D052D /* Vitamio */,
 			);
@@ -780,35 +809,6 @@
 				FE79FCD91D12DAB9001D052D /* right@3x.png */,
 			);
 			path = imgs;
-			sourceTree = "<group>";
-		};
-		FE79FCEE1D12DAB9001D052D /* RRPlayer */ = {
-			isa = PBXGroup;
-			children = (
-				FE79FCF21D12DAB9001D052D /* TFPlayer.h */,
-				FE79FCF31D12DAB9001D052D /* TFVideoPlayer.h */,
-				FE79FCF41D12DAB9001D052D /* TFVideoPlayer.m */,
-				FE79FCF71D12DAB9001D052D /* TFVideoPlayerView.h */,
-				FE79FCF81D12DAB9001D052D /* TFVideoPlayerView.m */,
-				FE79FCF91D12DAB9001D052D /* TFVideoPlayerView.xib */,
-				FE79FCF51D12DAB9001D052D /* TFVideoPlayerView+Extension.h */,
-				FE79FCF61D12DAB9001D052D /* TFVideoPlayerView+Extension.m */,
-				FE79FCFA1D12DAB9001D052D /* TFUtilities.h */,
-				FE79FCFB1D12DAB9001D052D /* TFUtilities.m */,
-				FE79FCFC1D12DAB9001D052D /* TFVAppInfo.h */,
-				FE79FCFD1D12DAB9001D052D /* TFVAppInfo.m */,
-				FE79FCEF1D12DAB9001D052D /* ForwardBackView.h */,
-				FE79FCF01D12DAB9001D052D /* ForwardBackView.m */,
-				FE79FD751D12FAE8001D052D /* BrightnessView.h */,
-				FE79FD761D12FAE8001D052D /* BrightnessView.m */,
-				FE79FCFE1D12DAB9001D052D /* TFVSegmentSlider.h */,
-				FE79FCFF1D12DAB9001D052D /* TFVSegmentSlider.m */,
-				FE79FD001D12DAB9001D052D /* UIAlertView+Blocks.h */,
-				FE79FD011D12DAB9001D052D /* UIAlertView+Blocks.m */,
-				FE79FD021D12DAB9001D052D /* UIView+RRFoundation.h */,
-				FE79FD031D12DAB9001D052D /* UIView+RRFoundation.m */,
-			);
-			path = RRPlayer;
 			sourceTree = "<group>";
 		};
 		FE79FD061D12DAB9001D052D /* Vitamio */ = {
@@ -1303,9 +1303,9 @@
 				FEA58DFA1C83275F00FE4E8A /* LaunchScreen.storyboard in Resources */,
 				FE79FD1E1D12DAB9001D052D /* icon_suo_h.png in Resources */,
 				FE79FD191D12DAB9001D052D /* icon_kai@2x.png in Resources */,
-				FE79FD451D12DAB9001D052D /* TFVideoPlayerView.xib in Resources */,
 				FEA58E7D1C83406700FE4E8A /* VKVideoPlayer_zoom_out.png in Resources */,
 				FE28D8161C873CCF000AFC70 /* MovieListCell.xib in Resources */,
+				FE2C6FD21D1E077800AAB51E /* TFVideoPlayerView.xib in Resources */,
 				FE79FD501D12DAB9001D052D /* LICENSE in Resources */,
 				FEA58E701C83406700FE4E8A /* VKVideoPlayer_next@2x.png in Resources */,
 				FE79FD211D12DAB9001D052D /* left.png in Resources */,
@@ -1416,19 +1416,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				89DF50BE1C8960DB00B3E22A /* SeekDuration.m in Sources */,
-				FE79FD771D12FAE8001D052D /* BrightnessView.m in Sources */,
 				FEA58E8D1C8348F400FE4E8A /* MovieListCell.m in Sources */,
 				FE28D8271C886AA5000AFC70 /* BaseViewController.m in Sources */,
-				FE79FD4A1D12DAB9001D052D /* UIView+RRFoundation.m in Sources */,
 				FE28D8111C872F72000AFC70 /* MovieFolderViewController.m in Sources */,
 				FE08C9381CC51CB5008F3290 /* MASLayoutConstraint.m in Sources */,
 				FE08C9351CC51CB5008F3290 /* MASCompositeConstraint.m in Sources */,
 				FEA58E601C83406700FE4E8A /* VKVideoPlayerCaption.m in Sources */,
+				FE2C6FD31D1E077800AAB51E /* TFVSegmentSlider.m in Sources */,
 				FE08C9361CC51CB5008F3290 /* MASConstraint.m in Sources */,
 				FE08C9391CC51CB5008F3290 /* MASViewAttribute.m in Sources */,
-				FE79FD441D12DAB9001D052D /* TFVideoPlayerView.m in Sources */,
 				FE28D83C1C886B13000AFC70 /* BaseTabBarController.m in Sources */,
-				FE79FD421D12DAB9001D052D /* TFVideoPlayer.m in Sources */,
 				FE79FD651D12DF15001D052D /* TFMoviePlayerViewController.m in Sources */,
 				FE28D8351C886AD7000AFC70 /* ObjcRuntime.m in Sources */,
 				FE08C9371CC51CB5008F3290 /* MASConstraintMaker.m in Sources */,
@@ -1441,6 +1438,7 @@
 				895ABFAF1C87D65D00ABF2FD /* GetFilesTools.m in Sources */,
 				FEA58E8A1C8347CE00FE4E8A /* Setting_RootController.m in Sources */,
 				FE9883411D16EE63001BD0D3 /* SettingGroup.m in Sources */,
+				FE2C6FCE1D1E077800AAB51E /* TFVAppInfo.m in Sources */,
 				FEA58E661C83406700FE4E8A /* VKVideoPlayerView.m in Sources */,
 				FEA58E5F1C83406700FE4E8A /* VKVideoPlayerAirPlay.m in Sources */,
 				FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */,
@@ -1451,32 +1449,32 @@
 				FEA58E651C83406700FE4E8A /* VKVideoPlayerTrack.m in Sources */,
 				FEA58DEF1C83275F00FE4E8A /* AppDelegate.m in Sources */,
 				FE5428D61D198ED2009BF3B4 /* FMDatabaseQueue.m in Sources */,
-				FE79FD411D12DAB9001D052D /* ForwardBackView.m in Sources */,
 				FEA58E631C83406700FE4E8A /* VKVideoPlayerLayerView.m in Sources */,
+				FE2C6FCC1D1E077800AAB51E /* ForwardBackView.m in Sources */,
 				FE5428D41D198ED2009BF3B4 /* FMDatabaseAdditions.m in Sources */,
 				FE08C93D1CC51CB5008F3290 /* View+MASAdditions.m in Sources */,
-				FE79FD491D12DAB9001D052D /* UIAlertView+Blocks.m in Sources */,
 				FE5428D31D198ED2009BF3B4 /* FMDatabase.m in Sources */,
 				FE08C93B1CC51CB5008F3290 /* NSArray+MASAdditions.m in Sources */,
-				FE79FD4B1D12DAB9001D052D /* RRPlayerController.m in Sources */,
+				FE79FD4B1D12DAB9001D052D /* TFPlayerController.m in Sources */,
 				FEA58E681C83406700FE4E8A /* VKVideoPlayerViewController.m in Sources */,
 				FE28D84E1C887822000AFC70 /* SettingCell.m in Sources */,
-				FE79FD461D12DAB9001D052D /* TFUtilities.m in Sources */,
 				FE28D8141C8734D4000AFC70 /* MovieFile.m in Sources */,
 				FE28D8551C88A181000AFC70 /* SettingModel.m in Sources */,
 				FE28D8521C887BE5000AFC70 /* AboutViewController.m in Sources */,
+				FE2C6FCD1D1E077800AAB51E /* TFUtilities.m in Sources */,
+				FE2C6FCB1D1E077800AAB51E /* BrightnessView.m in Sources */,
 				FEA58E801C83406700FE4E8A /* README.md in Sources */,
 				FEA58E901C834A2000FE4E8A /* MovieList.m in Sources */,
 				FEA58DEC1C83275F00FE4E8A /* main.m in Sources */,
 				FE28D8241C886A8E000AFC70 /* BaseTableViewController.m in Sources */,
+				FE2C6FD51D1E077800AAB51E /* UIView+RRFoundation.m in Sources */,
 				FE08C93C1CC51CB5008F3290 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
-				FE79FD481D12DAB9001D052D /* TFVSegmentSlider.m in Sources */,
 				FEA58E871C8347BE00FE4E8A /* PrivateList_RootController.m in Sources */,
 				89CDBE6D1C83F06B00C52481 /* HTTPStreamingServer.m in Sources */,
-				FE79FD431D12DAB9001D052D /* TFVideoPlayerView+Extension.m in Sources */,
-				FE79FD471D12DAB9001D052D /* TFVAppInfo.m in Sources */,
 				FEA58E641C83406700FE4E8A /* VKVideoPlayerSettingsManager.m in Sources */,
+				FE2C6FD01D1E077800AAB51E /* TFVideoPlayerView+Extension.m in Sources */,
 				FEA58E841C8347A500FE4E8A /* MovieList_RootController.m in Sources */,
+				FE2C6FCF1D1E077800AAB51E /* TFVideoPlayer.m in Sources */,
 				FE5428D71D198ED2009BF3B4 /* FMResultSet.m in Sources */,
 				FE28D85C1C8A6390000AFC70 /* AllFiles_RootController.m in Sources */,
 				FE59C1241C8A681D009666BE /* Global.m in Sources */,
@@ -1487,11 +1485,13 @@
 				FE79FD8F1D156381001D052D /* Base_TableViewController.m in Sources */,
 				FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */,
 				FE79FD4C1D12DAB9001D052D /* CHANGELOG.md in Sources */,
+				FE2C6FD41D1E077800AAB51E /* UIAlertView+Blocks.m in Sources */,
 				FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */,
 				FEA58E5E1C83406700FE4E8A /* VKVideoPlayer.m in Sources */,
 				89E759EB1C86F8DB002A10BA /* UIImage+Category.m in Sources */,
 				FE5428DC1D199046009BF3B4 /* DBTools.m in Sources */,
 				FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */,
+				FE2C6FD11D1E077800AAB51E /* TFVideoPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
