@@ -1,5 +1,5 @@
 //
-//  RRPlayerController.h
+//  TFPlayerController.h
 //  VideoPlayer
 //
 //  Created by Fengtf on 16/6/13.
