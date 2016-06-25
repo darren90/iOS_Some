@@ -411,8 +411,14 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     if (self.isLockBtnEnable) {
         return;
     }
+    
     //根据在view上Pan的位置，确定是跳音量、亮度
     CGPoint locationPoint = [pan locationInView:self];
+    
+    BOOL top = CGRectContainsPoint(self.topControl.frame, locationPoint);
+    BOOL bottom = CGRectContainsPoint(self.bottomControl.frame, locationPoint);
+    if (!self.topControl.hidden && (top || bottom)) return;
+    
     //NSLog(@"========%@",NSStringFromCGPoint(locationPoint));
     // 我们要响应水平移动和垂直移动
     // 根据上次和本次移动的位置，算出一个速率的point

@@ -46,7 +46,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mL3-AO-Q1b">
-                                    <rect key="frame" x="187" y="70" width="97" height="74"/>
+                                    <rect key="frame" x="156" y="75" width="97" height="74"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                     <state key="normal" image="VKVideoPlayer_pause_big.png"/>
                                     <state key="selected" image="VKVideoPlayer_play_big.png"/>
