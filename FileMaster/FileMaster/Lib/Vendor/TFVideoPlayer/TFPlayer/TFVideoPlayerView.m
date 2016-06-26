@@ -330,8 +330,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     }
 }
 
-
-
 #pragma mark - 分享
 - (IBAction)shareButtonTapped:(UIButton *)sender
 {

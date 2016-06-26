@@ -169,6 +169,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 - (void)playButtonPressed {
 //    [self playContent];
+    [self.mMPayer start];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventPlay];
     }
@@ -176,6 +177,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 - (void)pauseButtonPressed {
 //    [self pauseContent];
+    [self.mMPayer pause];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventPause];
     }
@@ -697,7 +699,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
         mCurPostion  = [self.mMPayer getCurrentPosition];
         [self.view.progressSld setValue:(float)mCurPostion/mDuration];
         self.view.curPosLbl.text = [TFUtilities timeToHumanString:mCurPostion];
-        //        NSLog(@"---syncUIStatus---:%@",[TFUtilities timeToHumanString:mCurPostion]);
         self.view.durationLbl.text = [NSString stringWithFormat:@"/%@",[TFUtilities timeToHumanString:mDuration]];
     }
 }
