@@ -81,12 +81,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     return self;
 }
 
-//-(void)setIsPlayLocalFile:(BOOL)isPlayLocalFile
-//{
-//    _isPlayLocalFile = isPlayLocalFile;
-//    self.view.isPlayLocalFile = isPlayLocalFile;
-//}
-
 - (id)initWithVideoPlayerView:(TFVideoPlayerView*)videoPlayerView {
     self = [super init];
     if (self) {
@@ -323,23 +317,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventTapFullScreen];
     }
 }
-//#pragma mark - 选集
-//-(void)selectMenuButtonTapped
-//{
-//#warning TODO -
-//}
-//#pragma mark - 选集
-//-(void)selectMenuButtonTapped
-//{
-//#warning TODO -
-//}
-//#pragma mark - 选集
-//-(void)selectMenuButtonTapped
-//{
-//#warning TODO -
-//}
-
-
+ 
 - (void)performOrientationChange:(UIInterfaceOrientation)deviceOrientation {
     if (!self.forceRotate) {
         return;
@@ -538,7 +516,9 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingStart:(id)arg
 {
+    if (self.isPlayLocalFile) return;
     self.progressDragging = YES;
+
     if (![TFUtilities isLocalMedia:self.videoURL]) {
         [player pause];
         [self.view startActivityWithMsg:@"Buffering... 0%"];
@@ -555,6 +535,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingEnd:(id)arg
 {
+    if (self.isPlayLocalFile) return;
     if (![TFUtilities isLocalMedia:self.videoURL]) {
         [player start];
         [self.view stopActivity];

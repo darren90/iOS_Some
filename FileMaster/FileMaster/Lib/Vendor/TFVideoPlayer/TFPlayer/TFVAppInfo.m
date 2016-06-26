@@ -32,7 +32,6 @@
 
 static TFVAppInfo  *sVAppInfoShared = nil;
 
-
 - (BOOL)initialize
 {
 	[self initIsJailbroken];

@@ -210,32 +210,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/TFPlayer/TFVideoPlayer.m"
-            timestampString = "488649793.647996"
+            filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/TFPlayer/TFVideoPlayerView+Extension.m"
+            timestampString = "488650317.315795"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "543"
-            endingLineNumber = "543"
-            landmarkName = "-mediaPlayer:bufferingStart:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/TFPlayer/TFVideoPlayer.m"
-            timestampString = "488649797.918775"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "559"
-            endingLineNumber = "559"
-            landmarkName = "-mediaPlayer:bufferingEnd:"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "-layout"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
