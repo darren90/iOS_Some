@@ -102,8 +102,7 @@ static CGFloat LABELHIGHT = 20.0;
         self.titleLabel.frame = CGRectMake(MaxX(self.doneButton), Y(self.doneButton) + (HEIGHT(self.doneButton) - HEIGHT(self.titleLabel))/2, MaxX(self.shareBtn) - 50, HEIGHT(self.titleLabel));
         self.loadbgView.frame = CGRectMake((WIDTH(self.bottomControl) - WIDTH(self.loadbgView))/2, MinY(self.bottomControl)-HEIGHT(self.loadbgView)-20, WIDTH(self.loadbgView), HEIGHT(self.loadbgView));
         
-        self.bigPlayButton.frame = CGRectMake((KWidth-WIDTH(self.bigPlayButton))/2, (KHeight-HEIGHT(self.bigPlayButton))/2, WIDTH(self.bigPlayButton), HEIGHT(self.bigPlayButton));
-        NSLog(@"--:%@",NSStringFromCGRect(self.bigPlayButton.frame));
+//        self.bigPlayButton.frame = CGRectMake((KWidth-WIDTH(self.bigPlayButton))/2, (KHeight-HEIGHT(self.bigPlayButton))/2, WIDTH(self.bigPlayButton), HEIGHT(self.bigPlayButton));
         
         NSLog(@"大大大大大大大大大大大大大大大大大大大");
     }
