@@ -33,8 +33,9 @@
     NSNumber * fastNum;
 }
 
-@property (nonatomic, assign) BOOL progressDragging;
+@property (nonatomic, copy)   NSURL *videoURL;
 
+@property (nonatomic, assign) BOOL progressDragging;
 
 /** 上一次的观看时间 单位：秒 */
 @property (nonatomic,assign)long lastWatchPos;
@@ -43,6 +44,8 @@
 //音轨的数组
 @property (nonatomic,strong)NSMutableArray * trackArray;
 
+/** 是否在进入后台前是播放的播放 */
+@property (nonatomic,assign)BOOL isBeforePlaying;
 
 @end
 
@@ -116,12 +119,8 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 #pragma mark - 第一次播放视频
 -(void)playStreamUrl:(NSURL*)url title:(NSString*)title seekToPos:(long)pos
 {
-    NSLog(@"---playStreamUrl---");
-    __weak __typeof(self)weakSelf = self;
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        long lastPos = 0;
-        [weakSelf quicklyPlayMovie:url title:title seekToPos:pos];
-//    });
+//    __weak __typeof(self)weakSelf = self;
+    [self quicklyPlayMovie:url title:title seekToPos:pos];
 }
 
 #pragma mark - 播放中途，切换视频URL重新进行播放（切换清晰度，切换剧集）
@@ -143,13 +142,11 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 - (void)applicationDidEnterForeground:(NSNotification *)notification
 {
     if (![self.mMPayer isPlaying]) {
-//        [self.mMPayer setVideoShown:YES];
-//        [self.mMPayer start];
-
-//        WS(weakSelf);
-//        TFRUN_ON_UI_THREAD(^{
-//            [weakSelf.view.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
-//        });
+        if (self.isBeforePlaying) {
+            self.isBeforePlaying = NO;
+            [self.mMPayer start];//视频不再自动播放
+            [self.view setPlayButtonsSelected:NO];
+        }
     }
 }
 
@@ -157,13 +154,11 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 {
     if ([self.mMPayer isPlaying]) {
         [self.mMPayer pause];
-//        [self.mMPayer setVideoShown:NO];
+        [self.view setPlayButtonsSelected:YES];//设置按钮的状态
+        self.isBeforePlaying = YES;
     }
 }
 
-
-
-///
 
 #pragma mark - TFVideoPlayerViewDelegate
 - (void)captionButtonTapped {
@@ -173,14 +168,14 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 }
 
 - (void)playButtonPressed {
-    [self playContent];
+//    [self playContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventPlay];
     }
 }
 
 - (void)pauseButtonPressed {
-    [self pauseContent];
+//    [self pauseContent];
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventPause];
     }
@@ -197,8 +192,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 -(long)getCurrentDuration
 {
-//    mDuration = [self.mMPayer getCurrentPosition];
-    return mCurPostion;
+    return [self.mMPayer getCurrentPosition];//mCurPostion;
 }
 
 //得到总的视频时长
@@ -215,11 +209,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 -(void)progressSliderTapped:(CGFloat)percentage
 {
     long seek = percentage * mDuration;
-//    self.curPosLbl.text = [TFUtilities timeToHumanString:seek];
-    NSLog(@"NAL 2BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", seek);
-//    [self.view startActivityWithMsg:@"Buffering"];
-//    [self.mMPayer seekTo:seek];
-    [self moveProgressWithTime:time];
+    [self moveProgressWithTime:seek];
 }
 
 -(void)endFastWithTime:(long)time
@@ -238,16 +228,19 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 }
 
 - (void)playContent {
-    WS(weakSelf);
-    TFRUN_ON_UI_THREAD(^{
-        [weakSelf.mMPayer start];
-    });
+    if (!self.mMPayer.isPlaying) {
+        [self.mMPayer start];
+        [self.view setPlayButtonsSelected:NO];//设置按钮的状态
+    }
 }
 
 - (void)pauseContent {
-//    [self pauseContent:NO completionHandler:nil];
-    [self.mMPayer pause];
+    if (self.mMPayer.isPlaying) {
+        [self.mMPayer pause];
+        [self.view setPlayButtonsSelected:YES];//设置按钮的状态
+    }
 }
+
 
 -(void)doneButtonTapped
 {
@@ -267,7 +260,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 #pragma mark - 分享
 -(void)shareButtonTapped
 {
-#warning TODO - 
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventShare];
     }
@@ -276,7 +268,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 #pragma mark - 选集
 -(void)selectMenuButtonTapped
 {
-#warning TODO -
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventSelectMenu];
     }
@@ -286,7 +277,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 #pragma mark - 弹幕按钮
 -(void)isAllowDanmu
 {
-#warning TODO -
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
         [self.delegate videoPlayer:self didControlByEvent:TFVideoplayercontroleventDanMu];
     }
@@ -444,18 +434,16 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     [player setVideoFillMode:VMVideoFillModeFit];//可以撑满屏幕 VMVideoFillModeCrop
     
     mDuration = [player getDuration];
-    NSLog(@"------- mDuration：%ld",mDuration);
+    self.totalDuraion = mDuration / 1000.000 ;
 
 #pragma mark - 定位到指定的时间播放
     if (self.lastWatchPos > 0) {
         [player seekTo:self.lastWatchPos];
         self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [player start];
-//        });
     }
 
     [player start];
+    [self.view setPlayButtonsSelected:NO];//设置按钮的状态
 
     [self.view setBtnEnableStatus:YES];
     [self.view stopActivity];
@@ -516,7 +504,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 {
     // Set buffer size, default is 1024KB(1*1024*1024).
     //	[player setBufferSize:256*1024];
-    [player setBufferSize:512*1024];
+    [player setBufferSize:512*1024*1024];
     [player setAdaptiveStream:YES];
 
     [player setVideoQuality:VMVideoQualityHigh];
@@ -574,21 +562,17 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 {
     if (![TFUtilities isLocalMedia:self.videoURL]) {
         [player start];
-//        [self.view.startPause setImage:KTFPlayer_Btn_pause forState:UIControlStateNormal];
         self.view.startPause.selected = NO;
         self.view.bigPlayButton.selected = NO;
         [self.view stopActivity];
     }
     self.progressDragging = NO;
-    NSLog(@"NAL 3HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player downloadRate:(id)arg
 {
     if (![TFUtilities isLocalMedia:self.videoURL]) {
-//        if(!self.mMPayer.isPlaying){
             self.view.downloadRate.text = [NSString stringWithFormat:@"%dKB/s", [arg intValue]];
-//        }
     } else {
         self.view.downloadRate.text = nil;
     }
@@ -701,8 +685,9 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 -(double)currentDuraion
 {
-    return [self.mMPayer getCurrentPosition] / 1000.000;
-}
+    double result = 0.000;
+    result = [self.mMPayer getCurrentPosition] / 1000.000;
+    return result ;}
 
 #pragma mark - Sync UI Status
 
@@ -717,33 +702,13 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     }
 }
 
+- (void)dealloc {
+    [self unInstallPlayer];
+}
+
 - (void)unSetupObservers
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-
-- (void)dealloc {
-    [self unInstallPlayer];
-    
-    
-    //    [self.rewindButton removeObserver:self forKeyPath:@"hidden"];
-    //    [self.nextButton removeObserver:self forKeyPath:@"hidden"];
-    
-    //    [self removeObservers];
-    //
-    //    [self.externalMonitor deactivate];
-    //
-    //    self.timeObserver = nil;
-    //    self.avPlayer = nil;
-    //    self.captionTop = nil;
-    //    self.captionBottom = nil;
-    //    self.captionTopTimer = nil;
-    //    self.captionBottomTimer = nil;
-    //
-    //    self.playerItem = nil;
-    //
-    //    [self pauseContent];
 }
 
 -(void)unInstallPlayer
@@ -753,12 +718,8 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     [self unSetupObservers];
     [_mMPayer unSetupPlayer];
 
-    BOOL b = [_mMPayer unSetupPlayer];
-    NSLog(@"%d",b);
+    [_mMPayer unSetupPlayer];
     _mMPayer = nil;
-//    TFVideoPlayer = nil;
-    NSLog(@"------:");
-//    [self.view.progressSld removeObserver:self forKeyPath:@"maximumValue"];
 }
 
 
@@ -766,8 +727,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 {
     [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     [self.view becomeFirstResponder];
-
-//    [self currButtonAction:nil];
 }
 
 -(void)playerDidDisAppear

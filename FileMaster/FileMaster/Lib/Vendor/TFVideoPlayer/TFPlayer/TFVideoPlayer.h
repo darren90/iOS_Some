@@ -103,8 +103,6 @@ typedef enum {
 
 @property (nonatomic, weak) id<TFVideoPlayerDelegate> delegate;
 
-@property (nonatomic, copy)   NSURL *videoURL;
-
 /** 单例的方式创建播放器 */
 +(TFVideoPlayer *) sharedPlayer;
 
@@ -137,16 +135,29 @@ typedef enum {
 
 
 
+
+/**
+ *  是否播放的是本地资源
+ */
+@property (nonatomic,assign)BOOL isPlayLocalFile;//我增加的字段，以便播放本地视频的时候视频不受打扰
+
+
 //后加的参数
 @property (nonatomic, assign) BOOL isFullScreen;
 @property (nonatomic, assign) BOOL forceRotate;
 @property (nonatomic, assign) UIInterfaceOrientation visibleInterfaceOrientation;
 @property (nonatomic, assign) CGRect landscapeFrame;
 @property (nonatomic, assign) CGRect portraitFrame;
-/**
- *  是否播放的是本地资源
- */
-@property (nonatomic,assign)BOOL isPlayLocalFile;//我增加的字段，以便播放本地视频的时候视频不受打扰
+
+//小屏幕播放
+@property (nonatomic,assign)BOOL isSmallPlay;//kvc 用的
+
+
+
+/***  视频当前播放到那个时间 单位：秒s */
+@property (nonatomic,assign)double currentDuation;
+/***  视频总时间 单位：秒s */
+@property (nonatomic,assign)double totalDuraion;
 
 
 

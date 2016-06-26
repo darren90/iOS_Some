@@ -214,6 +214,8 @@
 
 
 
+//设置播放/暂停时按钮的状态， 播放 --> 暂停 :YES
+- (void)setPlayButtonsSelected:(BOOL)selected ;
 
 
 

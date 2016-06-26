@@ -159,11 +159,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 开始 暂停
 -(IBAction)startPauseButtonAction:(UIButton *)sender
 {
-    NSLog(@"%s",__func__);
-    if (self.isLockBtnEnable) {
-//        [self showLockBtn];//显示锁屏按钮
-        return;
-    }
+    if (self.isLockBtnEnable) return;
     if (sender.selected)  {//播放
         [self.delegate playButtonPressed];
         [self setPlayButtonsSelected:NO];
@@ -189,6 +185,13 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.nextBtn.enabled = enable;
     self.modeBtn.enabled = enable;
 }
+
+//设置播放/暂停时按钮的状态， 播放 --> 暂停 :YES
+- (void)setPlayButtonsSelected:(BOOL)selected {
+    self.startPause.selected = selected;
+    self.bigPlayButton.selected = selected;
+}
+
 #pragma mark - 切换Model
 -(IBAction)switchVideoViewModeButtonAction:(id)sender
 {
@@ -392,10 +395,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.lockButton.hidden = YES;
 }
 
-- (void)setPlayButtonsSelected:(BOOL)selected {
-    self.startPause.selected = selected;
-    self.bigPlayButton.selected = selected;
-}
 
 - (void)setPlayButtonsEnabled:(BOOL)enabled {
     self.startPause.enabled = enabled;

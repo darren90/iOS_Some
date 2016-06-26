@@ -58,17 +58,15 @@
                         [pathArray addObject:movieFile];
                     }
                     
-                    model = [MovieList movieList:fileName fileType:fileType path:fullPath imgData:imgData];
+//                    model = [MovieList movieList:fileName fileType:fileType path:fullPath imgData:imgData];
+                    NSString *fileSize = [Global getFileSize:fullPath];
+                    model = [MovieList movieList:fileName fileType:FileMovieCanPlay path:fullPath fileSize:fileSize];
                     
                     movieFile.isFolder = NO;
                     movieFile.file = model;
                 }
             }
             else {
-                //                movieFile.isFolder = YES;
-                //                movieFile.subFiles = [self scanFilesAtPath:fullPath];
-                //                movieFile.folderName = fileName;
-                //                [pathArray addObject:movieFile];
                 [self scanFilesAtPath:fullPath];
             }
         }
