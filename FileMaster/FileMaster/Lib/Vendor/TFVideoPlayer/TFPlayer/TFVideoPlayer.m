@@ -527,27 +527,20 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 }
 - (void)mediaPlayer:(VMediaPlayer *)player seekComplete:(id)arg
 {
-    BOOL result = player.isPlaying;
-    NSLog(@"--seekComplete-:%d",player.isPlaying);
+    self.progressDragging = NO;
     [self.view stopActivity];
-
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player notSeekable:(id)arg
 {
     self.progressDragging = NO;
-    NSLog(@"NAL 1HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingStart:(id)arg
 {
     self.progressDragging = YES;
-    NSLog(@"NAL 2HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
     if (![TFUtilities isLocalMedia:self.videoURL]) {
         [player pause];
-//        [self.view.startPause setImage:KTFPlayer_Btn_Play forState:UIControlStateNormal];
-        self.view.startPause.selected = YES;
-        self.view.bigPlayButton.selected = YES;
         [self.view startActivityWithMsg:@"Buffering... 0%"];
     }
 }
@@ -564,8 +557,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 {
     if (![TFUtilities isLocalMedia:self.videoURL]) {
         [player start];
-        self.view.startPause.selected = NO;
-        self.view.bigPlayButton.selected = NO;
         [self.view stopActivity];
     }
     self.progressDragging = NO;
@@ -607,7 +598,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player cacheUpdate:(id)arg
 {
     NSArray *segs = (NSArray *)arg;
-    //	NSLog(@"NAL .... media cacheUpdate, %d, %@", segs.count, segs);
     if (mDuration > 0) {
         NSMutableArray *arr = [NSMutableArray arrayWithCapacity:0];
         for (int i = 0; i < segs.count; i++) {
