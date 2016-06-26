@@ -21,21 +21,30 @@
     {
         NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:path] objectEnumerator];
         NSString* fileName;
-        CGFloat folderSize = 0;
+        long long bytes = 0;
         while ((fileName = [childFilesEnumerator nextObject]) != nil)
         {
             NSString* fileAbsolutePath = [path stringByAppendingPathComponent:fileName];
-            folderSize += [self fileSizeAtPath:fileAbsolutePath];
+            bytes += [self fileSizeAtPath:fileAbsolutePath];
         }
         
-        if (folderSize/1024 < 1024)
+        if(bytes < 1000)     // B
         {
-            message = [NSString stringWithFormat:@"%fKB", folderSize/1024];
+            message = [NSString stringWithFormat:@"%lldB", bytes];
         }
-        else
+        else if(bytes >= 1000 && bytes < 1024 * 1024) // KB
         {
-            message = [NSString stringWithFormat:@"%.1fMB", folderSize/1024/1024];
+            message = [NSString stringWithFormat:@"%.0fK", (double)bytes / 1024];
         }
+        else if(bytes >= 1024 * 1024 && bytes < 1024 * 1024 * 1024)   // MB
+        {
+            message = [NSString stringWithFormat:@"%.1fM", (double)bytes / (1024 * 1024)];
+        }
+        else    // GB
+        {
+            message = [NSString stringWithFormat:@"%.1fG", (double)bytes / (1024 * 1024 * 1024)];
+        }
+
     }
     return message;
 }

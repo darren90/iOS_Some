@@ -197,13 +197,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FileMaster/Class/Home/Controller/TFMoviePlayerViewController.m"
-            timestampString = "488215745.830616"
+            filePath = "FileMaster/Class/AllFiles/Controller/AllFiles_RootController.m"
+            timestampString = "488598764.440315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "-videoPlayer:didControlByEvent:"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
