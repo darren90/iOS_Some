@@ -206,18 +206,12 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 进度条相关
 -(IBAction)progressSliderDownAction:(id)sender
 {
-    //	NSLog(@"NAL 4HBT &&&&&&&&&&&&&&&&.......&&&&&&&&&&&&&&&&&");
-    //	NSLog(@"NAL 1DOW &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Touch Down");
     [self.delegate progressSliderDownAction];
 }
 
 -(IBAction)progressSliderUpAction:(id)sender
 {
     UISlider *sld = (UISlider *)sender;
-    //	NSLog(@"NAL 1BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", (long)(sld.value * mDuration));
-//    NSLog(@"-progressSliderUpAction--slide-value:%f,seek = %ld,t:%@",sld.value,(long)(sld.value * mDuration),[TFUtilities timeToHumanString:(long)(sld.value * mDuration)]);
-//    [self startActivityWithMsg:@"Buffering"];
-//    [mMPayer seekTo:(long)(sld.value * mDuration)];
     
     [self.delegate progressSliderUp:sld.value];
 }
@@ -226,11 +220,11 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 {
 
     UISlider *sld = (UISlider *)sender;
-    NSLog(@"-dragProgressSliderAction--slide-value:%f",sld.value);
-    long duration = [self.delegate getCurrentDuration];
-    self.curPosLbl.text = [TFUtilities timeToHumanString:(long)(sld.value * duration)];
+    long toalDuration = [self.delegate getTotalDuration];
+    self.curPosLbl.text = [TFUtilities timeToHumanString:(long)(sld.value * toalDuration)];
 }
 
+#pragma mark - 进度条的点击代理，目前不执行
 -(void)progressSliderTapped:(UIGestureRecognizer *)g
 {
     UISlider* s = (UISlider*)g.view;
@@ -243,10 +237,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [s setValue:value animated:YES];
     long seek = percentage * [self.delegate getCurrentDuration];
     self.curPosLbl.text = [TFUtilities timeToHumanString:seek];
-//    self.curPosLbl.text = [TFUtilities timeToHumanString:seek];
-//    NSLog(@"NAL 2BVC &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& seek = %ld", seek);
-//    [self startActivityWithMsg:@"Buffering"];
-//    [mMPayer seekTo:seek];
     [self.delegate progressSliderTapped:percentage];
 }
 
@@ -288,7 +278,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 - (IBAction)handleTwoTap:(id)sender
 {
-    
     if (self.isLockBtnEnable) {
         return;
     }
@@ -312,10 +301,8 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 顶部和底部控制按钮的 销毁定时器
 -(void)destroyHiddeControlTimer
 {
-    //    NSLog(@"---destroyTimer");
     [self.timer invalidate];
     self.timer = nil;
-    NSLog(@"");
 }
 
 -(void)hiddenTopBottom
@@ -385,14 +372,12 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         self.bigPlayButton.hidden = NO;
     }else{
         //锁
-//        [self.lockButton setImage:[UIImage imageNamed:@"icon_kai_n"] forState:UIControlStateNormal];
         self.topControl.hidden = YES;
         self.bottomControl.hidden = YES;
         self.bigPlayButton.hidden = YES;
     }
     self.lockButton.hidden = YES;
 }
-
 
 - (void)setPlayButtonsEnabled:(BOOL)enabled {
     self.startPause.enabled = enabled;
@@ -401,7 +386,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 
 #pragma mark - 手势控制，声音，亮度，进度
-
 
 - (void)panDirection:(UIPanGestureRecognizer *)pan{
     
@@ -434,8 +418,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
                 self.isEndFast = NO;
                 // 给sumTime初值
                 self.sumTime = [self.delegate getCurrentDuration];
-//                NSTimeInterval time = self.player.currentTime;
-//                self.sumTime = time;// time.value/time.timescale;
             }else if (x < y){ // 垂直移动
                 self.panDirection = PanDirectionVerticalMoved;
                 // 显示音量控件
@@ -453,7 +435,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
             switch (self.panDirection) {
                 case PanDirectionHorizontalMoved:{
                     if (!self.isEndFast) {
-//                        [self.player begainFast];
                         self.isEndFast = YES;
                     }
                     [self horizontalMoved:veloctyPoint.x]; // 水平移动的方法只要x方向的值
@@ -471,14 +452,13 @@ typedef NS_ENUM(NSInteger,PanDirection) {
             break;
         case UIGestureRecognizerStateEnded:{
             // 移动结束也需要判断垂直或者平移
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                // 隐藏视图
+                self.forwardView.hidden = YES;
+            });
             // 比如水平移动结束时，要快进到指定位置，如果这里没有判断，当我们调节音量完之后，会出现屏幕跳动的bug
             switch (self.panDirection) {
                 case PanDirectionHorizontalMoved:{//快进结束
-                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                        // 隐藏视图
-                        self.forwardView.hidden = YES;
-                    });
-//                    [self.player endFastWithTime:self.sumTime];
                     // 把sumTime滞空，不然会越加越多
                     [self.delegate endFastWithTime:self.sumTime];
                     self.sumTime = 0;
@@ -530,8 +510,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     
     // 每次滑动需要叠加时间
     self.sumTime += value*3.0;    // 需要限定sumTime的范围 除以1 代表调节倍率
-//    CMTime totalTime = self.player.playerItem.duration;
-//    CGFloat totalMovieDuration = (CGFloat)totalTime.value/totalTime.timescale;
     long totalMovieDuration = [self.delegate getTotalDuration];
     if (self.sumTime > totalMovieDuration) {
         self.sumTime = totalMovieDuration;
@@ -594,14 +572,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 //        self.videoQualityButton.hidden = YES;
 
         [self.bigPlayButton setFrameOriginY:CGRectGetMinY(self.bottomControl.frame)/2 - CGRectGetHeight(self.bigPlayButton.frame)/2];
-
-#warning TODO --
-//        for (UIView *control in self.portraitControls) {
-//            control.hidden = self.isControlsHidden;
-//        }
-//        for (UIView *control in self.landscapeControls) {
-//            control.hidden = YES;
-//        }
+ 
 
     } else {
         [self.topControl setFrameOriginY:0.0f];
@@ -615,13 +586,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 //        self.videoQualityButton.hidden = NO;
 
         [self.bigPlayButton setFrameOriginY:(CGRectGetMinY(self.bottomControl.frame) - CGRectGetMaxY(self.topControl.frame))/2 + CGRectGetMaxY(self.topControl.frame) - CGRectGetHeight(self.bigPlayButton.frame)/2];
-#warning TODO --
-//        for (UIView *control in self.portraitControls) {
-//            control.hidden = YES;
-//        }
-//        for (UIView *control in self.landscapeControls) {
-//            control.hidden = self.isControlsHidden;
-//        }
+ 
     }
 
     [self layoutTopControls];
@@ -635,9 +600,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
             rightMargin = MIN(CGRectGetMinX(button.frame), rightMargin);
         }
     }
-
-    //    [self.titleLabel setFrameOriginX:MaxX(_doneButton)];
-    //    [self.titleLabel setFrameWidth:X(self.shareBtn) - X(self.titleLabel) - 20];
 }
 
 - (void)layoutSliderForOrientation:(UIInterfaceOrientation)interfaceOrientation{
@@ -650,7 +612,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [self.progressSld setFrameOriginX:self.curPosLbl.frame.origin.x + self.durationLbl.frame.size.width + 4];
     [self.progressSld setFrameWidth:self.durationLbl.frame.origin.x - self.progressSld.frame.origin.x - 4];
     [self.progressSld setFrameOriginY:CGRectGetHeight(self.bottomControl.frame)/2 - CGRectGetHeight(self.progressSld.frame)/2];
-
 }
 
 @end

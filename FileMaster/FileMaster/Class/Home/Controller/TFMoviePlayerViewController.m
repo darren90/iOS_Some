@@ -99,7 +99,12 @@
             }];
         }
             break;
-            
+        case TFVideoPlayerControlEventPause:
+        {
+            [self.player pauseContent];
+
+        }
+            break;
         default:
             break;
     }

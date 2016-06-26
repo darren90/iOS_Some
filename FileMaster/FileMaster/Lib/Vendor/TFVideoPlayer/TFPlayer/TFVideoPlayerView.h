@@ -198,7 +198,6 @@
 @property (nonatomic, weak) id<TFVideoPlayerViewDelegate> delegate;
 
 
-
 - (void)layoutForOrientation:(UIInterfaceOrientation)interfaceOrientation;
 
 
@@ -211,7 +210,6 @@
  *  是否播放的是本地资源
  */
 @property (nonatomic,assign)BOOL isPlayLocalFile;//我增加的字段，以便播放本地视频的时候视频不受打扰
-
 
 
 //设置播放/暂停时按钮的状态， 播放 --> 暂停 :YES
