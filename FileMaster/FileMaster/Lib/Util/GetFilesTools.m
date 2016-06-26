@@ -10,6 +10,7 @@
 #import "MovieList.h"
 #import "UIImage+Category.h"
 #import "MovieFile.h"
+#import "Global.h"
 
 @implementation GetFilesTools
 
@@ -115,7 +116,10 @@
                         fileType = FileMovieCanPlay;
                     }
                     
-                    model = [MovieList movieList:fileName fileType:fileType path:fullPath imgData:imgData];
+                    NSString *fileSize = [Global getFileSize:fullPath];
+                    
+//                    model = [MovieList movieList:fileName fileType:fileType path:fullPath imgData:imgData];
+                    model = [MovieList movieList:fileName fileType:fileType path:fullPath fileSize:fileSize];
                     
                     movieFile.isFolder = NO;
                     movieFile.file = model;

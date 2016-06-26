@@ -36,11 +36,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FileMaster/Class/Home/View/MovieListCell.m"
-            timestampString = "478625893.37289"
+            timestampString = "488600306.717608"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "+cellWithTableView:"
             landmarkType = "5">
          </BreakpointContent>
@@ -194,16 +194,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FileMaster/Class/AllFiles/Controller/AllFiles_RootController.m"
-            timestampString = "488598764.440315"
+            filePath = "FileMaster/Lib/Util/GetFilesTools.m"
+            timestampString = "488600003.016435"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "-viewWillAppear:"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "+scanFilesAtPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

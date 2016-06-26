@@ -44,6 +44,7 @@ typedef enum {
 //文件大小
 @property (nonatomic,copy)NSString * fileSize;
 
++(instancetype)movieList:(NSString *)name fileType:(FileType)fileType path:(NSString *)path fileSize:(NSString *)fileSize;
 
 
 +(instancetype)movieList:(NSString *)name fileType:(FileType)fileType path:(NSString *)path imgData:(UIImage *)imgData;

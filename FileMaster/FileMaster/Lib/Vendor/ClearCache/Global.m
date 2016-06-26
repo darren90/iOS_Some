@@ -10,6 +10,33 @@
 
 @implementation Global
 
++(NSString *)getFileSize:(NSString *)path
+{    
+    NSString *message = @"";
+ 
+    long long bytes = 0;
+    bytes = [self fileSizeAtPath:path];
+    if(bytes < 1000)     // B
+    {
+        message = [NSString stringWithFormat:@"%lldB", bytes];
+    }
+    else if(bytes >= 1000 && bytes < 1024 * 1024) // KB
+    {
+        message = [NSString stringWithFormat:@"%.0fK", (double)bytes / 1024];
+    }
+    else if(bytes >= 1024 * 1024 && bytes < 1024 * 1024 * 1024)   // MB
+    {
+        message = [NSString stringWithFormat:@"%.1fM", (double)bytes / (1024 * 1024)];
+    }
+    else    // GB
+    {
+        message = [NSString stringWithFormat:@"%.1fG", (double)bytes / (1024 * 1024 * 1024)];
+    }
+ 
+    return message;
+
+}
+
 //计算缓存大小
 + (NSString*)cathSize
 {

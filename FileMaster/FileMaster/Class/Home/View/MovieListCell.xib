@@ -42,7 +42,7 @@
                             <constraint firstAttribute="width" constant="21" id="yNm-S1-opo"/>
                         </constraints>
                     </imageView>
-                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8G-Xc-Jjb">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100MB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8G-Xc-Jjb">
                         <rect key="frame" x="58" y="31.5" width="221" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,6 +92,7 @@
                 <outlet property="iconGo" destination="wf8-oM-QDE" id="C3Z-cX-g1Q"/>
                 <outlet property="iconView" destination="jSd-Rw-dFJ" id="oNL-Wm-VUD"/>
                 <outlet property="nameLabel" destination="E4g-2K-EP4" id="5oK-tS-7Wj"/>
+                <outlet property="sizeLabel" destination="S8G-Xc-Jjb" id="8Oa-sK-WKm"/>
             </connections>
             <point key="canvasLocation" x="312" y="258.5"/>
         </tableViewCell>

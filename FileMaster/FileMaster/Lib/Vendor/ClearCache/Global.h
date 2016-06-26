@@ -12,6 +12,8 @@
 
 + (NSString*)cathSize;
 
++(NSString *)getFileSize:(NSString *)path;
+
 + (void)clearCache;
 
 + (NSString *)getFilePathWithCache;

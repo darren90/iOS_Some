@@ -21,6 +21,16 @@
     
 }
 
++(instancetype)movieList:(NSString *)name fileType:(FileType)fileType path:(NSString *)path fileSize:(NSString *)fileSize
+{
+    MovieList *list = [[MovieList alloc]init];
+    list.name = name;
+    list.fileType = fileType;
+    list.path = path;
+    list.fileSize = fileSize;
+    return list;
+}
+
 
 +(instancetype)movieList:(NSString *)name fileType:(FileType)fileType  path:(NSString *)path imgData:(UIImage *)imgData
 {

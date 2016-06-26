@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *iconGo;
+@property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
 
 @end
 
@@ -39,11 +40,14 @@
         self.iconView.image = [UIImage imageNamed:@"Finder_folder"];
          self.nameLabel.text = model.folderName;
         self.iconGo.hidden = NO;
+        self.sizeLabel.hidden = YES;
     }else{
         MovieList *list = model.file;
 //        self.iconView.image = list.imgData;
+         self.sizeLabel.hidden = NO;
         self.nameLabel.text = list.name;
         self.iconGo.hidden = YES;
+        self.sizeLabel.text = list.fileSize;
     }
 }
 
