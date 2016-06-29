@@ -218,9 +218,10 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     [self.view startActivityWithMsg:@"Buffering"];
     [self.mMPayer seekTo:time];
 
-    if (!self.mMPayer.isPlaying) {//没有播放的时候，拖动进度条后，进行播放
-        [self.mMPayer start];
-    }
+//    if (!self.mMPayer.isPlaying) {//没有播放的时候，拖动进度条后，进行播放
+//        [self.mMPayer start];
+//    }
+    [self playContent];
 }
 
 - (void)playContent {

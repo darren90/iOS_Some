@@ -771,11 +771,11 @@
 		FE79FCC11D12DAB9001D052D /* TFVideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				FE79FD041D12DAB9001D052D /* TFPlayerController.h */,
-				FE79FD051D12DAB9001D052D /* TFPlayerController.m */,
 				FE2C6FB41D1E077800AAB51E /* TFPlayer */,
 				FE79FCC21D12DAB9001D052D /* imgs */,
 				FE79FD061D12DAB9001D052D /* Vitamio */,
+				FE79FD041D12DAB9001D052D /* TFPlayerController.h */,
+				FE79FD051D12DAB9001D052D /* TFPlayerController.m */,
 			);
 			path = TFVideoPlayer;
 			sourceTree = "<group>";
