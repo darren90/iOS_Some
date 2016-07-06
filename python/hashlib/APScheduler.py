@@ -27,7 +27,6 @@ import os
 import logging    
 import psutil  
 
-
 #设置一个日志输出文件  
 log_filename="logging.txt"  
 
@@ -37,7 +36,7 @@ log_format=' [%(asctime)s]   %(message)s'
 
   
 #将日志文件格式化  
-logging.basicConfig (format=log_format,datafmt='%Y-%m-%d %H:%M:%S %p',level=logging.DEBUG,filename=log_filename,filemode='w')  
+logging.basicConfig (format=log_format,datafmt='%Y-%m-%d %H:%M:%S %p',level=logging.DEBUG,filename=log_filename,filemode='a')  
   
  
 def tick():
@@ -45,7 +44,7 @@ def tick():
 	logging.debug('Tick! The time is : %s' % datetime.now()) 
 
 
-
+# 开启定时任务
 if __name__ == '__main__':
 	scheduler = BlockingScheduler()
 	scheduler.add_job(tick,'cron', second='*/1', hour='*') 
