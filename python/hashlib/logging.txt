@@ -1780,53 +1780,113 @@ Traceback (most recent call last):
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:06,003]   Looking for jobs to run
+ [2016-07-06 20:37:06,004]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 2.996544 seconds)
+ [2016-07-06 20:37:06,004]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:06+08:00)
+ [2016-07-06 20:37:06,004]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:09 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:09,005]   Looking for jobs to run
+ [2016-07-06 20:37:09,006]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 2.994386 seconds)
+ [2016-07-06 20:37:09,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:12 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:12,005]   Looking for jobs to run
+ [2016-07-06 20:37:12,006]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 2.993910 seconds)
+ [2016-07-06 20:37:12,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:15 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:15,005]   Looking for jobs to run
+ [2016-07-06 20:37:15,006]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 2.994215 seconds)
+ [2016-07-06 20:37:15,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:18 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:18,002]   Looking for jobs to run
+ [2016-07-06 20:37:18,003]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 2.997182 seconds)
+ [2016-07-06 20:37:18,003]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,003]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:21 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:21,007]   Looking for jobs to run
+ [2016-07-06 20:37:21,008]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 2.991943 seconds)
+ [2016-07-06 20:37:21,008]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,009]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:24 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
 /Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:51,005]   Looking for jobs to run
- [2016-07-06 20:36:51,006]   Next wakeup is due at 2016-07-06 20:36:54+08:00 (in 2.994192 seconds)
- [2016-07-06 20:36:51,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:54 CST)" (scheduled at 2016-07-06 20:36:51+08:00)
- [2016-07-06 20:36:51,006]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:54 CST)" raised an exception
+ [2016-07-06 20:37:09,005]   Looking for jobs to run
+ [2016-07-06 20:37:09,006]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 2.994407 seconds)
+ [2016-07-06 20:37:09,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:12 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:54,002]   Looking for jobs to run
- [2016-07-06 20:36:54,004]   Next wakeup is due at 2016-07-06 20:36:57+08:00 (in 2.997475 seconds)
- [2016-07-06 20:36:54,004]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:57 CST)" (scheduled at 2016-07-06 20:36:54+08:00)
- [2016-07-06 20:36:54,005]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:57 CST)" raised an exception
+ [2016-07-06 20:37:12,005]   Looking for jobs to run
+ [2016-07-06 20:37:12,006]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 2.993910 seconds)
+ [2016-07-06 20:37:12,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:15 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:57,005]   Looking for jobs to run
- [2016-07-06 20:36:57,006]   Next wakeup is due at 2016-07-06 20:37:00+08:00 (in 2.994251 seconds)
- [2016-07-06 20:36:57,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:00 CST)" (scheduled at 2016-07-06 20:36:57+08:00)
- [2016-07-06 20:36:57,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:00 CST)" raised an exception
+ [2016-07-06 20:37:15,005]   Looking for jobs to run
+ [2016-07-06 20:37:15,006]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 2.994252 seconds)
+ [2016-07-06 20:37:15,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:18 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:37:00,003]   Looking for jobs to run
- [2016-07-06 20:37:00,004]   Next wakeup is due at 2016-07-06 20:37:03+08:00 (in 2.996465 seconds)
- [2016-07-06 20:37:00,004]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:03 CST)" (scheduled at 2016-07-06 20:37:00+08:00)
- [2016-07-06 20:37:00,005]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:03 CST)" raised an exception
+ [2016-07-06 20:37:18,002]   Looking for jobs to run
+ [2016-07-06 20:37:18,003]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 2.997205 seconds)
+ [2016-07-06 20:37:18,003]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,003]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:21 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:37:03,006]   Looking for jobs to run
- [2016-07-06 20:37:03,006]   Next wakeup is due at 2016-07-06 20:37:06+08:00 (in 2.993645 seconds)
- [2016-07-06 20:37:03,007]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:06 CST)" (scheduled at 2016-07-06 20:37:03+08:00)
- [2016-07-06 20:37:03,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:06 CST)" raised an exception
+ [2016-07-06 20:37:21,004]   Looking for jobs to run
+ [2016-07-06 20:37:21,006]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 2.995108 seconds)
+ [2016-07-06 20:37:21,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,006]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:24 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
@@ -1834,66 +1894,6 @@ Traceback (most recent call last):
     
 UnboundLocalError: local variable 'i' referenced before assignment
 riable 'i' referenced before assignment
- [2016-07-06 20:36:42,003]   Looking for jobs to run
- [2016-07-06 20:36:42,004]   Next wakeup is due at 2016-07-06 20:36:45+08:00 (in 2.996420 seconds)
- [2016-07-06 20:36:42,004]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:45 CST)" (scheduled at 2016-07-06 20:36:42+08:00)
- [2016-07-06 20:36:42,004]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:45 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:45,005]   Looking for jobs to run
- [2016-07-06 20:36:45,006]   Next wakeup is due at 2016-07-06 20:36:48+08:00 (in 2.993853 seconds)
- [2016-07-06 20:36:45,007]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:48 CST)" (scheduled at 2016-07-06 20:36:45+08:00)
- [2016-07-06 20:36:45,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:48 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:48,001]   Looking for jobs to run
- [2016-07-06 20:36:48,002]   Next wakeup is due at 2016-07-06 20:36:51+08:00 (in 2.998802 seconds)
- [2016-07-06 20:36:48,002]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:51 CST)" (scheduled at 2016-07-06 20:36:48+08:00)
- [2016-07-06 20:36:48,002]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:51 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:51,005]   Looking for jobs to run
- [2016-07-06 20:36:51,006]   Next wakeup is due at 2016-07-06 20:36:54+08:00 (in 2.994191 seconds)
- [2016-07-06 20:36:51,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:54 CST)" (scheduled at 2016-07-06 20:36:51+08:00)
- [2016-07-06 20:36:51,006]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:54 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:54,002]   Looking for jobs to run
- [2016-07-06 20:36:54,003]   Next wakeup is due at 2016-07-06 20:36:57+08:00 (in 2.997568 seconds)
- [2016-07-06 20:36:54,003]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:57 CST)" (scheduled at 2016-07-06 20:36:54+08:00)
- [2016-07-06 20:36:54,004]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:36:57 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:57,004]   Looking for jobs to run
- [2016-07-06 20:36:57,005]   Next wakeup is due at 2016-07-06 20:37:00+08:00 (in 2.995221 seconds)
- [2016-07-06 20:36:57,005]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:00 CST)" (scheduled at 2016-07-06 20:36:57+08:00)
- [2016-07-06 20:36:57,006]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:00 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
  [2016-07-06 20:37:00,003]   Looking for jobs to run
  [2016-07-06 20:37:00,004]   Next wakeup is due at 2016-07-06 20:37:03+08:00 (in 2.996552 seconds)
  [2016-07-06 20:37:00,004]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:03 CST)" (scheduled at 2016-07-06 20:37:00+08:00)
@@ -1914,54 +1914,67 @@ Traceback (most recent call last):
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
-:34:50 CST)" (scheduled at 2016-07-06 20:34:49+08:00)
- [2016-07-06 20:34:49,004]   Tick! The time is : 2016-07-06 20:34:49.004499
- [2016-07-06 20:34:49,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:50 CST)" executed successfully
- [2016-07-06 20:34:50,002]   Looking for jobs to run
- [2016-07-06 20:34:50,003]   Next wakeup is due at 2016-07-06 20:34:51+08:00 (in 0.997201 seconds)
- [2016-07-06 20:34:50,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:51 CST)" (scheduled at 2016-07-06 20:34:50+08:00)
- [2016-07-06 20:34:50,004]   Tick! The time is : 2016-07-06 20:34:50.004197
- [2016-07-06 20:34:50,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:51 CST)" executed successfully
- [2016-07-06 20:34:51,002]   Looking for jobs to run
- [2016-07-06 20:34:51,003]   Next wakeup is due at 2016-07-06 20:34:52+08:00 (in 0.997476 seconds)
- [2016-07-06 20:34:51,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:52 CST)" (scheduled at 2016-07-06 20:34:51+08:00)
- [2016-07-06 20:34:51,003]   Tick! The time is : 2016-07-06 20:34:51.003686
- [2016-07-06 20:34:51,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:52 CST)" executed successfully
- [2016-07-06 20:34:52,001]   Looking for jobs to run
- [2016-07-06 20:34:52,002]   Next wakeup is due at 2016-07-06 20:34:53+08:00 (in 0.997937 seconds)
- [2016-07-06 20:34:52,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:53 CST)" (scheduled at 2016-07-06 20:34:52+08:00)
- [2016-07-06 20:34:52,002]   Tick! The time is : 2016-07-06 20:34:52.002809
- [2016-07-06 20:34:52,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:53 CST)" executed successfully
- [2016-07-06 20:34:53,002]   Looking for jobs to run
- [2016-07-06 20:34:53,005]   Next wakeup is due at 2016-07-06 20:34:54+08:00 (in 0.996196 seconds)
- [2016-07-06 20:34:53,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:54 CST)" (scheduled at 2016-07-06 20:34:53+08:00)
- [2016-07-06 20:34:53,005]   Tick! The time is : 2016-07-06 20:34:53.005555
- [2016-07-06 20:34:53,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:54 CST)" executed successfully
- [2016-07-06 20:34:54,003]   Looking for jobs to run
- [2016-07-06 20:34:54,004]   Next wakeup is due at 2016-07-06 20:34:55+08:00 (in 0.995787 seconds)
- [2016-07-06 20:34:54,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:55 CST)" (scheduled at 2016-07-06 20:34:54+08:00)
- [2016-07-06 20:34:54,005]   Tick! The time is : 2016-07-06 20:34:54.005542
- [2016-07-06 20:34:54,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:55 CST)" executed successfully
- [2016-07-06 20:34:55,001]   Looking for jobs to run
- [2016-07-06 20:34:55,002]   Next wakeup is due at 2016-07-06 20:34:56+08:00 (in 0.998403 seconds)
- [2016-07-06 20:34:55,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:56 CST)" (scheduled at 2016-07-06 20:34:55+08:00)
- [2016-07-06 20:34:55,002]   Tick! The time is : 2016-07-06 20:34:55.002569
- [2016-07-06 20:34:55,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:56 CST)" executed successfully
- [2016-07-06 20:34:56,002]   Looking for jobs to run
- [2016-07-06 20:34:56,003]   Next wakeup is due at 2016-07-06 20:34:57+08:00 (in 0.996897 seconds)
- [2016-07-06 20:34:56,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:57 CST)" (scheduled at 2016-07-06 20:34:56+08:00)
- [2016-07-06 20:34:56,004]   Tick! The time is : 2016-07-06 20:34:56.004175
- [2016-07-06 20:34:56,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:57 CST)" executed successfully
- [2016-07-06 20:34:57,003]   Looking for jobs to run
- [2016-07-06 20:34:57,004]   Next wakeup is due at 2016-07-06 20:34:58+08:00 (in 0.996602 seconds)
- [2016-07-06 20:34:57,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:58 CST)" (scheduled at 2016-07-06 20:34:57+08:00)
- [2016-07-06 20:34:57,004]   Tick! The time is : 2016-07-06 20:34:57.004821
- [2016-07-06 20:34:57,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:58 CST)" executed successfully
- [2016-07-06 20:34:58,002]   Looking for jobs to run
- [2016-07-06 20:34:58,003]   Next wakeup is due at 2016-07-06 20:34:59+08:00 (in 0.997281 seconds)
- [2016-07-06 20:34:58,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:59 CST)" (scheduled at 2016-07-06 20:34:58+08:00)
- [2016-07-06 20:34:58,003]   Tick! The time is : 2016-07-06 20:34:58.003834
- [2016-07-06 20:34:58,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:59 CST)" executed successfully
+ [2016-07-06 20:37:06,003]   Looking for jobs to run
+ [2016-07-06 20:37:06,004]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 2.996545 seconds)
+ [2016-07-06 20:37:06,004]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:06+08:00)
+ [2016-07-06 20:37:06,004]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:09 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:09,005]   Looking for jobs to run
+ [2016-07-06 20:37:09,006]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 2.994400 seconds)
+ [2016-07-06 20:37:09,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,006]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:12 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:12,005]   Looking for jobs to run
+ [2016-07-06 20:37:12,006]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 2.993963 seconds)
+ [2016-07-06 20:37:12,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:15 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:15,005]   Looking for jobs to run
+ [2016-07-06 20:37:15,006]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 2.994585 seconds)
+ [2016-07-06 20:37:15,006]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:18 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:18,002]   Looking for jobs to run
+ [2016-07-06 20:37:18,003]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 2.997182 seconds)
+ [2016-07-06 20:37:18,003]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,004]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:21 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:21,006]   Looking for jobs to run
+ [2016-07-06 20:37:21,007]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 2.993429 seconds)
+ [2016-07-06 20:37:21,007]   Running job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,007]   Job "tick (trigger: cron[hour='*', second='*/3'], next run at: 2016-07-06 20:37:24 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+, next run at: 2016-07-06 20:34:59 CST)" executed successfully
  [2016-07-06 20:34:59,002]   Looking for jobs to run
  [2016-07-06 20:34:59,003]   Next wakeup is due at 2016-07-06 20:35:00+08:00 (in 0.997339 seconds)
  [2016-07-06 20:34:59,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:00 CST)" (scheduled at 2016-07-06 20:34:59+08:00)
@@ -2592,101 +2605,102 @@ UnboundLocalError: local variable 'i' referenced before assignment
  [2016-07-06 20:37:04,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" (scheduled at 2016-07-06 20:37:04+08:00)
  [2016-07-06 20:37:04,003]   Tick! The time is : 2016-07-06 20:37:04.003031
  [2016-07-06 20:37:04,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" executed successfully
-,006]   Next wakeup is due at 2016-07-06 20:36:02+08:00 (in 0.994312 seconds)
- [2016-07-06 20:36:01,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:02 CST)" (scheduled at 2016-07-06 20:36:01+08:00)
- [2016-07-06 20:36:01,006]   Tick! The time is 0 : 2016-07-06 20:36:01.006912
- [2016-07-06 20:36:01,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:02 CST)" executed successfully
- [2016-07-06 20:36:02,002]   Looking for jobs to run
- [2016-07-06 20:36:02,003]   Next wakeup is due at 2016-07-06 20:36:03+08:00 (in 0.997309 seconds)
- [2016-07-06 20:36:02,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:03 CST)" (scheduled at 2016-07-06 20:36:02+08:00)
- [2016-07-06 20:36:02,004]   Tick! The time is 0 : 2016-07-06 20:36:02.003992
- [2016-07-06 20:36:02,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:03 CST)" executed successfully
- [2016-07-06 20:36:03,002]   Looking for jobs to run
- [2016-07-06 20:36:03,003]   Next wakeup is due at 2016-07-06 20:36:04+08:00 (in 0.997335 seconds)
- [2016-07-06 20:36:03,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:04 CST)" (scheduled at 2016-07-06 20:36:03+08:00)
- [2016-07-06 20:36:03,003]   Tick! The time is 0 : 2016-07-06 20:36:03.003845
- [2016-07-06 20:36:03,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:04 CST)" executed successfully
- [2016-07-06 20:36:04,001]   Looking for jobs to run
- [2016-07-06 20:36:04,002]   Next wakeup is due at 2016-07-06 20:36:05+08:00 (in 0.997815 seconds)
- [2016-07-06 20:36:04,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:05 CST)" (scheduled at 2016-07-06 20:36:04+08:00)
- [2016-07-06 20:36:04,003]   Tick! The time is 0 : 2016-07-06 20:36:04.003096
- [2016-07-06 20:36:04,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:05 CST)" executed successfully
- [2016-07-06 20:36:05,004]   Looking for jobs to run
- [2016-07-06 20:36:05,005]   Next wakeup is due at 2016-07-06 20:36:06+08:00 (in 0.995437 seconds)
- [2016-07-06 20:36:05,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:06 CST)" (scheduled at 2016-07-06 20:36:05+08:00)
- [2016-07-06 20:36:05,005]   Tick! The time is 0 : 2016-07-06 20:36:05.005876
- [2016-07-06 20:36:05,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:06 CST)" executed successfully
- [2016-07-06 20:36:06,002]   Looking for jobs to run
- [2016-07-06 20:36:06,002]   Next wakeup is due at 2016-07-06 20:36:07+08:00 (in 0.997740 seconds)
- [2016-07-06 20:36:06,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:07 CST)" (scheduled at 2016-07-06 20:36:06+08:00)
- [2016-07-06 20:36:06,003]   Tick! The time is 0 : 2016-07-06 20:36:06.003491
- [2016-07-06 20:36:06,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:07 CST)" executed successfully
- [2016-07-06 20:36:07,004]   Looking for jobs to run
- [2016-07-06 20:36:07,005]   Next wakeup is due at 2016-07-06 20:36:08+08:00 (in 0.995483 seconds)
- [2016-07-06 20:36:07,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:08 CST)" (scheduled at 2016-07-06 20:36:07+08:00)
- [2016-07-06 20:36:07,005]   Tick! The time is 0 : 2016-07-06 20:36:07.005593
- [2016-07-06 20:36:07,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:08 CST)" executed successfully
- [2016-07-06 20:36:08,001]   Looking for jobs to run
- [2016-07-06 20:36:08,002]   Next wakeup is due at 2016-07-06 20:36:09+08:00 (in 0.998495 seconds)
- [2016-07-06 20:36:08,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:09 CST)" (scheduled at 2016-07-06 20:36:08+08:00)
- [2016-07-06 20:36:08,002]   Tick! The time is 0 : 2016-07-06 20:36:08.002838
- [2016-07-06 20:36:08,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:09 CST)" executed successfully
- [2016-07-06 20:36:09,006]   Looking for jobs to run
- [2016-07-06 20:36:09,007]   Next wakeup is due at 2016-07-06 20:36:10+08:00 (in 0.993406 seconds)
- [2016-07-06 20:36:09,007]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:10 CST)" (scheduled at 2016-07-06 20:36:09+08:00)
- [2016-07-06 20:36:09,007]   Tick! The time is 0 : 2016-07-06 20:36:09.007621
- [2016-07-06 20:36:09,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:10 CST)" executed successfully
- [2016-07-06 20:36:10,001]   Looking for jobs to run
- [2016-07-06 20:36:10,002]   Next wakeup is due at 2016-07-06 20:36:11+08:00 (in 0.997904 seconds)
- [2016-07-06 20:36:10,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:11 CST)" (scheduled at 2016-07-06 20:36:10+08:00)
- [2016-07-06 20:36:10,003]   Tick! The time is 0 : 2016-07-06 20:36:10.003502
- [2016-07-06 20:36:10,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:11 CST)" executed successfully
- [2016-07-06 20:36:11,004]   Looking for jobs to run
- [2016-07-06 20:36:11,005]   Next wakeup is due at 2016-07-06 20:36:12+08:00 (in 0.995654 seconds)
- [2016-07-06 20:36:11,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:12 CST)" (scheduled at 2016-07-06 20:36:11+08:00)
- [2016-07-06 20:36:11,005]   Tick! The time is 0 : 2016-07-06 20:36:11.005590
- [2016-07-06 20:36:11,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:12 CST)" executed successfully
- [2016-07-06 20:36:12,004]   Looking for jobs to run
- [2016-07-06 20:36:12,004]   Next wakeup is due at 2016-07-06 20:36:13+08:00 (in 0.995520 seconds)
- [2016-07-06 20:36:12,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:13 CST)" (scheduled at 2016-07-06 20:36:12+08:00)
- [2016-07-06 20:36:12,005]   Tick! The time is 0 : 2016-07-06 20:36:12.005629
- [2016-07-06 20:36:12,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:13 CST)" executed successfully
- [2016-07-06 20:36:13,004]   Looking for jobs to run
- [2016-07-06 20:36:13,005]   Next wakeup is due at 2016-07-06 20:36:14+08:00 (in 0.995357 seconds)
- [2016-07-06 20:36:13,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:14 CST)" (scheduled at 2016-07-06 20:36:13+08:00)
- [2016-07-06 20:36:13,005]   Tick! The time is 0 : 2016-07-06 20:36:13.005707
- [2016-07-06 20:36:13,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:14 CST)" executed successfully
- [2016-07-06 20:36:14,004]   Looking for jobs to run
- [2016-07-06 20:36:14,005]   Next wakeup is due at 2016-07-06 20:36:15+08:00 (in 0.995193 seconds)
- [2016-07-06 20:36:14,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:15 CST)" (scheduled at 2016-07-06 20:36:14+08:00)
- [2016-07-06 20:36:14,005]   Tick! The time is 0 : 2016-07-06 20:36:14.005883
- [2016-07-06 20:36:14,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:15 CST)" executed successfully
- [2016-07-06 20:36:15,004]   Looking for jobs to run
- [2016-07-06 20:36:15,006]   Next wakeup is due at 2016-07-06 20:36:16+08:00 (in 0.994258 seconds)
- [2016-07-06 20:36:15,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:16 CST)" (scheduled at 2016-07-06 20:36:15+08:00)
- [2016-07-06 20:36:15,007]   Tick! The time is 0 : 2016-07-06 20:36:15.007032
- [2016-07-06 20:36:15,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:16 CST)" executed successfully
- [2016-07-06 20:36:16,000]   Looking for jobs to run
- [2016-07-06 20:36:16,001]   Next wakeup is due at 2016-07-06 20:36:17+08:00 (in 0.998875 seconds)
- [2016-07-06 20:36:16,001]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:17 CST)" (scheduled at 2016-07-06 20:36:16+08:00)
- [2016-07-06 20:36:16,001]   Tick! The time is 0 : 2016-07-06 20:36:16.001881
- [2016-07-06 20:36:16,001]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:17 CST)" executed successfully
- [2016-07-06 20:36:17,002]   Looking for jobs to run
- [2016-07-06 20:36:17,002]   Next wakeup is due at 2016-07-06 20:36:18+08:00 (in 0.997616 seconds)
- [2016-07-06 20:36:17,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:18 CST)" (scheduled at 2016-07-06 20:36:17+08:00)
- [2016-07-06 20:36:17,003]   Tick! The time is 0 : 2016-07-06 20:36:17.003392
- [2016-07-06 20:36:17,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:18 CST)" executed successfully
- [2016-07-06 20:36:18,002]   Looking for jobs to run
- [2016-07-06 20:36:18,002]   Next wakeup is due at 2016-07-06 20:36:19+08:00 (in 0.997806 seconds)
- [2016-07-06 20:36:18,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:19 CST)" (scheduled at 2016-07-06 20:36:18+08:00)
- [2016-07-06 20:36:18,002]   Tick! The time is 0 : 2016-07-06 20:36:18.002946
- [2016-07-06 20:36:18,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:19 CST)" executed successfully
- [2016-07-06 20:36:19,003]   Looking for jobs to run
- [2016-07-06 20:36:19,004]   Next wakeup is due at 2016-07-06 20:36:20+08:00 (in 0.995847 seconds)
- [2016-07-06 20:36:19,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:20 CST)" (scheduled at 2016-07-06 20:36:19+08:00)
- [2016-07-06 20:36:19,005]   Tick! The time is 0 : 2016-07-06 20:36:19.005231
- [2016-07-06 20:36:19,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:20 CST)" executed successfully
- [2016-07-06 20:36:20,005]   Looking for jobs to run
+ [2016-07-06 20:37:05,002]   Looking for jobs to run
+ [2016-07-06 20:37:05,003]   Next wakeup is due at 2016-07-06 20:37:06+08:00 (in 0.997433 seconds)
+ [2016-07-06 20:37:05,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" (scheduled at 2016-07-06 20:37:05+08:00)
+ [2016-07-06 20:37:05,003]   Tick! The time is : 2016-07-06 20:37:05.003632
+ [2016-07-06 20:37:05,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" executed successfully
+ [2016-07-06 20:37:06,001]   Looking for jobs to run
+ [2016-07-06 20:37:06,001]   Next wakeup is due at 2016-07-06 20:37:07+08:00 (in 0.998760 seconds)
+ [2016-07-06 20:37:06,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" (scheduled at 2016-07-06 20:37:06+08:00)
+ [2016-07-06 20:37:06,002]   Tick! The time is : 2016-07-06 20:37:06.002365
+ [2016-07-06 20:37:06,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" executed successfully
+ [2016-07-06 20:37:07,001]   Looking for jobs to run
+ [2016-07-06 20:37:07,002]   Next wakeup is due at 2016-07-06 20:37:08+08:00 (in 0.997970 seconds)
+ [2016-07-06 20:37:07,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" (scheduled at 2016-07-06 20:37:07+08:00)
+ [2016-07-06 20:37:07,003]   Tick! The time is : 2016-07-06 20:37:07.003201
+ [2016-07-06 20:37:07,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" executed successfully
+ [2016-07-06 20:37:08,004]   Looking for jobs to run
+ [2016-07-06 20:37:08,006]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 0.994890 seconds)
+ [2016-07-06 20:37:08,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:08+08:00)
+ [2016-07-06 20:37:08,006]   Tick! The time is : 2016-07-06 20:37:08.006722
+ [2016-07-06 20:37:08,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" executed successfully
+ [2016-07-06 20:37:09,002]   Looking for jobs to run
+ [2016-07-06 20:37:09,003]   Next wakeup is due at 2016-07-06 20:37:10+08:00 (in 0.997048 seconds)
+ [2016-07-06 20:37:09,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,004]   Tick! The time is : 2016-07-06 20:37:09.004170
+ [2016-07-06 20:37:09,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" executed successfully
+ [2016-07-06 20:37:10,001]   Looking for jobs to run
+ [2016-07-06 20:37:10,002]   Next wakeup is due at 2016-07-06 20:37:11+08:00 (in 0.998324 seconds)
+ [2016-07-06 20:37:10,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" (scheduled at 2016-07-06 20:37:10+08:00)
+ [2016-07-06 20:37:10,003]   Tick! The time is : 2016-07-06 20:37:10.003119
+ [2016-07-06 20:37:10,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" executed successfully
+ [2016-07-06 20:37:11,002]   Looking for jobs to run
+ [2016-07-06 20:37:11,002]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 0.997829 seconds)
+ [2016-07-06 20:37:11,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:11+08:00)
+ [2016-07-06 20:37:11,003]   Tick! The time is : 2016-07-06 20:37:11.002992
+ [2016-07-06 20:37:11,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" executed successfully
+ [2016-07-06 20:37:12,003]   Looking for jobs to run
+ [2016-07-06 20:37:12,004]   Next wakeup is due at 2016-07-06 20:37:13+08:00 (in 0.996387 seconds)
+ [2016-07-06 20:37:12,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,004]   Tick! The time is : 2016-07-06 20:37:12.004760
+ [2016-07-06 20:37:12,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" executed successfully
+ [2016-07-06 20:37:13,004]   Looking for jobs to run
+ [2016-07-06 20:37:13,005]   Next wakeup is due at 2016-07-06 20:37:14+08:00 (in 0.995038 seconds)
+ [2016-07-06 20:37:13,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" (scheduled at 2016-07-06 20:37:13+08:00)
+ [2016-07-06 20:37:13,005]   Tick! The time is : 2016-07-06 20:37:13.005493
+ [2016-07-06 20:37:13,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" executed successfully
+ [2016-07-06 20:37:14,003]   Looking for jobs to run
+ [2016-07-06 20:37:14,003]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 0.996713 seconds)
+ [2016-07-06 20:37:14,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:14+08:00)
+ [2016-07-06 20:37:14,004]   Tick! The time is : 2016-07-06 20:37:14.003991
+ [2016-07-06 20:37:14,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" executed successfully
+ [2016-07-06 20:37:15,002]   Looking for jobs to run
+ [2016-07-06 20:37:15,003]   Next wakeup is due at 2016-07-06 20:37:16+08:00 (in 0.996926 seconds)
+ [2016-07-06 20:37:15,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,004]   Tick! The time is : 2016-07-06 20:37:15.004015
+ [2016-07-06 20:37:15,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" executed successfully
+ [2016-07-06 20:37:16,004]   Looking for jobs to run
+ [2016-07-06 20:37:16,005]   Next wakeup is due at 2016-07-06 20:37:17+08:00 (in 0.995451 seconds)
+ [2016-07-06 20:37:16,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" (scheduled at 2016-07-06 20:37:16+08:00)
+ [2016-07-06 20:37:16,005]   Tick! The time is : 2016-07-06 20:37:16.005777
+ [2016-07-06 20:37:16,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" executed successfully
+ [2016-07-06 20:37:17,003]   Looking for jobs to run
+ [2016-07-06 20:37:17,004]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 0.996343 seconds)
+ [2016-07-06 20:37:17,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:17+08:00)
+ [2016-07-06 20:37:17,004]   Tick! The time is : 2016-07-06 20:37:17.004543
+ [2016-07-06 20:37:17,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" executed successfully
+ [2016-07-06 20:37:18,003]   Looking for jobs to run
+ [2016-07-06 20:37:18,003]   Next wakeup is due at 2016-07-06 20:37:19+08:00 (in 0.996591 seconds)
+ [2016-07-06 20:37:18,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,004]   Tick! The time is : 2016-07-06 20:37:18.004342
+ [2016-07-06 20:37:18,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" executed successfully
+ [2016-07-06 20:37:19,003]   Looking for jobs to run
+ [2016-07-06 20:37:19,004]   Next wakeup is due at 2016-07-06 20:37:20+08:00 (in 0.995999 seconds)
+ [2016-07-06 20:37:19,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" (scheduled at 2016-07-06 20:37:19+08:00)
+ [2016-07-06 20:37:19,004]   Tick! The time is : 2016-07-06 20:37:19.004859
+ [2016-07-06 20:37:19,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" executed successfully
+ [2016-07-06 20:37:20,001]   Looking for jobs to run
+ [2016-07-06 20:37:20,002]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 0.998076 seconds)
+ [2016-07-06 20:37:20,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:20+08:00)
+ [2016-07-06 20:37:20,002]   Tick! The time is : 2016-07-06 20:37:20.002971
+ [2016-07-06 20:37:20,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" executed successfully
+ [2016-07-06 20:37:21,004]   Looking for jobs to run
+ [2016-07-06 20:37:21,005]   Next wakeup is due at 2016-07-06 20:37:22+08:00 (in 0.995327 seconds)
+ [2016-07-06 20:37:21,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,005]   Tick! The time is : 2016-07-06 20:37:21.005597
+ [2016-07-06 20:37:21,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" executed successfully
+ [2016-07-06 20:37:22,002]   Looking for jobs to run
+ [2016-07-06 20:37:22,003]   Next wakeup is due at 2016-07-06 20:37:23+08:00 (in 0.997344 seconds)
+ [2016-07-06 20:37:22,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" (scheduled at 2016-07-06 20:37:22+08:00)
+ [2016-07-06 20:37:22,004]   Tick! The time is : 2016-07-06 20:37:22.004155
+ [2016-07-06 20:37:22,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" executed successfully
+ [2016-07-06 20:37:23,005]   Looking for jobs to run
+ [2016-07-06 20:37:23,006]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 0.994542 seconds)
+ [2016-07-06 20:37:23,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:23+08:00)
+ [2016-07-06 20:37:23,006]   Tick! The time is : 2016-07-06 20:37:23.006668
+ [2016-07-06 20:37:23,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" executed successfully
+ for jobs to run
  [2016-07-06 20:36:20,006]   Next wakeup is due at 2016-07-06 20:36:21+08:00 (in 0.994163 seconds)
  [2016-07-06 20:36:20,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:21 CST)" (scheduled at 2016-07-06 20:36:20+08:00)
  [2016-07-06 20:36:20,007]   Tick! The time is 0 : 2016-07-06 20:36:20.007092
@@ -2911,131 +2925,102 @@ UnboundLocalError: local variable 'i' referenced before assignment
  [2016-07-06 20:37:04,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" (scheduled at 2016-07-06 20:37:04+08:00)
  [2016-07-06 20:37:04,007]   Tick! The time is 0 : 2016-07-06 20:37:04.007007
  [2016-07-06 20:37:04,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" executed successfully
-996863 seconds)
- [2016-07-06 20:34:15,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:16 CST)" (scheduled at 2016-07-06 20:34:15+08:00)
- [2016-07-06 20:34:15,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:16 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:16,004]   Looking for jobs to run
- [2016-07-06 20:34:16,005]   Next wakeup is due at 2016-07-06 20:34:17+08:00 (in 0.995328 seconds)
- [2016-07-06 20:34:16,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:17 CST)" (scheduled at 2016-07-06 20:34:16+08:00)
- [2016-07-06 20:34:16,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:17 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:17,002]   Looking for jobs to run
- [2016-07-06 20:34:17,002]   Next wakeup is due at 2016-07-06 20:34:18+08:00 (in 0.997684 seconds)
- [2016-07-06 20:34:17,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:18 CST)" (scheduled at 2016-07-06 20:34:17+08:00)
- [2016-07-06 20:34:17,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:18 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:18,003]   Looking for jobs to run
- [2016-07-06 20:34:18,005]   Next wakeup is due at 2016-07-06 20:34:19+08:00 (in 0.995839 seconds)
- [2016-07-06 20:34:18,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:19 CST)" (scheduled at 2016-07-06 20:34:18+08:00)
- [2016-07-06 20:34:18,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:19 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:19,001]   Looking for jobs to run
- [2016-07-06 20:34:19,002]   Next wakeup is due at 2016-07-06 20:34:20+08:00 (in 0.997925 seconds)
- [2016-07-06 20:34:19,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:20 CST)" (scheduled at 2016-07-06 20:34:19+08:00)
- [2016-07-06 20:34:19,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:20 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:20,002]   Looking for jobs to run
- [2016-07-06 20:34:20,003]   Next wakeup is due at 2016-07-06 20:34:21+08:00 (in 0.997024 seconds)
- [2016-07-06 20:34:20,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:21 CST)" (scheduled at 2016-07-06 20:34:20+08:00)
- [2016-07-06 20:34:20,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:21 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:21,002]   Looking for jobs to run
- [2016-07-06 20:34:21,003]   Next wakeup is due at 2016-07-06 20:34:22+08:00 (in 0.997073 seconds)
- [2016-07-06 20:34:21,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:22 CST)" (scheduled at 2016-07-06 20:34:21+08:00)
- [2016-07-06 20:34:21,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:22 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:22,002]   Looking for jobs to run
- [2016-07-06 20:34:22,003]   Next wakeup is due at 2016-07-06 20:34:23+08:00 (in 0.997084 seconds)
- [2016-07-06 20:34:22,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:23 CST)" (scheduled at 2016-07-06 20:34:22+08:00)
- [2016-07-06 20:34:22,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:23 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:23,002]   Looking for jobs to run
- [2016-07-06 20:34:23,003]   Next wakeup is due at 2016-07-06 20:34:24+08:00 (in 0.997399 seconds)
- [2016-07-06 20:34:23,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:24 CST)" (scheduled at 2016-07-06 20:34:23+08:00)
- [2016-07-06 20:34:23,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:24 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:24,005]   Looking for jobs to run
- [2016-07-06 20:34:24,005]   Next wakeup is due at 2016-07-06 20:34:25+08:00 (in 0.994775 seconds)
- [2016-07-06 20:34:24,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:25 CST)" (scheduled at 2016-07-06 20:34:24+08:00)
- [2016-07-06 20:34:24,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:25 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:25,002]   Looking for jobs to run
- [2016-07-06 20:34:25,002]   Next wakeup is due at 2016-07-06 20:34:26+08:00 (in 0.997590 seconds)
- [2016-07-06 20:34:25,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:26 CST)" (scheduled at 2016-07-06 20:34:25+08:00)
- [2016-07-06 20:34:25,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:26 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:26,003]   Looking for jobs to run
- [2016-07-06 20:34:26,004]   Next wakeup is due at 2016-07-06 20:34:27+08:00 (in 0.996395 seconds)
- [2016-07-06 20:34:26,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:27 CST)" (scheduled at 2016-07-06 20:34:26+08:00)
- [2016-07-06 20:34:26,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:27 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-NameError: global name 'i' is not defined
- [2016-07-06 20:34:27,001]   Looking for jobs to run
- [2016-07-06 20:34:27,002]   Next wakeup is due at 2016-07-06 20:34:28+08:00 (in 0.998056 seconds)
- [2016-07-06 20:34:27,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:28 CST)" (scheduled at 2016-07-06 20:34:27+08:00)
- [2016-07-06 20:34:27,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:34:28 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+ [2016-07-06 20:37:05,002]   Looking for jobs to run
+ [2016-07-06 20:37:05,003]   Next wakeup is due at 2016-07-06 20:37:06+08:00 (in 0.997434 seconds)
+ [2016-07-06 20:37:05,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" (scheduled at 2016-07-06 20:37:05+08:00)
+ [2016-07-06 20:37:05,003]   Tick! The time is 0 : 2016-07-06 20:37:05.003718
+ [2016-07-06 20:37:05,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" executed successfully
+ [2016-07-06 20:37:06,001]   Looking for jobs to run
+ [2016-07-06 20:37:06,001]   Next wakeup is due at 2016-07-06 20:37:07+08:00 (in 0.998719 seconds)
+ [2016-07-06 20:37:06,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" (scheduled at 2016-07-06 20:37:06+08:00)
+ [2016-07-06 20:37:06,002]   Tick! The time is 0 : 2016-07-06 20:37:06.002384
+ [2016-07-06 20:37:06,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" executed successfully
+ [2016-07-06 20:37:07,001]   Looking for jobs to run
+ [2016-07-06 20:37:07,002]   Next wakeup is due at 2016-07-06 20:37:08+08:00 (in 0.997963 seconds)
+ [2016-07-06 20:37:07,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" (scheduled at 2016-07-06 20:37:07+08:00)
+ [2016-07-06 20:37:07,002]   Tick! The time is 0 : 2016-07-06 20:37:07.002959
+ [2016-07-06 20:37:07,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" executed successfully
+ [2016-07-06 20:37:08,004]   Looking for jobs to run
+ [2016-07-06 20:37:08,005]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 0.994832 seconds)
+ [2016-07-06 20:37:08,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:08+08:00)
+ [2016-07-06 20:37:08,006]   Tick! The time is 0 : 2016-07-06 20:37:08.005997
+ [2016-07-06 20:37:08,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" executed successfully
+ [2016-07-06 20:37:09,002]   Looking for jobs to run
+ [2016-07-06 20:37:09,002]   Next wakeup is due at 2016-07-06 20:37:10+08:00 (in 0.997685 seconds)
+ [2016-07-06 20:37:09,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,003]   Tick! The time is 0 : 2016-07-06 20:37:09.003521
+ [2016-07-06 20:37:09,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" executed successfully
+ [2016-07-06 20:37:10,001]   Looking for jobs to run
+ [2016-07-06 20:37:10,002]   Next wakeup is due at 2016-07-06 20:37:11+08:00 (in 0.998282 seconds)
+ [2016-07-06 20:37:10,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" (scheduled at 2016-07-06 20:37:10+08:00)
+ [2016-07-06 20:37:10,003]   Tick! The time is 0 : 2016-07-06 20:37:10.003158
+ [2016-07-06 20:37:10,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" executed successfully
+ [2016-07-06 20:37:11,002]   Looking for jobs to run
+ [2016-07-06 20:37:11,002]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 0.997800 seconds)
+ [2016-07-06 20:37:11,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:11+08:00)
+ [2016-07-06 20:37:11,003]   Tick! The time is 0 : 2016-07-06 20:37:11.003027
+ [2016-07-06 20:37:11,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" executed successfully
+ [2016-07-06 20:37:12,001]   Looking for jobs to run
+ [2016-07-06 20:37:12,001]   Next wakeup is due at 2016-07-06 20:37:13+08:00 (in 0.998677 seconds)
+ [2016-07-06 20:37:12,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,002]   Tick! The time is 0 : 2016-07-06 20:37:12.002253
+ [2016-07-06 20:37:12,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" executed successfully
+ [2016-07-06 20:37:13,004]   Looking for jobs to run
+ [2016-07-06 20:37:13,005]   Next wakeup is due at 2016-07-06 20:37:14+08:00 (in 0.995048 seconds)
+ [2016-07-06 20:37:13,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" (scheduled at 2016-07-06 20:37:13+08:00)
+ [2016-07-06 20:37:13,005]   Tick! The time is 0 : 2016-07-06 20:37:13.005496
+ [2016-07-06 20:37:13,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" executed successfully
+ [2016-07-06 20:37:14,000]   Looking for jobs to run
+ [2016-07-06 20:37:14,001]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 0.999185 seconds)
+ [2016-07-06 20:37:14,001]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:14+08:00)
+ [2016-07-06 20:37:14,001]   Tick! The time is 0 : 2016-07-06 20:37:14.001661
+ [2016-07-06 20:37:14,001]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" executed successfully
+ [2016-07-06 20:37:15,005]   Looking for jobs to run
+ [2016-07-06 20:37:15,006]   Next wakeup is due at 2016-07-06 20:37:16+08:00 (in 0.994583 seconds)
+ [2016-07-06 20:37:15,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,006]   Tick! The time is 0 : 2016-07-06 20:37:15.006686
+ [2016-07-06 20:37:15,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" executed successfully
+ [2016-07-06 20:37:16,002]   Looking for jobs to run
+ [2016-07-06 20:37:16,002]   Next wakeup is due at 2016-07-06 20:37:17+08:00 (in 0.997698 seconds)
+ [2016-07-06 20:37:16,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" (scheduled at 2016-07-06 20:37:16+08:00)
+ [2016-07-06 20:37:16,003]   Tick! The time is 0 : 2016-07-06 20:37:16.003156
+ [2016-07-06 20:37:16,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" executed successfully
+ [2016-07-06 20:37:17,004]   Looking for jobs to run
+ [2016-07-06 20:37:17,005]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 0.995484 seconds)
+ [2016-07-06 20:37:17,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:17+08:00)
+ [2016-07-06 20:37:17,005]   Tick! The time is 0 : 2016-07-06 20:37:17.005440
+ [2016-07-06 20:37:17,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" executed successfully
+ [2016-07-06 20:37:18,002]   Looking for jobs to run
+ [2016-07-06 20:37:18,003]   Next wakeup is due at 2016-07-06 20:37:19+08:00 (in 0.997178 seconds)
+ [2016-07-06 20:37:18,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,003]   Tick! The time is 0 : 2016-07-06 20:37:18.003652
+ [2016-07-06 20:37:18,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" executed successfully
+ [2016-07-06 20:37:19,001]   Looking for jobs to run
+ [2016-07-06 20:37:19,002]   Next wakeup is due at 2016-07-06 20:37:20+08:00 (in 0.997928 seconds)
+ [2016-07-06 20:37:19,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" (scheduled at 2016-07-06 20:37:19+08:00)
+ [2016-07-06 20:37:19,002]   Tick! The time is 0 : 2016-07-06 20:37:19.002734
+ [2016-07-06 20:37:19,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" executed successfully
+ [2016-07-06 20:37:20,001]   Looking for jobs to run
+ [2016-07-06 20:37:20,002]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 0.998075 seconds)
+ [2016-07-06 20:37:20,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:20+08:00)
+ [2016-07-06 20:37:20,002]   Tick! The time is 0 : 2016-07-06 20:37:20.002965
+ [2016-07-06 20:37:20,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" executed successfully
+ [2016-07-06 20:37:21,004]   Looking for jobs to run
+ [2016-07-06 20:37:21,005]   Next wakeup is due at 2016-07-06 20:37:22+08:00 (in 0.995288 seconds)
+ [2016-07-06 20:37:21,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,006]   Tick! The time is 0 : 2016-07-06 20:37:21.006109
+ [2016-07-06 20:37:21,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" executed successfully
+ [2016-07-06 20:37:22,002]   Looking for jobs to run
+ [2016-07-06 20:37:22,003]   Next wakeup is due at 2016-07-06 20:37:23+08:00 (in 0.997158 seconds)
+ [2016-07-06 20:37:22,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" (scheduled at 2016-07-06 20:37:22+08:00)
+ [2016-07-06 20:37:22,004]   Tick! The time is 0 : 2016-07-06 20:37:22.004120
+ [2016-07-06 20:37:22,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" executed successfully
+ [2016-07-06 20:37:23,005]   Looking for jobs to run
+ [2016-07-06 20:37:23,006]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 0.993909 seconds)
+ [2016-07-06 20:37:23,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:23+08:00)
+ [2016-07-06 20:37:23,007]   Tick! The time is 0 : 2016-07-06 20:37:23.007328
+ [2016-07-06 20:37:23,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" executed successfully
+tors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
@@ -4610,361 +4595,365 @@ Traceback (most recent call last):
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 NameError: global name 'i' is not defined
-val = job.func(*job.args, **job.kwargs)
+ [2016-07-06 20:37:05,001]   Looking for jobs to run
+ [2016-07-06 20:37:05,002]   Next wakeup is due at 2016-07-06 20:37:06+08:00 (in 0.997988 seconds)
+ [2016-07-06 20:37:05,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" (scheduled at 2016-07-06 20:37:05+08:00)
+ [2016-07-06 20:37:05,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:06,001]   Looking for jobs to run
+ [2016-07-06 20:37:06,001]   Next wakeup is due at 2016-07-06 20:37:07+08:00 (in 0.998653 seconds)
+ [2016-07-06 20:37:06,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" (scheduled at 2016-07-06 20:37:06+08:00)
+ [2016-07-06 20:37:06,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:07,001]   Looking for jobs to run
+ [2016-07-06 20:37:07,002]   Next wakeup is due at 2016-07-06 20:37:08+08:00 (in 0.997984 seconds)
+ [2016-07-06 20:37:07,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" (scheduled at 2016-07-06 20:37:07+08:00)
+ [2016-07-06 20:37:07,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:08,003]   Looking for jobs to run
+ [2016-07-06 20:37:08,004]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 0.996442 seconds)
+ [2016-07-06 20:37:08,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:08+08:00)
+ [2016-07-06 20:37:08,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:09,002]   Looking for jobs to run
+ [2016-07-06 20:37:09,002]   Next wakeup is due at 2016-07-06 20:37:10+08:00 (in 0.997678 seconds)
+ [2016-07-06 20:37:09,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:10,001]   Looking for jobs to run
+ [2016-07-06 20:37:10,002]   Next wakeup is due at 2016-07-06 20:37:11+08:00 (in 0.998333 seconds)
+ [2016-07-06 20:37:10,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" (scheduled at 2016-07-06 20:37:10+08:00)
+ [2016-07-06 20:37:10,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:11,002]   Looking for jobs to run
+ [2016-07-06 20:37:11,002]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 0.997772 seconds)
+ [2016-07-06 20:37:11,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:11+08:00)
+ [2016-07-06 20:37:11,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:12,003]   Looking for jobs to run
+ [2016-07-06 20:37:12,004]   Next wakeup is due at 2016-07-06 20:37:13+08:00 (in 0.996389 seconds)
+ [2016-07-06 20:37:12,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:13,002]   Looking for jobs to run
+ [2016-07-06 20:37:13,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" (scheduled at 2016-07-06 20:37:13+08:00)
+ [2016-07-06 20:37:13,003]   Next wakeup is due at 2016-07-06 20:37:14+08:00 (in 0.997704 seconds)
+ [2016-07-06 20:37:13,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:14,001]   Looking for jobs to run
+ [2016-07-06 20:37:14,001]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 0.998526 seconds)
+ [2016-07-06 20:37:14,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:14+08:00)
+ [2016-07-06 20:37:14,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:15,002]   Looking for jobs to run
+ [2016-07-06 20:37:15,003]   Next wakeup is due at 2016-07-06 20:37:16+08:00 (in 0.996918 seconds)
+ [2016-07-06 20:37:15,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:16,004]   Looking for jobs to run
+ [2016-07-06 20:37:16,005]   Next wakeup is due at 2016-07-06 20:37:17+08:00 (in 0.995476 seconds)
+ [2016-07-06 20:37:16,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" (scheduled at 2016-07-06 20:37:16+08:00)
+ [2016-07-06 20:37:16,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:17,001]   Looking for jobs to run
+ [2016-07-06 20:37:17,002]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 0.997917 seconds)
+ [2016-07-06 20:37:17,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:17+08:00)
+ [2016-07-06 20:37:17,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:18,002]   Looking for jobs to run
+ [2016-07-06 20:37:18,003]   Next wakeup is due at 2016-07-06 20:37:19+08:00 (in 0.997147 seconds)
+ [2016-07-06 20:37:18,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:19,002]   Looking for jobs to run
+ [2016-07-06 20:37:19,003]   Next wakeup is due at 2016-07-06 20:37:20+08:00 (in 0.996909 seconds)
+ [2016-07-06 20:37:19,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" (scheduled at 2016-07-06 20:37:19+08:00)
+ [2016-07-06 20:37:19,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:20,001]   Looking for jobs to run
+ [2016-07-06 20:37:20,002]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 0.998127 seconds)
+ [2016-07-06 20:37:20,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:20+08:00)
+ [2016-07-06 20:37:20,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:21,008]   Looking for jobs to run
+ [2016-07-06 20:37:21,009]   Next wakeup is due at 2016-07-06 20:37:22+08:00 (in 0.991493 seconds)
+ [2016-07-06 20:37:21,009]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,009]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:22,002]   Looking for jobs to run
+ [2016-07-06 20:37:22,003]   Next wakeup is due at 2016-07-06 20:37:23+08:00 (in 0.997375 seconds)
+ [2016-07-06 20:37:22,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" (scheduled at 2016-07-06 20:37:22+08:00)
+ [2016-07-06 20:37:22,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+ [2016-07-06 20:37:23,003]   Looking for jobs to run
+ [2016-07-06 20:37:23,003]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 0.996677 seconds)
+ [2016-07-06 20:37:23,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:23+08:00)
+ [2016-07-06 20:37:23,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+NameError: global name 'i' is not defined
+7-06 20:37:08 CST)" (scheduled at 2016-07-06 20:37:07+08:00)
+ [2016-07-06 20:37:07,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:49,004]   Looking for jobs to run
- [2016-07-06 20:36:49,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:50 CST)" (scheduled at 2016-07-06 20:36:49+08:00)
- [2016-07-06 20:36:49,005]   Next wakeup is due at 2016-07-06 20:36:50+08:00 (in 0.995456 seconds)
- [2016-07-06 20:36:49,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:50 CST)" raised an exception
+ [2016-07-06 20:37:08,006]   Looking for jobs to run
+ [2016-07-06 20:37:08,007]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 0.993035 seconds)
+ [2016-07-06 20:37:08,007]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:08+08:00)
+ [2016-07-06 20:37:08,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:50,001]   Looking for jobs to run
- [2016-07-06 20:36:50,001]   Next wakeup is due at 2016-07-06 20:36:51+08:00 (in 0.998790 seconds)
- [2016-07-06 20:36:50,001]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:51 CST)" (scheduled at 2016-07-06 20:36:50+08:00)
- [2016-07-06 20:36:50,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:51 CST)" raised an exception
+ [2016-07-06 20:37:09,002]   Looking for jobs to run
+ [2016-07-06 20:37:09,002]   Next wakeup is due at 2016-07-06 20:37:10+08:00 (in 0.997677 seconds)
+ [2016-07-06 20:37:09,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:51,003]   Looking for jobs to run
- [2016-07-06 20:36:51,004]   Next wakeup is due at 2016-07-06 20:36:52+08:00 (in 0.995867 seconds)
- [2016-07-06 20:36:51,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:52 CST)" (scheduled at 2016-07-06 20:36:51+08:00)
- [2016-07-06 20:36:51,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:52 CST)" raised an exception
+ [2016-07-06 20:37:10,001]   Looking for jobs to run
+ [2016-07-06 20:37:10,002]   Next wakeup is due at 2016-07-06 20:37:11+08:00 (in 0.998329 seconds)
+ [2016-07-06 20:37:10,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" (scheduled at 2016-07-06 20:37:10+08:00)
+ [2016-07-06 20:37:10,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:52,002]   Looking for jobs to run
- [2016-07-06 20:36:52,003]   Next wakeup is due at 2016-07-06 20:36:53+08:00 (in 0.997048 seconds)
- [2016-07-06 20:36:52,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:53 CST)" (scheduled at 2016-07-06 20:36:52+08:00)
- [2016-07-06 20:36:52,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:53 CST)" raised an exception
+ [2016-07-06 20:37:11,002]   Looking for jobs to run
+ [2016-07-06 20:37:11,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" (scheduled at 2016-07-06 20:37:11+08:00)
+ [2016-07-06 20:37:11,003]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 0.997754 seconds)
+ [2016-07-06 20:37:11,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:53,002]   Looking for jobs to run
- [2016-07-06 20:36:53,003]   Next wakeup is due at 2016-07-06 20:36:54+08:00 (in 0.997349 seconds)
- [2016-07-06 20:36:53,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:54 CST)" (scheduled at 2016-07-06 20:36:53+08:00)
- [2016-07-06 20:36:53,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:54 CST)" raised an exception
+ [2016-07-06 20:37:12,004]   Looking for jobs to run
+ [2016-07-06 20:37:12,005]   Next wakeup is due at 2016-07-06 20:37:13+08:00 (in 0.995411 seconds)
+ [2016-07-06 20:37:12,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:54,002]   Looking for jobs to run
- [2016-07-06 20:36:54,003]   Next wakeup is due at 2016-07-06 20:36:55+08:00 (in 0.997107 seconds)
- [2016-07-06 20:36:54,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:55 CST)" (scheduled at 2016-07-06 20:36:54+08:00)
- [2016-07-06 20:36:54,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:55 CST)" raised an exception
+ [2016-07-06 20:37:13,002]   Looking for jobs to run
+ [2016-07-06 20:37:13,002]   Next wakeup is due at 2016-07-06 20:37:14+08:00 (in 0.997721 seconds)
+ [2016-07-06 20:37:13,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" (scheduled at 2016-07-06 20:37:13+08:00)
+ [2016-07-06 20:37:13,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:55,005]   Looking for jobs to run
- [2016-07-06 20:36:55,005]   Next wakeup is due at 2016-07-06 20:36:56+08:00 (in 0.994430 seconds)
- [2016-07-06 20:36:55,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:56 CST)" (scheduled at 2016-07-06 20:36:55+08:00)
- [2016-07-06 20:36:55,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:56 CST)" raised an exception
+ [2016-07-06 20:37:14,003]   Looking for jobs to run
+ [2016-07-06 20:37:14,004]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 0.996368 seconds)
+ [2016-07-06 20:37:14,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:14+08:00)
+ [2016-07-06 20:37:14,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:56,002]   Looking for jobs to run
- [2016-07-06 20:36:56,003]   Next wakeup is due at 2016-07-06 20:36:57+08:00 (in 0.996870 seconds)
- [2016-07-06 20:36:56,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:57 CST)" (scheduled at 2016-07-06 20:36:56+08:00)
- [2016-07-06 20:36:56,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:57 CST)" raised an exception
+ [2016-07-06 20:37:15,002]   Looking for jobs to run
+ [2016-07-06 20:37:15,003]   Next wakeup is due at 2016-07-06 20:37:16+08:00 (in 0.996917 seconds)
+ [2016-07-06 20:37:15,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:57,004]   Looking for jobs to run
- [2016-07-06 20:36:57,004]   Next wakeup is due at 2016-07-06 20:36:58+08:00 (in 0.995731 seconds)
- [2016-07-06 20:36:57,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:58 CST)" (scheduled at 2016-07-06 20:36:57+08:00)
- [2016-07-06 20:36:57,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:58 CST)" raised an exception
+ [2016-07-06 20:37:16,004]   Looking for jobs to run
+ [2016-07-06 20:37:16,005]   Next wakeup is due at 2016-07-06 20:37:17+08:00 (in 0.995437 seconds)
+ [2016-07-06 20:37:16,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" (scheduled at 2016-07-06 20:37:16+08:00)
+ [2016-07-06 20:37:16,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:58,004]   Looking for jobs to run
- [2016-07-06 20:36:58,005]   Next wakeup is due at 2016-07-06 20:36:59+08:00 (in 0.995380 seconds)
- [2016-07-06 20:36:58,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:59 CST)" (scheduled at 2016-07-06 20:36:58+08:00)
- [2016-07-06 20:36:58,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:59 CST)" raised an exception
+ [2016-07-06 20:37:17,003]   Looking for jobs to run
+ [2016-07-06 20:37:17,004]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 0.996308 seconds)
+ [2016-07-06 20:37:17,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:17+08:00)
+ [2016-07-06 20:37:17,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:36:59,002]   Looking for jobs to run
- [2016-07-06 20:36:59,003]   Next wakeup is due at 2016-07-06 20:37:00+08:00 (in 0.997357 seconds)
- [2016-07-06 20:36:59,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:00 CST)" (scheduled at 2016-07-06 20:36:59+08:00)
- [2016-07-06 20:36:59,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:00 CST)" raised an exception
+ [2016-07-06 20:37:18,004]   Looking for jobs to run
+ [2016-07-06 20:37:18,004]   Next wakeup is due at 2016-07-06 20:37:19+08:00 (in 0.995573 seconds)
+ [2016-07-06 20:37:18,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:37:00,001]   Looking for jobs to run
- [2016-07-06 20:37:00,002]   Next wakeup is due at 2016-07-06 20:37:01+08:00 (in 0.998584 seconds)
- [2016-07-06 20:37:00,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:01 CST)" (scheduled at 2016-07-06 20:37:00+08:00)
- [2016-07-06 20:37:00,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:01 CST)" raised an exception
+ [2016-07-06 20:37:19,004]   Looking for jobs to run
+ [2016-07-06 20:37:19,004]   Next wakeup is due at 2016-07-06 20:37:20+08:00 (in 0.995893 seconds)
+ [2016-07-06 20:37:19,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" (scheduled at 2016-07-06 20:37:19+08:00)
+ [2016-07-06 20:37:19,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:37:01,003]   Looking for jobs to run
- [2016-07-06 20:37:01,004]   Next wakeup is due at 2016-07-06 20:37:02+08:00 (in 0.995964 seconds)
- [2016-07-06 20:37:01,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:02 CST)" (scheduled at 2016-07-06 20:37:01+08:00)
- [2016-07-06 20:37:01,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:02 CST)" raised an exception
+ [2016-07-06 20:37:20,001]   Looking for jobs to run
+ [2016-07-06 20:37:20,002]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 0.998086 seconds)
+ [2016-07-06 20:37:20,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:20+08:00)
+ [2016-07-06 20:37:20,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:37:02,002]   Looking for jobs to run
- [2016-07-06 20:37:02,003]   Next wakeup is due at 2016-07-06 20:37:03+08:00 (in 0.997424 seconds)
- [2016-07-06 20:37:02,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:03 CST)" (scheduled at 2016-07-06 20:37:02+08:00)
- [2016-07-06 20:37:02,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:03 CST)" raised an exception
+ [2016-07-06 20:37:21,007]   Looking for jobs to run
+ [2016-07-06 20:37:21,007]   Next wakeup is due at 2016-07-06 20:37:22+08:00 (in 0.992597 seconds)
+ [2016-07-06 20:37:21,008]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,008]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:37:03,004]   Looking for jobs to run
- [2016-07-06 20:37:03,006]   Next wakeup is due at 2016-07-06 20:37:04+08:00 (in 0.995233 seconds)
- [2016-07-06 20:37:03,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:04 CST)" (scheduled at 2016-07-06 20:37:03+08:00)
- [2016-07-06 20:37:03,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:04 CST)" raised an exception
+ [2016-07-06 20:37:22,002]   Looking for jobs to run
+ [2016-07-06 20:37:22,003]   Next wakeup is due at 2016-07-06 20:37:23+08:00 (in 0.997346 seconds)
+ [2016-07-06 20:37:22,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" (scheduled at 2016-07-06 20:37:22+08:00)
+ [2016-07-06 20:37:22,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
- [2016-07-06 20:37:04,005]   Looking for jobs to run
- [2016-07-06 20:37:04,006]   Next wakeup is due at 2016-07-06 20:37:05+08:00 (in 0.994299 seconds)
- [2016-07-06 20:37:04,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" (scheduled at 2016-07-06 20:37:04+08:00)
- [2016-07-06 20:37:04,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" raised an exception
+ [2016-07-06 20:37:23,005]   Looking for jobs to run
+ [2016-07-06 20:37:23,006]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 0.993889 seconds)
+ [2016-07-06 20:37:23,007]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:23+08:00)
+ [2016-07-06 20:37:23,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 47, in tick
     # 开启定时任务
 NameError: global name 'i' is not defined
-5:39 CST)" (scheduled at 2016-07-06 20:35:38+08:00)
- [2016-07-06 20:35:38,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:39 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:39,003]   Looking for jobs to run
- [2016-07-06 20:35:39,004]   Next wakeup is due at 2016-07-06 20:35:40+08:00 (in 0.996068 seconds)
- [2016-07-06 20:35:39,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:40 CST)" (scheduled at 2016-07-06 20:35:39+08:00)
- [2016-07-06 20:35:39,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:40 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:40,002]   Looking for jobs to run
- [2016-07-06 20:35:40,003]   Next wakeup is due at 2016-07-06 20:35:41+08:00 (in 0.997268 seconds)
- [2016-07-06 20:35:40,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:41 CST)" (scheduled at 2016-07-06 20:35:40+08:00)
- [2016-07-06 20:35:40,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:41 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:41,004]   Looking for jobs to run
- [2016-07-06 20:35:41,004]   Next wakeup is due at 2016-07-06 20:35:42+08:00 (in 0.995514 seconds)
- [2016-07-06 20:35:41,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:42 CST)" (scheduled at 2016-07-06 20:35:41+08:00)
- [2016-07-06 20:35:41,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:42 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:42,001]   Looking for jobs to run
- [2016-07-06 20:35:42,002]   Next wakeup is due at 2016-07-06 20:35:43+08:00 (in 0.998235 seconds)
- [2016-07-06 20:35:42,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:43 CST)" (scheduled at 2016-07-06 20:35:42+08:00)
- [2016-07-06 20:35:42,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:43 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:43,003]   Looking for jobs to run
- [2016-07-06 20:35:43,003]   Next wakeup is due at 2016-07-06 20:35:44+08:00 (in 0.996711 seconds)
- [2016-07-06 20:35:43,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:44 CST)" (scheduled at 2016-07-06 20:35:43+08:00)
- [2016-07-06 20:35:43,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:44 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:44,003]   Looking for jobs to run
- [2016-07-06 20:35:44,004]   Next wakeup is due at 2016-07-06 20:35:45+08:00 (in 0.996666 seconds)
- [2016-07-06 20:35:44,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:45 CST)" (scheduled at 2016-07-06 20:35:44+08:00)
- [2016-07-06 20:35:44,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:45 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:45,002]   Looking for jobs to run
- [2016-07-06 20:35:45,003]   Next wakeup is due at 2016-07-06 20:35:46+08:00 (in 0.996980 seconds)
- [2016-07-06 20:35:45,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:46 CST)" (scheduled at 2016-07-06 20:35:45+08:00)
- [2016-07-06 20:35:45,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:46 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:46,004]   Looking for jobs to run
- [2016-07-06 20:35:46,004]   Next wakeup is due at 2016-07-06 20:35:47+08:00 (in 0.995544 seconds)
- [2016-07-06 20:35:46,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:47 CST)" (scheduled at 2016-07-06 20:35:46+08:00)
- [2016-07-06 20:35:46,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:47 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:47,004]   Looking for jobs to run
- [2016-07-06 20:35:47,004]   Next wakeup is due at 2016-07-06 20:35:48+08:00 (in 0.995655 seconds)
- [2016-07-06 20:35:47,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:48 CST)" (scheduled at 2016-07-06 20:35:47+08:00)
- [2016-07-06 20:35:47,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:48 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:48,001]   Looking for jobs to run
- [2016-07-06 20:35:48,002]   Next wakeup is due at 2016-07-06 20:35:49+08:00 (in 0.997802 seconds)
- [2016-07-06 20:35:48,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:49 CST)" (scheduled at 2016-07-06 20:35:48+08:00)
- [2016-07-06 20:35:48,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:49 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:49,003]   Looking for jobs to run
- [2016-07-06 20:35:49,004]   Next wakeup is due at 2016-07-06 20:35:50+08:00 (in 0.996323 seconds)
- [2016-07-06 20:35:49,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:50 CST)" (scheduled at 2016-07-06 20:35:49+08:00)
- [2016-07-06 20:35:49,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:50 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:50,001]   Looking for jobs to run
- [2016-07-06 20:35:50,002]   Next wakeup is due at 2016-07-06 20:35:51+08:00 (in 0.998201 seconds)
- [2016-07-06 20:35:50,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:51 CST)" (scheduled at 2016-07-06 20:35:50+08:00)
- [2016-07-06 20:35:50,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:51 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:51,001]   Looking for jobs to run
- [2016-07-06 20:35:51,002]   Next wakeup is due at 2016-07-06 20:35:52+08:00 (in 0.998275 seconds)
- [2016-07-06 20:35:51,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:52 CST)" (scheduled at 2016-07-06 20:35:51+08:00)
- [2016-07-06 20:35:51,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:52 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:52,005]   Looking for jobs to run
- [2016-07-06 20:35:52,005]   Next wakeup is due at 2016-07-06 20:35:53+08:00 (in 0.994620 seconds)
- [2016-07-06 20:35:52,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:53 CST)" (scheduled at 2016-07-06 20:35:52+08:00)
- [2016-07-06 20:35:52,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:53 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:53,005]   Looking for jobs to run
- [2016-07-06 20:35:53,006]   Next wakeup is due at 2016-07-06 20:35:54+08:00 (in 0.994224 seconds)
- [2016-07-06 20:35:53,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:54 CST)" (scheduled at 2016-07-06 20:35:53+08:00)
- [2016-07-06 20:35:53,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:54 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:54,002]   Looking for jobs to run
- [2016-07-06 20:35:54,003]   Next wakeup is due at 2016-07-06 20:35:55+08:00 (in 0.997300 seconds)
- [2016-07-06 20:35:54,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:55 CST)" (scheduled at 2016-07-06 20:35:54+08:00)
- [2016-07-06 20:35:54,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:55 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:55,002]   Looking for jobs to run
- [2016-07-06 20:35:55,002]   Next wakeup is due at 2016-07-06 20:35:56+08:00 (in 0.997524 seconds)
- [2016-07-06 20:35:55,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:56 CST)" (scheduled at 2016-07-06 20:35:55+08:00)
- [2016-07-06 20:35:55,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:56 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:56,003]   Looking for jobs to run
- [2016-07-06 20:35:56,004]   Next wakeup is due at 2016-07-06 20:35:57+08:00 (in 0.996475 seconds)
- [2016-07-06 20:35:56,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:57 CST)" (scheduled at 2016-07-06 20:35:56+08:00)
- [2016-07-06 20:35:56,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:57 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:35:57,004]   Looking for jobs to run
- [2016-07-06 20:35:57,004]   Next wakeup is due at 2016-07-06 20:35:58+08:00 (in 0.995611 seconds)
- [2016-07-06 20:35:57,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:58 CST)" (scheduled at 2016-07-06 20:35:57+08:00)
+7,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:58 CST)" (scheduled at 2016-07-06 20:35:57+08:00)
  [2016-07-06 20:35:57,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:35:58 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
@@ -5642,197 +5631,197 @@ Traceback (most recent call last):
   File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:05,002]   Looking for jobs to run
+ [2016-07-06 20:37:05,003]   Next wakeup is due at 2016-07-06 20:37:06+08:00 (in 0.997458 seconds)
+ [2016-07-06 20:37:05,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" (scheduled at 2016-07-06 20:37:05+08:00)
+ [2016-07-06 20:37:05,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:06,001]   Looking for jobs to run
+ [2016-07-06 20:37:06,002]   Next wakeup is due at 2016-07-06 20:37:07+08:00 (in 0.998038 seconds)
+ [2016-07-06 20:37:06,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" (scheduled at 2016-07-06 20:37:06+08:00)
+ [2016-07-06 20:37:06,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:07,001]   Looking for jobs to run
+ [2016-07-06 20:37:07,002]   Next wakeup is due at 2016-07-06 20:37:08+08:00 (in 0.997935 seconds)
+ [2016-07-06 20:37:07,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" (scheduled at 2016-07-06 20:37:07+08:00)
+ [2016-07-06 20:37:07,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:08,005]   Looking for jobs to run
+ [2016-07-06 20:37:08,005]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 0.994786 seconds)
+ [2016-07-06 20:37:08,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:08+08:00)
+ [2016-07-06 20:37:08,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:09,002]   Looking for jobs to run
+ [2016-07-06 20:37:09,003]   Next wakeup is due at 2016-07-06 20:37:10+08:00 (in 0.997221 seconds)
+ [2016-07-06 20:37:09,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:10,001]   Looking for jobs to run
+ [2016-07-06 20:37:10,002]   Next wakeup is due at 2016-07-06 20:37:11+08:00 (in 0.998360 seconds)
+ [2016-07-06 20:37:10,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" (scheduled at 2016-07-06 20:37:10+08:00)
+ [2016-07-06 20:37:10,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:11,002]   Looking for jobs to run
+ [2016-07-06 20:37:11,002]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 0.997822 seconds)
+ [2016-07-06 20:37:11,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:11+08:00)
+ [2016-07-06 20:37:11,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:12,003]   Looking for jobs to run
+ [2016-07-06 20:37:12,004]   Next wakeup is due at 2016-07-06 20:37:13+08:00 (in 0.996337 seconds)
+ [2016-07-06 20:37:12,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:13,002]   Looking for jobs to run
+ [2016-07-06 20:37:13,002]   Next wakeup is due at 2016-07-06 20:37:14+08:00 (in 0.997850 seconds)
+ [2016-07-06 20:37:13,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" (scheduled at 2016-07-06 20:37:13+08:00)
+ [2016-07-06 20:37:13,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:14,001]   Looking for jobs to run
+ [2016-07-06 20:37:14,001]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 0.998777 seconds)
+ [2016-07-06 20:37:14,001]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:14+08:00)
+ [2016-07-06 20:37:14,001]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:15,005]   Looking for jobs to run
+ [2016-07-06 20:37:15,005]   Next wakeup is due at 2016-07-06 20:37:16+08:00 (in 0.994627 seconds)
+ [2016-07-06 20:37:15,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:16,004]   Looking for jobs to run
+ [2016-07-06 20:37:16,005]   Next wakeup is due at 2016-07-06 20:37:17+08:00 (in 0.995437 seconds)
+ [2016-07-06 20:37:16,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" (scheduled at 2016-07-06 20:37:16+08:00)
+ [2016-07-06 20:37:16,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:17,003]   Looking for jobs to run
+ [2016-07-06 20:37:17,004]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 0.996298 seconds)
+ [2016-07-06 20:37:17,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:17+08:00)
+ [2016-07-06 20:37:17,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:18,004]   Looking for jobs to run
+ [2016-07-06 20:37:18,005]   Next wakeup is due at 2016-07-06 20:37:19+08:00 (in 0.995327 seconds)
+ [2016-07-06 20:37:18,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:19,002]   Looking for jobs to run
+ [2016-07-06 20:37:19,003]   Next wakeup is due at 2016-07-06 20:37:20+08:00 (in 0.996971 seconds)
+ [2016-07-06 20:37:19,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" (scheduled at 2016-07-06 20:37:19+08:00)
+ [2016-07-06 20:37:19,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:20,001]   Looking for jobs to run
+ [2016-07-06 20:37:20,002]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 0.998082 seconds)
+ [2016-07-06 20:37:20,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:20+08:00)
+ [2016-07-06 20:37:20,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:21,005]   Looking for jobs to run
+ [2016-07-06 20:37:21,005]   Next wakeup is due at 2016-07-06 20:37:22+08:00 (in 0.994471 seconds)
+ [2016-07-06 20:37:21,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:22,002]   Looking for jobs to run
+ [2016-07-06 20:37:22,003]   Next wakeup is due at 2016-07-06 20:37:23+08:00 (in 0.997349 seconds)
+ [2016-07-06 20:37:22,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" (scheduled at 2016-07-06 20:37:22+08:00)
+ [2016-07-06 20:37:22,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:23,003]   Looking for jobs to run
+ [2016-07-06 20:37:23,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:23+08:00)
+ [2016-07-06 20:37:23,004]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 0.996698 seconds)
+ [2016-07-06 20:37:23,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
 /Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:36,004]   Looking for jobs to run
- [2016-07-06 20:36:36,006]   Next wakeup is due at 2016-07-06 20:36:37+08:00 (in 0.994036 seconds)
- [2016-07-06 20:36:36,007]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:37 CST)" (scheduled at 2016-07-06 20:36:36+08:00)
- [2016-07-06 20:36:36,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:37 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:37,001]   Looking for jobs to run
- [2016-07-06 20:36:37,002]   Next wakeup is due at 2016-07-06 20:36:38+08:00 (in 0.998447 seconds)
- [2016-07-06 20:36:37,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:38 CST)" (scheduled at 2016-07-06 20:36:37+08:00)
- [2016-07-06 20:36:37,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:38 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:38,004]   Looking for jobs to run
- [2016-07-06 20:36:38,004]   Next wakeup is due at 2016-07-06 20:36:39+08:00 (in 0.995628 seconds)
- [2016-07-06 20:36:38,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:39 CST)" (scheduled at 2016-07-06 20:36:38+08:00)
- [2016-07-06 20:36:38,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:39 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:39,005]   Looking for jobs to run
- [2016-07-06 20:36:39,006]   Next wakeup is due at 2016-07-06 20:36:40+08:00 (in 0.994154 seconds)
- [2016-07-06 20:36:39,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:40 CST)" (scheduled at 2016-07-06 20:36:39+08:00)
- [2016-07-06 20:36:39,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:40 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:40,003]   Looking for jobs to run
- [2016-07-06 20:36:40,003]   Next wakeup is due at 2016-07-06 20:36:41+08:00 (in 0.996590 seconds)
- [2016-07-06 20:36:40,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:41 CST)" (scheduled at 2016-07-06 20:36:40+08:00)
- [2016-07-06 20:36:40,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:41 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:41,002]   Looking for jobs to run
- [2016-07-06 20:36:41,002]   Next wakeup is due at 2016-07-06 20:36:42+08:00 (in 0.997519 seconds)
- [2016-07-06 20:36:41,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:42 CST)" (scheduled at 2016-07-06 20:36:41+08:00)
- [2016-07-06 20:36:41,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:42 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:42,003]   Looking for jobs to run
- [2016-07-06 20:36:42,004]   Next wakeup is due at 2016-07-06 20:36:43+08:00 (in 0.996396 seconds)
- [2016-07-06 20:36:42,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:43 CST)" (scheduled at 2016-07-06 20:36:42+08:00)
- [2016-07-06 20:36:42,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:43 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:43,004]   Looking for jobs to run
- [2016-07-06 20:36:43,005]   Next wakeup is due at 2016-07-06 20:36:44+08:00 (in 0.995055 seconds)
- [2016-07-06 20:36:43,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:44 CST)" (scheduled at 2016-07-06 20:36:43+08:00)
- [2016-07-06 20:36:43,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:44 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:44,004]   Looking for jobs to run
- [2016-07-06 20:36:44,004]   Next wakeup is due at 2016-07-06 20:36:45+08:00 (in 0.995491 seconds)
- [2016-07-06 20:36:44,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:45 CST)" (scheduled at 2016-07-06 20:36:44+08:00)
- [2016-07-06 20:36:44,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:45 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:45,005]   Looking for jobs to run
- [2016-07-06 20:36:45,006]   Next wakeup is due at 2016-07-06 20:36:46+08:00 (in 0.994231 seconds)
- [2016-07-06 20:36:45,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:46 CST)" (scheduled at 2016-07-06 20:36:45+08:00)
- [2016-07-06 20:36:45,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:46 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:46,005]   Looking for jobs to run
- [2016-07-06 20:36:46,006]   Next wakeup is due at 2016-07-06 20:36:47+08:00 (in 0.994422 seconds)
- [2016-07-06 20:36:46,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:47 CST)" (scheduled at 2016-07-06 20:36:46+08:00)
- [2016-07-06 20:36:46,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:47 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:47,001]   Looking for jobs to run
- [2016-07-06 20:36:47,002]   Next wakeup is due at 2016-07-06 20:36:48+08:00 (in 0.998265 seconds)
- [2016-07-06 20:36:47,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:48 CST)" (scheduled at 2016-07-06 20:36:47+08:00)
- [2016-07-06 20:36:47,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:48 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:48,004]   Looking for jobs to run
- [2016-07-06 20:36:48,004]   Next wakeup is due at 2016-07-06 20:36:49+08:00 (in 0.995814 seconds)
- [2016-07-06 20:36:48,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:49 CST)" (scheduled at 2016-07-06 20:36:48+08:00)
- [2016-07-06 20:36:48,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:49 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:49,001]   Looking for jobs to run
- [2016-07-06 20:36:49,001]   Next wakeup is due at 2016-07-06 20:36:50+08:00 (in 0.998455 seconds)
- [2016-07-06 20:36:49,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:50 CST)" (scheduled at 2016-07-06 20:36:49+08:00)
- [2016-07-06 20:36:49,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:50 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:50,001]   Looking for jobs to run
- [2016-07-06 20:36:50,001]   Next wakeup is due at 2016-07-06 20:36:51+08:00 (in 0.998791 seconds)
- [2016-07-06 20:36:50,001]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:51 CST)" (scheduled at 2016-07-06 20:36:50+08:00)
- [2016-07-06 20:36:50,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:51 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:51,005]   Looking for jobs to run
- [2016-07-06 20:36:51,006]   Next wakeup is due at 2016-07-06 20:36:52+08:00 (in 0.994209 seconds)
- [2016-07-06 20:36:51,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:52 CST)" (scheduled at 2016-07-06 20:36:51+08:00)
- [2016-07-06 20:36:51,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:52 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:52,005]   Looking for jobs to run
- [2016-07-06 20:36:52,005]   Next wakeup is due at 2016-07-06 20:36:53+08:00 (in 0.994779 seconds)
- [2016-07-06 20:36:52,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:53 CST)" (scheduled at 2016-07-06 20:36:52+08:00)
- [2016-07-06 20:36:52,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:53 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:53,002]   Looking for jobs to run
- [2016-07-06 20:36:53,003]   Next wakeup is due at 2016-07-06 20:36:54+08:00 (in 0.997442 seconds)
- [2016-07-06 20:36:53,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:54 CST)" (scheduled at 2016-07-06 20:36:53+08:00)
- [2016-07-06 20:36:53,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:54 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
-    
-UnboundLocalError: local variable 'i' referenced before assignment
- [2016-07-06 20:36:54,002]   Looking for jobs to run
- [2016-07-06 20:36:54,003]   Next wakeup is due at 2016-07-06 20:36:55+08:00 (in 0.997473 seconds)
- [2016-07-06 20:36:54,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:55 CST)" (scheduled at 2016-07-06 20:36:54+08:00)
- [2016-07-06 20:36:54,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:36:55 CST)" raised an exception
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
-    retval = job.func(*job.args, **job.kwargs)
-  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
     
 UnboundLocalError: local variable 'i' referenced before assignment
  [2016-07-06 20:36:55,005]   Looking for jobs to run
@@ -5929,6 +5918,196 @@ UnboundLocalError: local variable 'i' referenced before assignment
  [2016-07-06 20:37:04,001]   Next wakeup is due at 2016-07-06 20:37:05+08:00 (in 0.998689 seconds)
  [2016-07-06 20:37:04,001]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" (scheduled at 2016-07-06 20:37:04+08:00)
  [2016-07-06 20:37:04,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:05 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:05,004]   Looking for jobs to run
+ [2016-07-06 20:37:05,004]   Next wakeup is due at 2016-07-06 20:37:06+08:00 (in 0.995766 seconds)
+ [2016-07-06 20:37:05,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" (scheduled at 2016-07-06 20:37:05+08:00)
+ [2016-07-06 20:37:05,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:06 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:06,000]   Looking for jobs to run
+ [2016-07-06 20:37:06,001]   Next wakeup is due at 2016-07-06 20:37:07+08:00 (in 0.999137 seconds)
+ [2016-07-06 20:37:06,001]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" (scheduled at 2016-07-06 20:37:06+08:00)
+ [2016-07-06 20:37:06,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:07 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:07,003]   Looking for jobs to run
+ [2016-07-06 20:37:07,003]   Next wakeup is due at 2016-07-06 20:37:08+08:00 (in 0.996771 seconds)
+ [2016-07-06 20:37:07,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" (scheduled at 2016-07-06 20:37:07+08:00)
+ [2016-07-06 20:37:07,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:08 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:08,005]   Looking for jobs to run
+ [2016-07-06 20:37:08,005]   Next wakeup is due at 2016-07-06 20:37:09+08:00 (in 0.994459 seconds)
+ [2016-07-06 20:37:08,006]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" (scheduled at 2016-07-06 20:37:08+08:00)
+ [2016-07-06 20:37:08,006]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:09 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:09,002]   Looking for jobs to run
+ [2016-07-06 20:37:09,002]   Next wakeup is due at 2016-07-06 20:37:10+08:00 (in 0.997693 seconds)
+ [2016-07-06 20:37:09,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" (scheduled at 2016-07-06 20:37:09+08:00)
+ [2016-07-06 20:37:09,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:10 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:10,001]   Looking for jobs to run
+ [2016-07-06 20:37:10,002]   Next wakeup is due at 2016-07-06 20:37:11+08:00 (in 0.998345 seconds)
+ [2016-07-06 20:37:10,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" (scheduled at 2016-07-06 20:37:10+08:00)
+ [2016-07-06 20:37:10,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:11 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:11,002]   Looking for jobs to run
+ [2016-07-06 20:37:11,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" (scheduled at 2016-07-06 20:37:11+08:00)
+ [2016-07-06 20:37:11,002]   Next wakeup is due at 2016-07-06 20:37:12+08:00 (in 0.997800 seconds)
+ [2016-07-06 20:37:11,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:12 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:12,003]   Looking for jobs to run
+ [2016-07-06 20:37:12,004]   Next wakeup is due at 2016-07-06 20:37:13+08:00 (in 0.996404 seconds)
+ [2016-07-06 20:37:12,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" (scheduled at 2016-07-06 20:37:12+08:00)
+ [2016-07-06 20:37:12,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:13 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:13,002]   Looking for jobs to run
+ [2016-07-06 20:37:13,002]   Next wakeup is due at 2016-07-06 20:37:14+08:00 (in 0.997688 seconds)
+ [2016-07-06 20:37:13,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" (scheduled at 2016-07-06 20:37:13+08:00)
+ [2016-07-06 20:37:13,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:14 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:14,003]   Looking for jobs to run
+ [2016-07-06 20:37:14,004]   Next wakeup is due at 2016-07-06 20:37:15+08:00 (in 0.996343 seconds)
+ [2016-07-06 20:37:14,004]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" (scheduled at 2016-07-06 20:37:14+08:00)
+ [2016-07-06 20:37:14,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:15 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:15,002]   Looking for jobs to run
+ [2016-07-06 20:37:15,003]   Next wakeup is due at 2016-07-06 20:37:16+08:00 (in 0.996866 seconds)
+ [2016-07-06 20:37:15,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" (scheduled at 2016-07-06 20:37:15+08:00)
+ [2016-07-06 20:37:15,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:16 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:16,004]   Looking for jobs to run
+ [2016-07-06 20:37:16,005]   Next wakeup is due at 2016-07-06 20:37:17+08:00 (in 0.995463 seconds)
+ [2016-07-06 20:37:16,005]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" (scheduled at 2016-07-06 20:37:16+08:00)
+ [2016-07-06 20:37:16,005]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:17 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:17,001]   Looking for jobs to run
+ [2016-07-06 20:37:17,002]   Next wakeup is due at 2016-07-06 20:37:18+08:00 (in 0.997955 seconds)
+ [2016-07-06 20:37:17,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" (scheduled at 2016-07-06 20:37:17+08:00)
+ [2016-07-06 20:37:17,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:18 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:18,002]   Looking for jobs to run
+ [2016-07-06 20:37:18,003]   Next wakeup is due at 2016-07-06 20:37:19+08:00 (in 0.997241 seconds)
+ [2016-07-06 20:37:18,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" (scheduled at 2016-07-06 20:37:18+08:00)
+ [2016-07-06 20:37:18,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:19 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:19,001]   Looking for jobs to run
+ [2016-07-06 20:37:19,002]   Next wakeup is due at 2016-07-06 20:37:20+08:00 (in 0.997931 seconds)
+ [2016-07-06 20:37:19,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" (scheduled at 2016-07-06 20:37:19+08:00)
+ [2016-07-06 20:37:19,002]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:20 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:20,001]   Looking for jobs to run
+ [2016-07-06 20:37:20,002]   Next wakeup is due at 2016-07-06 20:37:21+08:00 (in 0.998082 seconds)
+ [2016-07-06 20:37:20,002]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" (scheduled at 2016-07-06 20:37:20+08:00)
+ [2016-07-06 20:37:20,003]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:21 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:21,008]   Looking for jobs to run
+ [2016-07-06 20:37:21,009]   Next wakeup is due at 2016-07-06 20:37:22+08:00 (in 0.991304 seconds)
+ [2016-07-06 20:37:21,009]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" (scheduled at 2016-07-06 20:37:21+08:00)
+ [2016-07-06 20:37:21,009]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:22 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:22,002]   Looking for jobs to run
+ [2016-07-06 20:37:22,003]   Next wakeup is due at 2016-07-06 20:37:23+08:00 (in 0.997326 seconds)
+ [2016-07-06 20:37:22,003]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" (scheduled at 2016-07-06 20:37:22+08:00)
+ [2016-07-06 20:37:22,004]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:23 CST)" raised an exception
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/Users/Fengtf/github/iOS_Some/python/hashlib/APScheduler.py", line 45, in tick
+    
+UnboundLocalError: local variable 'i' referenced before assignment
+ [2016-07-06 20:37:23,005]   Looking for jobs to run
+ [2016-07-06 20:37:23,006]   Next wakeup is due at 2016-07-06 20:37:24+08:00 (in 0.993895 seconds)
+ [2016-07-06 20:37:23,007]   Running job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" (scheduled at 2016-07-06 20:37:23+08:00)
+ [2016-07-06 20:37:23,007]   Job "tick (trigger: cron[hour='*', second='*/1'], next run at: 2016-07-06 20:37:24 CST)" raised an exception
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/apscheduler/executors/base.py", line 125, in run_job
     retval = job.func(*job.args, **job.kwargs)
