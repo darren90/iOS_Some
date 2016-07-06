@@ -48,13 +48,21 @@ from datetime import datetime
 import time
 import os
 
-def tick():
-	print('Tick! The time is: %s' % datetime.now())
+class spider(object):
+	def tick(self):
+		print('Tick2! The time is: %s' % datetime.now())
+
+def runapp():
+	print('Tick1! The time is: %s' % datetime.now()) 
+
+	mySpider = spider()
+	mySpider.tick()
 
 
 if __name__ == '__main__':
+	 
 	scheduler = BlockingScheduler()
-	scheduler.add_job(tick,'cron', second='*/3', hour='*') 
+	scheduler.add_job(runapp,'cron', second='*/3', hour='*') 
 	print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 	try:
 		scheduler.start()

@@ -1,7 +1,7 @@
 #-*- coding: UTF-8 -*-   
 
 import hashlib
-
+import md5
 md5 = hashlib.md5()
 md5.update('how to use md5 in python hashlib?')
 print md5.hexdigest()
@@ -18,9 +18,11 @@ print '-------------------'
 
 # import hashlib
 
+## 所以使用hashlib一定要每次初始化，不然计算的值不对
 m = hashlib.md5()
 m.update('a')
 print m.hexdigest()    # 0cc175b9c0f1b6a831c399e269772661
+m = hashlib.md5()
 m.update('a')
 print m.hexdigest()    # 4124bc0a9335c27f086f24ba207a4912
 
@@ -37,6 +39,10 @@ print m.hexdigest()    # 4124bc0a9335c27f086f24ba207a4912
 # 但是 如果爬过也要用md5其内容，来判断内容是否已经更新了。
 # 所以数据库中要能存 爬取的url和内容的md5字段 is_crawled:是否已经爬取
 
+print '-----2--'
+ 
+
+print hashlib.md5("aa").hexdigest()    # 4124bc0a9335c27f086f24ba207a4912
 
 
 #redis缓存数据库
