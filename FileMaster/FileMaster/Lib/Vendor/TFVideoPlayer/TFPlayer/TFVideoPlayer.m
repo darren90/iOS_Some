@@ -289,17 +289,17 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 -(void)changeTrackTapped
 {
     UIAlertView *alertView = [UIAlertView
-                              showWithTitle:@"Audio Trackers Picker"
-                              message:nil
-                              cancelButtonTitle:@"Cancel"
-                              otherButtonTitles:self.trackArray
-                              tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
-                                  NSInteger firstOBIndex = [alertView firstOtherButtonIndex];
-                                  NSInteger lastOBIndex = firstOBIndex + [self.trackArray count];
-                                  if (buttonIndex >= firstOBIndex && buttonIndex < lastOBIndex) {
-                                      [self.mMPayer setAudioTrackWithArrayIndex:(int)(buttonIndex - firstOBIndex)];
-                                  }
-                              }];
+                          showWithTitle:@"Audio Trackers Picker"
+                          message:nil
+                          cancelButtonTitle:@"Cancel"
+                          otherButtonTitles:self.trackArray
+                          tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+                              NSInteger firstOBIndex = [alertView firstOtherButtonIndex];
+                              NSInteger lastOBIndex = firstOBIndex + [self.trackArray count];
+                              if (buttonIndex >= firstOBIndex && buttonIndex < lastOBIndex) {
+                                  [self.mMPayer setAudioTrackWithArrayIndex:(int)(buttonIndex - firstOBIndex)];
+                              }
+                          }];
     [alertView show];
 }
 

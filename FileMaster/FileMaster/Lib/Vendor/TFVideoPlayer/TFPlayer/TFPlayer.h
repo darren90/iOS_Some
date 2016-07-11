@@ -15,6 +15,4 @@
 #import "TFVideoPlayerView.h"
 #import "TFVideoPlayer.h"
 
-
-
 #endif /* RRPlayer_h */
