@@ -215,8 +215,8 @@
 #pragma mark - 搜索按钮被点击
 - (IBAction)searchClick:(UIBarButtonItem *)sender {
     //1:隐藏navBar
-    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
-    
+//    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
+
     if (!_mySearchBar) {
         _mySearchBar = ({
             UISearchBar *searchBar = [[UISearchBar alloc] init];
