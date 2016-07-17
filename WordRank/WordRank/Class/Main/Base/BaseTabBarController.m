@@ -6,14 +6,16 @@
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
+
+
 #import "BaseTabBarController.h"
 #import "RDVTabBarItem.h"
 #import "BaseNavigationController.h"
 
-#import "AllFiles_RootController.h"
-#import "MovieList_RootController.h"
-#import "PrivateList_RootController.h"
-#import "Setting_RootController.h"
+//#import "AllFiles_RootController.h"
+//#import "MovieList_RootController.h"
+//#import "PrivateList_RootController.h"
+//#import "Setting_RootController.h"
 
 @interface BaseTabBarController ()
 
@@ -21,7 +23,7 @@
 
 @implementation BaseTabBarController
 
-
+#if 0
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -131,5 +133,8 @@
     return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
 }
 
+#endif
 
 @end
+
+
