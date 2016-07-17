@@ -55,7 +55,13 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    RankSort *model = self.dataArray[indexPath.row];
+    
+    RankDetailController *detailVc = [[RankDetailController alloc]init];
+    detailVc.year = model.rank_year;
+    [self.navigationController pushViewController:detailVc animated:YES];
 }
 
 
@@ -64,7 +70,7 @@
 {
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
-        [_dataArray addObjectsFromArray:[DBTools get_rank_word_year:@"2014"]];
+        [_dataArray addObjectsFromArray:[DBTools get_rank_sorts]];
     }
     return _dataArray;
 }

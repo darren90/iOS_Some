@@ -9,6 +9,12 @@
 #import "RankCell.h"
 #import "RankSort.h"
 
+@interface RankCell ()
+@property (weak, nonatomic) IBOutlet UILabel *yearLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 @implementation RankCell
 
 +(instancetype)cellWithTableView:(UITableView *)tableView
@@ -28,7 +34,9 @@
 
 -(void)setModel:(RankSort *)model
 {
+    _model = model;
     
+    self.yearLabel.text = model.rank_year;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

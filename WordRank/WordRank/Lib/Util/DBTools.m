@@ -9,7 +9,7 @@
 #import "DBTools.h"
 #import "FMDB.h"
 #import "Rank_Word.h"
-#import <MJExtension.h>
+#import "RankSort.h"
 
 @implementation DBTools
 
@@ -54,6 +54,23 @@ static FMDatabaseQueue *_queue;
     }
 }
 
++(NSArray *)get_rank_sorts
+{
+    __block NSMutableArray *array = [NSMutableArray array];
+    
+    [_queue inDatabase:^(FMDatabase *db) {
+        FMResultSet *rs = [db executeQuery:@"select distinct rank_year rank_year from rank_word "];
+        while (rs.next) {
+            //            rank_year , rank , last_rank , co_name,co_detailurl , income , profit , nation
+            NSString *rank_year = [rs stringForColumn:@"rank_year"];
+ 
+            RankSort *rs = [[RankSort alloc]init];
+            rs.rank_year = rank_year;
+            [array addObject:rs];
+        }
+    }];
+    return array;
+}
 
 
 +(NSArray *)get_rank_word_year:(NSString *)rank_year

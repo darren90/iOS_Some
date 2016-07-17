@@ -11,7 +11,7 @@
 @interface RankSort : NSObject
 
 
-@property (nonatomic,copy)NSString * year;
+@property (nonatomic,copy)NSString * rank_year;
 
 
 @property (nonatomic,copy)NSString * sortName;
