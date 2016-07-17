@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B4EB27F7B732C2ACD258C6C1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74176077A8EE4C383C4A4878 /* libPods.a */; };
 		FE037C281D3B51A700FCD6C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037C271D3B51A700FCD6C4 /* main.m */; };
 		FE037C2B1D3B51A700FCD6C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037C2A1D3B51A700FCD6C4 /* AppDelegate.m */; };
 		FE037C2E1D3B51A700FCD6C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037C2D1D3B51A700FCD6C4 /* ViewController.m */; };
@@ -55,6 +56,16 @@
 		FE037D621D3B52E300FCD6C4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE037D611D3B52E300FCD6C4 /* libsqlite3.tbd */; };
 		FE037D651D3B53E700FCD6C4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE037D641D3B53E700FCD6C4 /* CoreTelephony.framework */; };
 		FE037D671D3B53EF00FCD6C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE037D661D3B53EF00FCD6C4 /* libz.tbd */; };
+		FE037D6E1D3B5B5100FCD6C4 /* Rank_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D6D1D3B5B5100FCD6C4 /* Rank_RootController.m */; };
+		FE037D711D3B5B7200FCD6C4 /* Home_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D701D3B5B7200FCD6C4 /* Home_RootController.m */; };
+		FE037D741D3B5B7C00FCD6C4 /* Setting_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D731D3B5B7C00FCD6C4 /* Setting_RootController.m */; };
+		FE037D771D3B5D3E00FCD6C4 /* RankDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D761D3B5D3E00FCD6C4 /* RankDetailController.m */; };
+		FE037D7A1D3B7BE400FCD6C4 /* Rank_Word.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D791D3B7BE400FCD6C4 /* Rank_Word.m */; };
+		FE037D7D1D3B7FC000FCD6C4 /* Rank_Word_HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D7C1D3B7FC000FCD6C4 /* Rank_Word_HeaderView.m */; };
+		FE037D7F1D3B7FCC00FCD6C4 /* Rank_Word_HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE037D7E1D3B7FCC00FCD6C4 /* Rank_Word_HeaderView.xib */; };
+		FE037D831D3BA0C000FCD6C4 /* RankDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D811D3BA0C000FCD6C4 /* RankDetailCell.m */; };
+		FE037D841D3BA0C000FCD6C4 /* RankDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE037D821D3BA0C000FCD6C4 /* RankDetailCell.xib */; };
+		FE037D871D3BADC900FCD6C4 /* TFTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D861D3BADC900FCD6C4 /* TFTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +86,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60EDFC2BF74AACACEBE96F88 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		74176077A8EE4C383C4A4878 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C06A6B270D9A769D9DEADE32 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FE037C231D3B51A700FCD6C4 /* WordRank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordRank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE037C271D3B51A700FCD6C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE037C291D3B51A700FCD6C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +192,24 @@
 		FE037D631D3B533200FCD6C4 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		FE037D641D3B53E700FCD6C4 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		FE037D661D3B53EF00FCD6C4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		FE037D6C1D3B5B5100FCD6C4 /* Rank_RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rank_RootController.h; sourceTree = "<group>"; };
+		FE037D6D1D3B5B5100FCD6C4 /* Rank_RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rank_RootController.m; sourceTree = "<group>"; };
+		FE037D6F1D3B5B7200FCD6C4 /* Home_RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Home_RootController.h; sourceTree = "<group>"; };
+		FE037D701D3B5B7200FCD6C4 /* Home_RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home_RootController.m; sourceTree = "<group>"; };
+		FE037D721D3B5B7C00FCD6C4 /* Setting_RootController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Setting_RootController.h; sourceTree = "<group>"; };
+		FE037D731D3B5B7C00FCD6C4 /* Setting_RootController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Setting_RootController.m; sourceTree = "<group>"; };
+		FE037D751D3B5D3E00FCD6C4 /* RankDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankDetailController.h; sourceTree = "<group>"; };
+		FE037D761D3B5D3E00FCD6C4 /* RankDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankDetailController.m; sourceTree = "<group>"; };
+		FE037D781D3B7BE400FCD6C4 /* Rank_Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rank_Word.h; sourceTree = "<group>"; };
+		FE037D791D3B7BE400FCD6C4 /* Rank_Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rank_Word.m; sourceTree = "<group>"; };
+		FE037D7B1D3B7FC000FCD6C4 /* Rank_Word_HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rank_Word_HeaderView.h; sourceTree = "<group>"; };
+		FE037D7C1D3B7FC000FCD6C4 /* Rank_Word_HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Rank_Word_HeaderView.m; sourceTree = "<group>"; };
+		FE037D7E1D3B7FCC00FCD6C4 /* Rank_Word_HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Rank_Word_HeaderView.xib; sourceTree = "<group>"; };
+		FE037D801D3BA0C000FCD6C4 /* RankDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankDetailCell.h; sourceTree = "<group>"; };
+		FE037D811D3BA0C000FCD6C4 /* RankDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankDetailCell.m; sourceTree = "<group>"; };
+		FE037D821D3BA0C000FCD6C4 /* RankDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankDetailCell.xib; sourceTree = "<group>"; };
+		FE037D851D3BADC900FCD6C4 /* TFTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTools.h; sourceTree = "<group>"; };
+		FE037D861D3BADC900FCD6C4 /* TFTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFTools.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +222,7 @@
 				FE037D621D3B52E300FCD6C4 /* libsqlite3.tbd in Frameworks */,
 				FE037D1B1D3B52BD00FCD6C4 /* GoogleMobileAds.framework in Frameworks */,
 				FE037D5E1D3B52BD00FCD6C4 /* libMobClickLibrary.a in Frameworks */,
+				B4EB27F7B732C2ACD258C6C1 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,16 +243,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE037C1A1D3B51A700FCD6C4 = {
+		D286A562A3B3CC8BBFD3528E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				FE037D661D3B53EF00FCD6C4 /* libz.tbd */,
 				FE037D641D3B53E700FCD6C4 /* CoreTelephony.framework */,
 				FE037D611D3B52E300FCD6C4 /* libsqlite3.tbd */,
+				74176077A8EE4C383C4A4878 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECC84E2C64312EBA8BFF0B20 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60EDFC2BF74AACACEBE96F88 /* Pods.debug.xcconfig */,
+				C06A6B270D9A769D9DEADE32 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE037C1A1D3B51A700FCD6C4 = {
+			isa = PBXGroup;
+			children = (
 				FE037C251D3B51A700FCD6C4 /* WordRank */,
 				FE037C3F1D3B51A700FCD6C4 /* WordRankTests */,
 				FE037C4A1D3B51A700FCD6C4 /* WordRankUITests */,
 				FE037C241D3B51A700FCD6C4 /* Products */,
+				ECC84E2C64312EBA8BFF0B20 /* Pods */,
+				D286A562A3B3CC8BBFD3528E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -282,8 +334,9 @@
 		FE037C5B1D3B52BD00FCD6C4 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				FE037C5C1D3B52BD00FCD6C4 /* Home */,
 				FE037C601D3B52BD00FCD6C4 /* Main */,
+				FE037C5C1D3B52BD00FCD6C4 /* Home */,
+				FE037D681D3B5B1300FCD6C4 /* Rank */,
 				FE037C6F1D3B52BD00FCD6C4 /* Setting */,
 			);
 			path = Class;
@@ -302,6 +355,8 @@
 		FE037C5D1D3B52BD00FCD6C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE037D6F1D3B5B7200FCD6C4 /* Home_RootController.h */,
+				FE037D701D3B5B7200FCD6C4 /* Home_RootController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,6 +423,8 @@
 		FE037C701D3B52BD00FCD6C4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FE037D721D3B5B7C00FCD6C4 /* Setting_RootController.h */,
+				FE037D731D3B5B7C00FCD6C4 /* Setting_RootController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -412,6 +469,8 @@
 			children = (
 				FE037C7A1D3B52BD00FCD6C4 /* DBTools.h */,
 				FE037C7B1D3B52BD00FCD6C4 /* DBTools.m */,
+				FE037D851D3BADC900FCD6C4 /* TFTools.h */,
+				FE037D861D3BADC900FCD6C4 /* TFTools.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -575,6 +634,49 @@
 			path = resource;
 			sourceTree = "<group>";
 		};
+		FE037D681D3B5B1300FCD6C4 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				FE037D691D3B5B1300FCD6C4 /* Controller */,
+				FE037D6A1D3B5B1300FCD6C4 /* Model */,
+				FE037D6B1D3B5B1300FCD6C4 /* View */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
+		FE037D691D3B5B1300FCD6C4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FE037D6C1D3B5B5100FCD6C4 /* Rank_RootController.h */,
+				FE037D6D1D3B5B5100FCD6C4 /* Rank_RootController.m */,
+				FE037D751D3B5D3E00FCD6C4 /* RankDetailController.h */,
+				FE037D761D3B5D3E00FCD6C4 /* RankDetailController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FE037D6A1D3B5B1300FCD6C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FE037D781D3B7BE400FCD6C4 /* Rank_Word.h */,
+				FE037D791D3B7BE400FCD6C4 /* Rank_Word.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FE037D6B1D3B5B1300FCD6C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE037D7B1D3B7FC000FCD6C4 /* Rank_Word_HeaderView.h */,
+				FE037D7C1D3B7FC000FCD6C4 /* Rank_Word_HeaderView.m */,
+				FE037D7E1D3B7FCC00FCD6C4 /* Rank_Word_HeaderView.xib */,
+				FE037D801D3BA0C000FCD6C4 /* RankDetailCell.h */,
+				FE037D811D3BA0C000FCD6C4 /* RankDetailCell.m */,
+				FE037D821D3BA0C000FCD6C4 /* RankDetailCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -582,9 +684,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE037C501D3B51A700FCD6C4 /* Build configuration list for PBXNativeTarget "WordRank" */;
 			buildPhases = (
+				626766609CFEF2A792EFA763 /* Check Pods Manifest.lock */,
 				FE037C1F1D3B51A700FCD6C4 /* Sources */,
 				FE037C201D3B51A700FCD6C4 /* Frameworks */,
 				FE037C211D3B51A700FCD6C4 /* Resources */,
+				4100F3947875727DD18FC00C /* Embed Pods Frameworks */,
+				EDCA1587ADA3A03E186ADFF2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -680,6 +785,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE037C361D3B51A700FCD6C4 /* LaunchScreen.storyboard in Resources */,
+				FE037D7F1D3B7FCC00FCD6C4 /* Rank_Word_HeaderView.xib in Resources */,
+				FE037D841D3BA0C000FCD6C4 /* RankDetailCell.xib in Resources */,
 				FE037C331D3B51A700FCD6C4 /* Assets.xcassets in Resources */,
 				FE037D1C1D3B52BD00FCD6C4 /* README.txt in Resources */,
 				FE037D601D3B52BD00FCD6C4 /* rank_wrod.sql in Resources */,
@@ -704,6 +811,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4100F3947875727DD18FC00C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		626766609CFEF2A792EFA763 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDCA1587ADA3A03E186ADFF2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FE037C1F1D3B51A700FCD6C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -715,15 +870,18 @@
 				FE037D2D1D3B52BD00FCD6C4 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				FE037D161D3B52BD00FCD6C4 /* LaunchViewController.m in Sources */,
 				FE037D191D3B52BD00FCD6C4 /* DBTools.m in Sources */,
+				FE037D711D3B5B7200FCD6C4 /* Home_RootController.m in Sources */,
 				FE037D211D3B52BD00FCD6C4 /* FMDatabaseAdditions.m in Sources */,
 				FE037D281D3B52BD00FCD6C4 /* MASConstraintMaker.m in Sources */,
 				FE037D2E1D3B52BD00FCD6C4 /* View+MASAdditions.m in Sources */,
 				FE037D301D3B52BD00FCD6C4 /* ObjcRuntime.m in Sources */,
 				FE037D271D3B52BD00FCD6C4 /* MASConstraint.m in Sources */,
 				FE037D2B1D3B52BD00FCD6C4 /* MASViewConstraint.m in Sources */,
+				FE037D7A1D3B7BE400FCD6C4 /* Rank_Word.m in Sources */,
 				FE037C2B1D3B51A700FCD6C4 /* AppDelegate.m in Sources */,
 				FE037D111D3B52BD00FCD6C4 /* Base_TableViewController.m in Sources */,
 				FE037D331D3B52BD00FCD6C4 /* RDVTabBarController.m in Sources */,
+				FE037D741D3B5B7C00FCD6C4 /* Setting_RootController.m in Sources */,
 				FE037D141D3B52BD00FCD6C4 /* BaseTableViewController.m in Sources */,
 				FE037D231D3B52BD00FCD6C4 /* FMDatabaseQueue.m in Sources */,
 				FE037D1F1D3B52BD00FCD6C4 /* WdCleanCaches.m in Sources */,
@@ -732,17 +890,22 @@
 				FE037D131D3B52BD00FCD6C4 /* BaseTabBarController.m in Sources */,
 				FE037D2F1D3B52BD00FCD6C4 /* ViewController+MASAdditions.m in Sources */,
 				FE037D5F1D3B52BD00FCD6C4 /* UIView+AutoLayout.m in Sources */,
+				FE037D771D3B5D3E00FCD6C4 /* RankDetailController.m in Sources */,
 				FE037D311D3B52BD00FCD6C4 /* UIViewController+Swizzle.m in Sources */,
+				FE037D831D3BA0C000FCD6C4 /* RankDetailCell.m in Sources */,
 				FE037D1E1D3B52BD00FCD6C4 /* Global.m in Sources */,
 				FE037D291D3B52BD00FCD6C4 /* MASLayoutConstraint.m in Sources */,
 				FE037D241D3B52BD00FCD6C4 /* FMResultSet.m in Sources */,
 				FE037D261D3B52BD00FCD6C4 /* MASCompositeConstraint.m in Sources */,
+				FE037D871D3BADC900FCD6C4 /* TFTools.m in Sources */,
 				FE037D341D3B52BD00FCD6C4 /* RDVTabBarItem.m in Sources */,
 				FE037D221D3B52BD00FCD6C4 /* FMDatabasePool.m in Sources */,
 				FE037D121D3B52BD00FCD6C4 /* BaseNavigationController.m in Sources */,
+				FE037D6E1D3B5B5100FCD6C4 /* Rank_RootController.m in Sources */,
 				FE037D171D3B52BD00FCD6C4 /* UIImage+Category.m in Sources */,
 				FE037D181D3B52BD00FCD6C4 /* UIImage+Tint.m in Sources */,
 				FE037D201D3B52BD00FCD6C4 /* FMDatabase.m in Sources */,
+				FE037D7D1D3B7FC000FCD6C4 /* Rank_Word_HeaderView.m in Sources */,
 				FE037D2A1D3B52BD00FCD6C4 /* MASViewAttribute.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -882,9 +1045,11 @@
 		};
 		FE037C511D3B51A700FCD6C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60EDFC2BF74AACACEBE96F88 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WordRank/Lib/Vendor/AdSupport",
@@ -905,9 +1070,11 @@
 		};
 		FE037C521D3B51A700FCD6C4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C06A6B270D9A769D9DEADE32 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WordRank/Lib/Vendor/AdSupport",
@@ -991,6 +1158,7 @@
 				FE037C521D3B51A700FCD6C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE037C531D3B51A700FCD6C4 /* Build configuration list for PBXNativeTarget "WordRankTests" */ = {
 			isa = XCConfigurationList;
@@ -999,6 +1167,7 @@
 				FE037C551D3B51A700FCD6C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE037C561D3B51A700FCD6C4 /* Build configuration list for PBXNativeTarget "WordRankUITests" */ = {
 			isa = XCConfigurationList;
@@ -1007,6 +1176,7 @@
 				FE037C581D3B51A700FCD6C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

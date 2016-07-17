@@ -12,10 +12,9 @@
 #import "RDVTabBarItem.h"
 #import "BaseNavigationController.h"
 
-//#import "AllFiles_RootController.h"
-//#import "MovieList_RootController.h"
-//#import "PrivateList_RootController.h"
-//#import "Setting_RootController.h"
+#import "Home_RootController.h"
+#import "Rank_RootController.h"
+#import "Setting_RootController.h"
 
 @interface BaseTabBarController ()
 
@@ -23,12 +22,9 @@
 
 @implementation BaseTabBarController
 
-#if 0
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    //    [self setHidesBottomBarWhenPushed:YES];
-    //    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
     
     [self  initViewControllers];
     //    NSArray *array =  self.viewControllers;
@@ -41,23 +37,19 @@
 
 -(void)initViewControllers
 {
-    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    AllFiles_RootController *allVC = [sb instantiateViewControllerWithIdentifier:@"AllFiles"];
-    BaseNavigationController *allNav = [[BaseNavigationController alloc]initWithRootViewController:allVC];
+    Home_RootController *home = [sb instantiateViewControllerWithIdentifier:@"home"];
+    BaseNavigationController *homeNav = [[BaseNavigationController alloc]initWithRootViewController:home];
     
-    MovieList_RootController *movieListVc = [sb instantiateViewControllerWithIdentifier:@"MovieList"];
-    BaseNavigationController *movielistNav = [[BaseNavigationController alloc]initWithRootViewController:movieListVc];
- 
-    PrivateList_RootController *privateListVc = [sb instantiateViewControllerWithIdentifier:@"PrivateList"];
-    BaseNavigationController *privateListNav = [[BaseNavigationController alloc]initWithRootViewController:privateListVc];
+    Rank_RootController *rank = [sb instantiateViewControllerWithIdentifier:@"rank"];
+    BaseNavigationController *rankNav = [[BaseNavigationController alloc]initWithRootViewController:rank];
     
-    Setting_RootController *settingVc = [sb instantiateViewControllerWithIdentifier:@"Setting"];
+    Setting_RootController *settingVc = [sb instantiateViewControllerWithIdentifier:@"setting"];
     BaseNavigationController *settingNav = [[BaseNavigationController alloc]initWithRootViewController:settingVc];
 
 //    [self setViewControllers:@[movielistNav,privateListNav, settingNav]];
-    [self setViewControllers:@[allNav,movielistNav, settingNav]];
+    [self setViewControllers:@[homeNav,rankNav, settingNav]];
     
     [self initTabBarForController];
     self.delegate = self;
@@ -65,12 +57,8 @@
 
 -(void)initTabBarForController
 {
-//    UIImage *backgroundImage = [UIImage imageNamed:@"bg_topbar"];
-//    NSArray *tabBarItemImages = @[@"movie", @"priavte", @"setting"];
-//    NSArray *tabBarItemTitles = @[@"本地视频", @"加密列表",@"设置"];
-    
     NSArray *tabBarItemImages = @[@"gather",@"movie",@"setting"];
-    NSArray *tabBarItemTitles = @[@"全部文件",@"本地视频",@"设置"];
+    NSArray *tabBarItemTitles = @[@"Home",@"Rank",@"Setting"];
     
     NSInteger index = 0;
     for (RDVTabBarItem *item in self.tabBar.items) {
@@ -133,7 +121,6 @@
     return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
 }
 
-#endif
 
 @end
 

@@ -1,12 +1,15 @@
 //
 //  AppDelegate.m
-//  WordRank
+//  FileMaster
 //
-//  Created by Tengfei on 16/7/17.
+//  Created by Tengfei on 16/2/28.
 //  Copyright © 2016年 tengfei. All rights reserved.
 //
 
 #import "AppDelegate.h"
+ 
+#import "BaseTabBarController.h"
+#import "LaunchViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //    self.window.backgroundColor = [UIColor whiteColor];
+    BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
+    LaunchViewController *launchVc = [[LaunchViewController alloc ]init];
+    self.window.rootViewController = tabBarVc;
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    [self umengTrack];//友盟的方法本身是异步执行，所以不需要再异步调用
     return YES;
 }
 
@@ -40,6 +55,20 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
+
+
+- (void)umengTrack {
+    [MobClick setCrashReportEnabled:YES]; // 如果不需要捕捉异常，注释掉此行
+    [MobClick setLogEnabled:NO];  // 打开友盟sdk调试，注意Release发布时需要注释掉此行,减少io消耗
+    //    [MobClick setEncryptEnabled:NO];
+    [MobClick setAppVersion:XcodeAppVersion]; //参数为NSString * 类型,自定义app版本信息，如果不设置，默认从CFBundleVersion里取
+    //
+    [MobClick startWithAppkey:KUmegnAppKey reportPolicy:(ReportPolicy) REALTIME channelId:nil];
+    //   reportPolicy为枚举类型,可以为 REALTIME, BATCH,SENDDAILY,SENDWIFIONLY几种
+    //   channelId 为NSString * 类型，channelId 为nil或@""时,默认会被被当作@"App Store"渠道
+}
+
 
 @end

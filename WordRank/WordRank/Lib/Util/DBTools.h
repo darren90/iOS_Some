@@ -10,7 +10,7 @@
 
 @interface DBTools : NSObject
 
-+(double)getSeekDuration:(NSString *)title;
++(NSArray *)get_rank_word_year:(NSString *)rank_year;
 
 +(void)saveSeekDuration:(NSString *)title duration:(double)duration;
 
