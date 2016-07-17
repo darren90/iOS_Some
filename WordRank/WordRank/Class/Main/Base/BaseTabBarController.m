@@ -57,7 +57,7 @@
 
 -(void)initTabBarForController
 {
-    NSArray *tabBarItemImages = @[@"gather",@"movie",@"setting"];
+    NSArray *tabBarItemImages = @[@"home",@"Trend",@"setting"];
     NSArray *tabBarItemTitles = @[@"Home",@"Rank",@"Setting"];
     
     NSInteger index = 0;
