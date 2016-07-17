@@ -48,6 +48,7 @@
     tableView.delegate = self;
     tableView.dataSource = self;
     tableView.frame = self.view.bounds;
+//    tableView.allowsSelection = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -79,6 +80,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return 0.000000001;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UIImageView *)noDataView

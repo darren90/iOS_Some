@@ -39,7 +39,7 @@
     // Initialization code
     
     self.co_nameL.textAlignment = NSTextAlignmentLeft;
-    self.co_nameL.adjustsFontSizeToFitWidth = YES;
+//    self.co_nameL.adjustsFontSizeToFitWidth = YES;
 }
 
 

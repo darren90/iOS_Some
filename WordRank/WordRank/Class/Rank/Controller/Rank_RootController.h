@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Base_TableViewController.h"
 
-@interface Rank_RootController : UIViewController
+@interface Rank_RootController : Base_TableViewController
 
 @end

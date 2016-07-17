@@ -33,7 +33,7 @@
     self.headerView.frame = CGRectMake(0, 20, KWidth, 20);
     self.headerView.backgroundColor = KRandomColor;
     
-    self.tableView.frame =  CGRectMake(0, CGRectGetMaxY(self.headerView.frame), KWidth, KHeight-CGRectGetMaxY(self.headerView.frame));
+    self.tableView.frame =  CGRectMake(0, CGRectGetMaxY(self.headerView.frame), KWidth, KHeight-CGRectGetMaxY(self.headerView.frame)-44);
 
     self.tableView.rowHeight = 50;
     [self.tableView reloadData];
@@ -58,7 +58,6 @@
 }
 
 
-
 -(Rank_Word_HeaderView *)headerView
 {
     if (!_headerView) {
@@ -71,7 +70,7 @@
 {
     if (!_dataArray) {
         _dataArray = [NSMutableArray array];
-        [_dataArray addObjectsFromArray:[DBTools get_rank_word_year:@"2015"]];
+        [_dataArray addObjectsFromArray:[DBTools get_rank_word_year:self.year]];
     }
     return _dataArray;
 }

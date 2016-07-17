@@ -8,37 +8,66 @@
 
 #import "Rank_RootController.h"
 #import "RankDetailController.h"
+#import "RankSort.h"
+#import "RankCell.h"
 
-@interface Rank_RootController ()
+@interface Rank_RootController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong)NSMutableArray * dataArray;
 
 @end
 
 @implementation Rank_RootController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //    [[DBTools alloc]init];
+//    [self.view addSubview:self.headerView];
+//    self.headerView.frame = CGRectMake(0, 20, KWidth, 20);
+//    self.headerView.backgroundColor = KRandomColor;
+    
+    self.tableView.frame =  CGRectMake(0, 0, KWidth, KHeight-44);
+    
+    self.tableView.rowHeight = 50;
+    [self.tableView reloadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.dataArray.count;
+}
 
--(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    RankDetailController *detailVc = [[RankDetailController alloc]init];
-    [self.navigationController pushViewController:detailVc animated:YES];
+    RankCell *cell = [RankCell cellWithTableView:tableView];
+    RankSort *model = self.dataArray[indexPath.row];
+    cell.model = model;
+    return cell;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
-*/
+
+
+
+-(NSMutableArray *)dataArray
+{
+    if (!_dataArray) {
+        _dataArray = [NSMutableArray array];
+        [_dataArray addObjectsFromArray:[DBTools get_rank_word_year:@"2014"]];
+    }
+    return _dataArray;
+}
+
 
 @end

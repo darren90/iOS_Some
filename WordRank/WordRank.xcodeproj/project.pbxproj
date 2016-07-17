@@ -66,6 +66,9 @@
 		FE037D831D3BA0C000FCD6C4 /* RankDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D811D3BA0C000FCD6C4 /* RankDetailCell.m */; };
 		FE037D841D3BA0C000FCD6C4 /* RankDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE037D821D3BA0C000FCD6C4 /* RankDetailCell.xib */; };
 		FE037D871D3BADC900FCD6C4 /* TFTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D861D3BADC900FCD6C4 /* TFTools.m */; };
+		FE037D8B1D3BD78300FCD6C4 /* RankCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D891D3BD78300FCD6C4 /* RankCell.m */; };
+		FE037D8C1D3BD78300FCD6C4 /* RankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE037D8A1D3BD78300FCD6C4 /* RankCell.xib */; };
+		FE037D8F1D3BD94200FCD6C4 /* RankSort.m in Sources */ = {isa = PBXBuildFile; fileRef = FE037D8E1D3BD94200FCD6C4 /* RankSort.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +213,11 @@
 		FE037D821D3BA0C000FCD6C4 /* RankDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankDetailCell.xib; sourceTree = "<group>"; };
 		FE037D851D3BADC900FCD6C4 /* TFTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFTools.h; sourceTree = "<group>"; };
 		FE037D861D3BADC900FCD6C4 /* TFTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFTools.m; sourceTree = "<group>"; };
+		FE037D881D3BD78300FCD6C4 /* RankCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankCell.h; sourceTree = "<group>"; };
+		FE037D891D3BD78300FCD6C4 /* RankCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankCell.m; sourceTree = "<group>"; };
+		FE037D8A1D3BD78300FCD6C4 /* RankCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankCell.xib; sourceTree = "<group>"; };
+		FE037D8D1D3BD94200FCD6C4 /* RankSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankSort.h; sourceTree = "<group>"; };
+		FE037D8E1D3BD94200FCD6C4 /* RankSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankSort.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -660,6 +668,8 @@
 			children = (
 				FE037D781D3B7BE400FCD6C4 /* Rank_Word.h */,
 				FE037D791D3B7BE400FCD6C4 /* Rank_Word.m */,
+				FE037D8D1D3BD94200FCD6C4 /* RankSort.h */,
+				FE037D8E1D3BD94200FCD6C4 /* RankSort.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -673,6 +683,9 @@
 				FE037D801D3BA0C000FCD6C4 /* RankDetailCell.h */,
 				FE037D811D3BA0C000FCD6C4 /* RankDetailCell.m */,
 				FE037D821D3BA0C000FCD6C4 /* RankDetailCell.xib */,
+				FE037D881D3BD78300FCD6C4 /* RankCell.h */,
+				FE037D891D3BD78300FCD6C4 /* RankCell.m */,
+				FE037D8A1D3BD78300FCD6C4 /* RankCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -792,6 +805,7 @@
 				FE037D601D3B52BD00FCD6C4 /* rank_wrod.sql in Resources */,
 				FE037C311D3B51A700FCD6C4 /* Main.storyboard in Resources */,
 				FE037D1D1D3B52BD00FCD6C4 /* README.txt in Resources */,
+				FE037D8C1D3BD78300FCD6C4 /* RankCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,6 +896,7 @@
 				FE037D111D3B52BD00FCD6C4 /* Base_TableViewController.m in Sources */,
 				FE037D331D3B52BD00FCD6C4 /* RDVTabBarController.m in Sources */,
 				FE037D741D3B5B7C00FCD6C4 /* Setting_RootController.m in Sources */,
+				FE037D8F1D3BD94200FCD6C4 /* RankSort.m in Sources */,
 				FE037D141D3B52BD00FCD6C4 /* BaseTableViewController.m in Sources */,
 				FE037D231D3B52BD00FCD6C4 /* FMDatabaseQueue.m in Sources */,
 				FE037D1F1D3B52BD00FCD6C4 /* WdCleanCaches.m in Sources */,
@@ -897,6 +912,7 @@
 				FE037D291D3B52BD00FCD6C4 /* MASLayoutConstraint.m in Sources */,
 				FE037D241D3B52BD00FCD6C4 /* FMResultSet.m in Sources */,
 				FE037D261D3B52BD00FCD6C4 /* MASCompositeConstraint.m in Sources */,
+				FE037D8B1D3BD78300FCD6C4 /* RankCell.m in Sources */,
 				FE037D871D3BADC900FCD6C4 /* TFTools.m in Sources */,
 				FE037D341D3B52BD00FCD6C4 /* RDVTabBarItem.m in Sources */,
 				FE037D221D3B52BD00FCD6C4 /* FMDatabasePool.m in Sources */,
