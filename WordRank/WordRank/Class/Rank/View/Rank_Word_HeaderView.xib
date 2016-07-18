@@ -57,7 +57,7 @@
                     <state key="normal" title="LastY"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.98894279230000004" green="0.72709803429999997" blue="0.35676033270000002" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="4jy-me-D9E" firstAttribute="leading" secondItem="EKJ-aE-NjW" secondAttribute="trailing" id="1j4-XZ-OLz"/>
                 <constraint firstItem="qPC-TE-Wad" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4ud-HS-3K0"/>

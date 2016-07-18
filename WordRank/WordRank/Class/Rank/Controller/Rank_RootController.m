@@ -61,6 +61,7 @@
     
     RankDetailController *detailVc = [[RankDetailController alloc]init];
     detailVc.year = model.rank_year;
+    detailVc.title = [NSString stringWithFormat:@"%@",model.rank_year];//@"";
     [self.navigationController pushViewController:detailVc animated:YES];
 }
 

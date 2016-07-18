@@ -15,4 +15,9 @@
     return [[NSBundle mainBundle]loadNibNamed:@"Rank_Word_HeaderView" owner:nil options:nil].firstObject;
 }
 
+-(void)awakeFromNib
+{
+    
+}
+
 @end
