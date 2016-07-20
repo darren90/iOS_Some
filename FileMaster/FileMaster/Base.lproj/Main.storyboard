@@ -248,14 +248,21 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright @2016 Tengwei Co.LTD All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNN-Nt-bYP">
-                                <rect key="frame" x="93" y="426" width="414" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright @2016 Tengwei Co.LTD All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNN-Nt-bYP">
+                                <rect key="frame" x="30" y="426.5" width="540" height="20.5"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="AA7-z5-z7K"/>
                                     <constraint firstAttribute="height" constant="21" id="l9g-l8-xZO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AA7-z5-z7K"/>
+                                        <exclude reference="l9g-l8-xZO"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你所需要的万能的影音播放器" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwk-44-LtM">
                                 <rect key="frame" x="222" y="248" width="156" height="14.5"/>
@@ -303,8 +310,11 @@
                             <constraint firstItem="jwk-44-LtM" firstAttribute="centerX" secondItem="1Xm-P4-U2A" secondAttribute="centerX" id="eme-Kj-qxg"/>
                             <constraint firstItem="jwk-44-LtM" firstAttribute="centerY" secondItem="1Xm-P4-U2A" secondAttribute="centerY" id="f86-ii-Vbu"/>
                             <constraint firstItem="jwk-44-LtM" firstAttribute="centerX" secondItem="1Xm-P4-U2A" secondAttribute="centerX" id="h25-F3-57p"/>
+                            <constraint firstAttribute="trailing" secondItem="mNN-Nt-bYP" secondAttribute="trailing" constant="30" id="hdi-Y4-jk5"/>
+                            <constraint firstItem="mNN-Nt-bYP" firstAttribute="centerX" secondItem="1Xm-P4-U2A" secondAttribute="centerX" id="i3B-UH-eFe"/>
                             <constraint firstItem="Ord-Cd-xnt" firstAttribute="centerX" secondItem="1Xm-P4-U2A" secondAttribute="centerX" id="lWJ-BV-OTN"/>
                             <constraint firstItem="FkA-pe-IbV" firstAttribute="top" secondItem="mNN-Nt-bYP" secondAttribute="bottom" id="mOo-YE-t1b"/>
+                            <constraint firstItem="mNN-Nt-bYP" firstAttribute="leading" secondItem="1Xm-P4-U2A" secondAttribute="leading" constant="30" id="ocB-8c-0ZM"/>
                             <constraint firstItem="jwk-44-LtM" firstAttribute="top" secondItem="57V-hE-aMj" secondAttribute="bottom" constant="10" id="oob-xN-Ky7"/>
                             <constraint firstItem="D70-8b-K5L" firstAttribute="top" secondItem="Ord-Cd-xnt" secondAttribute="bottom" constant="50" id="shJ-ob-xae"/>
                         </constraints>
