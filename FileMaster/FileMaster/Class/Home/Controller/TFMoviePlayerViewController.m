@@ -93,6 +93,7 @@
     switch (event) {
         case TFVideoPlayerControlEventTapDone:
         {
+             [self.player pauseContent];
             [self saveSeekDuration];
             [self dismissViewControllerAnimated:YES completion:^{
                 [self unInstallPlayer];

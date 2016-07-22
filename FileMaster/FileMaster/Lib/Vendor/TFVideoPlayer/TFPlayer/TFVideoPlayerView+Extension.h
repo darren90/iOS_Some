@@ -14,5 +14,4 @@
 //隐藏某些控件
 - (void)hiddenSomeControls;
 
-- (void)layout;
 @end
