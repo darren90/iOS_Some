@@ -24,6 +24,7 @@
     [super viewDidAppear:animated];
     
     [self.player playerWillAppear];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)viewDidDisappear:(BOOL)animated
