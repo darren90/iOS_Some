@@ -21,6 +21,7 @@
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"BaseViewController"];
     
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
