@@ -73,8 +73,8 @@
         MovieList *list = model.file;
         if (list.fileType == FileMovieCanPlay) {
             TFMoviePlayerViewController *playerVc = [[TFMoviePlayerViewController alloc] init];
-//            playerVc.topTitle = list.name;
-//            playerVc.playLocalUrl = list.relaPath;
+            playerVc.topTitle = list.name;
+            playerVc.playLocalUrl = list.relaPath;
             [self.navigationController presentViewController:playerVc animated:YES completion:nil];
         }else if (list.fileType == FileImage){
             
