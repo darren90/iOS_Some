@@ -67,8 +67,6 @@
     [self.view addSubview:adView];
     adView.frame = CGRectMake(0, KHeight-49-64-50, KWidth, 50);
     adView.bannerView.rootViewController = self;
-//    [self.view bringSubviewToFront:adView];
-//    adView.backgroundColor = [UIColor blueColor];
 }
 
 - (void)didReceiveMemoryWarning {
