@@ -63,10 +63,6 @@
 
 -(void)initTabBarForController
 {
-//    UIImage *backgroundImage = [UIImage imageNamed:@"bg_topbar"];
-//    NSArray *tabBarItemImages = @[@"movie", @"priavte", @"setting"];
-//    NSArray *tabBarItemTitles = @[@"本地视频", @"加密列表",@"设置"];
-    
     NSArray *tabBarItemImages = @[@"gather",@"movie",@"setting"];
     NSArray *tabBarItemTitles = @[@"全部文件",@"本地视频",@"设置"];
     
