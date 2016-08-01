@@ -34,9 +34,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
-                                                         forBarMetrics:UIBarMetricsDefault];
-    
-//    self.noDataView;
+                                                         forBarMetrics:UIBarMetricsDefault];    
 }
 
 - (void)didReceiveMemoryWarning {
