@@ -17,6 +17,7 @@
 #import "MobClick.h" //友盟 统计
 #import "WdCleanCaches.h"
 #import "UIView+AutoLayout.h"
+#import "FCFileManager.h"
 
 
 // 2.获得RGB颜色

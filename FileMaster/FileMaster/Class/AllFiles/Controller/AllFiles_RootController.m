@@ -33,6 +33,7 @@
     [super viewWillAppear:animated];
     
     NSString *docsDir = [NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"];
+//    NSArray *aa = [FCFileManager listFilesInDirectoryAtPath:docsDir deep:YES];
     NSMutableArray *pathArray =  [GetFilesTools scanFilesAtPath:docsDir];//[self scanFilesAtPath:docsDir];
     
     self.dataArray = pathArray;//[self getMovieList];

@@ -66,6 +66,7 @@
 		FE5428DC1D199046009BF3B4 /* DBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428DB1D199046009BF3B4 /* DBTools.m */; };
 		FE59C1241C8A681D009666BE /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1211C8A681D009666BE /* Global.m */; };
 		FE59C1251C8A681D009666BE /* WdCleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1231C8A681D009666BE /* WdCleanCaches.m */; };
+		FE7380371D50F83D002C178C /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7380361D50F83D002C178C /* FCFileManager.m */; };
 		FE79FD161D12DAB9001D052D /* audioTrackIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCC31D12DAB9001D052D /* audioTrackIcon.png */; };
 		FE79FD171D12DAB9001D052D /* audioTrackIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCC41D12DAB9001D052D /* audioTrackIcon@2x.png */; };
 		FE79FD181D12DAB9001D052D /* icon_kai.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCC51D12DAB9001D052D /* icon_kai.png */; };
@@ -302,6 +303,8 @@
 		FE59C1211C8A681D009666BE /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		FE59C1221C8A681D009666BE /* WdCleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WdCleanCaches.h; sourceTree = "<group>"; };
 		FE59C1231C8A681D009666BE /* WdCleanCaches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WdCleanCaches.m; sourceTree = "<group>"; };
+		FE7380351D50F83D002C178C /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		FE7380361D50F83D002C178C /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		FE79FCC31D12DAB9001D052D /* audioTrackIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = audioTrackIcon.png; sourceTree = "<group>"; };
 		FE79FCC41D12DAB9001D052D /* audioTrackIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "audioTrackIcon@2x.png"; sourceTree = "<group>"; };
 		FE79FCC51D12DAB9001D052D /* icon_kai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_kai.png; sourceTree = "<group>"; };
@@ -528,6 +531,7 @@
 		89E759E71C86F513002A10BA /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				FE7380341D50F83D002C178C /* FCFileManager */,
 				895ABFAD1C87D65D00ABF2FD /* GetFilesTools.h */,
 				895ABFAE1C87D65D00ABF2FD /* GetFilesTools.m */,
 				FE5428DA1D199046009BF3B4 /* DBTools.h */,
@@ -766,6 +770,15 @@
 				FE59C1231C8A681D009666BE /* WdCleanCaches.m */,
 			);
 			path = ClearCache;
+			sourceTree = "<group>";
+		};
+		FE7380341D50F83D002C178C /* FCFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				FE7380351D50F83D002C178C /* FCFileManager.h */,
+				FE7380361D50F83D002C178C /* FCFileManager.m */,
+			);
+			path = FCFileManager;
 			sourceTree = "<group>";
 		};
 		FE79FCC11D12DAB9001D052D /* TFVideoPlayer */ = {
@@ -1431,6 +1444,7 @@
 				FE08C9371CC51CB5008F3290 /* MASConstraintMaker.m in Sources */,
 				FE59C1251C8A681D009666BE /* WdCleanCaches.m in Sources */,
 				FE28D8391C886AE3000AFC70 /* UIView+AutoLayout.m in Sources */,
+				FE7380371D50F83D002C178C /* FCFileManager.m in Sources */,
 				FE28D84A1C886E45000AFC70 /* UIViewController+Swizzle.m in Sources */,
 				FE08C93A1CC51CB5008F3290 /* MASViewConstraint.m in Sources */,
 				FE9883441D16F5E0001BD0D3 /* UseViewController.m in Sources */,
