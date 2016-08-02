@@ -33,7 +33,7 @@
     [super viewWillAppear:animated];
     
     [MobClick beginLogPageView:@"page_开屏广告"];
-    NSLog(@"状态栏改变:1");
+
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
 }
 
@@ -147,36 +147,32 @@ NSLog(@"interstitialDidDismissScreen");
     self.jumpBtn = jumpBtn;
     [jumpBtn setTitle:[NSString stringWithFormat:@"%lds 跳过",(long)self.count] forState:UIControlStateNormal];
     jumpBtn.frame = CGRectMake(KWidth - 110, 28, 100, 30);
-//    ViewRadius(self.button, 15);
     jumpBtn.layer.cornerRadius = 15;
     jumpBtn.clipsToBounds = YES;
     jumpBtn.titleLabel.font = [UIFont systemFontOfSize:20];
     jumpBtn.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.7];
     [jumpBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [jumpBtn addTarget:self action:@selector(jump) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view.window addSubview:jumpBtn];
-//    [self.view.window bringSubviewToFront:jumpBtn];
 }
 
 //撤销这个界面.
 - (void)jump
 {
     [self destroyTimer];
-    //加载Main.Storeboard作为主页面
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-//    self.view.window.rootViewController = [storyBoard instantiateInitialViewController];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
-//    self.view.window.rootViewController = tabBarVc;
+
     AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    UIViewController *keyVc = app.window.rootViewController;
-    if ([keyVc isKindOfClass:[BaseTabBarController class]]) {
-        [self destroyTimer];
-    }else{
+//    UIViewController *keyVc = app.window.rootViewController;
+//    if ([keyVc isKindOfClass:[BaseTabBarController class]]) {
+//        [self destroyTimer];
+//    }else{
+        [self.view removeFromSuperview];
         app.window.rootViewController = tabBarVc;
         [app.window makeKeyAndVisible];
-    }
+//    }
 }
 
 

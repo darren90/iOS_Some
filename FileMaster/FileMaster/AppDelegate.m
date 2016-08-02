@@ -29,15 +29,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     //    self.window.backgroundColor = [UIColor whiteColor];
-    BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
+//    BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
     LaunchViewController *launchVc = [[LaunchViewController alloc ]init];
     self.window.rootViewController = launchVc;
     
     [self.window makeKeyAndVisible];
-    
-    
     
     [self umengTrack];//友盟的方法本身是异步执行，所以不需要再异步调用
     return YES;

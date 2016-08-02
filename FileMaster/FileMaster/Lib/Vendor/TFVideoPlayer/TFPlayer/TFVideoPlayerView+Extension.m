@@ -70,7 +70,9 @@ static CGFloat LABELHIGHT = 20.0;
 }
 
 - (void)layout{
-
+    
+    self.bigPlayButton.hidden = YES;
+    
     if (self.isSmallPlayShow){
         //小屏下的布局
         self.startPause.hidden = NO;
