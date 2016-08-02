@@ -16,14 +16,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie_icon" translatesAutoresizingMaskIntoConstraints="NO" id="jSd-Rw-dFJ">
-                        <rect key="frame" x="14" y="12" width="36" height="36"/>
+                        <rect key="frame" x="13" y="12" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="36" id="A5m-S2-Zca"/>
                             <constraint firstAttribute="height" constant="36" id="UJS-6z-D9v"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="middleTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4g-2K-EP4">
-                        <rect key="frame" x="58" y="14.5" width="221" height="20.5"/>
+                        <rect key="frame" x="57" y="16.5" width="224" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.098039215686274508" green="0.074509803921568626" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100MB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8G-Xc-Jjb">
-                        <rect key="frame" x="58" y="38" width="221" height="12"/>
+                        <rect key="frame" x="57" y="40" width="224" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -54,14 +54,14 @@
                     <constraint firstItem="S8G-Xc-Jjb" firstAttribute="leading" secondItem="E4g-2K-EP4" secondAttribute="leading" id="4YY-Ce-b7c"/>
                     <constraint firstItem="E4g-2K-EP4" firstAttribute="centerX" secondItem="r7F-te-aCZ" secondAttribute="centerX" id="8Yw-PX-kUb"/>
                     <constraint firstItem="E4g-2K-EP4" firstAttribute="leading" secondItem="jSd-Rw-dFJ" secondAttribute="trailing" constant="8" id="AMJ-MT-H5G"/>
-                    <constraint firstItem="wf8-oM-QDE" firstAttribute="leading" secondItem="E4g-2K-EP4" secondAttribute="trailing" constant="10" id="ARY-qf-PYb"/>
+                    <constraint firstItem="wf8-oM-QDE" firstAttribute="leading" secondItem="E4g-2K-EP4" secondAttribute="trailing" constant="8" id="ARY-qf-PYb"/>
                     <constraint firstAttribute="bottom" secondItem="FFa-np-HSY" secondAttribute="bottom" id="B2i-Ko-q3K"/>
                     <constraint firstItem="jSd-Rw-dFJ" firstAttribute="centerX" secondItem="r7F-te-aCZ" secondAttribute="centerX" id="COP-vu-IMV"/>
                     <constraint firstAttribute="bottom" secondItem="E4g-2K-EP4" secondAttribute="bottom" constant="8" id="IZ8-Co-ynH"/>
                     <constraint firstItem="wf8-oM-QDE" firstAttribute="centerY" secondItem="r7F-te-aCZ" secondAttribute="centerY" id="Iix-WT-bLq"/>
                     <constraint firstItem="jSd-Rw-dFJ" firstAttribute="centerY" secondItem="r7F-te-aCZ" secondAttribute="centerY" id="N8n-Gz-jSj"/>
                     <constraint firstAttribute="trailing" secondItem="FFa-np-HSY" secondAttribute="trailing" id="RDS-EF-egC"/>
-                    <constraint firstItem="E4g-2K-EP4" firstAttribute="centerY" secondItem="r7F-te-aCZ" secondAttribute="centerY" constant="-5" id="ReA-i8-RnH"/>
+                    <constraint firstItem="E4g-2K-EP4" firstAttribute="centerY" secondItem="r7F-te-aCZ" secondAttribute="centerY" constant="-3" id="ReA-i8-RnH"/>
                     <constraint firstItem="S8G-Xc-Jjb" firstAttribute="top" secondItem="E4g-2K-EP4" secondAttribute="bottom" constant="3" id="Til-va-wcs"/>
                     <constraint firstItem="E4g-2K-EP4" firstAttribute="leading" secondItem="jSd-Rw-dFJ" secondAttribute="trailing" constant="15" id="bmG-EF-Q8c"/>
                     <constraint firstItem="S8G-Xc-Jjb" firstAttribute="width" secondItem="E4g-2K-EP4" secondAttribute="width" id="gab-IB-GmW"/>
@@ -72,7 +72,7 @@
                     <constraint firstItem="jSd-Rw-dFJ" firstAttribute="leading" secondItem="r7F-te-aCZ" secondAttribute="leading" constant="18" id="w76-ih-zFZ"/>
                     <constraint firstItem="FFa-np-HSY" firstAttribute="leading" secondItem="r7F-te-aCZ" secondAttribute="leading" id="xas-yW-g78"/>
                     <constraint firstAttribute="trailing" secondItem="wf8-oM-QDE" secondAttribute="trailing" constant="10" id="zCr-hD-heh"/>
-                    <constraint firstItem="jSd-Rw-dFJ" firstAttribute="leading" secondItem="r7F-te-aCZ" secondAttribute="leadingMargin" constant="6" id="zdk-qx-gD2"/>
+                    <constraint firstItem="jSd-Rw-dFJ" firstAttribute="leading" secondItem="r7F-te-aCZ" secondAttribute="leadingMargin" constant="5" id="zdk-qx-gD2"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
