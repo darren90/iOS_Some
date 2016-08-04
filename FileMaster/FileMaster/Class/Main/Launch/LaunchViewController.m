@@ -31,10 +31,14 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     [MobClick beginLogPageView:@"page_开屏广告"];
-
-    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController *vc = app.window.rootViewController;
+    //不知道为啥，当广告过了以后，就要出现主界面了，这个方法还是会调用？？？
+    if ([vc isKindOfClass:[LaunchViewController class]]) {
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
+    }
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -42,8 +46,14 @@
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:@"page_开屏广告"];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController *vc = app.window.rootViewController;
+    //不知道为啥，当广告过了以后，就要出现主界面了，这个方法还是会调用？？？
+    if (![vc isKindOfClass:[LaunchViewController class]]) {
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    }
 }
 
 - (void)viewDidLoad {
