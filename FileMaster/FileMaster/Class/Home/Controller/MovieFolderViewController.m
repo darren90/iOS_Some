@@ -38,10 +38,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tableView.rowHeight = 60;
+    self.tableView.rowHeight = 66;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
-
 
 
 #pragma mark - Table view data source

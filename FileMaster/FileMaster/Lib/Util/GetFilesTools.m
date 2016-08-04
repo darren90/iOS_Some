@@ -53,7 +53,7 @@
                     NSString *extname = [[fileName pathExtension] lowercaseString];
                     if ([@[@"mp4",@"mov",@"m4v",@"wav",@"flac",@"ape",@"wma",@"mp3",
                            @"avi",@"wmv",@"rmvb",@"flv",@"f4v",@"swf",@"mkv",@"dat",@"vob",@"mts",@"ogg",@"mpg"] indexOfObject:extname] != NSNotFound) {
-                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:10.0];
+//                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:10.0];
                         fileType = FileMovieCanPlay;
                         [pathArray addObject:movieFile];
                     }
@@ -94,7 +94,7 @@
                 if (![[fileName substringToIndex:1] isEqualToString:@"."]) {
                     
                     if ([fileName hasSuffix:@".mp4"]) {
-                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:200.0];
+//                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:200.0];
                         fileType = FileMovieCanPlay;
                     }else if([fileName hasSuffix:@".png"] || [fileName hasSuffix:@".jpg"]){
                         imgData = [UIImage imageWithContentsOfFile:fullPath];
@@ -110,7 +110,7 @@
                     NSString *extname = [[fileName pathExtension] lowercaseString];
                     if ([@[@"mp4",@"mov",@"m4v",@"wav",@"flac",@"ape",@"wma",@"mp3",
                            @"avi",@"wmv",@"rmvb",@"flv",@"f4v",@"swf",@"mkv",@"dat",@"vob",@"mts",@"ogg",@"mpg"] indexOfObject:extname] != NSNotFound) {
-                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:10.0];
+//                        imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:fullPath] atTime:10.0];
                         fileType = FileMovieCanPlay;
                     }
                     
@@ -189,7 +189,7 @@
         NSString *extname = [[fileName pathExtension] lowercaseString];
         if ([@[@"mp4",@"mov",@"m4v",@"wav",@"flac",@"ape",@"wma",@"mp3",
                @"avi",@"wmv",@"rmvb",@"flv",@"f4v",@"swf",@"mkv",@"dat",@"vob",@"mts",@"ogg",@"mpg"] indexOfObject:extname] != NSNotFound) {
-            imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:path] atTime:10.0];
+//            imgData = [UIImage thumbnailImageForVideo:[NSURL fileURLWithPath:path] atTime:10.0];
             fileType = FileMovieCanPlay;
         }
         

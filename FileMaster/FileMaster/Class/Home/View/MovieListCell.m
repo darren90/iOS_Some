@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *iconGo;
 @property (weak, nonatomic) IBOutlet UILabel *sizeLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *naleLTrail;
 
 @end
 

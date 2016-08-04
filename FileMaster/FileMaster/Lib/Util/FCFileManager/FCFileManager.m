@@ -384,6 +384,7 @@
     return [subpaths filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(id evaluatedObject, NSDictionary *bindings) {
 
         NSString *subpath = (NSString *)evaluatedObject;
+        NSLog(@"--:%@",subpath);
 
         return [self isFileItemAtPath:subpath];
     }]];

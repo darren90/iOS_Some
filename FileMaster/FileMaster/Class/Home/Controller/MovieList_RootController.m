@@ -47,7 +47,7 @@
 //    self.tableView.allowsMultipleSelectionDuringEditing = YES;
     
     self.tableView.backgroundColor = KCommonBgColor; 
-    self.tableView.rowHeight = 60;
+    self.tableView.rowHeight = 66;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 

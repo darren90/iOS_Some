@@ -34,6 +34,8 @@
     
     NSString *docsDir = [NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"];
 //    NSArray *aa = [FCFileManager listFilesInDirectoryAtPath:docsDir deep:YES];
+//    NSArray *aa2 = [FCFileManager listFilesInDirectoryAtPath:docsDir];
+
     NSMutableArray *pathArray =  [GetFilesTools scanFilesAtPath:docsDir];//[self scanFilesAtPath:docsDir];
     
     self.dataArray = pathArray;//[self getMovieList];
@@ -55,7 +57,7 @@
     //滑动隐藏navBar
 //    self.navigationController.hidesBarsOnSwipe = YES;
     
-    self.tableView.rowHeight = 60;
+    self.tableView.rowHeight = 66;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 49+64+50, 0);
 //    self.tableView.backgroundColor = [UIColor blueColor];
