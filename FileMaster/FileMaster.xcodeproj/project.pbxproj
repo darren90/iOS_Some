@@ -164,6 +164,7 @@
 		FEA58E8D1C8348F400FE4E8A /* MovieListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E8C1C8348F400FE4E8A /* MovieListCell.m */; };
 		FEA58E901C834A2000FE4E8A /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E8F1C834A2000FE4E8A /* MovieList.m */; };
 		FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */; };
+		FEFBC1781D54EC010039527C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFBC1771D54EC010039527C /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE57971D168F190056FB9F /* LaunchViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -448,6 +449,7 @@
 		FEA58E8F1C834A2000FE4E8A /* MovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieList.m; sourceTree = "<group>"; };
 		FEA58E911C834E0F00FE4E8A /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
+		FEFBC1771D54EC010039527C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FEFE57961D168F190056FB9F /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		FEFE57971D168F190056FB9F /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -457,6 +459,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFBC1781D54EC010039527C /* CoreFoundation.framework in Frameworks */,
 				FE5428D91D198EE4009BF3B4 /* libsqlite3.tbd in Frameworks */,
 				FE79FD8A1D153F26001D052D /* GoogleMobileAds.framework in Frameworks */,
 				89E759E21C86F4BF002A10BA /* AVFoundation.framework in Frameworks */,
@@ -554,6 +557,7 @@
 		D4B7F2072E06A46572EED219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEFBC1771D54EC010039527C /* CoreFoundation.framework */,
 				FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */,
 				FE79FD611D12DB38001D052D /* AudioToolbox.framework */,
 				FE79FD5F1D12DB2C001D052D /* CoreGraphics.framework */,
