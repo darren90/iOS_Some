@@ -25,7 +25,7 @@
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"文件夹界面"];
     
-    self.dataArray = self.file.subFiles;//[self getMovieList];
+    self.dataArray = (NSArray *)self.file.subFiles;//[self getMovieList];
     [self.tableView reloadData];
 }
 
@@ -39,6 +39,7 @@
     [super viewDidLoad];
     
     self.tableView.rowHeight = 66;
+    self.title = self.file.folderName;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 }
 
