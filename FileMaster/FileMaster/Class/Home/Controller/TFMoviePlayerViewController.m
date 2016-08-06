@@ -8,8 +8,10 @@
 
 #import "TFMoviePlayerViewController.h"
 #import "DBTools.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface TFMoviePlayerViewController ()<TFVideoPlayerDelegate>
+@interface TFMoviePlayerViewController ()<AVAudioSessionDelegate,TFVideoPlayerDelegate>
 
 /**
  *  是否播放的是本地已经下载的文件，YES：是，NO：可以不用传递
@@ -39,6 +41,10 @@
 {
     [super viewDidLoad];
     
+    //观看中，接收到电话
+    [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
+    [[AVAudioSession sharedInstance] setDelegate:self];
+    
     self.isPlayLocalFile = YES;//默认播放本地视频
     
     self.player = [[TFVideoPlayer alloc]init];
@@ -47,6 +53,17 @@
     [self.view addSubview:self.player.view];
  
     [self playVideo];
+}
+
+- (void)handleInterruption:(NSNotification *)notice{
+    /* For example:
+     [[NSNotificationCenter defaultCenter] addObserver: myObject
+     selector:    @selector(handleInterruption:)
+     name:        AVAudioSessionInterruptionNotification
+     object:      [AVAudioSession sharedInstance]];
+     */
+    [self.player pauseContent];
+    [self saveSeekDuration];
 }
 
 -(void)playVideo
@@ -95,7 +112,7 @@
     switch (event) {
         case TFVideoPlayerControlEventTapDone:
         {
-             [self.player pauseContent];
+            [self.player pauseContent];
             [self saveSeekDuration];
             [self dismissViewControllerAnimated:YES completion:^{
                 [self unInstallPlayer];
@@ -118,12 +135,14 @@
 
 -(void)dealloc
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self unInstallPlayer];
 }
 
 #pragma mark - 卸载播放器
 -(void)unInstallPlayer
 {
+    [[AVAudioSession sharedInstance] setDelegate:nil];
     [_player pauseContent];
     [_player unInstallPlayer];
     _player.delegate = nil;

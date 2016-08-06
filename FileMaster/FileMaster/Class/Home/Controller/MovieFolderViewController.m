@@ -25,7 +25,7 @@
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"文件夹界面"];
     
-    self.dataArray = (NSArray *)self.file.subFiles;//[self getMovieList];
+    self.dataArray = (NSMutableArray *)self.file.subFiles;//[self getMovieList];
     [self.tableView reloadData];
 }
 
