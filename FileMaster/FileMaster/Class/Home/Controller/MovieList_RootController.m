@@ -17,6 +17,7 @@
 #import "TFMoviePlayerViewController.h"
 
 @interface MovieList_RootController ()
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
 - (IBAction)editList:(UIBarButtonItem *)sender;
 
