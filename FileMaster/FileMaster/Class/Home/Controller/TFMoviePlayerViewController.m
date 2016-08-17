@@ -26,7 +26,7 @@
     [super viewDidAppear:animated];
     
     [self.player playerWillAppear];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 

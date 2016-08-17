@@ -271,7 +271,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         self.bottomControl.hidden = !self.bottomControl.hidden;
         self.bigPlayButton.hidden = !self.bigPlayButton.hidden;
         
-        [[UIApplication sharedApplication]setStatusBarHidden:self.topControl.hidden withAnimation:UIStatusBarAnimationFade];
+        [[UIApplication sharedApplication]setStatusBarHidden:self.topControl.hidden withAnimation:UIStatusBarAnimationNone];
     }
     
     //添加计时器
