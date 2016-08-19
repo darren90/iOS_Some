@@ -44,7 +44,16 @@
     }else{
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(editList:)];
     }
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"saoyisao"] style:UIBarButtonItemStyleDone target:self action:@selector(saoyisao)];
+    
     [self.tableView reloadData];
+}
+
+//二维码的扫一扫功能
+-(void)saoyisao
+{
+    
 }
 
 - (void)viewDidLoad {
