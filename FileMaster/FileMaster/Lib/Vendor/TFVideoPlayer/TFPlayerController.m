@@ -10,8 +10,8 @@
 #import "TFPlayer.h"
 
 @interface TFPlayerController()<TFVideoPlayerDelegate >
-@end
 
+@end
 
 @implementation TFPlayerController
 
