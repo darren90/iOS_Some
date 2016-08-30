@@ -41,8 +41,8 @@
 
 
 //1:腾讯bugly
-#define KBuglyAPPID     @"900013400"
-#define KBuglyAPPKey    @"1fF819yLwrAw7t9I"
+#define KBuglyAPPID     @"aeaf2e5cf7"
+#define KBuglyAPPKey    @"52aada05-f5c0-4afc-bca2-7a518b78229f"
 
 //2.友盟
 #define KUmegnAppKey    @"56d8348667e58e6e40000f94"
