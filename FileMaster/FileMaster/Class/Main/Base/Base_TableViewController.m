@@ -7,6 +7,7 @@
 //
 
 #import "Base_TableViewController.h"
+#import "UIView+AutoLayout.h"
 
 @interface Base_TableViewController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 
@@ -47,7 +48,8 @@
     self.tableView = tableView;
     tableView.delegate = self;
     tableView.dataSource = self;
-    tableView.frame = self.view.bounds;
+//    tableView.frame = self.view.bounds;
+    [tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
 }
 
 - (void)didReceiveMemoryWarning {

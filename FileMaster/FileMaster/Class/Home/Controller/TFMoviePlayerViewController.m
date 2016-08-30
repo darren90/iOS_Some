@@ -41,6 +41,8 @@
 {
     [super viewDidLoad];
     
+    //视频播放被打扰，进入后台，视频暂停播放
+    [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
     //观看中，接收到电话
     [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(handleInterruption:) name:AVAudioSessionInterruptionNotification object:[AVAudioSession sharedInstance]];
     [[AVAudioSession sharedInstance] setDelegate:self];

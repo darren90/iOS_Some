@@ -75,37 +75,37 @@
 //    return [self.viewControllers.lastObject supportedInterfaceOrientations];
 //}
 //
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
-}
-
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    UIInterfaceOrientationMask orientationMask = UIInterfaceOrientationMaskAll;
-    for (UIViewController *viewController in [self viewControllers]) {
-        if (![viewController respondsToSelector:@selector(supportedInterfaceOrientations)]) {
-            return UIInterfaceOrientationMaskPortrait;
-        }
-        
-        UIInterfaceOrientationMask supportedOrientations = [viewController supportedInterfaceOrientations];
-        
-        if (orientationMask > supportedOrientations) {
-            orientationMask = supportedOrientations;
-        }
-    }
-    
-    return orientationMask;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    for (UIViewController *viewCotroller in [self viewControllers]) {
-        if (![viewCotroller respondsToSelector:@selector(shouldAutorotateToInterfaceOrientation:)] ||
-            ![viewCotroller shouldAutorotateToInterfaceOrientation:toInterfaceOrientation]) {
-            return NO;
-        }
-    }
-    return YES;
-}
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+//    return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
+//}
+//
+//
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
+//    UIInterfaceOrientationMask orientationMask = UIInterfaceOrientationMaskAll;
+//    for (UIViewController *viewController in [self viewControllers]) {
+//        if (![viewController respondsToSelector:@selector(supportedInterfaceOrientations)]) {
+//            return UIInterfaceOrientationMaskPortrait;
+//        }
+//        
+//        UIInterfaceOrientationMask supportedOrientations = [viewController supportedInterfaceOrientations];
+//        
+//        if (orientationMask > supportedOrientations) {
+//            orientationMask = supportedOrientations;
+//        }
+//    }
+//    
+//    return orientationMask;
+//}
+//
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+//    for (UIViewController *viewCotroller in [self viewControllers]) {
+//        if (![viewCotroller respondsToSelector:@selector(shouldAutorotateToInterfaceOrientation:)] ||
+//            ![viewCotroller shouldAutorotateToInterfaceOrientation:toInterfaceOrientation]) {
+//            return NO;
+//        }
+//    }
+//    return YES;
+//}
 
 #pragma mark - Methods
 
