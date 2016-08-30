@@ -41,7 +41,7 @@ static FMDatabaseQueue *_queue;
 {
     __block double duration = 0.0;
     [_queue inDatabase:^(FMDatabase *db) {
-        FMResultSet *rs = [db executeQuery:@"select duration from SeekDuration where title = ?",title];
+        FMResultSet *rs = [db executeQuery:@"select duration from SeekDuration where title = ? order by id desc",title];
         while (rs.next) {
             duration = [rs doubleForColumn:@"duration"];
             break;
@@ -54,6 +54,7 @@ static FMDatabaseQueue *_queue;
 {
     if (!title || duration <= 0.0) return;
     [_queue inDatabase:^(FMDatabase *db) {
+        [db executeUpdate:@"DELETE FROM SeekDuration where title = ?;",title];
         [db executeUpdate:@"insert into SeekDuration (title,duration) values (?,?)",title,@(duration)];
     }];
 }
