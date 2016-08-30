@@ -14,7 +14,7 @@
 #import <Bugly/Bugly.h>
 
 
-@interface AppDelegate ()
+@interface AppDelegate ()<BuglyDelegate>
 
 @end
 
