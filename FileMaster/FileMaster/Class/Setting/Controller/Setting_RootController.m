@@ -13,6 +13,15 @@
 #import "SettingGroup.h"
 #import "UseViewController.h"
 
+//扫一扫
+#import "SubLBXScanViewController.h"
+//#import "MyQRViewController.h"
+#import "LBXScanView.h"
+#import <objc/message.h>
+//#import "ScanResultViewController.h"
+#import "LBXScanResult.h"
+#import "LBXScanWrapper.h"
+
 @interface Setting_RootController ()
 @property (nonatomic,strong)NSMutableArray *dataArray;
 @end
@@ -147,12 +156,98 @@
     }else if ([model.title isEqualToString:@"使用教程"]){
         UseViewController *usevc = [sb instantiateViewControllerWithIdentifier:@"usevc"];
         [self.navigationController pushViewController:usevc animated:YES];
+    }else if([model.title isEqualToString:@"扫一扫"]){
+        [self saoyisao];
     }
 }
+
+
+
+-(void)saoyisao
+{
+    if (![self cameraPemission])
+    {
+        NSLog(@"没有摄像机权限");
+//        [self showError:@"没有摄像机权限"];
+        return;
+    }
+}
+
+
+#pragma mark -模仿qq界面
+- (void)qqStyle
+{
+    //设置扫码区域参数设置
+    
+    //创建参数对象
+    LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
+    
+    //矩形区域中心上移，默认中心点为屏幕中心点
+    style.centerUpOffset = 44;
+    
+    //扫码框周围4个角的类型,设置为外挂式
+    style.photoframeAngleStyle = LBXScanViewPhotoframeAngleStyle_Outer;
+    
+    //扫码框周围4个角绘制的线条宽度
+    style.photoframeLineW = 6;
+    
+    //扫码框周围4个角的宽度
+    style.photoframeAngleW = 24;
+    
+    //扫码框周围4个角的高度
+    style.photoframeAngleH = 24;
+    
+    //扫码框内 动画类型 --线条上下移动
+    style.anmiationStyle = LBXScanViewAnimationStyle_LineMove;
+    
+    //线条上下移动图片
+    style.animationImage = [UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_light_green"];
+    
+    //SubLBXScanViewController继承自LBXScanViewController
+    //添加一些扫码或相册结果处理
+    SubLBXScanViewController *vc = [SubLBXScanViewController new];
+    vc.style = style;
+    
+    vc.isQQSimulator = YES;
+    vc.isVideoZoom = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (BOOL)cameraPemission
+{
+    
+    BOOL isHavePemission = NO;
+    if ([AVCaptureDevice respondsToSelector:@selector(authorizationStatusForMediaType:)])
+    {
+        AVAuthorizationStatus permission =
+        [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        
+        switch (permission) {
+            case AVAuthorizationStatusAuthorized:
+                isHavePemission = YES;
+                break;
+            case AVAuthorizationStatusDenied:
+            case AVAuthorizationStatusRestricted:
+                break;
+            case AVAuthorizationStatusNotDetermined:
+                isHavePemission = YES;
+                break;
+        }
+    }
+    
+    return isHavePemission;
+}
+
 
 -(NSMutableArray *)dataArray{
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
+        
+        SettingModel *m01 = [SettingModel settingIconName:@"saoyisaos" title:@"扫一扫"];
+        SettingGroup *g0 = [[SettingGroup alloc]init];
+        g0.header = @"扩展";
+        g0.items = @[m01];
+        
         
         SettingModel *m21 = [SettingModel settingIconName:@"use_icon2" title:@"使用教程"];
 //        SettingModel *m22 = [SettingModel settingIconName:@"feedBack" title:@"常见问题"];
@@ -174,10 +269,8 @@
         SettingGroup *g3 = [[SettingGroup alloc]init];
         g3.header = @"关于";
         g3.items = @[m31];
-        
-//        [_dataArray addObject:m1];
-//        [_dataArray addObject:m0];
-//        [_dataArray addObject:m2];
+
+        [_dataArray addObject:g0];
         [_dataArray addObject:g2];
         [_dataArray addObject:g1];
         [_dataArray addObject:g3];
