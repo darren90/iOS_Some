@@ -160,13 +160,11 @@
 }
 
 
-
-
 -(void)shareActionTapped
 {
     //要分享的内容，加在一个数组里边，初始化UIActivityViewController
-    NSString *textToShare = @"万能的播放器我非常喜欢，推荐你也是使用";
-    UIImage *imageToShare = [UIImage imageNamed:@"movie_icon"];
+    NSString *textToShare = @"万能的播放器,功能强大，推荐你也是使用";
+    UIImage *imageToShare = [UIImage imageNamed:@"shareIcon"];
     NSURL *urlToShare = [NSURL URLWithString:@"https://itunes.apple.com/us/app/wen-jian-da-shi-wan-nengu/id1090434597?l=zh&ls=1&mt=8"];
     NSArray *activityItems = @[urlToShare,textToShare,imageToShare];
     
