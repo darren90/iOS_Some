@@ -169,6 +169,7 @@
 		FEA58E901C834A2000FE4E8A /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E8F1C834A2000FE4E8A /* MovieList.m */; };
 		FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */; };
 		FEB214401D75BB3900CD86F3 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB2143F1D75BB3900CD86F3 /* Bugly.framework */; };
+		FEB214D41D7A80C000CD86F3 /* ShareActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214D31D7A80C000CD86F3 /* ShareActivity.m */; };
 		FEFBC1781D54EC010039527C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFBC1771D54EC010039527C /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE57971D168F190056FB9F /* LaunchViewController.m */; };
 /* End PBXBuildFile section */
@@ -463,6 +464,8 @@
 		FEA58E911C834E0F00FE4E8A /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		FEB2143F1D75BB3900CD86F3 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		FEB214D21D7A80C000CD86F3 /* ShareActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareActivity.h; sourceTree = "<group>"; };
+		FEB214D31D7A80C000CD86F3 /* ShareActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareActivity.m; sourceTree = "<group>"; };
 		FEFBC1771D54EC010039527C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FEFE57961D168F190056FB9F /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		FEFE57971D168F190056FB9F /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
@@ -1109,6 +1112,8 @@
 				FE28D8511C887BE5000AFC70 /* AboutViewController.m */,
 				FE9883421D16F5E0001BD0D3 /* UseViewController.h */,
 				FE9883431D16F5E0001BD0D3 /* UseViewController.m */,
+				FEB214D21D7A80C000CD86F3 /* ShareActivity.h */,
+				FEB214D31D7A80C000CD86F3 /* ShareActivity.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1514,6 +1519,7 @@
 				FE59C1251C8A681D009666BE /* WdCleanCaches.m in Sources */,
 				FE28D8391C886AE3000AFC70 /* UIView+AutoLayout.m in Sources */,
 				FE7380371D50F83D002C178C /* FCFileManager.m in Sources */,
+				FEB214D41D7A80C000CD86F3 /* ShareActivity.m in Sources */,
 				FE28D84A1C886E45000AFC70 /* UIViewController+Swizzle.m in Sources */,
 				FE08C93A1CC51CB5008F3290 /* MASViewConstraint.m in Sources */,
 				FE9883441D16F5E0001BD0D3 /* UseViewController.m in Sources */,
