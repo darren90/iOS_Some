@@ -170,6 +170,7 @@
 		FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */; };
 		FEB214401D75BB3900CD86F3 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB2143F1D75BB3900CD86F3 /* Bugly.framework */; };
 		FEB214D41D7A80C000CD86F3 /* ShareActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214D31D7A80C000CD86F3 /* ShareActivity.m */; };
+		FEB214D81D7A85A700CD86F3 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214D71D7A85A700CD86F3 /* UIView+Toast.m */; };
 		FEFBC1781D54EC010039527C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFBC1771D54EC010039527C /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE57971D168F190056FB9F /* LaunchViewController.m */; };
 /* End PBXBuildFile section */
@@ -466,6 +467,8 @@
 		FEB2143F1D75BB3900CD86F3 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
 		FEB214D21D7A80C000CD86F3 /* ShareActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareActivity.h; sourceTree = "<group>"; };
 		FEB214D31D7A80C000CD86F3 /* ShareActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareActivity.m; sourceTree = "<group>"; };
+		FEB214D61D7A85A700CD86F3 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		FEB214D71D7A85A700CD86F3 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		FEFBC1771D54EC010039527C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FEFE57961D168F190056FB9F /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		FEFE57971D168F190056FB9F /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
@@ -1154,6 +1157,7 @@
 		FEA58E2B1C83406700FE4E8A /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				FEB214D51D7A85A700CD86F3 /* Toast */,
 				FE0D02DF1D67D850009B4206 /* LBXAlertAction */,
 				FE5428C71D198ED2009BF3B4 /* fmdb */,
 				FE79FD7F1D153F26001D052D /* AdSupport */,
@@ -1253,6 +1257,15 @@
 				FEB2143F1D75BB3900CD86F3 /* Bugly.framework */,
 			);
 			path = Buyly;
+			sourceTree = "<group>";
+		};
+		FEB214D51D7A85A700CD86F3 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				FEB214D61D7A85A700CD86F3 /* UIView+Toast.h */,
+				FEB214D71D7A85A700CD86F3 /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		FEFE57951D168F080056FB9F /* Launch */ = {
@@ -1561,6 +1574,7 @@
 				FE08C93C1CC51CB5008F3290 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				FEA58E871C8347BE00FE4E8A /* PrivateList_RootController.m in Sources */,
 				89CDBE6D1C83F06B00C52481 /* HTTPStreamingServer.m in Sources */,
+				FEB214D81D7A85A700CD86F3 /* UIView+Toast.m in Sources */,
 				FEA58E641C83406700FE4E8A /* VKVideoPlayerSettingsManager.m in Sources */,
 				FE2C6FD01D1E077800AAB51E /* TFVideoPlayerView+Extension.m in Sources */,
 				FEA58E841C8347A500FE4E8A /* MovieList_RootController.m in Sources */,
