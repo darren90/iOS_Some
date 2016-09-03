@@ -220,8 +220,7 @@ NSLog(@"interstitialDidDismissScreen");
 - (void)dealloc
 {
     if (_timer.isValid) {
-        //让定时器失效
-        [_timer invalidate];
+        [_timer invalidate]; //让定时器失效
         _timer = nil;
     }
 }
