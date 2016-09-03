@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseTableViewController.h"
+#import "Base_TableViewController.h"
 
-@interface MovieList_RootController : BaseTableViewController
+@interface MovieList_RootController : Base_TableViewController
 
 
 @end

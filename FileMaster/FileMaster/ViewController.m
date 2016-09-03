@@ -26,11 +26,11 @@
     //xib的加载
     
     //1:
-    NSArray *vies = [[NSBundle mainBundle]loadNibNamed:@"" owner:nil options:nil];
-    
-    //2:
-    UINib *nib = [UINib nibWithNibName:@"" bundle:nil];
-    NSArray *viewss = [nib instantiateWithOwner:nil options:nil];
+//    NSArray *vies = [[NSBundle mainBundle]loadNibNamed:@"" owner:nil options:nil];
+//    
+//    //2:
+//    UINib *nib = [UINib nibWithNibName:@"" bundle:nil];
+//    NSArray *viewss = [nib instantiateWithOwner:nil options:nil];
     
 }
 

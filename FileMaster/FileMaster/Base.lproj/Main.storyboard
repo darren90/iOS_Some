@@ -72,9 +72,28 @@
             <point key="canvasLocation" x="-1325" y="-753"/>
         </scene>
         <!--本地视频-->
+        <scene sceneID="Vzv-Dk-eeZ">
+            <objects>
+                <viewController storyboardIdentifier="MovieList" id="vo6-Uu-lzQ" customClass="MovieList_RootController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RfV-nT-eBg"/>
+                        <viewControllerLayoutGuide type="bottom" id="VtH-s2-TRI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NMR-3p-jzg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="本地视频" id="bGR-OY-neE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIb-oy-o98" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1325" y="87"/>
+        </scene>
+        <!--本地视频-->
         <scene sceneID="tti-gi-N5K">
             <objects>
-                <tableViewController storyboardIdentifier="MovieList" id="OYu-v1-Ae1" customClass="MovieList_RootController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MovieList2" id="OYu-v1-Ae1" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bGk-eI-zXM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +117,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B68-cY-t1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1126" y="93"/>
+            <point key="canvasLocation" x="-726" y="87"/>
         </scene>
         <!--Movie Folder View Controller-->
         <scene sceneID="XYN-bb-sFo">
@@ -110,7 +129,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ogH-DA-hPU">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ogH-DA-hPU" id="gVt-mE-nlL">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -145,7 +164,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="OYu-v1-Ae1" kind="relationship" relationship="rootViewController" id="rdK-Jb-UhP"/>
+                        <segue destination="vo6-Uu-lzQ" kind="relationship" relationship="rootViewController" id="xry-3N-ouZ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T1A-Ew-fNc" userLabel="First Responder" sceneMemberID="firstResponder"/>
