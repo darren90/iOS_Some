@@ -10,7 +10,6 @@
 #import "UIView+AutoLayout.h"
 
 @interface BaseViewController ()
-@property (nonatomic, weak) UIImageView *noDataView;
 
 @end
 

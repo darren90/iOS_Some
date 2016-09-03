@@ -16,7 +16,8 @@
 #import "UIView+Toast.h"
 
 //扫一扫
- 
+#import "LBXScanViewStyle.h"
+#import "SubLBXScanViewController.h"
 
 @interface Setting_RootController ()
 @property (nonatomic,strong)NSMutableArray *dataArray;
@@ -153,13 +154,84 @@
         UseViewController *usevc = [sb instantiateViewControllerWithIdentifier:@"usevc"];
         [self.navigationController pushViewController:usevc animated:YES];
     }else if([model.title isEqualToString:@"扫一扫"]){
-//        [self saoyisao];
+        [self saoyisao];
     }else if([model.title isEqualToString:@"分享给朋友"]){
         [self shareActionTapped];
     }
 }
 
+-(void)saoyisao
+{
+    if (![self cameraPemission])
+    {
+        NSLog(@"没有摄像机权限");
+//        [self showError:@"没有摄像机权限"];
+        return;
+    }
+    [self qqStyle];
+}
+- (BOOL)cameraPemission
+{
+    
+    BOOL isHavePemission = NO;
+    if ([AVCaptureDevice respondsToSelector:@selector(authorizationStatusForMediaType:)])
+    {
+        AVAuthorizationStatus permission =
+        [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+        
+        switch (permission) {
+            case AVAuthorizationStatusAuthorized:
+                isHavePemission = YES;
+                break;
+            case AVAuthorizationStatusDenied:
+            case AVAuthorizationStatusRestricted:
+                break;
+            case AVAuthorizationStatusNotDetermined:
+                isHavePemission = YES;
+                break;
+        }
+    }
+    
+    return isHavePemission;
+}
 
+- (void)qqStyle
+{
+    //设置扫码区域参数设置
+    
+    //创建参数对象
+    LBXScanViewStyle *style = [[LBXScanViewStyle alloc]init];
+    
+    //矩形区域中心上移，默认中心点为屏幕中心点
+    style.centerUpOffset = 44;
+    
+    //扫码框周围4个角的类型,设置为外挂式
+    style.photoframeAngleStyle = LBXScanViewPhotoframeAngleStyle_Outer;
+    
+    //扫码框周围4个角绘制的线条宽度
+    style.photoframeLineW = 6;
+    
+    //扫码框周围4个角的宽度
+    style.photoframeAngleW = 24;
+    
+    //扫码框周围4个角的高度
+    style.photoframeAngleH = 24;
+    
+    //扫码框内 动画类型 --线条上下移动
+    style.anmiationStyle = LBXScanViewAnimationStyle_LineMove;
+    
+    //线条上下移动图片
+    style.animationImage = [UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_light_green"];
+    
+    //SubLBXScanViewController继承自LBXScanViewController
+    //添加一些扫码或相册结果处理
+    SubLBXScanViewController *vc = [SubLBXScanViewController new];
+    vc.style = style;   
+    
+    vc.isQQSimulator = YES;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+#pragma mark - 分享
 -(void)shareActionTapped
 {
     //要分享的内容，加在一个数组里边，初始化UIActivityViewController
@@ -212,7 +284,6 @@
     }
     
     // 分享功能(Facebook, Twitter, 新浪微博, 腾讯微博...)需要你在手机上设置中心绑定了登录账户, 才能正常显示。
-    //关闭系统的一些activity类型
     activityVC.excludedActivityTypes = @[];
     
     //在展现view controller时，必须根据当前的设备类型，使用适当的方法。在iPad上，必须通过popover来展现view controller。在iPhone和iPodtouch上，必须以模态的方式展现。

@@ -1,6 +1,6 @@
 //
 //
-//  
+//
 //
 //  Created by lbxia on 15/10/21.
 //  Copyright © 2015年 lbxia. All rights reserved.
@@ -49,11 +49,12 @@
         rect.origin = CGPointMake(0, 0);
         
         self.qRScanView = [[LBXScanView alloc]initWithFrame:rect style:_style];
+        
         [self.view addSubview:_qRScanView];
-    
+        
     }
     
-      [_qRScanView startDeviceReadyingWithText:@"相机启动中"];
+    [_qRScanView startDeviceReadyingWithText:@"相机启动中"];
     
     
 }
@@ -74,12 +75,12 @@
         return;
     }
     
-  
+    
     
     if (!_scanObj )
     {
         __weak __typeof(self) weakSelf = self;
-         // AVMetadataObjectTypeQRCode   AVMetadataObjectTypeEAN13Code
+        // AVMetadataObjectTypeQRCode   AVMetadataObjectTypeEAN13Code
         
         CGRect cropRect = CGRectZero;
         
@@ -87,18 +88,26 @@
             
             cropRect = [LBXScanView getScanRectWithPreView:self.view style:_style];
         }
-
-        self.scanObj = [[LBXScanWrapper alloc]initWithPreView:self.view
+        
+        UIView *videoView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
+        videoView.backgroundColor = [UIColor clearColor];
+        [self.view insertSubview:videoView atIndex:0];
+        
+        self.scanObj = [[LBXScanWrapper alloc]initWithPreView:videoView
                                               ArrayObjectType:nil
                                                      cropRect:cropRect
                                                       success:^(NSArray<LBXScanResult *> *array){
                                                           [weakSelf scanResultWithArray:array];
                                                       }];
-      
+        
+        [_scanObj setNeedCaptureImage:_isNeedScanImage];
+        
+        [self cameraInitOver];
+        
     }
     [_scanObj startScan];
-
-
+    
+    
     [_qRScanView stopDeviceReadying];
     
     [_qRScanView startScanAnimation];
@@ -106,6 +115,10 @@
     self.view.backgroundColor = [UIColor clearColor];
 }
 
+- (void)cameraInitOver
+{
+    
+}
 
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -152,7 +165,7 @@
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     picker.delegate = self;
-   
+    
     
     picker.allowsEditing = YES;
     
@@ -166,7 +179,7 @@
 
 -(void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    [picker dismissViewControllerAnimated:YES completion:nil];    
+    [picker dismissViewControllerAnimated:YES completion:nil];
     
     __block UIImage* image = [info objectForKey:UIImagePickerControllerEditedImage];
     
@@ -180,7 +193,7 @@
         [weakSelf scanResultWithArray:array];
     }];
     
-   
+    
     
     //系统自带识别方法
     /*

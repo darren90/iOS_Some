@@ -24,6 +24,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"扫一扫";
     
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
         
@@ -42,9 +43,9 @@
     
     if (_isQQSimulator) {
         
-         [self drawBottomItems];
+        [self drawBottomItems];
         [self drawTitle];
-         [self.view bringSubviewToFront:_topTitle];
+        [self.view bringSubviewToFront:_topTitle];
     }
     else
         _topTitle.hidden = YES;
@@ -72,7 +73,7 @@
         _topTitle.text = @"将取景框对准二维码即可自动扫描";
         _topTitle.textColor = [UIColor whiteColor];
         [self.view addSubview:_topTitle];
-    }    
+    }
 }
 
 - (void)cameraInitOver
@@ -86,7 +87,7 @@
 {
     if (!_zoomView)
     {
-      
+        
         CGRect frame = self.view.frame;
         
         int XRetangleLeft = self.style.xScanRetangleOffset;
@@ -118,17 +119,17 @@
         
         __weak __typeof(self) weakSelf = self;
         _zoomView.block= ^(float value)
-        {            
+        {
             [weakSelf.scanObj setVideoScale:value];
         };
         [self.view addSubview:_zoomView];
-                
+        
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap)];
         [self.view addGestureRecognizer:tap];
     }
     
     return _zoomView;
-   
+    
 }
 
 - (void)tap
@@ -144,7 +145,7 @@
     }
     
     self.bottomItemsView = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.view.frame)-164,
-                                                                      CGRectGetWidth(self.view.frame), 100)];
+                                                                   CGRectGetWidth(self.view.frame), 100)];
     _bottomItemsView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
     
     [self.view addSubview:_bottomItemsView];
@@ -152,13 +153,13 @@
     CGSize size = CGSizeMake(65, 87);
     self.btnFlash = [[UIButton alloc]init];
     _btnFlash.bounds = CGRectMake(0, 0, size.width, size.height);
-    _btnFlash.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)/2, CGRectGetHeight(_bottomItemsView.frame)/2);
-     [_btnFlash setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_flash_nor"] forState:UIControlStateNormal];
+    _btnFlash.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)*2/3, CGRectGetHeight(_bottomItemsView.frame)/2);
+    [_btnFlash setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_flash_nor"] forState:UIControlStateNormal];
     [_btnFlash addTarget:self action:@selector(openOrCloseFlash) forControlEvents:UIControlEventTouchUpInside];
     
     self.btnPhoto = [[UIButton alloc]init];
     _btnPhoto.bounds = _btnFlash.bounds;
-    _btnPhoto.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)/4, CGRectGetHeight(_bottomItemsView.frame)/2);
+    _btnPhoto.center = CGPointMake(CGRectGetWidth(_bottomItemsView.frame)/3, CGRectGetHeight(_bottomItemsView.frame)/2);
     [_btnPhoto setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_photo_nor"] forState:UIControlStateNormal];
     [_btnPhoto setImage:[UIImage imageNamed:@"CodeScan.bundle/qrcode_scan_btn_photo_down"] forState:UIControlStateHighlighted];
     [_btnPhoto addTarget:self action:@selector(openPhoto) forControlEvents:UIControlEventTouchUpInside];
@@ -172,15 +173,7 @@
     
     [_bottomItemsView addSubview:_btnFlash];
     [_bottomItemsView addSubview:_btnPhoto];
-    [_bottomItemsView addSubview:_btnMyQR];   
-    
 }
-
-
-
-
-
-
 
 - (void)showError:(NSString*)str
 {
@@ -195,7 +188,7 @@
     if (array.count < 1)
     {
         [self popAlertMsgWithScanResult:nil];
-     
+        
         return;
     }
     
@@ -219,12 +212,12 @@
     }
     
     //震动提醒
-   // [LBXScanWrapper systemVibrate];
+    // [LBXScanWrapper systemVibrate];
     //声音提醒
     //[LBXScanWrapper systemSound];
     
     [self showNextVCWithScanResult:scanResult];
-   
+    
 }
 
 - (void)popAlertMsgWithScanResult:(NSString*)strResult
@@ -272,7 +265,7 @@
 {
     
     [super openOrCloseFlash];
-   
+    
     
     if (self.isOpenFlash)
     {
@@ -292,6 +285,17 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait ;
+}
+
+- (BOOL)shouldAutorotate{
+    return NO;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
 
 
 @end

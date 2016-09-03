@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface ScanResultViewController : UIViewController
+@interface ScanResultViewController : BaseViewController
 
 @property (nonatomic, strong) UIImage* imgScan;
 @property (nonatomic, copy) NSString* strScan;

@@ -171,6 +171,12 @@
 		FEB214401D75BB3900CD86F3 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB2143F1D75BB3900CD86F3 /* Bugly.framework */; };
 		FEB214D41D7A80C000CD86F3 /* ShareActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214D31D7A80C000CD86F3 /* ShareActivity.m */; };
 		FEB214D81D7A85A700CD86F3 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214D71D7A85A700CD86F3 /* UIView+Toast.m */; };
+		FEB214E61D7AA53F00CD86F3 /* UIImageView+CornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214DC1D7AA53F00CD86F3 /* UIImageView+CornerRadius.m */; };
+		FEB214E81D7AA53F00CD86F3 /* MyQRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214E01D7AA53F00CD86F3 /* MyQRViewController.m */; };
+		FEB214E91D7AA53F00CD86F3 /* ScanResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214E21D7AA53F00CD86F3 /* ScanResultViewController.m */; };
+		FEB214EA1D7AA53F00CD86F3 /* ScanResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB214E31D7AA53F00CD86F3 /* ScanResultViewController.xib */; };
+		FEB214EB1D7AA53F00CD86F3 /* SubLBXScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214E51D7AA53F00CD86F3 /* SubLBXScanViewController.m */; };
+		FEB214F11D7AABAF00CD86F3 /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FEB214F01D7AABAF00CD86F3 /* CodeScan.bundle */; };
 		FEFBC1781D54EC010039527C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFBC1771D54EC010039527C /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFE57971D168F190056FB9F /* LaunchViewController.m */; };
 /* End PBXBuildFile section */
@@ -469,6 +475,16 @@
 		FEB214D31D7A80C000CD86F3 /* ShareActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareActivity.m; sourceTree = "<group>"; };
 		FEB214D61D7A85A700CD86F3 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
 		FEB214D71D7A85A700CD86F3 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		FEB214DB1D7AA53F00CD86F3 /* UIImageView+CornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+CornerRadius.h"; sourceTree = "<group>"; };
+		FEB214DC1D7AA53F00CD86F3 /* UIImageView+CornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+CornerRadius.m"; sourceTree = "<group>"; };
+		FEB214DF1D7AA53F00CD86F3 /* MyQRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQRViewController.h; sourceTree = "<group>"; };
+		FEB214E01D7AA53F00CD86F3 /* MyQRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQRViewController.m; sourceTree = "<group>"; };
+		FEB214E11D7AA53F00CD86F3 /* ScanResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanResultViewController.h; sourceTree = "<group>"; };
+		FEB214E21D7AA53F00CD86F3 /* ScanResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanResultViewController.m; sourceTree = "<group>"; };
+		FEB214E31D7AA53F00CD86F3 /* ScanResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScanResultViewController.xib; sourceTree = "<group>"; };
+		FEB214E41D7AA53F00CD86F3 /* SubLBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLBXScanViewController.h; sourceTree = "<group>"; };
+		FEB214E51D7AA53F00CD86F3 /* SubLBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubLBXScanViewController.m; sourceTree = "<group>"; };
+		FEB214F01D7AABAF00CD86F3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		FEFBC1771D54EC010039527C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FEFE57961D168F190056FB9F /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		FEFE57971D168F190056FB9F /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
@@ -1099,6 +1115,7 @@
 		FEA58E261C83406700FE4E8A /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				FEB214D91D7AA53F00CD86F3 /* Scan */,
 				FEA58E271C83406700FE4E8A /* Controller */,
 				FEA58E281C83406700FE4E8A /* Model */,
 				FEA58E291C83406700FE4E8A /* View */,
@@ -1268,6 +1285,31 @@
 			path = Toast;
 			sourceTree = "<group>";
 		};
+		FEB214D91D7AA53F00CD86F3 /* Scan */ = {
+			isa = PBXGroup;
+			children = (
+				FEB214F01D7AABAF00CD86F3 /* CodeScan.bundle */,
+				FEB214DA1D7AA53F00CD86F3 /* CornerRadiusCategory */,
+				FEB214DF1D7AA53F00CD86F3 /* MyQRViewController.h */,
+				FEB214E01D7AA53F00CD86F3 /* MyQRViewController.m */,
+				FEB214E11D7AA53F00CD86F3 /* ScanResultViewController.h */,
+				FEB214E21D7AA53F00CD86F3 /* ScanResultViewController.m */,
+				FEB214E31D7AA53F00CD86F3 /* ScanResultViewController.xib */,
+				FEB214E41D7AA53F00CD86F3 /* SubLBXScanViewController.h */,
+				FEB214E51D7AA53F00CD86F3 /* SubLBXScanViewController.m */,
+			);
+			path = Scan;
+			sourceTree = "<group>";
+		};
+		FEB214DA1D7AA53F00CD86F3 /* CornerRadiusCategory */ = {
+			isa = PBXGroup;
+			children = (
+				FEB214DB1D7AA53F00CD86F3 /* UIImageView+CornerRadius.h */,
+				FEB214DC1D7AA53F00CD86F3 /* UIImageView+CornerRadius.m */,
+			);
+			path = CornerRadiusCategory;
+			sourceTree = "<group>";
+		};
 		FEFE57951D168F080056FB9F /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -1414,6 +1456,7 @@
 				FEA58E6B1C83406700FE4E8A /* VKVideoPlayer_close.png in Resources */,
 				FEA58E691C83406700FE4E8A /* VKVideoPlayerViewController~ipad.xib in Resources */,
 				FEA58E7B1C83406700FE4E8A /* VKVideoPlayer_zoom_in.png in Resources */,
+				FEB214EA1D7AA53F00CD86F3 /* ScanResultViewController.xib in Resources */,
 				FEA58E6F1C83406700FE4E8A /* VKVideoPlayer_next.png in Resources */,
 				FEA58E7F1C83406700FE4E8A /* LICENSE in Resources */,
 				FEA58E6D1C83406700FE4E8A /* VKVideoPlayer_cross.png in Resources */,
@@ -1438,6 +1481,7 @@
 				FEA58E781C83406700FE4E8A /* VKVideoPlayer_play_big@2x.png in Resources */,
 				FEA58E741C83406700FE4E8A /* VKVideoPlayer_pause_big@2x.png in Resources */,
 				FE79FD201D12DAB9001D052D /* icon_suo_h@3x.png in Resources */,
+				FEB214F11D7AABAF00CD86F3 /* CodeScan.bundle in Resources */,
 				FE79FD1D1D12DAB9001D052D /* icon_kai_n@3x.png in Resources */,
 				FE79FD271D12DAB9001D052D /* pb-seek-bar-bg@2x.png in Resources */,
 				FE79FD721D12E555001D052D /* nav_btn_back_n.png in Resources */,
@@ -1523,7 +1567,9 @@
 				FEA58E601C83406700FE4E8A /* VKVideoPlayerCaption.m in Sources */,
 				FE2C6FD31D1E077800AAB51E /* TFVSegmentSlider.m in Sources */,
 				FE08C9361CC51CB5008F3290 /* MASConstraint.m in Sources */,
+				FEB214E61D7AA53F00CD86F3 /* UIImageView+CornerRadius.m in Sources */,
 				FE0D02EC1D67D850009B4206 /* LBXAlertAction.m in Sources */,
+				FEB214E81D7AA53F00CD86F3 /* MyQRViewController.m in Sources */,
 				FE08C9391CC51CB5008F3290 /* MASViewAttribute.m in Sources */,
 				FE28D83C1C886B13000AFC70 /* BaseTabBarController.m in Sources */,
 				FE79FD651D12DF15001D052D /* TFMoviePlayerViewController.m in Sources */,
@@ -1575,6 +1621,7 @@
 				FEA58E871C8347BE00FE4E8A /* PrivateList_RootController.m in Sources */,
 				89CDBE6D1C83F06B00C52481 /* HTTPStreamingServer.m in Sources */,
 				FEB214D81D7A85A700CD86F3 /* UIView+Toast.m in Sources */,
+				FEB214E91D7AA53F00CD86F3 /* ScanResultViewController.m in Sources */,
 				FEA58E641C83406700FE4E8A /* VKVideoPlayerSettingsManager.m in Sources */,
 				FE2C6FD01D1E077800AAB51E /* TFVideoPlayerView+Extension.m in Sources */,
 				FEA58E841C8347A500FE4E8A /* MovieList_RootController.m in Sources */,
@@ -1584,6 +1631,7 @@
 				FE59C1241C8A681D009666BE /* Global.m in Sources */,
 				FE28D81B1C8868DE000AFC70 /* BaseNavigationController.m in Sources */,
 				FE28D82F1C886ABF000AFC70 /* RDVTabBar.m in Sources */,
+				FEB214EB1D7AA53F00CD86F3 /* SubLBXScanViewController.m in Sources */,
 				FE28D8311C886ABF000AFC70 /* RDVTabBarItem.m in Sources */,
 				FE08C93E1CC51CB5008F3290 /* ViewController+MASAdditions.m in Sources */,
 				FE79FD8F1D156381001D052D /* Base_TableViewController.m in Sources */,
