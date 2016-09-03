@@ -167,7 +167,7 @@
     //要分享的内容，加在一个数组里边，初始化UIActivityViewController
     NSString *textToShare = @"万能的播放器我非常喜欢，推荐你也是使用";
     UIImage *imageToShare = [UIImage imageNamed:@"movie_icon"];
-    NSURL *urlToShare = [NSURL URLWithString:@"http://www.baidu.com"];
+    NSURL *urlToShare = [NSURL URLWithString:@"https://itunes.apple.com/us/app/wen-jian-da-shi-wan-nengu/id1090434597?l=zh&ls=1&mt=8"];
     NSArray *activityItems = @[urlToShare,textToShare,imageToShare];
     
     /**
@@ -226,11 +226,10 @@
         _dataArray = [NSMutableArray array];
         
         SettingModel *m01 = [SettingModel settingIconName:@"saoyisao_s" title:@"扫一扫"];
-        SettingModel *m02 = [SettingModel settingIconName:@"share_s" title:@"分享给朋友"];
 
         SettingGroup *g0 = [[SettingGroup alloc]init];
         g0.header = @"扩展";
-        g0.items = @[m01,m02];
+        g0.items = @[m01];
         
         
         SettingModel *m21 = [SettingModel settingIconName:@"use_icon2" title:@"使用教程"];
@@ -244,10 +243,11 @@
         SettingModel *m0 = [SettingModel settingIconName:@"feedBack" title:@"建议"];
         SettingModel *m1 = [SettingModel settingIconName:@"icon_me_review" title:@"应用评分"];
 //        SettingModel *m2 = [SettingModel settingIconName:@"abouts" title:@"关于"];
-        
+        SettingModel *m02 = [SettingModel settingIconName:@"share_s" title:@"分享给朋友"];
+
         SettingGroup *g2 = [[SettingGroup alloc]init];
         g2.header = @"通用";
-        g2.items = @[m1,m0];
+        g2.items = @[m1,m0,m02];
 
         SettingModel *m31 = [SettingModel settingIconName:@"abouts" title:@"关于"];
         SettingGroup *g3 = [[SettingGroup alloc]init];
