@@ -40,7 +40,7 @@
     bannerView.frame = self.bounds;
     [self addSubview:self.bannerView];
  
-    NSLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
+    KLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
     self.bannerView.adUnitID = @"ca-app-pub-8145075793156354/9913856620";
 //    req
 //    self.bannerView.rootViewController = self.rootVc;
@@ -55,10 +55,10 @@
     //    if ([self.delegate respondsToSelector:@selector(AdvertFooterViewDidReceiveData:)]) {
     //        [self.delegate AdvertFooterViewDidReceiveData:self.model];
     //    }
-    NSLog(@"--adViewDidReceiveAd-:successs");
+    KLog(@"--adViewDidReceiveAd-:successs");
 }
 - (void)adView:(GADBannerView *)bannerView didFailToReceiveAdWithError:(GADRequestError *)error{
-    NSLog(@"footer-error:%@",error);
+    KLog(@"footer-error:%@",error);
 //    if ([self.delegate respondsToSelector:@selector(AdvertFooterViewDidReceiveData:)]) {
 //        [self.delegate AdvertFooterViewDidReceiveData:self.model];
 //    }

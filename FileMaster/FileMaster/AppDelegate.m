@@ -130,7 +130,7 @@
 
 
 - (NSString *)attachmentForException:(NSException *)exception {
-    NSLog(@"Callback: trap exception: ", exception);
+    KLog(@"Callback: trap exception: ", exception);
     
     return @"This is an attachment";
 }

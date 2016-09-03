@@ -52,5 +52,16 @@
 
 #define KAppid                  @"1090434597"  //App Store Id
 
+/** DEBUG LOG **/
+#ifdef DEBUG
+
+#define KLog( s, ... ) NSLog( @"< %@:(%d) > %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
+
+#else
+
+#define KLog( s, ... )
+
+#endif
+
 
 #endif /* PrefixHeader_pch */

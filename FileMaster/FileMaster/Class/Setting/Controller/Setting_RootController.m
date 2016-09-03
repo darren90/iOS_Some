@@ -167,12 +167,8 @@
     //要分享的内容，加在一个数组里边，初始化UIActivityViewController
     NSString *textToShare = @"万能的播放器我非常喜欢，推荐你也是使用";
     UIImage *imageToShare = [UIImage imageNamed:@"movie_icon"];
-    NSURL *urlToShare = [NSURL URLWithString:@"http://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=%@&pageNumber=0&sortOrdering=2&type=Purple+Software&mt=8"];
+    NSURL *urlToShare = [NSURL URLWithString:@"http://www.baidu.com"];
     NSArray *activityItems = @[urlToShare,textToShare,imageToShare];
-    
-    //自定义Activity
-    ShareActivity * custom = [[ShareActivity alloc] initWithTitie:@"飞哥" withActivityImage:[UIImage imageNamed:@"movie_icon"] withUrl:urlToShare withType:@"customActivity" withShareContext:activityItems];
-    NSArray *activities = @[custom];
     
     /**
      创建分享视图控制器
@@ -182,7 +178,7 @@
      Activities  是一个UIActivity对象的数组，代表了应用程序支持的自定义服务。这个参数可以是nil。
      
      */
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:activities];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
     
     if([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0){
         //初始化回调方法
@@ -190,9 +186,11 @@
         {
             NSLog(@"activityType :%@", activityType);
             if (completed)  {
+                if ([activityType containsString:@"CopyToPasteboard"]) {
+                    [self.view makeToast:@"Copy成功" duration:1.0 position:CSToastPositionBottom];
+                }
                 NSLog(@"completed");
-            }
-            else  {
+            }else  {
                 NSLog(@"cancel");
             }
             
@@ -204,12 +202,9 @@
         UIActivityViewControllerCompletionHandler myBlock = ^(NSString *activityType,BOOL completed)
         {
             NSLog(@"activityType :%@", activityType);
-            if (completed)
-            {
+            if (completed) {
                 NSLog(@"completed");
-            }
-            else
-            {
+            }else{
                 NSLog(@"cancel");
             }
             

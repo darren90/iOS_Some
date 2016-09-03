@@ -204,7 +204,7 @@
                 [self.navigationController presentViewController:playerVc animated:YES completion:nil];
             }
             @catch(NSException *exception) {
-                NSLog(@"exception:%@", exception);
+                KLog(@"exception:%@", exception);
             }
             @finally {
                 

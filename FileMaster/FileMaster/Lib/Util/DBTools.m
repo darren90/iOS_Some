@@ -23,7 +23,7 @@ static FMDatabaseQueue *_queue;
     //不能放到Documents目录下，会和iTunes传输过来的内容冲突
     NSString *path = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"fileMaster.sqlite"];
     
-    NSLog(@"%@",path);
+    KLog(@"%@",path);
     
     // 1.创建队列
     _queue = [FMDatabaseQueue databaseQueueWithPath:path];
