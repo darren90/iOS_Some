@@ -7,11 +7,12 @@
 //
 
 #import "Global.h"
+#define fileManager [NSFileManager defaultManager]
 
 @implementation Global
 
 +(NSString *)getFileSize:(NSString *)path
-{    
+{
     NSString *message = @"";
  
     long long bytes = 0;
@@ -34,7 +35,6 @@
     }
  
     return message;
-
 }
 
 //计算缓存大小
@@ -81,7 +81,11 @@
     NSFileManager* manager = [NSFileManager defaultManager];
     if ([manager fileExistsAtPath:filePath])
     {
-        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
+//        return [[manager attributesOfItemAtPath:filePath error:nil] fileSize];
+        NSDictionary *dict=   [fileManager attributesOfItemAtPath:filePath error:nil];
+        
+        float size=[dict[@"NSFileSize"] floatValue];
+        return size;
     }
     return 0;
 }

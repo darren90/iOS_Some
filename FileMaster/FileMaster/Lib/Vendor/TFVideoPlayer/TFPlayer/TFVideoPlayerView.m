@@ -99,6 +99,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.durationLbl.font =RRTHMEFONT(DEVICEVALUE(16.0f, 12.0f));
     self.durationLbl.textColor = [UIColor whiteColor];
 
+    [self.lockButton setImage:[UIImage imageNamed:@"lock"] forState:UIControlStateNormal];
     //当前点点的位置
     [self.progressSld setThumbImage:[UIImage imageNamed:@"pb-seek-bar-btn@2x.png"] forState:UIControlStateNormal];
     //已播放的条的颜色
@@ -270,6 +271,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         self.topControl.hidden = !self.topControl.hidden;
         self.bottomControl.hidden = !self.bottomControl.hidden;
         self.bigPlayButton.hidden = !self.bigPlayButton.hidden;
+        self.lockButton.hidden  = self.bottomControl.hidden;
         
         [[UIApplication sharedApplication]setStatusBarHidden:self.topControl.hidden withAnimation:UIStatusBarAnimationNone];
     }
@@ -368,12 +370,13 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.isLockBtnEnable = !self.isLockBtnEnable;
     if (!self.isLockBtnEnable) {
         //开
-        [self.lockButton setImage:[UIImage imageNamed:@"icon_suo_h"] forState:UIControlStateNormal];
+        [self.lockButton setImage:[UIImage imageNamed:@"lock"] forState:UIControlStateNormal];
         self.topControl.hidden = NO;
         self.bottomControl.hidden = NO;
         self.bigPlayButton.hidden = NO;
     }else{
         //锁
+        [self.lockButton setImage:[UIImage imageNamed:@"unlock"] forState:UIControlStateNormal];
         self.topControl.hidden = YES;
         self.bottomControl.hidden = YES;
         self.bigPlayButton.hidden = YES;
