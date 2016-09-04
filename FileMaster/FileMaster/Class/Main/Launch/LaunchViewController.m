@@ -59,7 +59,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.noDataView.hidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.userInteractionEnabled = YES;
 

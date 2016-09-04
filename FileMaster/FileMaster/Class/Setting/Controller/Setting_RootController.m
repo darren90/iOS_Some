@@ -286,7 +286,12 @@
     // 分享功能(Facebook, Twitter, 新浪微博, 腾讯微博...)需要你在手机上设置中心绑定了登录账户, 才能正常显示。
     activityVC.excludedActivityTypes = @[];
     
-    //在展现view controller时，必须根据当前的设备类型，使用适当的方法。在iPad上，必须通过popover来展现view controller。在iPhone和iPodtouch上，必须以模态的方式展现。
+    //在展现view controller时，必须根据当前的设备类型，使用适当的方法。在iP ad上，必须通过popover来展现view controller。在iPhone和iPodtouch上，必须以模态的方式展现。
+    if (isIPad) {
+        activityVC.popoverPresentationController.sourceView = self.view;
+        activityVC.popoverPresentationController.sourceRect = CGRectMake(100, 300, 100, 100);
+    }
+    
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 

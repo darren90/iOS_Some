@@ -43,6 +43,11 @@
 #define IsIOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
 
 
+// 是否iPad
+#define isIPad                   (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+
+
 //1:腾讯bugly
 #define KBuglyAPPID     @"aeaf2e5cf7"
 #define KBuglyAPPKey    @"52aada05-f5c0-4afc-bca2-7a518b78229f"
