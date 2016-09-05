@@ -50,6 +50,7 @@
     tableView.dataSource = self;
 //    tableView.frame = self.view.bounds;
     [tableView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero];
+    tableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
 }
 
 - (void)didReceiveMemoryWarning {

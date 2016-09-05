@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Base_TableViewController.h"
 
 @class MovieFile;
-@interface MovieFolderViewController : UITableViewController
+@interface MovieFolderViewController : Base_TableViewController
 
 @property (nonatomic,strong)MovieFile *file;
 

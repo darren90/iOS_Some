@@ -88,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIb-oy-o98" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1325" y="87"/>
+            <point key="canvasLocation" x="-1309" y="95"/>
         </scene>
         <!--本地视频-->
         <scene sceneID="tti-gi-N5K">
@@ -117,12 +117,30 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B68-cY-t1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="87"/>
+            <point key="canvasLocation" x="-470" y="95"/>
         </scene>
         <!--Movie Folder View Controller-->
+        <scene sceneID="T6j-CQ-T3F">
+            <objects>
+                <viewController storyboardIdentifier="folderVc" id="ryZ-jh-oz0" customClass="MovieFolderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AHt-Qu-PeO"/>
+                        <viewControllerLayoutGuide type="bottom" id="2eb-4B-Lz3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vbU-de-rYB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFg-Mo-I9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="-525"/>
+        </scene>
+        <!--Table View Controller-->
         <scene sceneID="XYN-bb-sFo">
             <objects>
-                <tableViewController storyboardIdentifier="folderVc" id="EFA-bn-Z0I" customClass="MovieFolderViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="folderVc1" id="EFA-bn-Z0I" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iui-x5-nrr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +170,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RtD-uf-e1C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="93"/>
+            <point key="canvasLocation" x="304" y="124"/>
         </scene>
         <!--本地视频-->
         <scene sceneID="t1Y-yD-i17">
