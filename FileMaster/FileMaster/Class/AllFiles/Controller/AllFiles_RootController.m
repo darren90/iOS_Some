@@ -38,9 +38,7 @@
     [super viewWillAppear:animated];
     
     NSString *docsDir = [NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"];
-//    NSArray *aa = [FCFileManager listFilesInDirectoryAtPath:docsDir deep:YES];
-//    NSArray *aa2 = [FCFileManager listFilesInDirectoryAtPath:docsDir];
-
+ 
     NSMutableArray *pathArray =  [GetFilesTools scanFilesAtPath:docsDir];//[self scanFilesAtPath:docsDir];
     
     self.dataArray = pathArray;//[self getMovieList];
@@ -49,8 +47,6 @@
     }else{
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"编辑" style:UIBarButtonItemStyleDone target:self action:@selector(editList:)];
     }
-    
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"saoyisao"] style:UIBarButtonItemStyleDone target:self action:@selector(saoyisao)];
     
     [self.tableView reloadData];
 }
@@ -117,18 +113,10 @@
     }else{
         MovieList *list = model.file;
         if (list.fileType == FileMovieCanPlay) {
-            @try{
-                TFMoviePlayerViewController *playerVc = [[TFMoviePlayerViewController alloc] init];
-                playerVc.topTitle = list.name;
-                playerVc.playLocalUrl = list.name;
-                [self.navigationController presentViewController:playerVc animated:YES completion:nil];
-            }
-            @catch(NSException *exception) {
-                KLog(@"exception:%@", exception);
-            }
-            @finally {
-                
-            }
+            TFMoviePlayerViewController *playerVc = [[TFMoviePlayerViewController alloc] init];
+            playerVc.topTitle = list.name;
+            playerVc.playLocalUrl = list.name;
+            [self.navigationController presentViewController:playerVc animated:YES completion:nil];
         }else if (list.fileType == FileImage){
             
         }

@@ -34,7 +34,7 @@
     // Initialization code
     self.iconView.clipsToBounds = YES;
 }
-
+ 
 -(void)setModel:(MovieFile *)model
 {
     if (model.isFolder) {
@@ -44,6 +44,7 @@
         self.sizeLabel.hidden = YES;
     }else{
         MovieList *list = model.file;
+//        self.iconView.image = [UIImage imageNamed:@"movie_icon"];
 //        self.iconView.image = list.imgData;
          self.sizeLabel.hidden = NO;
         self.nameLabel.text = list.name;
