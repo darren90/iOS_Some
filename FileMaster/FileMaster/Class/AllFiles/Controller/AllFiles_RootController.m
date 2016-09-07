@@ -102,6 +102,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView.isEditing)    return ;
+    
     MovieFile *model = self.dataArray[indexPath.row];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
