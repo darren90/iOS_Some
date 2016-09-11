@@ -41,7 +41,7 @@
     [self addSubview:self.bannerView];
  
     KLog(@"Google Mobile Ads SDK version: %@", [GADRequest sdkVersion]);
-    self.bannerView.adUnitID = @"ca-app-pub-8145075793156354/9913856620";
+    self.bannerView.adUnitID = @"ca-app-pub-8145075793156354/9913856620";//ca-app-pub-8145075793156354/9444776620
 //    req
 //    self.bannerView.rootViewController = self.rootVc;
     self.bannerView.delegate = self;
