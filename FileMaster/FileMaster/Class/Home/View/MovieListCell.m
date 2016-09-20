@@ -31,6 +31,8 @@
 }
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     // Initialization code
     self.iconView.clipsToBounds = YES;
 }

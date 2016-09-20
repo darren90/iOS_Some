@@ -83,6 +83,26 @@
     
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    MovieFile *file = self.dataArray[indexPath.row];
+    MovieList *model = file.file;
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        //1：局部删除一行的刷新
+        [self.dataArray removeObjectAtIndex:indexPath.row];
+        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+        
+        if (file.isFolder) {
+            [WdCleanCaches deleteDownloadFileWithFilePath:file.path];
+        }else{
+            [WdCleanCaches deleteDownloadFileWithFilePath:model.path];
+        }
+    }
+    
+}
+
+
 - (IBAction)backToRootVc:(UIBarButtonItem *)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
