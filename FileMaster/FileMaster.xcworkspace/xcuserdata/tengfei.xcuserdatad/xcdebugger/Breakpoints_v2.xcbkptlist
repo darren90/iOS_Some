@@ -58,7 +58,7 @@
             startingLineNumber = "121"
             endingLineNumber = "121"
             landmarkName = "+deleteDownloadFileWithFilePath:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -156,7 +156,7 @@
             startingLineNumber = "373"
             endingLineNumber = "373"
             landmarkName = "-lockButtonClick:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -172,7 +172,7 @@
             startingLineNumber = "370"
             endingLineNumber = "370"
             landmarkName = "-lockButtonClick:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
