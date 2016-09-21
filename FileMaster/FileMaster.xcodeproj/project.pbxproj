@@ -485,6 +485,7 @@
 		FEB214E41D7AA53F00CD86F3 /* SubLBXScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubLBXScanViewController.h; sourceTree = "<group>"; };
 		FEB214E51D7AA53F00CD86F3 /* SubLBXScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubLBXScanViewController.m; sourceTree = "<group>"; };
 		FEB214F01D7AABAF00CD86F3 /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
+		FEE0F1D71D92CC990008F0F6 /* FileMaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FileMaster.entitlements; sourceTree = "<group>"; };
 		FEFBC1771D54EC010039527C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		FEFE57961D168F190056FB9F /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		FEFE57971D168F190056FB9F /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
@@ -974,6 +975,7 @@
 		FEA58DE91C83275F00FE4E8A /* FileMaster */ = {
 			isa = PBXGroup;
 			children = (
+				FEE0F1D71D92CC990008F0F6 /* FileMaster.entitlements */,
 				FEA58DED1C83275F00FE4E8A /* AppDelegate.h */,
 				FEA58DEE1C83275F00FE4E8A /* AppDelegate.m */,
 				FEA58DF01C83275F00FE4E8A /* ViewController.h */,
@@ -1390,6 +1392,11 @@
 					FEA58DE61C83275F00FE4E8A = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 68539G8D3N;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					FEA58DFF1C83275F00FE4E8A = {
 						CreatedOnToolsVersion = 7.2.1;
