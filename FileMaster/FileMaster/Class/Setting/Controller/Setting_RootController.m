@@ -345,10 +345,21 @@
     
     float totalSize = [[fattributes objectForKey:NSFileSystemSize] floatValue] / (1024*1024*1024);
     float freeSize  = [[fattributes objectForKey:NSFileSystemFreeSize] floatValue] / (1024*1024*1024);
-    NSString *sizeStr = [NSString stringWithFormat:@"剩余%.2fG，共计%.2fG",freeSize,totalSize];
+    NSString *sizeStr = [NSString stringWithFormat:@"剩余:%.2fG 共计:%.2fG",freeSize,totalSize];
     float version = [[UIDevice currentDevice].systemVersion floatValue];
-    NSString *g3Footer = [NSString stringWithFormat:@"iOS:%f %@",version,sizeStr];
+    NSString *g3Footer = [NSString stringWithFormat:@"iOS%@  %@",[self formatFloat:version],sizeStr];
     return g3Footer;
+}
+
+- (NSString *)formatFloat:(float)f
+{
+    if (fmodf(f, 1)==0) {//如果有一位小数点
+        return [NSString stringWithFormat:@"%.0f",f];
+    } else if (fmodf(f*10, 1)==0) {//如果有两位小数点
+        return [NSString stringWithFormat:@"%.1f",f];
+    } else {
+        return [NSString stringWithFormat:@"%.2f",f];
+    }
 }
 
 @end
