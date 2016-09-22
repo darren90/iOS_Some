@@ -326,6 +326,8 @@
         SettingModel *m31 = [SettingModel settingIconName:@"abouts" title:@"关于"];
         SettingGroup *g3 = [[SettingGroup alloc]init];
         g3.header = @"关于";
+
+        g3.footer = [self setG3FooterStr];
         g3.items = @[m31];
 
         [_dataArray addObject:g0];
@@ -334,6 +336,19 @@
         [_dataArray addObject:g3];
     }
     return _dataArray;
+}
+
+
+-(NSString *)setG3FooterStr
+{
+    NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
+    
+    float totalSize = [[fattributes objectForKey:NSFileSystemSize] floatValue] / (1024*1024*1024);
+    float freeSize  = [[fattributes objectForKey:NSFileSystemFreeSize] floatValue] / (1024*1024*1024);
+    NSString *sizeStr = [NSString stringWithFormat:@"剩余%.2fG，共计%.2fG",freeSize,totalSize];
+    float version = [[UIDevice currentDevice].systemVersion floatValue];
+    NSString *g3Footer = [NSString stringWithFormat:@"iOS:%f %@",version,sizeStr];
+    return g3Footer;
 }
 
 @end
