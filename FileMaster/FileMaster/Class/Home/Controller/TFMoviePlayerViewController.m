@@ -30,6 +30,14 @@
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+}
+
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
@@ -153,11 +161,10 @@
     _player = nil;
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle
-{
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
-
 
 - (BOOL)shouldAutorotate{
     return YES;

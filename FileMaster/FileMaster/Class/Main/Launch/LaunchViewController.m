@@ -59,7 +59,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.noDataView.hidden = YES;
+//    self.noDataView.hidden = YES;
     self.view.backgroundColor = [UIColor whiteColor];
     self.view.userInteractionEnabled = YES;
 
@@ -173,16 +173,10 @@ NSLog(@"interstitialDidDismissScreen");
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
-
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-//    UIViewController *keyVc = app.window.rootViewController;
-//    if ([keyVc isKindOfClass:[BaseTabBarController class]]) {
-//        [self destroyTimer];
-//    }else{
-        [self.view removeFromSuperview];
-        app.window.rootViewController = tabBarVc;
-        [app.window makeKeyAndVisible];
-//    }
+    
+    [self.view removeFromSuperview];
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+    [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
 }
 
 
