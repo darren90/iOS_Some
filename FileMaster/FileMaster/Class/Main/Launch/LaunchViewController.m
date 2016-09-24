@@ -28,6 +28,22 @@
 
 @implementation LaunchViewController
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    
+    if ([UIApplication sharedApplication].statusBarOrientation != UIInterfaceOrientationPortrait) {
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+        [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+        
+        BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
+        UIWindow *w = [UIApplication sharedApplication].keyWindow;
+        NSLog(@"%@--%@",w,w.rootViewController);
+    
+        [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+        [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+    }
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -58,15 +74,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    self.noDataView.hidden = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
-    self.view.userInteractionEnabled = YES;
-
-    [self startNewGame];
     
-    self.count = 6;//最先6S的等待时间，时间到，广告加载不出开，则不再进行加载
-    [self addTimer];
+//    self.noDataView.hidden = YES;
+    
+    if ([UIApplication sharedApplication].statusBarOrientation == UIInterfaceOrientationPortrait) {
+        self.view.backgroundColor = [UIColor whiteColor];
+        self.view.userInteractionEnabled = YES;
+
+        [self startNewGame];
+        
+        self.count = 6;//最先6S的等待时间，时间到，广告加载不出开，则不再进行加载
+        [self addTimer];
+    }
 }
 
 - (void)startNewGame {
@@ -206,17 +225,16 @@ NSLog(@"interstitialDidDismissScreen");
 #pragma mark - 销毁定时器
 -(void)destroyTimer
 {
-    [self.timer invalidate];
-    self.timer = nil;
+    if (_timer.isValid) {
+        [_timer invalidate]; //让定时器失效
+        _timer = nil;
+    }
 }
 
 
 - (void)dealloc
 {
-    if (_timer.isValid) {
-        [_timer invalidate]; //让定时器失效
-        _timer = nil;
-    }
+    [self destroyTimer];
 }
 
 

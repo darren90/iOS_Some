@@ -21,7 +21,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>6</string>
+	<string>7</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>
@@ -34,7 +34,7 @@
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>访问蓝牙</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string></string>
+	<string>访问日历</string>
 	<key>NSCameraUsageDescription</key>
 	<string>访问相机</string>
 	<key>NSPhotoLibraryUsageDescription</key>
