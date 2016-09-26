@@ -145,8 +145,8 @@ NSLog(@"interstitialDidFailToPresentScreen");
 /// Called before the interstitial is to be animated off the screen.
 - (void)interstitialWillDismissScreen:(GADInterstitial *)ad
 {
-NSLog(@"interstitialWillDismissScreen");
-//    [self destroyTimer];
+    NSLog(@"interstitialWillDismissScreen");
+
     [self jump];
 }
 
