@@ -153,7 +153,7 @@ NSLog(@"interstitialDidFailToPresentScreen");
 /// Called just after dismissing an interstitial and it has animated off the screen.
 - (void)interstitialDidDismissScreen:(GADInterstitial *)ad
 {
-NSLog(@"interstitialDidDismissScreen");
+    NSLog(@"interstitialDidDismissScreen");
 }
 
 /// Called just before the application will background or terminate because the user clicked on an
