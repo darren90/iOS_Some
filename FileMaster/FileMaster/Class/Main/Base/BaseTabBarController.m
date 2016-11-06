@@ -39,7 +39,6 @@
 
 -(void)initViewControllers
 {
-    
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     AllFiles_RootController *allVC = [sb instantiateViewControllerWithIdentifier:@"AllFiles"];
@@ -127,5 +126,9 @@
     return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
 }
 
+
+-(void)test{
+     NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, <#NSSearchPathDomainMask domainMask#>, <#BOOL expandTilde#>)
+}
 
 @end
