@@ -53,7 +53,6 @@
     Setting_RootController *settingVc = [sb instantiateViewControllerWithIdentifier:@"Setting"];
     BaseNavigationController *settingNav = [[BaseNavigationController alloc]initWithRootViewController:settingVc];
 
-//    [self setViewControllers:@[movielistNav,privateListNav, settingNav]];
     [self setViewControllers:@[allNav,movielistNav, settingNav]];
     
     [self initTabBarForController];
