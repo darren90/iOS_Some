@@ -29,7 +29,6 @@
     //    [self.rdv_tabBarController setTabBarHidden:YES animated:YES];
     
     [self  initViewControllers];
-    //    NSArray *array =  self.viewControllers;
 }
 
 - (void)didReceiveMemoryWarning {
