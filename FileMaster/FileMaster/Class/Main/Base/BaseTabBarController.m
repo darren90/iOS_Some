@@ -124,8 +124,4 @@
 }
 
 
--(void)test{
-     NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, <#NSSearchPathDomainMask domainMask#>, <#BOOL expandTilde#>)
-}
-
 @end
