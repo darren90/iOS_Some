@@ -16,7 +16,7 @@
             startingLineNumber = "105"
             endingLineNumber = "105"
             landmarkName = "+get_rank_word_year:"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -32,7 +32,7 @@
             startingLineNumber = "47"
             endingLineNumber = "47"
             landmarkName = "+initialize"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,7 +48,7 @@
             startingLineNumber = "72"
             endingLineNumber = "72"
             landmarkName = "+get_rank_sorts"
-            landmarkType = "5">
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

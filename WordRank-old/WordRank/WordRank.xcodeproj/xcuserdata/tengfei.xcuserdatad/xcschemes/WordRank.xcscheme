@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0800"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FEDE0E241DDCA8EE00266EF3"
+               BlueprintIdentifier = "FE037C221D3B51A700FCD6C4"
                BuildableName = "WordRank.app"
                BlueprintName = "WordRank"
                ReferencedContainer = "container:WordRank.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FEDE0E381DDCA8EE00266EF3"
+               BlueprintIdentifier = "FE037C3B1D3B51A700FCD6C4"
                BuildableName = "WordRankTests.xctest"
                BlueprintName = "WordRankTests"
                ReferencedContainer = "container:WordRank.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FEDE0E431DDCA8EE00266EF3"
+               BlueprintIdentifier = "FE037C461D3B51A700FCD6C4"
                BuildableName = "WordRankUITests.xctest"
                BlueprintName = "WordRankUITests"
                ReferencedContainer = "container:WordRank.xcodeproj">
@@ -52,7 +52,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEDE0E241DDCA8EE00266EF3"
+            BlueprintIdentifier = "FE037C221D3B51A700FCD6C4"
             BuildableName = "WordRank.app"
             BlueprintName = "WordRank"
             ReferencedContainer = "container:WordRank.xcodeproj">
@@ -75,7 +75,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEDE0E241DDCA8EE00266EF3"
+            BlueprintIdentifier = "FE037C221D3B51A700FCD6C4"
             BuildableName = "WordRank.app"
             BlueprintName = "WordRank"
             ReferencedContainer = "container:WordRank.xcodeproj">
@@ -94,7 +94,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FEDE0E241DDCA8EE00266EF3"
+            BlueprintIdentifier = "FE037C221D3B51A700FCD6C4"
             BuildableName = "WordRank.app"
             BlueprintName = "WordRank"
             ReferencedContainer = "container:WordRank.xcodeproj">
