@@ -599,6 +599,7 @@ static float scale = 2208.0/900;
      *  @return return value description
      */
     [[UIDevice currentDevice]endGeneratingDeviceOrientationNotifications];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 }
 
 #pragma - mark  进入全屏

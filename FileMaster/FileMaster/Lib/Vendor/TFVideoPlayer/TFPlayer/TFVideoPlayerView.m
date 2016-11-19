@@ -319,6 +319,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     if (!self.isLockBtnEnable) {
         self.lockButton.hidden = YES;
     }
+    [[UIApplication sharedApplication] setStatusBarHidden:self.topControl.hidden withAnimation:UIStatusBarAnimationNone];
 }
 
 #pragma mark - 分享
@@ -617,6 +618,11 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [self.progressSld setFrameOriginX:self.curPosLbl.frame.origin.x + self.durationLbl.frame.size.width + 4];
     [self.progressSld setFrameWidth:self.durationLbl.frame.origin.x - self.progressSld.frame.origin.x - 4];
     [self.progressSld setFrameOriginY:CGRectGetHeight(self.bottomControl.frame)/2 - CGRectGetHeight(self.progressSld.frame)/2];
+}
+
+-(void)dealloc
+{
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 }
 
 @end
