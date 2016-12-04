@@ -17,5 +17,8 @@
 @property (nonatomic,assign)BOOL allowRotation;
 
 
+//http://www.cnblogs.com/xjy-123/p/5163128.html
+//如何用代码控制以不同屏幕方向打开新页面
+//http://www.cocoachina.com/ios/20150810/12895.html
 @end
 
