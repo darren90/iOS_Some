@@ -63,11 +63,8 @@ typedef enum {
     TFVideoPlayerControlEventSwipeNext,
     TFVideoPlayerControlEventSwipePrevious,
     TFVideoPlayerControlEventShare,//分享
-    TFVideoPlayerControlEventSuggest,//反馈
-    TFVideoPlayerControlEventSelectMenu,//选集
     TFVideoPlayerControlEventPause,//暂停
     TFVideoPlayerControlEventPlay,//播放
-    TFVideoplayercontroleventDanMu,//弹幕
     TFVideoplayercontroleventClarity,//清晰度
 } TFVideoPlayerControlEvent;
 

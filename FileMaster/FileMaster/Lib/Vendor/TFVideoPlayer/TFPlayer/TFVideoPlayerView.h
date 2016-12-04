@@ -16,7 +16,7 @@
 
 
 @protocol TFVideoPlayerViewDelegate <NSObject>
-//@property (nonatomic, readonly) VKVideoPlayerTrack* videoTrack;
+
 @property (nonatomic, readonly) UIInterfaceOrientation visibleInterfaceOrientation;
 - (void)fullScreenButtonTapped;
 - (void)playButtonPressed;
@@ -100,7 +100,7 @@
 @property (nonatomic, weak) IBOutlet UILabel  *durationLbl;
 @property (nonatomic, weak) IBOutlet UILabel  *bubbleMsgLbl;//
 @property (nonatomic, weak) IBOutlet UILabel  *downloadRate;//下载速度显示
-//@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityCarrier;
+
 @property (nonatomic, weak) IBOutlet UIView  	*activityCarrier;
 @property (nonatomic, weak) IBOutlet UIView  	*backView;
 @property (nonatomic, weak) IBOutlet UIView  	*carrier;
@@ -108,13 +108,10 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *shareBtn;//分享
-/** 清晰度 */
-@property (weak, nonatomic) IBOutlet UIButton *clarityButton;
-@property (weak, nonatomic) IBOutlet UIButton *suggestBtn;//上报
+
 @property (weak, nonatomic) IBOutlet UIButton *selectBtn;//选集
 @property (weak, nonatomic) IBOutlet UIButton *smallLockBtn;//小锁屏
-@property (weak, nonatomic) IBOutlet UIButton *danMuBtn;//弹幕按钮
-@property (weak, nonatomic) IBOutlet UIButton *inputDanmuBtn;//写弹幕
+
 @property (nonatomic, weak) IBOutlet UIButton* fullscreenButton;
 
 @property (nonatomic, copy)   NSURL *videoURL;
@@ -158,8 +155,6 @@
 #pragma mark 分享
 - (IBAction)shareButtonTapped:(UIButton *)sender;
 
-//#pragma mark 上报
-//- (IBAction)suggestButtonTapped:(UIButton *)sender;
 #pragma mark 选集
 - (IBAction)selectMenuButtonTapped:(UIButton *)sender;
 

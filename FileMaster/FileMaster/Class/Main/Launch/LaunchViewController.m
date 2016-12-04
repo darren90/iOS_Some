@@ -37,7 +37,7 @@
         
         BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
         UIWindow *w = [UIApplication sharedApplication].keyWindow;
-        NSLog(@"%@--%@",w,w.rootViewController);
+        NSLog(@"广告业--:%@--%@",w,w.rootViewController);
     
         [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
         [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];

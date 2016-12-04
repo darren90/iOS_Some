@@ -26,16 +26,14 @@
     [super viewDidAppear:animated];
     
     [self.player playerWillAppear];
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -43,6 +41,10 @@
     [super viewDidDisappear:animated];
     
     [self.player playerDidDisAppear];
+    
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 }
 
 -(void)viewDidLoad

@@ -45,8 +45,8 @@
     MovieList_RootController *movieListVc = [sb instantiateViewControllerWithIdentifier:@"MovieList"];
     BaseNavigationController *movielistNav = [[BaseNavigationController alloc]initWithRootViewController:movieListVc];
  
-    PrivateList_RootController *privateListVc = [sb instantiateViewControllerWithIdentifier:@"PrivateList"];
-    BaseNavigationController *privateListNav = [[BaseNavigationController alloc]initWithRootViewController:privateListVc];
+//    PrivateList_RootController *privateListVc = [sb instantiateViewControllerWithIdentifier:@"PrivateList"];
+//    BaseNavigationController *privateListNav = [[BaseNavigationController alloc]initWithRootViewController:privateListVc];
     
     Setting_RootController *settingVc = [sb instantiateViewControllerWithIdentifier:@"Setting"];
     BaseNavigationController *settingNav = [[BaseNavigationController alloc]initWithRootViewController:settingVc];
@@ -116,12 +116,20 @@
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return [self.viewControllers.lastObject supportedInterfaceOrientations];
+    
+    return [self.selectedViewController supportedInterfaceOrientations];
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
+    return [self.selectedViewController preferredInterfaceOrientationForPresentation];
 }
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+//    return [self.viewControllers.lastObject supportedInterfaceOrientations];
+//}
+//
+//- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+//    return [self.viewControllers.lastObject preferredInterfaceOrientationForPresentation];
+//}
 
 
 @end

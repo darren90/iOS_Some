@@ -181,8 +181,21 @@
     sender.title = self.tableView.isEditing ? @"编辑" : @"完成" ;
     [self.tableView setEditing:!self.tableView.isEditing animated:YES];
     
-    
 }
+
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait ;
+}
+
+- (BOOL)shouldAutorotate{
+    return NO;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
+
 @end
 
 

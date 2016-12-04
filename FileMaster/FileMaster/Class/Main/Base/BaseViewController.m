@@ -71,6 +71,11 @@
     return UIStatusBarStyleLightContent;
 }
 
+//- (BOOL)shouldAutorotate NS_AVAILABLE_IOS(6_0);当前viewcontroller是否支持转屏
+//
+//- (NSUInteger)supportedInterfaceOrientations；当前viewcontroller支持哪些转屏方向
+//
+//-(UIInterfaceOrientation)preferredInterfaceOrientationForPresentation当前viewcontroller默认的屏幕方向
 @end
 
 

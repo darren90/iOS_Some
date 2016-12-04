@@ -150,11 +150,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/TFPlayer/TFVideoPlayerView.m"
-            timestampString = "501171024.425538"
+            timestampString = "502553856.851664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "374"
-            endingLineNumber = "374"
+            startingLineNumber = "349"
+            endingLineNumber = "349"
             landmarkName = "-lockButtonClick:"
             landmarkType = "7">
          </BreakpointContent>
@@ -166,11 +166,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/TFPlayer/TFVideoPlayerView.m"
-            timestampString = "501171024.425538"
+            timestampString = "502553856.851664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
+            startingLineNumber = "346"
+            endingLineNumber = "346"
             landmarkName = "-lockButtonClick:"
             landmarkType = "7">
          </BreakpointContent>
@@ -204,6 +204,38 @@
             startingLineNumber = "40"
             endingLineNumber = "40"
             landmarkName = "-viewDidAppear:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FileMaster/Class/Main/Launch/LaunchViewController.m"
+            timestampString = "502554821.032655"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FileMaster/Class/AllFiles/Controller/AllFiles_RootController.m"
+            timestampString = "502555951.269215"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

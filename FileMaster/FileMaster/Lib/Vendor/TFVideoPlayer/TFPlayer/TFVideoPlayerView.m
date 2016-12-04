@@ -93,7 +93,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.titleLabel.textColor = [UIColor whiteColor];
     self.titleLabel.text = @"";
 
-    self.inputDanmuBtn.layer.cornerRadius = 11;
     self.curPosLbl.font = RRTHMEFONT(DEVICEVALUE(16.0f, 12.0f));
     self.curPosLbl.textColor = [UIColor whiteColor];
     self.durationLbl.font =RRTHMEFONT(DEVICEVALUE(16.0f, 12.0f));
@@ -311,15 +310,20 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 -(void)hiddenTopBottom
 {
-    if (!self.topControl.hidden) {
-        self.topControl.hidden = YES;
-        self.bottomControl.hidden = YES;
-        self.bigPlayButton.hidden = YES;
-    }
-    if (!self.isLockBtnEnable) {
-        self.lockButton.hidden = YES;
-    }
-    [[UIApplication sharedApplication] setStatusBarHidden:self.topControl.hidden withAnimation:UIStatusBarAnimationNone];
+    NSLog(@"---hiddenTopBottom---");
+    [UIView animateWithDuration:0.5 animations:^{
+        if (!self.topControl.hidden) {
+            self.topControl.hidden = YES;
+            self.bottomControl.hidden = YES;
+            self.bigPlayButton.hidden = YES;
+            [[UIApplication sharedApplication] setStatusBarHidden:self.topControl.hidden withAnimation:UIStatusBarAnimationNone];
+        }
+        if (!self.isLockBtnEnable) {
+            self.lockButton.hidden = YES;
+        }
+    } completion:^(BOOL finished) {
+        
+    }];
 }
 
 #pragma mark - 分享
@@ -329,35 +333,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [self hiddenTopBottom];
     //代理
     [self.delegate shareButtonTapped];
-}
-
-#pragma mark - 上报
-- (IBAction)suggestButtonTapped:(UIButton *)sender
-{
-
-}
-
-#pragma mark - 选集
-- (IBAction)selectMenuButtonTapped:(UIButton *)sender
-{
-    [self.delegate selectMenuButtonTapped];
-}
-
-- (IBAction)clarityButtonTapped:(UIButton *)sender
-{
-    [self.delegate clarityButtonTapped];
-}
-
-#pragma mark - 弹幕按钮
-- (IBAction)handDanmuAction:(UIButton *)sender
-{
-    [self.delegate isAllowDanmu];
-}
-
-#pragma mark - 输入弹幕
-- (IBAction)inputDanmuAction:(UIButton *)sender
-{
-
 }
 
 #pragma mark - 右下角的全屏按钮
@@ -382,7 +357,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         self.bottomControl.hidden = YES;
         self.bigPlayButton.hidden = YES;
     }
-    self.lockButton.hidden = YES;
+//    self.lockButton.hidden = YES;
 }
 
 - (void)setPlayButtonsEnabled:(BOOL)enabled {
@@ -531,15 +506,15 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 快进
 - (void)configureSpeedView{
     if (self.forwardView == nil) {
-        ForwardBackView *forwardView = [[ForwardBackView alloc]initWithFrame:CGRectMake(0, 0, 170, 84)];
+        ForwardBackView *forwardView = [[ForwardBackView alloc]initWithFrame:CGRectMake(0, 0, 100, 64)];
         forwardView.alpha = 0.8;
         forwardView.hidden = YES;
         [self addSubview:forwardView];
         self.forwardView = forwardView;
 //        self.center = forwardView.center;
         [forwardView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(84);
-            make.width.mas_equalTo(170);
+            make.height.mas_equalTo(50);//84
+            make.width.mas_equalTo(100);//170
             make.center.equalTo(self);
         }];
     }
@@ -566,38 +541,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 }
 
 
-- (void)layoutForOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
-        self.topControl.hidden = YES;
-//        self.topPortraitControlOverlay.hidden = NO;
-
-//        [self.buttonPlaceHolderView setFrameOriginY:PADDING/2];
-//        self.buttonPlaceHolderView.hidden = YES;
-
-        self.clarityButton.hidden = YES;
-//        self.videoQualityButton.hidden = YES;
-
-        [self.bigPlayButton setFrameOriginY:CGRectGetMinY(self.bottomControl.frame)/2 - CGRectGetHeight(self.bigPlayButton.frame)/2];
- 
-
-    } else {
-        [self.topControl setFrameOriginY:0.0f];
-        self.topControl.hidden = NO;
-//        self.topPortraitControlOverlay.hidden = YES;
-
-//        [self.buttonPlaceHolderView setFrameOriginY:PADDING/2 + CGRectGetMaxY(self.topControlOverlay.frame)];
-//        self.buttonPlaceHolderView.hidden = NO;
-
-        self.clarityButton.hidden = NO;
-//        self.videoQualityButton.hidden = NO;
-
-        [self.bigPlayButton setFrameOriginY:(CGRectGetMinY(self.bottomControl.frame) - CGRectGetMaxY(self.topControl.frame))/2 + CGRectGetMaxY(self.topControl.frame) - CGRectGetHeight(self.bigPlayButton.frame)/2];
- 
-    }
-
-    [self layoutTopControls];
-    [self layoutSliderForOrientation:interfaceOrientation];
-}
 
 -(void)layoutTopControls {
     CGFloat rightMargin = CGRectGetMaxX(self.topControl.frame);
@@ -607,19 +550,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         }
     }
 }
-
-- (void)layoutSliderForOrientation:(UIInterfaceOrientation)interfaceOrientation{
-    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
-        [self.durationLbl setFrameOriginX:CGRectGetMinX(self.fullscreenButton.frame) - self.durationLbl.frame.size.width];
-    } else {
-        [self.durationLbl setFrameOriginX:CGRectGetMinX(self.clarityButton.frame) - self.durationLbl.frame.size.width - PADDING];
-    }
-
-    [self.progressSld setFrameOriginX:self.curPosLbl.frame.origin.x + self.durationLbl.frame.size.width + 4];
-    [self.progressSld setFrameWidth:self.durationLbl.frame.origin.x - self.progressSld.frame.origin.x - 4];
-    [self.progressSld setFrameOriginY:CGRectGetHeight(self.bottomControl.frame)/2 - CGRectGetHeight(self.progressSld.frame)/2];
-}
-
+ 
 -(void)dealloc
 {
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
 @interface Base_TableViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 

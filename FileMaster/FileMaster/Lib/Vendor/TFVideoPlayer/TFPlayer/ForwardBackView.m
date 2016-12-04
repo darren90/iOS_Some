@@ -23,16 +23,26 @@
         self.layer.cornerRadius = 2;
         self.backgroundColor = [UIColor colorWithHue:20/255.0 saturation:20/255.0 brightness:20/255.0 alpha:1.0];
         
-        forwardImage = [[UIImageView alloc]initWithFrame:CGRectMake((frame.size.width - 52)/2, 20, 52, 30)];
+        forwardImage = [[UIImageView alloc]initWithFrame:CGRectMake((frame.size.width - 40)/2, 6, 30, 20)];
+        forwardImage.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:forwardImage];
         
-        seconds = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(forwardImage.frame) + 10, frame.size.width - 20, 16)];
-        seconds.font = [UIFont boldSystemFontOfSize:14];
+        seconds = [[UILabel alloc]initWithFrame:CGRectMake(3, CGRectGetMaxY(forwardImage.frame) + 3, frame.size.width - 6, 16)];
+        seconds.font = [UIFont boldSystemFontOfSize:10];
         seconds.textColor = [UIColor whiteColor];
         seconds.textAlignment = NSTextAlignmentCenter;
+        seconds.adjustsFontSizeToFitWidth = YES;
         [self addSubview:seconds];
     }
     return self;
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    forwardImage.frame = CGRectMake((self.frame.size.width - 40)/2, 6, 30, 20);
+    
+    seconds.frame = CGRectMake(3, CGRectGetMaxY(forwardImage.frame) + 3, self.frame.size.width - 6, 16);
 }
 
 - (void)setDirection:(ForwardDirection)direction
@@ -47,8 +57,6 @@
 - (void)setTime:(NSString *)time
 {
     if (time) {
-        
-        
         seconds.text = time;
     }
 }

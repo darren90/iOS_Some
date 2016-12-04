@@ -30,14 +30,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait];//此方法
     [self setupBugly];// Init the Bugly sdk
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    //    self.window.backgroundColor = [UIColor whiteColor];
-//    BaseTabBarController *tabBarVc = [[BaseTabBarController alloc]init];
-    LaunchViewController *launchVc = [[LaunchViewController alloc ]init];
-    self.window.rootViewController = launchVc;
+    UIViewController *rootVc;
+    if ([UIApplication sharedApplication].statusBarOrientation != UIInterfaceOrientationPortrait){
+         rootVc = [[BaseTabBarController alloc]init];
+    }else{
+        rootVc = [[LaunchViewController alloc ]init];
+    }
+    rootVc = [[BaseTabBarController alloc]init];
+//    LaunchViewController *launchVc = [[LaunchViewController alloc ]init];
+    self.window.rootViewController = rootVc;
     
     [self.window makeKeyAndVisible];
     

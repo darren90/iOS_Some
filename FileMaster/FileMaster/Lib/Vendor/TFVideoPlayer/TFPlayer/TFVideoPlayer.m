@@ -262,23 +262,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     }
 }
 
-#pragma mark - 选集
--(void)selectMenuButtonTapped
-{
-    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventSelectMenu];
-    }
-}
-
-
-#pragma mark - 弹幕按钮
--(void)isAllowDanmu
-{
-    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:TFVideoplayercontroleventDanMu];
-    }
-}
-
+ 
 -(void)clarityButtonTapped
 {
     if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
