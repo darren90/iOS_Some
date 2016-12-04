@@ -116,7 +116,8 @@
 }
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    
+//    UIInterfaceOrientationMask ll = [self.selectedViewController supportedInterfaceOrientations];
+//    NSLog(@"-tab-1-:%@--:%lu",self.viewControllers.lastObject,(unsigned long)ll);
     return [self.selectedViewController supportedInterfaceOrientations];
 }
 

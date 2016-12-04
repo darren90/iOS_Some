@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseTableViewController : UITableViewController
+
 @property (nonatomic, weak) UIImageView *noDataView;
 
 @end

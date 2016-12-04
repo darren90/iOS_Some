@@ -40,7 +40,7 @@
         NSLog(@"广告业--:%@--%@",w,w.rootViewController);
     
         [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
-        [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+//        [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
     }
 }
 
@@ -196,7 +196,7 @@ NSLog(@"interstitialDidFailToPresentScreen");
     
     [self.view removeFromSuperview];
     [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
-    [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+//    [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
 }
 
 

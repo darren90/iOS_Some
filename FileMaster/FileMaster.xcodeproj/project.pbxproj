@@ -29,6 +29,7 @@
 		FE0D02EA1D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E41D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m */; };
 		FE0D02EB1D67D850009B4206 /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E61D67D850009B4206 /* UIAlertView+LBXAlertAction.m */; };
 		FE0D02EC1D67D850009B4206 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E81D67D850009B4206 /* LBXAlertAction.m */; };
+		FE1ADC461DF473E500DD7968 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1ADC451DF473E500DD7968 /* MoviePlayerViewController.m */; };
 		FE28D8111C872F72000AFC70 /* MovieFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8101C872F72000AFC70 /* MovieFolderViewController.m */; };
 		FE28D8141C8734D4000AFC70 /* MovieFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8131C8734D4000AFC70 /* MovieFile.m */; };
 		FE28D8161C873CCF000AFC70 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE28D8151C873CCF000AFC70 /* MovieListCell.xib */; };
@@ -167,7 +168,6 @@
 		FEA58E8A1C8347CE00FE4E8A /* Setting_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E891C8347CE00FE4E8A /* Setting_RootController.m */; };
 		FEA58E8D1C8348F400FE4E8A /* MovieListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E8C1C8348F400FE4E8A /* MovieListCell.m */; };
 		FEA58E901C834A2000FE4E8A /* MovieList.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E8F1C834A2000FE4E8A /* MovieList.m */; };
-		FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */; };
 		FEB214401D75BB3900CD86F3 /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEB2143F1D75BB3900CD86F3 /* Bugly.framework */; };
 		FEB214D41D7A80C000CD86F3 /* ShareActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214D31D7A80C000CD86F3 /* ShareActivity.m */; };
 		FEB214D81D7A85A700CD86F3 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB214D71D7A85A700CD86F3 /* UIView+Toast.m */; };
@@ -245,6 +245,8 @@
 		FE0D02E61D67D850009B4206 /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
 		FE0D02E71D67D850009B4206 /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
 		FE0D02E81D67D850009B4206 /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
+		FE1ADC441DF473E500DD7968 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
+		FE1ADC451DF473E500DD7968 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		FE28D80F1C872F72000AFC70 /* MovieFolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFolderViewController.h; sourceTree = "<group>"; };
 		FE28D8101C872F72000AFC70 /* MovieFolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieFolderViewController.m; sourceTree = "<group>"; };
 		FE28D8121C8734D4000AFC70 /* MovieFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFile.h; sourceTree = "<group>"; };
@@ -468,8 +470,6 @@
 		FEA58E8C1C8348F400FE4E8A /* MovieListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieListCell.m; sourceTree = "<group>"; };
 		FEA58E8E1C834A2000FE4E8A /* MovieList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieList.h; sourceTree = "<group>"; };
 		FEA58E8F1C834A2000FE4E8A /* MovieList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieList.m; sourceTree = "<group>"; };
-		FEA58E911C834E0F00FE4E8A /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
-		FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		FEB2143F1D75BB3900CD86F3 /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
 		FEB214D21D7A80C000CD86F3 /* ShareActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareActivity.h; sourceTree = "<group>"; };
 		FEB214D31D7A80C000CD86F3 /* ShareActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareActivity.m; sourceTree = "<group>"; };
@@ -672,6 +672,8 @@
 		FE28D8171C8868B2000AFC70 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FE1ADC441DF473E500DD7968 /* MoviePlayerViewController.h */,
+				FE1ADC451DF473E500DD7968 /* MoviePlayerViewController.m */,
 				FE28D8181C8868B2000AFC70 /* Base */,
 				FEFE57951D168F080056FB9F /* Launch */,
 			);
@@ -1048,8 +1050,6 @@
 				FEA58E831C8347A500FE4E8A /* MovieList_RootController.m */,
 				FE28D80F1C872F72000AFC70 /* MovieFolderViewController.h */,
 				FE28D8101C872F72000AFC70 /* MovieFolderViewController.m */,
-				FEA58E911C834E0F00FE4E8A /* MoviePlayerViewController.h */,
-				FEA58E921C834E0F00FE4E8A /* MoviePlayerViewController.m */,
 				FE79FD631D12DF15001D052D /* TFMoviePlayerViewController.h */,
 				FE79FD641D12DF15001D052D /* TFMoviePlayerViewController.m */,
 			);
@@ -1591,6 +1591,7 @@
 				FE9883441D16F5E0001BD0D3 /* UseViewController.m in Sources */,
 				FEA58E621C83406700FE4E8A /* VKVideoPlayerExternalMonitor.m in Sources */,
 				FE0D02E91D67D850009B4206 /* UIActionSheet+LBXAlertAction.m in Sources */,
+				FE1ADC461DF473E500DD7968 /* MoviePlayerViewController.m in Sources */,
 				895ABFAF1C87D65D00ABF2FD /* GetFilesTools.m in Sources */,
 				FEA58E8A1C8347CE00FE4E8A /* Setting_RootController.m in Sources */,
 				FE9883411D16EE63001BD0D3 /* SettingGroup.m in Sources */,
@@ -1645,7 +1646,6 @@
 				FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */,
 				FE79FD4C1D12DAB9001D052D /* CHANGELOG.md in Sources */,
 				FE2C6FD41D1E077800AAB51E /* UIAlertView+Blocks.m in Sources */,
-				FEA58E931C834E0F00FE4E8A /* MoviePlayerViewController.m in Sources */,
 				FEA58E5E1C83406700FE4E8A /* VKVideoPlayer.m in Sources */,
 				89E759EB1C86F8DB002A10BA /* UIImage+Category.m in Sources */,
 				FE0D02EA1D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,

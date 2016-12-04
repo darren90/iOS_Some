@@ -661,6 +661,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 - (void)dealloc {
     [self unInstallPlayer];
+    NSLog(@"---TFVideoPlayer--销毁了");
 }
 
 - (void)unSetupObservers
@@ -670,13 +671,17 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 -(void)unInstallPlayer
 {
+    [mSyncSeekTimer invalidate];
+    mSyncSeekTimer = nil;
     [self quicklyStopMovie];
 
     [self unSetupObservers];
     [_mMPayer unSetupPlayer];
 
-    [_mMPayer unSetupPlayer];
     _mMPayer = nil;
+    [_view unInstallPlayerView];
+    [_view removeFromSuperview];
+    [_view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
 

@@ -9,7 +9,6 @@
 #import "MovieList_RootController.h"
 #import "MovieListCell.h"
 #import "MovieList.h"
-#import "MoviePlayerViewController.h"
 #import "MovieFolderViewController.h"
 #import "UIImage+Category.h"
 #import "MovieFile.h"

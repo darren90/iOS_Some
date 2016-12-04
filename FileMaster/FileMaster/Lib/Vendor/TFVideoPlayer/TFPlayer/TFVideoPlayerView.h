@@ -148,9 +148,6 @@
 - (IBAction)handleTwoTap:(id)sender;
 
 
-/**NSTimer对象 */
-@property (nonatomic,strong)NSTimer * timer;
-
 
 #pragma mark 分享
 - (IBAction)shareButtonTapped:(UIButton *)sender;
@@ -210,8 +207,10 @@
 //设置播放/暂停时按钮的状态， 播放 --> 暂停 :YES
 - (void)setPlayButtonsSelected:(BOOL)selected ;
 
-
-
+/**
+ *  卸载播放器的View
+ */
+-(void)unInstallPlayerView;
 
 @end
 

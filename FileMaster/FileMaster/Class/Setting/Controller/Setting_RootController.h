@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseTableViewController.h"
+#import "Base_TableViewController.h"
 
-
-@interface Setting_RootController : BaseTableViewController
+@interface Setting_RootController : Base_TableViewController
 
 @end

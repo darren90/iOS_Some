@@ -10,7 +10,6 @@
 #import "MovieList.h"
 #import "MovieFile.h"
 #import "MovieListCell.h"
-#import "MoviePlayerViewController.h"
 #import "TFMoviePlayerViewController.h"
 
 @interface MovieFolderViewController ()

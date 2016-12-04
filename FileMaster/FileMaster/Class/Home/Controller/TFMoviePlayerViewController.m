@@ -147,13 +147,13 @@
 
 -(void)dealloc
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self unInstallPlayer];
 }
 
 #pragma mark - 卸载播放器
 -(void)unInstallPlayer
 {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     [[AVAudioSession sharedInstance] setDelegate:nil];
     [_player pauseContent];
     [_player unInstallPlayer];
@@ -161,6 +161,8 @@
     [_player.view removeFromSuperview];
     _player.view = nil;
     _player = nil;
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    NSLog(@"---TFMoviePlayerViewController--销毁了");
 }
 
 

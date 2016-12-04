@@ -100,12 +100,21 @@
     return YES;
 }
 
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
-    return [self.topViewController supportedInterfaceOrientations];
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_9_0
+- (NSUInteger)supportedInterfaceOrientations
+#else
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+#endif
+//- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+{
+//    UIInterfaceOrientationMask ll = [self.topViewController supportedInterfaceOrientations];
+//    NSLog(@"-1-nav:%@-:%lu",self.topViewController,(unsigned long)ll);
+//    return [self.topViewController supportedInterfaceOrientations];
+    return [self.visibleViewController supportedInterfaceOrientations];
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return [self.topViewController preferredInterfaceOrientationForPresentation];
+    return [self.visibleViewController preferredInterfaceOrientationForPresentation];
 }
 
 

@@ -36,6 +36,9 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 @property (nonatomic,assign)BOOL isEndFast;//判断是否快进
 @property (nonatomic,strong)UISlider * volumeViewSlider;//音量view
 
+/**NSTimer对象 */
+@property (nonatomic,strong)NSTimer * timer;
+
 @end
 
 @implementation TFVideoPlayerView
@@ -141,7 +144,12 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 - (void)delPlayerPanGesture{
     [self removeGestureRecognizer:self.panGesture];
+    [self.backView removeGestureRecognizer:self.singleGesture];
+    [self.backView removeGestureRecognizer:self.doubleGesture];
+    
     self.panGesture = nil;
+    self.singleGesture = nil;
+    self.doubleGesture = nil;
 }
 
 -(IBAction)goBackButtonAction:(id)sender
@@ -310,7 +318,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 -(void)hiddenTopBottom
 {
-    NSLog(@"---hiddenTopBottom---");
     [UIView animateWithDuration:0.5 animations:^{
         if (!self.topControl.hidden) {
             self.topControl.hidden = YES;
@@ -553,7 +560,14 @@ typedef NS_ENUM(NSInteger,PanDirection) {
  
 -(void)dealloc
 {
+    [self unInstallPlayerView];
+}
+
+-(void)unInstallPlayerView {
+    [self delPlayerPanGesture];
+    [self destroyHiddeControlTimer];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    NSLog(@"---TFVideoPlayerView--销毁了");
 }
 
 @end
