@@ -19,6 +19,10 @@
 #import "LBXScanViewStyle.h"
 #import "SubLBXScanViewController.h"
 
+//手机硬盘空间
+#import <sys/mount.h>
+# define kFreeSize @"kFreeSize"
+
 @interface Setting_RootController ()
 @property (nonatomic,strong)NSMutableArray *dataArray;
 @end
@@ -30,7 +34,10 @@
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"设置"];
     
+    [self reloadFressSize];
 }
+
+
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
@@ -42,6 +49,8 @@
     
     self.tableView.backgroundColor = MJColor(239, 239, 244);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    [self makeTableData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -298,53 +307,62 @@
 -(NSMutableArray *)dataArray{
     if (_dataArray == nil) {
         _dataArray = [NSMutableArray array];
-        
-        SettingModel *m01 = [SettingModel settingIconName:@"saoyisao_s" title:@"扫一扫"];
-
-        SettingGroup *g0 = [[SettingGroup alloc]init];
-        g0.header = @"扩展";
-        g0.items = @[m01];
-        
-        
-        SettingModel *m21 = [SettingModel settingIconName:@"use_icon2" title:@"使用教程"];
-//        SettingModel *m22 = [SettingModel settingIconName:@"feedBack" title:@"常见问题"];
-        SettingGroup *g1 = [[SettingGroup alloc]init];
-        g1.header = @"帮助";
-        g1.items = @[m21];
-        
-        
-        //group1
-        SettingModel *m0 = [SettingModel settingIconName:@"feedBack" title:@"建议"];
-        SettingModel *m1 = [SettingModel settingIconName:@"icon_me_review" title:@"应用评分"];
-//        SettingModel *m2 = [SettingModel settingIconName:@"abouts" title:@"关于"];
-        SettingModel *m02 = [SettingModel settingIconName:@"share_s" title:@"分享给朋友"];
-
-        SettingGroup *g2 = [[SettingGroup alloc]init];
-        g2.header = @"通用";
-        g2.items = @[m1,m0,m02];
-
-        SettingModel *m31 = [SettingModel settingIconName:@"abouts" title:@"关于"];
-        SettingGroup *g3 = [[SettingGroup alloc]init];
-        g3.header = @"关于";
-
-        g3.footer = [self setG3FooterStr];
-        g3.items = @[m31];
-
-        [_dataArray addObject:g0];
-        [_dataArray addObject:g2];
-        [_dataArray addObject:g1];
-        [_dataArray addObject:g3];
     }
     return _dataArray;
 }
 
+-(void)makeTableData{
+    
+    SettingModel *m01 = [SettingModel settingIconName:@"saoyisao_s" title:@"扫一扫"];
+    
+    SettingGroup *g0 = [[SettingGroup alloc]init];
+    g0.header = @"扩展";
+    g0.items = @[m01];
+    
+    
+    SettingModel *m21 = [SettingModel settingIconName:@"use_icon2" title:@"使用教程"];
+    //        SettingModel *m22 = [SettingModel settingIconName:@"feedBack" title:@"常见问题"];
+    SettingGroup *g1 = [[SettingGroup alloc]init];
+    g1.header = @"帮助";
+    g1.items = @[m21];
+    
+    
+    //group1
+    SettingModel *m0 = [SettingModel settingIconName:@"feedBack" title:@"建议"];
+    SettingModel *m1 = [SettingModel settingIconName:@"icon_me_review" title:@"应用评分"];
+    //        SettingModel *m2 = [SettingModel settingIconName:@"abouts" title:@"关于"];
+    SettingModel *m02 = [SettingModel settingIconName:@"share_s" title:@"分享给朋友"];
+    
+    SettingGroup *g2 = [[SettingGroup alloc]init];
+    g2.header = @"通用";
+    g2.items = @[m1,m0,m02];
+    
+    SettingModel *m31 = [SettingModel settingIconName:@"abouts" title:@"关于"];
+    SettingGroup *g3 = [[SettingGroup alloc]init];
+    g3.header = @"关于";
+    
+    g3.footer = [self setG3FooterStr];
+    g3.items = @[m31];
+    
+    [self.dataArray addObject:g0];
+    [self.dataArray addObject:g2];
+    [self.dataArray addObject:g1];
+    [self.dataArray addObject:g3];
+}
 
 -(NSString *)setG3FooterStr
 {
-    NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
+//    NSDictionary *fattributes = [[NSFileManager defaultManager] attributesOfFileSystemForPath:NSHomeDirectory() error:nil];
+//    
+//    float totalSize = [[fattributes objectForKey:NSFileSystemSize] floatValue] / (1024*1024*1024);
+//    float freeSize  = [[fattributes objectForKey:NSFileSystemFreeSize] floatValue] / (1024*1024*1024);
     
-    float totalSize = [[fattributes objectForKey:NSFileSystemSize] floatValue] / (1024*1024*1024);
-    float freeSize  = [[fattributes objectForKey:NSFileSystemFreeSize] floatValue] / (1024*1024*1024);
+    float totalSize = [self getTotalDiskSize];
+    float freeSize  = [self getAvailableDiskSize];
+    
+    [[NSUserDefaults standardUserDefaults] setFloat:freeSize forKey:kFreeSize];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     NSString *sizeStr = [NSString stringWithFormat:@"剩余:%.2fG 共计:%.2fG",freeSize,totalSize];
     float version = [[UIDevice currentDevice].systemVersion floatValue];
     NSString *g3Footer = [NSString stringWithFormat:@"iOS%@  %@",[self formatFloat:version],sizeStr];
@@ -362,6 +380,44 @@
     }
 }
 
+
+-(void)reloadFressSize{
+    float newFreeSize  =[self getAvailableDiskSize];
+    float freeSize = [[NSUserDefaults standardUserDefaults] floatForKey:kFreeSize];
+//    NSLog(@"--newFreeSize:%.2f,freeSize:%.2f",newFreeSize,freeSize);
+
+    if (newFreeSize != freeSize) {
+        SettingGroup *g = self.dataArray.lastObject;
+        g.footer = [self setG3FooterStr];
+//        NSIndexSet *set = [NSIndexSet indexSetWithIndex:self.dataArray.count -1];
+//        [self.tableView reloadSections:set withRowAnimation:UITableViewRowAnimationBottom];
+//        [self.tableView beginUpdates];
+//        [self.tableView endUpdates];
+        [self.tableView footerViewForSection:self.dataArray.count -1].textLabel.text =  [self setG3FooterStr];
+    }
+}
+
+-(float)getTotalDiskSize
+{
+    struct statfs buf;
+    unsigned long long freeSpace = -1;
+    if (statfs("/var", &buf) >= 0)
+    {
+        freeSpace = (unsigned long long)(buf.f_bsize * buf.f_blocks);
+    }
+    return freeSpace / (1024*1024*1024.0);
+}
+
+-(float)getAvailableDiskSize
+{
+    struct statfs buf;
+    unsigned long long freeSpace = -1;
+    if (statfs("/var", &buf) >= 0) {
+        freeSpace = (unsigned long long)(buf.f_bsize * buf.f_bavail);
+    }
+    
+    return freeSpace / (1024*1024*1024.0);
+}
 
 @end
 

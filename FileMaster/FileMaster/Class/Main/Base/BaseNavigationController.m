@@ -109,12 +109,12 @@
 {
 //    UIInterfaceOrientationMask ll = [self.topViewController supportedInterfaceOrientations];
 //    NSLog(@"-1-nav:%@-:%lu",self.topViewController,(unsigned long)ll);
-//    return [self.topViewController supportedInterfaceOrientations];
-    return [self.visibleViewController supportedInterfaceOrientations];
+    return [self.topViewController supportedInterfaceOrientations];
+//    return [self.visibleViewController supportedInterfaceOrientations];
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
-    return [self.visibleViewController preferredInterfaceOrientationForPresentation];
+    return [self.topViewController preferredInterfaceOrientationForPresentation];
 }
 
 

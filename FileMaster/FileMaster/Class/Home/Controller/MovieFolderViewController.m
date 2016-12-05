@@ -105,4 +105,17 @@
 - (IBAction)backToRootVc:(UIBarButtonItem *)sender {
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait ;
+}
+
+- (BOOL)shouldAutorotate{
+    return NO;
+}
+
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+    return UIInterfaceOrientationPortrait;
+}
 @end

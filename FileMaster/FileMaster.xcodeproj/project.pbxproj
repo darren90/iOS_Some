@@ -30,6 +30,7 @@
 		FE0D02EB1D67D850009B4206 /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E61D67D850009B4206 /* UIAlertView+LBXAlertAction.m */; };
 		FE0D02EC1D67D850009B4206 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E81D67D850009B4206 /* LBXAlertAction.m */; };
 		FE1ADC461DF473E500DD7968 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1ADC451DF473E500DD7968 /* MoviePlayerViewController.m */; };
+		FE239DB91DF5C0FC008603FE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE239DB81DF5C0FC008603FE /* libc++.tbd */; };
 		FE28D8111C872F72000AFC70 /* MovieFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8101C872F72000AFC70 /* MovieFolderViewController.m */; };
 		FE28D8141C8734D4000AFC70 /* MovieFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8131C8734D4000AFC70 /* MovieFile.m */; };
 		FE28D8161C873CCF000AFC70 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE28D8151C873CCF000AFC70 /* MovieListCell.xib */; };
@@ -247,6 +248,7 @@
 		FE0D02E81D67D850009B4206 /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
 		FE1ADC441DF473E500DD7968 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		FE1ADC451DF473E500DD7968 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
+		FE239DB81DF5C0FC008603FE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		FE28D80F1C872F72000AFC70 /* MovieFolderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFolderViewController.h; sourceTree = "<group>"; };
 		FE28D8101C872F72000AFC70 /* MovieFolderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieFolderViewController.m; sourceTree = "<group>"; };
 		FE28D8121C8734D4000AFC70 /* MovieFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieFile.h; sourceTree = "<group>"; };
@@ -496,6 +498,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE239DB91DF5C0FC008603FE /* libc++.tbd in Frameworks */,
 				FEFBC1781D54EC010039527C /* CoreFoundation.framework in Frameworks */,
 				FE5428D91D198EE4009BF3B4 /* libsqlite3.tbd in Frameworks */,
 				FE79FD8A1D153F26001D052D /* GoogleMobileAds.framework in Frameworks */,
@@ -595,6 +598,7 @@
 		D4B7F2072E06A46572EED219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE239DB81DF5C0FC008603FE /* libc++.tbd */,
 				FEFBC1771D54EC010039527C /* CoreFoundation.framework */,
 				FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */,
 				FE79FD611D12DB38001D052D /* AudioToolbox.framework */,
@@ -1334,6 +1338,7 @@
 				FEA58DE51C83275F00FE4E8A /* Resources */,
 				09FDEFFF4420F7ABB63526D3 /* Copy Pods Resources */,
 				AFAA4153E8CFA1B2A0AD9265 /* Embed Pods Frameworks */,
+				FE239DBA1DF5C388008603FE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1557,6 +1562,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		FE239DBA1DF5C388008603FE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "################################################################################\n# 注意: 请配置下面的信息\n################################################################################\nBUGLY_APP_ID=\"aeaf2e5cf7\"\nBUGLY_APP_KEY=\"52aada05-f5c0-4afc-bca2-7a518b78229f\"\nBUNDLE_IDENTIFIER=\"com.ftf.FileMaster\"\n################################################################################\n# 自定义配置\n################################################################################\n# Debug模式编译是否上传，1＝上传 0＝不上传，默认不上传\nUPLOAD_DEBUG_SYMBOLS=0\n#\n# 模拟器编译是否上传，1=上传 0=不上传，默认不上传\nUPLOAD_SIMULATOR_SYMBOLS=0\n#\n# # 脚本默认配置的版本格式为CFBundleShortVersionString(CFBundleVersion),  如果你修改默认的版本格式, 请设置此变量, 如果不想修改, 请忽略此设置\n# CUSTOMIZED_APP_VERSION=\"\"\n#";
 		};
 /* End PBXShellScriptBuildPhase section */
 
