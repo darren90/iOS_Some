@@ -278,22 +278,6 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FileMaster/Class/Setting/Controller/Setting_RootController.m"
-            timestampString = "502643570.799779"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "391"
-            endingLineNumber = "391"
-            landmarkName = "-reloadFressSize"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FileMaster/Class/Setting/Controller/Setting_RootController.m"
             timestampString = "502643640.757071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"

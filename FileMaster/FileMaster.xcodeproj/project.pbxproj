@@ -29,6 +29,14 @@
 		FE0D02EA1D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E41D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m */; };
 		FE0D02EB1D67D850009B4206 /* UIAlertView+LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E61D67D850009B4206 /* UIAlertView+LBXAlertAction.m */; };
 		FE0D02EC1D67D850009B4206 /* LBXAlertAction.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0D02E81D67D850009B4206 /* LBXAlertAction.m */; };
+		FE1343BF1DFEFEF400D531F6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE1343BD1DFEFEF400D531F6 /* Interface.storyboard */; };
+		FE1343C11DFEFEF400D531F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1343C01DFEFEF400D531F6 /* Assets.xcassets */; };
+		FE1343C81DFEFEF400D531F6 /* FileMasterWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FE1343C71DFEFEF400D531F6 /* FileMasterWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FE1343D01DFEFEF400D531F6 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1343CF1DFEFEF400D531F6 /* InterfaceController.m */; };
+		FE1343D31DFEFEF400D531F6 /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1343D21DFEFEF400D531F6 /* ExtensionDelegate.m */; };
+		FE1343D61DFEFEF400D531F6 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1343D51DFEFEF400D531F6 /* NotificationController.m */; };
+		FE1343D81DFEFEF400D531F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE1343D71DFEFEF400D531F6 /* Assets.xcassets */; };
+		FE1343DC1DFEFEF400D531F6 /* FileMasterWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FE1343BB1DFEFEF400D531F6 /* FileMasterWatch.app */; };
 		FE1ADC461DF473E500DD7968 /* MoviePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1ADC451DF473E500DD7968 /* MoviePlayerViewController.m */; };
 		FE239DB91DF5C0FC008603FE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE239DB81DF5C0FC008603FE /* libc++.tbd */; };
 		FE28D8111C872F72000AFC70 /* MovieFolderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D8101C872F72000AFC70 /* MovieFolderViewController.m */; };
@@ -183,6 +191,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FE1343C91DFEFEF400D531F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEA58DDF1C83275F00FE4E8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE1343C61DFEFEF400D531F6;
+			remoteInfo = "FileMasterWatch Extension";
+		};
+		FE1343DA1DFEFEF400D531F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEA58DDF1C83275F00FE4E8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE1343BA1DFEFEF400D531F6;
+			remoteInfo = FileMasterWatch;
+		};
 		FEA58E011C83275F00FE4E8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FEA58DDF1C83275F00FE4E8A /* Project object */;
@@ -198,6 +220,31 @@
 			remoteInfo = FileMaster;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE1343E21DFEFEF400D531F6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FE1343C81DFEFEF400D531F6 /* FileMasterWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE1343E41DFEFEF400D531F6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FE1343DC1DFEFEF400D531F6 /* FileMasterWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2C0DB9C2757F2FFA7DE76AE0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -246,6 +293,20 @@
 		FE0D02E61D67D850009B4206 /* UIAlertView+LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+LBXAlertAction.m"; sourceTree = "<group>"; };
 		FE0D02E71D67D850009B4206 /* LBXAlertAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXAlertAction.h; sourceTree = "<group>"; };
 		FE0D02E81D67D850009B4206 /* LBXAlertAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXAlertAction.m; sourceTree = "<group>"; };
+		FE1343BB1DFEFEF400D531F6 /* FileMasterWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMasterWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1343BE1DFEFEF400D531F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FE1343C01DFEFEF400D531F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE1343C21DFEFEF400D531F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE1343C71DFEFEF400D531F6 /* FileMasterWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FileMasterWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE1343CD1DFEFEF400D531F6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FE1343CE1DFEFEF400D531F6 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		FE1343CF1DFEFEF400D531F6 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		FE1343D11DFEFEF400D531F6 /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		FE1343D21DFEFEF400D531F6 /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		FE1343D41DFEFEF400D531F6 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		FE1343D51DFEFEF400D531F6 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		FE1343D71DFEFEF400D531F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE1343D91DFEFEF400D531F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE1ADC441DF473E500DD7968 /* MoviePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviePlayerViewController.h; sourceTree = "<group>"; };
 		FE1ADC451DF473E500DD7968 /* MoviePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePlayerViewController.m; sourceTree = "<group>"; };
 		FE239DB81DF5C0FC008603FE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -494,6 +555,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FE1343C41DFEFEF400D531F6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FEA58DE41C83275F00FE4E8A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -671,6 +739,40 @@
 				FE0D02E61D67D850009B4206 /* UIAlertView+LBXAlertAction.m */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		FE1343BC1DFEFEF400D531F6 /* FileMasterWatch */ = {
+			isa = PBXGroup;
+			children = (
+				FE1343BD1DFEFEF400D531F6 /* Interface.storyboard */,
+				FE1343C01DFEFEF400D531F6 /* Assets.xcassets */,
+				FE1343C21DFEFEF400D531F6 /* Info.plist */,
+			);
+			path = FileMasterWatch;
+			sourceTree = "<group>";
+		};
+		FE1343CB1DFEFEF400D531F6 /* FileMasterWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FE1343CE1DFEFEF400D531F6 /* InterfaceController.h */,
+				FE1343CF1DFEFEF400D531F6 /* InterfaceController.m */,
+				FE1343D11DFEFEF400D531F6 /* ExtensionDelegate.h */,
+				FE1343D21DFEFEF400D531F6 /* ExtensionDelegate.m */,
+				FE1343D41DFEFEF400D531F6 /* NotificationController.h */,
+				FE1343D51DFEFEF400D531F6 /* NotificationController.m */,
+				FE1343D71DFEFEF400D531F6 /* Assets.xcassets */,
+				FE1343D91DFEFEF400D531F6 /* Info.plist */,
+				FE1343CC1DFEFEF400D531F6 /* Supporting Files */,
+			);
+			path = "FileMasterWatch Extension";
+			sourceTree = "<group>";
+		};
+		FE1343CC1DFEFEF400D531F6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FE1343CD1DFEFEF400D531F6 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FE28D8171C8868B2000AFC70 /* Main */ = {
@@ -962,6 +1064,8 @@
 				FEA58DE91C83275F00FE4E8A /* FileMaster */,
 				FEA58E031C83275F00FE4E8A /* FileMasterTests */,
 				FEA58E0E1C83275F00FE4E8A /* FileMasterUITests */,
+				FE1343BC1DFEFEF400D531F6 /* FileMasterWatch */,
+				FE1343CB1DFEFEF400D531F6 /* FileMasterWatch Extension */,
 				FEA58DE81C83275F00FE4E8A /* Products */,
 				2B92383E2CD96D4D8A0ED3ED /* Pods */,
 				D4B7F2072E06A46572EED219 /* Frameworks */,
@@ -974,6 +1078,8 @@
 				FEA58DE71C83275F00FE4E8A /* FileMaster.app */,
 				FEA58E001C83275F00FE4E8A /* FileMasterTests.xctest */,
 				FEA58E0B1C83275F00FE4E8A /* FileMasterUITests.xctest */,
+				FE1343BB1DFEFEF400D531F6 /* FileMasterWatch.app */,
+				FE1343C71DFEFEF400D531F6 /* FileMasterWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1328,6 +1434,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FE1343BA1DFEFEF400D531F6 /* FileMasterWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE1343E31DFEFEF400D531F6 /* Build configuration list for PBXNativeTarget "FileMasterWatch" */;
+			buildPhases = (
+				FE1343B91DFEFEF400D531F6 /* Resources */,
+				FE1343E21DFEFEF400D531F6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE1343CA1DFEFEF400D531F6 /* PBXTargetDependency */,
+			);
+			name = FileMasterWatch;
+			productName = FileMasterWatch;
+			productReference = FE1343BB1DFEFEF400D531F6 /* FileMasterWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FE1343C61DFEFEF400D531F6 /* FileMasterWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE1343E11DFEFEF400D531F6 /* Build configuration list for PBXNativeTarget "FileMasterWatch Extension" */;
+			buildPhases = (
+				FE1343C31DFEFEF400D531F6 /* Sources */,
+				FE1343C41DFEFEF400D531F6 /* Frameworks */,
+				FE1343C51DFEFEF400D531F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FileMasterWatch Extension";
+			productName = "FileMasterWatch Extension";
+			productReference = FE1343C71DFEFEF400D531F6 /* FileMasterWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		FEA58DE61C83275F00FE4E8A /* FileMaster */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEA58E141C83275F00FE4E8A /* Build configuration list for PBXNativeTarget "FileMaster" */;
@@ -1339,10 +1479,12 @@
 				09FDEFFF4420F7ABB63526D3 /* Copy Pods Resources */,
 				AFAA4153E8CFA1B2A0AD9265 /* Embed Pods Frameworks */,
 				FE239DBA1DF5C388008603FE /* ShellScript */,
+				FE1343E41DFEFEF400D531F6 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FE1343DB1DFEFEF400D531F6 /* PBXTargetDependency */,
 			);
 			name = FileMaster;
 			productName = FileMaster;
@@ -1394,6 +1536,15 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = tengfei;
 				TargetAttributes = {
+					FE1343BA1DFEFEF400D531F6 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 68539G8D3N;
+						ProvisioningStyle = Automatic;
+					};
+					FE1343C61DFEFEF400D531F6 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
 					FEA58DE61C83275F00FE4E8A = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 68539G8D3N;
@@ -1429,11 +1580,30 @@
 				FEA58DE61C83275F00FE4E8A /* FileMaster */,
 				FEA58DFF1C83275F00FE4E8A /* FileMasterTests */,
 				FEA58E0A1C83275F00FE4E8A /* FileMasterUITests */,
+				FE1343BA1DFEFEF400D531F6 /* FileMasterWatch */,
+				FE1343C61DFEFEF400D531F6 /* FileMasterWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FE1343B91DFEFEF400D531F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1343C11DFEFEF400D531F6 /* Assets.xcassets in Resources */,
+				FE1343BF1DFEFEF400D531F6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE1343C51DFEFEF400D531F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1343D81DFEFEF400D531F6 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FEA58DE51C83275F00FE4E8A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1579,6 +1749,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FE1343C31DFEFEF400D531F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE1343D31DFEFEF400D531F6 /* ExtensionDelegate.m in Sources */,
+				FE1343D01DFEFEF400D531F6 /* InterfaceController.m in Sources */,
+				FE1343D61DFEFEF400D531F6 /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FEA58DE31C83275F00FE4E8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1694,6 +1874,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FE1343CA1DFEFEF400D531F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE1343C61DFEFEF400D531F6 /* FileMasterWatch Extension */;
+			targetProxy = FE1343C91DFEFEF400D531F6 /* PBXContainerItemProxy */;
+		};
+		FE1343DB1DFEFEF400D531F6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE1343BA1DFEFEF400D531F6 /* FileMasterWatch */;
+			targetProxy = FE1343DA1DFEFEF400D531F6 /* PBXContainerItemProxy */;
+		};
 		FEA58E021C83275F00FE4E8A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FEA58DE61C83275F00FE4E8A /* FileMaster */;
@@ -1707,6 +1897,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FE1343BD1DFEFEF400D531F6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE1343BE1DFEFEF400D531F6 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		FEA58DF31C83275F00FE4E8A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1726,6 +1924,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FE1343DD1DFEFEF400D531F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 68539G8D3N;
+				IBSC_MODULE = FileMasterWatch_Extension;
+				INFOPLIST_FILE = FileMasterWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		FE1343DE1DFEFEF400D531F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 68539G8D3N;
+				IBSC_MODULE = FileMasterWatch_Extension;
+				INFOPLIST_FILE = FileMasterWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		FE1343DF1DFEFEF400D531F6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				INFOPLIST_FILE = "FileMasterWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		FE1343E01DFEFEF400D531F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				INFOPLIST_FILE = "FileMasterWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 		FEA58E121C83275F00FE4E8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1919,6 +2197,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FE1343E11DFEFEF400D531F6 /* Build configuration list for PBXNativeTarget "FileMasterWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE1343DF1DFEFEF400D531F6 /* Debug */,
+				FE1343E01DFEFEF400D531F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FE1343E31DFEFEF400D531F6 /* Build configuration list for PBXNativeTarget "FileMasterWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE1343DD1DFEFEF400D531F6 /* Debug */,
+				FE1343DE1DFEFEF400D531F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		FEA58DE21C83275F00FE4E8A /* Build configuration list for PBXProject "FileMaster" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
