@@ -2204,6 +2204,7 @@
 				FE1343E01DFEFEF400D531F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE1343E31DFEFEF400D531F6 /* Build configuration list for PBXNativeTarget "FileMasterWatch" */ = {
 			isa = XCConfigurationList;
@@ -2212,6 +2213,7 @@
 				FE1343DE1DFEFEF400D531F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FEA58DE21C83275F00FE4E8A /* Build configuration list for PBXProject "FileMaster" */ = {
 			isa = XCConfigurationList;

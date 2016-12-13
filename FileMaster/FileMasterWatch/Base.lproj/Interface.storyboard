@@ -160,7 +160,18 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController">
+                    <items>
+                        <label alignment="left" text="FileMaster" id="pl7-dR-ha1">
+                            <fontDescription key="font" type="system" pointSize="12"/>
+                        </label>
+                        <label height="0.80000000000000004" alignment="left" text="Use this file to define a testing payload for your notifications." numberOfLines="0" id="bIb-r4-7Bc"/>
+                    </items>
+                    <connections>
+                        <outlet property="contentL" destination="bIb-r4-7Bc" id="hYb-41-r6C"/>
+                        <outlet property="titleL" destination="pl7-dR-ha1" id="c4C-C3-6aH"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
