@@ -122,7 +122,7 @@
                     </items>
                     <menu key="menu" id="Q1V-fS-mNQ">
                         <items>
-                            <menuItem title="Menu Item" image="Back" id="YFn-8W-JIu" userLabel="back">
+                            <menuItem title="Menu Item" icon="decline" id="YFn-8W-JIu" userLabel="back">
                                 <connections>
                                     <action selector="backAction" destination="AgC-eL-Hgc" id="PFQ-cg-rFT"/>
                                 </connections>
@@ -155,7 +155,7 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="220" y="643"/>
+            <point key="canvasLocation" x="141" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
@@ -165,7 +165,7 @@
                         <label alignment="left" text="FileMaster" id="pl7-dR-ha1">
                             <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
-                        <label height="0.80000000000000004" alignment="left" text="Use this file to define a testing payload for your notifications." numberOfLines="0" id="bIb-r4-7Bc"/>
+                        <label height="0.80000000000000004" alignment="left" text="FileMaster Installed for free file management functions, U disk management tool" numberOfLines="0" id="bIb-r4-7Bc"/>
                     </items>
                     <connections>
                         <outlet property="contentL" destination="bIb-r4-7Bc" id="hYb-41-r6C"/>

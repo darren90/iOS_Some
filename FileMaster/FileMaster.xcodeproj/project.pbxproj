@@ -1543,6 +1543,7 @@
 					};
 					FE1343C61DFEFEF400D531F6 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 68539G8D3N;
 						ProvisioningStyle = Automatic;
 					};
 					FEA58DE61C83275F00FE4E8A = {
@@ -1933,11 +1934,14 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68539G8D3N;
 				IBSC_MODULE = FileMasterWatch_Extension;
 				INFOPLIST_FILE = FileMasterWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1953,12 +1957,15 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68539G8D3N;
 				IBSC_MODULE = FileMasterWatch_Extension;
 				INFOPLIST_FILE = FileMasterWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -1974,6 +1981,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 68539G8D3N;
 				INFOPLIST_FILE = "FileMasterWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp.watchkitextension;
@@ -1993,6 +2002,8 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 68539G8D3N;
 				INFOPLIST_FILE = "FileMasterWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster.watchkitapp.watchkitextension;
@@ -2044,7 +2055,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "aaf531af-ff66-4051-a25f-851ec9f1c2cf";
+				PROVISIONING_PROFILE = "a2b0ca24-3c42-4979-9455-50041724ac3f";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2066,8 +2077,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: tengfei feng (68539G8D3N)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: tengfei feng (68539G8D3N)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -2082,7 +2093,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "aaf531af-ff66-4051-a25f-851ec9f1c2cf";
+				PROVISIONING_PROFILE = "a2b0ca24-3c42-4979-9455-50041724ac3f";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
