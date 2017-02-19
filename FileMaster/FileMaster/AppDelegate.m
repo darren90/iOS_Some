@@ -40,8 +40,6 @@
     }else{
         rootVc = [[LaunchViewController alloc ]init];
     }
-    rootVc = [[BaseTabBarController alloc]init];
-//    LaunchViewController *launchVc = [[LaunchViewController alloc ]init];
     self.window.rootViewController = rootVc;
     
     [self.window makeKeyAndVisible];
