@@ -23,7 +23,7 @@
 #define WS(weakSelf)    __weak __typeof(&*self)weakSelf = self;
 
 
-@interface TFVideoPlayer ()<TFVideoPlayerViewDelegate>
+@interface TFVideoPlayer ()<TFVideoPlayerViewDelegate,UIAlertViewDelegate>
 {
     long               mDuration;
     long               mCurPostion;
@@ -100,6 +100,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     if (!self.mMPayer) {
         self.mMPayer = [VMediaPlayer sharedInstance];
         [self.mMPayer setupPlayerWithCarrierView:self.view.carrier withDelegate:self];
+        [self.mMPayer setSubShown:YES];
         [self setupObservers];
     }
 }
@@ -272,20 +273,36 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 -(void)changeTrackTapped
 {
-    UIAlertView *alertView = [UIAlertView
-                          showWithTitle:@"Audio Trackers Picker"
-                          message:nil
-                          cancelButtonTitle:@"Cancel"
-                          otherButtonTitles:self.trackArray
-                          tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
-                              NSInteger firstOBIndex = [alertView firstOtherButtonIndex];
-                              NSInteger lastOBIndex = firstOBIndex + [self.trackArray count];
-                              if (buttonIndex >= firstOBIndex && buttonIndex < lastOBIndex) {
-                                  [self.mMPayer setAudioTrackWithArrayIndex:(int)(buttonIndex - firstOBIndex)];
-                              }
-                          }];
-    [alertView show];
+    if (self.trackArray.count == 0)  return;
+    
+//    UIAlertView *alertView = [UIAlertView
+//                          showWithTitle:@"Audio Trackers Picker"
+//                          message:nil
+//                          cancelButtonTitle:@"Cancel"
+//                          otherButtonTitles:self.trackArray
+//                          tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+//                              NSInteger firstOBIndex = [alertView firstOtherButtonIndex];
+//                              NSInteger lastOBIndex = firstOBIndex + [self.trackArray count];
+//                              if (buttonIndex >= firstOBIndex && buttonIndex < lastOBIndex) {
+//                                  [self.mMPayer setAudioTrackWithArrayIndex:(int)(buttonIndex - firstOBIndex)];
+//                              }
+//                          }];
+//    [alertView show];
+
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"请选中音轨" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
+    for (NSString *title in self.trackArray){
+        [alert addButtonWithTitle:title];
+    }
+    [alert show];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    int selectIndex = (int)buttonIndex - 1;
+    if (selectIndex >= 0 && selectIndex < self.trackArray.count) {
+        [self.mMPayer setAudioTrackWithArrayIndex:selectIndex];
+    }
+}
+
 
 #pragma mark - 全屏
 -(void)fullScreenButtonTapped
@@ -398,6 +415,26 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     //	[player setVideoFillMode:VMVideoFillMode100];
     [player setVideoFillMode:VMVideoFillModeFit];//可以撑满屏幕 VMVideoFillModeCrop
     
+    //设置字幕
+    [self.mMPayer setSubShown:YES];
+//    [self.mMPayer setSubEncoding:@"UTF-8"];//latin1
+    NSString *docsDir = [NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"];
+    NSString *pp = [docsDir stringByAppendingPathComponent:@"love01.srt"];
+    NSString *text = [NSString stringWithContentsOfFile:pp encoding:NSUnicodeStringEncoding error:nil];
+    NSLog(@"--text:%@",text);
+    BOOL result = [self.mMPayer addSubTrackToArrayWithPath:pp];
+//    [self.mMPayer setSubTrackWithPath:pp];
+    NSLog(@"--:%d",result);
+    
+    NSArray *a = [self.mMPayer getSubTracksArray];
+//    BOOL rr = [self.mMPayer setSubTrackWithArrayIndex:0];
+//    int index = [self.mMPayer getSubTrackCurrentArrayIndex];
+    NSString *cur = [self.mMPayer getCurSubText];
+    NSLog(@"--subArray:%@-:%@",a,cur );
+    [self.mMPayer setSubShown:YES];
+    [self.mMPayer setSubEncoding:@"Unicode"];
+
+    
     mDuration = [player getDuration];
     self.totalDuraion = mDuration / 1000.000 ;
 
@@ -422,7 +459,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     NSArray * arr = [self.mMPayer getAudioTracksArray];
     self.view.trackBtn.hidden = YES;
     if (arr.count <= 1) return;
-    
+
     self.view.trackBtn.hidden = NO;
     self.trackArray = [NSMutableArray array];
     //    {
@@ -539,13 +576,15 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 - (void)mediaPlayer:(VMediaPlayer *)player videoTrackLagging:(id)arg
 {
-    //	NSLog(@"NAL 1BGR video lagging....");
+    //	NSLog(@"NAL 1BGR video lagging....") ;
 }
 
 - (void)mediaPlayer:(VMediaPlayer *)player info:(id)arg
 {
     NSLog(@"info:%@",arg);
 }
+
+
 
 #pragma mark VMediaPlayerDelegate Implement / Cache
 
@@ -594,6 +633,22 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     [UIApplication sharedApplication].idleTimerDisabled = YES;
     //	[self setBtnEnableStatus:NO];
     
+    [self.mMPayer setSubShown:YES];
+    [self.mMPayer setSubEncoding:@"UTF-8"];
+
+    //设置字幕
+//    NSString *docsDir = [NSHomeDirectory() stringByAppendingPathComponent:  @"Documents"];
+//    NSString *pp = [docsDir stringByAppendingPathComponent:@"Agents.ass"];
+//    NSString *text = [NSString stringWithContentsOfFile:pp encoding:NSISOLatin2StringEncoding error:nil];
+////    NSLog(@"--text:%@",text);
+//    BOOL result = [self.mMPayer addSubTrackToArrayWithPath:pp];
+//    [self.mMPayer setSubTrackWithPath:docsDir];
+//    NSLog(@"--:%d",result);
+//    
+//    NSArray *a = [self.mMPayer getSubTracksArray];
+//    NSLog(@"--subArray:%@",a );
+    
+    //
     NSString *docDir = [NSString stringWithFormat:@"%@/Documents", NSHomeDirectory()];
     NSLog(@"NAL &&& Doc: %@", docDir);
 
@@ -612,6 +667,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
     if (pos > 5)  pos -= 5;//时间自动向前5秒，提升用户体验
     self.lastWatchPos = pos*1000;//lastWatchPos：秒，pos：毫秒   -- 1秒=1000毫秒
+    
     [self.mMPayer prepareAsync];
     [self.view startActivityWithMsg:@"Loading..."];
 }
@@ -638,6 +694,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     [self.view setBtnEnableStatus:YES];
     [UIApplication sharedApplication].idleTimerDisabled = NO;
     self.lastWatchPos = 0;
+    [self.mMPayer setSubShown:YES];
 }
 
 

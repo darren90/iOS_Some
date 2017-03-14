@@ -10,7 +10,6 @@
 @class MovieList;
 @interface MovieFile : NSObject
 
-
 @property (nonatomic,assign)BOOL isFolder;
 
 /**

@@ -13,6 +13,11 @@
 
 @dynamic segments;
 
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    
+ 
+}
 
 - (NSArray *)segments
 {

@@ -395,7 +395,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     CGPoint transPoint = [pan translationInView:self];
     switch (pan.state) {
         case UIGestureRecognizerStateBegan:{
-            NSLog(@"x:%f  y:%f   aaa:%f,bbb:%f",veloctyPoint.x, veloctyPoint.y,transPoint.x,transPoint.y);
+//            NSLog(@"x:%f  y:%f   aaa:%f,bbb:%f",veloctyPoint.x, veloctyPoint.y,transPoint.x,transPoint.y);
             // 使用绝对值来判断移动的方向
             CGFloat x = fabs(veloctyPoint.x);
             CGFloat y = fabs(veloctyPoint.y);

@@ -47,7 +47,7 @@
     }else{
         MovieList *list = model.file;
 //        self.iconView.image = [UIImage imageNamed:@"movie_icon"];
-//        self.iconView.image = list.imgData;
+        self.iconView.image = list.imgData;
          self.sizeLabel.hidden = NO;
         self.nameLabel.text = list.name;
         self.iconGo.hidden = YES;

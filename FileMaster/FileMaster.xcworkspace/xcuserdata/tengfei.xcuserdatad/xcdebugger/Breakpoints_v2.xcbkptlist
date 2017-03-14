@@ -198,27 +198,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/TFPlayer/TFVideoPlayer.m"
-            timestampString = "509982825.217405"
+            timestampString = "510159493.181352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "644"
-            endingLineNumber = "644"
-            landmarkName = "-quicklyPlayMovie:title:seekToPos:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "FileMaster/Lib/Vendor/TFVideoPlayer/TFPlayer/TFVideoPlayer.m"
-            timestampString = "509982825.217405"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "433"
-            endingLineNumber = "433"
+            startingLineNumber = "434"
+            endingLineNumber = "434"
             landmarkName = "-mediaPlayer:didPrepared:"
             landmarkType = "7">
          </BreakpointContent>

@@ -44,22 +44,6 @@ static CGFloat LABELHIGHT = 20.0;
     self.isSmallPlayShow = YES;
 }
 
-//- (void)layoutSliderForOrientation:(UIInterfaceOrientation)interfaceOrientation{
-//
-//    if (self.isSmallPlayShow) {
-//
-//        self.durationLbl.frame = CGRectMake(X(self.fullscreenButton) - WIDTH(self.durationLbl), (HEIGHT(self.bottomControl) - LABELHIGHT)/2, WIDTH(self.durationLbl), LABELHIGHT);
-//        self.curPosLbl.frame = CGRectMake(X(self.durationLbl) - WIDTH(self.curPosLbl), Y(self.durationLbl), WIDTH(self.curPosLbl), LABELHIGHT);
-//        self.progressSld.frame = CGRectMake(MaxX(self.startPause), (HEIGHT(self.bottomControl) - HEIGHT(self.progressSld))/2, X(self.curPosLbl) - MaxX(self.startPause), HEIGHT(self.progressSld));
-//
-//    }else{
-//
-//        self.curPosLbl.frame = CGRectMake(SPACE, Y(self.fullscreenButton) + 12, WIDTH(self.curPosLbl), LABELHIGHT);
-//        self.durationLbl.frame   = CGRectMake(MaxX(self.curPosLbl), Y(self.curPosLbl), WIDTH(self.durationLbl), LABELHIGHT);
-//        self.inputDanmuBtn.frame    = CGRectMake(MaxX(self.durationLbl) + 10, Y(self.durationLbl) - 3, X(self.danMuBtn) - MaxX(self.durationLbl) - 2*SPACE, 22);
-//    }
-//}
-
 - (void)layoutSubviews {
     [super layoutSubviews];
 
@@ -70,6 +54,23 @@ static CGFloat LABELHIGHT = 20.0;
 - (void)layout{
     
     [self.bigPlayButton removeFromSuperview];
+    
+//    NSArray *arr = self.carrier.subviews;
+//    for (UIView *view in arr) {
+//        if ([view isKindOfClass:NSClassFromString(@"SysPlayerView")]) {
+//            view.frame = self.carrier.bounds;
+//            
+//            NSArray *subs = view.subviews;
+//            NSLog(@"-SysPlayerView-subs:%@",subs);
+//            
+//        }else if ([view isKindOfClass:NSClassFromString(@"GLVPlayerView")]){
+//            view.frame = self.carrier.bounds;
+//            
+//            NSArray *subs = view.subviews;
+//            NSLog(@"-GLVPlayerView-subs:%@",subs);
+//        }
+//    }
+
     
     if (self.isSmallPlayShow){
         //小屏下的布局
@@ -93,11 +94,12 @@ static CGFloat LABELHIGHT = 20.0;
         self.smallLockBtn.frame = CGRectMake(X(self.fullscreenButton) - BTNWIDTH - SPACE, Y(self.fullscreenButton), BTNWIDTH, BTNHIGHT);
         self.curPosLbl.frame = CGRectMake(MaxX(self.startPause), Y(self.fullscreenButton) + 12+6, WIDTH(self.curPosLbl), LABELHIGHT);
         self.durationLbl.frame = CGRectMake(MaxX(self.curPosLbl), Y(self.curPosLbl), WIDTH(self.durationLbl), LABELHIGHT);
-        self.progressSld.frame = CGRectMake(-2, -13, WIDTH(self.bottomControl), HEIGHT(self.progressSld));
+        self.progressSld.frame = CGRectMake(0, -13, WIDTH(self.bottomControl), HEIGHT(self.progressSld));
         self.titleLabel.frame = CGRectMake(MaxX(self.doneButton), Y(self.doneButton) + (HEIGHT(self.doneButton) - HEIGHT(self.titleLabel))/2, MaxX(self.shareBtn) - 50, HEIGHT(self.titleLabel));
         self.loadbgView.frame = CGRectMake((WIDTH(self.bottomControl) - WIDTH(self.loadbgView))/2, MinY(self.bottomControl)-HEIGHT(self.loadbgView)-20, WIDTH(self.loadbgView), HEIGHT(self.loadbgView));
         
         self.bigPlayButton.frame = CGRectMake((KWidth-WIDTH(self.bigPlayButton))/2, (KHeight-HEIGHT(self.bigPlayButton))/2, WIDTH(self.bigPlayButton), HEIGHT(self.bigPlayButton));
     }
 }
+
 @end

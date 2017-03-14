@@ -77,6 +77,19 @@
 		FE5428D71D198ED2009BF3B4 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428D21D198ED2009BF3B4 /* FMResultSet.m */; };
 		FE5428D91D198EE4009BF3B4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */; };
 		FE5428DC1D199046009BF3B4 /* DBTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428DB1D199046009BF3B4 /* DBTools.m */; };
+		FE5935BC1E6862DF005AB9D2 /* VKVideoPlayer_pause_big.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935B81E6862DF005AB9D2 /* VKVideoPlayer_pause_big.png */; };
+		FE5935BD1E6862DF005AB9D2 /* VKVideoPlayer_pause_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935B91E6862DF005AB9D2 /* VKVideoPlayer_pause_big@2x.png */; };
+		FE5935BE1E6862DF005AB9D2 /* VKVideoPlayer_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935BA1E6862DF005AB9D2 /* VKVideoPlayer_pause.png */; };
+		FE5935BF1E6862DF005AB9D2 /* VKVideoPlayer_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935BB1E6862DF005AB9D2 /* VKVideoPlayer_pause@2x.png */; };
+		FE5935C41E68638A005AB9D2 /* VKVideoPlayer_play_big.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935C01E68638A005AB9D2 /* VKVideoPlayer_play_big.png */; };
+		FE5935C51E68638A005AB9D2 /* VKVideoPlayer_play_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935C11E68638A005AB9D2 /* VKVideoPlayer_play_big@2x.png */; };
+		FE5935C61E68638A005AB9D2 /* VKVideoPlayer_play.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935C21E68638A005AB9D2 /* VKVideoPlayer_play.png */; };
+		FE5935C71E68638A005AB9D2 /* VKVideoPlayer_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE5935C31E68638A005AB9D2 /* VKVideoPlayer_play@2x.png */; };
+		FE5935D81E686AFB005AB9D2 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = FE5935C91E686AFB005AB9D2 /* CHANGELOG.md */; };
+		FE5935D91E686AFB005AB9D2 /* libffmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5935D41E686AFB005AB9D2 /* libffmpeg.a */; };
+		FE5935DA1E686AFB005AB9D2 /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5935D51E686AFB005AB9D2 /* libopenssl.a */; };
+		FE5935DB1E686AFB005AB9D2 /* libVitamio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5935D61E686AFB005AB9D2 /* libVitamio.a */; };
+		FE5935DC1E686AFB005AB9D2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FE5935D71E686AFB005AB9D2 /* LICENSE */; };
 		FE59C1241C8A681D009666BE /* Global.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1211C8A681D009666BE /* Global.m */; };
 		FE59C1251C8A681D009666BE /* WdCleanCaches.m in Sources */ = {isa = PBXBuildFile; fileRef = FE59C1231C8A681D009666BE /* WdCleanCaches.m */; };
 		FE7380371D50F83D002C178C /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE7380361D50F83D002C178C /* FCFileManager.m */; };
@@ -101,11 +114,6 @@
 		FE79FD2B1D12DAB9001D052D /* right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCD81D12DAB9001D052D /* right@2x.png */; };
 		FE79FD2C1D12DAB9001D052D /* right@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE79FCD91D12DAB9001D052D /* right@3x.png */; };
 		FE79FD4B1D12DAB9001D052D /* TFPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD051D12DAB9001D052D /* TFPlayerController.m */; };
-		FE79FD4C1D12DAB9001D052D /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = FE79FD071D12DAB9001D052D /* CHANGELOG.md */; };
-		FE79FD4D1D12DAB9001D052D /* libffmpeg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD121D12DAB9001D052D /* libffmpeg.a */; };
-		FE79FD4E1D12DAB9001D052D /* libopenssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD131D12DAB9001D052D /* libopenssl.a */; };
-		FE79FD4F1D12DAB9001D052D /* libVitamio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD141D12DAB9001D052D /* libVitamio.a */; };
-		FE79FD501D12DAB9001D052D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FE79FD151D12DAB9001D052D /* LICENSE */; };
 		FE79FD521D12DADE001D052D /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD511D12DADE001D052D /* libiconv.tbd */; };
 		FE79FD541D12DAE4001D052D /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD531D12DAE4001D052D /* libstdc++.tbd */; };
 		FE79FD561D12DAF3001D052D /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = FE79FD551D12DAF3001D052D /* libbz2.tbd */; };
@@ -348,6 +356,27 @@
 		FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		FE5428DA1D199046009BF3B4 /* DBTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBTools.h; sourceTree = "<group>"; };
 		FE5428DB1D199046009BF3B4 /* DBTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBTools.m; sourceTree = "<group>"; };
+		FE5935B81E6862DF005AB9D2 /* VKVideoPlayer_pause_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VKVideoPlayer_pause_big.png; sourceTree = "<group>"; };
+		FE5935B91E6862DF005AB9D2 /* VKVideoPlayer_pause_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VKVideoPlayer_pause_big@2x.png"; sourceTree = "<group>"; };
+		FE5935BA1E6862DF005AB9D2 /* VKVideoPlayer_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VKVideoPlayer_pause.png; sourceTree = "<group>"; };
+		FE5935BB1E6862DF005AB9D2 /* VKVideoPlayer_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VKVideoPlayer_pause@2x.png"; sourceTree = "<group>"; };
+		FE5935C01E68638A005AB9D2 /* VKVideoPlayer_play_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VKVideoPlayer_play_big.png; sourceTree = "<group>"; };
+		FE5935C11E68638A005AB9D2 /* VKVideoPlayer_play_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VKVideoPlayer_play_big@2x.png"; sourceTree = "<group>"; };
+		FE5935C21E68638A005AB9D2 /* VKVideoPlayer_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VKVideoPlayer_play.png; sourceTree = "<group>"; };
+		FE5935C31E68638A005AB9D2 /* VKVideoPlayer_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VKVideoPlayer_play@2x.png"; sourceTree = "<group>"; };
+		FE5935C91E686AFB005AB9D2 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		FE5935CC1E686AFB005AB9D2 /* VDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDefines.h; sourceTree = "<group>"; };
+		FE5935CD1E686AFB005AB9D2 /* Vitamio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vitamio.h; sourceTree = "<group>"; };
+		FE5935CE1E686AFB005AB9D2 /* VMediaExtracter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracter.h; sourceTree = "<group>"; };
+		FE5935CF1E686AFB005AB9D2 /* VMediaExtracterDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracterDef.h; sourceTree = "<group>"; };
+		FE5935D01E686AFB005AB9D2 /* VMediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayer.h; sourceTree = "<group>"; };
+		FE5935D11E686AFB005AB9D2 /* VMediaPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayerDelegate.h; sourceTree = "<group>"; };
+		FE5935D21E686AFB005AB9D2 /* VPlayerManageDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPlayerManageDef.h; sourceTree = "<group>"; };
+		FE5935D31E686AFB005AB9D2 /* VSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSingleton.h; sourceTree = "<group>"; };
+		FE5935D41E686AFB005AB9D2 /* libffmpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffmpeg.a; sourceTree = "<group>"; };
+		FE5935D51E686AFB005AB9D2 /* libopenssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopenssl.a; sourceTree = "<group>"; };
+		FE5935D61E686AFB005AB9D2 /* libVitamio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVitamio.a; sourceTree = "<group>"; };
+		FE5935D71E686AFB005AB9D2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FE59C1201C8A681D009666BE /* Global.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
 		FE59C1211C8A681D009666BE /* Global.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Global.m; sourceTree = "<group>"; };
 		FE59C1221C8A681D009666BE /* WdCleanCaches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WdCleanCaches.h; sourceTree = "<group>"; };
@@ -376,19 +405,6 @@
 		FE79FCD91D12DAB9001D052D /* right@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right@3x.png"; sourceTree = "<group>"; };
 		FE79FD041D12DAB9001D052D /* TFPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayerController.h; sourceTree = "<group>"; };
 		FE79FD051D12DAB9001D052D /* TFPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPlayerController.m; sourceTree = "<group>"; };
-		FE79FD071D12DAB9001D052D /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		FE79FD0A1D12DAB9001D052D /* VDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VDefines.h; sourceTree = "<group>"; };
-		FE79FD0B1D12DAB9001D052D /* Vitamio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vitamio.h; sourceTree = "<group>"; };
-		FE79FD0C1D12DAB9001D052D /* VMediaExtracter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracter.h; sourceTree = "<group>"; };
-		FE79FD0D1D12DAB9001D052D /* VMediaExtracterDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaExtracterDef.h; sourceTree = "<group>"; };
-		FE79FD0E1D12DAB9001D052D /* VMediaPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayer.h; sourceTree = "<group>"; };
-		FE79FD0F1D12DAB9001D052D /* VMediaPlayerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMediaPlayerDelegate.h; sourceTree = "<group>"; };
-		FE79FD101D12DAB9001D052D /* VPlayerManageDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPlayerManageDef.h; sourceTree = "<group>"; };
-		FE79FD111D12DAB9001D052D /* VSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VSingleton.h; sourceTree = "<group>"; };
-		FE79FD121D12DAB9001D052D /* libffmpeg.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libffmpeg.a; sourceTree = "<group>"; };
-		FE79FD131D12DAB9001D052D /* libopenssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopenssl.a; sourceTree = "<group>"; };
-		FE79FD141D12DAB9001D052D /* libVitamio.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVitamio.a; sourceTree = "<group>"; };
-		FE79FD151D12DAB9001D052D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FE79FD511D12DADE001D052D /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		FE79FD531D12DAE4001D052D /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		FE79FD551D12DAF3001D052D /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
@@ -489,9 +505,11 @@
 				89E759E21C86F4BF002A10BA /* AVFoundation.framework in Frameworks */,
 				FE79FD621D12DB38001D052D /* AudioToolbox.framework in Frameworks */,
 				FE79FD601D12DB2C001D052D /* CoreGraphics.framework in Frameworks */,
+				FE5935DB1E686AFB005AB9D2 /* libVitamio.a in Frameworks */,
 				89E759E41C86F4C8002A10BA /* CoreMedia.framework in Frameworks */,
 				FE79FD5E1D12DB16001D052D /* CoreVideo.framework in Frameworks */,
 				FE79FD5C1D12DB0D001D052D /* MediaPlayer.framework in Frameworks */,
+				FE5935D91E686AFB005AB9D2 /* libffmpeg.a in Frameworks */,
 				FEB214401D75BB3900CD86F3 /* Bugly.framework in Frameworks */,
 				FE79FD5A1D12DB02001D052D /* QuartzCore.framework in Frameworks */,
 				FE79FD581D12DAFB001D052D /* OpenGLES.framework in Frameworks */,
@@ -499,9 +517,7 @@
 				FE28D8441C886CAB000AFC70 /* libz.tbd in Frameworks */,
 				FE79FD541D12DAE4001D052D /* libstdc++.tbd in Frameworks */,
 				FE79FD521D12DADE001D052D /* libiconv.tbd in Frameworks */,
-				FE79FD4D1D12DAB9001D052D /* libffmpeg.a in Frameworks */,
-				FE79FD4F1D12DAB9001D052D /* libVitamio.a in Frameworks */,
-				FE79FD4E1D12DAB9001D052D /* libopenssl.a in Frameworks */,
+				FE5935DA1E686AFB005AB9D2 /* libopenssl.a in Frameworks */,
 				ACDA0AB9E59633E11723907F /* libPods.a in Frameworks */,
 				FE28D8421C886C61000AFC70 /* libMobClickLibrary.a in Frameworks */,
 			);
@@ -849,6 +865,42 @@
 			path = fmdb;
 			sourceTree = "<group>";
 		};
+		FE5935C81E686AFB005AB9D2 /* Vitamio-online */ = {
+			isa = PBXGroup;
+			children = (
+				FE5935C91E686AFB005AB9D2 /* CHANGELOG.md */,
+				FE5935CA1E686AFB005AB9D2 /* include */,
+				FE5935D41E686AFB005AB9D2 /* libffmpeg.a */,
+				FE5935D51E686AFB005AB9D2 /* libopenssl.a */,
+				FE5935D61E686AFB005AB9D2 /* libVitamio.a */,
+				FE5935D71E686AFB005AB9D2 /* LICENSE */,
+			);
+			path = "Vitamio-online";
+			sourceTree = "<group>";
+		};
+		FE5935CA1E686AFB005AB9D2 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				FE5935CB1E686AFB005AB9D2 /* Vitamio */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		FE5935CB1E686AFB005AB9D2 /* Vitamio */ = {
+			isa = PBXGroup;
+			children = (
+				FE5935CC1E686AFB005AB9D2 /* VDefines.h */,
+				FE5935CD1E686AFB005AB9D2 /* Vitamio.h */,
+				FE5935CE1E686AFB005AB9D2 /* VMediaExtracter.h */,
+				FE5935CF1E686AFB005AB9D2 /* VMediaExtracterDef.h */,
+				FE5935D01E686AFB005AB9D2 /* VMediaPlayer.h */,
+				FE5935D11E686AFB005AB9D2 /* VMediaPlayerDelegate.h */,
+				FE5935D21E686AFB005AB9D2 /* VPlayerManageDef.h */,
+				FE5935D31E686AFB005AB9D2 /* VSingleton.h */,
+			);
+			path = Vitamio;
+			sourceTree = "<group>";
+		};
 		FE59C11F1C8A681D009666BE /* ClearCache */ = {
 			isa = PBXGroup;
 			children = (
@@ -874,9 +926,9 @@
 			children = (
 				FE2C6FB41D1E077800AAB51E /* TFPlayer */,
 				FE79FCC21D12DAB9001D052D /* imgs */,
-				FE79FD061D12DAB9001D052D /* Vitamio */,
 				FE79FD041D12DAB9001D052D /* TFPlayerController.h */,
 				FE79FD051D12DAB9001D052D /* TFPlayerController.m */,
+				FE5935C81E686AFB005AB9D2 /* Vitamio-online */,
 			);
 			path = TFVideoPlayer;
 			sourceTree = "<group>";
@@ -884,6 +936,14 @@
 		FE79FCC21D12DAB9001D052D /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				FE5935C01E68638A005AB9D2 /* VKVideoPlayer_play_big.png */,
+				FE5935C11E68638A005AB9D2 /* VKVideoPlayer_play_big@2x.png */,
+				FE5935C21E68638A005AB9D2 /* VKVideoPlayer_play.png */,
+				FE5935C31E68638A005AB9D2 /* VKVideoPlayer_play@2x.png */,
+				FE5935B81E6862DF005AB9D2 /* VKVideoPlayer_pause_big.png */,
+				FE5935B91E6862DF005AB9D2 /* VKVideoPlayer_pause_big@2x.png */,
+				FE5935BA1E6862DF005AB9D2 /* VKVideoPlayer_pause.png */,
+				FE5935BB1E6862DF005AB9D2 /* VKVideoPlayer_pause@2x.png */,
 				FE79FD781D12FD7E001D052D /* Player_brightness@2x.png */,
 				FE79FD6F1D12E555001D052D /* nav_btn_back_n.png */,
 				FE79FD701D12E555001D052D /* nav_btn_back_n@2x.png */,
@@ -910,42 +970,6 @@
 				FE79FCD91D12DAB9001D052D /* right@3x.png */,
 			);
 			path = imgs;
-			sourceTree = "<group>";
-		};
-		FE79FD061D12DAB9001D052D /* Vitamio */ = {
-			isa = PBXGroup;
-			children = (
-				FE79FD071D12DAB9001D052D /* CHANGELOG.md */,
-				FE79FD081D12DAB9001D052D /* include */,
-				FE79FD121D12DAB9001D052D /* libffmpeg.a */,
-				FE79FD131D12DAB9001D052D /* libopenssl.a */,
-				FE79FD141D12DAB9001D052D /* libVitamio.a */,
-				FE79FD151D12DAB9001D052D /* LICENSE */,
-			);
-			path = Vitamio;
-			sourceTree = "<group>";
-		};
-		FE79FD081D12DAB9001D052D /* include */ = {
-			isa = PBXGroup;
-			children = (
-				FE79FD091D12DAB9001D052D /* Vitamio */,
-			);
-			path = include;
-			sourceTree = "<group>";
-		};
-		FE79FD091D12DAB9001D052D /* Vitamio */ = {
-			isa = PBXGroup;
-			children = (
-				FE79FD0A1D12DAB9001D052D /* VDefines.h */,
-				FE79FD0B1D12DAB9001D052D /* Vitamio.h */,
-				FE79FD0C1D12DAB9001D052D /* VMediaExtracter.h */,
-				FE79FD0D1D12DAB9001D052D /* VMediaExtracterDef.h */,
-				FE79FD0E1D12DAB9001D052D /* VMediaPlayer.h */,
-				FE79FD0F1D12DAB9001D052D /* VMediaPlayerDelegate.h */,
-				FE79FD101D12DAB9001D052D /* VPlayerManageDef.h */,
-				FE79FD111D12DAB9001D052D /* VSingleton.h */,
-			);
-			path = Vitamio;
 			sourceTree = "<group>";
 		};
 		FE79FD7F1D153F26001D052D /* AdSupport */ = {
@@ -1450,9 +1474,10 @@
 				FE79FD191D12DAB9001D052D /* icon_kai@2x.png in Resources */,
 				FE28D8161C873CCF000AFC70 /* MovieListCell.xib in Resources */,
 				FE2C6FD21D1E077800AAB51E /* TFVideoPlayerView.xib in Resources */,
-				FE79FD501D12DAB9001D052D /* LICENSE in Resources */,
+				FE5935C51E68638A005AB9D2 /* VKVideoPlayer_play_big@2x.png in Resources */,
 				FE79FD211D12DAB9001D052D /* left.png in Resources */,
 				FE79FD731D12E555001D052D /* nav_btn_back_n@2x.png in Resources */,
+				FE5935BC1E6862DF005AB9D2 /* VKVideoPlayer_pause_big.png in Resources */,
 				FE79FD8C1D153F26001D052D /* README.txt in Resources */,
 				FEA58DF71C83275F00FE4E8A /* Assets.xcassets in Resources */,
 				FE79FD281D12DAB9001D052D /* pb-seek-bar-btn@2x.png in Resources */,
@@ -1460,6 +1485,8 @@
 				FE79FD161D12DAB9001D052D /* audioTrackIcon.png in Resources */,
 				FE79FD231D12DAB9001D052D /* left@3x.png in Resources */,
 				FE79FD2B1D12DAB9001D052D /* right@2x.png in Resources */,
+				FE5935BD1E6862DF005AB9D2 /* VKVideoPlayer_pause_big@2x.png in Resources */,
+				FE5935BF1E6862DF005AB9D2 /* VKVideoPlayer_pause@2x.png in Resources */,
 				FE79FD2C1D12DAB9001D052D /* right@3x.png in Resources */,
 				FE79FD2A1D12DAB9001D052D /* right.png in Resources */,
 				FE79FD741D12E555001D052D /* nav_btn_back_n@3x.png in Resources */,
@@ -1472,12 +1499,17 @@
 				FE79FD221D12DAB9001D052D /* left@2x.png in Resources */,
 				FE79FD1F1D12DAB9001D052D /* icon_suo_h@2x.png in Resources */,
 				FE79FD1C1D12DAB9001D052D /* icon_kai_n@2x.png in Resources */,
+				FE5935BE1E6862DF005AB9D2 /* VKVideoPlayer_pause.png in Resources */,
 				FEA58DF51C83275F00FE4E8A /* Main.storyboard in Resources */,
 				FE79FD181D12DAB9001D052D /* icon_kai.png in Resources */,
 				FE79FD7B1D1301D7001D052D /* Default-568.png in Resources */,
 				FE79FD1A1D12DAB9001D052D /* icon_kai@3x.png in Resources */,
 				FE79FD201D12DAB9001D052D /* icon_suo_h@3x.png in Resources */,
+				FE5935C41E68638A005AB9D2 /* VKVideoPlayer_play_big.png in Resources */,
 				FEB214F11D7AABAF00CD86F3 /* CodeScan.bundle in Resources */,
+				FE5935DC1E686AFB005AB9D2 /* LICENSE in Resources */,
+				FE5935C61E68638A005AB9D2 /* VKVideoPlayer_play.png in Resources */,
+				FE5935C71E68638A005AB9D2 /* VKVideoPlayer_play@2x.png in Resources */,
 				FE79FD1D1D12DAB9001D052D /* icon_kai_n@3x.png in Resources */,
 				FE79FD271D12DAB9001D052D /* pb-seek-bar-bg@2x.png in Resources */,
 				FE79FD721D12E555001D052D /* nav_btn_back_n.png in Resources */,
@@ -1635,6 +1667,7 @@
 				FEA58E841C8347A500FE4E8A /* MovieList_RootController.m in Sources */,
 				FE2C6FCF1D1E077800AAB51E /* TFVideoPlayer.m in Sources */,
 				FE5428D71D198ED2009BF3B4 /* FMResultSet.m in Sources */,
+				FE5935D81E686AFB005AB9D2 /* CHANGELOG.md in Sources */,
 				FE28D85C1C8A6390000AFC70 /* AllFiles_RootController.m in Sources */,
 				FE59C1241C8A681D009666BE /* Global.m in Sources */,
 				FE28D81B1C8868DE000AFC70 /* BaseNavigationController.m in Sources */,
@@ -1644,7 +1677,6 @@
 				FE08C93E1CC51CB5008F3290 /* ViewController+MASAdditions.m in Sources */,
 				FE79FD8F1D156381001D052D /* Base_TableViewController.m in Sources */,
 				FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */,
-				FE79FD4C1D12DAB9001D052D /* CHANGELOG.md in Sources */,
 				FE2C6FD41D1E077800AAB51E /* UIAlertView+Blocks.m in Sources */,
 				89E759EB1C86F8DB002A10BA /* UIImage+Category.m in Sources */,
 				FE0D02EA1D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
@@ -1924,6 +1956,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/ThirdPart/UMAnalytics_Sdk_3.4.6",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio",
+					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio-online",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1953,6 +1986,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/ThirdPart/UMAnalytics_Sdk_3.4.6",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio",
+					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio-online",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
