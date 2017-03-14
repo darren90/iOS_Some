@@ -20,9 +20,67 @@
         NSLog(@"---排序后 :%@",mutabArr);
         
         [self swapTwo];
+        
+        [self addBigIntA:@"213" b:@"3"];
+        
     }
     return  self;
 }
+   
+
+-(NSString *)addBigIntA:(NSString *)a b:(NSString *)b{
+    
+    //反转 a b
+    NSString *invertA = [self invertString:a];
+    NSString *invertB = [self invertString:b];
+    
+    NSUInteger lengA = invertA.length;
+    NSUInteger lengB = invertB.length;
+    
+    if (lengA > lengB) {
+        for (int i = 0; i < lengA - lengB; i++) {
+            invertB = [invertB stringByAppendingString:@"0"];
+        }
+    }else{
+        for (int i = 0; i < lengB - lengA; i++) {
+            invertA = [invertA stringByAppendingString:@"0"];
+        }
+    }
+
+    NSLog(@"a=:%@,b=:%@",invertA,invertB);
+    
+    NSString *result = @"";
+    int carryInt = 0;
+    for (int i = 0 ; invertA.length; i++) {
+        NSRange range = NSMakeRange(i, 1);
+        NSString *subA = [invertA substringWithRange:range];
+        NSString *subB = [invertB substringWithRange:range];
+        
+        int intA = [subA intValue];
+        int intB = [subB intValue];
+        int result = intA + intB;
+        
+        if (result > 10) {
+            
+        }
+     }
+    
+    
+    return @"";
+}
+  
+-(NSString *)invertString:(NSString *)str{
+    NSString *invertA = @"";
+    for(int i = (int)str.length - 1 ; i >= 0 ; i--){
+        NSRange range = NSMakeRange(i, 1);
+        NSString *sub = [str substringWithRange:range];
+        invertA = [invertA stringByAppendingString:sub];
+    }
+//    NSLog(@"invertA:%@",invertA);
+    return invertA;
+}
+    
+    
     
 #pragma mark --- 不用临时变量怎么实现swap(a, b) 
 - (void)swapTwo{
