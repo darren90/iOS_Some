@@ -18,11 +18,22 @@
         //    [self bubbleSort:mutabArr];
         [self insertionSort:mutabArr];
         NSLog(@"---排序后 :%@",mutabArr);
+        
+        [self swapTwo];
     }
     return  self;
 }
-
-
+    
+#pragma mark --- 不用临时变量怎么实现swap(a, b) 
+- (void)swapTwo{
+        int a = 10;
+        int b = 5;
+        
+        a=a+b;
+        b=a-b;
+        a=a-b;
+        NSLog(@"a=:%d,b=:%d",a,b);
+}
 
 
 /**
