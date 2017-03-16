@@ -21,15 +21,228 @@
         
         [self swapTwo];
         
-        [self addBigIntA:@"213" b:@"3"];
-        
+        [self addBigIntA:@"3878782433421298" b:@"9777766234234234234237898"];
+
+        [self lengthOfLongestSubstring:@"abcabcbb"];
+
+        [self findNum];
+
+//        NSArray *arr = [[NSArray alloc] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
+//        [self queryNumber:arr value:7];
+
+        [self arrayRemoveDupl];
     }
     return  self;
 }
-   
 
--(NSString *)addBigIntA:(NSString *)a b:(NSString *)b{
+
+#pragma mark --- 数组去重
+-(void)arrayRemoveDupl{
+    NSArray *array = @[@"12-11", @"12-11", @"12-11", @"12-12", @"12-13", @"12-14"];
+    NSOrderedSet *set = [NSOrderedSet orderedSetWithArray:array];
+    NSLog(@"%@", set.array);
+}
+
+#pragma mark -- 消除括号
+/**
+    给定一个如下的字符串(1,(2,3),(4,(5,6)7))括号内的元素可以是数字，也可以是括号，请实现一个算法清除嵌套的括号，比如把上面的表达式的变成：(1,2,3,4,5,6,7)，表达式有误时请报错。
+ */
+-(void)removeBraces{
+    NSString *str = @"(1,(2,3),(4,(5,6)7))";
+
+
+}
+
+
+
+#pragma mark -- 二维有序数组查找数字
+/**
+    二维数组的的二分查找
+ */
+
+-(void)findNum{
+    int searchNum = 16;
+
+    NSArray *a1 = @[@1,@3,@5,@7];
+    NSArray *a2 = @[@10,@11,@16,@20];
+    NSArray *a3 = @[@23,@32,@39,@50];
+
+
+    NSArray *arr = @[a1,a2,a3];
+
+    int left = 0;
+    int right = (int)arr.count;
+    BOOL firstRetult = NO ;
+    while (left <= right) {
+        int middle = (left + right) / 2;
+
+        NSArray *rowArr = arr[middle];
+        int rowArrLast = [rowArr.lastObject intValue];
+        if (rowArrLast < searchNum) {
+            left = middle + 1;
+        }else if (rowArrLast > searchNum){
+            right = middle - 1;
+        }else{
+            firstRetult = YES;
+            NSLog(@"--结果：%d-%lu",middle,arr.count - 1);
+            break;
+        }
+    }
+
+    if (firstRetult) {
+        return;
+    }
+    NSLog(@"第一层----left:%d,right:%d",left,right);
+
+    NSArray *targetArr = arr[left];
+    int tartgetLeft = 0;
+    int tartgetRight = (int)targetArr.count;
+    BOOL secondResult = NO ;
+    while (tartgetLeft <= tartgetRight) {
+        int tartgetMiddle = (tartgetLeft + tartgetRight) / 2 ;
+
+        int targetInt = [targetArr[tartgetMiddle] intValue];
+        if (targetInt < searchNum) {
+            tartgetLeft = tartgetMiddle + 1;
+        }else if (targetInt > searchNum){
+            tartgetRight = tartgetMiddle - 1;
+        }else{
+            secondResult = YES;
+            NSLog(@"结果：%d-%d",left,tartgetMiddle);
+            break;
+        }
+    }
+
+    if (secondResult == NO) {
+        NSLog(@"没有结果，最接近的结果是：%d-%d",left,tartgetLeft);
+    }
+}
+
+#pragma mark --- 二分查找
+- (void)queryNumber:(NSArray*)arr value:(int)inter
+
+{
+
+    int left = 0;
+
+    int right = arr.count;
+
+    while (left <= right) {
+
+        int mid = (left + right) / 2;
+
+        if ([[arr objectAtIndex:mid] intValue]<  inter)  {
+            left = mid+1;
+        }  else if ([[arr objectAtIndex:mid] intValue] > inter)  {
+            right = mid - 1;
+        }  else {
+            NSLog(@"所查询的数为%d",[[arr objectAtIndex:mid] intValue]);
+            break;
+        }
+    }
     
+}
+
+
+
+
+
+-(void)findNumTemp{
+    const int rows = 3;
+    const int cols = 4;
+    int array[rows][cols] = {{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 50}};
+    int searchNum = 34;
+    // 是否查找成功
+    int found = 0;
+
+    // 查找第一行最后一个元素
+    for (int i = 0; i < rows; ++i) {
+        int last = array[i][cols - 1];
+
+        if (last == searchNum) {
+            NSLog(@"找到了，位置为：(%d, %d)", i, cols - 1);
+            break;
+        }
+        // 说明待查找的元素就在这一行，或者根本不存在
+        else if (last > searchNum) {
+            int mid = 0;
+            int low = 0;
+            int high = cols - 1;
+
+            while (low <= high) {
+                mid = (low + high) / 2;
+
+                if (array[i][mid] == searchNum) {
+                    found = YES;
+                    NSLog(@"找到了，位置为：(%d, %d)", i, cols - 1);
+                    return;
+                } else if (array[i][mid] > searchNum) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }
+            }
+            
+            if (!found) {
+                NSLog(@"查找失败了，元素并不在二维数组中");
+            }
+        }
+    }
+}
+
+
+/**
+    LeetCode：
+    Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest substring is "b", with the length of 1.
+ 
+ 思路：
+     1.若给定字符串为空，返回0（注意边界情况）；否则转2。
+
+     2.用tempString来存储无重复子串,maxSize来记录最长无重复子串的长度；
+
+     初始化tempString为给定字符串的第一个字符，maxSize=1；
+
+     从字符串的第2个字符开始，到字符串结束，依次检测每一个字符是否出现在当前无重复子串中：
+
+     （1） 若这个字符在没有出现在当前无重复子串中，将该字符加入到当前无重复子串中；
+
+     （2）若这个字符出现在了当前无重复子串中，
+
+     比较该无重复子串的长度与maxSize的大小，若该无重复子串的长度大于maxSize，更新maxSize为该无重复子串的长度；
+
+     更新tempString为字符串中出现当前字符的下一个字符起始到该字符为止的子串（这里说的比较绕口，或不好懂，可以看代码）；
+
+     3.待整个字符串都检测完毕后，最后判断一次tempString的长度与maxSize的大小，返回较大的一个。
+ */
+#pragma mark --- 最长无重复子串
+-(NSString *)lengthOfLongestSubstring:(NSString *)originStr{
+    NSUInteger length = originStr.length;
+    if (length == 0) {
+        NSLog(@"最长无重复子串-长度为0");
+        return @"";
+    }
+
+    NSString *resultStr = @"";
+//    NSUInteger subLength = 0;
+
+    for(int i = 0;i < length ; i++){
+        NSRange range = NSMakeRange(i, 1);
+        NSString *sub = [originStr substringWithRange:range];
+        if ([resultStr rangeOfString:sub].location == NSNotFound) {
+            resultStr = [resultStr stringByAppendingString:sub];
+        }
+    }
+
+    NSLog(@"%@：的最长无重复子串为：%@",originStr,resultStr);
+    return resultStr;
+}
+
+
+
+
+#pragma mark --- 大数相加
+-(NSString *)addBigIntA:(NSString *)a b:(NSString *)b{
+
     //反转 a b
     NSString *invertA = [self invertString:a];
     NSString *invertB = [self invertString:b];
@@ -47,28 +260,40 @@
         }
     }
 
-    NSLog(@"a=:%@,b=:%@",invertA,invertB);
-    
-    NSString *result = @"";
+    NSString *sumInt = @"";
     int carryInt = 0;
-    for (int i = 0 ; invertA.length; i++) {
+    for (int i = 0 ; i< invertA.length; i++) {
         NSRange range = NSMakeRange(i, 1);
         NSString *subA = [invertA substringWithRange:range];
         NSString *subB = [invertB substringWithRange:range];
         
         int intA = [subA intValue];
         int intB = [subB intValue];
-        int result = intA + intB;
-        
+        int result = intA + intB + carryInt;
+
         if (result > 10) {
-            
+            carryInt = result / 10;
+            int geweiInt = result % 10;
+            sumInt = [sumInt stringByAppendingString:[NSString stringWithFormat:@"%d",geweiInt]];
+            if(i == invertA.length - 1){
+                sumInt = [sumInt stringByAppendingString:[NSString stringWithFormat:@"%d",carryInt]];
+            }
+        }else{
+            carryInt = 0;
+            sumInt = [sumInt stringByAppendingString:[NSString stringWithFormat:@"%d",result]];
         }
      }
-    
-    
-    return @"";
+
+    NSLog(@"--大数相加的结果：%@",sumInt);
+
+    //再次反转
+    sumInt = [self invertString:sumInt];
+
+    return sumInt;
 }
-  
+
+
+#pragma mark --- 字符串反转
 -(NSString *)invertString:(NSString *)str{
     NSString *invertA = @"";
     for(int i = (int)str.length - 1 ; i >= 0 ; i--){

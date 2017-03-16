@@ -55,4 +55,42 @@
     return treeNode;
 }
 
+
+#pragma mark --- 反转二叉树
+// 主要是考查了递归的思想
+// 参考： http://wzdark.github.io/personalInfo/2015/08/03/invertBinaryTree.html
+// 参考： http://www.cnblogs.com/manji/p/4903990.html
+-(BinaryTreeNode *)invertTree:(BinaryTreeNode *)root{
+    if(root == nil){
+        return nil;
+    }
+
+    root.leftNode = [self invertTree:root.leftNode];
+    root.rightNode = [self invertTree:root.rightNode];
+
+    BinaryTreeNode *temp = root.leftNode;
+    root.leftNode = root.rightNode;
+    root.rightNode = temp;
+
+    return root;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @end
