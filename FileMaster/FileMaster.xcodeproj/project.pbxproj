@@ -70,6 +70,7 @@
 		FE2C6FD31D1E077800AAB51E /* TFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC61D1E077800AAB51E /* TFVSegmentSlider.m */; };
 		FE2C6FD41D1E077800AAB51E /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC81D1E077800AAB51E /* UIAlertView+Blocks.m */; };
 		FE2C6FD51D1E077800AAB51E /* UIView+RRFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FCA1D1E077800AAB51E /* UIView+RRFoundation.m */; };
+		FE4C7D0C1EACD7D6007963F8 /* UISlider+VDTrackHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C7D0B1EACD7D6007963F8 /* UISlider+VDTrackHeight.m */; };
 		FE5428D31D198ED2009BF3B4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428C91D198ED2009BF3B4 /* FMDatabase.m */; };
 		FE5428D41D198ED2009BF3B4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CB1D198ED2009BF3B4 /* FMDatabaseAdditions.m */; };
 		FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CD1D198ED2009BF3B4 /* FMDatabasePool.m */; };
@@ -342,6 +343,8 @@
 		FE2C6FC81D1E077800AAB51E /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 		FE2C6FC91D1E077800AAB51E /* UIView+RRFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RRFoundation.h"; sourceTree = "<group>"; };
 		FE2C6FCA1D1E077800AAB51E /* UIView+RRFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RRFoundation.m"; sourceTree = "<group>"; };
+		FE4C7D0A1EACD7D6007963F8 /* UISlider+VDTrackHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+VDTrackHeight.h"; sourceTree = "<group>"; };
+		FE4C7D0B1EACD7D6007963F8 /* UISlider+VDTrackHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+VDTrackHeight.m"; sourceTree = "<group>"; };
 		FE5428C81D198ED2009BF3B4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		FE5428C91D198ED2009BF3B4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		FE5428CA1D198ED2009BF3B4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -839,6 +842,8 @@
 				FE2C6FB81D1E077800AAB51E /* ForwardBackView.m */,
 				FE2C6FB51D1E077800AAB51E /* BrightnessView.h */,
 				FE2C6FB61D1E077800AAB51E /* BrightnessView.m */,
+				FE4C7D0A1EACD7D6007963F8 /* UISlider+VDTrackHeight.h */,
+				FE4C7D0B1EACD7D6007963F8 /* UISlider+VDTrackHeight.m */,
 				FE2C6FC71D1E077800AAB51E /* UIAlertView+Blocks.h */,
 				FE2C6FC81D1E077800AAB51E /* UIAlertView+Blocks.m */,
 				FE2C6FC91D1E077800AAB51E /* UIView+RRFoundation.h */,
@@ -1679,6 +1684,7 @@
 				FE79FD7E1D153E8C001D052D /* AdvertView.m in Sources */,
 				FE2C6FD41D1E077800AAB51E /* UIAlertView+Blocks.m in Sources */,
 				89E759EB1C86F8DB002A10BA /* UIImage+Category.m in Sources */,
+				FE4C7D0C1EACD7D6007963F8 /* UISlider+VDTrackHeight.m in Sources */,
 				FE0D02EA1D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
 				FE5428DC1D199046009BF3B4 /* DBTools.m in Sources */,
 				FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */,

@@ -13,6 +13,7 @@
 #import "UIView+RRFoundation.h"
 #import "TFVideoPlayerView+Extension.h"
 #import "BrightnessView.h"
+#import "UISlider+VDTrackHeight.h"
 
 #define PADDING 8
 
@@ -102,6 +103,8 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.durationLbl.textColor = [UIColor whiteColor];
 
     [self.lockButton setImage:[UIImage imageNamed:@"unlock"] forState:UIControlStateNormal];
+    
+    self.progressSld.vd_trackHeight = 7.0;
     //当前点点的位置
     [self.progressSld setThumbImage:[UIImage imageNamed:@"pb-seek-bar-btn@2x.png"] forState:UIControlStateNormal];
     //已播放的条的颜色
@@ -226,7 +229,6 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 -(IBAction)dragProgressSliderAction:(id)sender
 {
-
     UISlider *sld = (UISlider *)sender;
     long toalDuration = [self.delegate getTotalDuration];
     self.curPosLbl.text = [TFUtilities timeToHumanString:(long)(sld.value * toalDuration)];

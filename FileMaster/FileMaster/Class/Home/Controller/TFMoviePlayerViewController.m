@@ -50,7 +50,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     //程序被强制关闭的通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(handleInterruption:) name:UIApplicationWillTerminateNotification object:[UIApplication sharedApplication]];
     //观看中，接收到电话
