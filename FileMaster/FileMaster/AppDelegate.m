@@ -24,10 +24,15 @@
 {
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     [[UIApplication sharedApplication]setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+    /** DEBUG LOG **/
+#ifdef DEBUG
     
-    if (DEBUG) {
-        NSLog(@"--path: %@",NSHomeDirectory());
-    }
+NSLog(@"--path: %@",NSHomeDirectory());
+
+#endif
+//    if (DEBUG) {
+//        NSLog(@"--path: %@",NSHomeDirectory());
+//    }
     
     return YES;
 }
