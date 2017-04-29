@@ -61,10 +61,7 @@
 		FE28D85C1C8A6390000AFC70 /* AllFiles_RootController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE28D85B1C8A6390000AFC70 /* AllFiles_RootController.m */; };
 		FE2C6FCB1D1E077800AAB51E /* BrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FB61D1E077800AAB51E /* BrightnessView.m */; };
 		FE2C6FCC1D1E077800AAB51E /* ForwardBackView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FB81D1E077800AAB51E /* ForwardBackView.m */; };
-		FE2C6FCD1D1E077800AAB51E /* TFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FBB1D1E077800AAB51E /* TFUtilities.m */; };
-		FE2C6FCE1D1E077800AAB51E /* TFVAppInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FBD1D1E077800AAB51E /* TFVAppInfo.m */; };
 		FE2C6FCF1D1E077800AAB51E /* TFVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FBF1D1E077800AAB51E /* TFVideoPlayer.m */; };
-		FE2C6FD01D1E077800AAB51E /* TFVideoPlayerView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC11D1E077800AAB51E /* TFVideoPlayerView+Extension.m */; };
 		FE2C6FD11D1E077800AAB51E /* TFVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC31D1E077800AAB51E /* TFVideoPlayerView.m */; };
 		FE2C6FD21D1E077800AAB51E /* TFVideoPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2C6FC41D1E077800AAB51E /* TFVideoPlayerView.xib */; };
 		FE2C6FD31D1E077800AAB51E /* TFVSegmentSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC61D1E077800AAB51E /* TFVSegmentSlider.m */; };
@@ -80,6 +77,22 @@
 		FE4C7D221EB431C5007963F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D211EB431C5007963F8 /* StoreKit.framework */; };
 		FE4C7D251EB431E0007963F8 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C7D241EB431E0007963F8 /* SplashViewController.m */; };
 		FE4C7D281EB45A5C007963F8 /* GDTAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C7D271EB45A5C007963F8 /* GDTAdvertView.m */; };
+		FE4C7D4D1EB46706007963F8 /* TFPlayer_fullscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D411EB46706007963F8 /* TFPlayer_fullscreen.png */; };
+		FE4C7D4E1EB46706007963F8 /* TFPlayer_fullscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D421EB46706007963F8 /* TFPlayer_fullscreen@2x.png */; };
+		FE4C7D4F1EB46706007963F8 /* TFPlayer_fullscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D431EB46706007963F8 /* TFPlayer_fullscreen@3x.png */; };
+		FE4C7D501EB46706007963F8 /* TFPlayer_lock-nor.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D441EB46706007963F8 /* TFPlayer_lock-nor.png */; };
+		FE4C7D511EB46706007963F8 /* TFPlayer_lock-nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D451EB46706007963F8 /* TFPlayer_lock-nor@2x.png */; };
+		FE4C7D521EB46706007963F8 /* TFPlayer_lock-nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D461EB46706007963F8 /* TFPlayer_lock-nor@3x.png */; };
+		FE4C7D531EB46706007963F8 /* TFPlayer_shrinkscreen.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D471EB46706007963F8 /* TFPlayer_shrinkscreen.png */; };
+		FE4C7D541EB46706007963F8 /* TFPlayer_shrinkscreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D481EB46706007963F8 /* TFPlayer_shrinkscreen@2x.png */; };
+		FE4C7D551EB46706007963F8 /* TFPlayer_shrinkscreen@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D491EB46706007963F8 /* TFPlayer_shrinkscreen@3x.png */; };
+		FE4C7D561EB46706007963F8 /* TFPlayer_unlock-nor.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D4A1EB46706007963F8 /* TFPlayer_unlock-nor.png */; };
+		FE4C7D571EB46706007963F8 /* TFPlayer_unlock-nor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D4B1EB46706007963F8 /* TFPlayer_unlock-nor@2x.png */; };
+		FE4C7D581EB46706007963F8 /* TFPlayer_unlock-nor@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D4C1EB46706007963F8 /* TFPlayer_unlock-nor@3x.png */; };
+		FE4C7D5B1EB46AB7007963F8 /* TFPlayerTools.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C7D5A1EB46AB7007963F8 /* TFPlayerTools.m */; };
+		FE4C7D651EB46E7F007963F8 /* TFPlayer_slider.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D621EB46E7F007963F8 /* TFPlayer_slider.png */; };
+		FE4C7D661EB46E7F007963F8 /* TFPlayer_slider@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D631EB46E7F007963F8 /* TFPlayer_slider@2x.png */; };
+		FE4C7D671EB46E7F007963F8 /* TFPlayer_slider@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = FE4C7D641EB46E7F007963F8 /* TFPlayer_slider@3x.png */; };
 		FE5428D31D198ED2009BF3B4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428C91D198ED2009BF3B4 /* FMDatabase.m */; };
 		FE5428D41D198ED2009BF3B4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CB1D198ED2009BF3B4 /* FMDatabaseAdditions.m */; };
 		FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CD1D198ED2009BF3B4 /* FMDatabasePool.m */; };
@@ -335,14 +348,8 @@
 		FE2C6FB71D1E077800AAB51E /* ForwardBackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForwardBackView.h; sourceTree = "<group>"; };
 		FE2C6FB81D1E077800AAB51E /* ForwardBackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForwardBackView.m; sourceTree = "<group>"; };
 		FE2C6FB91D1E077800AAB51E /* TFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayer.h; sourceTree = "<group>"; };
-		FE2C6FBA1D1E077800AAB51E /* TFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFUtilities.h; sourceTree = "<group>"; };
-		FE2C6FBB1D1E077800AAB51E /* TFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFUtilities.m; sourceTree = "<group>"; };
-		FE2C6FBC1D1E077800AAB51E /* TFVAppInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVAppInfo.h; sourceTree = "<group>"; };
-		FE2C6FBD1D1E077800AAB51E /* TFVAppInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVAppInfo.m; sourceTree = "<group>"; };
 		FE2C6FBE1D1E077800AAB51E /* TFVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVideoPlayer.h; sourceTree = "<group>"; };
 		FE2C6FBF1D1E077800AAB51E /* TFVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVideoPlayer.m; sourceTree = "<group>"; };
-		FE2C6FC01D1E077800AAB51E /* TFVideoPlayerView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TFVideoPlayerView+Extension.h"; sourceTree = "<group>"; };
-		FE2C6FC11D1E077800AAB51E /* TFVideoPlayerView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TFVideoPlayerView+Extension.m"; sourceTree = "<group>"; };
 		FE2C6FC21D1E077800AAB51E /* TFVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFVideoPlayerView.h; sourceTree = "<group>"; };
 		FE2C6FC31D1E077800AAB51E /* TFVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFVideoPlayerView.m; sourceTree = "<group>"; };
 		FE2C6FC41D1E077800AAB51E /* TFVideoPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TFVideoPlayerView.xib; sourceTree = "<group>"; };
@@ -370,6 +377,23 @@
 		FE4C7D241EB431E0007963F8 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		FE4C7D261EB45A5C007963F8 /* GDTAdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTAdvertView.h; sourceTree = "<group>"; };
 		FE4C7D271EB45A5C007963F8 /* GDTAdvertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDTAdvertView.m; sourceTree = "<group>"; };
+		FE4C7D411EB46706007963F8 /* TFPlayer_fullscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TFPlayer_fullscreen.png; sourceTree = "<group>"; };
+		FE4C7D421EB46706007963F8 /* TFPlayer_fullscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_fullscreen@2x.png"; sourceTree = "<group>"; };
+		FE4C7D431EB46706007963F8 /* TFPlayer_fullscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_fullscreen@3x.png"; sourceTree = "<group>"; };
+		FE4C7D441EB46706007963F8 /* TFPlayer_lock-nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_lock-nor.png"; sourceTree = "<group>"; };
+		FE4C7D451EB46706007963F8 /* TFPlayer_lock-nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_lock-nor@2x.png"; sourceTree = "<group>"; };
+		FE4C7D461EB46706007963F8 /* TFPlayer_lock-nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_lock-nor@3x.png"; sourceTree = "<group>"; };
+		FE4C7D471EB46706007963F8 /* TFPlayer_shrinkscreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TFPlayer_shrinkscreen.png; sourceTree = "<group>"; };
+		FE4C7D481EB46706007963F8 /* TFPlayer_shrinkscreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_shrinkscreen@2x.png"; sourceTree = "<group>"; };
+		FE4C7D491EB46706007963F8 /* TFPlayer_shrinkscreen@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_shrinkscreen@3x.png"; sourceTree = "<group>"; };
+		FE4C7D4A1EB46706007963F8 /* TFPlayer_unlock-nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_unlock-nor.png"; sourceTree = "<group>"; };
+		FE4C7D4B1EB46706007963F8 /* TFPlayer_unlock-nor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_unlock-nor@2x.png"; sourceTree = "<group>"; };
+		FE4C7D4C1EB46706007963F8 /* TFPlayer_unlock-nor@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_unlock-nor@3x.png"; sourceTree = "<group>"; };
+		FE4C7D591EB46AB7007963F8 /* TFPlayerTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFPlayerTools.h; sourceTree = "<group>"; };
+		FE4C7D5A1EB46AB7007963F8 /* TFPlayerTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFPlayerTools.m; sourceTree = "<group>"; };
+		FE4C7D621EB46E7F007963F8 /* TFPlayer_slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TFPlayer_slider.png; sourceTree = "<group>"; };
+		FE4C7D631EB46E7F007963F8 /* TFPlayer_slider@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_slider@2x.png"; sourceTree = "<group>"; };
+		FE4C7D641EB46E7F007963F8 /* TFPlayer_slider@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TFPlayer_slider@3x.png"; sourceTree = "<group>"; };
 		FE5428C81D198ED2009BF3B4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		FE5428C91D198ED2009BF3B4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		FE5428CA1D198ED2009BF3B4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -868,12 +892,8 @@
 				FE2C6FC21D1E077800AAB51E /* TFVideoPlayerView.h */,
 				FE2C6FC31D1E077800AAB51E /* TFVideoPlayerView.m */,
 				FE2C6FC41D1E077800AAB51E /* TFVideoPlayerView.xib */,
-				FE2C6FC01D1E077800AAB51E /* TFVideoPlayerView+Extension.h */,
-				FE2C6FC11D1E077800AAB51E /* TFVideoPlayerView+Extension.m */,
-				FE2C6FBA1D1E077800AAB51E /* TFUtilities.h */,
-				FE2C6FBB1D1E077800AAB51E /* TFUtilities.m */,
-				FE2C6FBC1D1E077800AAB51E /* TFVAppInfo.h */,
-				FE2C6FBD1D1E077800AAB51E /* TFVAppInfo.m */,
+				FE4C7D591EB46AB7007963F8 /* TFPlayerTools.h */,
+				FE4C7D5A1EB46AB7007963F8 /* TFPlayerTools.m */,
 				FE2C6FC51D1E077800AAB51E /* TFVSegmentSlider.h */,
 				FE2C6FC61D1E077800AAB51E /* TFVSegmentSlider.m */,
 				FE2C6FB71D1E077800AAB51E /* ForwardBackView.h */,
@@ -992,6 +1012,21 @@
 		FE79FCC21D12DAB9001D052D /* imgs */ = {
 			isa = PBXGroup;
 			children = (
+				FE4C7D621EB46E7F007963F8 /* TFPlayer_slider.png */,
+				FE4C7D631EB46E7F007963F8 /* TFPlayer_slider@2x.png */,
+				FE4C7D641EB46E7F007963F8 /* TFPlayer_slider@3x.png */,
+				FE4C7D411EB46706007963F8 /* TFPlayer_fullscreen.png */,
+				FE4C7D421EB46706007963F8 /* TFPlayer_fullscreen@2x.png */,
+				FE4C7D431EB46706007963F8 /* TFPlayer_fullscreen@3x.png */,
+				FE4C7D441EB46706007963F8 /* TFPlayer_lock-nor.png */,
+				FE4C7D451EB46706007963F8 /* TFPlayer_lock-nor@2x.png */,
+				FE4C7D461EB46706007963F8 /* TFPlayer_lock-nor@3x.png */,
+				FE4C7D471EB46706007963F8 /* TFPlayer_shrinkscreen.png */,
+				FE4C7D481EB46706007963F8 /* TFPlayer_shrinkscreen@2x.png */,
+				FE4C7D491EB46706007963F8 /* TFPlayer_shrinkscreen@3x.png */,
+				FE4C7D4A1EB46706007963F8 /* TFPlayer_unlock-nor.png */,
+				FE4C7D4B1EB46706007963F8 /* TFPlayer_unlock-nor@2x.png */,
+				FE4C7D4C1EB46706007963F8 /* TFPlayer_unlock-nor@3x.png */,
 				FE5935C01E68638A005AB9D2 /* VKVideoPlayer_play_big.png */,
 				FE5935C11E68638A005AB9D2 /* VKVideoPlayer_play_big@2x.png */,
 				FE5935C21E68638A005AB9D2 /* VKVideoPlayer_play.png */,
@@ -1530,10 +1565,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4C7D4E1EB46706007963F8 /* TFPlayer_fullscreen@2x.png in Resources */,
 				FEA58DFA1C83275F00FE4E8A /* LaunchScreen.storyboard in Resources */,
+				FE4C7D4F1EB46706007963F8 /* TFPlayer_fullscreen@3x.png in Resources */,
 				FE79FD1E1D12DAB9001D052D /* icon_suo_h.png in Resources */,
 				FE79FD191D12DAB9001D052D /* icon_kai@2x.png in Resources */,
 				FE28D8161C873CCF000AFC70 /* MovieListCell.xib in Resources */,
+				FE4C7D541EB46706007963F8 /* TFPlayer_shrinkscreen@2x.png in Resources */,
 				FE2C6FD21D1E077800AAB51E /* TFVideoPlayerView.xib in Resources */,
 				FE5935C51E68638A005AB9D2 /* VKVideoPlayer_play_big@2x.png in Resources */,
 				FE79FD211D12DAB9001D052D /* left.png in Resources */,
@@ -1541,6 +1579,7 @@
 				FE5935BC1E6862DF005AB9D2 /* VKVideoPlayer_pause_big.png in Resources */,
 				FE79FD8C1D153F26001D052D /* README.txt in Resources */,
 				FEA58DF71C83275F00FE4E8A /* Assets.xcassets in Resources */,
+				FE4C7D581EB46706007963F8 /* TFPlayer_unlock-nor@3x.png in Resources */,
 				FE79FD281D12DAB9001D052D /* pb-seek-bar-btn@2x.png in Resources */,
 				FE79FD8B1D153F26001D052D /* README.txt in Resources */,
 				FE79FD161D12DAB9001D052D /* audioTrackIcon.png in Resources */,
@@ -1549,21 +1588,30 @@
 				FE5935BD1E6862DF005AB9D2 /* VKVideoPlayer_pause_big@2x.png in Resources */,
 				FE5935BF1E6862DF005AB9D2 /* VKVideoPlayer_pause@2x.png in Resources */,
 				FE79FD2C1D12DAB9001D052D /* right@3x.png in Resources */,
+				FE4C7D561EB46706007963F8 /* TFPlayer_unlock-nor.png in Resources */,
 				FE79FD2A1D12DAB9001D052D /* right.png in Resources */,
+				FE4C7D4D1EB46706007963F8 /* TFPlayer_fullscreen.png in Resources */,
+				FE4C7D651EB46E7F007963F8 /* TFPlayer_slider.png in Resources */,
 				FE79FD741D12E555001D052D /* nav_btn_back_n@3x.png in Resources */,
+				FE4C7D661EB46E7F007963F8 /* TFPlayer_slider@2x.png in Resources */,
 				FEB214EA1D7AA53F00CD86F3 /* ScanResultViewController.xib in Resources */,
 				FE79FD291D12DAB9001D052D /* pb-seek-bar-fr@2x.png in Resources */,
 				FE79FD791D12FD7E001D052D /* Player_brightness@2x.png in Resources */,
+				FE4C7D511EB46706007963F8 /* TFPlayer_lock-nor@2x.png in Resources */,
 				FE28D84F1C887822000AFC70 /* SettingCell.xib in Resources */,
 				FE79FD171D12DAB9001D052D /* audioTrackIcon@2x.png in Resources */,
 				FE79FD1B1D12DAB9001D052D /* icon_kai_n.png in Resources */,
+				FE4C7D671EB46E7F007963F8 /* TFPlayer_slider@3x.png in Resources */,
 				FE79FD221D12DAB9001D052D /* left@2x.png in Resources */,
 				FE79FD1F1D12DAB9001D052D /* icon_suo_h@2x.png in Resources */,
 				FE79FD1C1D12DAB9001D052D /* icon_kai_n@2x.png in Resources */,
+				FE4C7D551EB46706007963F8 /* TFPlayer_shrinkscreen@3x.png in Resources */,
 				FE5935BE1E6862DF005AB9D2 /* VKVideoPlayer_pause.png in Resources */,
 				FEA58DF51C83275F00FE4E8A /* Main.storyboard in Resources */,
+				FE4C7D501EB46706007963F8 /* TFPlayer_lock-nor.png in Resources */,
 				FE79FD181D12DAB9001D052D /* icon_kai.png in Resources */,
 				FE79FD7B1D1301D7001D052D /* Default-568.png in Resources */,
+				FE4C7D531EB46706007963F8 /* TFPlayer_shrinkscreen.png in Resources */,
 				FE79FD1A1D12DAB9001D052D /* icon_kai@3x.png in Resources */,
 				FE79FD201D12DAB9001D052D /* icon_suo_h@3x.png in Resources */,
 				FE5935C41E68638A005AB9D2 /* VKVideoPlayer_play_big.png in Resources */,
@@ -1572,8 +1620,10 @@
 				FE5935C61E68638A005AB9D2 /* VKVideoPlayer_play.png in Resources */,
 				FE5935C71E68638A005AB9D2 /* VKVideoPlayer_play@2x.png in Resources */,
 				FE79FD1D1D12DAB9001D052D /* icon_kai_n@3x.png in Resources */,
+				FE4C7D571EB46706007963F8 /* TFPlayer_unlock-nor@2x.png in Resources */,
 				FE79FD271D12DAB9001D052D /* pb-seek-bar-bg@2x.png in Resources */,
 				FE79FD721D12E555001D052D /* nav_btn_back_n.png in Resources */,
+				FE4C7D521EB46706007963F8 /* TFPlayer_lock-nor@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1696,7 +1746,6 @@
 				895ABFAF1C87D65D00ABF2FD /* GetFilesTools.m in Sources */,
 				FEA58E8A1C8347CE00FE4E8A /* Setting_RootController.m in Sources */,
 				FE9883411D16EE63001BD0D3 /* SettingGroup.m in Sources */,
-				FE2C6FCE1D1E077800AAB51E /* TFVAppInfo.m in Sources */,
 				FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */,
 				FE4C7D251EB431E0007963F8 /* SplashViewController.m in Sources */,
 				FE28D8211C886A03000AFC70 /* UIImage+Tint.m in Sources */,
@@ -1714,7 +1763,6 @@
 				FE28D8141C8734D4000AFC70 /* MovieFile.m in Sources */,
 				FE28D8551C88A181000AFC70 /* SettingModel.m in Sources */,
 				FE28D8521C887BE5000AFC70 /* AboutViewController.m in Sources */,
-				FE2C6FCD1D1E077800AAB51E /* TFUtilities.m in Sources */,
 				FE2C6FCB1D1E077800AAB51E /* BrightnessView.m in Sources */,
 				FEA58E901C834A2000FE4E8A /* MovieList.m in Sources */,
 				FEA58DEC1C83275F00FE4E8A /* main.m in Sources */,
@@ -1725,7 +1773,6 @@
 				89CDBE6D1C83F06B00C52481 /* HTTPStreamingServer.m in Sources */,
 				FEB214D81D7A85A700CD86F3 /* UIView+Toast.m in Sources */,
 				FEB214E91D7AA53F00CD86F3 /* ScanResultViewController.m in Sources */,
-				FE2C6FD01D1E077800AAB51E /* TFVideoPlayerView+Extension.m in Sources */,
 				FEA58E841C8347A500FE4E8A /* MovieList_RootController.m in Sources */,
 				FE2C6FCF1D1E077800AAB51E /* TFVideoPlayer.m in Sources */,
 				FE4C7D281EB45A5C007963F8 /* GDTAdvertView.m in Sources */,
@@ -1744,6 +1791,7 @@
 				89E759EB1C86F8DB002A10BA /* UIImage+Category.m in Sources */,
 				FE4C7D0C1EACD7D6007963F8 /* UISlider+VDTrackHeight.m in Sources */,
 				FE0D02EA1D67D850009B4206 /* UIAlertController+supportedInterfaceOrientations.m in Sources */,
+				FE4C7D5B1EB46AB7007963F8 /* TFPlayerTools.m in Sources */,
 				FE5428DC1D199046009BF3B4 /* DBTools.m in Sources */,
 				FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */,
 				FE2C6FD11D1E077800AAB51E /* TFVideoPlayerView.m in Sources */,

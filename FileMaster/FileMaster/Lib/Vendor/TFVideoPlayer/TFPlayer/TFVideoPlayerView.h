@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TFUtilities.h"
+
 #import "TFVSegmentSlider.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "ForwardBackView.h"

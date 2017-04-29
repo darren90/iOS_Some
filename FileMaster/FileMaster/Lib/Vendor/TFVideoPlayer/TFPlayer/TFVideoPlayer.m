@@ -8,7 +8,7 @@
 
 #import "TFVideoPlayer.h"
 
-#import "TFUtilities.h"
+#import "TFPlayerTools.h"
 #import "TFVSegmentSlider.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "ForwardBackView.h"
@@ -441,7 +441,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 #pragma mark - 定位到指定的时间播放
     if (self.lastWatchPos > 0) {
         [player seekTo:self.lastWatchPos];
-        self.view.curPosLbl.text = [TFUtilities timeToHumanString:self.lastWatchPos];
+        self.view.curPosLbl.text = [TFPlayerTools timeToHumanString:self.lastWatchPos];
     }
 
     [player start];
@@ -541,7 +541,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     if (self.isPlayLocalFile) return;
     self.progressDragging = YES;
 
-    if (![TFUtilities isLocalMedia:self.videoURL]) {
+    if (![TFPlayerTools isLocalMedia:self.videoURL]) {
         [player pause];
         [self.view startActivityWithMsg:@"Buffering... 0%"];
     }
@@ -558,7 +558,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 - (void)mediaPlayer:(VMediaPlayer *)player bufferingEnd:(id)arg
 {
     if (self.isPlayLocalFile) return;
-    if (![TFUtilities isLocalMedia:self.videoURL]) {
+    if (![TFPlayerTools isLocalMedia:self.videoURL]) {
         [player start];
         [self.view stopActivity];
     }
@@ -567,7 +567,7 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
 
 - (void)mediaPlayer:(VMediaPlayer *)player downloadRate:(id)arg
 {
-    if (![TFUtilities isLocalMedia:self.videoURL]) {
+    if (![TFPlayerTools isLocalMedia:self.videoURL]) {
             self.view.downloadRate.text = [NSString stringWithFormat:@"%dKB/s", [arg intValue]];
     } else {
         self.view.downloadRate.text = nil;
@@ -711,8 +711,8 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     if (!self.progressDragging) {
         mCurPostion  = [self.mMPayer getCurrentPosition];
         [self.view.progressSld setValue:(float)mCurPostion/mDuration];
-        self.view.curPosLbl.text = [TFUtilities timeToHumanString:mCurPostion];
-        self.view.durationLbl.text = [NSString stringWithFormat:@"/%@",[TFUtilities timeToHumanString:mDuration]];
+        self.view.curPosLbl.text = [TFPlayerTools timeToHumanString:mCurPostion];
+        self.view.durationLbl.text = [TFPlayerTools timeToHumanString:mDuration];
     }
 }
 

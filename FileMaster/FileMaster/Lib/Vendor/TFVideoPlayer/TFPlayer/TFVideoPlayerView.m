@@ -11,10 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
 #import "UIView+RRFoundation.h"
-#import "TFVideoPlayerView+Extension.h"
+//#import "TFVideoPlayerView+Extension.h"
 #import "BrightnessView.h"
 #import "UISlider+VDTrackHeight.h"
-
+#import "TFPlayerTools.h"
 #define PADDING 8
 
 //手指移动的方向
@@ -102,11 +102,11 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     self.durationLbl.font =RRTHMEFONT(DEVICEVALUE(16.0f, 12.0f));
     self.durationLbl.textColor = [UIColor whiteColor];
 
-    [self.lockButton setImage:[UIImage imageNamed:@"unlock"] forState:UIControlStateNormal];
+    [self.lockButton setImage:[UIImage imageNamed:@"TFPlayer_unlock-nor"] forState:UIControlStateNormal];
     
     self.progressSld.vd_trackHeight = 7.0;
     //当前点点的位置
-    [self.progressSld setThumbImage:[UIImage imageNamed:@"pb-seek-bar-btn@2x.png"] forState:UIControlStateNormal];
+    [self.progressSld setThumbImage:[UIImage imageNamed:@"TFPlayer_slider.png"] forState:UIControlStateNormal];
     //已播放的条的颜色
     [self.progressSld setMinimumTrackImage:[UIImage imageNamed:@"pb-seek-bar-fr@2x.png"] forState:UIControlStateNormal];
     //未播放的条的颜色
@@ -231,7 +231,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 {
     UISlider *sld = (UISlider *)sender;
     long toalDuration = [self.delegate getTotalDuration];
-    self.curPosLbl.text = [TFUtilities timeToHumanString:(long)(sld.value * toalDuration)];
+    self.curPosLbl.text = [TFPlayerTools timeToHumanString:(long)(sld.value * toalDuration)];
 }
 
 #pragma mark - 进度条的点击代理，目前不执行
@@ -246,7 +246,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     CGFloat value = s.minimumValue + delta;
     [s setValue:value animated:YES];
     long seek = percentage * [self.delegate getCurrentDuration];
-    self.curPosLbl.text = [TFUtilities timeToHumanString:seek];
+    self.curPosLbl.text = [TFPlayerTools timeToHumanString:seek];
     [self.delegate progressSliderTapped:percentage];
 }
 
@@ -268,7 +268,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     [self.activityView stopAnimating];
 }
 
-#pragma mark - 单击/双击 手势
+#pragma mark - 单击 手势
 - (IBAction)handleSingleTap:(id)sender
 {
     //销毁计时器
@@ -276,6 +276,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     //代理做
     if (self.isLockBtnEnable) {
         self.lockButton.hidden = !self.lockButton.hidden;
+        [[UIApplication sharedApplication] setStatusBarHidden:self.lockButton.hidden withAnimation:UIStatusBarAnimationFade];
     }else{
         self.topControl.hidden = !self.topControl.hidden;
         self.bottomControl.hidden = !self.bottomControl.hidden;
@@ -353,18 +354,21 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 - (IBAction)lockButtonClick:(UIButton *)sender
 {
     self.isLockBtnEnable = !self.isLockBtnEnable;
+    
     if (!self.isLockBtnEnable) {
         //开
-        [self.lockButton setImage:[UIImage imageNamed:@"unlock"] forState:UIControlStateNormal];
+        [self.lockButton setImage:[UIImage imageNamed:@"TFPlayer_unlock-nor"] forState:UIControlStateNormal];
         self.topControl.hidden = NO;
         self.bottomControl.hidden = NO;
         self.bigPlayButton.hidden = NO;
-    }else{
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    }else{ //点击锁定屏幕
         //锁
-        [self.lockButton setImage:[UIImage imageNamed:@"lock"] forState:UIControlStateNormal];
+        [self.lockButton setImage:[UIImage imageNamed:@"TFPlayer_lock-nor"] forState:UIControlStateNormal];
         self.topControl.hidden = YES;
         self.bottomControl.hidden = YES;
         self.bigPlayButton.hidden = YES;
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
     }
 //    self.lockButton.hidden = YES;
 }
@@ -507,8 +511,8 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         self.sumTime = 0;
     }
 
-    NSString * currentTime = [TFUtilities timeToHumanString:self.sumTime];
-    NSString * total = [TFUtilities timeToHumanString:totalMovieDuration];
+    NSString * currentTime = [TFPlayerTools timeToHumanString:self.sumTime];
+    NSString * total = [TFPlayerTools timeToHumanString:totalMovieDuration];
     self.forwardView.time = [NSString stringWithFormat:@"%@/%@",currentTime,total];
 }
 
@@ -574,6 +578,21 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 @end
 
+//    NSArray *arr = self.carrier.subviews;
+//    for (UIView *view in arr) {
+//        if ([view isKindOfClass:NSClassFromString(@"SysPlayerView")]) {
+//            view.frame = self.carrier.bounds;
+//
+//            NSArray *subs = view.subviews;
+//            NSLog(@"-SysPlayerView-subs:%@",subs);
+//
+//        }else if ([view isKindOfClass:NSClassFromString(@"GLVPlayerView")]){
+//            view.frame = self.carrier.bounds;
+//
+//            NSArray *subs = view.subviews;
+//            NSLog(@"-GLVPlayerView-subs:%@",subs);
+//        }
+//    }
 
 
 
