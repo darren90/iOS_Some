@@ -12,9 +12,6 @@
 #import "TFVSegmentSlider.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "ForwardBackView.h"
-#import "UIAlertView+Blocks.h"
-#import "UIView+RRFoundation.h"
-
 
 #define KTFPlayer_Btn_Play [UIImage imageNamed:@"VKVideoPlayer_play.png"]
 #define KTFPlayer_Btn_pause [UIImage imageNamed:@"VKVideoPlayer_pause.png"]
@@ -263,32 +260,11 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     }
 }
 
- 
--(void)clarityButtonTapped
-{
-    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:TFVideoplayercontroleventClarity];
-    }
-}
 
 -(void)changeTrackTapped
 {
     if (self.trackArray.count == 0)  return;
-    
-//    UIAlertView *alertView = [UIAlertView
-//                          showWithTitle:@"Audio Trackers Picker"
-//                          message:nil
-//                          cancelButtonTitle:@"Cancel"
-//                          otherButtonTitles:self.trackArray
-//                          tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
-//                              NSInteger firstOBIndex = [alertView firstOtherButtonIndex];
-//                              NSInteger lastOBIndex = firstOBIndex + [self.trackArray count];
-//                              if (buttonIndex >= firstOBIndex && buttonIndex < lastOBIndex) {
-//                                  [self.mMPayer setAudioTrackWithArrayIndex:(int)(buttonIndex - firstOBIndex)];
-//                              }
-//                          }];
-//    [alertView show];
-
+ 
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"请选中音轨" message:nil delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
     for (NSString *title in self.trackArray){
         [alert addButtonWithTitle:title];
@@ -301,94 +277,6 @@ static   TFVideoPlayer *tfVideoPlayer = nil;
     if (selectIndex >= 0 && selectIndex < self.trackArray.count) {
         [self.mMPayer setAudioTrackWithArrayIndex:selectIndex];
     }
-}
-
-
-#pragma mark - 全屏
--(void)fullScreenButtonTapped
-{
-    self.isFullScreen = self.view.fullscreenButton.selected;
-
-    if (self.isFullScreen) {
-        [self performOrientationChange:UIInterfaceOrientationLandscapeRight];
-    } else {
-        [self performOrientationChange:UIInterfaceOrientationPortrait];
-    }
-
-    if ([self.delegate respondsToSelector:@selector(videoPlayer:didControlByEvent:)]) {
-        [self.delegate videoPlayer:self didControlByEvent:TFVideoPlayerControlEventTapFullScreen];
-    }
-}
- 
-- (void)performOrientationChange:(UIInterfaceOrientation)deviceOrientation {
-    if (!self.forceRotate) {
-        return;
-    }
-    if ([self.delegate respondsToSelector:@selector(videoPlayer:willChangeOrientationTo:)]) {
-        [self.delegate videoPlayer:self willChangeOrientationTo:deviceOrientation];
-    }
-
-    CGFloat degrees = [self degreesForOrientation:deviceOrientation];
-    __weak __typeof__(self) weakSelf = self;
-    UIInterfaceOrientation lastOrientation = self.visibleInterfaceOrientation;
-    self.visibleInterfaceOrientation = deviceOrientation;
-    [UIView animateWithDuration:0.3f animations:^{
-        CGRect bounds = [[UIScreen mainScreen] bounds];
-        CGRect parentBounds;
-        CGRect viewBoutnds;
-        if (UIInterfaceOrientationIsLandscape(deviceOrientation)) {
-            viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.landscapeFrame), CGRectGetHeight(self.landscapeFrame));
-            parentBounds = CGRectMake(0, 0, CGRectGetHeight(bounds), CGRectGetWidth(bounds));
-        } else {
-            viewBoutnds = CGRectMake(0, 0, CGRectGetWidth(self.portraitFrame), CGRectGetHeight(self.portraitFrame));
-            parentBounds = CGRectMake(0, 0, CGRectGetWidth(bounds), CGRectGetHeight(bounds));
-        }
-
-        weakSelf.view.superview.transform = CGAffineTransformMakeRotation(degreesToRadians(degrees));
-        weakSelf.view.superview.bounds = parentBounds;
-        [weakSelf.view.superview setFrameOriginX:0.0f];
-        [weakSelf.view.superview setFrameOriginY:0.0f];
-
-        CGRect wvFrame = weakSelf.view.superview.superview.frame;
-        if (wvFrame.origin.y > 0) {
-            wvFrame.size.height = CGRectGetHeight(bounds) ;
-            wvFrame.origin.y = 0;
-            weakSelf.view.superview.superview.frame = wvFrame;
-        }
-
-        weakSelf.view.bounds = viewBoutnds;
-        [weakSelf.view setFrameOriginX:0.0f];
-        [weakSelf.view setFrameOriginY:0.0f];
-        [weakSelf.view layoutForOrientation:deviceOrientation];
-
-    } completion:^(BOOL finished) {
-        if ([self.delegate respondsToSelector:@selector(videoPlayer:didChangeOrientationFrom:)]) {
-            [self.delegate videoPlayer:self didChangeOrientationFrom:lastOrientation];
-        }
-    }];
-
-    [[UIApplication sharedApplication] setStatusBarOrientation:self.visibleInterfaceOrientation animated:YES];
-//    [self updateCaptionView:self.view.captionBottomView caption:self.captionBottom playerView:self.view];
-//    [self updateCaptionView:self.view.captionTopView caption:self.captionTop playerView:self.view];
-    self.view.fullscreenButton.selected = self.isFullScreen = UIInterfaceOrientationIsLandscape(deviceOrientation);
-}
-
-- (CGFloat)degreesForOrientation:(UIInterfaceOrientation)deviceOrientation {
-    switch (deviceOrientation) {
-        case UIInterfaceOrientationPortrait:
-            return 0;
-            break;
-        case UIInterfaceOrientationLandscapeRight:
-            return 90;
-            break;
-        case UIInterfaceOrientationLandscapeLeft:
-            return -90;
-            break;
-        case UIInterfaceOrientationPortraitUpsideDown:
-            return 180;
-            break;
-    }
-    return 0;
 }
 
 #pragma mark - 切换model

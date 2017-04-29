@@ -10,8 +10,6 @@
 #import "TFVideoPlayerView.h"
 #import <AVFoundation/AVFoundation.h>
 #import "Masonry.h"
-#import "UIView+RRFoundation.h"
-//#import "TFVideoPlayerView+Extension.h"
 #import "BrightnessView.h"
 #import "UISlider+VDTrackHeight.h"
 #import "TFPlayerTools.h"
@@ -106,7 +104,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
     
     self.progressSld.vd_trackHeight = 7.0;
     //当前点点的位置
-    [self.progressSld setThumbImage:[UIImage imageNamed:@"TFPlayer_slider.png"] forState:UIControlStateNormal];
+    [self.progressSld setThumbImage:[UIImage imageNamed:@"TFPlayer_slider@3x.png"] forState:UIControlStateNormal];
     //已播放的条的颜色
     [self.progressSld setMinimumTrackImage:[UIImage imageNamed:@"pb-seek-bar-fr@2x.png"] forState:UIControlStateNormal];
     //未播放的条的颜色
@@ -115,7 +113,10 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 //2: Conrol
 
     //进度条的点击代理
-//    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(progressSliderTapped:)];
+//    self.progressSld.userInteractionEnabled = YES;
+//    UITapGestureRecognizer *gr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(progressSliderGesture:)];
+//    UIPanGestureRecognizer *sliderPan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(progressSliderPanGesture:)];
+//    [self.progressSld addGestureRecognizer:sliderPan];
 //    [self.progressSld addGestureRecognizer:gr];
     
     //这句话的意思时，只有当doubleTapGesture识别失败的时候(即识别出这不是双击操作)，singleTapGesture才能开始识别，同我们一开始讲的是同一个问题。
@@ -217,11 +218,13 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 进度条相关
 -(IBAction)progressSliderDownAction:(id)sender
 {
+    NSLog(@"-progressSliderDownAction--");
     [self.delegate progressSliderDownAction];
 }
 
 -(IBAction)progressSliderUpAction:(id)sender
 {
+    NSLog(@"-progressSliderUpAction--");
     UISlider *sld = (UISlider *)sender;
     
     [self.delegate progressSliderUp:sld.value];
@@ -229,13 +232,50 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
 -(IBAction)dragProgressSliderAction:(id)sender
 {
+    NSLog(@"-dragProgressSliderAction--");
     UISlider *sld = (UISlider *)sender;
     long toalDuration = [self.delegate getTotalDuration];
     self.curPosLbl.text = [TFPlayerTools timeToHumanString:(long)(sld.value * toalDuration)];
 }
 
-#pragma mark - 进度条的点击代理，目前不执行
--(void)progressSliderTapped:(UIGestureRecognizer *)g
+#pragma mark - 进度条的点击代理 -- 滑动 -- UISlide上也可以左右滑动手势
+-(void)progressSliderPanGesture:(UIPanGestureRecognizer *)pan{
+    if (self.isLockBtnEnable) return;
+    CGPoint velocity = [pan velocityInView:self.progressSld];
+    NSLog(@"--手势滑动-");
+
+    switch (pan.state) {
+        case UIGestureRecognizerStateBegan:{
+            // 给sumTime初值
+            self.sumTime = [self.delegate getCurrentDuration];
+        }
+            
+            break;
+        case UIGestureRecognizerStateChanged:{ // 正在移动
+            // 每次滑动需要叠加时间
+            self.sumTime += velocity.x*3.0;
+            
+            long totalMovieDuration = [self.delegate getTotalDuration];
+            if (self.sumTime > totalMovieDuration) {
+                self.sumTime = totalMovieDuration;
+            }else if (self.sumTime < 0){
+                self.sumTime = 0;
+            }
+        }
+            break;
+        case UIGestureRecognizerStateEnded:{ // 结束移动
+            [self.delegate endFastWithTime:self.sumTime];
+            self.sumTime = 0;
+        }
+            break;
+        default:
+            break;
+    }
+
+}
+
+#pragma mark - 进度条的点击代理，目前不执行 -- 点击进度条直接跳转到哪个地方
+-(void)progressSliderGesture:(UIGestureRecognizer *)g
 {
     UISlider* s = (UISlider*)g.view;
     if (s.highlighted)
@@ -348,7 +388,7 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 #pragma mark - 右下角的全屏按钮
 - (IBAction)fullscreenButtonTapped:(UIButton *)sender
 {
-    [self.delegate fullScreenButtonTapped];
+//    [self.delegate fullScreenButtonTapped];
 }
 
 - (IBAction)lockButtonClick:(UIButton *)sender
@@ -488,6 +528,8 @@ typedef NS_ENUM(NSInteger,PanDirection) {
         [UIScreen mainScreen].brightness -= value / 10000;
     }
 }
+
+
 #pragma makr 快进后退
 - (void)horizontalMoved:(CGFloat)value{
 //    NSLog(@"快进快推-:%f",value);
@@ -513,21 +555,23 @@ typedef NS_ENUM(NSInteger,PanDirection) {
 
     NSString * currentTime = [TFPlayerTools timeToHumanString:self.sumTime];
     NSString * total = [TFPlayerTools timeToHumanString:totalMovieDuration];
-    self.forwardView.time = [NSString stringWithFormat:@"%@/%@",currentTime,total];
+    self.forwardView.time = [NSString stringWithFormat:@"%@ %@ / %@",style,currentTime,total];
 }
 
 #pragma mark - 快进
 - (void)configureSpeedView{
     if (self.forwardView == nil) {
         ForwardBackView *forwardView = [[ForwardBackView alloc]initWithFrame:CGRectMake(0, 0, 100, 64)];
-        forwardView.alpha = 0.8;
+//        forwardView.alpha = 0.8;
         forwardView.hidden = YES;
         [self addSubview:forwardView];
         self.forwardView = forwardView;
+        forwardView.layer.cornerRadius = 5;
+        forwardView.clipsToBounds = YES;
 //        self.center = forwardView.center;
         [forwardView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.height.mas_equalTo(50);//84
-            make.width.mas_equalTo(100);//170
+            make.height.mas_equalTo(40);//84
+            make.width.mas_equalTo(155);//170
             make.center.equalTo(self);
         }];
     }

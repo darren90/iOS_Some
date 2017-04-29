@@ -148,7 +148,10 @@
                             </connections>
                         </button>
                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-4m-Hgz" customClass="TFVSegmentSlider">
-                            <rect key="frame" x="85" y="6" width="269" height="31"/>
+                            <rect key="frame" x="85" y="-4" width="269" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="pfp-MN-bjv"/>
+                            </constraints>
                             <connections>
                                 <action selector="dragProgressSliderAction:" destination="Nc7-em-zWl" eventType="valueChanged" id="ObB-G7-REo"/>
                                 <action selector="progressSliderDownAction:" destination="Nc7-em-zWl" eventType="touchDown" id="piT-OY-U5R"/>
