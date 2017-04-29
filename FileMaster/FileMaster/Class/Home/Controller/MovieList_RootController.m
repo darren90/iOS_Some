@@ -14,6 +14,8 @@
 #import "MovieFile.h"
 #import "GetFilesTools.h"
 #import "TFMoviePlayerViewController.h"
+#import "GDTAdvertView.h"
+#import "Masonry.h"
 
 @interface MovieList_RootController ()
 
@@ -49,6 +51,8 @@
     self.tableView.backgroundColor = KCommonBgColor; 
     self.tableView.rowHeight = 66;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    [self initAdView];
 }
 
 
@@ -158,6 +162,17 @@
     return pathArray;
 }
 
+-(void)initAdView{
+    GDTAdvertView *adView = [[GDTAdvertView alloc]initWithMovieList:YES];
+//    adView.isMovieList = YES;
+    [self.view addSubview:adView];
+    //    adView.frame = CGRectMake(0, KHeight-49-64-50, KWidth, 50);
+    //    adView.bannerView.rootViewController = self;
+    [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.height.mas_equalTo(@50);
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -71,6 +71,15 @@
 		FE2C6FD41D1E077800AAB51E /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FC81D1E077800AAB51E /* UIAlertView+Blocks.m */; };
 		FE2C6FD51D1E077800AAB51E /* UIView+RRFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2C6FCA1D1E077800AAB51E /* UIView+RRFoundation.m */; };
 		FE4C7D0C1EACD7D6007963F8 /* UISlider+VDTrackHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C7D0B1EACD7D6007963F8 /* UISlider+VDTrackHeight.m */; };
+		FE4C7D161EB43161007963F8 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D151EB43161007963F8 /* libGDTMobSDK.a */; };
+		FE4C7D181EB43186007963F8 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D171EB43186007963F8 /* AdSupport.framework */; };
+		FE4C7D1A1EB43192007963F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D191EB43192007963F8 /* CoreLocation.framework */; };
+		FE4C7D1C1EB431AE007963F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D1B1EB431AE007963F8 /* SystemConfiguration.framework */; };
+		FE4C7D1E1EB431B5007963F8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D1D1EB431B5007963F8 /* CoreTelephony.framework */; };
+		FE4C7D201EB431BE007963F8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D1F1EB431BE007963F8 /* Security.framework */; };
+		FE4C7D221EB431C5007963F8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4C7D211EB431C5007963F8 /* StoreKit.framework */; };
+		FE4C7D251EB431E0007963F8 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C7D241EB431E0007963F8 /* SplashViewController.m */; };
+		FE4C7D281EB45A5C007963F8 /* GDTAdvertView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4C7D271EB45A5C007963F8 /* GDTAdvertView.m */; };
 		FE5428D31D198ED2009BF3B4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428C91D198ED2009BF3B4 /* FMDatabase.m */; };
 		FE5428D41D198ED2009BF3B4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CB1D198ED2009BF3B4 /* FMDatabaseAdditions.m */; };
 		FE5428D51D198ED2009BF3B4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = FE5428CD1D198ED2009BF3B4 /* FMDatabasePool.m */; };
@@ -345,6 +354,22 @@
 		FE2C6FCA1D1E077800AAB51E /* UIView+RRFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RRFoundation.m"; sourceTree = "<group>"; };
 		FE4C7D0A1EACD7D6007963F8 /* UISlider+VDTrackHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISlider+VDTrackHeight.h"; sourceTree = "<group>"; };
 		FE4C7D0B1EACD7D6007963F8 /* UISlider+VDTrackHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISlider+VDTrackHeight.m"; sourceTree = "<group>"; };
+		FE4C7D101EB43161007963F8 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		FE4C7D111EB43161007963F8 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		FE4C7D121EB43161007963F8 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		FE4C7D131EB43161007963F8 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		FE4C7D141EB43161007963F8 /* GDTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTTrack.h; sourceTree = "<group>"; };
+		FE4C7D151EB43161007963F8 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		FE4C7D171EB43186007963F8 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		FE4C7D191EB43192007963F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FE4C7D1B1EB431AE007963F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FE4C7D1D1EB431B5007963F8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		FE4C7D1F1EB431BE007963F8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FE4C7D211EB431C5007963F8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FE4C7D231EB431E0007963F8 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		FE4C7D241EB431E0007963F8 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		FE4C7D261EB45A5C007963F8 /* GDTAdvertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTAdvertView.h; sourceTree = "<group>"; };
+		FE4C7D271EB45A5C007963F8 /* GDTAdvertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDTAdvertView.m; sourceTree = "<group>"; };
 		FE5428C81D198ED2009BF3B4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		FE5428C91D198ED2009BF3B4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		FE5428CA1D198ED2009BF3B4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -501,6 +526,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4C7D221EB431C5007963F8 /* StoreKit.framework in Frameworks */,
+				FE4C7D201EB431BE007963F8 /* Security.framework in Frameworks */,
+				FE4C7D1E1EB431B5007963F8 /* CoreTelephony.framework in Frameworks */,
+				FE4C7D1C1EB431AE007963F8 /* SystemConfiguration.framework in Frameworks */,
+				FE79FD5A1D12DB02001D052D /* QuartzCore.framework in Frameworks */,
+				FE28D8441C886CAB000AFC70 /* libz.tbd in Frameworks */,
+				FE4C7D1A1EB43192007963F8 /* CoreLocation.framework in Frameworks */,
+				FE4C7D181EB43186007963F8 /* AdSupport.framework in Frameworks */,
 				FE239DB91DF5C0FC008603FE /* libc++.tbd in Frameworks */,
 				FEFBC1781D54EC010039527C /* CoreFoundation.framework in Frameworks */,
 				FE5428D91D198EE4009BF3B4 /* libsqlite3.tbd in Frameworks */,
@@ -514,15 +547,14 @@
 				FE79FD5C1D12DB0D001D052D /* MediaPlayer.framework in Frameworks */,
 				FE5935D91E686AFB005AB9D2 /* libffmpeg.a in Frameworks */,
 				FEB214401D75BB3900CD86F3 /* Bugly.framework in Frameworks */,
-				FE79FD5A1D12DB02001D052D /* QuartzCore.framework in Frameworks */,
 				FE79FD581D12DAFB001D052D /* OpenGLES.framework in Frameworks */,
 				FE79FD561D12DAF3001D052D /* libbz2.tbd in Frameworks */,
-				FE28D8441C886CAB000AFC70 /* libz.tbd in Frameworks */,
 				FE79FD541D12DAE4001D052D /* libstdc++.tbd in Frameworks */,
 				FE79FD521D12DADE001D052D /* libiconv.tbd in Frameworks */,
 				FE5935DA1E686AFB005AB9D2 /* libopenssl.a in Frameworks */,
 				ACDA0AB9E59633E11723907F /* libPods.a in Frameworks */,
 				FE28D8421C886C61000AFC70 /* libMobClickLibrary.a in Frameworks */,
+				FE4C7D161EB43161007963F8 /* libGDTMobSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +633,12 @@
 		D4B7F2072E06A46572EED219 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FE4C7D211EB431C5007963F8 /* StoreKit.framework */,
+				FE4C7D1F1EB431BE007963F8 /* Security.framework */,
+				FE4C7D1D1EB431B5007963F8 /* CoreTelephony.framework */,
+				FE4C7D1B1EB431AE007963F8 /* SystemConfiguration.framework */,
+				FE4C7D191EB43192007963F8 /* CoreLocation.framework */,
+				FE4C7D171EB43186007963F8 /* AdSupport.framework */,
 				FE239DB81DF5C0FC008603FE /* libc++.tbd */,
 				FEFBC1771D54EC010039527C /* CoreFoundation.framework */,
 				FE5428D81D198EE4009BF3B4 /* libsqlite3.tbd */,
@@ -852,6 +890,19 @@
 			path = TFPlayer;
 			sourceTree = "<group>";
 		};
+		FE4C7D0F1EB43161007963F8 /* GDT_v4.5.7 */ = {
+			isa = PBXGroup;
+			children = (
+				FE4C7D101EB43161007963F8 /* GDTMobBannerView.h */,
+				FE4C7D111EB43161007963F8 /* GDTMobInterstitial.h */,
+				FE4C7D121EB43161007963F8 /* GDTNativeAd.h */,
+				FE4C7D131EB43161007963F8 /* GDTSplashAd.h */,
+				FE4C7D141EB43161007963F8 /* GDTTrack.h */,
+				FE4C7D151EB43161007963F8 /* libGDTMobSDK.a */,
+			);
+			path = GDT_v4.5.7;
+			sourceTree = "<group>";
+		};
 		FE5428C71D198ED2009BF3B4 /* fmdb */ = {
 			isa = PBXGroup;
 			children = (
@@ -980,6 +1031,7 @@
 		FE79FD7F1D153F26001D052D /* AdSupport */ = {
 			isa = PBXGroup;
 			children = (
+				FE4C7D0F1EB43161007963F8 /* GDT_v4.5.7 */,
 				FE79FD801D153F26001D052D /* GoogleMobileAds.framework */,
 				FE79FD811D153F26001D052D /* Mediation Adapters */,
 				FE79FD891D153F26001D052D /* README.txt */,
@@ -1130,6 +1182,8 @@
 				FE28D8151C873CCF000AFC70 /* MovieListCell.xib */,
 				FE79FD7C1D153E8C001D052D /* AdvertView.h */,
 				FE79FD7D1D153E8C001D052D /* AdvertView.m */,
+				FE4C7D261EB45A5C007963F8 /* GDTAdvertView.h */,
+				FE4C7D271EB45A5C007963F8 /* GDTAdvertView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1292,6 +1346,8 @@
 			children = (
 				FEFE57961D168F190056FB9F /* LaunchViewController.h */,
 				FEFE57971D168F190056FB9F /* LaunchViewController.m */,
+				FE4C7D231EB431E0007963F8 /* SplashViewController.h */,
+				FE4C7D241EB431E0007963F8 /* SplashViewController.m */,
 			);
 			path = Launch;
 			sourceTree = "<group>";
@@ -1642,6 +1698,7 @@
 				FE9883411D16EE63001BD0D3 /* SettingGroup.m in Sources */,
 				FE2C6FCE1D1E077800AAB51E /* TFVAppInfo.m in Sources */,
 				FEFE57981D168F190056FB9F /* LaunchViewController.m in Sources */,
+				FE4C7D251EB431E0007963F8 /* SplashViewController.m in Sources */,
 				FE28D8211C886A03000AFC70 /* UIImage+Tint.m in Sources */,
 				FEA58DF21C83275F00FE4E8A /* ViewController.m in Sources */,
 				FE28D8301C886ABF000AFC70 /* RDVTabBarController.m in Sources */,
@@ -1671,6 +1728,7 @@
 				FE2C6FD01D1E077800AAB51E /* TFVideoPlayerView+Extension.m in Sources */,
 				FEA58E841C8347A500FE4E8A /* MovieList_RootController.m in Sources */,
 				FE2C6FCF1D1E077800AAB51E /* TFVideoPlayer.m in Sources */,
+				FE4C7D281EB45A5C007963F8 /* GDTAdvertView.m in Sources */,
 				FE5428D71D198ED2009BF3B4 /* FMResultSet.m in Sources */,
 				FE5935D81E686AFB005AB9D2 /* CHANGELOG.md in Sources */,
 				FE28D85C1C8A6390000AFC70 /* AllFiles_RootController.m in Sources */,
@@ -1946,6 +2004,7 @@
 			baseConfigurationReference = 9CE42351BCADF39EDF82BF7A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68539G8D3N;
 				ENABLE_BITCODE = NO;
@@ -1963,6 +2022,7 @@
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/ThirdPart/UMAnalytics_Sdk_3.4.6",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio-online",
+					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/AdSupport/GDT_v4.5.7",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1976,6 +2036,7 @@
 			baseConfigurationReference = 2C0DB9C2757F2FFA7DE76AE0 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 68539G8D3N;
 				ENABLE_BITCODE = NO;
@@ -1993,6 +2054,7 @@
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/ThirdPart/UMAnalytics_Sdk_3.4.6",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio",
 					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/TFVideoPlayer/Vitamio-online",
+					"$(PROJECT_DIR)/FileMaster/Lib/Vendor/AdSupport/GDT_v4.5.7",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ftf.FileMaster;
 				PRODUCT_NAME = "$(TARGET_NAME)";

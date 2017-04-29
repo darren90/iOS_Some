@@ -12,10 +12,11 @@
 #import "BaseTabBarController.h"
 #import "LaunchViewController.h"
 #import <Bugly/Bugly.h>
+#import "SplashViewController.h"
 
 
 @interface AppDelegate ()<BuglyDelegate>
-
+@property (retain, nonatomic) GDTSplashAd *splash;
 @end
 
 @implementation AppDelegate
@@ -47,14 +48,35 @@ NSLog(@"--path: %@",NSHomeDirectory());
     if ([UIApplication sharedApplication].statusBarOrientation != UIInterfaceOrientationPortrait){
          rootVc = [[BaseTabBarController alloc]init];
     }else{
-        rootVc = [[LaunchViewController alloc ]init];
+        rootVc = [[SplashViewController alloc]init];//[[LaunchViewController alloc ]init];
     }
+     rootVc = [[BaseTabBarController alloc]init];
     self.window.rootViewController = rootVc;
     
     [self.window makeKeyAndVisible];
     
+    [self showLaunchImage];
     [self umengTrack];//友盟的方法本身是异步执行，所以不需要再异步调用
     return YES;
+}
+
+-(void)showLaunchImage{
+    //开屏广告初始化并展示代码
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        GDTSplashAd *splashAd = [[GDTSplashAd alloc] initWithAppkey:@"1106126284" placementId:@"6050720213252073"];
+        splashAd.delegate = self;//设置代理1ez        //针对不同设备尺寸设置不同的默认图片，拉取广告等待时间会展示该默认图片。
+        if ([[UIScreen mainScreen] bounds].size.height >= 568.0f) {
+            splashAd.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LaunchImage-568h"]];
+        } else {
+            splashAd.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"LaunchImage"]];
+        }
+        //设置开屏拉取时长限制，若超时则不再展示广告
+        splashAd.fetchDelay = 5;
+ 
+        [splashAd loadAdAndShowInWindow:self.window];
+//        [splashAd loadAdAndShowInWindow:self.window withBottomView:_bottomView];
+        self.splash = splashAd;
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

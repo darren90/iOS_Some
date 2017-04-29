@@ -15,6 +15,8 @@
 #import "GetFilesTools.h"
 #import "TFMoviePlayerViewController.h"
 #import "AdvertView.h"
+#import "GDTAdvertView.h"
+#import "Masonry.h"
 
 //#import "LBXScanView.h"
 //#import "LBXScanResult.h"
@@ -70,10 +72,14 @@
 }
 
 -(void)initAdView{
-    AdvertView *adView = [[AdvertView alloc]init];
+    GDTAdvertView *adView = [[GDTAdvertView alloc]init];
     [self.view addSubview:adView];
-    adView.frame = CGRectMake(0, KHeight-49-64-50, KWidth, 50);
-    adView.bannerView.rootViewController = self;
+//    adView.frame = CGRectMake(0, KHeight-49-64-50, KWidth, 50);
+//    adView.bannerView.rootViewController = self;
+    [adView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.view);
+        make.height.mas_equalTo(@50);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
