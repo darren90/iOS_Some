@@ -98,6 +98,9 @@
 
 
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//        return UIInterfaceOrientationMaskAllButUpsideDown;
+//    }
     return UIInterfaceOrientationMaskPortrait ;
 }
 
@@ -106,6 +109,7 @@
 }
 
 - (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation{
+ 
     return UIInterfaceOrientationPortrait;
 }
 
