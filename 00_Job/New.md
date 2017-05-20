@@ -107,8 +107,25 @@ Extension是Category的一个特例，没有分类名字，可以扩展属性,�
 
 
 
+---
 
+(*个数越多代表越重要)
+一、Objective-C
+1.内存管理（***）
+2.KVC\KVO（***）
+3.runtime（***）
 
+二、iOS
+1.多线程、网络（***）
+2.控制器view的生命周期（***）
+* viewDidLoad
+* ....
+* didReceiveMemoryWarning
+3.事件处理（**）
+4.核心动画（**）
+5.Quartz2D绘图（**）
+6.UITableView的性能优化（循环利用机制，***）
+7.app的完整启动过程（***）
 
 
 
