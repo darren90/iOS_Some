@@ -1,0 +1,1341 @@
+
+gitadmin@rrmj.tv
+
+个人信息 
+
+java -jar buglySymboliOS.jar -i dSYMs/PUClient.app.dSYM -o 111.zip
+
+ 
+rrmjgit
+
+ 
+        
+,sdf
+
+搜狐,爱奇艺,qq乐视,腾讯视频,优酷,快手,芒果tv,秒拍,土豆,酷我,暴风影音,pptv,熊猫眼,西瓜吉吉,迅雷看看,龙珠直播,下载,哔哩哔哩,咪咕,天天风行,百度,猎人,le大全,吉吉,2345,万能,pps,极品快手,1905,全民,耽美,爱拍,响巢,千寻,小咖秀
+
+字符和日期的互转
+ https://cocoapods.org
+
+ 
+ 
+
+M3u8Downloader
+
+
+-fno-objc-arc
+
+ 
+
+URL Scheme：https://itunes.apple.com/cn/app/ren-ren-zhui-ju/id1080234911?mt=8
+AppStore ID：1080234911
+Bundle：com.zhongduomei.renrenzhuiju
+
+ 
+[[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait| UIInterfaceOrientationLandscapeLeft|UIInterfaceOrientationLandscapeRight];
+
+
+ 
+  
+Setting_RootController
+
+
+SettingVC
+
+自己写程序在豆瓣读书上抓取人
+
+熊节觉得一个好的程序员应该读过那20本好书 ——《重构》《精益创业》《敏捷软件开发》《测试驱动开发》等等。他在为ThoughtWorks组建成都分公司团队的时候，发愁正统招聘方法太慢了。于是，他花了几个晚上用自己高中自学的水货代码水平写了一个程序，去抓取豆瓣上读过这些技术书籍的人。然后不断递归，再抓到这些人都读过其它什么书，再继续抓读过那些书的人。抓了几万人之后，他再用Hadoop来分析，筛选出了几十个技术大牛。
+
+他把这些大牛的豆瓣账号扔给了公司女HR，让HR去一个个发豆邮勾搭
+
+18793118635
+
+ 
+
+
+java -jar buglySymboliOS.jar -i dSYMs/PUClient.app.dSYM -o 111.zip
+
+  
+
+git remote add origin /Users/Fengtf/Desktop/GitRespose.git
+
+
+git push -u origin master
+
+Resource interpreted as Document but transferred with MIME type application/octet-stream: "http://vod45.t22.lixian.vip.xunlei.com/download?fid=4CVOqlaHnQ0UtbTtNh1FXJC…D57B94CEA829F&at=9A4F272CC985E3CB2B6A4BE8E5AB82C0&from=1&k=1&ts=1472010655".
+
+ 
+
+
+git clone 
+ssh://git@106.75.11.245:29876/data/rrmj_git/rrmjiPad.git
+ssh://git@106.75.11.245:29876/data/rrmj_git/rrmjiPad.git
+ 
+
+用户名git
+密码rrmjgit
+
+ 
+
+ 
+
+02. 分支管理 - Tag
+================================================================================
+# 查看当前标签
+$ git tag
+# 在本地代码库给项目打上一个标签
+$ git tag -a v1.0 -m 'Version 1.0'
+# 将标签添推送到远程代码库中
+$ git push origin v1.0
+
+# 使用tag，就能够将项目快速切换到某一个中间状态，例如产品开发线上的某一个稳定版本
+# 签出v1.0标签
+$ git checkout v1.0
+# 从签出状态创建v1.0bugfix分支
+$ git checkout -b bugfix1.0
+
+# 查看远程分支
+$ git branch -r
+# 删除远程分支
+$ git branch -r -d origin/bugfix1.0
+
+
+
+
+ 
+
+
+document.cookie="gdriveid=4930EA6CB9262F012B6D57B94CEA829F"
+
+
+
+
+
+
+SSH -N -p 22 root@139.196.16.229
+
+SSH root@139.196.16.229
+
+
+
+
+
+/Users/Fengtf/rrmjiPad/.gitignore
+
+
+
+
+
+conf
+config
+confg
+ 
+
+
+[program:app]
+command = python /root/myflask/PyTVCalendar.py
+
+
+//注，这个配置是和后文中Nginx配置好后对象的9000的转发端口执行的操作
+[program:todo]
+command = /root/myflask/bin/gunicorn -b 127.0.0.1:8080 PyTVCalendar:app
+directory = /root/myflask
+
+
+
+
+
+server {
+        listen 81;
+
+        location /static {
+                alias /root/myflask;
+        }
+
+        location / {
+                proxy_pass http://127.0.0.1:8080;
+        }
+}
+
+
+
+
+结束Supervisor环境
+deactivate
+
+指令的执行，要在虚拟环境中进行
+
+
+
+[program:app]										   PyTVCalendar.py
+command = /root/myflask/bin/gunicorn -b 127.0.0.1:8080 PyTVCalendar:app
+directory = /root/myflask
+
+ 
+http://down.sandai.net/thunder9/Thunder9.0.14.358.exe
+
+ 
+2016-09-08 18:33:35.507 PUClient[51717:1090806] ---numOfTeam:20,lineTotalH :3052.000000
+
+git update-index --skip-worktree file.txt
+git update-index --skip-worktree PUClient/PUClientTests/Info.plist
+
+ 
+ 
+NSURLSessionDataTask NSURLSessionDownloadTask
+http://www.cnblogs.com/cocoajin/p/3708809.html
+http://www.jianshu.com/p/fafc67475c73
+
+ 
+  
+java -jar jenkins.war --httpPort=1111
+
+   
+
+//自动打包工具的安装
+sudo brew install xctool
+sudo xcode-select --install
+
+ 
+
+python ipa.py -tag 3.1.5 
+
+ 
+
+speed up leaning 
+
+有效，
+
+
+5天学会画画
+
+
+5个原则  7个行动
+
+最好的方式，去那个国家呆着，
+
+注意力 含义 关联 记忆
+Attention Meanig Relevance Memory
+
+工具来沟通 
+
+
+
+行动：1：多听  3000 word - 98% 
+ 
+ 
+
+NSUInteger total_filesize
+
+ 
+ 
+2016年10月22 和 2016年10月29日
+
+ 
+NSURLConnectionDelegate,NSURLConnectionDataDelegate
+ 
+  
+
+http://hot.vrs.sohu.com/ipad747934_4689900614130_068066.m3u8?vid=747934&uid=1478689581955786&plat=17&SOHUSVP=7_qit5QWKxaplVmpvMZ5TNAx_5Nm23Ug7M8Rz-zqxp8&pt=5&prod=h5&pg=1&eye=0&cv=1.0.0&qd=68000&src=11050001&ca=4&cateCode=101&_c=1&appid=tv&oth=&cd=
+
+
+  
+  
+ Since iOS8, the NSUrlSession in background mode does not call this delegate method if the server does not respond. 
+
+ -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+
+ 
+
+ The download/upload remains idle indefinitely. This delegate is called on iOS7 with an error when the server does not respond.
+
+ 
+
+ In general, an NSURLSession background session does not fail a task if something goes wrong on the wire. Rather, it continues looking for a good time to run the request and retries at that time. This continues until the resource timeout expires (that is, the value of the timeoutIntervalForResource property in the NSURLSessionConfiguration object you use to create the session). The current default for that value is one week! In other words, the behaviour of failing for a timeout in iOS7 was incorrect. In the context of a background session, it is more interesting to not fail immediately because of network problems. So since iOS8, NSURLSession task continues even if it encounters timeouts and network loss. It continues however until timeoutIntervalForResource is reached.
+
+ 
+
+ So basically timeoutIntervalForRequest won't work in Background session but timeoutIntervalForResource will.
+
+ */
+
+ 
+
+/*ios7时服务器不响应时会调用这个delegate。
+
+  从ios8起，NSUrlSession的backgroud模式不会 在server没有响应时调用这个delegate。
+
+  download/upload任务将会无限期的保持闲置。
+
+  
+
+  一般而言，后台模式下的NSURLSession 不会因为电缆的某些错误 而失败一个task。它会寻找一个合适的时机 继续执行这个request或重试这个request,直到resource timeout（即timeoutIntervalForResource属性设置的值），当前系统默认的值是一周。
+
+   换句话说，在ios7里面使失败的行为是不对的。在background的上下文里，最好是不要因为网络问题而使task失败。所以，从ios8起，NSURLSession task会继续运行，直到时间超时或network loss.
+
+ 
+
+   所以，timeoutIntervalForRequest在后台模式下不会生效，只有timeoutIntervalForResource会生效。
+
+*/
+
+非官方文档上的解释，stackOverflow里一位苹果员工的解释
+
+ 
+curl -1 https://www.youtube.com 
+
+
+curl https://www.youtube.com 
+
+ 
+180/105  XXL
+190/108A XXXL
+
+ 
+
+有的时候创建项目的时候没有加.gitignore.导致后面git会添加pods文件夹，这个时候想要让gitignore生效。必须。
+1. git rm -r --cached .
+2. git add .
+3. git commit -m "add gitignore"
+这样gitignore文件就能生效了。
+
+
+ 
+
+### 下载iOS8.3有bug
+ 
+箱包尺寸: 345mm*490mm*250mm
+
+高50宽29厚13
+47*30*18
+45*32*14
+ 
+ 
+
+ - [Telegram - Telegram Desktop messaging app - 开源 Mac App](https://github.com/telegramdesktop/tdesktop?utm_source=gank.io&utm_medium=email) - 
+ - [paper-for-mac 非官方 Dropbox Paper 客户端，做的超精致](https://github.com/williambout/paper-for-mac?utm_source=gank.io&utm_medium=email) - 
+ - []() - 
+ 
+ - [KRActivityIndicatorView - iOS 加载效果指示器，各式各样的](https://github.com/Henryforce/KRActivityIndicatorView) - 各式各样的loading效果
+ - [FlowKit - Flow：轻松管理页面流，让代码逻辑性更强](https://github.com/FilipZawada/FlowKit) - 
+ - [SegmentedControl - 一款美美的自定义 SegementedControl](https://github.com/IvanVorobei/SegmentedControl) - 
+
+
+
+1500+289
+24寸
+3.5KG
+43.5*29*60.5cm 容量71L
+
+
+
+1173161844109
+
+
+
+
+5
+2400
+42 * 10
+25号开始
+
+
+
+
+
+Printing description of error:
+Error Domain=NSURLErrorDomain Code=-997 "Lost connection to background transfer service" UserInfo={NSErrorFailingURLStringKey=http://61.160.198.173/youku/6571BE808ED3C8268129EA243C/03002001005882FAD2778C2D9B7D2F6C2193C1-DD84-F896-6F8B-215A5E19EEBA.mp4?sid=648505595144887d8c21c_00&ctype=87, NSLocalizedDescription=Lost connection to background transfer service, NSErrorFailingURLKey=http://61.160.198.173/youku/6571BE808ED3C8268129EA243C/03002001005882FAD2778C2D9B7D2F6C2193C1-DD84-F896-6F8B-215A5E19EEBA.mp4?sid=648505595144887d8c21c_00&ctype=87}
+
+
+ 
+https://dlqncdn.miaopai.com/stream/~QM2-~p3CvhLGHgNgKusVg__.mp4?ssig=e2fb95ae077ab2b6487c21ceef187ada&time_stamp=1485075985030
+
+ 
+错误：`Error Domain=NSURLErrorDomain Code=-997 "Lost connection to background transfer service"`
+
+参考：
+
+- [iOS 7.0 Background Transfer Service](http://blog.csdn.net/jackfengji/article/details/17607709)
+- [iOS后台下载和断点续传](http://szuwest.github.io/ioshou-tai-xia-zai-he-duan-dian-xu-chuan.html)
+- [iOS里面的多任务处理](http://www.jianshu.com/p/fba01d38e826)
+- [iOS开发：后台运行以及保持程序在后台长时间运行](http://www.jianshu.com/p/174fd2673897)
+- [关于iOS后台问题（ 一 ）(ios后台刷新，后台定位，后台下载，真后台）](http://www.cnblogs.com/Neo-joke/p/4019677.html)
+- [iOS 后台运行实现总结](http://www.jianshu.com/p/d3e279de2e32)
+- [iOS 7 的多任务](https://objccn.io/issue-5-5/)
+- [iOS7 NSURLSession 实现批量下载，支持后台下载功能（进度展示、暂停、重启等） - 相关介绍](https://github.com/kingundertree/XZDownloadTask)
+- [基于iOS 10、realm封装的下载器（支持存储读取、断点续传、后台下载、杀死APP重启后的断点续传等功能）](http://codecloud.net/106111.html)
+- [iOS使用NSURLSession进行下载（包括后台下载，断点下载）](http://www.jianshu.com/p/1211cf99dfc3)
+- [iOS的后台模式 - 教程文章](http://andrew-anlu.github.io/blog/2016/12/23/iosde-hou-tai-mo-shi/)
+- [iOS后台模式开发指南](https://github.com/hehonghui/iOS-tech-frontier/blob/master/issue-3/iOS%E5%90%8E%E5%8F%B0%E6%A8%A1%E5%BC%8F%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97.md) - 这篇不错
+- [NSURLSession使用说明及后台工作流程分析](http://www.cocoachina.com/ios/20131106/7304.html)
+- [iOS 后台运行实现总结](http://www.jianshu.com/p/d3e279de2e32#)
+
+
+
+
+- [一个iOS调试工具，监控所有HTTP请求，自动捕获Crash分析。](https://github.com/JxbSir/JxbDebugTool)
+- [十分钟学会Charles抓包(iOS的http/https请求)](http://www.jianshu.com/p/5539599c7a25#)
+
+- [iOS7 中的新加入的下载类NSURLSession（随ios版本更新而更新）](http://www.cnblogs.com/breezemist/p/3471203.html) - 有介绍AFNetworking包装的下载类
+
+
+
+
+ 
+-[]() -  
+
+--干货iOS客户端
+https://github.com/Wildog/Gankee
+
+
+
+ 
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+- []() -  
+
+- []() -  
+- []() -  
+- []() -  
+- [whats-new-in-swift-4](https://github.com/ole/whats-new-in-swift-4) -  
+- []() -  
+- [Alibaba 开源 iOS 高性能异构滚动视图构建方案LazyScrollView](https://github.com/alibaba/LazyScrollView) - 解决了滚动视图的复用回收问题。
+PYSearch
+
+
+
+-[]() -  
+ 
+
+5860f538842ccde3d5ebf938380016be
+5860F538842CCDE3D5EBF938380016BE
+
+
+https://github.com/darren90/iOS_Animations/blob/master/06_SpotlightDemo/screenshot/112.gif?raw=true
+
+https://github.com/darren90/iOS_Animations/blob/master/06_SpotlightDemo/screenshot/111.png?raw=true
+
+https://github.com/darren90/iOS_Animations/blob/master/06_SpotlightDemo/screenshot/113.png?raw=true
+
+
+
+#if OS_OBJECT_USE_OBJC
+@property (nonatomic,strong) dispatch_group_t autoNextPlayGroup;
+#else
+@property (nonatomic,assign) dispatch_group_t autoNextPlayGroup;
+#endif
+
+
+
+(lldb) po localDataTask
+<__NSCFLocalDataTask: 0x1246a78b0>{ taskIdentifier: 1 } { suspended }
+
+(lldb) po self.session
+<__NSURLBackgroundSession: 0x125977800>
+
+
+
+
+
+
+
+ 
+尊敬的各位公司领导：
+
+　　我是怀着十分复杂的心情写这封辞职信的。自我进入公司之后，感谢各位领导对我的关心、指导和信任，使我获得了很多机遇和挑战。经过这段时间在公司的工作，我在公司学到了很多知识，积累了一定的经验，对此我深表感激。 由于个人职业规划等原因，经过深思熟虑之后我决定提出离职申请。我知道这个过程会给公司带来一定程度上的不便，对此我深表抱歉。
+
+　　我已准备好在离职前的这段时间里完成工作交接,以减少因我的离职而给公司带来的不便。非常感谢您在这段时间里对我的教导和照顾。在公司的这段经历于我而言非常珍贵。将来无论什么时候,我都会为自己曾经是公司的一员而感到荣幸。我确信在公司的这段工作经历将是我整个职业生涯发展中相当重要的一部分。祝公司领导和所有同事身体健康、工作顺利!
+
+再次对我的离职给公司带来的不便表示抱歉，同时我也希望公司能够体恤我的个人实际情况,对我的申请给予批准。
+
+申请人：
+申请时间：
+
+
+ 
+
+/Users/Fengtf/Documents/git/iPad/PUClient
+
+
+/Users/Fengtf/Documents/git/testRRMJ/PUClient
+
+
+
+
+http://gank.io/api/data/福利/18/1
+
+
+
+
+http://gank.io/api/data/%E7%A6%8F%E5%88%A9/18/1
+
+
+
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh"
+bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh"
+
+
+
+
+
+问题解决：
+https://iosdevcenters.blogspot.com/2015/12/realm-error-dyld-library-not-loaded.html
+
+ 
+
+
+林：18503870595
+
+经三路纬五路交叉口 经纬大厦后院二楼
+
+建行的抵押中心：
+抵押，不动产
+
+林：18503870595
+9 ~ 12
+
+
+身份证
+购房合同
+
+
+
+与开发商签订购房合同：约定好所购房屋位置，面积，价格等等
+与银行签订抵押合同：约定把你的房子抵押给银行
+与银行签订借款合同：约定借款金额和还款年限等相关内容！
+
+
+
+
+ 
+
+http://pl.youku.com/partner/m3u8?vid=CODI5MDU4OA==&type=hd2&ep=CJ5SehYFyL9EF0nP6QjcqRK0CHGMmDy0nfPhSql4%2BljWOKyFdllXuw%3D%3D&sid=7488265348697869a1f3f&token=6487&ctype=86&ev=1&oip=2021917419
+ 
+
+
+ 
+
+https://github.com/guyueyingmu/avbook
+
+ 
+ 
+时光不老，我们不散～ 
+
+愿此去前程似锦  再相逢依旧如故
+尚未佩妥剑，转眼便江湖。愿历尽千帆，归来仍少年。
+
+
+-------git迁移-----------
+
+ git checkout 3.1.9HD && git pull && 
+git checkout 3.2.0 && git pull && 
+git checkout 3.5.1 && git pull && 
+git checkout 3.5.1HD && git pull && 
+git checkout 3.5.3 && git pull && 
+git checkout 3.5.4 && git pull && 
+git checkout 3.5.5 && git pull && 
+git checkout 3.5.6 && git pull && 
+git checkout 3.5.6HD && git pull && 
+git checkout 3.5.7 && git pull && 
+git checkout IPad3.1.4new && git pull && 
+git checkout RRMJ_DQ && git pull && 
+git checkout RRMJ_RRMJ3.1.4 && git pull && 
+git checkout RRMJ_RRMJ3.1.4HD && git pull && 
+git checkout RRMJ_RRYS3.1.4 && git pull && 
+git checkout RRMJ_RRYS3.1.4HD && git pull && 
+git checkout RRMJ_SP && git pull && 
+git checkout RRMJ_SPHD && git pull && 
+git checkout RRMJ_TianTang && git pull && 
+git checkout RRMJ_TianTian && git pull && 
+git checkout RRMJ_TinaTianHD && git pull && 
+git checkout RRMJ_YS && git pull && 
+git checkout RRSP_3.5.2\(HP\) && git pull && 
+git checkout iPad3.1.4 && git pull && 
+git checkout iPhone3.1.4RRYS && git pull && 
+git checkout master && git pull && 
+ 
+ 
+ git remote remove origin
+git remote add origin https://gitlab.rr.tv/ios/PUClient.git
+git remote add old ssh://git@106.75.11.245:29876/data/rrmj_git/rrmjiPad.git
+
+ 
+
+
+-------git迁移-----------
+
+
+ 
+//今儿看 api
+http://hd.m.jinerkan.com/v3/api/video/list?page=1&count=18&cate_id=1011&sort=new&filter=area%3A%E7%BE%8E%E5%9B%BD&sub_cate_id=10210204
+
+
+
+http://video.acfun.cn/0300080700582D8ECFF1492D9B7D2F0B2040B1-5033-3333-F6AD-F17DA558AEC3.mp4_1.mp4?customer_id=5859fdaee4b0eaf5dd325b91&auth_key=1488534620-0-0-46728e12cd79e6907346070e6c15624b
+
+
+http://www.toutiao.com/api/pc/feed/?category=video&utm_source=toutiao&widen=1&max_behot_time=0&max_behot_time_tmp=1488520387&tadrequire=true&as=A185587B9931DE1&cp=58B9A1DD2E515E1
+
+
+
+本周：
+上个版本播放器遗留问题修复
+自动连播开发，待测试
+频道，发现页面增加搜索入口
+
+下周：
+下载优化
+修改bug
+
+
+
+
+/c/user/52085764333/
+
+/group/6392813628524855809/
+
+
+http://www.toutiao.com/a6393150553699385601/
+
+
+---- 直播
+
+http://www.fengyunlive.com/channel-list
+
+http://tv.cctv.com/live/cctv1/
+
+
+http://player.cntv.cn/standard/cntvHdsLivePlayer20170209.swf?v=140.171.5.8.9.6.3.9
+
+https://fyplayer.b0.upaiyun.com/upload/fengyun3.0.62.swf
+
+
+http://tv.cctv.com/live/cctv1/
+
+http://tv.cctv.com/live/cctveurope/
+
+--------- 可用 源
+
+https://github.com/lxiao95/tv-live-stream/blob/master/live.m3u
+https://github.com/xiongq/TV
+https://github.com/billy21/Tvlist-awesome-m3u-m3u8
+
+ 
+
+
+ --Demo
+
+
+
+- [仿 Apple Music 音乐下拉效果](https://github.com/HarshilShah/DeckTransition) -  
+- [iOS动画集合](https://github.com/younatics/MotionBook) -  很多动画
+- []() -  
+- []() -  
+- [React Native 日历组件](https://github.com/wix/react-native-calendars) -  清新、漂亮
+- [漂亮实用的图片、视频选择器](https://github.com/tilltue/TLPhotoPicker) -  
+- [基于 RxSwift 实现的 State 状态管理工具](https://github.com/kzaher/RxFeedback) -  
+
+
+
+- [33 个 2017 年必须了解的 iOS 开源库](http://www.cocoachina.com/ios/20170208/18647.html) -  
+- []() -  
+ 
+- []() -  
+- []() -  
+
+
+
+
+- []() -  
+
+- [用Swift撸了一个新手引导的轮子](https://github.com/skx926/KSGuideController) -  
+
+
+
+- []() -  
+- [Markdown写的幻灯片](https://gitpitch.com/) -  课外推荐
+
+- []() -  
+- []() -  
+- [自定义弹窗控件](https://github.com/loopeer/AlertTransition) -  Modar自定义效果，转场
+- []() -  
+- []() -  
+- [iOS调试工具：可以模拟各种屏幕的iPhone](https://github.com/felipeferri/ScreenSizesSimulator) -  
+- [好用的UIProgressView的替代品 - GTProgressBar](https://github.com/gregttn/GTProgressBar) -  
+- [非常赞的iOSLike效果 - 类Facebook - LikeAnimation](https://github.com/anatoliyv/LikeAnimation) 
+- [iOS视频播放的N种解决方案](http://www.cocoachina.com/ios/20170507/19201.html) -  介绍iOS播放器种类以及万能格式库MobileVLCKit的介绍
+- []() -  
+
+
+
+
+- [UILabel匹配网站，#，@ - ActiveLabel](https://github.com/optonaut/ActiveLabel.swift) -  Swift编写，可以匹配网址，#，@并且高亮显示，微博内容的显示
+
+
+
+ 
+
+
+
+ 下载
+- [iOS NSURLSession Example (HTTP GET, POST, Background Downlads )](http://hayageek.com/ios-nsurlsession-example/) -  
+- [从 NSURLConnection 到 NSURLSession](https://objccn.io/issue-5-4/) -  
+- [NSURLSessionDownloadTask的深度断点续传](http://www.cocoachina.com/ios/20160503/16053.html) -  
+- [iOS的后台模式](http://andrew-anlu.github.io/blog/2016/12/23/iosde-hou-tai-mo-shi/) -  
+- [iOS使用NSURLSession进行下载（包括后台下载，断点下载）](http://www.jianshu.com/p/1211cf99dfc3) -  
+- [NSURLSession 拾遗](http://zxfcumtcs.github.io/2016/06/09/NSURLSession_Supplements/) -  
+- [基于iOS 10、realm封装的下载器（支持存储读取、断点续传、后台下载、杀死APP重启后的断点续传等功能）](http://www.cocoachina.com/ios/20170316/18901.html) -  
+- []() -  
+- []() -  
+- [iOS开发：后台运行以及保持程序在后台长时间运行](http://www.jianshu.com/p/174fd2673897) -  
+- [33 个 2017 年必须了解的 iOS 开源库](http://www.cocoachina.com/ios/20170208/18647.html) -  文字写的非常好，赞
+
+
+
+
+金山云播放器调研
+
+
+ 
+
+
+
+
+
+
+
+6666628058151
+
+
+9:30-11:30
+13:00-15:00
+
+
+
+------********20170306*********-----
+
+
+国安 ，天原，一汽  ： 涨了就要卖
+
+天原：-64
+比亚迪：-0.4
+
+上汽：+23
+金杯：+123
+长城：+504
+五粮液：+30
+
+------*****************-----
+不要买了，价格跌：上汽，天原集团
+价格不稳定：长城汽车
+------*****************-----
+
+
+ 
+------********20170307*********-----
+山西汾酒 +135
+
+长城：+200
+
+
+
+------*********20170308********-----
+
+银行类：长期亏损，不建议短线持有
+
+
+
+
+
+------*********20170310********-----
+
+
+
+ 
+
+
+--> 
+NSURLSessionDataTask
+
+
+--> temp 自己放在那里
+NSURLSessionDownloadTask
+
+
+ 
+
+社保：身份证
+公积金，账号
+医保卡：
+
+
+
+1980
+
+
+
+
+家装驿站
+
+
+
+  
+
+奔驰C级小保养：958元，6万公里总费用：15289元。
+宝马3系小保养：1005元，6万公里总费用：10188元。
+奥迪A4L小保养：977元，6万公里总费用：11645元。
+
+
+ 
+ 
+
+
+[el objectForKey:@"href"]
+
+ 
+
+
+
+手里一定要有一样天塌下来也能不倒得生意
+男人的胸怀是委屈撑大的
+ 
+ 
+
+
+ didTapButton
+ 
+
+
+wifi密码
+huawei-ap：rrtv123456
+rrtv:rrtv2014
+ 
+
+
+
+http://www.bbc.co.uk/radio/player/bbc_radio_one
+ 
+You never know，where it might bring you to.
+
+ 
+
+
+
+潜水
+看海
+西藏
+
+ 
+
+ 
+
+ 
+
+LAST PLAYED
+Dirt Nap
+
+ 
+ 
+http://www.962222.net/index.htm?keyword=%BE%D3%D7%A1%D6%A4
+ 
+ 
+
+ 
+旅行箱：
+24寸：43.5*29*60.5 容量：71L
+350*520*230
+
+
+ 
+
+ 
+
+交叉25码
+ITF25 ios
+
+
+坐标 魔都
+
+时间 2017.04
+
+平台  前程无忧 & 智联招聘
+
+投递简历   共计约100份
+
+反馈时间   24h
+
+约面试    5家
+
+拿到offer   3家
+
+薪资涨幅   30% 
+
+34.9： 300*12
+
+
+
+ 
+cd /Users/Fengtf/rrmjiPad/PUClient
+xcodebuild -target PUClient -configuration Debug -sdk iphonesimulator clean
+infer -- xcodebuild -target PUClient -configuration Debug -sdk iphonesimulator
+ 
+
+
+
+infer — xcodebuild -target PUClient -configuration Debug -sdk iphonesimulator
+ 
+
+infer — xcodebuild -target PUClient -configuration Debug -sdk iphonesimulator
+
+infer -- xcodebuild -target PUClient -configuration Debug -sdk iphonesimulator 
+
+ 
+-[infer主页](https://infer.liaohuqiu.net/)
+
+infer工具扫描oc代码使用参考文件：
+
+- [infer使用的浅谈简析]http://ios.jobbole.com/84371/)
+- [利用facebook/infer工具扫描oc代码()]http://qiuhm.github.io/blog/2015/12/31/li-yong-facebook-slash-infergong-ju-sao-miao-ocdai-ma/)
+- [infer使用的浅谈简析](http://www.jianshu.com/p/4667e36aadea)
+
+
+gem install xcpretty
+
+
+四、执行inferTraceBugs查看问题
+
+切换到存在infer-out目录的文件夹，执行
+ 
+inferTraceBugs --html
+
+ 
+ 
+熟练掌握Objective-C语言基础
+
+ 
+，有代码优化和架构优化经验，擅长做iOS性能优化以及快速重构，熟悉 Xcode 开发调试技巧。电商，团购，教育，直播，通讯都OK，熟悉自定义 UI 效果及实现方法,。熟练使用AFNetWorking,SDWebImage,Masonry,Mantle,等第三方库满足开发需求，使用cocoaPods安装与使用管理项目第三方库。使用NSUserDefaults，Plist，CoreData 等数据永久化操作，熟练使用GIT,CornerSore代码管理软件  
+
+ 
+
+
+ 详解Objective-C的优点和不足
+
+1.Category类别
+2.Posing 
+3.动态识别
+4.指标计算
+5.弹性消息机制
+6.不是一个太复杂的C衍生语言
+7.OC可以和C、C++、Swift混合编程
+【缺点】
+1.不支持命名空间
+2.不支持运算符重载
+
+
+
+
+Swift优缺点：
+
+
+
+
+语言方面
+Objective-C 的内存管理, strong/weak/assign 的区别，如果答得不错，再问 __unsafe_unretained
+引用循环是怎么一回事（居然还有人问我什么是引用循环）
+Objective-C 有私有变量，私有方法吗？
+protocol 能添加属性吗？
+iOS相关
+视图控制器所管理的视图的生命周期
+通知中心/KVO/代理它们的区别
+多线程编程的那几种技术和它们之间的关系
+如果简历上有写会Autolayout, 就问Autolayout的原理（很多人只会加约束，却不知道Autolayout和Frame之间的关系）
+
+ 
+
+//使用贝塞尔曲线UIBezierPath和Core Graphics框架画出一个圆角
+UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 100, 100)]; 
+imageView.image = [UIImage imageNamed:@"1"];
+ //开始对imageView进行画图 
+UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, [UIScreen mainScreen].scale); 
+//使用贝塞尔曲线画出一个圆形图 
+[[UIBezierPath bezierPathWithRoundedRect:imageView.bounds cornerRadius:imageView.frame.size.width] addClip];
+[imageView drawRect:imageView.bounds];
+imageView.image = UIGraphicsGetImageFromCurrentImageContext(); 
+//结束画图
+UIGraphicsEndImageContext();
+[self.view addSubview:imageView];
+
+
+
+25. @ property的使用策略
+
+assign:’基本数据类型’、’枚举‘、’结构体‘等非OC对象
+weak:OC对象类型（比如NSArray、NSDate、NSNumber、模型类）
+strong:OC对象类型（比如NSArray、NSDate、NSNumber、模型类）
+一个对象只要有强指针引用，就不会被销毁
+
+
+
+
+
+27.如果是通过xib或者storyboard创建控件，初始化的操作可以在initWithFrame:方法中做吗?
+
+如果是通过xib或者storyboard创建控件，初始化的操作可以在initWithFrame:方法中做吗?
+
+如果是通过xib或者storyboard创建控件，初始化时是不会调用initWithFrame,会调用initWithCoder.初始化完毕会调用awakeFromNib方法,建议在awakeFromNib中做初始化
+ 
+
+
+52.通过代码添加约束的原则
+
+1.对于两个同层级view之间的约束关系，添加到它们的父view上
+2.对于两个不同层级view之间的约束关系，添加到他们最近的共同父view上
+3.对于有层次关系的两个view之间的约束关系，添加到层次较高的父view上
+
+
+
+65.如何计算一段文字的宽度和高度?
+
+第一种情况:如果label只有一行,通过sizeWithAttributes:这个方法,告知这段文字的字体和字体大小就可以计算这段文字的尺寸.
+第二种情况:如果label需要换行计算高度,通过boundingRectWithSize: options: attributes:attributes context: 这个方法,告知这段文字的字体和字体大小,并且在一个限制的尺寸内计算这段文字的尺寸.
+
+
+
+
+3.UIApplication常见功能?
+
+设置应用提醒数字
+设置连网状态
+设置状态栏
+跳转网页
+
+ 
+
+9.initWithNibName的加载过程?
+
+如果没有指定名称.指定为nil,那么它就会去先加载跟它相同名称的Xib.
+如果没有跟它相同名称的Xib,那么它就会再去加载跟它相同名称去点Controller的名字的Xib.- - 控制器的init方法会调用initWithNibName:方法.
+
+
+
+
+10.LoadView 作用以及使用LoadView的注意点?
+
+控制器调用loadView方法创建控制器的view.它的默认做法是:
+先去判断当前控制器是不是从StoryBoard当中加载的,如果是,那么它就会从StoryBoard当中加载控制器的View.
+如果不是从StoryBoard当中加载的, 那么它还会判断是不是从Xib当中创建的控制器.如果是,那么它就会从xib加载控制器的View.
+如果也不是从Xib加载的控制器.那么它就会创建一个空的UIView.设为当前控制器的View.
+
+注意点:
+一旦重写了loadView,表示需要自己创建控制器的View.
+如果控制器的View还没有赋值,就不能调用控制器View的get方法.会造成死循环.
+因为控制器View的get方法底层会调用loadView方法.
+
+
+
+23.ios当中存储方式有哪些?
+
+XML属性列表(plist)
+Preference(偏好设置)
+NSKeyedArchiver,只有遵守NSCoding协议的对象才可以使用这种方式。
+SQLite
+Core Data
+
+
+24.tableView性能优化
+
+1.tableView的缓存机制.
+2.在不等高Cell当中,提前计算Cell的行高.提前估一个行高.200-250
+3.如果说Cell当中有圆形图片,图片不要用ImageView加载layer.corneadius裁剪去做.会造成离屏渲染. 用绘图Qurarzds裁剪,生成一张圆形的图片.
+4.如果说图片的宽高,指定为小数点.会造成锯齿,造成锯齿就会导致离屏渲染
+5.cell当中的ImageView的大小最好是跟UIImage是一样大,如果不一样大 它会对UIImage做形变操作.cell当中展示都是小图.小图的大小跟ImageView 点击放大,是再去用大的ImageView加载大图.
+6.做tableView的时候一定要用真机.
+7.如果是从网络加载数据,一定要放到子线程(异步加载)当中做.
+8.加载完毕的数据一定做本地缓存.
+9.cell当中不要动态的添加子控件.一般都在创建时,就把要出现的Cell给添加进去,暂时不要显示的,可隐藏.
+10.尽量减少Cell内部子控件的个数.
+11.如果控件非常多,把不需要与用户进行交互的控件.能过异步绘制出来.生成一张图片.把图片添加到cell当中
+
+
+7.请简单介绍下什么是原子和非原子属性？
+
+atomic：原子属性，会为setter方法加锁，默认为atomic。线程安全，会消耗大量资源
+nonatomic：非原子属性，不会为setter方法加锁。非线程安全，适合内存小的移动设备。
+
+
+
+6.请简单说明如何简单的解决多线程访问同一块资源造成的线程安全的问题，以及注意点？
+
+加同步(互斥)锁，
+@synchronized
+OC中的同步锁:(锁对象) + {要锁住的代码}
+锁对象:要求是全局唯一的属性
+注意点:
+1.要注意加锁的位置
+2.加锁需要耗费性能,因此需要注意加锁的条件(多线程访问同一块资源)
+3.专业术语:线程同步
+
+
+
+
+
+37.在发送网络请求的时候，如果请求路径中的参数有中文导致发送的网络请求失败，应该如何处理？
+
+如果URL字符串中有中文，那么在进行使用发送请求的时候应该先对URL进行中文转码
+
+相关方法：
+
+[urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
+
+
+
+38.观察下面的代码，请问completionHandler在主线程还是子线程执行？
+
+[[session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    //....
+}] resume];
+completionHandler在子线程中执行。
+
+
+ 
+
+
+lipo -create "真机版本路径" "模拟器版本路径" -output "合并后的文件路径"
+
+
+ 
+
+ijkplayer 打包framework
+
+
+
+
+
+
+iOS静态代码检验：OCLint，infer
+
+
+ 
+
+
+
+//git 使用教程： 
+地址[oh-my-zsh配置你的zsh提高shell逼格终极选择](http://yijiebuyi.com/blog/b9b5e1ebb719f22475c38c4819ab8151.html)
+chsh -s /usr/local/bin/zsh
+
+
+oschina gitpro
+
+[Pro Git（中文版）](http://git.oschina.net/progit/) - 2 6 4
+
+[Git工作流指南：Gitflow工作流](http://blog.jobbole.com/76867/)
+
+
+cat /etc/shells
+ chsh -s /usr/local/bin/zsh
+vi .zshrc
+source .zshrc
+ls -alh .zshrc
+
+//git指令
+
+gst
+git remote -v
+git remote add ftf https://gitlab.rr.tv/ftf/PUClient.git
+git remote -v
+git remote remove old
+git remote -v
+git push ftf ios
+gst
+git log
+git remote -v
+git remote remove origin
+git remote -v
+git remote remove origin
+git remote remove ftf
+git remote -v
+git remote add origin https://gitlab.rr.tv/ftf/PUClient.git
+git remote add ios https://gitlab.rr.tv/ios/PUClient.git
+git remote -v
+brew cask install cheatsheet
+
+ 
+ 
+
+  95  git co ios
+  96  git ss
+  97  git co .
+  98  git pull
+  99  git co lhy/dev
+  100  git rebase ios
+  101  git ss
+  102  git co .
+  103  git rebase ios
+  104  git ll
+  105  git ss
+  106  git co .
+  107  git push
+  108  git ll
+  109  git push -f
+
+
+
+
+
+stash 
+
+
+
+
+
+    1  chsh zsh
+    2  chsh --h
+    3  chsh -s zsh
+    4  cat /etc/shells
+    5  chsh -s /usr/local/bin/zsh
+    6  vi .zshrc
+    7  source .zshrc
+    8  ls
+    9  cd rrmjiPad/
+   10  ls
+   11  git status
+   12  gst
+   13  l
+   14  cd
+   15  ls -alh .zshrc
+   16  pwd
+   17  cd rrmjiPad
+ 
+
+
+
+
+ssh -l root 123.206.117.52
+
+ 
+http://123.206.117.52:8888
+
+ 
+
+
+
+Swift刷新动画
+http://study.163.com/course/courseMain.htm?courseId=1683009
+ 
+
+
+
+  293  git ll
+  294  git ch lhy/dev
+  295  git ch -b release-3.5.8
+  296  git push
+  297  git ll
+  298  git ss
+  299  git co lhy/dev
+  300  git ch lhy/dev
+  301  git checkout lhy/dev
+  302  git ll
+  303  git co lhy/dev
+  304  git ch lhy/dev
+  305  git ch origin/lhy/dev
+  306  git ll
+
+
+git status
+git add.
+git commit -m "修复了bug"
+git checkout ios
+git pull
+git checkout ftf/dev
+git rebase ios
+git push  
+
+
+# 本地切个分支 ，并提交
+    git ch -b release-3.5.8
+    git push
+
+ 
+
+perl PUClient/script/sort-Xcode-project-file PUClient/PUClient.xcodeproj/project.pbxproj
+
+
+## git其他非常用，但需了解的操作
+
+# 取别的分支的某一次的提交
+git cherry-pick <commit id>
+//git cherry-pick 99daed2
+取别的分支的代码，到目前分支上
+
+
+ 
+ 恢复文件，取消对文件的修改
+ git checkout -- XXXX.m
+ git checkout -- <file>..." to discard changes in working directory
+
+
+//从暂存区删除,取消文件暂存
+use "git reset HEAD <file>..." to unstage
+git reset HEAD <file>
+
+  修改最后一次提交
+ git commit --amend
+
+
+//删除分支
+git branch -d testing
+
+
+ //有冲突，解决了冲突后，继续合并
+git rebase --continue
+
+// 放弃合并
+git rebase --abort
+
+ fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+
+
+冯腾飞 Q2-Q3 OKR
+
+
+ 
+
+ 
+
+ 
+
+ 6：30+1：40
+ 8：10
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
