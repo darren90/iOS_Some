@@ -23,8 +23,19 @@ int main(int argc, const char * argv[]) {
 
         BinaryTreeNode *node = [BinaryTreeNode createTreeWithValues:mutabArr];
         NSLog(@"%@",node);
+        
+        
+        int result = add(100);
+        NSLog(@"--add100 : %d",result);
     }
     return 0;
 }
+
+
+int add(int n){
+    return n == 0 ? 0 : n + add(n-1);
+}
+
+
 
 

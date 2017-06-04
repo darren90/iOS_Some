@@ -105,6 +105,91 @@ Extension是Category的一个特例，没有分类名字，可以扩展属性,�
 
 ### 开发中用到的设计模式
 
+??????
+
+### 多线程有几种方式？你用过没有？你经常用哪种？怎么用的？
+
+
+### 消息转发内部原理（结构指针，方法选择器，forwarding...一串破玩意儿）--百度
+
+
+### 堆和栈的内存区别，它们是如何分配和释放
+栈区（stack） ：由编译器自动分配并释放
+堆区（heap）：由程序员分配和释放，是由alloc分配
+
+### 线程间通信常用的方法
+    - (void)performSelectorOnMainThread:(SEL)aSelector withObject:(nullable id)arg waitUntilDone:(BOOL)wait;
+
+    - (void)performSelector:(SEL)aSelector onThread:(NSThread *)thr withObject:(nullable id)arg waitUntilDone:(BOOL)wait NS_AVAILABLE(10_5, 2_0);
+
+### 用NSOpertion和NSOpertionQueue处理A、B、C三个线程，要求执行完A、B后才能执行C，怎么做？
+
+
+    //1. 创建队列
+    NSOperationQueue *queue = [[NSOpertionQueue alloc] init];
+    
+    //2. 创建3个操作
+    NSOperation *a = [NSOperation blockOperationWithBlock:^{
+    NSLog(@"operation---");
+    }];
+    NSOperation *b = [NSOperation blockOperationWithBlock:^{
+    NSLog(@"operation---");
+    }];
+    NSOperation *c = [NSOperation blockOperationWithBlock:^{
+    NSLog(@"operation---");
+    }];
+    
+    //3. 添加依赖
+    [c addDependency:a];
+    [c addDependency:b];
+    
+    //4. 执行操作
+    [queue addOperation:a];
+    [queue addOperation:b];
+    [queue addOperation:c];
+
+### 线程是进程的基本组成单位
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---
