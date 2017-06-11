@@ -33,9 +33,11 @@ block 的内存，默认在栈中，不需要手动管理
 1. 我想了解一下公司的培训机制和学习
 2. 公司对我这个职位的期望是什么？
 3. 问问公司内部的培养计划、晋升机制、是否经常有大牛分享技术让我们学习
-
-
-
+### 本周学习了什么
+jsbridge js和H5的交互
+### CocoaPods原理
+以target的方式组成一个名为Pods的工程，该工程会生成一个名称为libPods.a的静态库，
+Podfile.lock 文件就记录下了当时最新 Pods 依赖库的版本
 
 ## 技术面试
 
@@ -353,10 +355,60 @@ Extension是Category的一个特例，没有分类名字，可以扩展属性,�
 	序列化处理，即把OC对象—->JSON数据，使用的方法为：[NSJSONSerialization dataWithJSONObject:jsonString options:0 error:nil],注意并不是所有的OC对象都能够序列化为JSON数据
 
 
+### 多线程
+### 将一个函数在主线程执行的4种方法
+
+GCD方法，通过向主线程队列发送一个block块，使block里的方法可以在主线程中执行。
+
+	dispatch_async(dispatch_get_main_queue(), ^{      
+	    //需要执行的方法
+	});
+
+NSOperation 方法
+
+	NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];  //主队列
+	NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
+	    //需要执行的方法
+	}];
+	[mainQueue addOperation:operation];
+
+NSThread 方法
+
+	[self performSelector:@selector(method) onThread:[NSThread mainThread] withObject:nil waitUntilDone:YES modes:nil];
+	
+	[self performSelectorOnMainThread:@selector(method) withObject:nil waitUntilDone:YES];
+	
+	[[NSThread mainThread] performSelector:@selector(method) withObject:nil];
+
+RunLoop方法
+
+	[[NSRunLoop mainRunLoop] performSelector:@selector(method) withObject:nil];
 
 
+### 
 
+iOS 核心框架
 
+CoreAnimation
+CoreGraphics
+CoreLocation
+AVFoundation
+Foundation
+iOS核心机制
+
+UITableView 重用
+ObjC内存管理；自动释放池，ARC如何实现
+runloop
+runtime
+Block的定义、特性、内存区域、如何实现
+Responder Chain
+NSOperation
+GCD
+数据结构
+
+8大排序算法
+二叉树实现
+二分查找实现
 
 
 
