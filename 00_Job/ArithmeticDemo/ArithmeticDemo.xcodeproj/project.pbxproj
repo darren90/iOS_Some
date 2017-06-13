@@ -11,6 +11,7 @@
 		89C4E3831E77D79B0082B861 /* Arithmetic.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C4E3821E77D79B0082B861 /* Arithmetic.m */; };
 		89C4E3861E77D8380082B861 /* BinaryTreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C4E3851E77D8380082B861 /* BinaryTreeNode.m */; };
 		89C4E3891E77D8640082B861 /* BinaryTreeNodeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 89C4E3881E77D8640082B861 /* BinaryTreeNodeTest.m */; };
+		FEE5E59B1EF042D500A870CD /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE5E59A1EF042D500A870CD /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		89C4E3851E77D8380082B861 /* BinaryTreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNode.m; sourceTree = "<group>"; };
 		89C4E3871E77D8640082B861 /* BinaryTreeNodeTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNodeTest.h; sourceTree = "<group>"; };
 		89C4E3881E77D8640082B861 /* BinaryTreeNodeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinaryTreeNodeTest.m; sourceTree = "<group>"; };
+		FEE5E5991EF042D500A870CD /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		FEE5E59A1EF042D500A870CD /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,8 @@
 				89C4E3771E77D7070082B861 /* main.m */,
 				89C4E3811E77D79B0082B861 /* Arithmetic.h */,
 				89C4E3821E77D79B0082B861 /* Arithmetic.m */,
+				FEE5E5991EF042D500A870CD /* Person.h */,
+				FEE5E59A1EF042D500A870CD /* Person.m */,
 				89C4E3841E77D8380082B861 /* BinaryTreeNode.h */,
 				89C4E3851E77D8380082B861 /* BinaryTreeNode.m */,
 				89C4E3871E77D8640082B861 /* BinaryTreeNodeTest.h */,
@@ -136,6 +141,7 @@
 			files = (
 				89C4E3781E77D7070082B861 /* main.m in Sources */,
 				89C4E3861E77D8380082B861 /* BinaryTreeNode.m in Sources */,
+				FEE5E59B1EF042D500A870CD /* Person.m in Sources */,
 				89C4E3891E77D8640082B861 /* BinaryTreeNodeTest.m in Sources */,
 				89C4E3831E77D79B0082B861 /* Arithmetic.m in Sources */,
 			);

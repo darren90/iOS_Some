@@ -7,6 +7,7 @@
 //
 
 #import "Arithmetic.h"
+#import "Person.h"
 
 @implementation Arithmetic
 
@@ -31,6 +32,13 @@
 //        [self queryNumber:arr value:7];
 
         [self arrayRemoveDupl];
+        
+        
+        
+        Person *p = [[Person alloc] init];
+        [self addObserver:p forKeyPath:@"name" options:NSKeyValueObservingOptionNew context: nil];
+//        [p setValue:@[@"23", @"23"]forKey:@"_name"];
+//        NSLog(@"%@",p.name);
     }
     return  self;
 }
