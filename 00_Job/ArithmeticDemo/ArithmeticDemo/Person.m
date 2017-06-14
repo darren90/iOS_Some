@@ -15,7 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (p == nil) {
-            p = [[Persona alloc] init];
+            p = [[Person alloc] init];
         }
     });
     

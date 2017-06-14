@@ -16,7 +16,7 @@
     if (self = [super init]) {
         
         NSMutableArray *mutabArr = [NSMutableArray arrayWithObjects:@15,@13,@100,@6,@89,@2, nil];
-        //    [self bubbleSort:mutabArr];
+        [self bubbleSort:mutabArr];
         [self insertionSort:mutabArr];
         NSLog(@"---排序后 :%@",mutabArr);
         
@@ -28,15 +28,15 @@
 
         [self findNum];
 
-//        NSArray *arr = [[NSArray alloc] initWithObjects:@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7", nil];
-//        [self queryNumber:arr value:7];
+        NSArray *arr = [[NSArray alloc] initWithObjects:@"0",@"1",@"2",@"3",@"6",@"7", nil];
+        [self queryNumber:arr value:6];
 
         [self arrayRemoveDupl];
         
         
         
         Person *p = [[Person alloc] init];
-        [self addObserver:p forKeyPath:@"name" options:NSKeyValueObservingOptionNew context: nil];
+//        [self addObserver:p forKeyPath:@"name" options:NSKeyValueObservingOptionNew context: nil];
 //        [p setValue:@[@"23", @"23"]forKey:@"_name"];
 //        NSLog(@"%@",p.name);
     }
@@ -131,13 +131,13 @@
 
 {
 
-    int left = 0;
+    NSInteger left = 0;
 
-    int right = arr.count;
+    NSInteger right = arr.count;
 
     while (left <= right) {
 
-        int mid = (left + right) / 2;
+        NSInteger mid = (left + right) / 2;
 
         if ([[arr objectAtIndex:mid] intValue]<  inter)  {
             left = mid+1;
@@ -335,8 +335,7 @@
 -(void)insertionSort:(NSMutableArray*)array
 {
     int i, y;
-    for(i = 0; i< [array count]-1; i++)
-    {
+    for(i = 0; i< [array count]-1; i++) {
         //前面一位大于后面一位
         if([[array objectAtIndex:i+1]intValue] < [[array objectAtIndex:i]intValue]){
             //保存后面一位
@@ -361,11 +360,11 @@
     }
     int i, y;
     BOOL bFinish = YES; //是否发生数据交换
-    for (i = 1; i<= [list count] && bFinish; i++) {
+    for (i = 1; i < list.count && bFinish; i++) {
         bFinish = NO; //每次遍历时，重置标志
         //从最后一位开始，依次跟前一位相比，如果较小，则交换位置
         //当一次遍历没有任何数据交换时，则说明已经排序完成(bFinish=YES)，则不再进行循环
-        for (y = (int)[list count]-1; y>=i; y--) {
+        for (y = (int)list.count - 1; y >= i; y--) {
             if ([[list objectAtIndex:y] intValue] > [[list objectAtIndex:y-1] intValue]) {
                 //交换位置
                 [list exchangeObjectAtIndex:y-1 withObjectAtIndex:y];
