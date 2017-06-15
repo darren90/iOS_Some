@@ -43,6 +43,21 @@
     return  self;
 }
 
+//int add(int i)
+//{
+//    if(i==1)
+//        return i;
+//    else
+//        return i+add(i-1);
+//}
+// 
+
+
+
+- (void)runLoop{
+    NSURLSessionDataTask *data = [[NSURLSession sharedSession] dataTaskWithURL:nil];
+//    data
+}
 
 #pragma mark --- 数组去重
 -(void)arrayRemoveDupl{
