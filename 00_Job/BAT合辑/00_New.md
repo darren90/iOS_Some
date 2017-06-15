@@ -12,44 +12,45 @@ block 的内存，默认在栈中，不需要手动管理
 
 ## 非技术面试
 
-### 请你做一下自我介绍答：您好，我叫冯腾飞，毕业于兰州理工大学计算机专业，做iOS开发两年多了，之前在人人视频的做iOS开发的工作，想应聘这边的新工作 
+### 请你做一下自我介绍    答：您好，我叫冯腾飞，毕业于XXXX，做iOS开发两年多了，之前在人人视频的做iOS开发的工作，想应聘这边的新工作 
 ### 你在找工作时，最重要的考虑因素是什么？
-企业文化吧，
+    企业文化吧，
 ### 为什么从上家公司离职
-想寻找大的平台或新机会，尝试在新的环境上提升自己
+    想寻找大的平台或新机会，尝试在新的环境上提升自己
 ### 请谈谈你的优点和缺点？
-1. 优点：遇到困难迎头而上，有一股干劲
-2. 缺点：不太自信，平时的社交少,缺少锻炼
+    1. 优点：遇到困难迎头而上，有一股干劲
+    2. 缺点：不太自信，平时的社交少,缺少锻炼
 ### 工作中曾面临的最大困难是什么？如何解决的？  公司的项目中遇到什么问题没
-1. 播放器的自定义，以及大小屏幕：公司转型做视频相关的时候，没有做过相关的经验，显示找了一些源码，给你点信息以及思路，再就是自己给自己加班，放的经历多了，自然就解决了
-2. 下载：片源的类型比较多，
+    1. 播放器的自定义，以及大小屏幕：公司转型做视频相关的时候，没有做过相关的经验，显示找了一些源码，给你点信息以及思路，再就是自己给自己加班，放的经历多了，自然就解决了
+    2. 下载：片源的类型比较多，
+
 ### 你的职业目标是什么？（短期和长期）
-短期：React Native的学习与引用
-长期：提供技术实力，向技术leader的方向看起
+    短期：React Native的学习与引用
+    长期：提供技术实力，向技术leader的方向看起
 ### 你对加班的看法？
-还好，大家都是为了把产品做好，加班把项目保质保量的完工都能接受，
+    还好，大家都是为了把产品做好，加班把项目保质保量的完工都能接受，
 ### 你最擅长的技术方向是什么？谈谈你之前做的项目？
 ### 你有什么问题要问我？
-1. 我想了解一下公司的培训机制和学习
-2. 公司对我这个职位的期望是什么？
-3. 问问公司内部的培养计划、晋升机制、是否经常有大牛分享技术让我们学习
+    1. 我想了解一下公司的培训机制和学习
+    2. 公司对我这个职位的期望是什么？
+    3. 问问公司内部的培养计划、晋升机制、是否经常有大牛分享技术让我们学习
 ### 本周学习了什么
-jsbridge js和H5的交互
+    jsbridge js和H5的交互
 ### CocoaPods原理
-以target的方式组成一个名为Pods的工程，该工程会生成一个名称为libPods.a的静态库，
+    以target的方式组成一个名为Pods的工程，该工程会生成一个名称为libPods.a的静态库，
 Podfile.lock 文件就记录下了当时最新 Pods 依赖库的版本
 
 ## 技术面试
 
 ### 什么事离幕渲染
-指的是GPU在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作。
-shouldRasterize（光栅化）
-masks（遮罩）
-shadows（阴影）
-edge antialiasing（抗锯齿）
-group opacity（不透明）
-复杂形状设置圆角等
-渐变
+    指的是GPU在当前屏幕缓冲区以外新开辟一个缓冲区进行渲染操作。
+    shouldRasterize（光栅化）
+    masks（遮罩）
+    shadows（阴影）
+    edge antialiasing（抗锯齿）
+    group opacity（不透明）
+    复杂形状设置圆角等
+    渐变
 
  
 ### 你技术上是怎么学习的？
@@ -61,40 +62,38 @@ group opacity（不透明）
 --- 
 
 ### 让自己实现下拉控件，如何实现。
-scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height
-scrollView.contentOffset.y < - 100
+    scrollView.contentOffset.y + scrollView.frame.size.height >= scrollView.contentSize.height
+    scrollView.contentOffset.y < - 100
 
 
 ### 什么是响应链，它是怎么工作的？
-传递链：由系统向离用户最近的view传递。UIKit –> active app’s event queue –> window –> root view –>……–>lowest view
-响应链：由离用户最近的view向系统传递。initial view –> super view –> …..–> view controller –> window –> Application
+    传递链：由系统向离用户最近的view传递。UIKit –> active app’s event queue –> window –> root view –>……–>lowest view
+    响应链：由离用户最近的view向系统传递。initial view –> super view –> …..–> view controller –> window –> Application
 
 ###### 事件的传递
-触摸事件的传递是从父控件传递到子控件
+    触摸事件的传递是从父控件传递到子控件
 也就是UIApplication->window->寻找处理事件最合适的view
 注 意: 如果父控件不能接受触摸事件，那么子控件就不可能接收到触摸事件
 
 
 ### 访问并修改一个类的私有属性
 
-方法一:KVC  [p setValue:@"yyMae" forKey:@"name"];
-方法二:通过runtime获取  object_setIvar(Person, name, @"yyMae"); 
-
+    方法一:KVC  [p setValue:@"yyMae" forKey:@"name"];
+    方法二:通过runtime获取  object_setIvar(Person, name, @"yyMae"); 
 
 ### 什么时候会发生 `EXC BAD ACCESS` 异常
-因为内存问题引起： 指针指向内存中的某个地址，但对应的地址块已经被回收,如对已经被release的对象发送release消息。
-
+    因为内存问题引起： 指针指向内存中的某个地址，但对应的地址块已经被回收,如对已经被release的对象发送release消息。
 
 ### 你会如何存储用户的一些敏感信息，如登录的 token
-使用keychain来存储,也就是钥匙串。 使用keychain需要导入Security框架。
-
-
+    使用keychain来存储,也就是钥匙串。 使用keychain需要导入Security框架。
 
 ### `+load` 和 `+initialize` 的区别是什么？
-
-load和initialize方法都会在实例化对象之前调用，以main函数为分水岭，前者在main函数之前调用，后者在之后调用。这两个方法会被自动调用，不能手动调用它们。
-load和initialize方法都不用显示的调用父类的方法而是自动调用，即使子类没有initialize方法也会调用父类的方法，而load方法则不会调用父类。
-load方法通常用来进行Method Swizzle，initialize方法一般用于初始化全局变量或静态变量。
+    
+    load和initialize方法都会在实例化对象之前调用，以main函数为分水岭，前者在main函数之前调用，后者在之后调用。这两个方法会被自动调用，不能手动调用它们。
+    
+    load和initialize方法都不用显示的调用父类的方法而是自动调用，即使子类没有initialize方法也会调用父类的方法，而load方法则不会调用父类。
+    
+    load方法通常用来进行Method Swizzle，initialize方法一般用于初始化全局变量或静态变量。
 load和initialize方法内部使用了锁，因此它们是线程安全的。实现时要尽可能保持简单，避免阻塞线程，不要再使用锁。
 
 
@@ -107,7 +106,10 @@ Extension是Category的一个特例，没有分类名字，可以扩展属性,�
 
 ### 开发中用到的设计模式
 
-??????
+    代理 单例
+    观察者 ： KVO
+    工厂模式
+    
 
 ### 多线程有几种方式？你用过没有？你经常用哪种？怎么用的？
 
@@ -158,9 +160,6 @@ Extension是Category的一个特例，没有分类名字，可以扩展属性,�
 	创建可拉伸的图片对象
 	bg = [bg resizableImageWithCapInsets:UIEdgeInsetsMake(10,10,10,10) resizingMode:..];//平铺和拉伸
 	UIImage *bg = ...
-
-
-
 
 ### 在xcode中如何配置拉伸图片?
 
@@ -235,7 +234,6 @@ Extension是Category的一个特例，没有分类名字，可以扩展属性,�
 	2.操作依赖补充：使用操作队列可以方便的指定多个操作间的依赖关系，甚至可以实现跨队列的操作依赖，但是在使用的时候需要注意操作之间不能有循环依赖关系
 	
 	3.操作监听：可以使用^completionBlock来实现操作监听
-
 
 ### 请简单比较GCD中的全局并发队列和使用dispatch_queue_create函数创建的并发队列异同？
 
@@ -384,7 +382,149 @@ RunLoop方法
 
 	[[NSRunLoop mainRunLoop] performSelector:@selector(method) withObject:nil];
 
+### GCD的使用
 
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{ //第一个表示线程执行的优先级
+    //执行耗时操作
+    ……
+        dispatch_async(dispatch_get_main_queue(), ^{
+        //回到主线程进行UI刷新操作
+        };
+    };
+    
+当我们通过dispatch_async(globalQueue, ^{}); 这种方式去异步执行一个操作时，实际上操作系统会创建一个新的线程
+
+
+### NSOperationQueue与 GCD 的区别?
+
+    直接说 NSOperationQueue 相对于 GCD 的优点：
+    1：可以直接取消在任务处理队列中的任务
+    2：添加任务间的依赖关系
+
+# 我的总结
+    
+### xib/storybard连接的对象为什么可以使用weak
+    因为这个button已经放到view上了，因此只要这个View不被释放，这个button的引用计数都不会为0，因此这里可以使用weak引用
+
+### Block 为什么使用 copy?
+    默认情况下，block是存档在栈中，可能被随时回收，需要copy操作。这也就是我们在定义block的时候用得时copy。而不是weak等等。
+    
+### @Property的作用
+@Property是声明属性的语法，可以快速生成getter和setter放，
+
+@synthesize等同于在.m文件中实现实例变量的get/set
+@dymatic 则是表明要手动写
+
+atomic（默认）：atomic意为操作是原子的，是线程安全的 ：只是保障setter和getter方法的访问安全 但是也不是绝对的安全比如[NSMutableArray remove]
+nonatomic：nonatomic跟atomic刚好相反。表示非原子
+
+. strong retaincount + 1
+. copy：与strong类似，但区别在于实例变量是对传入对象的副本拥有所有权，而非对象本身。
+. weak：在setter方法中，需要对传入的对象不进行引用计数加1的操作
+
+### SEL 与 IMP 的差别？
+
+    SEL ：通俗的讲方法名或者说方法编号
+    IMP ： 函数指针，保存方法的地址
+
+    两者关系：SEL 通过 Dispatch table表 寻找到对应的 IMP。
+    struct objc_method {
+      SEL method_name;
+      char \*method_types;
+      IMP method_imp;
+    }
+
+### 消息机制的流程
+[[Student alloc] init];  
+objc_msgSend(objc_msgSend(“Student” , “alloc”), “init”)
+
+[xiaoming study];
+
+1. xiaoming的isa指针找到obj对应的class。在class中先去cache中通过SEL查找对应函数method。
+2. 若cache中未找到。再去methodList中查找，若methodlist中未找到，则去superClass中查找。若能找到，则将method加入到cache中，以方便下次查找，并通过method中的函数指针跳转到对应的函数中去执行。
+3. 如果都没有找到，runtime 会调用 resolveInstanceMethod: 或 resolveClassMethod: 来给我们一次动态添加方法实现的机会。我们需要用 class_addMethod 函数完成向特定类添加特定方法实现的操作。
+
+### iOS内存管理
+
+
+### 有哪些情况会出现内存泄漏？
+
+block
+delegate
+NSTimer
+
+### delegate 属性为什么使用 weak ?
+    viewcontroller通过strong指针拥有一个UITableview，tableview的datasource和delegate都是weak指针，指向viewcontroller，防止回环
+
+### 除了用 __weak 来解决block 中的循环引用，还有别的方法吗?
+
+
+？？？？
+
+ARC 下认为可以通过提前释放 block 来解决这个问题。
+通过 block 的瞬间执行，来解决这个问题，之前做的 笔记 中有记录。
+
+### NSTimer为什么不能像block使用 weakSelf解决循环引用
+首先：NSTimer的target必须要强引用
+The timer maintains a strong reference to this object until it (the timer) is invalidated
+
+###  A push到B后，有哪些方法可以让B的数据传递到A。
+
+block、delegate、通知 KVO，或者NSUserdefault //NSUserDefaults standardUserDefaults
+
+//NSKeyedArchiver
+
+### frame 和 bounds 的区别，什么时候 frame 和 bounds 的高宽不相等?
+frame : 相对于 父视图的坐标位置
+bounds： 相对于本身的坐标系统，原点是（0， 0）点。
+
+旋转后
+
+### RunLoop有几种事件源？有几种模式？
+Run Loop对象处理的事件源分为两种：Input sources 和 Timer sources。
+
+Input sources：用分发异步事件，通常是用于其他线程或程序的消息。
+Timer sources：用分发同步事件，通常这些事件发生在特定时间或者重复的时间间隔上(Timer事件（Schedule或者Repeat）)。
+
+### 分类是如何实现的？它为什么会覆盖掉原来的方法？
+    Category 实际上就变成了一个方法列表, 被插入到类的信息内, 这样查表的时候就能找到Category 内的方法。
+    
+    
+    后编译
+
+
+### 一个autorealese对象在什么时刻释放？
+
+    分两种情况：手动干预释放时机、系统自动去释放。
+    
+    1. 手动干预释放时机--指定autoreleasepool 就是所谓的：当前作用域大括号结束时释放。
+    2. 系统自动去释放--不手动指定autoreleasepool
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 ### 
 
 iOS 核心框架

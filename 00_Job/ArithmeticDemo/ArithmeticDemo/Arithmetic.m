@@ -1,4 +1,4 @@
-//
+ //
 //  Arithmetic.m
 //  ArithmeticDemo
 //
@@ -9,6 +9,12 @@
 #import "Arithmetic.h"
 #import "Person.h"
 
+@interface Arithmetic ()
+
+@property (nonatomic,strong)Person *p;
+
+@end
+ 
 @implementation Arithmetic
 
 -(instancetype)init{
@@ -36,11 +42,21 @@
         
         
         Person *p = [[Person alloc] init];
-//        [self addObserver:p forKeyPath:@"name" options:NSKeyValueObservingOptionNew context: nil];
+        [p addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context: nil];
 //        [p setValue:@[@"23", @"23"]forKey:@"_name"];
-//        NSLog(@"%@",p.name);
+        p.name = @"12";
+        self.p = p;
+        NSLog(@"%@",p.name);
     }
     return  self;
+}
+
+-(void)dealloc{
+    [self.p removeObserver:self forKeyPath:@"name"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
+    NSLog(@"--:%@",object);
 }
 
 //int add(int i)

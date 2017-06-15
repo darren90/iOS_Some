@@ -83,7 +83,7 @@
         list = right.next;
         right.next = left;
         left = right;
-         = next;
+//         = next;
     }
 }
 

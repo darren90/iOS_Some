@@ -22,4 +22,11 @@
     return p;
 }
 
+- (void)setName:(NSString *)name{
+    _name = name;
+    
+    NSLog(@"-nmae-:%@",name);
+}
+
+
 @end
