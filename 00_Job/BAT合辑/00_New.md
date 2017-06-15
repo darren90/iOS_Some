@@ -394,6 +394,28 @@ RunLoop方法
     
 当我们通过dispatch_async(globalQueue, ^{}); 这种方式去异步执行一个操作时，实际上操作系统会创建一个新的线程
 
+    
+    dispatch_group_t group = dispatch_group_create(); // 队列组
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0); // 全局并发队列
+    
+    dispatch_group_async(group, queue, ^{// 异步执行操作1
+    
+    // longTime1
+    
+    });
+    
+    dispatch_group_async(group, queue, ^{ // 异步执行操作2
+    
+    // longTime2
+    
+    });
+    
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+    
+    // 在主线程刷新数据
+    // reload Data
+    });
 
 ### NSOperationQueue与 GCD 的区别?
 
@@ -406,9 +428,6 @@ RunLoop方法
 ### xib/storybard连接的对象为什么可以使用weak
     因为这个button已经放到view上了，因此只要这个View不被释放，这个button的引用计数都不会为0，因此这里可以使用weak引用
 
-### Block 为什么使用 copy?
-    默认情况下，block是存档在栈中，可能被随时回收，需要copy操作。这也就是我们在定义block的时候用得时copy。而不是weak等等。
-    
 ### @Property的作用
 @Property是声明属性的语法，可以快速生成getter和setter放，
 
@@ -421,6 +440,21 @@ nonatomic：nonatomic跟atomic刚好相反。表示非原子
 . strong retaincount + 1
 . copy：与strong类似，但区别在于实例变量是对传入对象的副本拥有所有权，而非对象本身。
 . weak：在setter方法中，需要对传入的对象不进行引用计数加1的操作
+
+### assign 与weak区别
+
+    assign适用于基本数据类型，weak是适用于对象类型，并且是一个弱引用。
+    
+    assign还可以来修饰对象。那么我们为什么不用它修饰对象呢？因为被assign修饰的对象（一般编译的时候会产生警告：Assigning retained object to unsafe property; object will be released after assignment）在释放之后，指针的地址还是存在的，也就是说指针并没有被置为nil，造成野指针
+    
+    weak修饰的对象在释放之后，指针地址会被置为nil
+### strong 与copy的区别
+
+strong 与copy都会使引用计数加1，但strong是两个指针指向同一个内存地址，copy会在内存里拷贝一份对象，两个指针指向不同的内存地址
+
+### Block 为什么使用 copy?
+    默认情况下，block是存档在栈中，可能被随时回收，需要copy操作。这也就是我们在定义block的时候用得时copy。而不是weak等等。
+    
 
 ### SEL 与 IMP 的差别？
 
@@ -444,7 +478,40 @@ objc_msgSend(objc_msgSend(“Student” , “alloc”), “init”)
 2. 若cache中未找到。再去methodList中查找，若methodlist中未找到，则去superClass中查找。若能找到，则将method加入到cache中，以方便下次查找，并通过method中的函数指针跳转到对应的函数中去执行。
 3. 如果都没有找到，runtime 会调用 resolveInstanceMethod: 或 resolveClassMethod: 来给我们一次动态添加方法实现的机会。我们需要用 class_addMethod 函数完成向特定类添加特定方法实现的操作。
 
-### iOS内存管理
+
+### 苹果是如何实现autoreleasepool的？
+
+    autoreleasepool以一个队列数组的形式实现,主要通过下列三个函数完成.
+    •    objc_autoreleasepoolPush
+    •    objc_autoreleasepoolPop
+    •    objc_autorelease
+    看函数名就可以知道，对autorelease分别执行push、pop操作。销毁对象时执行release操作。
+    
+### AutoreleasePool自动释放池是什么,如何工作 ?
+AutoreleasePool: 用来存储多个对象类型的指针变量
+
+1. 自动释放池对池内对象的作用：存入池内的对象，当自动释放池被销毁时，会对池内对象全部做一次release操作
+2. 对象如何加入池中：调用对象的autorelease方法
+3. 自动释放池能嵌套使用吗：能
+
+4. 自动释放池何时被销毁 ：简单的看，autorelease的"}"执行完以后。而实际情况是Autorelease对象是在当前的runloop迭代结束时释放的，而它能够释放的原因是系统在每个runloop迭代中都加入了自动释放池Push和Pop
+
+### 一个autorealese对象在什么时刻释放？
+
+    分两种情况：手动干预释放时机、系统自动去释放。
+    
+    1. 手动干预释放时机--指定autoreleasepool 就是所谓的：当前作用域大括号结束时释放。
+    2. 系统自动去释放--不手动指定autoreleasepool
+
+ 
+### objc使用什么机制管理对象内存？
+
+通过引用计数器(retainCount)的机制来决定对象是否需要释放。 每次runloop完成一个循环的时候，都会检查对象的 retainCount，如果retainCount为0，说明该对象没有地方需要继续使用了，可以释放掉了
+
+### iOS内存管理  ARC 下的内存管理问题
+主要存在 循环引用（Reference Cycle）问题 --> Block内存管理
+
+ARC所做的只不过是在代码编译时为你自动在合适的位置插入release或autorelease，只要没有强指针指向对象，对象就会被释放。
 
 
 ### 有哪些情况会出现内存泄漏？
@@ -455,9 +522,26 @@ NSTimer
 
 ### delegate 属性为什么使用 weak ?
     viewcontroller通过strong指针拥有一个UITableview，tableview的datasource和delegate都是weak指针，指向viewcontroller，防止回环
+    
+### 弱引用的实现原理
+
+    弱引用的实现原理是这样，系统对于每一个有弱引用的对象，都维护一个表来记录它所有的弱引用的指针地址。这样，当一个对象的引用计数为 0 时，系统就通过这张表，找到所有的弱引用指针，继而把它们都置成 nil。
 
 ### 除了用 __weak 来解决block 中的循环引用，还有别的方法吗?
-
+ YTKNetwork ：
+ 
+    Controller 持有了网络请求对象
+    网络请求对象持有了回调的 block
+    回调的 block 里面使用了 self，所以持有了 Controller
+    解决办法就是，在网络请求结束后，网络请求对象执行完 block 之后，主动释放对于 block 的持有
+    
+    // https://github.com/yuantiku/YTKNetwork/blob/master/YTKNetwork/YTKBaseRequest.m
+    // 第 147 行：
+    - (void)clearCompletionBlock {
+        // 主动释放掉对于 block 的引用
+        self.successCompletionBlock = nil;
+        self.failureCompletionBlock = nil;
+    }
 
 ？？？？
 
@@ -491,15 +575,6 @@ Timer sources：用分发同步事件，通常这些事件发生在特定时间�
     
     
     后编译
-
-
-### 一个autorealese对象在什么时刻释放？
-
-    分两种情况：手动干预释放时机、系统自动去释放。
-    
-    1. 手动干预释放时机--指定autoreleasepool 就是所谓的：当前作用域大括号结束时释放。
-    2. 系统自动去释放--不手动指定autoreleasepool
-
 
 
 
