@@ -576,8 +576,12 @@ Timer sources：用分发同步事件，通常这些事件发生在特定时间�
     
     后编译
 
+### AutoLayout做动画?
 
-
+    [UIView animateWithDuration:1.0 animations:^{
+        //更改约束，及约束优先级，
+        [self.view layoutIfNeeded];
+    }];
 
 
 
