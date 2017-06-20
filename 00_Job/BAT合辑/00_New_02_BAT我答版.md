@@ -70,8 +70,14 @@ setNeedsDisplay会自动调用drawRect方法，这样可以拿到 UIGraphicsGetC
 	    objc_setAssociatedObject(self, key, name, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 	}
 	
-### 的	
+### &、&&和|、||的区别
 
+1. 按位与：a&b是把a和b都转换成二进制数然后再进行与的运算；
+2. 逻辑与：a&&b就是当且仅当两个操作数均为 true时，其结果才为 true；只要有一个为零，a&&b就为零。
+
+&和&&都可以用作逻辑与的运算符，表示逻辑与（and），当运算符两边的表达式的结果都为true时，整个运算结果才为true，否则，只要有一方为false，则结果为false。
+
+&&还具有短路的功能，即如果第一个表达式为false，则不再计算第二个表达式。
 
 
 

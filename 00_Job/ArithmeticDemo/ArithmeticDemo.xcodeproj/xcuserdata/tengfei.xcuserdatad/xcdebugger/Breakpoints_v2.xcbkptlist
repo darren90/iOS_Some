@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ArithmeticDemo/Person.m"
-            timestampString = "519225858.944384"
+            filePath = "ArithmeticDemo/SortTest.m"
+            timestampString = "519668740.648029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-setName:"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-bubblingAction"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ArithmeticDemo/SortTest.m"
+            timestampString = "519668727.567958"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "-bubblingAction"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

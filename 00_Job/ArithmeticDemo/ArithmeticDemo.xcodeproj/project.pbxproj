@@ -19,6 +19,7 @@
 		FEE5E5AA1EF19D2B00A870CD /* SHNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE5E5A91EF19D2B00A870CD /* SHNode.m */; };
 		FEE5E5AD1EF1FE2B00A870CD /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE5E5AC1EF1FE2B00A870CD /* List.m */; };
 		FEE5E5B01EF1FF5400A870CD /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE5E5AF1EF1FF5400A870CD /* Queue.m */; };
+		FEE5E5DF1EF979DE00A870CD /* SortTest.m in Sources */ = {isa = PBXBuildFile; fileRef = FEE5E5DE1EF979DE00A870CD /* SortTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,8 @@
 		FEE5E5AC1EF1FE2B00A870CD /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = List.m; sourceTree = "<group>"; };
 		FEE5E5AE1EF1FF5400A870CD /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		FEE5E5AF1EF1FF5400A870CD /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		FEE5E5DD1EF979DE00A870CD /* SortTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SortTest.h; sourceTree = "<group>"; };
+		FEE5E5DE1EF979DE00A870CD /* SortTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SortTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				89C4E3771E77D7070082B861 /* main.m */,
+				FEE5E5DD1EF979DE00A870CD /* SortTest.h */,
+				FEE5E5DE1EF979DE00A870CD /* SortTest.m */,
 				89C4E3811E77D79B0082B861 /* Arithmetic.h */,
 				89C4E3821E77D79B0082B861 /* Arithmetic.m */,
 				FEE5E5A81EF19D2B00A870CD /* SHNode.h */,
@@ -179,6 +184,7 @@
 				89C4E3781E77D7070082B861 /* main.m in Sources */,
 				FEE5E5B01EF1FF5400A870CD /* Queue.m in Sources */,
 				FEE5E5A71EF19B3400A870CD /* NTLinkedMap.m in Sources */,
+				FEE5E5DF1EF979DE00A870CD /* SortTest.m in Sources */,
 				FEE5E5AA1EF19D2B00A870CD /* SHNode.m in Sources */,
 				89C4E3861E77D8380082B861 /* BinaryTreeNode.m in Sources */,
 				FEE5E5A11EF19A5700A870CD /* NTSingleLinkedList.m in Sources */,

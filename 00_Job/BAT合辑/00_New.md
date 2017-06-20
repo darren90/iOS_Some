@@ -437,9 +437,9 @@ RunLoop方法
 atomic（默认）：atomic意为操作是原子的，是线程安全的 ：只是保障setter和getter方法的访问安全 但是也不是绝对的安全比如[NSMutableArray remove]
 nonatomic：nonatomic跟atomic刚好相反。表示非原子
 
-. strong retaincount + 1
-. copy：与strong类似，但区别在于实例变量是对传入对象的副本拥有所有权，而非对象本身。
-. weak：在setter方法中，需要对传入的对象不进行引用计数加1的操作
+* strong retaincount + 1
+* copy：与strong类似，但区别在于实例变量是对传入对象的副本拥有所有权，而非对象本身。
+* weak：在setter方法中，需要对传入的对象不进行引用计数加1的操作
 
 ### assign 与weak区别
 

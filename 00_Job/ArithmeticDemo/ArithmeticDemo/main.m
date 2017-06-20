@@ -10,6 +10,7 @@
 #import "Arithmetic.h"
 #import "BinaryTreeNodeTest.h"
 #import "BinaryTreeNode.h"
+#import "SortTest.h"
 
 
 int main(int argc, const char * argv[]) {
@@ -27,6 +28,9 @@ int main(int argc, const char * argv[]) {
         
         int result = add(100);
         NSLog(@"--add100 : %d",result);
+        
+        
+        SortTest *sort = [[SortTest alloc] init];
     }
     return 0;
 }
