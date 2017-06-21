@@ -10,4 +10,7 @@
 
 @interface SortTest : NSObject
 
+- (void)run;
+
+
 @end
